@@ -113,6 +113,7 @@ jobs:
           script: |
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
             echo "--- Pulling latest Docker image ---"
+            ### --- REPLACE THE DOCKER PULL COMMAND WITH MY CONTAINER --- ###
             docker pull ghcr.io/tatticoder/terraform-get-time:main
             echo "--- Stopping existing container (if running) ---"
             docker stop my_container 
