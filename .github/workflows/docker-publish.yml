@@ -9,7 +9,7 @@ name: Publish & Deploy Docker container
 on:
   push:
     # Adjust branch name if needed (e.g., master, production)
-    branches: [ "main" ]
+    branches: [ "dev" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
 env:
@@ -57,7 +57,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
 
       # Extract metadata (tags, labels) for Docker
