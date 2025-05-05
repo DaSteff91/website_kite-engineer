@@ -1,19 +1,22 @@
 ##### DEPENDENCIES
 
 FROM --platform=linux/amd64 node:20-alpine AS deps
-RUN apk add --no-cache libc6-compat openssl
+# Add openssl1.1-compat for Next.js font optimization
+RUN apk add --no-cache libc6-compat openssl openssl1.1-compat
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml\* ./
 
+# Add SWC and lightningcss installation right after package installation
 RUN \
     if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
     elif [ -f package-lock.json ]; then npm ci; \
     elif [ -f pnpm-lock.yaml ]; then npm install -g pnpm && pnpm i; \
     else echo "Lockfile not found." && exit 1; \
-    fi
+    fi && \
+    npm install --include=dev @next/swc-linux-x64-musl lightningcss
 
 ##### BUILDER
 
@@ -37,7 +40,7 @@ RUN \
 FROM --platform=linux/amd64 gcr.io/distroless/nodejs20-debian12 AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
+ENV NODE_ENV development
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
