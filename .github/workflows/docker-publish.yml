@@ -1,54 +1,13 @@
-name: Build and Push Docker Image
+name: Notify on dev push
 
 on:
   push:
-    # Trigger on commits to main branch
-    branches: ["dev"]
-    # Watch all files (adjust if needed)
-    paths: ["**"]
-
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}/website_kite-engineer
-  # TAG: dev # Or use ${{ github.sha }} for unique tags
-  TAG: ${{ github.sha }}
+    branches:
+      - dev
 
 jobs:
-  build-and-push:
+  notify:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up QEMU (for multi-arch)
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Log in to GHCR
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GH_PACKAGE_TOKEN }}
-
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: ghcr.io/dasteff91/website_kite-engineer:${{ env.TAG }}
-          # labels: |
-          #   org.opencontainers.image.source=${{ github.repository_url }}
-          labels: |
-            org.opencontainers.image.source=https://github.com/${{ github.repository }}
-          build-args: |
-            NEXT_PUBLIC_CLIENTVAR=clientvar
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+      - name: Just a success message
+        run: echo "Pushed to dev branch – success!"
