@@ -42,7 +42,7 @@ RUN \
 
 ##### RUNNER
 
-FROM --platform=linux/amd64,linux/arm64 gcr.io/distroless/nodejs20-debian12 AS runner
+FROM gcr.io/distroless/nodejs20-debian12 AS runner
 
 LABEL org.opencontainers.image.source="https://github.com/DaSteff91/website_kite-engineer" \
     org.opencontainers.image.description="Hompage of the Kite-Engineer"
