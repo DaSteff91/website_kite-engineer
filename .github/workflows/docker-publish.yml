@@ -1,9 +1,13 @@
+# The name of the action displayed in GitHub
 name: Build and Push Docker Image
 
+# What triggers the action?
+# When something gets pushed into the dev branch
 on:
   push:
     branches:
       - dev
+    # Changes in these files are ignored
     paths-ignore:
       - "README.md"
       - "docs/**"
@@ -14,18 +18,11 @@ on:
       - ".github/workflows/**"
 
 jobs:
-  build-and-push:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -37,14 +34,18 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
-      - name: Build and push Docker image
+  push:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and push Docker image for linux/amd64
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           tags: ghcr.io/dasteff91/website_kite-engineer:latest
-          build-args: |
-            NEXT_PUBLIC_CLIENTVAR=clientvar
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          build-args: |
+            NEXT_PUBLIC_CLIENTVAR=clientvar
