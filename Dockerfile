@@ -1,22 +1,25 @@
 ##### DEPENDENCIES
 
 FROM --platform=linux/amd64 node:20-alpine AS deps
-# Add openssl1.1-compat for Next.js font optimization
-RUN apk add --no-cache libc6-compat openssl openssl1.1-compat
+# Update to use openssl3 and required dependencies
+RUN apk add --no-cache \
+    libc6-compat \
+    openssl \
+    # Alternative to openssl1.1-compat:
+    libssl3 \
+    libcrypto3 \
+    # Additional dependencies for Next.js
+    ca-certificates \
+    && update-ca-certificates \
+    # For Rust binaries
+    gcompat
+
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml\* ./
-
-# Add SWC and lightningcss installation right after package installation
-RUN \
-    if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-    elif [ -f package-lock.json ]; then npm ci; \
-    elif [ -f pnpm-lock.yaml ]; then npm install -g pnpm && pnpm i; \
-    else echo "Lockfile not found." && exit 1; \
-    fi && \
-    npm install --include=dev @next/swc-linux-x64-musl lightningcss
+COPY package.json package-lock.json ./
+RUN npm ci
 
 ##### BUILDER
 
@@ -27,6 +30,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV OXIDE=1
 
 RUN \
     if [ -f yarn.lock ]; then SKIP_ENV_VALIDATION=1 yarn build; \
@@ -54,4 +58,4 @@ COPY --from=builder /app/.next/static ./.next/static
 EXPOSE 3000
 ENV PORT 3000
 
-CMD [ "next", "start" ]
+CMD ["server.js"]
