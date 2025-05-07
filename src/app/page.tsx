@@ -5,6 +5,8 @@ export default function HomePage() {
         <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
           Kite-Engineer dev homepage
         </h1>
+        <h2>This is a h2 heading</h2>
+        <h3>This is a h3 heading</h3>
       </div>
     </main>
   );
