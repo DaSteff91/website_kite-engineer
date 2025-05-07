@@ -50,11 +50,12 @@ jobs:
   #         build-args: |
   #           NEXT_PUBLIC_CLIENTVAR=clientvar
 
-  ssh-connect:
-    name: SSH Connectivity Check
+  deploy:
+    name: Deploy to server
+    # needs: push
     runs-on: ubuntu-latest
     steps:
-      - name: Test SSH Connection
+      - name: SSH and Deploy to Server
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -62,4 +63,8 @@ jobs:
           key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            echo "SSH connection established successfully!"
+            echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            docker pull ghcr.io/dasteff91/website_kite-engineer:latest
+            docker stop www-dev.kite-engineer.de || true
+            docker rm www-dev.kite-engineer.de || true
+            docker run -d --name "www-dev.kite-engineer.de" -p 3001:3000 ghcr.io/dasteff91/website_kite-engineer:latest --restart unless-stopped
