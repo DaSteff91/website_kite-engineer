@@ -73,6 +73,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-buildx-
 
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GH_PACKAGE_TOKEN }}
+
       - name: Download image artifact
         uses: actions/download-artifact@v4
         with:
@@ -81,9 +88,17 @@ jobs:
       - name: Load Docker image
         run: docker load -i website_kite-engineer.tar
 
-      - name: Push Docker image
-        run: |
-          docker push ghcr.io/dasteff91/website_kite-engineer:latest
+      - name: Build and push Docker image for linux/amd64
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64
+          tags: ghcr.io/dasteff91/website_kite-engineer:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            NEXT_PUBLIC_CLIENTVAR=clientvar
 
   deploy:
     name: Deploy to server
