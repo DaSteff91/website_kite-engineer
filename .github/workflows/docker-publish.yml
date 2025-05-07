@@ -82,9 +82,10 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
+          fingerprint: ${{ secrets.SERVER_HOST_FINGERPRINT }}
           script: |
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker pull ghcr.io/dasteff91/website_kite-engineer:latest
             docker stop www-dev.kite-engineer.de || true
             docker rm www-dev.kite-engineer.de || true
-            docker run -d --name "www-dev.kite-engineer.de" -p 3001:3000 ghcr.io/dasteff91/website_kite-engineer:latest --restart unless-stopped
+            docker run -d --name "www-dev.kite-engineer.de" -p 3001:3000 ghcr.io/dasteff91/website_kite-engineer:latest
