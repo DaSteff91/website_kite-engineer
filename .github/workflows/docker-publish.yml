@@ -48,13 +48,13 @@ jobs:
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
       - name: Save Docker image
-        run: docker save ghcr.io/dasteff91/website_kite-engineer:latest -o ghcr.io/dasteff91/website_kite-engineer.tar
+        run: docker save ghcr.io/dasteff91/website_kite-engineer:latest -o website_kite-engineer.tar
 
       - name: Upload image artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ghcr.io/dasteff91/website_kite-engineer
-          path: ghcr.io/dasteff91/website_kite-engineer.tar
+          name: website_kite-engineer
+          path: website_kite-engineer.tar
 
   push:
     needs: build
@@ -73,7 +73,7 @@ jobs:
       - name: Download image artifact
         uses: actions/download-artifact@v4
         with:
-          name: ghcr.io/dasteff91/website_kite-engineer
+          name: website_kite-engineer
 
       - name: Load Docker image
         run: docker load -i ghcr.io/dasteff91/website_kite-engineer.tar
