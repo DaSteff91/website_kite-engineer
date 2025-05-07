@@ -88,7 +88,7 @@ jobs:
       - name: Load Docker image
         run: docker load -i website_kite-engineer.tar
 
-      - name: Build and push Docker image for linux/amd64
+      - name: Push image to ghcr.io
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -97,6 +97,7 @@ jobs:
           tags: ghcr.io/dasteff91/website_kite-engineer:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          builder: buildx
           build-args: |
             NEXT_PUBLIC_CLIENTVAR=clientvar
 
