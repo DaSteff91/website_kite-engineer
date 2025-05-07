@@ -18,7 +18,7 @@ on:
       - ".github/workflows/**"
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -27,13 +27,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - uses: actions/cache@v3
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -47,63 +40,39 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
-      - name: Build Docker image
-        run: docker build -t ghcr.io/dasteff91/website_kite-engineer:latest .
-
-      - name: Save Docker image
-        run: docker save ghcr.io/dasteff91/website_kite-engineer:latest -o website_kite-engineer.tar
-
-      - name: Upload image artifact
-        uses: actions/upload-artifact@v4
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
         with:
-          name: website_kite-engineer
-          path: website_kite-engineer.tar
+          images: ghcr.io/dasteff91/website_kite-engineer
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=sha
+          labels: |
+            org.opencontainers.image.source=${{ github.repositoryUrl }}
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.created=${{ steps.meta.outputs.created }}
 
-  push:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/cache@v3
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GH_PACKAGE_TOKEN }}
-
-      - name: Download image artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: website_kite-engineer
-
-      - name: Load Docker image
-        run: docker load -i website_kite-engineer.tar
-
-      - name: Push image to ghcr.io
+      - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
           platforms: linux/amd64
-          tags: ghcr.io/dasteff91/website_kite-engineer:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          builder: buildx
           build-args: |
             NEXT_PUBLIC_CLIENTVAR=clientvar
 
   deploy:
     name: Deploy to server
-    needs: push
+    needs: build-and-push
     runs-on: ubuntu-latest
     steps:
       - name: SSH and Deploy to Server
