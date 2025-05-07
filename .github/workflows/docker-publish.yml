@@ -47,6 +47,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
+      - name: Build Docker image
+        run: docker build -t ghcr.io/dasteff91/website_kite-engineer:latest .
+
       - name: Save Docker image
         run: docker save ghcr.io/dasteff91/website_kite-engineer:latest -o website_kite-engineer.tar
 
@@ -76,19 +79,11 @@ jobs:
           name: website_kite-engineer
 
       - name: Load Docker image
-        run: docker load -i ghcr.io/dasteff91/website_kite-engineer.tar
+        run: docker load -i website_kite-engineer.tar
 
-      - name: Build and push Docker image for linux/amd64
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          platforms: linux/amd64
-          tags: ghcr.io/dasteff91/website_kite-engineer:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          build-args: |
-            NEXT_PUBLIC_CLIENTVAR=clientvar
+      - name: Push Docker image
+        run: |
+          docker push ghcr.io/dasteff91/website_kite-engineer:latest
 
   deploy:
     name: Deploy to server
