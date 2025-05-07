@@ -1,13 +1,9 @@
-# The name of the action displayed in GitHub
 name: Build and Push Docker Image
 
-# What triggers the action?
-# When something gets pushed into the dev branch
 on:
   push:
     branches:
       - dev
-    # Changes in these files are ignored
     paths-ignore:
       - "README.md"
       - "docs/**"
