@@ -9,7 +9,7 @@ export default function HomePage() {
         <Header />
         <Main>
           This website is under construction - feel free to contact me via
-          stefan@kite-engineer.de Testupdate
+          stefan@kite-engineer.de
         </Main>
         <Footer />
       </body>
