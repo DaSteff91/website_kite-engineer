@@ -8,7 +8,7 @@ export default function HomePage() {
       <body className="flex min-h-screen flex-col">
         <Header />
         <Main>
-          This website is under construction - feel free to contact me via
+          This website is under construction - contact me via
           stefan@kite-engineer.de
         </Main>
         <Footer />
