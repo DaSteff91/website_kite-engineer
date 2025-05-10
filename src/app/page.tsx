@@ -1,13 +1,18 @@
+import Header from "../components/Header";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Kite-Engineer dev homepage
-        </h1>
-        <h2>This is a h2 heading</h2>
-        <h3>This is a h3 heading</h3>
-      </div>
-    </main>
+    <html lang="en">
+      <body className="flex min-h-screen flex-col">
+        <Header />
+        <Main>
+          This website is under construction - feel free to contact me via
+          stefan@kite-engineer.de
+        </Main>
+        <Footer />
+      </body>
+    </html>
   );
 }
