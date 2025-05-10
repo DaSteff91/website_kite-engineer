@@ -47,6 +47,7 @@ jobs:
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
+            type=raw,value=latest
             type=sha
           labels: |
             org.opencontainers.image.source=${{ github.repositoryUrl }}
@@ -80,7 +81,7 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           script: |
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            docker pull ghcr.io/dasteff91/website_kite-engineer:${{ github.sha }}
+            docker pull ghcr.io/dasteff91/website_kite-engineer:latest
             docker stop www-dev.kite-engineer.de || true
             docker rm www-dev.kite-engineer.de || true
-            docker run -d --name "www-dev.kite-engineer.de" -p 3001:3000 ghcr.io/dasteff91/website_kite-engineer:${{ github.sha }}
+            docker run -d --name "www-dev.kite-engineer.de" -p 3001:3000 ghcr.io/dasteff91/website_kite-engineer:latest
