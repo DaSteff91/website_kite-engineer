@@ -1,24 +1,3 @@
-# on:
-#     workflow_dispatch:
-#     schedule:
-#         - cron: "5 * * * *"  # every hour
-
-# jobs:
-#     clean:
-#         runs-on: ubuntu-latest
-#         name: Delete old test images
-#         steps:
-#         - uses: snok/container-retention-policy@v3.0.0
-#             with:
-#             account: user
-#             token: ${{ secrets.GH_PACKAGE_TOKEN }}
-#             image-names: "container-retention-policy"
-#             image-tags: "*dev*"
-#             image-tags: "!*latest*"
-#             cut-off: 2w 3d
-#             dry-run: true
-#             keep-n-most-recent: 5
-
 on:
   schedule:
     - cron: "0 0 * * *"

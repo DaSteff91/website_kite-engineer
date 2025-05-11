@@ -11,7 +11,7 @@ jobs:
         with:
           account: user
           token: ${{ secrets.GH_PACKAGE_TOKEN }}
-          image-names: "*" # all packages owned by the account
+          image-names: "*"
           cut-off: 1d
           image-tags: "!latest"
           keep-n-most-recent: 5
