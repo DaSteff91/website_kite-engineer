@@ -1,0 +1,17 @@
+on:
+  schedule:
+    - cron: "0 1 * * *"
+
+jobs:
+  delete-package-versions:
+    name: Rolling deletion of old images
+    runs-on: ubuntu-latest
+    steps:
+      - uses: snok/container-retention-policy@v3.0.0
+        with:
+          account: user
+          token: ${{ secrets.GH_PACKAGE_TOKEN }}
+          image-names: "*" # all packages owned by the account
+          cut-off: 1d
+          image-tags: "!latest"
+          keep-n-most-recent: 5
