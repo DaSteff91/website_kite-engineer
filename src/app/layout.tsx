@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
+import type { Viewport } from "next";
 
 export const metadata: Metadata = {
   title: "Kite-Engineer",
@@ -35,3 +36,10 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1, // Sets the initial zoom level to 1 (default size, no zoom)
+  maximumScale: 1, // Prevents users from zooming in beyond the original size
+  userScalable: false, // Disables user zooming (pinch-to-zoom or double-tap zoom) on mobile devices
+};
