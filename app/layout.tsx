@@ -4,13 +4,26 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ClientLayoutWrapper } from "./ClientLayoutWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "John Doe | Kiteboarder & Software Engineer",
-  description:
-    "Personal website of John Doe - Where kiteboarding meets software engineering",
+  title: "Kite-Engineer",
+  description: "The best of two worlds",
+  icons: [
+    {
+      media: "(prefers-color-scheme: light)",
+      url: "20250510_white_ke.ico",
+      type: "image/x-icon",
+    },
+    {
+      media: "(prefers-color-scheme: dark)",
+      url: "20250510_dark_ke.ico",
+      type: "image/x-icon",
+    },
+  ],
+  keywords: "Kiteboarding, Engineering",
 };
 
 export default function RootLayout({
@@ -22,6 +35,7 @@ export default function RootLayout({
 }) {
   const isHomePage = params?.slug === undefined;
 
+  // THIS WAS THE ORIGINAL VERSION
   // return (
   //   <html lang="en" suppressHydrationWarning>
   //     <body className={inter.className}>
@@ -40,6 +54,8 @@ export default function RootLayout({
   //     </body>
   //   </html>
   // );
+
+  // THIS VERSION SHOWS HEADER AND FOOTER ALL THE TIME
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
@@ -49,11 +65,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="min-h-screen flex flex-col">
-            <Header /> {/* Always show header */}
-            <main className="flex-grow">{children}</main>
-            <Footer /> {/* Always show footer */}
-          </div>
+          <ClientLayoutWrapper>
+            <div className="min-h-screen flex flex-col">
+              <main className="flex-grow">{children}</main>
+            </div>
+          </ClientLayoutWrapper>
         </ThemeProvider>
       </body>
     </html>

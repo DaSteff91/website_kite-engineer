@@ -1,17 +1,22 @@
-import Link from 'next/link';
-import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
+"use client";
+
+import Link from "next/link";
+import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const SOCIAL_LINKS = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Github, href: '#', label: 'GitHub' },
+  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Github, href: "#", label: "GitHub" },
 ];
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname === "/") return null;
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="border-t">
       <div className="container mx-auto px-4 md:px-6 py-8">
@@ -19,11 +24,17 @@ export function Footer() {
           <div className="space-y-3">
             <h3 className="text-lg font-semibold">Contact</h3>
             <address className="not-italic text-sm text-muted-foreground">
-              123 Main Street<br />
-              City, Country 12345<br />
-              <a href="mailto:contact@example.com" className="hover:text-primary">
+              123 Main Street
+              <br />
+              City, Country 12345
+              <br />
+              <a
+                href="mailto:contact@example.com"
+                className="hover:text-primary"
+              >
                 contact@example.com
-              </a><br />
+              </a>
+              <br />
               <a href="tel:+1234567890" className="hover:text-primary">
                 +1 (234) 567-890
               </a>
@@ -34,17 +45,26 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/kite" className="text-muted-foreground hover:text-primary">
+                <Link
+                  href="/kite"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Kite
                 </Link>
               </li>
               <li>
-                <Link href="/engineer" className="text-muted-foreground hover:text-primary">
+                <Link
+                  href="/engineer"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Engineer
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-primary">
+                <Link
+                  href="/contact"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Contact
                 </Link>
               </li>
@@ -55,12 +75,18 @@ export function Footer() {
             <h3 className="text-lg font-semibold">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/privacy" className="text-muted-foreground hover:text-primary">
+                <Link
+                  href="/privacy"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/imprint" className="text-muted-foreground hover:text-primary">
+                <Link
+                  href="/imprint"
+                  className="text-muted-foreground hover:text-primary"
+                >
                   Imprint
                 </Link>
               </li>
