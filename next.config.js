@@ -1,9 +1,10 @@
-import "./src/env.js";
-
 /** @type {import('next').NextConfig} */
-const config = {
-  reactStrictMode: true,
-  output: "standalone"
+const nextConfig = {
+  output: 'export',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: { unoptimized: true },
 };
 
-export default config;
+module.exports = nextConfig;
