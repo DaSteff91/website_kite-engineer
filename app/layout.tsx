@@ -35,27 +35,6 @@ export default function RootLayout({
 }) {
   const isHomePage = params?.slug === undefined;
 
-  // THIS WAS THE ORIGINAL VERSION
-  // return (
-  //   <html lang="en" suppressHydrationWarning>
-  //     <body className={inter.className}>
-  //       <ThemeProvider
-  //         attribute="class"
-  //         defaultTheme="system"
-  //         enableSystem
-  //         disableTransitionOnChange
-  //       >
-  //         <div className="min-h-screen flex flex-col">
-  //           {!isHomePage && <Header />}
-  //           <main className="flex-grow">{children}</main>
-  //           {!isHomePage && <Footer />}
-  //         </div>
-  //       </ThemeProvider>
-  //     </body>
-  //   </html>
-  // );
-
-  // THIS VERSION SHOWS HEADER AND FOOTER ALL THE TIME
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>

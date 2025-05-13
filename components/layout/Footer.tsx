@@ -1,16 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+// import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 import { usePathname } from "next/navigation";
 
-const SOCIAL_LINKS = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Github, href: "#", label: "GitHub" },
-];
+// const SOCIAL_LINKS = [
+//   { icon: Facebook, href: "#", label: "Facebook" },
+//   { icon: Twitter, href: "#", label: "Twitter" },
+//   { icon: Instagram, href: "#", label: "Instagram" },
+//   { icon: Linkedin, href: "#", label: "LinkedIn" },
+//   { icon: Github, href: "#", label: "GitHub" },
+// ];
 
 export function Footer() {
   const pathname = usePathname();
@@ -94,8 +94,8 @@ export function Footer() {
           </div>
 
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Follow Me</h3>
-            <div className="flex gap-4">
+            {/* <h3 className="text-lg font-semibold">Follow Me</h3> */}
+            {/* <div className="flex gap-4">
               {SOCIAL_LINKS.map((social) => (
                 <a
                   key={social.label}
@@ -108,12 +108,15 @@ export function Footer() {
                   <span className="sr-only">{social.label}</span>
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© {currentYear} Your Name. All rights reserved.</p>
+          <p>
+            © {currentYear} Kite-Engineer by Stefan Merthan. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>
