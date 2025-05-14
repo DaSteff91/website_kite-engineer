@@ -48,8 +48,11 @@ export function Header() {
       <header className="h-16 fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-transparent">
         <div className="container mx-auto px-4 md:px-6 h-full">
           <div className="flex items-center justify-between h-full">
-            <div className="h-[85%] aspect-auto relative">
-              {" "}
+            <Link
+              href="/"
+              className="h-[85%] aspect-auto relative block 
+                         transition-transform active:scale-95 hover:scale-105 duration-100"
+            >
               <Image
                 src="/images/logo_dark.svg"
                 alt="Site Logo"
@@ -58,7 +61,7 @@ export function Header() {
                 priority
                 className="!relative"
               />
-            </div>
+            </Link>
             <div className="w-9 h-9" />
           </div>
         </div>
@@ -81,7 +84,11 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6 h-full relative">
         <nav className="flex items-center justify-between h-full">
           {/* Logo with solid background */}
-          <div className="h-[85%] aspect-auto relative bg-[#40e0d0] px-3 rounded-lg">
+          <Link
+            href="/"
+            className="h-[85%] aspect-auto relative bg-[#40e0d0] px-3 rounded-lg block 
+             transition-transform active:scale-95 hover:scale-105 duration-100"
+          >
             <Image
               src="/images/logo_dark.svg"
               alt="Site Logo"
@@ -90,7 +97,7 @@ export function Header() {
               priority
               className="!relative"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-2 bg-background/95 px-4 py-1 rounded-full">
