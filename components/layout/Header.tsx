@@ -45,71 +45,68 @@ export function Header() {
 
   if (!mounted) {
     return (
-      <header className="h-16 fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-transparent">
+      <header className="h-16 fixed top-0 left-0 right-0 z-50 bg-[#40e0d0]/80 backdrop-blur-md">
         <div className="container mx-auto px-4 md:px-6 h-full">
           <div className="flex items-center justify-between h-full">
-            <Link
-              href="/"
-              className="h-[85%] aspect-auto relative block 
-                         transition-transform active:scale-95 hover:scale-105 duration-100"
-            >
+            <div className="h-[3.5rem] w-[120px] relative">
               <Image
                 src="/images/logo_dark.svg"
                 alt="Site Logo"
-                fill
-                style={{ objectFit: "contain" }}
+                width={120}
+                height={56}
                 priority
-                className="!relative"
+                className="object-contain object-left"
               />
-            </Link>
-            <div className="w-9 h-9" />
+            </div>
+            <div className="w-9 h-9" /> {/* Spacer maintains layout */}
           </div>
         </div>
       </header>
     );
   }
-
   return (
     <header className="h-16 fixed top-0 left-0 right-0 z-50">
-      {/* Glass effect background layer */}
+      {/* Glass background layer (unchanged from your original) */}
       <div
         className={cn(
           "absolute inset-0 border-b border-white/30 shadow-[0_4px_12px_rgba(100,210,255,0.2)]",
           isScrolled
-            ? "bg-[#40e0d0]/80 backdrop-blur-sd"
-            : "bg-[#40e0d0]/80 backdrop-blur-sd"
+            ? "bg-[#40e0d0]/80 backdrop-blur-md"
+            : "bg-[#40e0d0]/80 backdrop-blur-md"
         )}
       />
-      {/* Opaque content layer */}
+
+      {/* Content layer with explicit sizing */}
       <div className="container mx-auto px-4 md:px-6 h-full relative">
         <nav className="flex items-center justify-between h-full">
-          {/* Logo with solid background */}
+          {/* Logo - Now with stable sizing */}
           <Link
             href="/"
-            className="h-[85%] aspect-auto relative bg-[#40e0d0] px-3 rounded-lg block 
-             transition-transform active:scale-95 hover:scale-105 duration-100"
+            className="h-[3.5rem] w-auto min-w-[120px] relative flex items-center"
+            // This maintains exact height matching header
           >
             <Image
               src="/images/logo_dark.svg"
               alt="Site Logo"
-              fill
-              style={{ objectFit: "contain" }}
+              width={120} // Fixed dimensions prevent layout shifts
+              height={56} // h-16 (4rem) - some padding
               priority
-              className="!relative"
+              className="object-contain object-left" // Better image control
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2 bg-background/95 px-4 py-1 rounded-full">
+          {/* Desktop Nav - Stable version */}
+          <div className="hidden md:flex items-center gap-6 h-full">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium px-3 py-1 rounded-full transition-colors",
+                  "h-full flex items-center px-3 text-sm font-medium",
+                  "transition-colors hover:text-primary border-b-2 border-transparent",
                   pathname === item.href
-                    ? "bg-accent text-accent-foreground"
-                    : "text-muted-foreground hover:bg-accent/20"
+                    ? "text-primary border-primary"
+                    : "text-white/90 hover:text-white"
                 )}
               >
                 {item.label}
