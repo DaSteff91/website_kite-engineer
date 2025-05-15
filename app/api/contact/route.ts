@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { sendEmail } from '@/utilities/nodemailer';
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,23 +13,28 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Configure the transporter
+    // Configure the transporter with STARTTLS
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: process.env.SMTP_SECURE === 'true',
+      port: Number(process.env.SMTP_PORT) || 587,
+      secure: false,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      requireTLS: true,
+      tls: {
+        rejectUnauthorized: true,
+      },
     });
 
     // Send the email
-    await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: process.env.CONTACT_EMAIL,
+    await sendEmail({
+      from: process.env.SMTP_USER!,
+      to: process.env.CONTACT_EMAIL!,
       subject,
       text: message,
+      replyTo: email,
     });
 
     return NextResponse.json(
