@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
 
     // Send the email
     await sendEmail({
-      from: process.env.SMTP_USER!,
+      //from: process.env.SMTP_USER!,
       to: process.env.CONTACT_EMAIL!,
       subject,
       text: message,
