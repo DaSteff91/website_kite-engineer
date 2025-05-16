@@ -58,7 +58,7 @@ export function ContactForm() {
             Let's Connect
           </h1>
           <p className="text-lg text-muted-foreground">
-            Whether it's about code, kiteboarding, or anything in between
+            Whether it's about kiteboarding, engineering or anything in between
           </p>
         </div>
 

@@ -23,22 +23,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-3">
             <h3 className="text-lg font-semibold">Contact</h3>
-            <address className="not-italic text-sm text-muted-foreground">
+            {/* <address className="not-italic text-sm text-muted-foreground">
               123 Main Street
               <br />
               City, Country 12345
-              <br />
-              <a
-                href="mailto:contact@example.com"
-                className="hover:text-primary"
-              >
-                contact@example.com
-              </a>
-              <br />
-              <a href="tel:+1234567890" className="hover:text-primary">
-                +1 (234) 567-890
-              </a>
-            </address>
+              <br /> */}
+            <a href="mailto:contact@example.com" className="hover:text-primary">
+              stefan@kite-engineer.de
+            </a>
+            <br />
+            {/* <a href="tel:+1234567890" className="hover:text-primary">
+              +1 (234) 567-890
+            </a> */}
           </div>
 
           <div className="space-y-3">
@@ -73,7 +69,7 @@ export function Footer() {
 
           <div className="space-y-3">
             <h3 className="text-lg font-semibold">Legal</h3>
-            <ul className="space-y-2 text-sm">
+            {/* <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/privacy"
@@ -90,7 +86,8 @@ export function Footer() {
                   Imprint
                 </Link>
               </li>
-            </ul>
+            </ul> */}
+            "Here comes something"
           </div>
 
           <div className="space-y-3">

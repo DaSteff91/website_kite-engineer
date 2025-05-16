@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -9,7 +10,14 @@ export default function Home() {
           href="/kite"
           className="group relative overflow-hidden rounded-2xl aspect-square"
         >
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1655039/pexels-photo-1655039.jpeg')] bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75" />
+          <div className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75">
+            <Image
+              src="/images/kite_landingpage.png"
+              alt="Your Image Description"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>{" "}
           <div className="relative h-full flex flex-col justify-end p-8 transition-transform duration-500 group-hover:-translate-y-2">
             <h2 className="text-4xl font-bold text-white mb-4">Kite</h2>
             <p className="text-white/80">
@@ -22,7 +30,14 @@ export default function Home() {
           href="/engineer"
           className="group relative overflow-hidden rounded-2xl aspect-square"
         >
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg')] bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75" />
+          <div className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75">
+            <Image
+              src="/images/1.jpg"
+              alt="Your Image Description"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>{" "}
           <div className="relative h-full flex flex-col justify-end p-8 transition-transform duration-500 group-hover:-translate-y-2">
             <h2 className="text-4xl font-bold text-white mb-4">Engineer</h2>
             <p className="text-white/80">
