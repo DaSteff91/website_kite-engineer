@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - dev
+      - main
     paths-ignore:
       - "README.md"
       - "docs/**"
@@ -82,6 +82,6 @@ jobs:
           script: |
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker pull ghcr.io/dasteff91/website_kite-engineer:latest
-            docker stop www-dev.kite-engineer.de || true
-            docker rm www-dev.kite-engineer.de || true
-            docker run -d --name "www-dev.kite-engineer.de" -p 3001:3000 ghcr.io/dasteff91/website_kite-engineer:latest
+            docker stop www.kite-engineer.de || true
+            docker rm www.kite-engineer.de || true
+            docker run -d --name "www.kite-engineer.de" -p 3000:3000 ghcr.io/dasteff91/website_kite-engineer:latest
