@@ -20,9 +20,7 @@ export default function Home() {
           </div>{" "}
           <div className="relative h-full flex flex-col justify-end p-8 transition-transform duration-500 group-hover:-translate-y-2">
             <h2 className="text-4xl font-bold text-white mb-4">Kite</h2>
-            <p className="text-white/80">
-              Explore my kiteboarding journey and adventures
-            </p>
+            <p className="text-white/80">Explore my kiteboarding services</p>
           </div>
         </Link>
 
@@ -40,9 +38,7 @@ export default function Home() {
           </div>{" "}
           <div className="relative h-full flex flex-col justify-end p-8 transition-transform duration-500 group-hover:-translate-y-2">
             <h2 className="text-4xl font-bold text-white mb-4">Engineer</h2>
-            <p className="text-white/80">
-              Discover my software engineering projects and expertise
-            </p>
+            <p className="text-white/80">Discover my engineering expertise</p>
           </div>
         </Link>
       </div>
