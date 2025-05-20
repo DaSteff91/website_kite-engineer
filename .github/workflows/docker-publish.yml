@@ -58,6 +58,10 @@ jobs:
             org.opencontainers.image.revision=${{ github.sha }}
             org.opencontainers.image.created=${{ steps.meta.outputs.created }}
 
+      - name: Clean workspace
+        run: |
+          rm -rf ./* ./.??*
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:

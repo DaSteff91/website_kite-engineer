@@ -33,13 +33,7 @@ ENV NEXT_TELEMETRY_DISABLED=1 \
     OXIDE=1
 
 RUN test -f yarn.lock && test ! -f package-lock.json || true
-RUN \
-    if [ -f yarn.lock ]; then SKIP_ENV_VALIDATION=1 yarn build; \
-    elif [ -f package-lock.json ]; then SKIP_ENV_VALIDATION=1 npm run build; \
-    elif [ -f pnpm-lock.yaml ]; then npm install -g pnpm && SKIP_ENV_VALIDATION=1 pnpm run build; \
-    else echo "Lockfile not found." && exit 1; \
-    fi
-
+RUN SKIP_ENV_VALIDATION=1 npm run build
 
 ##### RUNNER
 
