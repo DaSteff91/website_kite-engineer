@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       type: "image/x-icon",
     },
   ],
-  keywords: "Kiteboarding, Engineering",
+  keywords: "Kiteboarding, Engineering, Testing",
 };
 
 export default function RootLayout({
