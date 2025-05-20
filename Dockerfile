@@ -19,7 +19,7 @@ WORKDIR /app
 # Install dependencies based on the preferred package manager
 
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci --omit=dev
 
 ##### BUILDER
 
@@ -32,6 +32,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1 \
     OXIDE=1
 
+RUN test -f yarn.lock && test ! -f package-lock.json || true
 RUN \
     if [ -f yarn.lock ]; then SKIP_ENV_VALIDATION=1 yarn build; \
     elif [ -f package-lock.json ]; then SKIP_ENV_VALIDATION=1 npm run build; \
@@ -45,7 +46,8 @@ RUN \
 FROM gcr.io/distroless/nodejs20-debian12 AS runner
 
 LABEL org.opencontainers.image.source="https://github.com/DaSteff91/website_kite-engineer" \
-    org.opencontainers.image.description="Hompage of the Kite-Engineer"
+    org.opencontainers.image.description="Hompage of the Kite-Engineer" \
+    org.opencontainers.image.version="dev"
 
 
 WORKDIR /app
@@ -61,4 +63,4 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
 EXPOSE 3001
-CMD ["server.js"]
+CMD ["node", "server.js"]

@@ -88,4 +88,4 @@ jobs:
             docker pull ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
             docker stop www-dev.kite-engineer.de || true
             docker rm www-dev.kite-engineer.de || true
-            docker run -d --name "www-dev.kite-engineer.de" -p 3001:3000 ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }} --restart unless-stopped
+            docker run -d --name "www-dev.kite-engineer.de" -p 3001:3000 --restart unless-stopped ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
