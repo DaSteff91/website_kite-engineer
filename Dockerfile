@@ -45,15 +45,14 @@ RUN \
 FROM gcr.io/distroless/nodejs20-debian12 AS runner
 
 LABEL org.opencontainers.image.source="https://github.com/DaSteff91/website_kite-engineer" \
-    org.opencontainers.image.description="Hompage of the Kite-Engineer" \
-    org.opencontainers.image.version="dev"
+    org.opencontainers.image.description="Hompage of the Kite-Engineer"
 
 
 WORKDIR /app
 
 ENV NODE_ENV=development \
     NEXT_TELEMETRY_DISABLED=1 \
-    PORT=3001
+    PORT=3000
 
 COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/public ./public
@@ -61,5 +60,5 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
-EXPOSE 3001
-CMD ["node", "server.js"]
+EXPOSE 3000
+CMD ["server.js"]
