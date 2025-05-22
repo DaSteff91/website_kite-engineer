@@ -1,12 +1,12 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
+  "name": "kite-engineer_website",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -70,6 +70,53 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/nodemailer": "^6.4.17"
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^10.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.0.4",
+    "@semantic-release/release-notes-generator": "^11.0.0",
+    "@types/nodemailer": "^6.4.17",
+    "husky": "^9.1.7"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "dist.zip",
+              "label": "Distribution"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      }
+    },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
   }
 }
