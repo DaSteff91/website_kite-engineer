@@ -1,0 +1,76 @@
+{
+  "navigation": {
+    "about": "Über mich",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "kite": {
+      "description": "Neugierig? Probier es aus"
+    },
+    "engineer": {
+      "description": "Es geht um Lösungen"
+    }
+  },
+  "about": {
+    "title": "Über mich",
+    "subtitle": "Leidenschaftlich für Technologie und Kiteboarding",
+    "professional": {
+      "title": "Beruflicher Werdegang",
+      "description": "[Ihr beruflicher Hintergrund und Erfahrung Platzhalter]"
+    },
+    "personal": {
+      "title": "Persönliche Interessen",
+      "description": "[Ihre Interessen, Hobbys und Motivation Platzhalter]"
+    }
+  },
+  "engineer": {
+    "title": "Welten verbinden",
+    "subtitle": "Innovation mit technischer Expertise verbinden, um außergewöhnliche Lösungen zu liefern",
+    "services": {
+      "software": {
+        "title": "Softwareentwicklung",
+        "description": "Entwicklung robuster und skalierbarer Lösungen mit modernen Technologien"
+      },
+      "architecture": {
+        "title": "Systemarchitektur",
+        "description": "Design effizienter und wartbarer Systemarchitekturen"
+      },
+      "consulting": {
+        "title": "Technische Beratung",
+        "description": "Expertenberatung zu technischen Entscheidungen und Implementierungsstrategien"
+      }
+    }
+  },
+  "kite": {
+    "title": "Erlebe den Kiteboarding-Thrill",
+    "subtitle": "Von Anfängerkursen bis zu fortgeschrittenen Techniken - entdecke die perfekte Verbindung von Sport und Natur",
+    "services": {
+      "beginner": {
+        "title": "Anfängerkurse",
+        "description": "Starte deine Kiteboarding-Reise mit umfassenden, auf Anfänger zugeschnittenen Kursen"
+      },
+      "advanced": {
+        "title": "Fortgeschrittene Techniken",
+        "description": "Perfektioniere deine Fähigkeiten mit fortgeschrittenem Training und spezialisierten Techniken"
+      },
+      "equipment": {
+        "title": "Ausrüstungsberatung",
+        "description": "Expertenberatung zur Auswahl und Wartung deiner Kiteboarding-Ausrüstung"
+      }
+    }
+  },
+  "contact": {
+    "title": "Lass uns verbinden",
+    "subtitle": "Ob Kiteboarding, Engineering oder alles dazwischen",
+    "form": {
+      "name": "Dein Name*",
+      "email": "Deine E-Mail*",
+      "subject": "Betreff*",
+      "message": "Deine Nachricht*",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Vielen Dank für deine Nachricht!",
+      "mandatory": "* Pflichtfelder"
+    }
+  }
+}

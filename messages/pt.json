@@ -1,0 +1,76 @@
+{
+  "navigation": {
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "home": {
+    "kite": {
+      "description": "Curioso? Experimente"
+    },
+    "engineer": {
+      "description": "É tudo sobre soluções"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "Apaixonado por tecnologia e kiteboarding",
+    "professional": {
+      "title": "Jornada Profissional",
+      "description": "[Seu histórico profissional e experiência placeholder]"
+    },
+    "personal": {
+      "title": "Interesses Pessoais",
+      "description": "[Seus interesses, hobbies e motivação placeholder]"
+    }
+  },
+  "engineer": {
+    "title": "Combinando Mundos",
+    "subtitle": "Combinando inovação com expertise técnica para entregar soluções excepcionais",
+    "services": {
+      "software": {
+        "title": "Desenvolvimento de Software",
+        "description": "Criando soluções robustas e escaláveis usando tecnologias modernas"
+      },
+      "architecture": {
+        "title": "Arquitetura de Sistemas",
+        "description": "Projetando arquiteturas de sistemas eficientes e mantíveis"
+      },
+      "consulting": {
+        "title": "Consultoria Técnica",
+        "description": "Orientação especializada em decisões técnicas e estratégias de implementação"
+      }
+    }
+  },
+  "kite": {
+    "title": "Experimente a Emoção do Kiteboarding",
+    "subtitle": "De aulas para iniciantes a técnicas avançadas, descubra a combinação perfeita entre esporte e natureza",
+    "services": {
+      "beginner": {
+        "title": "Aulas para Iniciantes",
+        "description": "Comece sua jornada no kiteboarding com aulas abrangentes adaptadas para iniciantes"
+      },
+      "advanced": {
+        "title": "Técnicas Avançadas",
+        "description": "Aperfeiçoe suas habilidades com treinamento avançado e técnicas especializadas"
+      },
+      "equipment": {
+        "title": "Guia de Equipamentos",
+        "description": "Consultoria especializada na seleção e manutenção do seu equipamento de kiteboarding"
+      }
+    }
+  },
+  "contact": {
+    "title": "Vamos Conectar",
+    "subtitle": "Seja sobre kiteboarding, engenharia ou qualquer coisa entre eles",
+    "form": {
+      "name": "Seu nome*",
+      "email": "Seu email*",
+      "subject": "Assunto*",
+      "message": "Sua mensagem*",
+      "submit": "Enviar Mensagem",
+      "sending": "Enviando...",
+      "success": "Obrigado por entrar em contato!",
+      "mandatory": "* Campos obrigatórios"
+    }
+  }
+}
