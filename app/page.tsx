@@ -9,7 +9,7 @@ export default function Home() {
         <Link
           href="/kite"
           className="group relative overflow-hidden rounded-2xl aspect-square 
-            border border-white/10
+            border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
             transition-all duration-300 active:scale-95 touch-active"
         >
           <div className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75">
@@ -30,7 +30,7 @@ export default function Home() {
         <Link
           href="/engineer"
           className="group relative overflow-hidden rounded-2xl aspect-square 
-            border border-white/10
+            border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
             transition-all duration-300 active:scale-95 touch-active"
         >
           <div className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75">
