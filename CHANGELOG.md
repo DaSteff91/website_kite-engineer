@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.2...v1.0.3) (2025-05-25)
+
+
+### Bug Fixes
+
+* using different semver flow ([7645c8c](https://github.com/DaSteff91/website_kite-engineer/commit/7645c8c1828ca3a533cbd730cb381ff3969c6858))
+
 ## [1.0.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.1...v1.0.2) (2025-05-25)
 
 
