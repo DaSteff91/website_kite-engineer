@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.3.0...v1.3.1) (2025-05-25)
+
+
+### Bug Fixes
+
+* changing the contact page to fit the overall style. Need more rework ([393cc86](https://github.com/DaSteff91/website_kite-engineer/commit/393cc86963db7f5e441e51539b89b639958900d4))
+
 # [1.3.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.2.0...v1.3.0) (2025-05-25)
 
 
