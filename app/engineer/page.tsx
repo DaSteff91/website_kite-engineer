@@ -7,24 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { 
-  Settings, 
-  Code2, 
-  ClipboardList, 
-  Lightbulb,
-  Gauge,
-  Cpu,
-  BarChart3,
-  Workflow,
-  Binary,
-  Network,
-  ProjectorChart,
-  Users,
-  ShieldAlert,
-  FileSearch,
-  Router,
-  GraduationCap
-} from "lucide-react";
+import { Settings, Code2, ClipboardList, Lightbulb, Gauge, Cpu, BarChart3, Workflow, Binary, Network, Projector as ProjectorChart, Users, ShieldAlert, FileSearch, Router, GraduationCap } from "lucide-react";
 
 export default function EngineerPage() {
   return (
