@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -34,6 +34,8 @@ export function Header() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   
   useEffect(() => {
     setMounted(true);
@@ -41,6 +43,25 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isMobileMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   if (pathname === "/") return null;
 
@@ -136,6 +157,7 @@ export function Header() {
             </div>
 
             <Button
+              ref={menuButtonRef}
               variant="ghost"
               size="icon"
               className="md:hidden hover:scale-105 transition-transform"
@@ -153,6 +175,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         <div
+          ref={mobileMenuRef}
           className={cn(
             "absolute top-full left-0 right-0 mt-2 md:hidden",
             "transition-all duration-200 ease-in-out",
