@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.2.0...v1.3.0) (2025-05-25)
+
+
+### Features
+
+* adding an about page. Fix a workflow ([d7f7a93](https://github.com/DaSteff91/website_kite-engineer/commit/d7f7a93a96f619bace22d3a47a2930bf872a544d))
+
 # [1.2.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.1.0...v1.2.0) (2025-05-25)
 
 
