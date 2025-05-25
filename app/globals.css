@@ -97,10 +97,10 @@
 
 /* Responsive font sizes */
 @media (max-width: 640px) {
-  .text-3xl {
-    font-size: 1.875rem;
+  .text-2xl {
+    font-size: 1.5rem;
   }
-  .text-base {
-    font-size: 1rem;
+  .text-sm {
+    font-size: 0.875rem;
   }
 }
