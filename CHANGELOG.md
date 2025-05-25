@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.3.2...v1.4.0) (2025-05-25)
+
+
+### Features
+
+* adding background to landing page, tilesize increase, glow in font ([d78eed7](https://github.com/DaSteff91/website_kite-engineer/commit/d78eed7aa8d5948f09ad9e7cc00723c494bb3714))
+
 ## [1.3.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.3.1...v1.3.2) (2025-05-25)
 
 
