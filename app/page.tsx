@@ -4,8 +4,21 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-[90rem] mx-auto">
+    <div className="min-h-screen flex items-center justify-center p-4 relative">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/background.jpg"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+          className="brightness-50"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-[90rem] mx-auto relative z-10">
         <Link
           href="/kite"
           className="group relative overflow-hidden rounded-2xl aspect-square 
