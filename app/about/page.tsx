@@ -2,7 +2,18 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <main className="relative min-h-screen">
+      {/* Background Image*/}
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src="/images/background_image_darker.png"
+          alt="Background"
+          fill
+          className="brightness-50 object-cover object-top"
+          priority
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
@@ -30,7 +41,7 @@ export default function AboutPage() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">

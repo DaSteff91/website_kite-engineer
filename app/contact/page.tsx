@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function ContactPage() {
   return (
     <main className="relative min-h-screen">
-      {/* Background Image - now covering the entire page behind everything */}
+      {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
           src="/images/background_image_darker.png"
@@ -55,7 +55,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="relative py-12 sm:py-16">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="relative mb-20">
             <h2

@@ -33,7 +33,18 @@ import {
 
 export default function EngineerPage() {
   return (
-    <main className="min-h-screen">
+    <main className="relative min-h-screen">
+      {/* Background Image*/}
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src="/images/background_image_darker.png"
+          alt="Background"
+          fill
+          className="brightness-50 object-cover object-top"
+          priority
+        />
+      </div>
+
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
@@ -61,7 +72,7 @@ export default function EngineerPage() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="relative mb-20">
             <h2
