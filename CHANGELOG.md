@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.1...v1.4.2) (2025-05-25)
+
+
+### Bug Fixes
+
+* order of the quick links in the footer changed ([2d25e96](https://github.com/DaSteff91/website_kite-engineer/commit/2d25e962dca3f2ddeee179d0fe64a2221eee0e03))
+
 ## [1.4.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.0...v1.4.1) (2025-05-25)
 
 
