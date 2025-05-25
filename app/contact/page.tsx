@@ -5,21 +5,21 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center">
+      <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
             src="/images/contact_page.jpg"
             alt="Contact"
             fill
-            className="object-cover brightness-50"
+            className="object-cover object-[center_10%] brightness-50"
             priority
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
             Let's Connect
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Whether it's about kiteboarding, engineering, or anything in between
           </p>
         </div>

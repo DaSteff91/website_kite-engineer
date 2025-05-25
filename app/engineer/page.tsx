@@ -17,10 +17,10 @@ export default function EngineerPage() {
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
             Combining Worlds
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Combining innovation with technical expertise to deliver exceptional
             solutions
           </p>
@@ -36,14 +36,11 @@ export default function EngineerPage() {
                 Software Development
               </h3>
               <p className="text-muted-foreground">
-                Creating robust and scalable solutions using modern
-                technologies.
+                Creating robust and scalable solutions using modern technologies.
               </p>
             </div>
             <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
-              <h3 className="text-xl font-semibold mb-4">
-                System Architecture
-              </h3>
+              <h3 className="text-xl font-semibold mb-4">System Architecture</h3>
               <p className="text-muted-foreground">
                 Designing efficient and maintainable system architectures.
               </p>
