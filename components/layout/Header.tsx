@@ -24,8 +24,8 @@ const LANGUAGES = [
 const NAV_ITEMS = [
   { href: "/kite", label: "Kite" },
   { href: "/engineer", label: "Engineer" },
-  { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
