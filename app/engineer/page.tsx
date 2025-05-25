@@ -80,8 +80,8 @@ export default function EngineerPage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Expand your project capabilities, strengthen your resource pool,
-              and gain fresh insights
+              Expand your project capabilities, strengthen your resource pool or
+              gain fresh insights with a new perspective
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Benefit from my engineering expertise in the areas of
