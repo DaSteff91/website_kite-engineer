@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { WaveTransition } from "@/components/ui/wave-transition";
 
 export default function KitePage() {
   return (
@@ -25,7 +24,6 @@ export default function KitePage() {
             Explore - Instruct - Create - Enable - Deliver
           </p>
         </div>
-        <WaveTransition />
       </section>
 
       {/* Content Section */}
