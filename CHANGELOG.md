@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.6...v1.5.0) (2025-05-25)
+
+
+### Features
+
+* add background to about page and changing its content ([3fc8a03](https://github.com/DaSteff91/website_kite-engineer/commit/3fc8a0391dded6223e872ba16b0ff1cb0339c1b9))
+
 ## [1.4.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.5...v1.4.6) (2025-05-25)
 
 
