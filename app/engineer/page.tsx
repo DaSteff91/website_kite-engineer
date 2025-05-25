@@ -36,11 +36,16 @@ export default function EngineerPage() {
       {/* Content Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Expand your project capabilities, strengthen your resource pool, and
-            gain fresh insights — benefit from my engineering expertise in the
-            areas of semiconductor manufacturing and software development
-          </h2>
+          <div className="relative mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed bg-gradient-to-r from-blue-200 via-teal-200 to-emerald-200 bg-clip-text text-transparent animate-gradient">
+              Expand your project capabilities, strengthen your resource pool, and
+              gain fresh insights
+            </h2>
+            <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Benefit from my engineering expertise in the areas of semiconductor manufacturing and software development
+            </p>
+            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr justify-items-center">
             {/* Process Engineering Section */}
