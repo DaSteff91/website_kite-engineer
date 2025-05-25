@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Settings, Code2, ClipboardList, Lightbulb, Gauge, Cpu, BarChart3, Workflow, Binary, Network, Projector as ProjectorChart, Users, ShieldAlert, FileSearch, Router, GraduationCap, ArrowRight } from "lucide-react";
+import { Settings, Code2, ClipboardList, Lightbulb, Gauge, Cpu, BarChart3, Workflow, Binary, Network, Projector as ProjectorChart, Users, ShieldAlert, FileSearch, Router, GraduationCap, ArrowRight, Flask, Microscope, LineChart, Braces } from "lucide-react";
 
 export default function EngineerPage() {
   return (
@@ -44,7 +44,7 @@ export default function EngineerPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr justify-items-center">
             {/* Process Engineering Section */}
-            <div className="bg-gradient-to-br from-blue-900/30 via-card/30 to-cyan-900/30 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
+            <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
                 <Settings className="h-7 w-7 text-blue-400" />
                 Process Engineering
@@ -86,18 +86,61 @@ export default function EngineerPage() {
               </Accordion>
             </div>
 
-            {/* Development Engineering Section */}
-            <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-teal-900/30 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-emerald-200">
-                <Code2 className="h-7 w-7 text-emerald-400" />
-                Development Engineering
+            {/* Process Development Section */}
+            <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
+              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
+                <Flask className="h-7 w-7 text-cyan-400" />
+                Process Development
+              </h3>
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="research" className="border-white/10">
+                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                    <div className="flex items-center gap-2">
+                      <Microscope className="h-5 w-5" />
+                      Research & Innovation
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80">
+                    Development of new manufacturing processes and techniques to improve efficiency and product quality.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="process-design" className="border-white/10">
+                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                    <div className="flex items-center gap-2">
+                      <Braces className="h-5 w-5" />
+                      Process Design
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80">
+                    Creation and optimization of new manufacturing processes from concept to implementation.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="performance-analysis" className="border-white/10">
+                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                    <div className="flex items-center gap-2">
+                      <LineChart className="h-5 w-5" />
+                      Performance Analysis
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80">
+                    Detailed analysis and optimization of process performance metrics and quality indicators.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            {/* Software Development Section */}
+            <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
+              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-200">
+                <Code2 className="h-7 w-7 text-teal-400" />
+                Software Development
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="software-development" className="border-white/10">
-                  <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Binary className="h-5 w-5" />
-                      Software Development
+                      Custom Solutions
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -105,7 +148,7 @@ export default function EngineerPage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="automation" className="border-white/10">
-                  <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Workflow className="h-5 w-5" />
                       Automation Solutions
@@ -116,7 +159,7 @@ export default function EngineerPage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="integration" className="border-white/10">
-                  <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Network className="h-5 w-5" />
                       System Integration
@@ -130,14 +173,14 @@ export default function EngineerPage() {
             </div>
 
             {/* Project Management Section */}
-            <div className="bg-gradient-to-br from-cyan-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
-                <ClipboardList className="h-7 w-7 text-cyan-400" />
+            <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
+              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-emerald-200">
+                <ClipboardList className="h-7 w-7 text-emerald-400" />
                 Project Management
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="project-planning" className="border-white/10">
-                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <ProjectorChart className="h-5 w-5" />
                       Project Planning
@@ -148,7 +191,7 @@ export default function EngineerPage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="team-leadership" className="border-white/10">
-                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Users className="h-5 w-5" />
                       Team Leadership
@@ -159,7 +202,7 @@ export default function EngineerPage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="risk-management" className="border-white/10">
-                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <ShieldAlert className="h-5 w-5" />
                       Risk Management
@@ -173,14 +216,14 @@ export default function EngineerPage() {
             </div>
 
             {/* Technical Consulting Section */}
-            <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-200">
-                <Lightbulb className="h-7 w-7 text-teal-400" />
+            <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
+              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
+                <Lightbulb className="h-7 w-7 text-blue-400" />
                 Technical Consulting
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="process-assessment" className="border-white/10">
-                  <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <FileSearch className="h-5 w-5" />
                       Process Assessment
@@ -191,7 +234,7 @@ export default function EngineerPage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="technology-roadmap" className="border-white/10">
-                  <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Router className="h-5 w-5" />
                       Technology Roadmap
@@ -202,7 +245,7 @@ export default function EngineerPage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="training" className="border-white/10">
-                  <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <GraduationCap className="h-5 w-5" />
                       Training & Knowledge Transfer
