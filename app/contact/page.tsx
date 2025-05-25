@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center">
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
             src="/images/contact_page.jpg"
@@ -25,12 +25,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+      {/* Contact Form Section */}
+      <section className="py-12 sm:py-16 bg-background">
+        <div className="container px-4 sm:px-6 mx-auto">
           <div className="absolute inset-0 circuit-pattern opacity-5" />
-          <div className="relative max-w-lg mx-auto">
-            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
+          <div className="relative flex justify-center">
+            <div className="w-full max-w-4xl">
               <ContactForm />
             </div>
           </div>
