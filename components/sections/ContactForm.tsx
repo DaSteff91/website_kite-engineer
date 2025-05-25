@@ -84,14 +84,14 @@ export function ContactForm() {
                 />
               </div>
 
-              {/* <div className="space-y-2">
+              <div className="space-y-2">
                 <Input
                   name="subject"
-                  placeholder="Subject"
+                  placeholder="Subject*"
                   required
                   className="bg-background/50"
                 />
-              </div> */}
+              </div>
 
               <div className="space-y-2">
                 <Textarea
