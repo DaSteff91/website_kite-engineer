@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -46,12 +46,9 @@ export function Header() {
   if (!mounted) {
     return (
       <header className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-screen-xl z-50 rounded-t-md rounded-b-2xl overflow-hidden">
-        <div className="bg-[#40e0d0]/10 backdrop-blur-md h-16 shadow-lg border border-white/20">
+        <div className="bg-background/10 backdrop-blur-md h-16 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] border border-white/20">
           <div className="px-4 md:px-6 h-full flex items-center justify-between">
-            <div
-              className="h-[85%] w-auto min-w-[120px] relative flex items-center aspect-auto
-          transition-transform active:scale-95 hover:scale-105 duration-100"
-            >
+            <div className="h-[85%] w-auto min-w-[120px] relative flex items-center aspect-auto">
               <Image
                 src="/images/logo_dark.svg"
                 alt="Site Logo"
@@ -70,22 +67,13 @@ export function Header() {
 
   return (
     <header className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-screen-xl z-50 rounded-t-md rounded-b-2xl overflow-hidden">
-      {/* Background blur and border */}
-      <div
-        className={cn(
-          "absolute inset-0 border-b border-white/30 shadow-[0_4px_12px_rgba(100,210,255,0.2)]",
-          "bg-[#40e0d0]/10 backdrop-blur-md"
-        )}
-      />
+      <div className="absolute inset-0 border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/10 backdrop-blur-md" />
 
       <div className="container px-4 md:px-6 h-16 relative flex items-center justify-between">
-        {/* Nav content */}
         <Link
           href="/"
           className="h-[85%] w-auto min-w-[120px] relative flex items-center aspect-auto
-          transition-transform active:scale-95 hover:scale-105 duration-100"
-          // className="h-[85%] aspect-auto relative bg-[#40e0d0] px-3 rounded-lg block
-          //    transition-transform active:scale-95 hover:scale-105 duration-100"
+          transition-transform hover:scale-105 active:scale-95 duration-200"
         >
           <Image
             src="/images/logo_dark.svg"
@@ -104,10 +92,11 @@ export function Header() {
               href={item.href}
               className={cn(
                 "h-full flex items-center px-3 text-sm font-medium",
-                "transition-colors hover:text-primary border-b-2 border-transparent",
+                "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
+                "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
                 pathname === item.href
-                  ? "text-primary border-primary"
-                  : "text-white/90 hover:text-white"
+                  ? "text-white border-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                  : "text-white/90"
               )}
             >
               {item.label}
@@ -116,7 +105,7 @@ export function Header() {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="hover:scale-105 transition-transform">
                 <Globe className="h-5 w-5" />
                 <span className="sr-only">Select language</span>
               </Button>
@@ -134,6 +123,7 @@ export function Header() {
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="hover:scale-105 transition-transform"
           >
             {theme === "dark" ? (
               <Sun className="h-5 w-5" />
@@ -147,7 +137,7 @@ export function Header() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className="md:hidden hover:scale-105 transition-transform"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
@@ -167,20 +157,21 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-sm font-medium transition-all duration-200",
+                  "hover:scale-105 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
                   pathname === item.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                    ? "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                    : "text-white/90"
                 )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <hr className="border-border my-2" />
+            <hr className="border-white/20 my-2" />
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="w-full justify-start gap-2">
+                <Button variant="ghost" className="w-full justify-start gap-2 hover:scale-105 transition-transform">
                   <Globe className="h-5 w-5" />
                   Select Language
                 </Button>
@@ -195,7 +186,7 @@ export function Header() {
             </DropdownMenu>
             <Button
               variant="ghost"
-              className="w-full justify-start gap-2"
+              className="w-full justify-start gap-2 hover:scale-105 transition-transform"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
               {theme === "dark" ? (
