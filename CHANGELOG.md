@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.5...v1.4.6) (2025-05-25)
+
+
+### Bug Fixes
+
+* adjust some content ([18c4c9f](https://github.com/DaSteff91/website_kite-engineer/commit/18c4c9f214d16051ef07cd278d71b9fe866fe859))
+
 ## [1.4.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.4...v1.4.5) (2025-05-25)
 
 
