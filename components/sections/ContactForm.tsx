@@ -68,7 +68,7 @@ export function ContactForm() {
               <div className="space-y-2">
                 <Input
                   name="name"
-                  placeholder="Your name"
+                  placeholder="Your name*"
                   required
                   className="bg-background/50"
                 />
@@ -78,25 +78,25 @@ export function ContactForm() {
                 <Input
                   type="email"
                   name="email"
-                  placeholder="Your email"
+                  placeholder="Your email*"
                   required
                   className="bg-background/50"
                 />
               </div>
 
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <Input
                   name="subject"
                   placeholder="Subject"
                   required
                   className="bg-background/50"
                 />
-              </div>
+              </div> */}
 
               <div className="space-y-2">
                 <Textarea
                   name="message"
-                  placeholder="Your message"
+                  placeholder="Your message*"
                   required
                   className="bg-background/50 min-h-[150px]"
                 />
@@ -123,6 +123,9 @@ export function ContactForm() {
                   {successMessage}
                 </p>
               )}
+              <p className="text-opacity-80 text-sm text-gray-100">
+                * Mandatory fields
+              </p>
             </form>
           </CardContent>
         </Card>
