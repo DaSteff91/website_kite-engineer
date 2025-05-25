@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function EngineerPage() {
   return (
@@ -29,52 +35,130 @@ export default function EngineerPage() {
       {/* Content Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-xl font-semibold mb-2">
-            Expand your project capabilities, strengthen your resource pool, and
-            gain fresh insights — benefit from my engineering expertise in the
-            areas of semiconductor manufacturing and software development:
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
-              <h3 className="text-xl font-semibold mb-4">
-                Process Engineering
-              </h3>
-              <p className="text-muted-foreground">
-                Creating robust and scalable solutions using modern
-                technologies.
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl font-semibold mb-12 text-center">
+              Expand your project capabilities, strengthen your resource pool, and
+              gain fresh insights — benefit from my engineering expertise in the
+              areas of semiconductor manufacturing and software development
+            </h2>
+
+            <div className="grid gap-8">
+              {/* Process Engineering Section */}
+              <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
+                <h3 className="text-xl font-semibold mb-4 pb-3 border-b border-white/20">
+                  Process Engineering
+                </h3>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="process-optimization">
+                    <AccordionTrigger>Process Optimization</AccordionTrigger>
+                    <AccordionContent>
+                      Comprehensive analysis and optimization of semiconductor manufacturing processes, focusing on yield improvement and efficiency gains.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="equipment-integration">
+                    <AccordionTrigger>Equipment Integration</AccordionTrigger>
+                    <AccordionContent>
+                      Expert guidance in integrating new equipment into existing production lines while maintaining optimal performance.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="yield-analysis">
+                    <AccordionTrigger>Yield Analysis</AccordionTrigger>
+                    <AccordionContent>
+                      Advanced statistical analysis and problem-solving techniques to identify and resolve yield-limiting factors.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+
+              {/* Development Engineering Section */}
+              <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
+                <h3 className="text-xl font-semibold mb-4 pb-3 border-b border-white/20">
+                  Development Engineering
+                </h3>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="software-development">
+                    <AccordionTrigger>Software Development</AccordionTrigger>
+                    <AccordionContent>
+                      Custom software solutions for manufacturing automation, data analysis, and process control systems.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="automation">
+                    <AccordionTrigger>Automation Solutions</AccordionTrigger>
+                    <AccordionContent>
+                      Development and implementation of automated systems to improve efficiency and reduce manual intervention.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="integration">
+                    <AccordionTrigger>System Integration</AccordionTrigger>
+                    <AccordionContent>
+                      Seamless integration of various manufacturing systems and tools for improved workflow and data management.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+
+              {/* Project Management Section */}
+              <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
+                <h3 className="text-xl font-semibold mb-4 pb-3 border-b border-white/20">
+                  Project Management
+                </h3>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="project-planning">
+                    <AccordionTrigger>Project Planning</AccordionTrigger>
+                    <AccordionContent>
+                      Comprehensive project planning and execution strategies tailored to semiconductor manufacturing environments.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="team-leadership">
+                    <AccordionTrigger>Team Leadership</AccordionTrigger>
+                    <AccordionContent>
+                      Effective team management and coordination to ensure project success and timely delivery.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="risk-management">
+                    <AccordionTrigger>Risk Management</AccordionTrigger>
+                    <AccordionContent>
+                      Proactive identification and mitigation of project risks to ensure smooth execution.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
+
+              {/* Technical Consulting Section */}
+              <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
+                <h3 className="text-xl font-semibold mb-4 pb-3 border-b border-white/20">
+                  Technical Consulting
+                </h3>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="process-assessment">
+                    <AccordionTrigger>Process Assessment</AccordionTrigger>
+                    <AccordionContent>
+                      Detailed evaluation of existing processes and recommendations for improvement opportunities.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="technology-roadmap">
+                    <AccordionTrigger>Technology Roadmap</AccordionTrigger>
+                    <AccordionContent>
+                      Strategic planning and guidance for technology adoption and process evolution.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="training">
+                    <AccordionTrigger>Training & Knowledge Transfer</AccordionTrigger>
+                    <AccordionContent>
+                      Customized training programs and knowledge transfer sessions for team capability enhancement.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
             </div>
-            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
-              <h3 className="text-xl font-semibold mb-4">
-                Development Engineering
-              </h3>
-              <p className="text-muted-foreground">
-                Designing efficient and maintainable system architectures.
-              </p>
+
+            <div className="mt-12 text-center">
+              <Link href="/contact">
+                <Button size="lg" className="group">
+                  Contact Me
+                </Button>
+              </Link>
             </div>
-            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
-              <h3 className="text-xl font-semibold mb-4">Project Management</h3>
-              <p className="text-muted-foreground">
-                Having Someone from outside taking care of your project
-                management
-              </p>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
-              <h3 className="text-xl font-semibold mb-4">
-                Technical Consulting
-              </h3>
-              <p className="text-muted-foreground">
-                Expert guidance on technical decisions and implementation
-                strategies.
-              </p>
-            </div>
-          </div>
-          <div className="mt-12 text-center">
-            <Link href="/contact">
-              <Button size="lg" className="group">
-                Contact Me
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
