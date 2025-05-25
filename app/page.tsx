@@ -41,7 +41,7 @@ export default function Home() {
               Kite
             </h2>
             <p className="text-sm md:text-base lg:text-lg text-white/80">
-              Curious? Try me out
+              Curious? Give it a try
             </p>
           </div>
         </Link>
@@ -69,7 +69,7 @@ export default function Home() {
               Engineer
             </h2>
             <p className="text-sm md:text-base lg:text-lg text-white/80">
-              Its´s all about solutions
+              Ambitious? It´s about solutions
             </p>
           </div>
         </Link>
