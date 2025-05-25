@@ -23,18 +23,13 @@ export default function Home() {
           className="group relative overflow-hidden rounded-2xl aspect-square 
             border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
             transition-all duration-300 active:scale-95 touch-active"
-          className="group relative overflow-hidden rounded-2xl aspect-square 
-            border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
-            transition-all duration-300 active:scale-95 touch-active"
         >
           <div className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75">
             <Image
               src="/images/kite_landingpage.png"
               alt="Kiteboarding"
-              alt="Kiteboarding"
               layout="fill"
               objectFit="cover"
-              priority
               priority
             />
           </div>
@@ -56,18 +51,13 @@ export default function Home() {
           className="group relative overflow-hidden rounded-2xl aspect-square 
             border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
             transition-all duration-300 active:scale-95 touch-active"
-          className="group relative overflow-hidden rounded-2xl aspect-square 
-            border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
-            transition-all duration-300 active:scale-95 touch-active"
         >
           <div className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75">
             <Image
               src="/images/1.jpg"
               alt="Engineering"
-              alt="Engineering"
               layout="fill"
               objectFit="cover"
-              priority
               priority
             />
           </div>

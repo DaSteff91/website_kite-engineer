@@ -12,13 +12,13 @@ export default function EngineerPage() {
             src="/images/1.jpg"
             alt="Engineering"
             fill
-            className="object-cover brightness-50"
+            className="object-cover object-[center_10%] brightness-50"
             priority
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Engineering Excellence
+            Combining Worlds
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
             Combining innovation with technical expertise to deliver exceptional
