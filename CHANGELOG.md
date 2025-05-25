@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.4...v1.1.0) (2025-05-25)
+
+
+### Features
+
+* new appearence of the kite - subpage ([121f8ae](https://github.com/DaSteff91/website_kite-engineer/commit/121f8aee3e2a02917502c892dee3de42105e282a))
+
 ## [1.0.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.3...v1.0.4) (2025-05-25)
 
 
