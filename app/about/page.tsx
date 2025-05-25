@@ -10,7 +10,7 @@ export default function AboutPage() {
             src="/images/IMG-20230117-WA0001.jpg"
             alt="About"
             fill
-            className="object-cover object-center brightness-50"
+            className="object-cover object-[center_20%] brightness-50"
             priority
           />
         </div>
@@ -29,7 +29,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
-              <h3 className="text-xl font-semibold mb-4">Professional Journey</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Professional Journey
+              </h3>
               <p className="text-muted-foreground">
                 [Your professional background and experience placeholder]
               </p>
