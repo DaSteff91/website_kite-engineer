@@ -150,17 +150,17 @@ export function Header() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden pt-4 pb-2 bg-background/95 rounded-lg mt-2 px-4">
-          <div className="flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-md rounded-lg border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] p-4 max-h-[calc(100vh-5rem)] overflow-y-auto">
+          <nav className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium transition-all duration-200",
+                  "text-sm font-medium transition-all duration-200 p-2 rounded-md",
                   "hover:scale-105 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
                   pathname === item.href
-                    ? "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                    ? "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] bg-white/10"
                     : "text-white/90"
                 )}
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -171,7 +171,7 @@ export function Header() {
             <hr className="border-white/20 my-2" />
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="w-full justify-start gap-2 hover:scale-105 transition-transform">
+                <Button variant="ghost" className="w-full justify-start gap-2 hover:scale-105 transition-transform p-2">
                   <Globe className="h-5 w-5" />
                   Select Language
                 </Button>
@@ -186,7 +186,7 @@ export function Header() {
             </DropdownMenu>
             <Button
               variant="ghost"
-              className="w-full justify-start gap-2 hover:scale-105 transition-transform"
+              className="w-full justify-start gap-2 hover:scale-105 transition-transform p-2"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
               {theme === "dark" ? (
@@ -196,7 +196,7 @@ export function Header() {
               )}
               Toggle theme
             </Button>
-          </div>
+          </nav>
         </div>
       )}
     </header>
