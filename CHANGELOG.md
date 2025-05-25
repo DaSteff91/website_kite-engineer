@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.5.0...v1.6.0) (2025-05-25)
+
+
+### Features
+
+* adding background to the rest of the pages ([34e58b3](https://github.com/DaSteff91/website_kite-engineer/commit/34e58b3b4ffa07cf846e89d1c0db330d260f74af))
+
 # [1.5.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.6...v1.5.0) (2025-05-25)
 
 
