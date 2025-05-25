@@ -1,3 +1,5 @@
+'use client';
+
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
@@ -10,7 +12,7 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "de" }, { locale: "pt" }];
 }
 
-export default async function LocaleLayout({
+export default function LocaleLayout({
   children,
   params: { locale },
 }: {
@@ -19,7 +21,7 @@ export default async function LocaleLayout({
 }) {
   let messages;
   try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
+    messages = require(`../../messages/${locale}.json`);
   } catch (error) {
     notFound();
   }
