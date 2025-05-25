@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.4...v1.4.5) (2025-05-25)
+
+
+### Bug Fixes
+
+* preparing engineering page content ([cb21090](https://github.com/DaSteff91/website_kite-engineer/commit/cb21090ddd11c76638381e9a66b3a0f455930204))
+
 ## [1.4.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.3...v1.4.4) (2025-05-25)
 
 
