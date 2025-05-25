@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.2...v1.4.3) (2025-05-25)
+
+
+### Bug Fixes
+
+* add a new slogan ([0ae4ac2](https://github.com/DaSteff91/website_kite-engineer/commit/0ae4ac2a57e9c4d287e666d3d1206acfbc73aa6e))
+
 ## [1.4.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.1...v1.4.2) (2025-05-25)
 
 
