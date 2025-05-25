@@ -1,12 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Code2, Terminal, Wrench } from "lucide-react";
 
 export default function EngineerPage() {

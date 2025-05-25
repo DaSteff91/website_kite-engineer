@@ -27,29 +27,26 @@ const imprint = () => {
         <p>DE452689906</p>
       </section>
 
-      <div className="max-w-6xl mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-6">EU-Streitschlichtung</h1>
-        <section className="mb-8">
-          <p className="mb-1">
-            Gemäß Verordnung über Online-Streitbeilegung in
-            Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die
-            Online-Streitbeilegungsplattform (OS-Plattform) informieren.
-            Verbraucher haben die Möglichkeit, Beschwerden an die Online
-            Streitbeilegungsplattform der Europäischen Kommission unter:{" "}
-            <Link
-              href="http://ec.europa.eu/odr?tid=321289339"
-              className="text-blue-500 underline"
-            >
-              http://ec.europa.eu/odr?tid=321289339
-            </Link>{" "}
-            zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb
-            in unserem Impressum. Wir möchten Sie jedoch darauf hinweisen, dass
-            wir nicht bereit oder verpflichtet sind, an
-            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-            teilzunehmen.
-          </p>
-        </section>
-      </div>
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-2">EU-Streitschlichtung</h2>
+        <p className="mb-1">
+          Gemäß Verordnung über Online-Streitbeilegung in
+          Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die
+          Online-Streitbeilegungsplattform (OS-Plattform) informieren.
+          Verbraucher haben die Möglichkeit, Beschwerden an die Online
+          Streitbeilegungsplattform der Europäischen Kommission unter:{" "}
+          <Link
+            href="http://ec.europa.eu/odr?tid=321289339"
+            className="text-blue-500 underline"
+          >
+            http://ec.europa.eu/odr?tid=321289339
+          </Link>{" "}
+          zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in
+          unserem Impressum. Wir möchten Sie jedoch darauf hinweisen, dass wir
+          nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor
+          einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+      </section>
     </div>
   );
 };
