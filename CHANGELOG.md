@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.3...v1.0.4) (2025-05-25)
+
+
+### Bug Fixes
+
+* adding an about page and changing impres layout ([34ede02](https://github.com/DaSteff91/website_kite-engineer/commit/34ede02c80affff3806f7ff562d168f7ec7e376a))
+* making some experiments with the content of some pages ([901c0e0](https://github.com/DaSteff91/website_kite-engineer/commit/901c0e057a52fa17de2b5242e232a43d687bd0de))
+
 ## [1.0.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.2...v1.0.3) (2025-05-25)
 
 
