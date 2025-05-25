@@ -5,7 +5,6 @@ import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent } from "@/components/ui/card";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,74 +50,60 @@ export function ContactForm() {
   };
 
   return (
-    <div className="w-full max-w-lg">
-      <Card className="backdrop-blur-sm bg-card/50">
-        <CardContent className="p-6">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="space-y-2">
-              <Input
-                name="name"
-                placeholder="Your name*"
-                required
-                className="bg-background/50"
-              />
-            </div>
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="space-y-2">
+        <Input
+          name="name"
+          placeholder="Your name*"
+          required
+          className="bg-background/50"
+        />
+      </div>
 
-            <div className="space-y-2">
-              <Input
-                type="email"
-                name="email"
-                placeholder="Your email*"
-                required
-                className="bg-background/50"
-              />
-            </div>
+      <div className="space-y-2">
+        <Input
+          type="email"
+          name="email"
+          placeholder="Your email*"
+          required
+          className="bg-background/50"
+        />
+      </div>
 
-            <div className="space-y-2">
-              <Input
-                name="subject"
-                placeholder="Subject*"
-                required
-                className="bg-background/50"
-              />
-            </div>
+      <div className="space-y-2">
+        <Input
+          name="subject"
+          placeholder="Subject*"
+          required
+          className="bg-background/50"
+        />
+      </div>
 
-            <div className="space-y-2">
-              <Textarea
-                name="message"
-                placeholder="Your message*"
-                required
-                className="bg-background/50 min-h-[150px]"
-              />
-            </div>
+      <div className="space-y-2">
+        <Textarea
+          name="message"
+          placeholder="Your message*"
+          required
+          className="bg-background/50 min-h-[150px]"
+        />
+      </div>
 
-            <Button
-              type="submit"
-              className="w-full group"
-              disabled={isSubmitting}
-            >
-              <span className="flex items-center justify-center">
-                {isSubmitting ? (
-                  "Sending..."
-                ) : (
-                  <>
-                    Send Message
-                    <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </>
-                )}
-              </span>
-            </Button>
-            {successMessage && (
-              <p className="text-green-600 text-center mt-4">
-                {successMessage}
-              </p>
-            )}
-            <p className="text-opacity-80 text-sm text-gray-100">
-              * Mandatory fields
-            </p>
-          </form>
-        </CardContent>
-      </Card>
-    </div>
+      <Button type="submit" className="w-full group" disabled={isSubmitting}>
+        <span className="flex items-center justify-center">
+          {isSubmitting ? (
+            "Sending..."
+          ) : (
+            <>
+              Send Message
+              <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </>
+          )}
+        </span>
+      </Button>
+      {successMessage && (
+        <p className="text-green-600 text-center mt-4">{successMessage}</p>
+      )}
+      <p className="text-muted-foreground text-sm">* Mandatory fields</p>
+    </form>
   );
 }
