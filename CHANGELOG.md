@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.4.0...v1.4.1) (2025-05-25)
+
+
+### Bug Fixes
+
+* deleting redundant code, fix picture size ([07b23bc](https://github.com/DaSteff91/website_kite-engineer/commit/07b23bcadd20082b5716f984021a6c9ef59aa34b))
+
 # [1.4.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.3.2...v1.4.0) (2025-05-25)
 
 
