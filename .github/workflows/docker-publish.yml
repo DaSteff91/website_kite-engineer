@@ -1,21 +1,10 @@
 name: Build and Push Docker Image
 
 on:
-  push:
-    branches:
-      - dev
-      - development
-    paths-ignore:
-      - "README.md"
-      - "docs/**"
-      - ".next/**"
-      - "node_modules/**"
-      - ".env*"
-      - "*ignore*"
-      - ".github/workflows/**"
-    tags:
-      - "v*.*.*"
-
+  workflow_run:
+    workflows: ["Semantic Versioning"]
+    types:
+      - completed
 jobs:
   build-and-push:
     runs-on: ubuntu-latest

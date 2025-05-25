@@ -1,15 +1,13 @@
-name: Release
+name: Semantic Versioning
 
 on:
   push:
     branches:
       - dev
       - development
-    tags:
-      - "v*.*.*"
 
 jobs:
-  release:
+  versioning:
     permissions:
       contents: write
       issues: write
@@ -19,25 +17,19 @@ jobs:
 
     steps:
       - name: Checkout the repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SEMVERSIONING }}
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "20.x"
-
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-modules-
-
       - name: Install Dependencies
         run: npm ci
 
       - name: Run Semantic Release
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SEMVERSIONING }}
