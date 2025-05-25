@@ -17,11 +17,16 @@ export default function KitePage() {
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
+          <h1
+            className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+   bg-gradient-to-r from-white via-gray-200 to-gray-300 
+   bg-clip-text text-transparent 
+   [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+          >
             Combining Worlds...
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Explore - Instruct - Create - Enable - Deliver
+            Envison - Enable - Execute
           </p>
         </div>
       </section>

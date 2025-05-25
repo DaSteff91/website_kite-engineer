@@ -7,7 +7,29 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Settings, Code2, ClipboardList, Lightbulb, Gauge, Cpu, BarChart3, Workflow, Binary, Network, Projector as ProjectorChart, Users, ShieldAlert, FileSearch, Router, GraduationCap, ArrowRight, FlaskRound, Microscope, LineChart, Braces } from "lucide-react";
+import {
+  Settings,
+  Code2,
+  ClipboardList,
+  Lightbulb,
+  Gauge,
+  Cpu,
+  BarChart3,
+  Workflow,
+  Binary,
+  Network,
+  Projector as ProjectorChart,
+  Users,
+  ShieldAlert,
+  FileSearch,
+  Router,
+  GraduationCap,
+  ArrowRight,
+  FlaskRound,
+  Microscope,
+  LineChart,
+  Braces,
+} from "lucide-react";
 
 export default function EngineerPage() {
   return (
@@ -24,11 +46,16 @@ export default function EngineerPage() {
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
+          <h1
+            className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+   bg-gradient-to-r from-white via-gray-200 to-gray-300 
+   bg-clip-text text-transparent 
+   [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+          >
             Combining Worlds...
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Explore - Instruct - Create - Enable - Deliver
+            Envison - Enable - Execute
           </p>
         </div>
       </section>
@@ -37,12 +64,17 @@ export default function EngineerPage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="relative mb-20">
-            <h2 className="text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed bg-gradient-to-r from-blue-200 via-teal-200 to-emerald-200 bg-clip-text text-transparent animate-gradient">
-              Expand your project capabilities, strengthen your resource pool, and
-              gain fresh insights
+            <h2
+              className="text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
+   bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
+   bg-clip-text text-transparent animate-gradient"
+            >
+              Expand your project capabilities, strengthen your resource pool,
+              and gain fresh insights
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Benefit from my engineering expertise in the areas of semiconductor manufacturing and software development
+              Benefit from my engineering expertise in the areas of
+              semiconductor manufacturing and software development
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -55,7 +87,10 @@ export default function EngineerPage() {
                 Process Engineering
               </h3>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="process-optimization" className="border-white/10">
+                <AccordionItem
+                  value="process-optimization"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Gauge className="h-5 w-5" />
@@ -63,10 +98,15 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Comprehensive analysis and optimization of semiconductor manufacturing processes, focusing on yield improvement and efficiency gains.
+                    Comprehensive analysis and optimization of semiconductor
+                    manufacturing processes, focusing on yield improvement and
+                    efficiency gains.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="equipment-integration" className="border-white/10">
+                <AccordionItem
+                  value="equipment-integration"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Cpu className="h-5 w-5" />
@@ -74,10 +114,14 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Expert guidance in integrating new equipment into existing production lines while maintaining optimal performance.
+                    Expert guidance in integrating new equipment into existing
+                    production lines while maintaining optimal performance.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="yield-analysis" className="border-white/10">
+                <AccordionItem
+                  value="yield-analysis"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <BarChart3 className="h-5 w-5" />
@@ -85,7 +129,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Advanced statistical analysis and problem-solving techniques to identify and resolve yield-limiting factors.
+                    Advanced statistical analysis and problem-solving techniques
+                    to identify and resolve yield-limiting factors.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -106,10 +151,14 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Development of new manufacturing processes and techniques to improve efficiency and product quality.
+                    Development of new manufacturing processes and techniques to
+                    improve efficiency and product quality.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="process-design" className="border-white/10">
+                <AccordionItem
+                  value="process-design"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Braces className="h-5 w-5" />
@@ -117,10 +166,14 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Creation and optimization of new manufacturing processes from concept to implementation.
+                    Creation and optimization of new manufacturing processes
+                    from concept to implementation.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="performance-analysis" className="border-white/10">
+                <AccordionItem
+                  value="performance-analysis"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <LineChart className="h-5 w-5" />
@@ -128,7 +181,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Detailed analysis and optimization of process performance metrics and quality indicators.
+                    Detailed analysis and optimization of process performance
+                    metrics and quality indicators.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -141,7 +195,10 @@ export default function EngineerPage() {
                 Software Development
               </h3>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="software-development" className="border-white/10">
+                <AccordionItem
+                  value="software-development"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Binary className="h-5 w-5" />
@@ -149,7 +206,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Custom software solutions for manufacturing automation, data analysis, and process control systems.
+                    Custom software solutions for manufacturing automation, data
+                    analysis, and process control systems.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="automation" className="border-white/10">
@@ -160,7 +218,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Development and implementation of automated systems to improve efficiency and reduce manual intervention.
+                    Development and implementation of automated systems to
+                    improve efficiency and reduce manual intervention.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="integration" className="border-white/10">
@@ -171,7 +230,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Seamless integration of various manufacturing systems and tools for improved workflow and data management.
+                    Seamless integration of various manufacturing systems and
+                    tools for improved workflow and data management.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -184,7 +244,10 @@ export default function EngineerPage() {
                 Project Management
               </h3>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="project-planning" className="border-white/10">
+                <AccordionItem
+                  value="project-planning"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <ProjectorChart className="h-5 w-5" />
@@ -192,10 +255,14 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Comprehensive project planning and execution strategies tailored to semiconductor manufacturing environments.
+                    Comprehensive project planning and execution strategies
+                    tailored to semiconductor manufacturing environments.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="team-leadership" className="border-white/10">
+                <AccordionItem
+                  value="team-leadership"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Users className="h-5 w-5" />
@@ -203,10 +270,14 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Effective team management and coordination to ensure project success and timely delivery.
+                    Effective team management and coordination to ensure project
+                    success and timely delivery.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="risk-management" className="border-white/10">
+                <AccordionItem
+                  value="risk-management"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <ShieldAlert className="h-5 w-5" />
@@ -214,7 +285,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Proactive identification and mitigation of project risks to ensure smooth execution.
+                    Proactive identification and mitigation of project risks to
+                    ensure smooth execution.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -227,7 +299,10 @@ export default function EngineerPage() {
                 Technical Consulting
               </h3>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="process-assessment" className="border-white/10">
+                <AccordionItem
+                  value="process-assessment"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <FileSearch className="h-5 w-5" />
@@ -235,10 +310,14 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Detailed evaluation of existing processes and recommendations for improvement opportunities.
+                    Detailed evaluation of existing processes and
+                    recommendations for improvement opportunities.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="technology-roadmap" className="border-white/10">
+                <AccordionItem
+                  value="technology-roadmap"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Router className="h-5 w-5" />
@@ -246,7 +325,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Strategic planning and guidance for technology adoption and process evolution.
+                    Strategic planning and guidance for technology adoption and
+                    process evolution.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="training" className="border-white/10">
@@ -257,7 +337,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Customized training programs and knowledge transfer sessions for team capability enhancement.
+                    Customized training programs and knowledge transfer sessions
+                    for team capability enhancement.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -267,10 +348,14 @@ export default function EngineerPage() {
           {/* Enhanced Contact Section */}
           <div className="mt-16 text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to elevate your project? Reach out for a free consultation and let's discuss how we can achieve your goals together.
+              Ready to elevate your project? Reach out for a free consultation
+              and let's discuss how we can achieve your goals together.
             </p>
             <Link href="/contact">
-              <Button size="lg" className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Button
+                size="lg"
+                className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
                 Get Your Free Quote
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
