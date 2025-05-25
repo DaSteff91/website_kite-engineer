@@ -10,7 +10,7 @@ export default function AboutPage() {
             src="/images/IMG-20230117-WA0001.jpg"
             alt="About"
             fill
-            className="object-cover object-[center_10%] brightness-50"
+            className="object-cover object-center brightness-50"
             priority
           />
         </div>

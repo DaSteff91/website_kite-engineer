@@ -12,7 +12,7 @@ export default function EngineerPage() {
             src="/images/1.jpg"
             alt="Engineering"
             fill
-            className="object-cover object-[center_10%] brightness-50"
+            className="object-cover object-center brightness-50"
             priority
           />
         </div>

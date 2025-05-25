@@ -11,7 +11,7 @@ export default function ContactPage() {
             src="/images/contact_page.jpg"
             alt="Contact"
             fill
-            className="object-cover object-[center_10%] brightness-50"
+            className="object-cover object-center brightness-50"
             priority
           />
         </div>
