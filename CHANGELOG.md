@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.0...v1.0.1) (2025-05-25)
+
+
+### Bug Fixes
+
+* update impres, privacy and contact form to be compliant with the DSGVO ([d4878b7](https://github.com/DaSteff91/website_kite-engineer/commit/d4878b7de954f40c18081a12f48061f127d44f3d))
+
 # 1.0.0 (2025-05-22)
 
 
