@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -8,13 +7,13 @@ export default function Home() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/background.jpg"
+          src="/images/background_image_darker.png"
           alt="Background"
           layout="fill"
           objectFit="cover"
           quality={100}
           priority
-          className="brightness-50"
+          className="brightness-50 object-cover object-top"
         />
       </div>
 
@@ -24,19 +23,31 @@ export default function Home() {
           className="group relative overflow-hidden rounded-2xl aspect-square 
             border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
             transition-all duration-300 active:scale-95 touch-active"
+          className="group relative overflow-hidden rounded-2xl aspect-square 
+            border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
+            transition-all duration-300 active:scale-95 touch-active"
         >
           <div className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75">
             <Image
               src="/images/kite_landingpage.png"
               alt="Kiteboarding"
+              alt="Kiteboarding"
               layout="fill"
               objectFit="cover"
+              priority
               priority
             />
           </div>
           <div className="relative h-full flex flex-col justify-end p-4 md:p-6 transition-transform duration-500 group-hover:-translate-y-2">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3">Kite</h2>
-            <p className="text-sm md:text-base lg:text-lg text-white/80">Explore my kiteboarding services</p>
+            <h2
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3 
+   drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+            >
+              Kite
+            </h2>
+            <p className="text-sm md:text-base lg:text-lg text-white/80">
+              Curious? Try me out
+            </p>
           </div>
         </Link>
 
@@ -45,19 +56,31 @@ export default function Home() {
           className="group relative overflow-hidden rounded-2xl aspect-square 
             border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
             transition-all duration-300 active:scale-95 touch-active"
+          className="group relative overflow-hidden rounded-2xl aspect-square 
+            border border-white/10 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)]
+            transition-all duration-300 active:scale-95 touch-active"
         >
           <div className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75">
             <Image
               src="/images/1.jpg"
               alt="Engineering"
+              alt="Engineering"
               layout="fill"
               objectFit="cover"
+              priority
               priority
             />
           </div>
           <div className="relative h-full flex flex-col justify-end p-4 md:p-6 transition-transform duration-500 group-hover:-translate-y-2">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3">Engineer</h2>
-            <p className="text-sm md:text-base lg:text-lg text-white/80">Discover my engineering expertise</p>
+            <h2
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-3 
+   drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+            >
+              Engineer
+            </h2>
+            <p className="text-sm md:text-base lg:text-lg text-white/80">
+              Its´s all about solutions
+            </p>
           </div>
         </Link>
       </div>
