@@ -29,10 +29,15 @@ export default function EngineerPage() {
       {/* Content Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
+          <h2 className="text-xl font-semibold mb-2">
+            Expand your project capabilities, strengthen your resource pool, and
+            gain fresh insights — benefit from my engineering expertise in the
+            areas of semiconductor manufacturing and software development:
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
               <h3 className="text-xl font-semibold mb-4">
-                Software Development
+                Process Engineering
               </h3>
               <p className="text-muted-foreground">
                 Creating robust and scalable solutions using modern
@@ -41,10 +46,17 @@ export default function EngineerPage() {
             </div>
             <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
               <h3 className="text-xl font-semibold mb-4">
-                System Architecture
+                Development Engineering
               </h3>
               <p className="text-muted-foreground">
                 Designing efficient and maintainable system architectures.
+              </p>
+            </div>
+            <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
+              <h3 className="text-xl font-semibold mb-4">Project Management</h3>
+              <p className="text-muted-foreground">
+                Having Someone from outside taking care of your project
+                management
               </p>
             </div>
             <div className="bg-card/50 backdrop-blur-sm p-6 rounded-lg border">
