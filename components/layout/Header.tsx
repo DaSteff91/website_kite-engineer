@@ -15,11 +15,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const LANGUAGES = [
+// Commented out for later implementation
+/*const LANGUAGES = [
   { code: "en", label: "English" },
   { code: "pt-BR", label: "Português (Brasil)" },
   { code: "de", label: "Deutsch" },
-];
+];*/
 
 const NAV_ITEMS = [
   { href: "/kite", label: "Kite" },
@@ -113,7 +114,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "h-full flex items-center px-3 text-sm font-medium",
+                    "h-full flex items-center px-3 text-[1.2rem] font-medium",
                     "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
                     "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
                     pathname === item.href
@@ -125,6 +126,7 @@ export function Header() {
                 </Link>
               ))}
 
+              {/* Commented out for later implementation
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="icon" className="hover:scale-105 transition-transform">
@@ -154,6 +156,7 @@ export function Header() {
                 )}
                 <span className="sr-only">Toggle theme</span>
               </Button>
+              */}
             </div>
 
             <Button
@@ -190,7 +193,7 @@ export function Header() {
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "px-4 py-2 text-sm font-medium rounded-md",
+                    "px-4 py-2 text-[1.2rem] font-medium rounded-md",
                     "transition-all duration-200 hover:scale-105",
                     "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
                     pathname === item.href
@@ -202,6 +205,7 @@ export function Header() {
                 </Link>
               ))}
               
+              {/* Commented out for later implementation
               <hr className="my-2 border-white/10" />
               
               <Button
@@ -235,6 +239,7 @@ export function Header() {
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
+              */}
             </nav>
           </div>
         </div>
