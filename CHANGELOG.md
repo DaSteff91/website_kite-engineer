@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.1.0...v1.2.0) (2025-05-25)
+
+
+### Features
+
+* implementing a new engineering page ([d440ee8](https://github.com/DaSteff91/website_kite-engineer/commit/d440ee8f2f77af229862ef62895ae6b5c4d97547))
+
 # [1.1.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.4...v1.1.0) (2025-05-25)
 
 
