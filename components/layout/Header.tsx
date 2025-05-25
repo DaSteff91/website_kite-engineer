@@ -46,7 +46,7 @@ export function Header() {
 
   if (!mounted) {
     return (
-      <header className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-screen-xl z-50 rounded-t-md rounded-b-2xl overflow-hidden">
+      <header className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-screen-xl z-50 rounded-t-md rounded-b-2xl">
         <div className="bg-background/10 backdrop-blur-md h-16 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] border border-white/20">
           <div className="px-4 md:px-6 h-full flex items-center justify-between">
             <div className="h-[85%] w-auto min-w-[120px] relative flex items-center aspect-auto">
@@ -67,139 +67,155 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-screen-xl z-50 rounded-t-md rounded-b-2xl overflow-hidden">
-      <div className="absolute inset-0 border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/10 backdrop-blur-md" />
-
-      <div className="container px-4 md:px-6 h-16 relative flex items-center justify-between">
-        <Link
-          href="/"
-          className="h-[85%] w-auto min-w-[120px] relative flex items-center aspect-auto
-          transition-transform hover:scale-105 active:scale-95 duration-200"
-        >
-          <Image
-            src="/images/logo_dark.svg"
-            alt="Site Logo"
-            width={120}
-            height={56}
-            priority
-            className="object-contain object-left"
-          />
-        </Link>
-
-        <div className="hidden md:flex items-center gap-6 h-full">
-          {NAV_ITEMS.map((item) => (
+    <header className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-screen-xl z-50">
+      <div className="relative">
+        <div className="rounded-t-md rounded-b-2xl border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/10 backdrop-blur-md">
+          <div className="container px-4 md:px-6 h-16 flex items-center justify-between">
             <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "h-full flex items-center px-3 text-sm font-medium",
-                "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
-                "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
-                pathname === item.href
-                  ? "text-white border-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
-                  : "text-white/90"
-              )}
+              href="/"
+              className="h-[85%] w-auto min-w-[120px] relative flex items-center aspect-auto
+              transition-transform hover:scale-105 active:scale-95 duration-200"
             >
-              {item.label}
+              <Image
+                src="/images/logo_dark.svg"
+                alt="Site Logo"
+                width={120}
+                height={56}
+                priority
+                className="object-contain object-left"
+              />
             </Link>
-          ))}
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="hover:scale-105 transition-transform">
-                <Globe className="h-5 w-5" />
-                <span className="sr-only">Select language</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              {LANGUAGES.map((lang) => (
-                <DropdownMenuItem key={lang.code}>
-                  {lang.label}
-                </DropdownMenuItem>
+            <div className="hidden md:flex items-center gap-6 h-full">
+              {NAV_ITEMS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "h-full flex items-center px-3 text-sm font-medium",
+                    "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
+                    "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                    pathname === item.href
+                      ? "text-white border-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                      : "text-white/90"
+                  )}
+                >
+                  {item.label}
+                </Link>
               ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="hover:scale-105 transition-transform"
-          >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
-            <span className="sr-only">Toggle theme</span>
-          </Button>
-        </div>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="hover:scale-105 transition-transform">
+                    <Globe className="h-5 w-5" />
+                    <span className="sr-only">Select language</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  {LANGUAGES.map((lang) => (
+                    <DropdownMenuItem key={lang.code}>
+                      {lang.label}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
 
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden hover:scale-105 transition-transform"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
-          <span className="sr-only">Toggle menu</span>
-        </Button>
-      </div>
-
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-md rounded-lg border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] p-4 max-h-[calc(100vh-5rem)] overflow-y-auto">
-          <nav className="flex flex-col gap-4">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "text-sm font-medium transition-all duration-200 p-2 rounded-md",
-                  "hover:scale-105 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
-                  pathname === item.href
-                    ? "text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] bg-white/10"
-                    : "text-white/90"
-                )}
-                onClick={() => setIsMobileMenuOpen(false)}
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="hover:scale-105 transition-transform"
               >
-                {item.label}
-              </Link>
-            ))}
-            <hr className="border-white/20 my-2" />
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="w-full justify-start gap-2 hover:scale-105 transition-transform p-2">
-                  <Globe className="h-5 w-5" />
-                  Select Language
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                {LANGUAGES.map((lang) => (
-                  <DropdownMenuItem key={lang.code}>
-                    {lang.label}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                {theme === "dark" ? (
+                  <Sun className="h-5 w-5" />
+                ) : (
+                  <Moon className="h-5 w-5" />
+                )}
+                <span className="sr-only">Toggle theme</span>
+              </Button>
+            </div>
+
             <Button
               variant="ghost"
-              className="w-full justify-start gap-2 hover:scale-105 transition-transform p-2"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              size="icon"
+              className="md:hidden hover:scale-105 transition-transform"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {theme === "dark" ? (
-                <Sun className="h-5 w-5" />
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <Menu className="h-5 w-5" />
               )}
-              Toggle theme
+              <span className="sr-only">Toggle menu</span>
             </Button>
-          </nav>
+          </div>
         </div>
-      )}
+
+        {/* Mobile Menu */}
+        <div
+          className={cn(
+            "absolute top-full left-0 right-0 mt-2 md:hidden",
+            "transition-all duration-200 ease-in-out",
+            isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          )}
+        >
+          <div className="rounded-lg border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/95 backdrop-blur-md p-4">
+            <nav className="flex flex-col gap-2">
+              {NAV_ITEMS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    "px-4 py-2 text-sm font-medium rounded-md",
+                    "transition-all duration-200 hover:scale-105",
+                    "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                    pathname === item.href
+                      ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                      : "text-white/90"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              
+              <hr className="my-2 border-white/10" />
+              
+              <Button
+                variant="ghost"
+                className="justify-start gap-2 hover:scale-105 transition-transform"
+                onClick={() => {
+                  setTheme(theme === "dark" ? "light" : "dark");
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                {theme === "dark" ? (
+                  <Sun className="h-5 w-5" />
+                ) : (
+                  <Moon className="h-5 w-5" />
+                )}
+                Toggle theme
+              </Button>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="w-full justify-start gap-2">
+                    <Globe className="h-5 w-5" />
+                    Select Language
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {LANGUAGES.map((lang) => (
+                    <DropdownMenuItem key={lang.code} onClick={() => setIsMobileMenuOpen(false)}>
+                      {lang.label}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }
