@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.3.1...v1.3.2) (2025-05-25)
+
+
+### Bug Fixes
+
+* harmonizing the contact page ([665cf6f](https://github.com/DaSteff91/website_kite-engineer/commit/665cf6fb6a8531f011afc1a616501cac3eec8125))
+
 ## [1.3.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.3.0...v1.3.1) (2025-05-25)
 
 
