@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.1...v1.0.2) (2025-05-25)
+
+
+### Bug Fixes
+
+* changing workflows after testing in ghcr-test repo ([f3a05a6](https://github.com/DaSteff91/website_kite-engineer/commit/f3a05a60d223a440f751f6ea66a34cdb6723a240))
+
 ## [1.0.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.0.0...v1.0.1) (2025-05-25)
 
 
