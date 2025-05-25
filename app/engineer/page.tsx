@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Settings, Code2, ClipboardList, Lightbulb, Gauge, Cpu, BarChart3, Workflow, Binary, Network, Projector as ProjectorChart, Users, ShieldAlert, FileSearch, Router, GraduationCap, ArrowRight, FlaskRound as Flask, Microscope, LineChart, Braces } from "lucide-react";
+import { Settings, Code2, ClipboardList, Lightbulb, Gauge, Cpu, BarChart3, Workflow, Binary, Network, Projector as ProjectorChart, Users, ShieldAlert, FileSearch, Router, GraduationCap, ArrowRight, FlaskRound, Microscope, LineChart, Braces } from "lucide-react";
 
 export default function EngineerPage() {
   return (
@@ -89,7 +89,7 @@ export default function EngineerPage() {
             {/* Process Development Section */}
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
-                <Flask className="h-7 w-7 text-cyan-400" />
+                <FlaskRound className="h-7 w-7 text-cyan-400" />
                 Process Development
               </h3>
               <Accordion type="single" collapsible className="w-full">
