@@ -72,8 +72,6 @@ export default function KitePage() {
       </section>
 
       {/* Content Section */}
-
-      {/* Content Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="relative mb-20">
