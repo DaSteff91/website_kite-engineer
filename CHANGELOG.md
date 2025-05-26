@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.6.1...v1.6.2) (2025-05-26)
+
+
+### Bug Fixes
+
+* changing large pictures to smaller ones using .jpeg instead ([c3c1743](https://github.com/DaSteff91/website_kite-engineer/commit/c3c17434dde70260a3769f48a2cfe997e6715302))
+
 ## [1.6.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.6.0...v1.6.1) (2025-05-25)
 
 
