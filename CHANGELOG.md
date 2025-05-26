@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.6.2...v1.6.3) (2025-05-26)
+
+
+### Bug Fixes
+
+* fixing a typo ([2f3523a](https://github.com/DaSteff91/website_kite-engineer/commit/2f3523af4246712cc528e57052af5ed071066bdf))
+
 ## [1.6.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.6.1...v1.6.2) (2025-05-26)
 
 
