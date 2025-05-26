@@ -7,7 +7,7 @@ export default function Home() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/background_image_darker.png"
+          src="/images/background_image_darker.jpeg"
           alt="Background"
           layout="fill"
           objectFit="cover"
@@ -26,7 +26,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-cover bg-center transition-all duration-500 group-hover:scale-110 brightness-50 group-hover:brightness-75">
             <Image
-              src="/images/kite_landingpage.png"
+              src="/images/kite_landingpage.jpeg"
               alt="Kiteboarding"
               layout="fill"
               objectFit="cover"

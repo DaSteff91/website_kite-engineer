@@ -258,9 +258,9 @@ export default function KitePage() {
           {/* Enhanced Contact Section */}
           <div className="mt-16 text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              What is holding you back? Get in touch to book my services or
+              What is holding you back? Get in touch to book my services or to
               learn how I can support your kiteboarding journey on and off the
-              water.
+              water
             </p>
             <Link href="/contact">
               <Button

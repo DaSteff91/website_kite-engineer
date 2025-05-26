@@ -19,7 +19,7 @@ export default function ContactPage() {
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/contact_page.jpg"
+            src="/images/contact_page.jpeg"
             alt="Contact"
             fill
             className="object-cover object-center brightness-50"
