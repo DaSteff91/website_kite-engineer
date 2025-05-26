@@ -9,11 +9,12 @@ export default function Home() {
         <Image
           src="/images/background_image_darker.jpeg"
           alt="Background"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority
+          fill
+          sizes="100vw"
           className="brightness-50 object-cover object-top"
+          priority
+          loading="eager"
+          quality={85}
         />
       </div>
 
@@ -28,9 +29,11 @@ export default function Home() {
             <Image
               src="/images/kite_landingpage.jpeg"
               alt="Kiteboarding"
-              layout="fill"
-              objectFit="cover"
-              priority
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              loading="eager"
+              quality={85}
             />
           </div>
           <div className="relative h-full flex flex-col justify-end p-4 md:p-6 transition-transform duration-500 group-hover:-translate-y-2">
@@ -56,9 +59,11 @@ export default function Home() {
             <Image
               src="/images/1.jpg"
               alt="Engineering"
-              layout="fill"
-              objectFit="cover"
-              priority
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              loading="eager"
+              quality={85}
             />
           </div>
           <div className="relative h-full flex flex-col justify-end p-4 md:p-6 transition-transform duration-500 group-hover:-translate-y-2">
