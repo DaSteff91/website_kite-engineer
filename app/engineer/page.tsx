@@ -124,7 +124,7 @@ export default function EngineerPage() {
                       Process Control
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Comprehensive analysis and optimization of semiconductor
                     manufacturing processes, focusing on yield improvement and
                     efficiency gains.
@@ -140,7 +140,7 @@ export default function EngineerPage() {
                       Process Optimization
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Comprehensive analysis and optimization of semiconductor
                     manufacturing processes, focusing on yield improvement and
                     efficiency gains.
@@ -156,7 +156,7 @@ export default function EngineerPage() {
                       Change Management
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Expert guidance in integrating new equipment into existing
                     production lines while maintaining optimal performance.
                   </AccordionContent>
@@ -171,7 +171,7 @@ export default function EngineerPage() {
                       Monitoring
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Advanced statistical analysis and problem-solving techniques
                     to identify and resolve yield-limiting factors.
                   </AccordionContent>
@@ -193,7 +193,7 @@ export default function EngineerPage() {
                       Creativity
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Development of new manufacturing processes and techniques to
                     improve efficiency and product quality.
                   </AccordionContent>
@@ -208,7 +208,7 @@ export default function EngineerPage() {
                       Process Design
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Creation and optimization of new manufacturing processes
                     from concept to implementation.
                   </AccordionContent>
@@ -223,7 +223,7 @@ export default function EngineerPage() {
                       Simulation and Prototyping
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Detailed analysis and optimization of process performance
                     metrics and quality indicators.
                   </AccordionContent>
@@ -238,7 +238,7 @@ export default function EngineerPage() {
                       Process and Equipment Roadmap
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Detailed analysis and optimization of process performance
                     metrics and quality indicators.
                   </AccordionContent>
@@ -263,7 +263,7 @@ export default function EngineerPage() {
                       Customized Solutions
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Custom software solutions for manufacturing automation, data
                     analysis, and process control systems.
                   </AccordionContent>
@@ -275,7 +275,7 @@ export default function EngineerPage() {
                       Relational Database Management
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Development and implementation of automated systems to
                     improve efficiency and reduce manual intervention.
                   </AccordionContent>
@@ -290,7 +290,7 @@ export default function EngineerPage() {
                       Workflow Automatisation
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Seamless integration of various manufacturing systems and
                     tools for improved workflow and data management.
                   </AccordionContent>
@@ -305,7 +305,7 @@ export default function EngineerPage() {
                       Web Development
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Seamless integration of various manufacturing systems and
                     tools for improved workflow and data management.
                   </AccordionContent>
@@ -330,7 +330,7 @@ export default function EngineerPage() {
                       Project Setup
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Comprehensive project planning and execution strategies
                     tailored to semiconductor manufacturing environments.
                   </AccordionContent>
@@ -345,7 +345,7 @@ export default function EngineerPage() {
                       Timeline Management
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Effective team management and coordination to ensure project
                     success and timely delivery.
                   </AccordionContent>
@@ -360,7 +360,7 @@ export default function EngineerPage() {
                       Deviation Management
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Proactive identification and mitigation of project risks to
                     ensure smooth execution.
                   </AccordionContent>
@@ -375,7 +375,7 @@ export default function EngineerPage() {
                       Documentation and Sharing
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Proactive identification and mitigation of project risks to
                     ensure smooth execution.
                   </AccordionContent>
@@ -400,7 +400,7 @@ export default function EngineerPage() {
                       Process Assessment
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Detailed evaluation of existing processes and
                     recommendations for improvement opportunities.
                   </AccordionContent>
@@ -415,7 +415,7 @@ export default function EngineerPage() {
                       Topic Related Research
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Strategic planning and guidance for technology adoption and
                     process evolution.
                   </AccordionContent>
@@ -427,7 +427,7 @@ export default function EngineerPage() {
                       Training & Knowledge Transfer
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Customized training programs and knowledge transfer sessions
                     for team capability enhancement.
                   </AccordionContent>
@@ -442,7 +442,7 @@ export default function EngineerPage() {
                       Competitor Analysis
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
+                  <AccordionContent className="text-white/80 text-left">
                     Customized training programs and knowledge transfer sessions
                     for team capability enhancement.
                   </AccordionContent>
