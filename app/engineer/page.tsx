@@ -34,7 +34,10 @@ import {
   RefreshCw,
   WandSparkles,
   Radiation,
+  MapPinPlus,
+  MapPinPlusInsideIcon,
   MapIcon,
+  ForkKnife,
   Database,
   MonitorCheck,
   FolderKanban,
@@ -101,10 +104,9 @@ export default function EngineerPage() {
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr justify-items-center">
             {/* Process Engineering Section */}
-            <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
+            <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
                 <Settings className="h-7 w-7 text-blue-400" />
                 Process Engineering
@@ -120,7 +122,7 @@ export default function EngineerPage() {
                       Process Control
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Comprehensive analysis and optimization of semiconductor
                     manufacturing processes, focusing on yield improvement and
                     efficiency gains.
@@ -136,7 +138,7 @@ export default function EngineerPage() {
                       Process Optimization
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Comprehensive analysis and optimization of semiconductor
                     manufacturing processes, focusing on yield improvement and
                     efficiency gains.
@@ -152,7 +154,7 @@ export default function EngineerPage() {
                       Change Management
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Expert guidance in integrating new equipment into existing
                     production lines while maintaining optimal performance.
                   </AccordionContent>
@@ -167,7 +169,7 @@ export default function EngineerPage() {
                       Monitoring
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Advanced statistical analysis and problem-solving techniques
                     to identify and resolve yield-limiting factors.
                   </AccordionContent>
@@ -176,7 +178,7 @@ export default function EngineerPage() {
             </div>
 
             {/* Process Development Section */}
-            <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
+            <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
                 <FlaskRound className="h-7 w-7 text-cyan-400" />
                 Process Development
@@ -189,7 +191,7 @@ export default function EngineerPage() {
                       Creativity
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Development of new manufacturing processes and techniques to
                     improve efficiency and product quality.
                   </AccordionContent>
@@ -204,7 +206,7 @@ export default function EngineerPage() {
                       Process Design
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Creation and optimization of new manufacturing processes
                     from concept to implementation.
                   </AccordionContent>
@@ -219,7 +221,7 @@ export default function EngineerPage() {
                       Simulation and Prototyping
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Detailed analysis and optimization of process performance
                     metrics and quality indicators.
                   </AccordionContent>
@@ -233,8 +235,14 @@ export default function EngineerPage() {
                       <MapIcon className="h-5 w-5" />
                       Process and Equipment Roadmap
                     </div>
+                    {/* <div className="flex items-center">
+                      <MapIcon className="h-5 w-5" />
+                    </div>
+                    <div className="flex items-start gap-2">
+                      Process and Equipment Roadmap
+                    </div> */}
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Detailed analysis and optimization of process performance
                     metrics and quality indicators.
                   </AccordionContent>
@@ -243,7 +251,7 @@ export default function EngineerPage() {
             </div>
 
             {/* Software Development Section */}
-            <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
+            <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-200">
                 <Code2 className="h-7 w-7 text-teal-400" />
                 Software Development
@@ -259,7 +267,7 @@ export default function EngineerPage() {
                       Customized Solutions
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Custom software solutions for manufacturing automation, data
                     analysis, and process control systems.
                   </AccordionContent>
@@ -271,7 +279,7 @@ export default function EngineerPage() {
                       Relational Database Management
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Development and implementation of automated systems to
                     improve efficiency and reduce manual intervention.
                   </AccordionContent>
@@ -286,7 +294,7 @@ export default function EngineerPage() {
                       Workflow Automatisation
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Seamless integration of various manufacturing systems and
                     tools for improved workflow and data management.
                   </AccordionContent>
@@ -301,7 +309,7 @@ export default function EngineerPage() {
                       Web Development
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Seamless integration of various manufacturing systems and
                     tools for improved workflow and data management.
                   </AccordionContent>
@@ -310,7 +318,7 @@ export default function EngineerPage() {
             </div>
 
             {/* Project Management Section */}
-            <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
+            <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-emerald-200">
                 <ClipboardList className="h-7 w-7 text-emerald-400" />
                 Technical Project Management
@@ -326,7 +334,7 @@ export default function EngineerPage() {
                       Project Setup
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Comprehensive project planning and execution strategies
                     tailored to semiconductor manufacturing environments.
                   </AccordionContent>
@@ -341,7 +349,7 @@ export default function EngineerPage() {
                       Timeline Management
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Effective team management and coordination to ensure project
                     success and timely delivery.
                   </AccordionContent>
@@ -356,7 +364,7 @@ export default function EngineerPage() {
                       Deviation Management
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Proactive identification and mitigation of project risks to
                     ensure smooth execution.
                   </AccordionContent>
@@ -371,7 +379,7 @@ export default function EngineerPage() {
                       Documentation and Sharing
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Proactive identification and mitigation of project risks to
                     ensure smooth execution.
                   </AccordionContent>
@@ -380,7 +388,7 @@ export default function EngineerPage() {
             </div>
 
             {/* Technical Consulting Section */}
-            <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
+            <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
                 <MessageSquareCode className="h-7 w-7 text-blue-400" />
                 Technical Consulting
@@ -396,7 +404,7 @@ export default function EngineerPage() {
                       Process Assessment
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Detailed evaluation of existing processes and
                     recommendations for improvement opportunities.
                   </AccordionContent>
@@ -411,7 +419,7 @@ export default function EngineerPage() {
                       Topic Related Research
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Strategic planning and guidance for technology adoption and
                     process evolution.
                   </AccordionContent>
@@ -423,7 +431,7 @@ export default function EngineerPage() {
                       Training & Knowledge Transfer
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Customized training programs and knowledge transfer sessions
                     for team capability enhancement.
                   </AccordionContent>
@@ -438,7 +446,7 @@ export default function EngineerPage() {
                       Competitor Analysis
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Customized training programs and knowledge transfer sessions
                     for team capability enhancement.
                   </AccordionContent>
