@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.8.0...v1.8.1) (2025-05-27)
+
+
+### Bug Fixes
+
+* some minor fixes ([af5ffb0](https://github.com/DaSteff91/website_kite-engineer/commit/af5ffb01c98112493027a1ebd88cd762d0f84609))
+
 # [1.8.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.7.0...v1.8.0) (2025-05-27)
 
 
