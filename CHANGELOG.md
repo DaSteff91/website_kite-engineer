@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.7.0...v1.8.0) (2025-05-27)
+
+
+### Features
+
+* white lines in accordeon menu less white + text binding to left ([5addd37](https://github.com/DaSteff91/website_kite-engineer/commit/5addd37102fbdfb9a675bca8f846f5a6ea3cd904))
+
 # [1.7.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.6.3...v1.7.0) (2025-05-27)
 
 
