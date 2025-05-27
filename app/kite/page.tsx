@@ -34,6 +34,7 @@ import {
 export default function KitePage() {
   return (
     <main className="relative min-h-screen">
+      {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
           src="/images/background_image_darker.png"
@@ -44,6 +45,7 @@ export default function KitePage() {
         />
       </div>
 
+      {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
@@ -55,7 +57,12 @@ export default function KitePage() {
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="pb-1 text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent [text-shadow:0_0_8px_rgba(209,213,219,0.6)]">
+          <h1
+            className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+   bg-gradient-to-r from-white via-gray-200 to-gray-300 
+   bg-clip-text text-transparent 
+   [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+          >
             Combining Worlds...
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
@@ -64,10 +71,15 @@ export default function KitePage() {
         </div>
       </section>
 
+      {/* Content Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="relative mb-20">
-            <h2 className="text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] bg-clip-text text-transparent animate-gradient">
+            <h2
+              className="text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
+   bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
+   bg-clip-text text-transparent animate-gradient"
+            >
               Whether you're running a kite school or looking to advance your
               own skills — progress doesn´t grow on trees
             </h2>
@@ -86,7 +98,10 @@ export default function KitePage() {
                 Freelancer Services
               </h3>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="process-optimization">
+                <AccordionItem
+                  value="process-optimization"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Gauge className="h-5 w-5" />
@@ -100,7 +115,10 @@ export default function KitePage() {
                     someone behind the bar. You can rely on me
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="equipment-integration">
+                <AccordionItem
+                  value="equipment-integration"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Cpu className="h-5 w-5" />
@@ -113,7 +131,10 @@ export default function KitePage() {
                     well served
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="yield-analysis">
+                <AccordionItem
+                  value="yield-analysis"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <BarChart3 className="h-5 w-5" />
@@ -134,7 +155,7 @@ export default function KitePage() {
                 Courses
               </h3>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="research">
+                <AccordionItem value="research" className="border-white/10">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Microscope className="h-5 w-5" />
@@ -146,7 +167,10 @@ export default function KitePage() {
                     improve efficiency and product quality.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="process-design">
+                <AccordionItem
+                  value="process-design"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Braces className="h-5 w-5" />
@@ -158,7 +182,10 @@ export default function KitePage() {
                     from concept to implementation.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="performance-analysis">
+                <AccordionItem
+                  value="performance-analysis"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <LineChart className="h-5 w-5" />
@@ -180,7 +207,10 @@ export default function KitePage() {
                 Freelancer Services
               </h3>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="process-assessment">
+                <AccordionItem
+                  value="process-assessment"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <FileSearch className="h-5 w-5" />
@@ -192,7 +222,10 @@ export default function KitePage() {
                     recommendations for improvement opportunities.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="technology-roadmap">
+                <AccordionItem
+                  value="technology-roadmap"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Router className="h-5 w-5" />
@@ -204,7 +237,7 @@ export default function KitePage() {
                     process evolution.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="training">
+                <AccordionItem value="training" className="border-white/10">
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <GraduationCap className="h-5 w-5" />
