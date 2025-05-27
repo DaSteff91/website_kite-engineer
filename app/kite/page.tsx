@@ -29,6 +29,15 @@ import {
   Microscope,
   LineChart,
   Braces,
+  School,
+  Plane,
+  HandPlatter,
+  List,
+  Library,
+  LibraryBig,
+  CirclePlay,
+  ArrowBigUpDash,
+  Anvil,
 } from "lucide-react";
 
 export default function KitePage() {
@@ -80,12 +89,10 @@ export default function KitePage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Whether you're running a kite school or looking to advance your
-              own skills — progress doesn´t grow on trees
+              Progress doesn´t grow on trees
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Explore tailored coaching and flexible support designed to help
-              you progress with confidence
+              This is what you can support you
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -94,17 +101,17 @@ export default function KitePage() {
             {/* Process Engineering Section */}
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
-                <Settings className="h-7 w-7 text-blue-400" />
-                Freelancer Services
+                <HandPlatter className="h-7 w-7 text-blue-400" />
+                Freelancer
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem
-                  value="process-optimization"
+                  value="school-support"
                   className="border-white/10"
                 >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Gauge className="h-5 w-5" />
+                      <School className="h-5 w-5" />
                       School Support
                     </div>
                   </AccordionTrigger>
@@ -116,12 +123,12 @@ export default function KitePage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
-                  value="equipment-integration"
+                  value="travel-service"
                   className="border-white/10"
                 >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Cpu className="h-5 w-5" />
+                      <Plane className="h-5 w-5" />
                       Travel Services
                     </div>
                   </AccordionTrigger>
@@ -131,14 +138,11 @@ export default function KitePage() {
                     well served
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem
-                  value="yield-analysis"
-                  className="border-white/10"
-                >
+                <AccordionItem value="gearing-up" className="border-white/10">
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <BarChart3 className="h-5 w-5" />
-                      Teaching and Communication
+                      <Anvil className="h-5 w-5" />
+                      Gearing Up
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -151,14 +155,14 @@ export default function KitePage() {
             {/* Process Development Section */}
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
-                <FlaskRound className="h-7 w-7 text-cyan-400" />
+                <List className="h-7 w-7 text-cyan-400" />
                 Courses
               </h3>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="research" className="border-white/10">
+                <AccordionItem value="theory" className="border-white/10">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Microscope className="h-5 w-5" />
+                      <LibraryBig className="h-5 w-5" />
                       Theory
                     </div>
                   </AccordionTrigger>
@@ -167,14 +171,11 @@ export default function KitePage() {
                     improve efficiency and product quality.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem
-                  value="process-design"
-                  className="border-white/10"
-                >
+                <AccordionItem value="starting" className="border-white/10">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Braces className="h-5 w-5" />
-                      Starting
+                      <CirclePlay className="h-5 w-5" />
+                      (Re-)Starting
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -182,13 +183,10 @@ export default function KitePage() {
                     from concept to implementation.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem
-                  value="performance-analysis"
-                  className="border-white/10"
-                >
+                <AccordionItem value="advanced" className="border-white/10">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <LineChart className="h-5 w-5" />
+                      <ArrowBigUpDash className="h-5 w-5" />
                       Advanced
                     </div>
                   </AccordionTrigger>
@@ -201,64 +199,12 @@ export default function KitePage() {
             </div>
 
             {/* Technical Consulting Section */}
-            <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
-                <Lightbulb className="h-7 w-7 text-blue-400" />
-                Freelancer Services
-              </h3>
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem
-                  value="process-assessment"
-                  className="border-white/10"
-                >
-                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
-                    <div className="flex items-center gap-2">
-                      <FileSearch className="h-5 w-5" />
-                      Process Assessment
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
-                    Detailed evaluation of existing processes and
-                    recommendations for improvement opportunities.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem
-                  value="technology-roadmap"
-                  className="border-white/10"
-                >
-                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
-                    <div className="flex items-center gap-2">
-                      <Router className="h-5 w-5" />
-                      Technology Roadmap
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
-                    Strategic planning and guidance for technology adoption and
-                    process evolution.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="training" className="border-white/10">
-                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
-                    <div className="flex items-center gap-2">
-                      <GraduationCap className="h-5 w-5" />
-                      Training & Knowledge Transfer
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
-                    Customized training programs and knowledge transfer sessions
-                    for team capability enhancement.
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
           </div>
 
           {/* Enhanced Contact Section */}
           <div className="mt-16 text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              What is holding you back? Get in touch to book my services or to
-              learn how I can support your kiteboarding journey on and off the
-              water
+              What´s holding you back? Let´s get in touch
             </p>
             <Link href="/contact">
               <Button

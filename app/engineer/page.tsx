@@ -97,12 +97,10 @@ export default function EngineerPage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Expand your project capabilities, strengthen your resource pool or
-              gain fresh insights with a new perspective
+              Expand your possibilities
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Benefit from my engineering expertise in the areas of
-              semiconductor manufacturing and software development
+              Benefit from my engineering expertise
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -237,6 +235,12 @@ export default function EngineerPage() {
                       <MapIcon className="h-5 w-5" />
                       Process and Equipment Roadmap
                     </div>
+                    {/* <div className="flex items-center">
+                      <MapIcon className="h-5 w-5" />
+                    </div>
+                    <div className="flex items-start gap-2">
+                      Process and Equipment Roadmap
+                    </div> */}
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
                     Detailed analysis and optimization of process performance

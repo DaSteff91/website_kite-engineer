@@ -49,7 +49,7 @@ export default function ContactPage() {
             Combining Worlds...
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Envison - Enable - Execute
+            Envision - Enable - Execute
           </p>
         </div>
       </section>

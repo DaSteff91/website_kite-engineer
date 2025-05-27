@@ -44,7 +44,7 @@ export default function Home() {
               Kite
             </h2>
             <p className="text-sm md:text-base lg:text-lg text-white/80">
-              Curious? Give it a try
+              Curious? Let´s work together
             </p>
           </div>
         </Link>
