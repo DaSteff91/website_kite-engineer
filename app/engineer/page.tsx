@@ -29,6 +29,23 @@ import {
   Microscope,
   LineChart,
   Braces,
+  PocketKnife,
+  SlidersHorizontal,
+  RefreshCw,
+  WandSparkles,
+  Radiation,
+  MapPinPlus,
+  MapPinPlusInsideIcon,
+  MapIcon,
+  ForkKnife,
+  Database,
+  MonitorCheck,
+  FolderKanban,
+  Clock1,
+  Navigation2Off,
+  Share2,
+  MessageSquareCode,
+  UserRoundCheck,
 } from "lucide-react";
 
 export default function EngineerPage() {
@@ -98,6 +115,22 @@ export default function EngineerPage() {
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem
+                  value="process-control"
+                  className="border-white/10"
+                >
+                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
+                    <div className="flex items-center gap-2">
+                      <SlidersHorizontal className="h-5 w-5" />
+                      Process Control
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80">
+                    Comprehensive analysis and optimization of semiconductor
+                    manufacturing processes, focusing on yield improvement and
+                    efficiency gains.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem
                   value="process-optimization"
                   className="border-white/10"
                 >
@@ -119,8 +152,8 @@ export default function EngineerPage() {
                 >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Cpu className="h-5 w-5" />
-                      Equipment Integration
+                      <RefreshCw className="h-5 w-5" />
+                      Change Management
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -135,7 +168,7 @@ export default function EngineerPage() {
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <BarChart3 className="h-5 w-5" />
-                      Yield Analysis
+                      Monitoring
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -156,8 +189,8 @@ export default function EngineerPage() {
                 <AccordionItem value="research" className="border-white/10">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Microscope className="h-5 w-5" />
-                      Research & Innovation
+                      <Lightbulb className="h-5 w-5" />
+                      Creativity
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -171,7 +204,7 @@ export default function EngineerPage() {
                 >
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Braces className="h-5 w-5" />
+                      <WandSparkles className="h-5 w-5" />
                       Process Design
                     </div>
                   </AccordionTrigger>
@@ -181,13 +214,28 @@ export default function EngineerPage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
-                  value="performance-analysis"
+                  value="simulation-prototyping"
                   className="border-white/10"
                 >
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <LineChart className="h-5 w-5" />
-                      Performance Analysis
+                      <Radiation className="h-5 w-5" />
+                      Simulation and Prototyping
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80">
+                    Detailed analysis and optimization of process performance
+                    metrics and quality indicators.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem
+                  value="process-equipment-roadmap"
+                  className="border-white/10"
+                >
+                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                    <div className="flex items-center gap-2">
+                      <MapIcon className="h-5 w-5" />
+                      Process and Equipment Roadmap
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -206,13 +254,13 @@ export default function EngineerPage() {
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem
-                  value="software-development"
+                  value="custom-software"
                   className="border-white/10"
                 >
                   <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Binary className="h-5 w-5" />
-                      Custom Solutions
+                      <PocketKnife className="h-5 w-5" />
+                      Customized Solutions
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -220,11 +268,11 @@ export default function EngineerPage() {
                     analysis, and process control systems.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="automation" className="border-white/10">
+                <AccordionItem value="rdbm" className="border-white/10">
                   <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Workflow className="h-5 w-5" />
-                      Automation Solutions
+                      <Database className="h-5 w-5" />
+                      Relational Database Management
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -232,11 +280,29 @@ export default function EngineerPage() {
                     improve efficiency and reduce manual intervention.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="integration" className="border-white/10">
+                <AccordionItem
+                  value="workflow-automatisation"
+                  className="border-white/10"
+                >
                   <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
                       <Network className="h-5 w-5" />
-                      System Integration
+                      Workflow Automatisation
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80">
+                    Seamless integration of various manufacturing systems and
+                    tools for improved workflow and data management.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem
+                  value="web-development"
+                  className="border-white/10"
+                >
+                  <AccordionTrigger className="hover:text-teal-400 transition-colors text-lg">
+                    <div className="flex items-center gap-2">
+                      <MonitorCheck className="h-5 w-5" />
+                      Web Development
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -251,17 +317,17 @@ export default function EngineerPage() {
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-emerald-200">
                 <ClipboardList className="h-7 w-7 text-emerald-400" />
-                Project Management
+                Technical Project Management
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem
-                  value="project-planning"
+                  value="project-setup"
                   className="border-white/10"
                 >
                   <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <ProjectorChart className="h-5 w-5" />
-                      Project Planning
+                      <FolderKanban className="h-5 w-5" />
+                      Project Setup
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -270,13 +336,13 @@ export default function EngineerPage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
-                  value="team-leadership"
+                  value="timeline-management"
                   className="border-white/10"
                 >
                   <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Users className="h-5 w-5" />
-                      Team Leadership
+                      <Clock1 className="h-5 w-5" />
+                      Timeline Management
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -285,13 +351,28 @@ export default function EngineerPage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
-                  value="risk-management"
+                  value="deviation-management"
                   className="border-white/10"
                 >
                   <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <ShieldAlert className="h-5 w-5" />
-                      Risk Management
+                      <Navigation2Off className="h-5 w-5" />
+                      Deviation Management
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80">
+                    Proactive identification and mitigation of project risks to
+                    ensure smooth execution.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem
+                  value="documentation"
+                  className="border-white/10"
+                >
+                  <AccordionTrigger className="hover:text-emerald-400 transition-colors text-lg">
+                    <div className="flex items-center gap-2">
+                      <Share2 className="h-5 w-5" />
+                      Documentation and Sharing
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -305,7 +386,7 @@ export default function EngineerPage() {
             {/* Technical Consulting Section */}
             <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
-                <Lightbulb className="h-7 w-7 text-blue-400" />
+                <MessageSquareCode className="h-7 w-7 text-blue-400" />
                 Technical Consulting
               </h3>
               <Accordion type="single" collapsible className="w-full">
@@ -330,8 +411,8 @@ export default function EngineerPage() {
                 >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Router className="h-5 w-5" />
-                      Technology Roadmap
+                      <Microscope className="h-5 w-5" />
+                      Topic Related Research
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
@@ -344,6 +425,21 @@ export default function EngineerPage() {
                     <div className="flex items-center gap-2">
                       <GraduationCap className="h-5 w-5" />
                       Training & Knowledge Transfer
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-white/80">
+                    Customized training programs and knowledge transfer sessions
+                    for team capability enhancement.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem
+                  value="competitor-analysis"
+                  className="border-white/10"
+                >
+                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
+                    <div className="flex items-center gap-2">
+                      <UserRoundCheck className="h-5 w-5" />
+                      Competitor Analysis
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">

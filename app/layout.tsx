@@ -4,10 +4,16 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ClientLayoutWrapper } from "./ClientLayoutWrapper";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
-  display: 'swap',
+  display: "swap",
 });
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   title: "Kite-Engineer",
@@ -24,11 +30,6 @@ export const metadata: Metadata = {
       type: "image/x-icon",
     },
   ],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
   keywords: "Kiteboarding, Engineering, test",
 };
 

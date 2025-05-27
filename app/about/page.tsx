@@ -52,7 +52,7 @@ export default function AboutPage() {
               Combining Worlds... The story and motivation behind
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              It´s about doing, not waiting for things to happen by themselfs
+              "It´s about doing, not waiting for things to happen by themselfs"
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -62,19 +62,57 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
-                Professional Journey
+                Professional Part
               </h3>
-              <p className="text-muted-foreground">
-                [Your professional background and experience placeholder]
-              </p>
+              <ul className="text-muted-foreground list-disc list-outside pl-5 space-y-4">
+                <li>
+                  Launching my freelancer career as Kite-Engineer to combine my
+                  worlds into one, 2025
+                </li>
+                <li>
+                  International University (IU) certificate as Python and SQL
+                  Programmer, 2025
+                </li>
+                <li>
+                  Offering kitelessons in german, english and portugues, 2024
+                </li>
+                <li>VDWS instructor license, 2023</li>
+                <li>
+                  Certified Green Belt with focus on Lean Management, 2022
+                </li>
+                <li>Privat kiteboarding lessons, 2021</li>
+                <li>First contact with kiteboarding, 2018</li>
+                <li>
+                  Professional employments as process development engineer,
+                  process engineer and laboratory assisstant, 2015 - 2024
+                </li>
+                <li>B.Sc. in Microsystems Engineering, 2015</li>
+                <li>
+                  Started exploring the areas of micro- and nanosystems in, 2010
+                </li>
+              </ul>
             </div>
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
-                Personal Interests
+                Personal Part
               </h3>
-              <p className="text-muted-foreground">
-                [Your interests, hobbies, and motivation placeholder]
-              </p>
+              <ul className="text-muted-foreground list-disc list-outside pl-5 space-y-4">
+                <li>"Be the change in the world you want to see"</li>
+                <li>Self-study was always more satisfying then school</li>
+                <li>Yes, even I´ve once played football. Until I was 14</li>
+                <li>Sports and outdoor activities as big part of my life</li>
+                <li>So is Linkin Park - being a fan since I´m 6 years old</li>
+                <li>Have you ever listened to Eckhart Tolle? </li>
+                <li>
+                  Philosophy, espacially stoicism, was added since I´m 30 -
+                  coincidence?
+                </li>
+                <li>
+                  A book that changed my life? O Alquimista - Paulo Coelho
+                </li>
+                <li>Follower of the "Free and Open Source Idea"</li>
+                <li>Growing as a community is satisfaction times x</li>
+              </ul>
             </div>
           </div>
         </div>
