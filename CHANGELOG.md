@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.8.1...v1.8.2) (2025-05-27)
+
+
+### Bug Fixes
+
+* adding additional metadata ([4874487](https://github.com/DaSteff91/website_kite-engineer/commit/48744875db500be4373e1421b250a84c01fbba60))
+
 ## [1.8.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.8.0...v1.8.1) (2025-05-27)
 
 
