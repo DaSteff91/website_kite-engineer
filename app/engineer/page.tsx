@@ -318,7 +318,7 @@ export default function EngineerPage() {
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-emerald-200">
                 <ClipboardList className="h-7 w-7 text-emerald-400" />
-                Technical Project Management
+                Project Management
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="project-setup" className="border-white/5">
