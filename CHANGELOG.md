@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.6.3...v1.7.0) (2025-05-27)
+
+
+### Features
+
+* content update ([5ffd76c](https://github.com/DaSteff91/website_kite-engineer/commit/5ffd76c0633bace10cfb701f0d76abc23462e124))
+
 ## [1.6.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.6.2...v1.6.3) (2025-05-26)
 
 
