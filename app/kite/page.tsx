@@ -108,7 +108,7 @@ export default function KitePage() {
                       School Support
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     In times of short stuff it could be a game changer for you
                     to offer flexibility to your customers. No matter if you
                     need an VDWS certified instructor, support for your shop or
@@ -125,7 +125,7 @@ export default function KitePage() {
                       Travel Services
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Looking for someone how organizes your kite trip? Or even
                     accompanies you as a personal coach? No problem, you get
                     well served
@@ -141,7 +141,7 @@ export default function KitePage() {
                       Teaching and Communication
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Placeholder
                   </AccordionContent>
                 </AccordionItem>
@@ -162,7 +162,7 @@ export default function KitePage() {
                       Theory
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Development of new manufacturing processes and techniques to
                     improve efficiency and product quality.
                   </AccordionContent>
@@ -177,7 +177,7 @@ export default function KitePage() {
                       Starting
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Creation and optimization of new manufacturing processes
                     from concept to implementation.
                   </AccordionContent>
@@ -192,7 +192,7 @@ export default function KitePage() {
                       Advanced
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Detailed analysis and optimization of process performance
                     metrics and quality indicators.
                   </AccordionContent>
@@ -217,7 +217,7 @@ export default function KitePage() {
                       Process Assessment
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Detailed evaluation of existing processes and
                     recommendations for improvement opportunities.
                   </AccordionContent>
@@ -232,7 +232,7 @@ export default function KitePage() {
                       Technology Roadmap
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Strategic planning and guidance for technology adoption and
                     process evolution.
                   </AccordionContent>
@@ -244,7 +244,7 @@ export default function KitePage() {
                       Training & Knowledge Transfer
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 text-left">
+                  <AccordionContent className="text-white/80">
                     Customized training programs and knowledge transfer sessions
                     for team capability enhancement.
                   </AccordionContent>
