@@ -46,6 +46,7 @@ import {
   Share2,
   MessageSquareCode,
   UserRoundCheck,
+  Terminal,
 } from "lucide-react";
 
 export default function EngineerPage() {
@@ -82,9 +83,6 @@ export default function EngineerPage() {
           >
             Combining Worlds...
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Envision - Enable - Execute
-          </p>
         </div>
       </section>
 
@@ -250,7 +248,7 @@ export default function EngineerPage() {
             {/* Software Development Section */}
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-200">
-                <Code2 className="h-7 w-7 text-teal-400" />
+                <Terminal className="h-7 w-7 text-teal-400" />
                 Software Development
               </h3>
               <Accordion type="single" collapsible className="w-full">
@@ -450,7 +448,7 @@ export default function EngineerPage() {
           <div className="mt-16 text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Ready to elevate your project? Reach out for a free consultation
-              and let's discuss how we can achieve your goals together.
+              and let's see how we can achieve your goals together.
             </p>
             <Link href="/contact">
               <Button

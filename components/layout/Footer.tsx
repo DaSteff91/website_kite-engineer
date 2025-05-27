@@ -28,7 +28,7 @@ export function Footer() {
               <br />
               City, Country 12345
               <br /> */}
-            <a href="mailto:contact@example.com" className="hover:text-primary">
+            <a href="stefan@kite-engineer.de" className="hover:text-primary">
               stefan@kite-engineer.de
             </a>
             <br />

@@ -38,6 +38,7 @@ import {
   CirclePlay,
   ArrowBigUpDash,
   Anvil,
+  MessageSquareText,
 } from "lucide-react";
 
 export default function KitePage() {
@@ -74,9 +75,6 @@ export default function KitePage() {
           >
             Combining Worlds...
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Envision - Enable - Execute
-          </p>
         </div>
       </section>
 
@@ -92,7 +90,7 @@ export default function KitePage() {
               Progress doesn´t grow on trees
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              This is what you can support you
+              This is what can support you
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -116,10 +114,9 @@ export default function KitePage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    In times of short stuff it could be a game changer for you
-                    to offer flexibility to your customers. No matter if you
-                    need an VDWS certified instructor, support for your shop or
-                    someone behind the bar. You can rely on me
+                    Whether you need a VDWS-certified instructor, shop
+                    assistance, or someone to manage the bar, I’ve got you
+                    covered. Flexibility is my strength.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -138,15 +135,17 @@ export default function KitePage() {
                     well served
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="gearing-up" className="border-white/5">
+                <AccordionItem value="consulting" className="border-white/5">
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
                     <div className="flex items-center gap-2">
-                      <Anvil className="h-5 w-5" />
-                      Gearing Up
+                      <MessageSquareText className="h-5 w-5" />
+                      Consulting
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Placeholder
+                    Overwhelmed by gear choices? Let me guide you through
+                    selecting the right kiteboarding equipment. Need someone to
+                    represent the sport? I like talking in front of people
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -167,8 +166,9 @@ export default function KitePage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Development of new manufacturing processes and techniques to
-                    improve efficiency and product quality.
+                    Why not pulling the bar? Let’s break down the "science"
+                    behind the sport—from wind dynamics to material technology.
+                    Choose your topic and pace; I’ll make it clear and engaging.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="starting" className="border-white/5">
@@ -179,8 +179,8 @@ export default function KitePage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Creation and optimization of new manufacturing processes
-                    from concept to implementation.
+                    Whether you’re beginning a new kite journey or returning
+                    after a break, I’ll help you regain confidence on the water.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="advanced" className="border-white/5">
@@ -191,8 +191,9 @@ export default function KitePage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Detailed analysis and optimization of process performance
-                    metrics and quality indicators.
+                    Ready to push limits? From your first toeside ride to
+                    nailing loops, let’s tackle challenges together. Prefer
+                    supervised sessions? No problem!
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
