@@ -18,6 +18,7 @@ export const viewport = {
 export const metadata: Metadata = {
   title: "Kite-Engineer",
   description: "The best of two worlds",
+  authors: [{ name: "Stefan Merthan" }],
   icons: [
     {
       media: "(prefers-color-scheme: light)",
@@ -30,7 +31,22 @@ export const metadata: Metadata = {
       type: "image/x-icon",
     },
   ],
-  keywords: "Kiteboarding, Engineering, test",
+  keywords: "Kiteboarding, Engineering",
+  openGraph: {
+    title: "Kite-Engineer",
+    description: "The best of two worlds",
+    url: "https://www-dev.kite-engineer.de",
+    siteName: "Kite-Engineer Combining Worlds",
+    images: [
+      {
+        url: "/images/logo_dark.svg",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
