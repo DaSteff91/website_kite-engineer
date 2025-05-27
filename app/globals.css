@@ -119,21 +119,35 @@
 
 /* Accordion customizations */
 .accordion-content {
-  text-align: left !important;
-}
-
-[data-state='closed'] .accordion-content {
-  animation: accordion-up 0.2s ease-out;
-}
-
-[data-state='open'] .accordion-content {
-  animation: accordion-down 0.2s ease-out;
+  text-align: left;
 }
 
 .accordion-item {
-  border-bottom: none !important;
+  border: none !important;
 }
 
 .accordion-trigger {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+/* Accordion animations */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+[data-state='open'] .accordion-content {
+  animation: accordion-down 0.2s ease-out;
+  height: auto;
+}
+
+[data-state='closed'] .accordion-content {
+  animation: accordion-up 0.2s ease-out;
+  height: 0;
 }

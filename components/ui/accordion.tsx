@@ -10,27 +10,36 @@ const Accordion = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Root>
 >(({ className, ...props }, ref) => {
-  const [openItem, setOpenItem] = React.useState<string | null>(null);
+  // Create a ref to track if the click started inside the accordion
+  const clickStartedInsideRef = React.useRef(false);
 
-  // Handle click outside
   React.useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-      if (!target.closest('[data-accordion-item]')) {
-        setOpenItem(null);
-      }
+    const handleMouseDown = (e: MouseEvent) => {
+      clickStartedInsideRef.current = !!e.target && (e.target as HTMLElement).closest('[data-accordion-component]') !== null;
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    const handleMouseUp = (e: MouseEvent) => {
+      if (!clickStartedInsideRef.current && props.type === 'single' && props.value) {
+        // Only close if click started and ended outside
+        props.onValueChange?.('');
+      }
+      clickStartedInsideRef.current = false;
+    };
+
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [props]);
 
   return (
     <AccordionPrimitive.Root
       ref={ref}
-      className={className}
-      value={openItem}
-      onValueChange={setOpenItem}
+      className={cn('space-y-0', className)}
+      data-accordion-component
       {...props}
     />
   );
@@ -44,7 +53,6 @@ const AccordionItem = React.forwardRef<
   <AccordionPrimitive.Item
     ref={ref}
     className={cn('accordion-item', className)}
-    data-accordion-item
     {...props}
   />
 ));
@@ -76,10 +84,15 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className={cn(
+      'overflow-hidden text-sm transition-all',
+      'data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
+    )}
     {...props}
   >
-    <div className={cn('accordion-content pb-4 pt-0', className)}>{children}</div>
+    <div className={cn('accordion-content pb-4 pt-0', className)}>
+      {children}
+    </div>
   </AccordionPrimitive.Content>
 ));
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
