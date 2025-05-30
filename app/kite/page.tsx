@@ -90,12 +90,12 @@ export default function KitePage() {
               Progress doesn´t grow on trees
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              This is what can support you
+              This is what I offer you to achieve it
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 auto-rows-fr justify-items-center">
             {/* Freelancer Section */}
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
@@ -145,7 +145,8 @@ export default function KitePage() {
                   <AccordionContent className="text-white/80">
                     Overwhelmed by gear choices? Let me guide you through
                     selecting the right kiteboarding equipment. Need someone to
-                    represent the sport? I like talking in front of people
+                    represent the sport? I like talking in front of people and
+                    deliver a message to others
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -180,7 +181,8 @@ export default function KitePage() {
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
                     Whether you’re beginning a new kite journey or returning
-                    after a break, I’ll help you regain confidence on the water.
+                    after a break, I’ll help you (re-)gain confidence on the
+                    water.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="advanced" className="border-white/5">

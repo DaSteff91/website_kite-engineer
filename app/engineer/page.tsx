@@ -98,7 +98,8 @@ export default function EngineerPage() {
               Expand your possibilities
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Benefit from my engineering expertise
+              Benefit from my engineering expertise in the fields of IT and
+              semiconductors
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -121,9 +122,11 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Comprehensive analysis and optimization of semiconductor
-                    manufacturing processes, focusing on yield improvement and
-                    efficiency gains.
+                    APC (Advanced Process control), SPC (Statistical Process
+                    Control) and WER (Western Electrical Rules) implementation
+                    as core competence. Data analytics using Python, AI training
+                    for failure detection, dashboards & KPI setup help along the
+                    way.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -137,9 +140,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Comprehensive analysis and optimization of semiconductor
-                    manufacturing processes, focusing on yield improvement and
-                    efficiency gains.
+                    Offering 6 sigma and lean techniques to achive the best
+                    possible process outcome you want.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -153,8 +155,8 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Expert guidance in integrating new equipment into existing
-                    production lines while maintaining optimal performance.
+                    Preparing milestones and passing release gates. It's about
+                    documentation and traceability - I do that for you
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="monitoring" className="border-white/5">
@@ -165,8 +167,9 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Advanced statistical analysis and problem-solving techniques
-                    to identify and resolve yield-limiting factors.
+                    Don't know what parameters to monitor and how? Let's define
+                    a monitoring setup. And where necessary we find appropriate
+                    methods to get a solution for any type of produced volume
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -187,8 +190,9 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Development of new manufacturing processes and techniques to
-                    improve efficiency and product quality.
+                    There is more then brainstorming - but you already know
+                    that. Right? Reach out and let´s activate neurons you´ve not
+                    yet known about
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -202,8 +206,10 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Creation and optimization of new manufacturing processes
-                    from concept to implementation.
+                    You know what your process must achive but have boundries
+                    locking you into an neverending development cycle? We´ll
+                    break it here and now and design what needs to be done.
+                    Vizualizations and structuring help a lot
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -217,8 +223,10 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Detailed analysis and optimization of process performance
-                    metrics and quality indicators.
+                    Ever considered to use an analogy model and a simulation to
+                    solve a problem? What about getting a physical model printed
+                    out in 3D? I prepare your project for any kind of further
+                    visualisation and connect you with experts
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -238,8 +246,10 @@ export default function EngineerPage() {
                     </div> */}
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Detailed analysis and optimization of process performance
-                    metrics and quality indicators.
+                    Your competitors don´t wait for you to catch up. Be prepared
+                    of what may be necessary in the future. I help you to
+                    outline possible challenges for the next generation of
+                    technology you wanna choose and how to tackle them.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -263,8 +273,11 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Custom software solutions for manufacturing automation, data
-                    analysis, and process control systems.
+                    Want to combine feature of software A with software B and
+                    generate an output that fits your needs? No worries, its
+                    just a matter of coffee and time to figure it. From
+                    customized scripts to containerization to front- and and
+                    backend integration of custom projects.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="rdbm" className="border-white/5">
@@ -275,8 +288,11 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Development and implementation of automated systems to
-                    improve efficiency and reduce manual intervention.
+                    Wanna go from storing data in files like excel to a more
+                    sustainable and better manageable format? Or improve your
+                    already existing DB (database)? From setting up a completely
+                    new RDBMS (relational database management system) to adjust
+                    your DB - I figure it out what we can do.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -290,8 +306,10 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Seamless integration of various manufacturing systems and
-                    tools for improved workflow and data management.
+                    Save time and let software do your repeating tasks. We work
+                    out the concept and then implement it step by step, based on
+                    your needs. I´m sure a lot of your already used software
+                    already supports automatisation
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -305,8 +323,10 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Seamless integration of various manufacturing systems and
-                    tools for improved workflow and data management.
+                    Server and domain related setup? Or wanna have an own
+                    Nextcloud? Outsource your web administration to me. And if
+                    you need a website too, bring your design and I also manage
+                    that for you
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -327,8 +347,10 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Comprehensive project planning and execution strategies
-                    tailored to semiconductor manufacturing environments.
+                    Get more time for other things and let me do the "what shall
+                    be delivered until when by whome and how...". Setting things
+                    up properly not only gives a good feeling, it also is the
+                    foundation to achive goals sustainable
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -342,8 +364,9 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Effective team management and coordination to ensure project
-                    success and timely delivery.
+                    It´s all about timing. Sometimes things don´t work out as
+                    planed and you need to rebalance your project timelines.
+                    Someone with an outside-view like me can help at that stage.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -357,8 +380,10 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Proactive identification and mitigation of project risks to
-                    ensure smooth execution.
+                    Especially when external parties are involved it´s not
+                    always easy to communicate unexpected detours in your
+                    project. Hand it over and get your back covered while you
+                    have time to rework a get back into your commited shape.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="documentation" className="border-white/5">
@@ -369,8 +394,11 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Proactive identification and mitigation of project risks to
-                    ensure smooth execution.
+                    Version control and data sharing is not executed on a top
+                    level if everyone works on their own devices and only shares
+                    on demand. These times are long gone - let´s create
+                    synergies in your team that always were there but were never
+                    used
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -394,8 +422,10 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Detailed evaluation of existing processes and
-                    recommendations for improvement opportunities.
+                    Get an outside view onto what is running at your business.
+                    Detailed feedback on what shall not be changed and what
+                    offers potential for improvement and what may be necessary
+                    to be done for this.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -409,8 +439,11 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Strategic planning and guidance for technology adoption and
-                    process evolution.
+                    You know there are a lot of things going on around you and
+                    you can´t always figure out what to filter how to get to
+                    know what matters for you and your business. I like reading
+                    technical suff - let me do this. Why shall we not work
+                    together?
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="training" className="border-white/5">
@@ -421,8 +454,9 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Customized training programs and knowledge transfer sessions
-                    for team capability enhancement.
+                    I embrace everyone to never stop learning. Thus I am more
+                    then willing to share everything I know with you and your
+                    business.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
@@ -436,8 +470,9 @@ export default function EngineerPage() {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Customized training programs and knowledge transfer sessions
-                    for team capability enhancement.
+                    Sure, everyone wants to know what others are up to - why not
+                    getting it done professionally and save your time for your
+                    business? I scout and report for you.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -447,8 +482,11 @@ export default function EngineerPage() {
           {/* Enhanced Contact Section */}
           <div className="mt-16 text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to elevate your project? Reach out for a free consultation
-              and let's see how we can achieve your goals together.
+              Ready to elevate your project? You always get whatever is
+              necessary from my services. The provided overview is meant to be
+              an orientation and only a glimps of what is possible. Reach out
+              for a free consultation and let's see how we can achieve your
+              goals together.
             </p>
             <Link href="/contact">
               <Button
