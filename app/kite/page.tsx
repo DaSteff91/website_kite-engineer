@@ -90,7 +90,7 @@ export default function KitePage() {
               Progress doesn´t grow on trees
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              This is what I offer you to achieve it
+              My kiteboarding related services help you to achieve your goals
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
