@@ -1,4 +1,6 @@
 import Image from "next/image";
+import background_image_darker from "@/public/images/background_image_darker.jpeg";
+import kite_hero_image from "@/public/images/kite_hero_image.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,27 +10,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  Settings,
-  Code2,
-  ClipboardList,
-  Lightbulb,
-  Gauge,
-  Cpu,
-  BarChart3,
-  Workflow,
-  Binary,
-  Network,
   Projector as ProjectorChart,
-  Users,
-  ShieldAlert,
-  FileSearch,
-  Router,
-  GraduationCap,
   ArrowRight,
-  FlaskRound,
-  Microscope,
-  LineChart,
-  Braces,
   School,
   Plane,
   HandPlatter,
@@ -47,11 +30,12 @@ export default function KitePage() {
       {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/images/background_image_darker.png"
+          src={background_image_darker}
           alt="Background"
           fill
           className="brightness-50 object-cover object-top"
           priority
+          placeholder="blur"
         />
       </div>
 
@@ -59,11 +43,12 @@ export default function KitePage() {
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/kite_page_test.png"
+            src={kite_hero_image}
             alt="Kiteboarding"
             fill
-            className="object-cover object-center brightness-50"
+            className="object-cover object-[center_45%] brightness-50"
             priority
+            placeholder="blur"
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">

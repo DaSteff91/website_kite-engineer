@@ -1,5 +1,7 @@
 import { ContactForm } from "@/components/sections/ContactForm";
 import Image from "next/image";
+import contact_hero_image from "@/public/images/contack_hero_image.jpg";
+import background_image_darker from "@/public/images/background_image_darker.jpeg";
 
 export default function ContactPage() {
   return (
@@ -7,11 +9,12 @@ export default function ContactPage() {
       {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/images/background_image_darker.png"
+          src={background_image_darker}
           alt="Background"
           fill
           className="brightness-50 object-cover object-top"
           priority
+          placeholder="blur"
         />
       </div>
 
@@ -19,11 +22,12 @@ export default function ContactPage() {
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/contact_page.jpeg"
+            src={contact_hero_image}
             alt="Contact"
             fill
             className="object-cover object-[center_45%] brightness-50"
             priority
+            placeholder="blur"
           />
         </div>
         {/* <div className="relative z-10 container mx-auto px-4 text-center">

@@ -1,4 +1,6 @@
 import Image from "next/image";
+import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
+import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -55,11 +57,12 @@ export default function EngineerPage() {
       {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/images/background_image_darker.png"
+          src={background_image_darker}
           alt="Background"
           fill
           className="brightness-50 object-cover object-top"
           priority
+          placeholder="blur"
         />
       </div>
 
@@ -67,11 +70,12 @@ export default function EngineerPage() {
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/1.jpg"
+            src={engineer_hero_image}
             alt="Engineering"
             fill
             className="object-cover object-[center_20%] brightness-50"
             priority
+            placeholder="blur"
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">

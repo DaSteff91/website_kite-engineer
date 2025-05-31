@@ -1,4 +1,6 @@
 import Image from "next/image";
+import about_hero_image from "@/public/images/about_hero_image.jpg";
+import background_image_darker from "@/public/images/background_image_darker.jpeg";
 
 export default function AboutPage() {
   return (
@@ -6,11 +8,12 @@ export default function AboutPage() {
       {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
-          src="/images/background_image_darker.png"
+          src={background_image_darker}
           alt="Background"
           fill
           className="brightness-50 object-cover object-top"
           priority
+          placeholder="blur"
         />
       </div>
 
@@ -18,11 +21,12 @@ export default function AboutPage() {
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/IMG-20230117-WA0001.jpg"
+            src={about_hero_image}
             alt="About"
             fill
             className="object-cover object-[center_20%] brightness-50"
             priority
+            placeholder="blur"
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
