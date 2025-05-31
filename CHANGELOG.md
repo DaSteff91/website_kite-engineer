@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.1...v1.9.2) (2025-05-31)
+
+
+### Bug Fixes
+
+* adding smaller pictures for better  LCP ([141451b](https://github.com/DaSteff91/website_kite-engineer/commit/141451b909cc30d8b208eceaa7f4915386afc88b))
+
 ## [1.9.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.0...v1.9.1) (2025-05-30)
 
 
