@@ -1,3 +1,10 @@
+## [1.9.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.2...v1.9.3) (2025-05-31)
+
+
+### Bug Fixes
+
+* adding .jpg with Interlace: JPEG and blur effect for better page loading ([de75292](https://github.com/DaSteff91/website_kite-engineer/commit/de7529238042028fa40889c5f3f707a56a53d575))
+
 ## [1.9.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.1...v1.9.2) (2025-05-31)
 
 
