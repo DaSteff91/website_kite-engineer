@@ -59,7 +59,7 @@ export default function KitePage() {
       <section className="relative h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/kite_landingpage.png"
+            src="/images/kite_page_test.png"
             alt="Kiteboarding"
             fill
             className="object-cover object-center brightness-50"
