@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.11.0...v1.12.0) (2025-06-02)
+
+
+### Features
+
+* merge ([6840ae5](https://github.com/DaSteff91/website_kite-engineer/commit/6840ae547c6d76ca18fc8bd3b19f9cb9d4adfd00))
+
 # [1.11.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.10.0...v1.11.0) (2025-06-02)
 
 
