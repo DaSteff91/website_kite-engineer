@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       type: "image/x-icon",
     },
   ],
-  keywords: "Kiteboarding, Engineering",
+  keywords: "kiteboarding, engineering, kitesurf, engineer",
   openGraph: {
     title: "Kite-Engineer",
     description: "The best of two worlds",
@@ -39,13 +39,27 @@ export const metadata: Metadata = {
     siteName: "Kite-Engineer Combining Worlds",
     images: [
       {
-        url: "/images/logo_dark.svg",
+        url: "https://www-dev.kite-engineer.de/images/logo_light.svg",
         width: 800,
         height: 600,
+        alt: "Kite-Engineer Logo",
       },
     ],
-    locale: "de_DE",
+    locale: "en_EN",
     type: "website",
+  },
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+      "de-DE": "/de-DE",
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kite-Engineer",
+    description: "The best of two worlds",
+    images: ["https://www-dev.kite-engineer.de/images/logo_light.svg"],
   },
 };
 
