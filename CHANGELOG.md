@@ -1,3 +1,10 @@
+## [1.9.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.4...v1.9.5) (2025-06-02)
+
+
+### Bug Fixes
+
+* typo ([cefbea8](https://github.com/DaSteff91/website_kite-engineer/commit/cefbea8443a00cbb75042af347a69111cbf8c553))
+
 ## [1.9.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.3...v1.9.4) (2025-06-02)
 
 
