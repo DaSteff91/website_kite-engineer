@@ -19,7 +19,7 @@ WORKDIR /app
 # Install dependencies based on the preferred package manager
 
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm ci --omit=dev
 
 ##### BUILDER
 
@@ -46,7 +46,7 @@ LABEL org.opencontainers.image.source="https://github.com/DaSteff91/website_kite
 
 WORKDIR /app
 
-ENV NODE_ENV=development \
+ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
     PORT=3000
 
