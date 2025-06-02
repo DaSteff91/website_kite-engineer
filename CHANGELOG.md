@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.3...v1.9.4) (2025-06-02)
+
+
+### Bug Fixes
+
+* nodemailer contact for was only working on localhost. now it shall also online ([e5cc5cc](https://github.com/DaSteff91/website_kite-engineer/commit/e5cc5cc876f2f0ae72ea923ca5b7ae70f17dedd4))
+
 ## [1.9.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.2...v1.9.3) (2025-05-31)
 
 
