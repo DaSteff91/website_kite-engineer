@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.10.0...v1.11.0) (2025-06-02)
+
+
+### Features
+
+* preparing for bigger launch ([81e61d7](https://github.com/DaSteff91/website_kite-engineer/commit/81e61d7d7800bf13c0f229db5230de475dd21d24))
+
 # [1.10.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.6...v1.10.0) (2025-06-02)
 
 
