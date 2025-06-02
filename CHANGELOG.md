@@ -1,3 +1,10 @@
+## [1.9.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.5...v1.9.6) (2025-06-02)
+
+
+### Bug Fixes
+
+* minor design changes ([4900805](https://github.com/DaSteff91/website_kite-engineer/commit/4900805c73557992d885240addb5cf0e0074dd15))
+
 ## [1.9.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.4...v1.9.5) (2025-06-02)
 
 
