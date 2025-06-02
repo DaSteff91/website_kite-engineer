@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.6...v1.10.0) (2025-06-02)
+
+
+### Features
+
+* rework and harmonization ([5eafc02](https://github.com/DaSteff91/website_kite-engineer/commit/5eafc024ac0d25e954a5a2a6526718dc9b874edc))
+
 ## [1.9.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.9.5...v1.9.6) (2025-06-02)
 
 
