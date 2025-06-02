@@ -1,0 +1,11 @@
+{
+    "extends": ["@commitlint/config-conventional"],
+    "rules": {
+        "body-max-line-length": [
+          2,
+          false
+        ],
+        "header-max-length": [2, "always", 500]
+      }
+}
+  

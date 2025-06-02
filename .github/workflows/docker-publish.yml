@@ -28,6 +28,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Clean previous build
+        run: rm -rf .next
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
@@ -38,6 +41,43 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
+
+      - name: Get the run_id of the most recent run workflow
+        id: get_run_id
+        run: |
+          # Use the GitHub API to get the latest run_id of the first workflow
+          run_id=$(curl -s -H "Authorization: token ${{ secrets.GH_PACKAGE_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/release.yml/runs" | \
+            jq -r '.workflow_runs[0].id')
+          echo "run_id=$run_id" >> $GITHUB_OUTPUT
+          echo "Current run_id: $run_id"
+
+      - name: Clone external action repository
+        run: |
+          git clone https://github.com/kamilchodola/wait-for-workflow-action.git /tmp/wait-for-workflow-action
+          ls -la /tmp/wait-for-workflow-action
+
+      - name: Make the script executable
+        run: |
+          if [ -f /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh ]; then
+            chmod +x /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh
+          else
+            echo "Error: /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh does not exist."
+            exit 1
+          fi
+
+      - name: Wait for Workflow Action
+        run: /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+          WORKFLOW_ID: "build-and-push.yml"
+          RUN_ID: ${{ steps.get_run_id.outputs.run_id }}
+          MAX_WAIT_MINUTES: "3"
+          INTERVAL: "5"
+          TIMEOUT: "10"
+          ORG_NAME: "dasteff91"
+          REPO_NAME: "website_kite-engineer"
+          REF: "${{ github.ref }}"
 
       - name: Extract Docker metadata
         id: meta
@@ -56,12 +96,11 @@ jobs:
             org.opencontainers.image.source=${{ github.repositoryUrl }}
             org.opencontainers.image.revision=${{ github.sha }}
             org.opencontainers.image.created=${{ steps.meta.outputs.created }}
-
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           platforms: linux/amd64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -87,4 +126,9 @@ jobs:
             docker pull ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
             docker stop www.kite-engineer.de || true
             docker rm www.kite-engineer.de || true
-            docker run -d --name "www.kite-engineer.de" -p 3000:3000 ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }} --restart unless-stopped
+            docker run -d \
+            --name "www.kite-engineer.de" \
+            -p 3000:3000 \
+            --env-file /home/steff_deployment/website_kite-engineer/.env \
+            --restart unless-stopped \
+            ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
