@@ -1,3 +1,10 @@
+## [1.12.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.4...v1.12.5) (2025-06-08)
+
+
+### Bug Fixes
+
+* changing about hero picture ([9e71ec8](https://github.com/DaSteff91/website_kite-engineer/commit/9e71ec843ad67fc44c76b925afdcf776c6d076d5))
+
 ## [1.12.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.3...v1.12.4) (2025-06-08)
 
 
