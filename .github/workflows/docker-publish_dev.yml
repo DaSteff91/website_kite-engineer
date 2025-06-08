@@ -20,7 +20,8 @@ on:
       - ".husky/*"
   pull_request:
     branches:
-      - main
+      - dev
+      - development
     paths-ignore:
       - "README.md"
       - "docs/**"

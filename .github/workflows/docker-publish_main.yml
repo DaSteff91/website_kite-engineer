@@ -1,0 +1,110 @@
+name: Build, Push to GHCR and Deploy on Server
+
+on:
+  workflow_run:
+    workflows: ["Semantic Versioning"]
+    types:
+      - completed
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "README.md"
+      - "docs/**"
+      - ".next/**"
+      - "node_modules/**"
+      - ".env*"
+      - "*ignore*"
+      - ".github/workflows/**"
+      - ".husky/*"
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "README.md"
+      - "docs/**"
+      - ".next/**"
+      - "node_modules/**"
+      - ".env*"
+      - "*ignore*"
+      - ".github/workflows/**"
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout the repository code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PACKAGE_TOKEN }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GH_PACKAGE_TOKEN }}
+
+      - name: Get current version tag
+        id: get_tag
+        run: |
+          CURRENT_TAG=$(git tag --points-at HEAD)
+          echo "Current tag: $CURRENT_TAG"
+          echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
+          echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver: docker-container
+
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/dasteff91/ghcr-test
+          tags: |
+            type=raw,value=${{ steps.get_tag.outputs.tag }}
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            NEXT_PUBLIC_CLIENTVAR=clientvar
+
+  deploy:
+    name: Deploy to server
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH and Deploy to Server
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            echo ${{ secrets.GH_PACKAGE_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            docker pull ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
+            docker stop www.kite-engineer.de || true
+            docker rm www.kite-engineer.de || true
+            docker run -d \
+            --name "www.kite-engineer.de" \
+            -p 3000:3000 \
+            --env-file /home/steff_deployment/website_kite-engineer/.env \
+            --restart unless-stopped \
+            ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
