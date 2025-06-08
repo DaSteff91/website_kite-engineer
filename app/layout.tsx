@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   icons: [
     {
       media: "(prefers-color-scheme: light)",
-      url: "20250510_white_ke.ico",
+      url: "favicon_light.ico",
       type: "image/x-icon",
     },
     {
       media: "(prefers-color-scheme: dark)",
-      url: "20250510_dark_ke.ico",
+      url: "favicon_dark.ico",
       type: "image/x-icon",
     },
   ],
@@ -35,11 +35,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kite-Engineer",
     description: "The best of two worlds",
-    url: "https://www-dev.kite-engineer.de",
+    url: "https://www.kite-engineer.de",
     siteName: "Kite-Engineer Combining Worlds",
     images: [
       {
-        url: "https://www-dev.kite-engineer.de/images/logo_light.svg",
+        url: "https://www.kite-engineer.de/images/favicon_dark.ico",
         width: 800,
         height: 600,
         alt: "Kite-Engineer Logo",
@@ -58,8 +58,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kite-Engineer",
-    description: "The best of two worlds",
-    images: ["https://www-dev.kite-engineer.de/images/logo_light.svg"],
+    description:
+      "Combinging worlds by offering kiteboarding related services as well as engineering services",
+    images: ["https://www.kite-engineer.de/images/favicon_dark.ico"],
   },
 };
 

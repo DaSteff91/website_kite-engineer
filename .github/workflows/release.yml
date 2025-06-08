@@ -2,8 +2,7 @@ name: Semantic Versioning
 on:
   push:
     branches:
-      - dev
-      - development
+      - main
 
 jobs:
   versioning:
