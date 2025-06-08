@@ -279,7 +279,7 @@ export default function EngineerPage() {
                   <AccordionContent className="text-white/80">
                     Want to combine feature of software A with software B and
                     generate an output that fits your needs? No worries, its
-                    just a matter of coffee and time to figure it. From
+                    just a matter of coffee and time to figure it out. From
                     customized scripts to containerization to front- and and
                     backend integration of custom projects.
                   </AccordionContent>
@@ -446,7 +446,7 @@ export default function EngineerPage() {
                     You know there are a lot of things going on around you and
                     you can´t always figure out what to filter how to get to
                     know what matters for you and your business. I like reading
-                    technical suff - let me do this. Why shall we not work
+                    technical stuff - let me do this. Why shall we not work
                     together?
                   </AccordionContent>
                 </AccordionItem>
