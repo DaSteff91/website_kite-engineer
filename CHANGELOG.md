@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.0...v1.12.1) (2025-06-08)
+
+
+### Bug Fixes
+
+* adding stuff stored locally on the notebook ([22d0557](https://github.com/DaSteff91/website_kite-engineer/commit/22d0557eecfce781f719e429ff58387c9535ba42))
+
 # [1.12.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.11.0...v1.12.0) (2025-06-02)
 
 
