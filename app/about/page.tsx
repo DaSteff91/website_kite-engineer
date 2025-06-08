@@ -1,5 +1,5 @@
 import Image from "next/image";
-import about_hero_image from "@/public/images/about_hero_image.jpg";
+import about_hero_image from "@/public/images/about_hero_image_3.jpg";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 
 export default function AboutPage() {
@@ -24,7 +24,7 @@ export default function AboutPage() {
             src={about_hero_image}
             alt="About"
             fill
-            className="object-cover object-[center_20%] brightness-50"
+            className="object-cover object-[center_30%] brightness-50"
             priority
             placeholder="blur"
           />
