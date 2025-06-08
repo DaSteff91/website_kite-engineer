@@ -1,3 +1,10 @@
+## [1.12.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.2...v1.12.3) (2025-06-08)
+
+
+### Bug Fixes
+
+* separate stuff for github workfows into main and dev ([04d9886](https://github.com/DaSteff91/website_kite-engineer/commit/04d98865772a75968090a0302355f4ebf99e5b50))
+
 ## [1.12.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.1...v1.12.2) (2025-06-08)
 
 
