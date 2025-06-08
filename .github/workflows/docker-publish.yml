@@ -7,7 +7,8 @@ on:
       - completed
   push:
     branches:
-      - main
+      - dev
+      - development
     paths-ignore:
       - "README.md"
       - "docs/**"
@@ -16,6 +17,7 @@ on:
       - ".env*"
       - "*ignore*"
       - ".github/workflows/**"
+      - ".husky/*"
   pull_request:
     branches:
       - main
@@ -99,11 +101,11 @@ jobs:
           script: |
             echo ${{ secrets.GH_PACKAGE_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker pull ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
-            docker stop www.kite-engineer.de || true
-            docker rm www.kite-engineer.de || true
+            docker stop www-dev.kite-engineer.de || true
+            docker rm www-dev.kite-engineer.de || true
             docker run -d \
-            --name "www.kite-engineer.de" \
-            -p 3000:3000 \
+            --name "www-dev.kite-engineer.de" \
+            -p 3001:3000 \
             --env-file /home/steff_deployment/website_kite-engineer/.env \
             --restart unless-stopped \
             ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}

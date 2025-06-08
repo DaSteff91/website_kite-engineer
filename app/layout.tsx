@@ -35,11 +35,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kite-Engineer",
     description: "The best of two worlds",
-    url: "https://www.kite-engineer.de",
+    url: "https://www-dev.kite-engineer.de",
     siteName: "Kite-Engineer Combining Worlds",
     images: [
       {
-        url: "https://www.kite-engineer.de/images/favicon_dark.ico",
+        url: "https://www-dev.kite-engineer.de/images/favicon_dark.ico",
         width: 800,
         height: 600,
         alt: "Kite-Engineer Logo",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Kite-Engineer",
     description:
       "Combinging worlds by offering kiteboarding related services as well as engineering services",
-    images: ["https://www.kite-engineer.de/images/favicon_dark.ico"],
+    images: ["https://www-dev.kite-engineer.de/images/favicon_dark.ico"],
   },
 };
 
