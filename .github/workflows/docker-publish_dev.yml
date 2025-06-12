@@ -5,7 +5,6 @@ on:
     workflows: ["Semantic Versioning"]
     types:
       - completed
-  push:
     branches:
       - dev
       - development
@@ -73,15 +72,14 @@ jobs:
           images: ghcr.io/dasteff91/ghcr-test
           tags: |
             type=raw,value=${{ steps.get_tag.outputs.tag }}
-            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/dev' }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: ${{ github.event_name != 'pull_request' }}
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
