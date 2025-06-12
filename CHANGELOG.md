@@ -1,3 +1,10 @@
+## [1.12.7](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.6...v1.12.7) (2025-06-12)
+
+
+### Bug Fixes
+
+* removing husky from the "prepare" step ([2d0cde7](https://github.com/DaSteff91/website_kite-engineer/commit/2d0cde7b9144454d9c6b46abf07827e0fd4fca96))
+
 ## [1.12.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.5...v1.12.6) (2025-06-12)
 
 
