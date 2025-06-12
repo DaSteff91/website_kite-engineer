@@ -1,3 +1,10 @@
+## [1.12.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.5...v1.12.6) (2025-06-12)
+
+
+### Bug Fixes
+
+* changes in the workflows ([269049d](https://github.com/DaSteff91/website_kite-engineer/commit/269049d193d01973fcbac51d0725f5a98bdabb8f))
+
 ## [1.12.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.4...v1.12.5) (2025-06-08)
 
 
