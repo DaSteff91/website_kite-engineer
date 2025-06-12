@@ -1,3 +1,10 @@
+## [1.12.9](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.8...v1.12.9) (2025-06-12)
+
+
+### Bug Fixes
+
+* husky bullshit ([2287995](https://github.com/DaSteff91/website_kite-engineer/commit/22879952603c8bda8bf1f48fc0f4393fd4af4f82))
+
 ## [1.12.8](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.7...v1.12.8) (2025-06-12)
 
 
