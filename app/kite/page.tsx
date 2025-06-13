@@ -10,17 +10,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  Projector as ProjectorChart,
   ArrowRight,
   School,
   Plane,
   HandPlatter,
   List,
-  Library,
   LibraryBig,
   CirclePlay,
   ArrowBigUpDash,
-  Anvil,
   MessageSquareText,
 } from "lucide-react";
 
