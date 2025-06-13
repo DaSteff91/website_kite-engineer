@@ -242,12 +242,6 @@ export default function EngineerPage() {
                       <MapIcon className="h-5 w-5" />
                       Process and Equipment Roadmap
                     </div>
-                    {/* <div className="flex items-center">
-                      <MapIcon className="h-5 w-5" />
-                    </div>
-                    <div className="flex items-start gap-2">
-                      Process and Equipment Roadmap
-                    </div> */}
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
                     Your competitors don´t wait for you to catch up. Be prepared

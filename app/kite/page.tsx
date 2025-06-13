@@ -92,7 +92,7 @@ export default function KitePage() {
                   value="school-support"
                   className="border-white/5"
                 >
-                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <School className="h-5 w-5" />
                       School Support
@@ -100,7 +100,7 @@ export default function KitePage() {
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
                     Whether you need a VDWS-certified instructor, shop
-                    assistance, or someone to manage the bar, I’ve got you
+                    assistance, or someone to manage the bar, I've got you
                     covered. Flexibility is my strength.
                   </AccordionContent>
                 </AccordionItem>
@@ -108,7 +108,7 @@ export default function KitePage() {
                   value="travel-service"
                   className="border-white/5"
                 >
-                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <Plane className="h-5 w-5" />
                       Travel Services
@@ -121,7 +121,7 @@ export default function KitePage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="consulting" className="border-white/5">
-                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <MessageSquareText className="h-5 w-5" />
                       Consulting
@@ -145,33 +145,33 @@ export default function KitePage() {
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="theory" className="border-white/5">
-                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <LibraryBig className="h-5 w-5" />
                       Theory
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Why not pulling the bar? Let’s break down the "science"
+                    Why not pulling the bar? Let's break down the "science"
                     behind the sport—from wind dynamics to material technology.
-                    Choose your topic and pace; I’ll make it clear and engaging.
+                    Choose your topic and pace; I'll make it clear and engaging.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="starting" className="border-white/5">
-                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <CirclePlay className="h-5 w-5" />
                       (Re-)Starting
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
-                    Whether you’re beginning a new kite journey or returning
-                    after a break, I’ll help you (re-)gain confidence on the
+                    Whether you're beginning a new kite journey or returning
+                    after a break, I'll help you (re-)gain confidence on the
                     water.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="advanced" className="border-white/5">
-                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg">
+                  <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <ArrowBigUpDash className="h-5 w-5" />
                       Advanced
@@ -179,14 +179,12 @@ export default function KitePage() {
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
                     Ready to push limits? From your first toeside ride to
-                    nailing loops, let’s tackle challenges together. Prefer
+                    nailing loops, let's tackle challenges together. Prefer
                     supervised sessions? No problem!
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
-
-            {/* Technical Consulting Section */}
           </div>
 
           {/* Enhanced Contact Section */}
