@@ -1,3 +1,10 @@
+## [1.12.16](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.15...v1.12.16) (2025-06-13)
+
+
+### Bug Fixes
+
+* why this is not visible? ([f8fd924](https://github.com/DaSteff91/website_kite-engineer/commit/f8fd924fc6f375f0aefa6bddadac32093dd47f6c))
+
 ## [1.12.15](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.14...v1.12.15) (2025-06-13)
 
 
