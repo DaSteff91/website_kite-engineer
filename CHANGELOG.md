@@ -1,3 +1,10 @@
+## [1.12.17](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.16...v1.12.17) (2025-06-13)
+
+
+### Bug Fixes
+
+* deleting workflow from main branch ([3bfee16](https://github.com/DaSteff91/website_kite-engineer/commit/3bfee16acc69db94b5a66293300e317206cc4bb1))
+
 ## [1.12.16](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.15...v1.12.16) (2025-06-13)
 
 
