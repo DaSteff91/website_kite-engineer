@@ -1,13 +1,24 @@
-# The name of the action displayed in GitHub
-name: Build and Push Docker Image
+name: Build, Push to GHCR and Deploy on Server
 
-# What triggers the action?
-# When something gets pushed into the dev branch
 on:
+  workflow_run:
+    workflows: ["Semantic Versioning"]
+    types:
+      - completed
   push:
     branches:
-      - dev
-    # Changes in these files are ignored
+      - main
+    paths-ignore:
+      - "README.md"
+      - "docs/**"
+      - ".next/**"
+      - "node_modules/**"
+      - ".env*"
+      - "*ignore*"
+      - ".github/workflows/**"
+  pull_request:
+    branches:
+      - main
     paths-ignore:
       - "README.md"
       - "docs/**"
@@ -18,83 +29,56 @@ on:
       - ".github/workflows/**"
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout the repository code
         uses: actions/checkout@v4
-
-      - uses: actions/cache@v3
         with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
+          token: ${{ secrets.GH_PACKAGE_TOKEN }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GH_PACKAGE_TOKEN }}
+
+      - name: Get current version tag
+        id: get_tag
+        run: |
+          CURRENT_TAG=$(git tag --points-at HEAD)
+          echo "Current tag: $CURRENT_TAG"
+          echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
+          echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
           driver: docker-container
 
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GH_PACKAGE_TOKEN }}
+          images: ghcr.io/dasteff91/ghcr-test
+          tags: |
+            type=raw,value=${{ steps.get_tag.outputs.tag }}
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
 
-      - name: Build Docker image
-        run: docker build -t ghcr.io/dasteff91/website_kite-engineer:latest .
-
-      - name: Save Docker image
-        run: docker save ghcr.io/dasteff91/website_kite-engineer:latest -o website_kite-engineer.tar
-
-      - name: Upload image artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: website_kite-engineer
-          path: website_kite-engineer.tar
-
-  push:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/cache@v3
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GH_PACKAGE_TOKEN }}
-
-      - name: Download image artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: website_kite-engineer
-
-      - name: Load Docker image
-        run: docker load -i website_kite-engineer.tar
-
-      - name: Push image to ghcr.io
+      - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
-          platforms: linux/amd64
-          tags: ghcr.io/dasteff91/website_kite-engineer:latest
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
@@ -102,7 +86,7 @@ jobs:
 
   deploy:
     name: Deploy to server
-    needs: push
+    needs: build-and-push
     runs-on: ubuntu-latest
     steps:
       - name: SSH and Deploy to Server
@@ -113,8 +97,13 @@ jobs:
           key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            docker pull ghcr.io/dasteff91/website_kite-engineer:latest
-            docker stop www-dev.kite-engineer.de || true
-            docker rm www-dev.kite-engineer.de || true
-            docker run -d --name "www-dev.kite-engineer.de" -p 3001:3000 ghcr.io/dasteff91/website_kite-engineer:latest --restart unless-stopped
+            echo ${{ secrets.GH_PACKAGE_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            docker pull ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
+            docker stop www.kite-engineer.de || true
+            docker rm www.kite-engineer.de || true
+            docker run -d \
+            --name "www.kite-engineer.de" \
+            -p 3000:3000 \
+            --env-file /home/steff_deployment/website_kite-engineer/.env \
+            --restart unless-stopped \
+            ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
