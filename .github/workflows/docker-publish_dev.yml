@@ -3,6 +3,8 @@ name: Build, Push to GHCR and Deploy on Server
 on:
   workflow_run:
     workflows: ["Semantic Versioning"]
+    types:
+      - completed
 
 jobs:
   build-and-push:
