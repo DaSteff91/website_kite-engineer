@@ -1,10 +1,16 @@
 name: Dev - Build, Push to GHCR and Deploy on Server
 
+# on:
+#   workflow_run:
+#     workflows: ["Semantic Versioning"]
+#     types:
+#       - completed
+#     branches:
+#       - dev
+#       - development
+
 on:
-  workflow_run:
-    workflows: ["Semantic Versioning"]
-    types:
-      - completed
+  push:
     branches:
       - dev
       - development
