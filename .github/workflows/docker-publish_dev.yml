@@ -3,32 +3,6 @@ name: Build, Push to GHCR and Deploy on Server
 on:
   workflow_run:
     workflows: ["Semantic Versioning"]
-    types:
-      - completed
-    branches:
-      - dev
-      - development
-    paths-ignore:
-      - "README.md"
-      - "docs/**"
-      - ".next/**"
-      - "node_modules/**"
-      - ".env*"
-      - "*ignore*"
-      - ".github/workflows/**"
-      - ".husky/*"
-  pull_request:
-    branches:
-      - dev
-      - development
-    paths-ignore:
-      - "README.md"
-      - "docs/**"
-      - ".next/**"
-      - "node_modules/**"
-      - ".env*"
-      - "*ignore*"
-      - ".github/workflows/**"
 
 jobs:
   build-and-push:
