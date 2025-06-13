@@ -1,3 +1,10 @@
+## [1.12.10](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.9...v1.12.10) (2025-06-13)
+
+
+### Bug Fixes
+
+* trying to remove husky from dev dependency ([d2d3be1](https://github.com/DaSteff91/website_kite-engineer/commit/d2d3be1972ba665ee14e5f94513745f680f7e9cc))
+
 ## [1.12.9](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.8...v1.12.9) (2025-06-12)
 
 
