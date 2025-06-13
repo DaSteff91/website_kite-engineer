@@ -19,8 +19,7 @@ WORKDIR /app
 # Install dependencies based on the preferred package manager
 
 COPY package.json package-lock.json ./
-RUN npm set-script prepare '' \
-    && npm ci --omit=dev
+RUN HUSKY=0 npm ci --omit=dev
 
 ##### BUILDER
 
@@ -47,9 +46,9 @@ LABEL org.opencontainers.image.source="https://github.com/DaSteff91/website_kite
 
 WORKDIR /app
 
-ENV NODE_ENV=production \
+ENV NODE_ENV=dev \
     NEXT_TELEMETRY_DISABLED=1 \
-    PORT=3000
+    PORT=3001
 
 COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/public ./public
@@ -57,5 +56,5 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
-EXPOSE 3000
+EXPOSE 3001
 CMD ["server.js"]
