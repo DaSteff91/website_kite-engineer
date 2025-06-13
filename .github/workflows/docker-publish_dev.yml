@@ -1,4 +1,4 @@
-name: Build, Push to GHCR and Deploy on Server
+name: Dev - Build, Push to GHCR and Deploy on Server
 
 on:
   workflow_run:
