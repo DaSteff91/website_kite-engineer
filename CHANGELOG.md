@@ -1,3 +1,10 @@
+## [1.12.15](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.14...v1.12.15) (2025-06-13)
+
+
+### Bug Fixes
+
+* adding dockerfile read action ([4023f24](https://github.com/DaSteff91/website_kite-engineer/commit/4023f2423dd1a461343b2ecdea6dd76dc11eb7cc))
+
 ## [1.12.14](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.13...v1.12.14) (2025-06-13)
 
 
