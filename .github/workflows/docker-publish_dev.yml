@@ -60,6 +60,12 @@ jobs:
           echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
           echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
 
+      - name: Verify Dockerfile
+        run: |
+          echo "=== Dockerfile Contents ==="
+          cat Dockerfile
+          echo "=========================="
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
