@@ -1,3 +1,10 @@
+## [1.12.27](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.26...v1.12.27) (2025-06-14)
+
+
+### Bug Fixes
+
+* different token ([a1c0024](https://github.com/DaSteff91/website_kite-engineer/commit/a1c0024c463430b37804ce1f11e6e79be571f4ce))
+
 ## [1.12.26](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.25...v1.12.26) (2025-06-14)
 
 
