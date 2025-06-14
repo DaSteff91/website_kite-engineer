@@ -3,6 +3,7 @@ name: Dev - Build, Push to GHCR and Deploy on Server
 on:
   workflow_run:
     workflows: ["Semantic Versioning"]
+    branches: [dev, development]
     types:
       - completed
 
