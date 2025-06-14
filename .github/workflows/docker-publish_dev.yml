@@ -4,8 +4,7 @@ on:
   workflow_run:
     workflows: ["Semantic Versioning"]
     branches: [dev, development]
-    types:
-      - completed
+    types: [completed]
 
 # on:
 #   push:
@@ -24,7 +23,7 @@ jobs:
       - name: Checkout the repository code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_PACKAGE_TOKEN }}
+          token: ${{ secrets.SEMVERSIONING }}
           persist-credentials: false
           fetch-depth: 0
 
@@ -33,7 +32,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GH_PACKAGE_TOKEN }}
+          password: ${{ secrets.SEMVERSIONING }}
 
       - name: Get current version tag
         id: get_tag
@@ -87,7 +86,7 @@ jobs:
           key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            echo ${{ secrets.GH_PACKAGE_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            echo ${{ secrets.SEMVERSIONING }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker pull ghcr.io/dasteff91/website_kite-engineer:${{ github.ref_name }}
             docker stop www-dev.kite-engineer.de || true
             docker rm www-dev.kite-engineer.de || true
