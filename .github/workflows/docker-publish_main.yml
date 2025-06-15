@@ -28,7 +28,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
-      - name: Get current version tag # commented out to test the version below in order to get some more tags like branch and latest (only on main)
+      - name: Get current version tag 
         id: get_tag
         run: |
           CURRENT_TAG=$(git tag --points-at HEAD)
