@@ -15,6 +15,16 @@ export function ContactForm() {
     subject: "",
     message: "",
   });
+  const [prefilledFields, setPrefilledFields] = useState({
+    subject: false,
+    message: false,
+  });
+  const [touchedFields, setTouchedFields] = useState({
+    name: false,
+    email: false,
+    subject: false,
+    message: false,
+  });
 
   useEffect(() => {
     // Get URL parameters for prefilling
@@ -28,6 +38,12 @@ export function ContactForm() {
         subject: subject ? decodeURIComponent(subject) : prev.subject,
         message: message ? decodeURIComponent(message) : prev.message,
       }));
+      
+      // Mark fields as prefilled
+      setPrefilledFields({
+        subject: !!subject,
+        message: !!message,
+      });
     }
   }, []);
 
@@ -37,6 +53,23 @@ export function ContactForm() {
       ...prev,
       [name]: value
     }));
+  };
+
+  const handleFocus = (fieldName: string) => {
+    setTouchedFields(prev => ({
+      ...prev,
+      [fieldName]: true
+    }));
+  };
+
+  const getFieldClassName = (fieldName: keyof typeof prefilledFields, baseClassName: string) => {
+    const isPrefilled = prefilledFields[fieldName];
+    const isTouched = touchedFields[fieldName];
+    
+    if (isPrefilled && !isTouched) {
+      return `${baseClassName} text-blue-400 bg-blue-50/10 border-blue-400/50 italic placeholder:text-blue-300`;
+    }
+    return baseClassName;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -61,6 +94,16 @@ export function ContactForm() {
           subject: "",
           message: "",
         });
+        setPrefilledFields({
+          subject: false,
+          message: false,
+        });
+        setTouchedFields({
+          name: false,
+          email: false,
+          subject: false,
+          message: false,
+        });
       } else {
         const result = await response.json();
         alert(result.message || "An error occurred.");
@@ -81,6 +124,7 @@ export function ContactForm() {
           placeholder="Your name*"
           value={formData.name}
           onChange={handleInputChange}
+          onFocus={() => handleFocus('name')}
           required
           className="bg-background/50"
         />
@@ -93,6 +137,7 @@ export function ContactForm() {
           placeholder="Your email*"
           value={formData.email}
           onChange={handleInputChange}
+          onFocus={() => handleFocus('email')}
           required
           className="bg-background/50"
         />
@@ -104,9 +149,15 @@ export function ContactForm() {
           placeholder="Subject*"
           value={formData.subject}
           onChange={handleInputChange}
+          onFocus={() => handleFocus('subject')}
           required
-          className="bg-background/50"
+          className={getFieldClassName('subject', "bg-background/50")}
         />
+        {prefilledFields.subject && !touchedFields.subject && (
+          <p className="text-xs text-blue-400 italic">
+            ✨ This field has been prefilled based on your selection
+          </p>
+        )}
       </div>
 
       <div className="space-y-2">
@@ -115,9 +166,15 @@ export function ContactForm() {
           placeholder="Your message*"
           value={formData.message}
           onChange={handleInputChange}
+          onFocus={() => handleFocus('message')}
           required
-          className="bg-background/50 min-h-[150px]"
+          className={getFieldClassName('message', "bg-background/50 min-h-[150px]")}
         />
+        {prefilledFields.message && !touchedFields.message && (
+          <p className="text-xs text-blue-400 italic">
+            ✨ This field has been prefilled based on your selection
+          </p>
+        )}
       </div>
 
       <Button type="submit" className="w-full group" disabled={isSubmitting}>
