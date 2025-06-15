@@ -1,3 +1,10 @@
+## [1.12.30](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.29...v1.12.30) (2025-06-15)
+
+
+### Bug Fixes
+
+* change location of nodemailer in package.json ([a757672](https://github.com/DaSteff91/website_kite-engineer/commit/a7576726ff3d3a1192c5e5901fb24f618715b21b))
+
 ## [1.12.29](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.28...v1.12.29) (2025-06-15)
 
 
