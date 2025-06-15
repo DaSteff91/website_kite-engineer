@@ -67,7 +67,7 @@ export function ContactForm() {
     const isTouched = touchedFields[fieldName];
     
     if (isPrefilled && !isTouched) {
-      return `${baseClassName} text-blue-400 bg-blue-50/10 border-blue-400/50 italic placeholder:text-blue-300`;
+      return `${baseClassName} text-muted-foreground italic`;
     }
     return baseClassName;
   };
@@ -153,11 +153,6 @@ export function ContactForm() {
           required
           className={getFieldClassName('subject', "bg-background/50")}
         />
-        {prefilledFields.subject && !touchedFields.subject && (
-          <p className="text-xs text-blue-400 italic">
-            ✨ This field has been prefilled based on your selection
-          </p>
-        )}
       </div>
 
       <div className="space-y-2">
@@ -170,11 +165,6 @@ export function ContactForm() {
           required
           className={getFieldClassName('message', "bg-background/50 min-h-[150px]")}
         />
-        {prefilledFields.message && !touchedFields.message && (
-          <p className="text-xs text-blue-400 italic">
-            ✨ This field has been prefilled based on your selection
-          </p>
-        )}
       </div>
 
       <Button type="submit" className="w-full group" disabled={isSubmitting}>
