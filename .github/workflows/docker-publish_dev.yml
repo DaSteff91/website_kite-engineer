@@ -28,13 +28,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
-      # - name: Get current version tag # commented out to test the version below in order to get some more tags like branch and latest (only on main)
-      #   id: get_tag
-      #   run: |
-      #     CURRENT_TAG=$(git tag --points-at HEAD)
-      #     echo "Current tag: $CURRENT_TAG"
-      #     echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
-      #     echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
+      - name: Get current version tag # commented out to test the version below in order to get some more tags like branch and latest (only on main)
+        id: get_tag
+        run: |
+          CURRENT_TAG=$(git tag --points-at HEAD)
+          echo "Current tag: $CURRENT_TAG"
+          echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
+          echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
 
       
 
