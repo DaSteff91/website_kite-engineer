@@ -77,16 +77,16 @@ export default function KitePage() {
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 auto-rows-fr justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-start justify-items-center">
             {/* Freelancer Section */}
-            <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
+            <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl h-fit">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
                 <HandPlatter className="h-7 w-7 text-blue-400" />
                 Freelancer
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem
-                  value="school-support"
+                  value="school-support-1"
                   className="border-white/5"
                 >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
@@ -102,7 +102,7 @@ export default function KitePage() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem
-                  value="travel-service"
+                  value="travel-service-1"
                   className="border-white/5"
                 >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
@@ -117,7 +117,7 @@ export default function KitePage() {
                     well served
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="consulting" className="border-white/5">
+                <AccordionItem value="consulting-1" className="border-white/5">
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <MessageSquareText className="h-5 w-5" />
@@ -135,13 +135,13 @@ export default function KitePage() {
             </div>
 
             {/* Courses Section */}
-            <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
+            <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl h-fit">
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
                 <List className="h-7 w-7 text-cyan-400" />
                 Courses
               </h3>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="theory" className="border-white/5">
+                <AccordionItem value="theory-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <LibraryBig className="h-5 w-5" />
@@ -154,7 +154,7 @@ export default function KitePage() {
                     Choose your topic and pace; I'll make it clear and engaging.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="starting" className="border-white/5">
+                <AccordionItem value="starting-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <CirclePlay className="h-5 w-5" />
@@ -167,7 +167,7 @@ export default function KitePage() {
                     water.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="advanced" className="border-white/5">
+                <AccordionItem value="advanced-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
                     <div className="flex items-center gap-2">
                       <ArrowBigUpDash className="h-5 w-5" />
