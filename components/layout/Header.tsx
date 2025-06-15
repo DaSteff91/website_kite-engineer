@@ -64,6 +64,11 @@ export function Header() {
     };
   }, [isMobileMenuOpen]);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
   if (pathname === "/") return null;
 
   if (!mounted) {
@@ -95,7 +100,7 @@ export function Header() {
           <div className="container px-4 md:px-6 h-16 flex items-center justify-between">
             <Link
               href="/"
-              className="h-[85%] w-auto min-w-[120px] relative flex items-center aspect-auto
+              className="h-[85%] w-auto min-w-[100px] sm:min-w-[120px] relative flex items-center aspect-auto
               transition-transform hover:scale-105 active:scale-95 duration-200"
             >
               <Image
@@ -104,17 +109,17 @@ export function Header() {
                 width={120}
                 height={56}
                 priority
-                className="object-contain object-left"
+                className="object-contain object-left w-auto h-full"
               />
             </Link>
 
-            <div className="hidden md:flex items-center gap-6 h-full">
+            <div className="hidden md:flex items-center gap-4 lg:gap-6 h-full">
               {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "h-full flex items-center px-3 text-[1.2rem] font-medium",
+                    "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium",
                     "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
                     "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
                     pathname === item.href
@@ -163,13 +168,13 @@ export function Header() {
               ref={menuButtonRef}
               variant="ghost"
               size="icon"
-              className="md:hidden hover:scale-105 transition-transform"
+              className="md:hidden hover:scale-105 transition-transform p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="h-6 w-6" />
               ) : (
-                <Menu className="h-5 w-5" />
+                <Menu className="h-6 w-6" />
               )}
               <span className="sr-only">Toggle menu</span>
             </Button>
@@ -193,9 +198,10 @@ export function Header() {
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "px-4 py-2 text-[1.2rem] font-medium rounded-md",
+                    "px-4 py-3 text-lg font-medium rounded-md",
                     "transition-all duration-200 hover:scale-105",
                     "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                    "text-center", // Center text on mobile
                     pathname === item.href
                       ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
                       : "text-white/90"

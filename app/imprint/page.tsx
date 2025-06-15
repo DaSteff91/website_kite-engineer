@@ -18,41 +18,41 @@ export default function Imprint() {
         />
       </div>
 
-      <div className="max-w-6xl mx-auto p-2 py-36">
-        <h1 className="text-3xl font-bold mb-6">Impressum</h1>
+      <div className="max-w-4xl mx-auto p-4 sm:p-6 py-24 sm:py-36">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-6">Impressum</h1>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">Angaben gemäß § 5 TMG</h2>
-          <p className="mb-1">Kite-Engineer by Stefan Merthan</p>
-          <p className="mb-1">Stefan Merthan</p>
-          <p className="mb-1">Hauptstraße 6</p>
-          <p className="mb-1">84107 Weihmichl</p>
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">Angaben gemäß § 5 TMG</h2>
+          <p className="mb-1 text-sm sm:text-base">Kite-Engineer by Stefan Merthan</p>
+          <p className="mb-1 text-sm sm:text-base">Stefan Merthan</p>
+          <p className="mb-1 text-sm sm:text-base">Hauptstraße 6</p>
+          <p className="mb-1 text-sm sm:text-base">84107 Weihmichl</p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">Kontakt</h2>
-          <p className="mb-1">E-Mail: stefan@kite-engineer.de</p>
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">Kontakt</h2>
+          <p className="mb-1 text-sm sm:text-base break-all">E-Mail: stefan@kite-engineer.de</p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">Umsatzsteuer-ID</h2>
-          <p className="mb-1">
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">Umsatzsteuer-ID</h2>
+          <p className="mb-1 text-sm sm:text-base">
             Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
           </p>
-          <p>DE452689906</p>
+          <p className="text-sm sm:text-base">DE452689906</p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">
             Instrumente für die Streitbeilegung
           </h2>
-          <p className="mb-1">
+          <p className="mb-1 text-sm sm:text-base leading-relaxed">
             Verbraucher haben die Möglichkeit, sich über die Instrumente für die
             Streitbeilegung auf der Streitbeilegungsplattform der Europäischen
             Kommission unter:{" "}
             <Link
               href="https://ec.europa.eu/consumers/odr/main/?event=main.consumer.rights#inline-nav-2"
-              className="text-blue-500 underline"
+              className="text-blue-500 underline break-all hover:text-blue-400 transition-colors"
             >
               https://ec.europa.eu/consumers/odr/main/?event=main.consumer.rights#inline-nav-2
             </Link>{" "}

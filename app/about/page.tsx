@@ -18,7 +18,7 @@ export default function AboutPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center">
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
             src={about_hero_image}
@@ -31,7 +31,7 @@ export default function AboutPage() {
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1
-            className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+            className="pb-1 text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 
    bg-gradient-to-r from-white via-gray-200 to-gray-300 
    bg-clip-text text-transparent 
    [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
@@ -42,30 +42,29 @@ export default function AboutPage() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
-          <div className="relative mb-20">
+          <div className="relative mb-16 sm:mb-20">
             <h2
-              className="text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
+              className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               The story and motivation behind
             </h2>
-            <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               "It´s about doing, not waiting for things to happen by themselves"
             </p>
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
+            <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr justify-items-center"></div>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
                 Professional Part
               </h3>
-              <ul className="text-muted-foreground list-disc list-outside pl-5 space-y-4">
+              <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
                 <li>
                   Launching my freelancer career as Kite-Engineer to combine my
                   worlds into one, 2025
@@ -93,11 +92,11 @@ export default function AboutPage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
+            <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
                 Personal Part
               </h3>
-              <ul className="text-muted-foreground list-disc list-outside pl-5 space-y-4">
+              <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
                 <li>"Be the change in the world you want to see"</li>
                 <li>Self-study was always more satisfying then school</li>
                 <li>Yes, even I´ve once played football. Until I was 14</li>

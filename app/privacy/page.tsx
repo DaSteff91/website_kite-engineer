@@ -17,39 +17,39 @@ export default function Privacy() {
           placeholder="blur"
         />
       </div>
-      <div className="max-w-6xl mx-auto p-2 py-36">
-        <h1 className="text-3xl font-bold mb-6">Datenschutzbestimmung</h1>
+      <div className="max-w-4xl mx-auto p-4 sm:p-6 py-24 sm:py-36">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-6">Datenschutzbestimmung</h1>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">
             Kontaktdaten des Verantwortlichen
           </h2>
-          <p className="mb-1">Kite-Engineer by Stefan Merthan</p>
-          <p className="mb-1">Stefan Merthan</p>
-          <p className="mb-1">Hauptstraße 6</p>
-          <p className="mb-1">84107 Weihmichl</p>
-          <p className="mb-1">stefan@kite-engineer.de</p>
+          <p className="mb-1 text-sm sm:text-base">Kite-Engineer by Stefan Merthan</p>
+          <p className="mb-1 text-sm sm:text-base">Stefan Merthan</p>
+          <p className="mb-1 text-sm sm:text-base">Hauptstraße 6</p>
+          <p className="mb-1 text-sm sm:text-base">84107 Weihmichl</p>
+          <p className="mb-1 text-sm sm:text-base break-all">stefan@kite-engineer.de</p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">Cookies</h2>
-          <p className="mb-1">Diese Website verwendet generell keine Cookies</p>
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">Cookies</h2>
+          <p className="mb-1 text-sm sm:text-base">Diese Website verwendet generell keine Cookies</p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">Zugriffsprotokolle</h2>
-          <p className="mb-1">
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">Zugriffsprotokolle</h2>
+          <p className="mb-1 text-sm sm:text-base leading-relaxed">
             Wenn Sie diese Website besuchen werden keine nutzerbezogenen Daten
             oder Zugriffsprotokolle erstellt, die mit der Nutzung in Verbindung
             stehen.
           </p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">
             Datenschutzhinweise für Kontaktformulare
           </h2>
-          <p className="mb-1">
+          <p className="mb-1 text-sm sm:text-base leading-relaxed">
             Das auf der Website verwendete Kontaktformular erzeugt eine E-Mail,
             die an mich versandt und als solche im Folgenden auch weiter
             behandelt wird. Somit findet die Erhebung und Speicherung Ihrer
@@ -62,11 +62,11 @@ export default function Privacy() {
           </p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">
             Datenschutzhinweise für Kommunikation per E-Mail
           </h2>
-          <p className="mb-1">
+          <p className="mb-1 text-sm sm:text-base leading-relaxed">
             Die auf der Website bereitgestelle E-Mail-Adresse dient zur
             Kontaktaufnahme mit mir. Somit findet hier eine Erhebung und
             Speicherung Ihrer E-Mail-Adresse und der versendeten Nachricht (und
@@ -76,13 +76,13 @@ export default function Privacy() {
           </p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">Betroffenenrechte</h2>
-          <p className="mb-1">
+        <section className="mb-6 sm:mb-8">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">Betroffenenrechte</h2>
+          <p className="mb-1 text-sm sm:text-base leading-relaxed">
             Ihre Rechte finden Sie unter:{" "}
             <Link
               href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
-              className="text-blue-500 underline"
+              className="text-blue-500 underline break-all hover:text-blue-400 transition-colors"
             >
               https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679
             </Link>{" "}

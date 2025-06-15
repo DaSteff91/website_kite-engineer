@@ -19,7 +19,7 @@ export default function ContactPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center">
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
             src={contact_hero_image}
@@ -30,22 +30,9 @@ export default function ContactPage() {
             placeholder="blur"
           />
         </div>
-        {/* <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1
-            className="pb-1 text-4xl md:text-5xl font-bold mb-6 
-   bg-gradient-to-r from-white via-gray-200 to-gray-300 
-   bg-clip-text text-transparent 
-   [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
-          >
-            Let´s Connect
-          </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Whether it's about kiteboarding, engineering, or anything in between
-          </p>
-        </div> */}
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1
-            className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+            className="pb-1 text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 
    bg-gradient-to-r from-white via-gray-200 to-gray-300 
    bg-clip-text text-transparent 
    [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
@@ -56,21 +43,21 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
-          <div className="relative mb-20">
+          <div className="relative mb-16 sm:mb-20">
             <h2
-              className="text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
+              className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               Let´s Connect
             </h2>
-            <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Whether it's about kiteboarding, engineering, or anything in
               between
             </p>
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
+            <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
         </div>
         <div className="container px-4 sm:px-6 mx-auto">

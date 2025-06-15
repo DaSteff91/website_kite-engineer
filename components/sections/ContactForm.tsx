@@ -117,72 +117,78 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="space-y-2">
-        <Input
-          name="name"
-          placeholder="Your name*"
-          value={formData.name}
-          onChange={handleInputChange}
-          onFocus={() => handleFocus('name')}
-          required
-          className="bg-background/50"
-        />
-      </div>
+    <div className="w-full max-w-2xl mx-auto">
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+        <div className="space-y-2">
+          <Input
+            name="name"
+            placeholder="Your name*"
+            value={formData.name}
+            onChange={handleInputChange}
+            onFocus={() => handleFocus('name')}
+            required
+            className="bg-background/50 h-12 text-base"
+          />
+        </div>
 
-      <div className="space-y-2">
-        <Input
-          type="email"
-          name="email"
-          placeholder="Your email*"
-          value={formData.email}
-          onChange={handleInputChange}
-          onFocus={() => handleFocus('email')}
-          required
-          className="bg-background/50"
-        />
-      </div>
+        <div className="space-y-2">
+          <Input
+            type="email"
+            name="email"
+            placeholder="Your email*"
+            value={formData.email}
+            onChange={handleInputChange}
+            onFocus={() => handleFocus('email')}
+            required
+            className="bg-background/50 h-12 text-base"
+          />
+        </div>
 
-      <div className="space-y-2">
-        <Input
-          name="subject"
-          placeholder="Subject*"
-          value={formData.subject}
-          onChange={handleInputChange}
-          onFocus={() => handleFocus('subject')}
-          required
-          className={getFieldClassName('subject', "bg-background/50")}
-        />
-      </div>
+        <div className="space-y-2">
+          <Input
+            name="subject"
+            placeholder="Subject*"
+            value={formData.subject}
+            onChange={handleInputChange}
+            onFocus={() => handleFocus('subject')}
+            required
+            className={getFieldClassName('subject', "bg-background/50 h-12 text-base")}
+          />
+        </div>
 
-      <div className="space-y-2">
-        <Textarea
-          name="message"
-          placeholder="Your message*"
-          value={formData.message}
-          onChange={handleInputChange}
-          onFocus={() => handleFocus('message')}
-          required
-          className={getFieldClassName('message', "bg-background/50 min-h-[150px]")}
-        />
-      </div>
+        <div className="space-y-2">
+          <Textarea
+            name="message"
+            placeholder="Your message*"
+            value={formData.message}
+            onChange={handleInputChange}
+            onFocus={() => handleFocus('message')}
+            required
+            className={getFieldClassName('message', "bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none")}
+          />
+        </div>
 
-      <Button type="submit" className="w-full group" disabled={isSubmitting}>
-        <span className="flex items-center justify-center">
-          {isSubmitting ? (
-            "Sending..."
-          ) : (
-            <>
-              Send Message
-              <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </>
-          )}
-        </span>
-      </Button>
-      {successMessage && (
-        <p className="text-green-600 text-center mt-4">{successMessage}</p>
-      )}
-      <p className="text-muted-foreground text-sm">* Mandatory fields</p>
-    </form>
+        <Button 
+          type="submit" 
+          className="w-full group h-12 text-base font-medium" 
+          disabled={isSubmitting}
+        >
+          <span className="flex items-center justify-center">
+            {isSubmitting ? (
+              "Sending..."
+            ) : (
+              <>
+                Send Message
+                <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </>
+            )}
+          </span>
+        </Button>
+        {successMessage && (
+          <p className="text-green-600 text-center mt-4 text-base">{successMessage}</p>
+        )}
+        <p className="text-muted-foreground text-sm text-center">* Mandatory fields</p>
+      </form>
+    </div>
   );
 }

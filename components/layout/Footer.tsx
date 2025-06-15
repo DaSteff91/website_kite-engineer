@@ -20,15 +20,18 @@ export function Footer() {
   return (
     <footer className="border-t">
       <div className="container mx-auto px-4 md:px-6 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-3 text-center sm:text-left">
             <h3 className="text-lg font-semibold">Contact</h3>
             {/* <address className="not-italic text-sm text-muted-foreground">
               123 Main Street
               <br />
               City, Country 12345
               <br /> */}
-            <a href="stefan@kite-engineer.de" className="hover:text-primary">
+            <a 
+              href="mailto:stefan@kite-engineer.de" 
+              className="hover:text-primary text-sm block break-all"
+            >
               stefan@kite-engineer.de
             </a>
             <br />
@@ -37,13 +40,13 @@ export function Footer() {
             </a> */}
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 text-center sm:text-left">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/kite"
-                  className="text-muted-foreground hover:text-primary"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Kite
                 </Link>
@@ -51,7 +54,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/engineer"
-                  className="text-muted-foreground hover:text-primary"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Engineer
                 </Link>
@@ -59,7 +62,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-muted-foreground hover:text-primary"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   About
                 </Link>
@@ -67,7 +70,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-muted-foreground hover:text-primary"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Contact
                 </Link>
@@ -75,13 +78,13 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 text-center sm:text-left">
             <h3 className="text-lg font-semibold">Legal/ Rechtliches</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/privacy"
-                  className="text-muted-foreground hover:text-primary"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Privacy Policy/ Datenschutz
                 </Link>
@@ -89,7 +92,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/imprint"
-                  className="text-muted-foreground hover:text-primary"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Imprint/ Impressum
                 </Link>
@@ -97,7 +100,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 text-center sm:text-left">
             {/* <h3 className="text-lg font-semibold">Follow Me</h3> */}
             {/* <div className="flex gap-4">
               {SOCIAL_LINKS.map((social) => (
@@ -117,7 +120,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>
+          <p className="break-words">
             © {currentYear} Kite-Engineer by Stefan Merthan. All rights
             reserved.
           </p>
