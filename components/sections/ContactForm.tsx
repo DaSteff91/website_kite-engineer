@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,21 +9,40 @@ import { Textarea } from "@/components/ui/textarea";
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  useEffect(() => {
+    // Get URL parameters for prefilling
+    const urlParams = new URLSearchParams(window.location.search);
+    const subject = urlParams.get('subject');
+    const message = urlParams.get('message');
+    
+    if (subject || message) {
+      setFormData(prev => ({
+        ...prev,
+        subject: subject ? decodeURIComponent(subject) : prev.subject,
+        message: message ? decodeURIComponent(message) : prev.message,
+      }));
+    }
+  }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSuccessMessage("");
-
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
-    };
 
     try {
       const response = await fetch("/api/contact", {
@@ -31,12 +50,17 @@ export function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         setSuccessMessage("Thank you for contacting us!");
-        form.reset();
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
       } else {
         const result = await response.json();
         alert(result.message || "An error occurred.");
@@ -55,6 +79,8 @@ export function ContactForm() {
         <Input
           name="name"
           placeholder="Your name*"
+          value={formData.name}
+          onChange={handleInputChange}
           required
           className="bg-background/50"
         />
@@ -65,6 +91,8 @@ export function ContactForm() {
           type="email"
           name="email"
           placeholder="Your email*"
+          value={formData.email}
+          onChange={handleInputChange}
           required
           className="bg-background/50"
         />
@@ -74,6 +102,8 @@ export function ContactForm() {
         <Input
           name="subject"
           placeholder="Subject*"
+          value={formData.subject}
+          onChange={handleInputChange}
           required
           className="bg-background/50"
         />
@@ -83,6 +113,8 @@ export function ContactForm() {
         <Textarea
           name="message"
           placeholder="Your message*"
+          value={formData.message}
+          onChange={handleInputChange}
           required
           className="bg-background/50 min-h-[150px]"
         />
