@@ -1,3 +1,11 @@
+## [1.12.29](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.28...v1.12.29) (2025-06-15)
+
+
+### Bug Fixes
+
+* preparing for working with more .env variables ([68cc8a6](https://github.com/DaSteff91/website_kite-engineer/commit/68cc8a6fbfef35fe3477b5d59911840a89ef7629))
+* testing ([417017c](https://github.com/DaSteff91/website_kite-engineer/commit/417017c1ce09356e16960f9456dc8b5d412d295c))
+
 ## [1.12.28](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.27...v1.12.28) (2025-06-14)
 
 
