@@ -1,3 +1,10 @@
+## [1.12.31](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.30...v1.12.31) (2025-06-16)
+
+
+### Bug Fixes
+
+* adding new content to the prefilled contact pages ([1ac626c](https://github.com/DaSteff91/website_kite-engineer/commit/1ac626cc0135f7e85167a8e4a84b97c5ac3e11e5))
+
 ## [1.12.30](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.29...v1.12.30) (2025-06-15)
 
 
