@@ -4,13 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sun, Moon, Globe } from "lucide-react";
+import { Menu, X, Sun, Moon, Globe, ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -23,7 +24,20 @@ import { cn } from "@/lib/utils";
 ];*/
 
 const NAV_ITEMS = [
-  { href: "/kite", label: "Kite" },
+  { 
+    href: "/kite", 
+    label: "Kite",
+    hasDropdown: true,
+    dropdownItems: [
+      { href: "/kite", label: "All Kite Services" },
+      { href: "/kite/school-support", label: "School Support" },
+      { href: "/kite/travel-services", label: "Travel Services" },
+      { href: "/kite/consulting", label: "Consulting" },
+      { href: "/kite/theory", label: "Theory Courses" },
+      { href: "/kite/starting", label: "(Re-)Starting" },
+      { href: "/kite/advanced", label: "Advanced Courses" },
+    ]
+  },
   { href: "/engineer", label: "Engineer" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -115,20 +129,64 @@ export function Header() {
 
             <div className="hidden md:flex items-center gap-4 lg:gap-6 h-full">
               {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium",
-                    "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
-                    "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
-                    pathname === item.href
-                      ? "text-white border-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
-                      : "text-white/90"
+                <div key={item.href} className="h-full flex items-center">
+                  {item.hasDropdown ? (
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <button
+                          className={cn(
+                            "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium gap-1",
+                            "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
+                            "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                            pathname.startsWith(item.href)
+                              ? "text-white border-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                              : "text-white/90"
+                          )}
+                        >
+                          {item.label}
+                          <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                        </button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent 
+                        align="center" 
+                        className="w-56 bg-background/95 backdrop-blur-md border border-white/20"
+                      >
+                        {item.dropdownItems?.map((dropdownItem, index) => (
+                          <div key={dropdownItem.href}>
+                            <DropdownMenuItem asChild>
+                              <Link
+                                href={dropdownItem.href}
+                                className={cn(
+                                  "w-full cursor-pointer transition-colors",
+                                  pathname === dropdownItem.href
+                                    ? "bg-white/10 text-white font-medium"
+                                    : "text-white/90 hover:text-white hover:bg-white/5"
+                                )}
+                              >
+                                {dropdownItem.label}
+                              </Link>
+                            </DropdownMenuItem>
+                            {index === 0 && <DropdownMenuSeparator className="bg-white/20" />}
+                          </div>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium",
+                        "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
+                        "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                        pathname === item.href
+                          ? "text-white border-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                          : "text-white/90"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
                   )}
-                >
-                  {item.label}
-                </Link>
+                </div>
               ))}
 
               {/* Commented out for later implementation
@@ -193,22 +251,62 @@ export function Header() {
           <div className="rounded-lg border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/95 backdrop-blur-md p-4">
             <nav className="flex flex-col gap-2">
               {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-                    "px-4 py-3 text-lg font-medium rounded-md",
-                    "transition-all duration-200 hover:scale-105",
-                    "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
-                    "text-center", // Center text on mobile
-                    pathname === item.href
-                      ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
-                      : "text-white/90"
+                <div key={item.href}>
+                  {item.hasDropdown ? (
+                    <div className="space-y-2">
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={cn(
+                          "block px-4 py-3 text-lg font-medium rounded-md",
+                          "transition-all duration-200 hover:scale-105",
+                          "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                          "text-center border-b border-white/10 mb-2",
+                          pathname.startsWith(item.href)
+                            ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                            : "text-white/90"
+                        )}
+                      >
+                        {item.label} - All Services
+                      </Link>
+                      <div className="pl-4 space-y-1">
+                        {item.dropdownItems?.slice(1).map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.href}
+                            href={dropdownItem.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={cn(
+                              "block px-3 py-2 text-base rounded-md",
+                              "transition-all duration-200",
+                              "hover:text-white hover:bg-white/5",
+                              pathname === dropdownItem.href
+                                ? "text-white bg-white/10 font-medium"
+                                : "text-white/80"
+                            )}
+                          >
+                            {dropdownItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={cn(
+                        "px-4 py-3 text-lg font-medium rounded-md",
+                        "transition-all duration-200 hover:scale-105",
+                        "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                        "text-center block",
+                        pathname === item.href
+                          ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                          : "text-white/90"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
                   )}
-                >
-                  {item.label}
-                </Link>
+                </div>
               ))}
               
               {/* Commented out for later implementation
