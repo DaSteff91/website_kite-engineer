@@ -171,7 +171,7 @@ export function Header() {
                                 href={dropdownItem.href}
                                 className={cn(
                                   "w-full cursor-pointer transition-colors px-2 py-3 text-base font-medium rounded-sm block",
-                                  "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                  "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
                                   pathname === dropdownItem.href
                                     ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                                     : "text-white/90"
