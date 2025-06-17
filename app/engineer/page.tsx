@@ -137,13 +137,13 @@ export default function EngineerPage() {
                         href="/engineer/process-engineering"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Learn more about Process Engineering services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Process Control Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Process Control. I am particularly interested in APC, SPC, and WER implementation.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current process control challenges and requirements here]%0A%0ABest regards"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Contact us about Process Control
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -167,13 +167,13 @@ export default function EngineerPage() {
                         href="/engineer/process-engineering"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Learn more about Process Engineering services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Process Optimization Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Process Optimization. I am interested in 6 sigma and lean techniques for achieving optimal process outcomes.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current process optimization challenges and goals here]%0A%0ABest regards"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Contact us about Process Optimization
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -197,13 +197,13 @@ export default function EngineerPage() {
                         href="/engineer/process-engineering"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Learn more about Process Engineering services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Change Management Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Change Management. I need assistance with milestone preparation, release gates, documentation and traceability.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current change management challenges and project requirements here]%0A%0ABest regards"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Contact us about Change Management
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -225,13 +225,13 @@ export default function EngineerPage() {
                         href="/engineer/process-engineering"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Learn more about Process Engineering services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Monitoring Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Monitoring. I need assistance with defining monitoring parameters and setting up appropriate monitoring solutions.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current monitoring challenges and production volume requirements here]%0A%0ABest regards"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Contact us about Monitoring
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -263,13 +263,13 @@ export default function EngineerPage() {
                         href="/engineer/process-development"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
-                        → Learn more about Process Development services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Creative Process Development Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Creative Process Development. I am interested in innovative approaches beyond traditional brainstorming.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current creative challenges and development goals here]%0A%0ABest regards"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
-                        → Contact us about Creative Development
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -295,13 +295,13 @@ export default function EngineerPage() {
                         href="/engineer/process-development"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
-                        → Learn more about Process Development services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Process Design Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Process Design. I need assistance breaking through development cycle boundaries and creating effective process visualizations.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current process design challenges and development boundaries here]%0A%0ABest regards"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
-                        → Contact us about Process Design
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -327,13 +327,13 @@ export default function EngineerPage() {
                         href="/engineer/process-development"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
-                        → Learn more about Process Development services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Simulation and Prototyping Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Simulation and Prototyping. I am interested in analogy models, simulations, and 3D prototyping solutions.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current simulation and prototyping needs here]%0A%0ABest regards"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
-                        → Contact us about Simulation & Prototyping
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -359,13 +359,13 @@ export default function EngineerPage() {
                         href="/engineer/process-development"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
-                        → Learn more about Process Development services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Process and Equipment Roadmap Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Process and Equipment Roadmapping. I need assistance preparing for future technology challenges and staying competitive.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current technology roadmap challenges and future planning needs here]%0A%0ABest regards"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
-                        → Contact us about Roadmapping
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -402,13 +402,13 @@ export default function EngineerPage() {
                         href="/engineer/software-development"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
-                        → Learn more about Software Development services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Customized Software Solutions&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Customized Software Solutions. I need assistance combining different software features and creating tailored solutions.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current software integration challenges and custom development needs here]%0A%0ABest regards"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
-                        → Contact us about Custom Solutions
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -432,13 +432,13 @@ export default function EngineerPage() {
                         href="/engineer/software-development"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
-                        → Learn more about Software Development services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Database Management Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Relational Database Management. I need assistance transitioning from file-based storage to a proper RDBMS or improving my existing database.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current data storage challenges and database requirements here]%0A%0ABest regards"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
-                        → Contact us about Database Management
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -464,13 +464,13 @@ export default function EngineerPage() {
                         href="/engineer/software-development"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
-                        → Learn more about Software Development services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Workflow Automation Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Workflow Automation. I need assistance automating repetitive tasks and optimizing my current workflows.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current repetitive tasks and automation needs here]%0A%0ABest regards"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
-                        → Contact us about Workflow Automation
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -496,13 +496,13 @@ export default function EngineerPage() {
                         href="/engineer/software-development"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
-                        → Learn more about Software Development services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Web Development Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Web Development. I need assistance with server setup, domain management, or website development.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current web development needs and technical requirements here]%0A%0ABest regards"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
-                        → Contact us about Web Development
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -535,13 +535,13 @@ export default function EngineerPage() {
                         href="/engineer/project-management"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
-                        → Learn more about Project Management services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Project Setup Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Project Setup. I need assistance with project planning, deliverable definition, and establishing sustainable project foundations.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current project setup challenges and planning needs here]%0A%0ABest regards"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
-                        → Contact us about Project Setup
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -566,13 +566,13 @@ export default function EngineerPage() {
                         href="/engineer/project-management"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
-                        → Learn more about Project Management services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Timeline Management Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Timeline Management. I need assistance rebalancing project timelines and getting an outside perspective on project timing.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current timeline challenges and project scheduling needs here]%0A%0ABest regards"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
-                        → Contact us about Timeline Management
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -598,13 +598,13 @@ export default function EngineerPage() {
                         href="/engineer/project-management"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
-                        → Learn more about Project Management services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Deviation Management Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Deviation Management. I need assistance managing project detours and communicating with external parties during unexpected changes.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current deviation management challenges and external communication needs here]%0A%0ABest regards"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
-                        → Contact us about Deviation Management
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -628,13 +628,13 @@ export default function EngineerPage() {
                         href="/engineer/project-management"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
-                        → Learn more about Project Management services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Documentation and Sharing Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Documentation and Sharing. I need assistance with version control, data sharing, and creating team synergies.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current documentation challenges and team collaboration needs here]%0A%0ABest regards"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
-                        → Contact us about Documentation & Sharing
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -670,13 +670,13 @@ export default function EngineerPage() {
                         href="/engineer/technical-consulting"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Learn more about Technical Consulting services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Process Assessment Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Process Assessment. I need an outside perspective on my business processes and detailed feedback on improvement opportunities.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current business processes and assessment needs here]%0A%0ABest regards"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Contact us about Process Assessment
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -703,13 +703,13 @@ export default function EngineerPage() {
                         href="/engineer/technical-consulting"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Learn more about Technical Consulting services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Technical Research Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Technical Research. I need assistance filtering and analyzing technical information relevant to my business.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current research needs and technical topics of interest here]%0A%0ABest regards"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Contact us about Technical Research
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -731,13 +731,13 @@ export default function EngineerPage() {
                         href="/engineer/technical-consulting"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Learn more about Technical Consulting services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Training and Knowledge Transfer Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Training and Knowledge Transfer. I am interested in continuous learning opportunities for myself and my business.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current training needs and knowledge transfer requirements here]%0A%0ABest regards"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Contact us about Training & Knowledge Transfer
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
@@ -762,13 +762,13 @@ export default function EngineerPage() {
                         href="/engineer/technical-consulting"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Learn more about Technical Consulting services
+                        More
                       </Link>
                       <Link 
                         href="/contact?subject=Let's Connect about your Competitor Analysis Services&message=Hello Kite-Engineer,%0A%0APlease provide me with a detailed overview of how you can help me in the area of Competitor Analysis. I need professional scouting and reporting on my competition to save time for my core business.%0A%0ATherefore I provide you my requirements and specifications:%0A%0A[Please describe your current competitive landscape and analysis needs here]%0A%0ABest regards"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
-                        → Contact us about Competitor Analysis
+                        Contact
                       </Link>
                     </div>
                   </AccordionContent>
