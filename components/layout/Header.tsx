@@ -149,24 +149,25 @@ export function Header() {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent 
                         align="center" 
-                        className="w-56 bg-background/95 backdrop-blur-md border border-white/20"
+                        className="w-56 bg-background/95 backdrop-blur-md border border-white/20 p-1"
                       >
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           <div key={dropdownItem.href}>
-                            <DropdownMenuItem asChild>
+                            <DropdownMenuItem asChild className="p-0">
                               <Link
                                 href={dropdownItem.href}
                                 className={cn(
-                                  "w-full cursor-pointer transition-colors",
+                                  "w-full cursor-pointer transition-colors px-2 py-3 text-base font-medium rounded-sm block",
+                                  "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
                                   pathname === dropdownItem.href
-                                    ? "bg-white/10 text-white font-medium"
-                                    : "text-white/90 hover:text-white hover:bg-white/5"
+                                    ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                                    : "text-white/90"
                                 )}
                               >
                                 {dropdownItem.label}
                               </Link>
                             </DropdownMenuItem>
-                            {index === 0 && <DropdownMenuSeparator className="bg-white/20" />}
+                            {index === 0 && <DropdownMenuSeparator className="bg-white/20 my-1" />}
                           </div>
                         ))}
                       </DropdownMenuContent>
@@ -270,22 +271,26 @@ export function Header() {
                         {item.label} - All Services
                       </Link>
                       <div className="pl-4 space-y-1">
-                        {item.dropdownItems?.slice(1).map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.href}
-                            href={dropdownItem.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className={cn(
-                              "block px-3 py-2 text-base rounded-md",
-                              "transition-all duration-200",
-                              "hover:text-white hover:bg-white/5",
-                              pathname === dropdownItem.href
-                                ? "text-white bg-white/10 font-medium"
-                                : "text-white/80"
+                        {item.dropdownItems?.slice(1).map((dropdownItem, index) => (
+                          <div key={dropdownItem.href}>
+                            <Link
+                              href={dropdownItem.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className={cn(
+                                "block px-3 py-2 text-base font-medium rounded-md",
+                                "transition-all duration-200",
+                                "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                                pathname === dropdownItem.href
+                                  ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                                  : "text-white/80"
+                              )}
+                            >
+                              {dropdownItem.label}
+                            </Link>
+                            {index < item.dropdownItems!.slice(1).length - 1 && (
+                              <div className="border-b border-white/10 my-1 mx-3" />
                             )}
-                          >
-                            {dropdownItem.label}
-                          </Link>
+                          </div>
                         ))}
                       </div>
                     </div>
