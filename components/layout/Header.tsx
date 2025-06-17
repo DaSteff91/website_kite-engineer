@@ -38,7 +38,19 @@ const NAV_ITEMS = [
       { href: "/kite/advanced", label: "Advanced Courses" },
     ]
   },
-  { href: "/engineer", label: "Engineer" },
+  { 
+    href: "/engineer", 
+    label: "Engineer",
+    hasDropdown: true,
+    dropdownItems: [
+      { href: "/engineer", label: "All Engineering Services" },
+      { href: "/engineer/process-engineering", label: "Process Engineering" },
+      { href: "/engineer/process-development", label: "Process Development" },
+      { href: "/engineer/software-development", label: "Software Development" },
+      { href: "/engineer/project-management", label: "Project Management" },
+      { href: "/engineer/technical-consulting", label: "Technical Consulting" },
+    ]
+  },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -131,15 +143,15 @@ export function Header() {
               {NAV_ITEMS.map((item) => (
                 <div key={item.href} className="h-full flex items-center">
                   {item.hasDropdown ? (
-                    <DropdownMenu>
+                    <DropdownMenu modal={false}>
                       <DropdownMenuTrigger asChild>
                         <button
                           className={cn(
                             "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium gap-1",
                             "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
-                            "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                            "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
                             pathname.startsWith(item.href)
-                              ? "text-white border-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                              ? "text-white border-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                               : "text-white/90"
                           )}
                         >
@@ -150,6 +162,7 @@ export function Header() {
                       <DropdownMenuContent 
                         align="center" 
                         className="w-56 bg-background/95 backdrop-blur-md border border-white/20 p-1"
+                        sideOffset={8}
                       >
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           <div key={dropdownItem.href}>
@@ -158,9 +171,9 @@ export function Header() {
                                 href={dropdownItem.href}
                                 className={cn(
                                   "w-full cursor-pointer transition-colors px-2 py-3 text-base font-medium rounded-sm block",
-                                  "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                                  "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
                                   pathname === dropdownItem.href
-                                    ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                                    ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                                     : "text-white/90"
                                 )}
                               >
@@ -178,9 +191,9 @@ export function Header() {
                       className={cn(
                         "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium",
                         "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
-                        "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                        "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
                         pathname === item.href
-                          ? "text-white border-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                          ? "text-white border-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                           : "text-white/90"
                       )}
                     >
@@ -261,10 +274,10 @@ export function Header() {
                         className={cn(
                           "block px-4 py-3 text-lg font-medium rounded-md",
                           "transition-all duration-200 hover:scale-105",
-                          "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                          "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
                           "text-center border-b border-white/10 mb-2",
                           pathname.startsWith(item.href)
-                            ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                            ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                             : "text-white/90"
                         )}
                       >
@@ -279,9 +292,9 @@ export function Header() {
                               className={cn(
                                 "block px-3 py-2 text-base font-medium rounded-md",
                                 "transition-all duration-200",
-                                "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                                "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
                                 pathname === dropdownItem.href
-                                  ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                                  ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                                   : "text-white/80"
                               )}
                             >
@@ -301,10 +314,10 @@ export function Header() {
                       className={cn(
                         "px-4 py-3 text-lg font-medium rounded-md",
                         "transition-all duration-200 hover:scale-105",
-                        "hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]",
+                        "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
                         "text-center block",
                         pathname === item.href
-                          ? "text-white bg-white/10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                          ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                           : "text-white/90"
                       )}
                     >
