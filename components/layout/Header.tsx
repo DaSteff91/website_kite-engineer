@@ -30,44 +30,12 @@ const NAV_ITEMS = [
     hasDropdown: true,
     dropdownItems: [
       { href: "/kite", label: "All Kite Services" },
-      { href: "/kite/freelancer", label: "Freelancer Services" },
-      { href: "/kite/courses", label: "Courses" },
-    ],
-    desktopSubmenus: [
-      {
-        label: "Freelancer",
-        items: [
-          { href: "/kite/freelancer/school-support", label: "School Support" },
-          { href: "/kite/freelancer/travel-services", label: "Travel Services" },
-          { href: "/kite/freelancer/consulting", label: "Consulting" },
-        ]
-      },
-      {
-        label: "Courses", 
-        items: [
-          { href: "/kite/courses/theory", label: "Theory Courses" },
-          { href: "/kite/courses/starting", label: "(Re-)Starting" },
-          { href: "/kite/courses/advanced", label: "Advanced Courses" },
-        ]
-      }
-    ],
-    mobileSubmenus: [
-      {
-        label: "Freelancer",
-        items: [
-          { href: "/kite/freelancer/school-support", label: "School Support" },
-          { href: "/kite/freelancer/travel-services", label: "Travel Services" },
-          { href: "/kite/freelancer/consulting", label: "Consulting" },
-        ]
-      },
-      {
-        label: "Courses", 
-        items: [
-          { href: "/kite/courses/theory", label: "Theory Courses" },
-          { href: "/kite/courses/starting", label: "(Re-)Starting" },
-          { href: "/kite/courses/advanced", label: "Advanced Courses" },
-        ]
-      }
+      { href: "/kite/school-support", label: "School Support" },
+      { href: "/kite/travel-services", label: "Travel Services" },
+      { href: "/kite/consulting", label: "Consulting" },
+      { href: "/kite/theory", label: "Theory Courses" },
+      { href: "/kite/starting", label: "Starting Courses" },
+      { href: "/kite/advanced", label: "Advanced Courses" },
     ]
   },
   { 
@@ -76,10 +44,9 @@ const NAV_ITEMS = [
     hasDropdown: true,
     dropdownItems: [
       { href: "/engineer", label: "All Engineering Services" },
-    ],
-    desktopSubmenus: [
-      {
+      { 
         label: "Process Engineering",
+        isSubmenu: true,
         items: [
           { href: "/engineer/process-engineering/process-control", label: "Process Control" },
           { href: "/engineer/process-engineering/process-optimization", label: "Process Optimization" },
@@ -87,8 +54,9 @@ const NAV_ITEMS = [
           { href: "/engineer/process-engineering/monitoring", label: "Monitoring" },
         ]
       },
-      {
+      { 
         label: "Process Development",
+        isSubmenu: true,
         items: [
           { href: "/engineer/process-development/creativity", label: "Creativity" },
           { href: "/engineer/process-development/process-design", label: "Process Design" },
@@ -96,8 +64,9 @@ const NAV_ITEMS = [
           { href: "/engineer/process-development/equipment-roadmap", label: "Equipment Roadmap" },
         ]
       },
-      {
+      { 
         label: "Software Development",
+        isSubmenu: true,
         items: [
           { href: "/engineer/software-development/custom-solutions", label: "Custom Solutions" },
           { href: "/engineer/software-development/database-management", label: "Database Management" },
@@ -105,8 +74,9 @@ const NAV_ITEMS = [
           { href: "/engineer/software-development/web-development", label: "Web Development" },
         ]
       },
-      {
+      { 
         label: "Project Management",
+        isSubmenu: true,
         items: [
           { href: "/engineer/project-management/project-setup", label: "Project Setup" },
           { href: "/engineer/project-management/timeline-management", label: "Timeline Management" },
@@ -114,55 +84,9 @@ const NAV_ITEMS = [
           { href: "/engineer/project-management/documentation", label: "Documentation" },
         ]
       },
-      {
+      { 
         label: "Technical Consulting",
-        items: [
-          { href: "/engineer/technical-consulting/process-assessment", label: "Process Assessment" },
-          { href: "/engineer/technical-consulting/technical-research", label: "Technical Research" },
-          { href: "/engineer/technical-consulting/training-knowledge-transfer", label: "Training & Knowledge Transfer" },
-          { href: "/engineer/technical-consulting/competitor-analysis", label: "Competitor Analysis" },
-        ]
-      }
-    ],
-    mobileSubmenus: [
-      {
-        label: "Process Engineering",
-        items: [
-          { href: "/engineer/process-engineering/process-control", label: "Process Control" },
-          { href: "/engineer/process-engineering/process-optimization", label: "Process Optimization" },
-          { href: "/engineer/process-engineering/change-management", label: "Change Management" },
-          { href: "/engineer/process-engineering/monitoring", label: "Monitoring" },
-        ]
-      },
-      {
-        label: "Process Development",
-        items: [
-          { href: "/engineer/process-development/creativity", label: "Creativity" },
-          { href: "/engineer/process-development/process-design", label: "Process Design" },
-          { href: "/engineer/process-development/simulation-prototyping", label: "Simulation & Prototyping" },
-          { href: "/engineer/process-development/equipment-roadmap", label: "Equipment Roadmap" },
-        ]
-      },
-      {
-        label: "Software Development",
-        items: [
-          { href: "/engineer/software-development/custom-solutions", label: "Custom Solutions" },
-          { href: "/engineer/software-development/database-management", label: "Database Management" },
-          { href: "/engineer/software-development/workflow-automation", label: "Workflow Automation" },
-          { href: "/engineer/software-development/web-development", label: "Web Development" },
-        ]
-      },
-      {
-        label: "Project Management",
-        items: [
-          { href: "/engineer/project-management/project-setup", label: "Project Setup" },
-          { href: "/engineer/project-management/timeline-management", label: "Timeline Management" },
-          { href: "/engineer/project-management/deviation-management", label: "Deviation Management" },
-          { href: "/engineer/project-management/documentation", label: "Documentation" },
-        ]
-      },
-      {
-        label: "Technical Consulting",
+        isSubmenu: true,
         items: [
           { href: "/engineer/technical-consulting/process-assessment", label: "Process Assessment" },
           { href: "/engineer/technical-consulting/technical-research", label: "Technical Research" },
@@ -335,52 +259,72 @@ export function Header() {
                         </DropdownMenuItem>
                         <DropdownMenuSeparator className="bg-white/20 my-1" />
                         
-                        {/* Expandable Categories */}
-                        {item.desktopSubmenus?.map((submenu, submenuIndex) => (
-                          <div key={submenu.label} className="space-y-1">
-                            {/* Category Header - Full Line Clickable */}
-                            <button
-                              onClick={() => handleDesktopSubmenuClick(submenu.label)}
-                              className="w-full flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded-sm text-left transition-colors"
-                            >
-                              <span className="text-sm font-medium text-white/80 hover:text-white">
-                                {submenu.label}
-                              </span>
-                              <ChevronRight 
-                                className={cn(
-                                  "h-4 w-4 transition-transform duration-200 text-white/60",
-                                  expandedDesktopSubmenu === submenu.label && "rotate-90"
-                                )}
-                              />
-                            </button>
+                        {/* Direct Service Links */}
+                        {item.dropdownItems?.map((dropdownItem, index) => {
+                          if (dropdownItem.isSubmenu) {
+                            return (
+                              <div key={dropdownItem.label} className="space-y-1">
+                                {/* Submenu Header - Full Line Clickable */}
+                                <button
+                                  onClick={() => handleDesktopSubmenuClick(dropdownItem.label)}
+                                  className="w-full flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded-sm text-left transition-colors"
+                                >
+                                  <span className="text-sm font-medium text-white/80 hover:text-white">
+                                    {dropdownItem.label}
+                                  </span>
+                                  <ChevronRight 
+                                    className={cn(
+                                      "h-4 w-4 transition-transform duration-200 text-white/60",
+                                      expandedDesktopSubmenu === dropdownItem.label && "rotate-90"
+                                    )}
+                                  />
+                                </button>
 
-                            {/* Expanded Items */}
-                            {expandedDesktopSubmenu === submenu.label && (
-                              <div className="pl-4 space-y-1">
-                                {submenu.items.map((subItem) => (
-                                  <DropdownMenuItem key={subItem.href} asChild className="p-0">
-                                    <Link
-                                      href={subItem.href}
-                                      className={cn(
-                                        "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
-                                        "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
-                                        pathname === subItem.href
-                                          ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                          : "text-white/70"
-                                      )}
-                                    >
-                                      {subItem.label}
-                                    </Link>
-                                  </DropdownMenuItem>
-                                ))}
+                                {/* Expanded Items */}
+                                {expandedDesktopSubmenu === dropdownItem.label && (
+                                  <div className="pl-4 space-y-1">
+                                    {dropdownItem.items?.map((subItem) => (
+                                      <DropdownMenuItem key={subItem.href} asChild className="p-0">
+                                        <Link
+                                          href={subItem.href}
+                                          className={cn(
+                                            "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
+                                            "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                                            pathname === subItem.href
+                                              ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                              : "text-white/70"
+                                          )}
+                                        >
+                                          {subItem.label}
+                                        </Link>
+                                      </DropdownMenuItem>
+                                    ))}
+                                  </div>
+                                )}
+                                
+                                <DropdownMenuSeparator className="bg-white/10 my-1" />
                               </div>
-                            )}
-                            
-                            {submenuIndex < item.desktopSubmenus!.length - 1 && (
-                              <DropdownMenuSeparator className="bg-white/10 my-1" />
-                            )}
-                          </div>
-                        ))}
+                            );
+                          } else if (!dropdownItem.isSubmenu && index > 0) {
+                            return (
+                              <DropdownMenuItem key={dropdownItem.href} asChild className="p-0">
+                                <Link
+                                  href={dropdownItem.href}
+                                  className={cn(
+                                    "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
+                                    "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                                    pathname === dropdownItem.href
+                                      ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                      : "text-white/90"
+                                  )}
+                                >
+                                  {dropdownItem.label}
+                                </Link>
+                              </DropdownMenuItem>
+                            );
+                          }
+                          return null;
+                        })}
                       </DropdownMenuContent>
                     </DropdownMenu>
                   ) : (
@@ -400,38 +344,6 @@ export function Header() {
                   )}
                 </div>
               ))}
-
-              {/* Commented out for later implementation
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="hover:scale-105 transition-transform">
-                    <Globe className="h-5 w-5" />
-                    <span className="sr-only">Select language</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  {LANGUAGES.map((lang) => (
-                    <DropdownMenuItem key={lang.code}>
-                      {lang.label}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="hover:scale-105 transition-transform"
-              >
-                {theme === "dark" ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
-                <span className="sr-only">Toggle theme</span>
-              </Button>
-              */}
             </div>
 
             <Button
@@ -464,7 +376,7 @@ export function Header() {
             <nav className="flex flex-col gap-2">
               {NAV_ITEMS.map((item) => (
                 <div key={item.href}>
-                  {item.mobileSubmenus ? (
+                  {item.hasDropdown ? (
                     <div className="space-y-2">
                       {/* Main Item with Expand/Collapse - Full Line Clickable */}
                       <div className="flex items-center">
@@ -475,7 +387,7 @@ export function Header() {
                             "flex-1 px-4 py-3 text-lg font-medium rounded-md text-left",
                             "transition-all duration-200",
                             "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                            pathname.startsWith(item.href)
+                            pathname === item.href
                               ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                               : "text-white/90"
                           )}
@@ -495,10 +407,29 @@ export function Header() {
                         </button>
                       </div>
 
-                      {/* Expanded Submenus */}
+                      {/* Expanded Items */}
                       {expandedMobileItem === item.label && (
                         <div className="pl-4 space-y-2 border-l border-white/20 ml-4">
-                          {item.mobileSubmenus.map((submenu) => (
+                          {item.dropdownItems?.filter(item => !item.isSubmenu && item.href !== "/kite" && item.href !== "/engineer").map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.href}
+                              href={dropdownItem.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className={cn(
+                                "block px-3 py-2 text-base font-medium rounded-md text-left",
+                                "transition-all duration-200",
+                                "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                pathname === dropdownItem.href
+                                  ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                  : "text-white/80"
+                              )}
+                            >
+                              {dropdownItem.label}
+                            </Link>
+                          ))}
+                          
+                          {/* Submenu Items */}
+                          {item.dropdownItems?.filter(item => item.isSubmenu).map((submenu) => (
                             <div key={submenu.label} className="space-y-1">
                               {/* Submenu Header - Full Line Clickable */}
                               <button
@@ -519,7 +450,7 @@ export function Header() {
                               {/* Submenu Items */}
                               {expandedMobileSubmenu === submenu.label && (
                                 <div className="pl-3 space-y-1">
-                                  {submenu.items.map((subItem) => (
+                                  {submenu.items?.map((subItem) => (
                                     <Link
                                       key={subItem.href}
                                       href={subItem.href}
@@ -562,42 +493,6 @@ export function Header() {
                   )}
                 </div>
               ))}
-              
-              {/* Commented out for later implementation
-              <hr className="my-2 border-white/10" />
-              
-              <Button
-                variant="ghost"
-                className="justify-start gap-2 hover:scale-105 transition-transform"
-                onClick={() => {
-                  setTheme(theme === "dark" ? "light" : "dark");
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                {theme === "dark" ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
-                Toggle theme
-              </Button>
-
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="w-full justify-start gap-2">
-                    <Globe className="h-5 w-5" />
-                    Select Language
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  {LANGUAGES.map((lang) => (
-                    <DropdownMenuItem key={lang.code} onClick={() => setIsMobileMenuOpen(false)}>
-                      {lang.label}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-              */}
             </nav>
           </div>
         </div>

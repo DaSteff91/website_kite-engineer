@@ -1,7 +1,7 @@
+import Link from "next/link";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import kite_hero_image from "@/public/images/kite_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -102,7 +102,7 @@ export default function KitePage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/kite/freelancer/school-support"
+                        href="/kite/school-support"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -133,7 +133,7 @@ export default function KitePage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/kite/freelancer/travel-services"
+                        href="/kite/travel-services"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -162,7 +162,7 @@ export default function KitePage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/kite/freelancer/consulting"
+                        href="/kite/consulting"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -200,7 +200,7 @@ export default function KitePage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/kite/courses/theory"
+                        href="/kite/theory"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
@@ -228,7 +228,7 @@ export default function KitePage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/kite/courses/starting"
+                        href="/kite/starting"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
@@ -257,7 +257,7 @@ export default function KitePage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/kite/courses/advanced"
+                        href="/kite/advanced"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
