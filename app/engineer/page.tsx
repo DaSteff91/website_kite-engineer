@@ -134,7 +134,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/process-engineering"
+                        href="/engineer/process-engineering/process-control"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -164,7 +164,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/process-engineering"
+                        href="/engineer/process-engineering/process-optimization"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -194,7 +194,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/process-engineering"
+                        href="/engineer/process-engineering/change-management"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -222,7 +222,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/process-engineering"
+                        href="/engineer/process-engineering/monitoring"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -260,7 +260,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/process-development"
+                        href="/engineer/process-development/creativity"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
@@ -292,7 +292,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/process-development"
+                        href="/engineer/process-development/process-design"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
@@ -324,7 +324,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/process-development"
+                        href="/engineer/process-development/simulation-prototyping"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
@@ -356,7 +356,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/process-development"
+                        href="/engineer/process-development/equipment-roadmap"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
@@ -399,7 +399,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/software-development"
+                        href="/engineer/software-development/custom-solutions"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
                         More
@@ -429,7 +429,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/software-development"
+                        href="/engineer/software-development/database-management"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
                         More
@@ -461,7 +461,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/software-development"
+                        href="/engineer/software-development/workflow-automation"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
                         More
@@ -493,7 +493,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/software-development"
+                        href="/engineer/software-development/web-development"
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                       >
                         More
@@ -532,7 +532,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/project-management"
+                        href="/engineer/project-management/project-setup"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
                         More
@@ -563,7 +563,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/project-management"
+                        href="/engineer/project-management/timeline-management"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
                         More
@@ -595,7 +595,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/project-management"
+                        href="/engineer/project-management/deviation-management"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
                         More
@@ -625,7 +625,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/project-management"
+                        href="/engineer/project-management/documentation"
                         className="text-emerald-400 hover:text-emerald-300 underline text-sm"
                       >
                         More
@@ -667,7 +667,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/technical-consulting"
+                        href="/engineer/technical-consulting/process-assessment"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -700,7 +700,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/technical-consulting"
+                        href="/engineer/technical-consulting/technical-research"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -728,7 +728,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/technical-consulting"
+                        href="/engineer/technical-consulting/training-knowledge-transfer"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -759,7 +759,7 @@ export default function EngineerPage() {
                     
                     <div className="mt-4 flex flex-col gap-2">
                       <Link 
-                        href="/engineer/technical-consulting"
+                        href="/engineer/technical-consulting/competitor-analysis"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
