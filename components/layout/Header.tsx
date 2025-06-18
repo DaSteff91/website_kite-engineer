@@ -281,7 +281,7 @@ export function Header() {
                             : "text-white/90"
                         )}
                       >
-                        {item.label} - All Services
+                        All {item.label} Services
                       </Link>
                       <div className="pl-4 space-y-1">
                         {item.dropdownItems?.slice(1).map((dropdownItem, index) => (
