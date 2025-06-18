@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sun, Moon, Globe, ChevronDown } from "lucide-react";
+import { Menu, X, Sun, Moon, Globe, ChevronDown, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import {
   DropdownMenu,
@@ -36,6 +36,24 @@ const NAV_ITEMS = [
       { href: "/kite/theory", label: "Theory Courses" },
       { href: "/kite/starting", label: "(Re-)Starting" },
       { href: "/kite/advanced", label: "Advanced Courses" },
+    ],
+    mobileSubmenus: [
+      {
+        label: "Freelancer",
+        items: [
+          { href: "/kite/school-support", label: "School Support" },
+          { href: "/kite/travel-services", label: "Travel Services" },
+          { href: "/kite/consulting", label: "Consulting" },
+        ]
+      },
+      {
+        label: "Courses", 
+        items: [
+          { href: "/kite/theory", label: "Theory Courses" },
+          { href: "/kite/starting", label: "(Re-)Starting" },
+          { href: "/kite/advanced", label: "Advanced Courses" },
+        ]
+      }
     ]
   },
   { 
@@ -49,6 +67,23 @@ const NAV_ITEMS = [
       { href: "/engineer/software-development", label: "Software Development" },
       { href: "/engineer/project-management", label: "Project Management" },
       { href: "/engineer/technical-consulting", label: "Technical Consulting" },
+    ],
+    mobileSubmenus: [
+      {
+        label: "Process Services",
+        items: [
+          { href: "/engineer/process-engineering", label: "Process Engineering" },
+          { href: "/engineer/process-development", label: "Process Development" },
+        ]
+      },
+      {
+        label: "Development & Management",
+        items: [
+          { href: "/engineer/software-development", label: "Software Development" },
+          { href: "/engineer/project-management", label: "Project Management" },
+          { href: "/engineer/technical-consulting", label: "Technical Consulting" },
+        ]
+      }
     ]
   },
   { href: "/about", label: "About" },
@@ -58,6 +93,8 @@ const NAV_ITEMS = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null);
+  const [expandedMobileSubmenu, setExpandedMobileSubmenu] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
@@ -81,6 +118,8 @@ export function Header() {
         !menuButtonRef.current.contains(event.target as Node)
       ) {
         setIsMobileMenuOpen(false);
+        setExpandedMobileItem(null);
+        setExpandedMobileSubmenu(null);
       }
     };
 
@@ -93,7 +132,27 @@ export function Header() {
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setExpandedMobileItem(null);
+    setExpandedMobileSubmenu(null);
   }, [pathname]);
+
+  const handleMobileItemClick = (itemLabel: string) => {
+    if (expandedMobileItem === itemLabel) {
+      setExpandedMobileItem(null);
+      setExpandedMobileSubmenu(null);
+    } else {
+      setExpandedMobileItem(itemLabel);
+      setExpandedMobileSubmenu(null);
+    }
+  };
+
+  const handleMobileSubmenuClick = (submenuLabel: string) => {
+    if (expandedMobileSubmenu === submenuLabel) {
+      setExpandedMobileSubmenu(null);
+    } else {
+      setExpandedMobileSubmenu(submenuLabel);
+    }
+  };
 
   if (pathname === "/") return null;
 
@@ -266,46 +325,87 @@ export function Header() {
             <nav className="flex flex-col gap-2">
               {NAV_ITEMS.map((item) => (
                 <div key={item.href}>
-                  {item.hasDropdown ? (
+                  {item.mobileSubmenus ? (
                     <div className="space-y-2">
-                      <Link
-                        href={item.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className={cn(
-                          "block px-4 py-3 text-lg font-medium rounded-md",
-                          "transition-all duration-200 hover:scale-105",
-                          "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                          "text-center border-b border-white/10 mb-2",
-                          pathname.startsWith(item.href)
-                            ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                            : "text-white/90"
-                        )}
-                      >
-                        All {item.label} Services
-                      </Link>
-                      <div className="pl-4 space-y-1">
-                        {item.dropdownItems?.slice(1).map((dropdownItem, index) => (
-                          <div key={dropdownItem.href}>
-                            <Link
-                              href={dropdownItem.href}
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              className={cn(
-                                "block px-3 py-2 text-base font-medium rounded-md",
-                                "transition-all duration-200",
-                                "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                                pathname === dropdownItem.href
-                                  ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                  : "text-white/80"
-                              )}
-                            >
-                              {dropdownItem.label}
-                            </Link>
-                            {index < item.dropdownItems!.slice(1).length - 1 && (
-                              <div className="border-b border-white/10 my-1 mx-3" />
+                      {/* Main Item with Expand/Collapse */}
+                      <div className="flex items-center justify-between">
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={cn(
+                            "flex-1 px-4 py-3 text-lg font-medium rounded-md",
+                            "transition-all duration-200",
+                            "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                            "text-center",
+                            pathname.startsWith(item.href)
+                              ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                              : "text-white/90"
+                          )}
+                        >
+                          All {item.label} Services
+                        </Link>
+                        <button
+                          onClick={() => handleMobileItemClick(item.label)}
+                          className="p-2 text-white/80 hover:text-white transition-colors"
+                        >
+                          <ChevronRight 
+                            className={cn(
+                              "h-5 w-5 transition-transform duration-200",
+                              expandedMobileItem === item.label && "rotate-90"
                             )}
-                          </div>
-                        ))}
+                          />
+                        </button>
                       </div>
+
+                      {/* Expanded Submenus */}
+                      {expandedMobileItem === item.label && (
+                        <div className="pl-4 space-y-2 border-l border-white/20 ml-4">
+                          {item.mobileSubmenus.map((submenu) => (
+                            <div key={submenu.label} className="space-y-1">
+                              {/* Submenu Header */}
+                              <div className="flex items-center justify-between">
+                                <span className="px-3 py-2 text-base font-medium text-white/80">
+                                  {submenu.label}
+                                </span>
+                                <button
+                                  onClick={() => handleMobileSubmenuClick(submenu.label)}
+                                  className="p-1 text-white/60 hover:text-white/80 transition-colors"
+                                >
+                                  <ChevronRight 
+                                    className={cn(
+                                      "h-4 w-4 transition-transform duration-200",
+                                      expandedMobileSubmenu === submenu.label && "rotate-90"
+                                    )}
+                                  />
+                                </button>
+                              </div>
+
+                              {/* Submenu Items */}
+                              {expandedMobileSubmenu === submenu.label && (
+                                <div className="pl-3 space-y-1">
+                                  {submenu.items.map((subItem) => (
+                                    <Link
+                                      key={subItem.href}
+                                      href={subItem.href}
+                                      onClick={() => setIsMobileMenuOpen(false)}
+                                      className={cn(
+                                        "block px-3 py-2 text-sm font-medium rounded-md",
+                                        "transition-all duration-200",
+                                        "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                        pathname === subItem.href
+                                          ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                          : "text-white/70"
+                                      )}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <Link
