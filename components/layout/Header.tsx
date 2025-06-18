@@ -37,6 +37,24 @@ const NAV_ITEMS = [
       { href: "/kite/starting", label: "(Re-)Starting" },
       { href: "/kite/advanced", label: "Advanced Courses" },
     ],
+    desktopSubmenus: [
+      {
+        label: "Freelancer",
+        items: [
+          { href: "/kite/school-support", label: "School Support" },
+          { href: "/kite/travel-services", label: "Travel Services" },
+          { href: "/kite/consulting", label: "Consulting" },
+        ]
+      },
+      {
+        label: "Courses", 
+        items: [
+          { href: "/kite/theory", label: "Theory Courses" },
+          { href: "/kite/starting", label: "(Re-)Starting" },
+          { href: "/kite/advanced", label: "Advanced Courses" },
+        ]
+      }
+    ],
     mobileSubmenus: [
       {
         label: "Freelancer",
@@ -67,6 +85,53 @@ const NAV_ITEMS = [
       { href: "/engineer/software-development", label: "Software Development" },
       { href: "/engineer/project-management", label: "Project Management" },
       { href: "/engineer/technical-consulting", label: "Technical Consulting" },
+    ],
+    desktopSubmenus: [
+      {
+        label: "Process Engineering",
+        items: [
+          { href: "/engineer/process-engineering", label: "Process Control" },
+          { href: "/engineer/process-engineering", label: "Process Optimization" },
+          { href: "/engineer/process-engineering", label: "Change Management" },
+          { href: "/engineer/process-engineering", label: "Monitoring" },
+        ]
+      },
+      {
+        label: "Process Development",
+        items: [
+          { href: "/engineer/process-development", label: "Creativity" },
+          { href: "/engineer/process-development", label: "Process Design" },
+          { href: "/engineer/process-development", label: "Simulation & Prototyping" },
+          { href: "/engineer/process-development", label: "Equipment Roadmap" },
+        ]
+      },
+      {
+        label: "Software Development",
+        items: [
+          { href: "/engineer/software-development", label: "Custom Solutions" },
+          { href: "/engineer/software-development", label: "Database Management" },
+          { href: "/engineer/software-development", label: "Workflow Automation" },
+          { href: "/engineer/software-development", label: "Web Development" },
+        ]
+      },
+      {
+        label: "Project Management",
+        items: [
+          { href: "/engineer/project-management", label: "Project Setup" },
+          { href: "/engineer/project-management", label: "Timeline Management" },
+          { href: "/engineer/project-management", label: "Deviation Management" },
+          { href: "/engineer/project-management", label: "Documentation" },
+        ]
+      },
+      {
+        label: "Technical Consulting",
+        items: [
+          { href: "/engineer/technical-consulting", label: "Process Assessment" },
+          { href: "/engineer/technical-consulting", label: "Technical Research" },
+          { href: "/engineer/technical-consulting", label: "Training & Knowledge Transfer" },
+          { href: "/engineer/technical-consulting", label: "Competitor Analysis" },
+        ]
+      }
     ],
     mobileSubmenus: [
       {
@@ -219,27 +284,52 @@ export function Header() {
                         </button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent 
-                        align="center" 
-                        className="w-56 bg-background/95 backdrop-blur-md border border-white/20 p-1"
+                        align="start" 
+                        className="w-48 bg-background/95 backdrop-blur-md border border-white/20 p-1"
                         sideOffset={8}
                       >
-                        {item.dropdownItems?.map((dropdownItem, index) => (
-                          <div key={dropdownItem.href}>
-                            <DropdownMenuItem asChild className="p-0">
-                              <Link
-                                href={dropdownItem.href}
-                                className={cn(
-                                  "w-full cursor-pointer transition-colors px-2 py-3 text-base font-medium rounded-sm block",
-                                  "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
-                                  pathname === dropdownItem.href
-                                    ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                    : "text-white/90"
-                                )}
-                              >
-                                {dropdownItem.label}
-                              </Link>
-                            </DropdownMenuItem>
-                            {index === 0 && <DropdownMenuSeparator className="bg-white/20 my-1" />}
+                        {/* All Services Link */}
+                        <DropdownMenuItem asChild className="p-0">
+                          <Link
+                            href={item.href}
+                            className={cn(
+                              "w-full cursor-pointer transition-colors px-2 py-3 text-base font-medium rounded-sm block",
+                              "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                              pathname === item.href
+                                ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                : "text-white/90"
+                            )}
+                          >
+                            All {item.label} Services
+                          </Link>
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator className="bg-white/20 my-1" />
+                        
+                        {/* Hierarchical Submenus */}
+                        {item.desktopSubmenus?.map((submenu) => (
+                          <div key={submenu.label} className="space-y-1">
+                            <div className="px-2 py-1 text-sm font-medium text-white/70">
+                              {submenu.label}
+                            </div>
+                            {submenu.items.map((subItem) => (
+                              <DropdownMenuItem key={subItem.href + subItem.label} asChild className="p-0">
+                                <Link
+                                  href={subItem.href}
+                                  className={cn(
+                                    "w-full cursor-pointer transition-colors px-4 py-2 text-sm font-medium rounded-sm block",
+                                    "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                                    pathname === subItem.href
+                                      ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                      : "text-white/80"
+                                  )}
+                                >
+                                  {subItem.label}
+                                </Link>
+                              </DropdownMenuItem>
+                            ))}
+                            {submenu !== item.desktopSubmenus![item.desktopSubmenus!.length - 1] && (
+                              <DropdownMenuSeparator className="bg-white/10 my-1" />
+                            )}
                           </div>
                         ))}
                       </DropdownMenuContent>
