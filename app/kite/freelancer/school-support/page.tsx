@@ -50,11 +50,11 @@ export default function SchoolSupportPage() {
           {/* Back Navigation */}
           <div className="mb-8">
             <Link 
-              href="/kite" 
+              href="/kite/freelancer" 
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Kite Services
+              Back to Freelancer Services
             </Link>
           </div>
 
@@ -156,41 +156,6 @@ export default function SchoolSupportPage() {
                 <li>• Emergency action plans</li>
                 <li>• Student safety protocols</li>
               </ul>
-            </div>
-          </div>
-
-          {/* Why Choose Section */}
-          <div className="bg-gradient-to-br from-blue-900/15 via-card/15 to-cyan-900/15 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] max-w-4xl mx-auto mb-16">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-blue-200">Why Choose Our School Support?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-white mb-3">Experience & Expertise</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Years of experience in kiteboarding instruction and school operations. 
-                  Deep understanding of both technical aspects and business requirements.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Flexibility & Reliability</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Adaptable to your school's specific needs and schedule. 
-                  Reliable support when you need it most, from daily operations to peak seasons.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Multi-Language Support</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Communicate with international students in German, English, and Portuguese. 
-                  Expand your customer base with professional multilingual instruction.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Safety First Approach</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Prioritizing safety in all aspects of instruction and operations. 
-                  Comprehensive risk management and emergency preparedness.
-                </p>
-              </div>
             </div>
           </div>
 
