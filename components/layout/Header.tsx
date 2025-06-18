@@ -76,11 +76,6 @@ const NAV_ITEMS = [
     hasDropdown: true,
     dropdownItems: [
       { href: "/engineer", label: "All Engineering Services" },
-      { href: "/engineer/process-engineering", label: "Process Engineering" },
-      { href: "/engineer/process-development", label: "Process Development" },
-      { href: "/engineer/software-development", label: "Software Development" },
-      { href: "/engineer/project-management", label: "Project Management" },
-      { href: "/engineer/technical-consulting", label: "Technical Consulting" },
     ],
     desktopSubmenus: [
       {

@@ -50,11 +50,11 @@ export default function ProcessControlPage() {
           {/* Back Navigation */}
           <div className="mb-8">
             <Link 
-              href="/engineer/process-engineering" 
+              href="/engineer" 
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Process Engineering
+              Back to All Engineering Services
             </Link>
           </div>
 
