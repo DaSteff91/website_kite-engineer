@@ -50,11 +50,11 @@ export default function TravelServicesPage() {
           {/* Back Navigation */}
           <div className="mb-8">
             <Link 
-              href="/kite" 
+              href="/kite/freelancer" 
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Kite Services
+              Back to Freelancer Services
             </Link>
           </div>
 
@@ -156,49 +156,6 @@ export default function TravelServicesPage() {
                 <li>• Equipment transportation tips</li>
                 <li>• Travel logistics support</li>
               </ul>
-            </div>
-          </div>
-
-          {/* Popular Destinations */}
-          <div className="bg-gradient-to-br from-blue-900/15 via-card/15 to-cyan-900/15 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] max-w-4xl mx-auto mb-16">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-blue-200">Popular Kite Destinations</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-white mb-3">European Favorites</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Tarifa, Spain - Wind capital of Europe</li>
-                  <li>• Fuerteventura, Canary Islands</li>
-                  <li>• Leucate, France - Consistent winds</li>
-                  <li>• Limnos, Greece - Flat water paradise</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Exotic Adventures</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Cabarete, Dominican Republic</li>
-                  <li>• Dakhla, Morocco - Desert meets ocean</li>
-                  <li>• Cumbuco, Brazil - Lagoon paradise</li>
-                  <li>• El Gouna, Egypt - Red Sea beauty</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Beginner Friendly</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Hurghada, Egypt - Calm conditions</li>
-                  <li>• Sal, Cape Verde - Steady trade winds</li>
-                  <li>• Kos, Greece - Protected bays</li>
-                  <li>• Essaouira, Morocco - Consistent winds</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Advanced Challenges</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Maui, Hawaii - Wave riding mecca</li>
-                  <li>• Mauritius - Tropical perfection</li>
-                  <li>• Boracay, Philippines - Island hopping</li>
-                  <li>• Zanzibar, Tanzania - African adventure</li>
-                </ul>
-              </div>
             </div>
           </div>
 

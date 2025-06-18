@@ -50,11 +50,11 @@ export default function AdvancedPage() {
           {/* Back Navigation */}
           <div className="mb-8">
             <Link 
-              href="/kite" 
+              href="/kite/courses" 
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Kite Services
+              Back to Courses
             </Link>
           </div>
 
@@ -156,87 +156,6 @@ export default function AdvancedPage() {
                 <li>• Confidence building approach</li>
                 <li>• Personalized skill development</li>
               </ul>
-            </div>
-          </div>
-
-          {/* Progression Levels */}
-          <div className="bg-gradient-to-br from-cyan-900/15 via-card/15 to-teal-900/15 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] max-w-4xl mx-auto mb-16">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-cyan-200">Advanced Progression Levels</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-cyan-300 font-bold text-lg">L1</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Intermediate+</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Solid riding skills, ready for first jumps, toeside attempts, and basic trick progression.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-teal-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-teal-300 font-bold text-lg">L2</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Advanced</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Consistent jumping, toeside riding, basic unhooked tricks, and freestyle fundamentals.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-emerald-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-emerald-300 font-bold text-lg">L3</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Expert</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Complex trick combinations, competition preparation, and pushing personal limits safely.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Safety & Equipment */}
-          <div className="bg-gradient-to-br from-teal-900/15 via-card/15 to-emerald-900/15 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] max-w-4xl mx-auto mb-16">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-teal-200">Advanced Training Features</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-white mb-3">Safety First Approach</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Progressive skill building methodology</li>
-                  <li>• Risk assessment for each trick</li>
-                  <li>• Proper warm-up and conditioning</li>
-                  <li>• Emergency protocols and rescue</li>
-                  <li>• Impact vest and helmet usage</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Professional Equipment</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• High-performance kites and boards</li>
-                  <li>• Professional video equipment</li>
-                  <li>• Radio communication systems</li>
-                  <li>• Drone for aerial footage</li>
-                  <li>• Safety and rescue equipment</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Coaching Methods</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Real-time feedback and guidance</li>
-                  <li>• Video analysis and breakdown</li>
-                  <li>• Personalized progression plans</li>
-                  <li>• Mental coaching and confidence</li>
-                  <li>• Technique refinement focus</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Documentation Options</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Professional photo sessions</li>
-                  <li>• High-quality video production</li>
-                  <li>• Slow-motion analysis footage</li>
-                  <li>• Social media ready content</li>
-                  <li>• Progress documentation</li>
-                </ul>
-              </div>
             </div>
           </div>
 

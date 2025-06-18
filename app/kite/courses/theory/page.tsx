@@ -50,11 +50,11 @@ export default function TheoryPage() {
           {/* Back Navigation */}
           <div className="mb-8">
             <Link 
-              href="/kite" 
+              href="/kite/courses" 
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Kite Services
+              Back to Courses
             </Link>
           </div>
 
@@ -188,41 +188,6 @@ export default function TheoryPage() {
                 <h4 className="font-semibold text-white mb-3">On-Site Analysis</h4>
                 <p className="text-white/80 text-sm leading-relaxed">
                   Real-world application of theory at your local kite spot with practical demonstrations.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Learning Benefits */}
-          <div className="bg-gradient-to-br from-teal-900/15 via-card/15 to-emerald-900/15 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] max-w-4xl mx-auto mb-16">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-teal-200">Why Learn Kiteboarding Theory?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-white mb-3">Enhanced Performance</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Understanding the physics behind kiteboarding helps you make better decisions on the water, 
-                  optimize your technique, and progress faster in your skills.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Improved Safety</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Knowledge of wind patterns, safety systems, and risk factors significantly reduces 
-                  the likelihood of accidents and improves your overall safety awareness.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Better Equipment Choices</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Understanding materials and design principles helps you make informed decisions 
-                  when purchasing or upgrading your kiteboarding equipment.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Teaching Others</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Solid theoretical knowledge enables you to effectively teach and share 
-                  the sport with friends, family, or as a professional instructor.
                 </p>
               </div>
             </div>

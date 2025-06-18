@@ -50,11 +50,11 @@ export default function ConsultingPage() {
           {/* Back Navigation */}
           <div className="mb-8">
             <Link 
-              href="/kite" 
+              href="/kite/freelancer" 
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Kite Services
+              Back to Freelancer Services
             </Link>
           </div>
 
@@ -156,83 +156,6 @@ export default function ConsultingPage() {
                 <li>• Follow-up consultations</li>
                 <li>• Ongoing mentorship options</li>
               </ul>
-            </div>
-          </div>
-
-          {/* Consultation Process */}
-          <div className="bg-gradient-to-br from-blue-900/15 via-card/15 to-cyan-900/15 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] max-w-4xl mx-auto mb-16">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-blue-200">How Our Consultation Works</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="bg-blue-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-blue-300 font-bold text-lg">1</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Initial Assessment</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  We discuss your current skill level, goals, local conditions, and budget to understand your specific needs.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-cyan-300 font-bold text-lg">2</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Customized Recommendations</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Based on our assessment, I provide detailed recommendations tailored to your specific situation and goals.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-teal-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-teal-300 font-bold text-lg">3</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Ongoing Support</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Follow-up consultations and ongoing support to ensure you're making the right choices as you progress.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Common Questions */}
-          <div className="bg-gradient-to-br from-cyan-900/15 via-card/15 to-teal-900/15 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] max-w-4xl mx-auto mb-16">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-cyan-200">Common Consultation Topics</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-white mb-3">Equipment Questions</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• "What kite size should I buy?"</li>
-                  <li>• "Which board is best for my style?"</li>
-                  <li>• "Should I upgrade my gear?"</li>
-                  <li>• "What's the best value equipment?"</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Progression Planning</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• "How can I improve faster?"</li>
-                  <li>• "What tricks should I learn next?"</li>
-                  <li>• "How to overcome plateaus?"</li>
-                  <li>• "Competition preparation advice"</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Location Advice</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• "Best spots for my skill level?"</li>
-                  <li>• "Seasonal wind patterns?"</li>
-                  <li>• "Safety considerations?"</li>
-                  <li>• "Travel destination recommendations"</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Business & Representation</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• "How to promote kiteboarding?"</li>
-                  <li>• "Educational presentation content"</li>
-                  <li>• "Community building strategies"</li>
-                  <li>• "Media and outreach opportunities"</li>
-                </ul>
-              </div>
             </div>
           </div>
 

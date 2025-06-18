@@ -50,11 +50,11 @@ export default function StartingPage() {
           {/* Back Navigation */}
           <div className="mb-8">
             <Link 
-              href="/kite" 
+              href="/kite/courses" 
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Kite Services
+              Back to Courses
             </Link>
           </div>
 
@@ -147,96 +147,6 @@ export default function StartingPage() {
                     <li>• Goal-oriented progression</li>
                   </ul>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Learning Progression */}
-          <div className="bg-gradient-to-br from-cyan-900/15 via-card/15 to-teal-900/15 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] max-w-4xl mx-auto mb-16">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-cyan-200">Typical Learning Progression</h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-cyan-300 font-bold text-lg">1</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Theory & Safety</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Wind theory, equipment overview, safety systems, and basic meteorology.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-teal-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-teal-300 font-bold text-lg">2</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Land Practice</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Kite control, wind window understanding, and safety release practice.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-emerald-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-emerald-300 font-bold text-lg">3</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Water Skills</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Body dragging, water relaunch, and power control in water environment.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-blue-300 font-bold text-lg">4</span>
-                </div>
-                <h4 className="font-semibold text-white mb-3">Board Riding</h4>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Water starts, first rides, direction changes, and independent riding.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* What's Included */}
-          <div className="bg-gradient-to-br from-teal-900/15 via-card/15 to-emerald-900/15 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] max-w-4xl mx-auto mb-16">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-center text-teal-200">What's Included in Your Course</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-white mb-3">Equipment & Materials</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Complete kite setup (kite, bar, lines)</li>
-                  <li>• Wetsuit and safety equipment</li>
-                  <li>• Board and harness</li>
-                  <li>• Helmet and impact vest</li>
-                  <li>• Theory materials and guides</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Professional Support</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• VDWS certified instruction</li>
-                  <li>• Radio communication system</li>
-                  <li>• Video analysis and feedback</li>
-                  <li>• Progress tracking and tips</li>
-                  <li>• Post-course support and advice</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Safety Features</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Comprehensive safety briefings</li>
-                  <li>• Rescue boat support when needed</li>
-                  <li>• First aid certified instructor</li>
-                  <li>• Weather monitoring and assessment</li>
-                  <li>• Emergency action protocols</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-white mb-3">Learning Benefits</h4>
-                <ul className="text-white/80 text-sm space-y-1">
-                  <li>• Multilingual instruction available</li>
-                  <li>• Flexible pace and scheduling</li>
-                  <li>• Small group sizes for attention</li>
-                  <li>• Confidence building focus</li>
-                  <li>• Lifetime learning support</li>
-                </ul>
               </div>
             </div>
           </div>
