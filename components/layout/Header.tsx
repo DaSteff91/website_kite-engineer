@@ -186,6 +186,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null);
   const [expandedMobileSubmenu, setExpandedMobileSubmenu] = useState<string | null>(null);
+  const [expandedDesktopSubmenu, setExpandedDesktopSubmenu] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
@@ -242,6 +243,14 @@ export function Header() {
       setExpandedMobileSubmenu(null);
     } else {
       setExpandedMobileSubmenu(submenuLabel);
+    }
+  };
+
+  const handleDesktopSubmenuClick = (submenuLabel: string) => {
+    if (expandedDesktopSubmenu === submenuLabel) {
+      setExpandedDesktopSubmenu(null);
+    } else {
+      setExpandedDesktopSubmenu(submenuLabel);
     }
   };
 
@@ -311,7 +320,7 @@ export function Header() {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent 
                         align="start" 
-                        className="w-64 bg-background/95 backdrop-blur-md border border-white/20 p-1"
+                        className="w-72 bg-background/95 backdrop-blur-md border border-white/20 p-1"
                         sideOffset={8}
                       >
                         {/* All Services Link */}
@@ -331,28 +340,56 @@ export function Header() {
                         </DropdownMenuItem>
                         <DropdownMenuSeparator className="bg-white/20 my-1" />
                         
-                        {/* Hierarchical Submenus */}
+                        {/* Expandable Categories */}
                         {item.desktopSubmenus?.map((submenu, submenuIndex) => (
                           <div key={submenu.label} className="space-y-1">
-                            <div className="px-3 py-2 text-sm font-medium text-white/70 text-left">
-                              {submenu.label}
-                            </div>
-                            {submenu.items.map((subItem) => (
-                              <DropdownMenuItem key={subItem.href + subItem.label} asChild className="p-0">
-                                <Link
-                                  href={subItem.href}
+                            {/* Category Header with Expand Button */}
+                            <div className="flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded-sm">
+                              <Link
+                                href={`${item.href}/${submenu.label.toLowerCase().replace(/\s+/g, '-')}`}
+                                className="flex-1 text-sm font-medium text-white/80 hover:text-white text-left"
+                              >
+                                {submenu.label}
+                              </Link>
+                              <button
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  handleDesktopSubmenuClick(submenu.label);
+                                }}
+                                className="p-1 text-white/60 hover:text-white/80 transition-colors"
+                              >
+                                <ChevronRight 
                                   className={cn(
-                                    "w-full cursor-pointer transition-colors px-5 py-2 text-sm font-medium rounded-sm block text-left",
-                                    "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
-                                    pathname === subItem.href
-                                      ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                      : "text-white/80"
+                                    "h-4 w-4 transition-transform duration-200",
+                                    expandedDesktopSubmenu === submenu.label && "rotate-90"
                                   )}
-                                >
-                                  {subItem.label}
-                                </Link>
-                              </DropdownMenuItem>
-                            ))}
+                                />
+                              </button>
+                            </div>
+
+                            {/* Expanded Items */}
+                            {expandedDesktopSubmenu === submenu.label && (
+                              <div className="pl-4 space-y-1">
+                                {submenu.items.map((subItem) => (
+                                  <DropdownMenuItem key={subItem.href} asChild className="p-0">
+                                    <Link
+                                      href={subItem.href}
+                                      className={cn(
+                                        "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
+                                        "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                                        pathname === subItem.href
+                                          ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                          : "text-white/70"
+                                      )}
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  </DropdownMenuItem>
+                                ))}
+                              </div>
+                            )}
+                            
                             {submenuIndex < item.desktopSubmenus!.length - 1 && (
                               <DropdownMenuSeparator className="bg-white/10 my-1" />
                             )}
