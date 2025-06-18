@@ -30,28 +30,24 @@ const NAV_ITEMS = [
     hasDropdown: true,
     dropdownItems: [
       { href: "/kite", label: "All Kite Services" },
-      { href: "/kite/school-support", label: "School Support" },
-      { href: "/kite/travel-services", label: "Travel Services" },
-      { href: "/kite/consulting", label: "Consulting" },
-      { href: "/kite/theory", label: "Theory Courses" },
-      { href: "/kite/starting", label: "(Re-)Starting" },
-      { href: "/kite/advanced", label: "Advanced Courses" },
+      { href: "/kite/freelancer", label: "Freelancer Services" },
+      { href: "/kite/courses", label: "Courses" },
     ],
     desktopSubmenus: [
       {
         label: "Freelancer",
         items: [
-          { href: "/kite/school-support", label: "School Support" },
-          { href: "/kite/travel-services", label: "Travel Services" },
-          { href: "/kite/consulting", label: "Consulting" },
+          { href: "/kite/freelancer/school-support", label: "School Support" },
+          { href: "/kite/freelancer/travel-services", label: "Travel Services" },
+          { href: "/kite/freelancer/consulting", label: "Consulting" },
         ]
       },
       {
         label: "Courses", 
         items: [
-          { href: "/kite/theory", label: "Theory Courses" },
-          { href: "/kite/starting", label: "(Re-)Starting" },
-          { href: "/kite/advanced", label: "Advanced Courses" },
+          { href: "/kite/courses/theory", label: "Theory Courses" },
+          { href: "/kite/courses/starting", label: "(Re-)Starting" },
+          { href: "/kite/courses/advanced", label: "Advanced Courses" },
         ]
       }
     ],
@@ -59,17 +55,17 @@ const NAV_ITEMS = [
       {
         label: "Freelancer",
         items: [
-          { href: "/kite/school-support", label: "School Support" },
-          { href: "/kite/travel-services", label: "Travel Services" },
-          { href: "/kite/consulting", label: "Consulting" },
+          { href: "/kite/freelancer/school-support", label: "School Support" },
+          { href: "/kite/freelancer/travel-services", label: "Travel Services" },
+          { href: "/kite/freelancer/consulting", label: "Consulting" },
         ]
       },
       {
         label: "Courses", 
         items: [
-          { href: "/kite/theory", label: "Theory Courses" },
-          { href: "/kite/starting", label: "(Re-)Starting" },
-          { href: "/kite/advanced", label: "Advanced Courses" },
+          { href: "/kite/courses/theory", label: "Theory Courses" },
+          { href: "/kite/courses/starting", label: "(Re-)Starting" },
+          { href: "/kite/courses/advanced", label: "Advanced Courses" },
         ]
       }
     ]
@@ -90,46 +86,46 @@ const NAV_ITEMS = [
       {
         label: "Process Engineering",
         items: [
-          { href: "/engineer/process-engineering", label: "Process Control" },
-          { href: "/engineer/process-engineering", label: "Process Optimization" },
-          { href: "/engineer/process-engineering", label: "Change Management" },
-          { href: "/engineer/process-engineering", label: "Monitoring" },
+          { href: "/engineer/process-engineering/process-control", label: "Process Control" },
+          { href: "/engineer/process-engineering/process-optimization", label: "Process Optimization" },
+          { href: "/engineer/process-engineering/change-management", label: "Change Management" },
+          { href: "/engineer/process-engineering/monitoring", label: "Monitoring" },
         ]
       },
       {
         label: "Process Development",
         items: [
-          { href: "/engineer/process-development", label: "Creativity" },
-          { href: "/engineer/process-development", label: "Process Design" },
-          { href: "/engineer/process-development", label: "Simulation & Prototyping" },
-          { href: "/engineer/process-development", label: "Equipment Roadmap" },
+          { href: "/engineer/process-development/creativity", label: "Creativity" },
+          { href: "/engineer/process-development/process-design", label: "Process Design" },
+          { href: "/engineer/process-development/simulation-prototyping", label: "Simulation & Prototyping" },
+          { href: "/engineer/process-development/equipment-roadmap", label: "Equipment Roadmap" },
         ]
       },
       {
         label: "Software Development",
         items: [
-          { href: "/engineer/software-development", label: "Custom Solutions" },
-          { href: "/engineer/software-development", label: "Database Management" },
-          { href: "/engineer/software-development", label: "Workflow Automation" },
-          { href: "/engineer/software-development", label: "Web Development" },
+          { href: "/engineer/software-development/custom-solutions", label: "Custom Solutions" },
+          { href: "/engineer/software-development/database-management", label: "Database Management" },
+          { href: "/engineer/software-development/workflow-automation", label: "Workflow Automation" },
+          { href: "/engineer/software-development/web-development", label: "Web Development" },
         ]
       },
       {
         label: "Project Management",
         items: [
-          { href: "/engineer/project-management", label: "Project Setup" },
-          { href: "/engineer/project-management", label: "Timeline Management" },
-          { href: "/engineer/project-management", label: "Deviation Management" },
-          { href: "/engineer/project-management", label: "Documentation" },
+          { href: "/engineer/project-management/project-setup", label: "Project Setup" },
+          { href: "/engineer/project-management/timeline-management", label: "Timeline Management" },
+          { href: "/engineer/project-management/deviation-management", label: "Deviation Management" },
+          { href: "/engineer/project-management/documentation", label: "Documentation" },
         ]
       },
       {
         label: "Technical Consulting",
         items: [
-          { href: "/engineer/technical-consulting", label: "Process Assessment" },
-          { href: "/engineer/technical-consulting", label: "Technical Research" },
-          { href: "/engineer/technical-consulting", label: "Training & Knowledge Transfer" },
-          { href: "/engineer/technical-consulting", label: "Competitor Analysis" },
+          { href: "/engineer/technical-consulting/process-assessment", label: "Process Assessment" },
+          { href: "/engineer/technical-consulting/technical-research", label: "Technical Research" },
+          { href: "/engineer/technical-consulting/training-knowledge-transfer", label: "Training & Knowledge Transfer" },
+          { href: "/engineer/technical-consulting/competitor-analysis", label: "Competitor Analysis" },
         ]
       }
     ],
