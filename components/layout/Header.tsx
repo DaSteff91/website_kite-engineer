@@ -343,30 +343,21 @@ export function Header() {
                         {/* Expandable Categories */}
                         {item.desktopSubmenus?.map((submenu, submenuIndex) => (
                           <div key={submenu.label} className="space-y-1">
-                            {/* Category Header with Expand Button */}
-                            <div className="flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded-sm">
-                              <Link
-                                href={`${item.href}/${submenu.label.toLowerCase().replace(/\s+/g, '-')}`}
-                                className="flex-1 text-sm font-medium text-white/80 hover:text-white text-left"
-                              >
+                            {/* Category Header - Full Line Clickable */}
+                            <button
+                              onClick={() => handleDesktopSubmenuClick(submenu.label)}
+                              className="w-full flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded-sm text-left transition-colors"
+                            >
+                              <span className="text-sm font-medium text-white/80 hover:text-white">
                                 {submenu.label}
-                              </Link>
-                              <button
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  e.stopPropagation();
-                                  handleDesktopSubmenuClick(submenu.label);
-                                }}
-                                className="p-1 text-white/60 hover:text-white/80 transition-colors"
-                              >
-                                <ChevronRight 
-                                  className={cn(
-                                    "h-4 w-4 transition-transform duration-200",
-                                    expandedDesktopSubmenu === submenu.label && "rotate-90"
-                                  )}
-                                />
-                              </button>
-                            </div>
+                              </span>
+                              <ChevronRight 
+                                className={cn(
+                                  "h-4 w-4 transition-transform duration-200 text-white/60",
+                                  expandedDesktopSubmenu === submenu.label && "rotate-90"
+                                )}
+                              />
+                            </button>
 
                             {/* Expanded Items */}
                             {expandedDesktopSubmenu === submenu.label && (
@@ -480,8 +471,8 @@ export function Header() {
                 <div key={item.href}>
                   {item.mobileSubmenus ? (
                     <div className="space-y-2">
-                      {/* Main Item with Expand/Collapse */}
-                      <div className="flex items-center justify-between">
+                      {/* Main Item with Expand/Collapse - Full Line Clickable */}
+                      <div className="flex items-center">
                         <Link
                           href={item.href}
                           onClick={() => setIsMobileMenuOpen(false)}
@@ -514,23 +505,21 @@ export function Header() {
                         <div className="pl-4 space-y-2 border-l border-white/20 ml-4">
                           {item.mobileSubmenus.map((submenu) => (
                             <div key={submenu.label} className="space-y-1">
-                              {/* Submenu Header */}
-                              <div className="flex items-center justify-between">
-                                <span className="px-3 py-2 text-base font-medium text-white/80 text-left">
+                              {/* Submenu Header - Full Line Clickable */}
+                              <button
+                                onClick={() => handleMobileSubmenuClick(submenu.label)}
+                                className="w-full flex items-center justify-between px-3 py-2 text-left hover:bg-white/5 rounded-sm transition-colors"
+                              >
+                                <span className="text-base font-medium text-white/80">
                                   {submenu.label}
                                 </span>
-                                <button
-                                  onClick={() => handleMobileSubmenuClick(submenu.label)}
-                                  className="p-1 text-white/60 hover:text-white/80 transition-colors"
-                                >
-                                  <ChevronRight 
-                                    className={cn(
-                                      "h-4 w-4 transition-transform duration-200",
-                                      expandedMobileSubmenu === submenu.label && "rotate-90"
-                                    )}
-                                  />
-                                </button>
-                              </div>
+                                <ChevronRight 
+                                  className={cn(
+                                    "h-4 w-4 transition-transform duration-200 text-white/60",
+                                    expandedMobileSubmenu === submenu.label && "rotate-90"
+                                  )}
+                                />
+                              </button>
 
                               {/* Submenu Items */}
                               {expandedMobileSubmenu === submenu.label && (
