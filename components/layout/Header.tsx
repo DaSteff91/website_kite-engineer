@@ -131,18 +131,48 @@ const NAV_ITEMS = [
     ],
     mobileSubmenus: [
       {
-        label: "Process Services",
+        label: "Process Engineering",
         items: [
-          { href: "/engineer/process-engineering", label: "Process Engineering" },
-          { href: "/engineer/process-development", label: "Process Development" },
+          { href: "/engineer/process-engineering/process-control", label: "Process Control" },
+          { href: "/engineer/process-engineering/process-optimization", label: "Process Optimization" },
+          { href: "/engineer/process-engineering/change-management", label: "Change Management" },
+          { href: "/engineer/process-engineering/monitoring", label: "Monitoring" },
         ]
       },
       {
-        label: "Development & Management",
+        label: "Process Development",
         items: [
-          { href: "/engineer/software-development", label: "Software Development" },
-          { href: "/engineer/project-management", label: "Project Management" },
-          { href: "/engineer/technical-consulting", label: "Technical Consulting" },
+          { href: "/engineer/process-development/creativity", label: "Creativity" },
+          { href: "/engineer/process-development/process-design", label: "Process Design" },
+          { href: "/engineer/process-development/simulation-prototyping", label: "Simulation & Prototyping" },
+          { href: "/engineer/process-development/equipment-roadmap", label: "Equipment Roadmap" },
+        ]
+      },
+      {
+        label: "Software Development",
+        items: [
+          { href: "/engineer/software-development/custom-solutions", label: "Custom Solutions" },
+          { href: "/engineer/software-development/database-management", label: "Database Management" },
+          { href: "/engineer/software-development/workflow-automation", label: "Workflow Automation" },
+          { href: "/engineer/software-development/web-development", label: "Web Development" },
+        ]
+      },
+      {
+        label: "Project Management",
+        items: [
+          { href: "/engineer/project-management/project-setup", label: "Project Setup" },
+          { href: "/engineer/project-management/timeline-management", label: "Timeline Management" },
+          { href: "/engineer/project-management/deviation-management", label: "Deviation Management" },
+          { href: "/engineer/project-management/documentation", label: "Documentation" },
+        ]
+      },
+      {
+        label: "Technical Consulting",
+        items: [
+          { href: "/engineer/technical-consulting/process-assessment", label: "Process Assessment" },
+          { href: "/engineer/technical-consulting/technical-research", label: "Technical Research" },
+          { href: "/engineer/technical-consulting/training-knowledge-transfer", label: "Training & Knowledge Transfer" },
+          { href: "/engineer/technical-consulting/competitor-analysis", label: "Competitor Analysis" },
         ]
       }
     ]
@@ -500,7 +530,7 @@ export function Header() {
                         "px-4 py-3 text-lg font-medium rounded-md",
                         "transition-all duration-200 hover:scale-105",
                         "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                        "text-center block",
+                        "text-left block",
                         pathname === item.href
                           ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                           : "text-white/90"
