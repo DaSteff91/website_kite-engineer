@@ -281,7 +281,7 @@ export function Header() {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent 
                         align="start" 
-                        className="w-48 bg-background/95 backdrop-blur-md border border-white/20 p-1"
+                        className="w-64 bg-background/95 backdrop-blur-md border border-white/20 p-1"
                         sideOffset={8}
                       >
                         {/* All Services Link */}
@@ -289,7 +289,7 @@ export function Header() {
                           <Link
                             href={item.href}
                             className={cn(
-                              "w-full cursor-pointer transition-colors px-2 py-3 text-base font-medium rounded-sm block",
+                              "w-full cursor-pointer transition-colors px-3 py-3 text-base font-medium rounded-sm block text-left",
                               "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
                               pathname === item.href
                                 ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
@@ -302,9 +302,9 @@ export function Header() {
                         <DropdownMenuSeparator className="bg-white/20 my-1" />
                         
                         {/* Hierarchical Submenus */}
-                        {item.desktopSubmenus?.map((submenu) => (
+                        {item.desktopSubmenus?.map((submenu, submenuIndex) => (
                           <div key={submenu.label} className="space-y-1">
-                            <div className="px-2 py-1 text-sm font-medium text-white/70">
+                            <div className="px-3 py-2 text-sm font-medium text-white/70 text-left">
                               {submenu.label}
                             </div>
                             {submenu.items.map((subItem) => (
@@ -312,7 +312,7 @@ export function Header() {
                                 <Link
                                   href={subItem.href}
                                   className={cn(
-                                    "w-full cursor-pointer transition-colors px-4 py-2 text-sm font-medium rounded-sm block",
+                                    "w-full cursor-pointer transition-colors px-5 py-2 text-sm font-medium rounded-sm block text-left",
                                     "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
                                     pathname === subItem.href
                                       ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
@@ -323,7 +323,7 @@ export function Header() {
                                 </Link>
                               </DropdownMenuItem>
                             ))}
-                            {submenu !== item.desktopSubmenus![item.desktopSubmenus!.length - 1] && (
+                            {submenuIndex < item.desktopSubmenus!.length - 1 && (
                               <DropdownMenuSeparator className="bg-white/10 my-1" />
                             )}
                           </div>
@@ -403,7 +403,7 @@ export function Header() {
           ref={mobileMenuRef}
           className={cn(
             "absolute top-full left-0 right-0 mt-2 md:hidden",
-            "transition-all duration-200 ease-in-out",
+            "transition-all duration-300 ease-in-out",
             isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           )}
         >
@@ -419,10 +419,9 @@ export function Header() {
                           href={item.href}
                           onClick={() => setIsMobileMenuOpen(false)}
                           className={cn(
-                            "flex-1 px-4 py-3 text-lg font-medium rounded-md",
+                            "flex-1 px-4 py-3 text-lg font-medium rounded-md text-left",
                             "transition-all duration-200",
                             "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                            "text-center",
                             pathname.startsWith(item.href)
                               ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                               : "text-white/90"
@@ -450,7 +449,7 @@ export function Header() {
                             <div key={submenu.label} className="space-y-1">
                               {/* Submenu Header */}
                               <div className="flex items-center justify-between">
-                                <span className="px-3 py-2 text-base font-medium text-white/80">
+                                <span className="px-3 py-2 text-base font-medium text-white/80 text-left">
                                   {submenu.label}
                                 </span>
                                 <button
@@ -475,7 +474,7 @@ export function Header() {
                                       href={subItem.href}
                                       onClick={() => setIsMobileMenuOpen(false)}
                                       className={cn(
-                                        "block px-3 py-2 text-sm font-medium rounded-md",
+                                        "block px-3 py-2 text-sm font-medium rounded-md text-left",
                                         "transition-all duration-200",
                                         "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
                                         pathname === subItem.href
