@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.32...v1.13.0) (2025-06-23)
+
+
+### Features
+
+* implement a sizeable message box in the contact form ([eeb4cde](https://github.com/DaSteff91/website_kite-engineer/commit/eeb4cde3fdd4d161bb1dfd442ca83f3e2f5d86af))
+
 ## [1.12.32](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.31...v1.12.32) (2025-06-17)
 
 
