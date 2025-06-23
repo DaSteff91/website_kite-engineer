@@ -1,3 +1,11 @@
+# [1.14.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.13.0...v1.14.0) (2025-06-23)
+
+
+### Features
+
+* bump same as previous commit ([24a6f6b](https://github.com/DaSteff91/website_kite-engineer/commit/24a6f6b50298816b4a28a55e26fb288cfa1f806b))
+* implement auto reply via email from contact form ([33aee52](https://github.com/DaSteff91/website_kite-engineer/commit/33aee527c46b8bab99e234f111ceba7de0d00b1a))
+
 # [1.13.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.12.32...v1.13.0) (2025-06-23)
 
 
