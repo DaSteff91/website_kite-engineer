@@ -1,6 +1,7 @@
 // utils/nodemailer.ts
 
 import nodemailer from 'nodemailer';
+import type { SendMailOptions } from 'nodemailer';
 
 // Create a transporter object using SMTP with STARTTLS
 const transporter = nodemailer.createTransport({
@@ -17,29 +18,20 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Function to send an email
-
-export async function sendEmail({
-    to,
-    subject,
-    text,
-    replyTo,
-  }: {
-    to: string;
-    subject: string;
-    text: string;
-    replyTo?: string;
-  }) {
-    const mailOptions = {
-      from: process.env.SMTP_USER,
-      to,
-      subject,
-      text,
-      replyTo,
-    };
-
+/**
+ * Sends an email using the configured transporter.
+ *
+ * @param options - A `SendMailOptions` object containing the email details.
+ * @returns The Nodemailer `SentMessageInfo` object.
+ * @throws Will throw an error if sending the email fails.
+ */
+export async function sendEmail(options: SendMailOptions) {
   try {
-    const info = await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail({
+      from: process.env.SMTP_USER,
+      ...options,
+    });
+
     console.log('Email sent:', info.response);
     return info;
   } catch (error) {
