@@ -5,6 +5,7 @@ import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useAutoGrowTextarea } from "@/hooks/useAutoGrowTextarea";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,10 +16,11 @@ export function ContactForm() {
     subject: "",
     message: "",
   });
-  const [prefilledFields, setPrefilledFields] = useState({
-    subject: false,
-    message: false,
-  });
+  const textareaRef = useAutoGrowTextarea(formData.message);
+  const [prefilledFields, setPrefilledFields] = useState<{
+    subject: boolean;
+    message: boolean;
+  }>({ subject: false, message: false });
   const [touchedFields, setTouchedFields] = useState({
     name: false,
     email: false,
@@ -27,45 +29,64 @@ export function ContactForm() {
   });
 
   useEffect(() => {
+    // Prevent zoom on focus
+    const meta = document.createElement("meta");
+    meta.name = "viewport";
+    meta.content = "width=device-width, initial-scale=1, maximum-scale=1";
+    document.head.appendChild(meta);
+
     // Get URL parameters for prefilling
     const urlParams = new URLSearchParams(window.location.search);
-    const subject = urlParams.get('subject');
-    const message = urlParams.get('message');
-    
+    const subject = urlParams.get("subject");
+    const message = urlParams.get("message");
+
     if (subject || message) {
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
         subject: subject ? decodeURIComponent(subject) : prev.subject,
         message: message ? decodeURIComponent(message) : prev.message,
       }));
-      
+
       // Mark fields as prefilled
       setPrefilledFields({
         subject: !!subject,
         message: !!message,
       });
     }
+    return () => {
+      const existingMeta = document.querySelector(
+        'meta[name="viewport"][content="width=device-width, initial-scale=1, maximum-scale=1"]'
+      );
+      if (existingMeta && document.head.contains(existingMeta)) {
+        document.head.removeChild(existingMeta);
+      }
+    };
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleFocus = (fieldName: string) => {
-    setTouchedFields(prev => ({
+    setTouchedFields((prev) => ({
       ...prev,
-      [fieldName]: true
+      [fieldName]: true,
     }));
   };
 
-  const getFieldClassName = (fieldName: keyof typeof prefilledFields, baseClassName: string) => {
+  const getFieldClassName = (
+    fieldName: keyof typeof prefilledFields,
+    baseClassName: string
+  ) => {
     const isPrefilled = prefilledFields[fieldName];
     const isTouched = touchedFields[fieldName];
-    
+
     if (isPrefilled && !isTouched) {
       return `${baseClassName} text-muted-foreground italic`;
     }
@@ -125,7 +146,7 @@ export function ContactForm() {
             placeholder="Your name*"
             value={formData.name}
             onChange={handleInputChange}
-            onFocus={() => handleFocus('name')}
+            onFocus={() => handleFocus("name")}
             required
             className="bg-background/50 h-12 text-base"
           />
@@ -138,7 +159,7 @@ export function ContactForm() {
             placeholder="Your email*"
             value={formData.email}
             onChange={handleInputChange}
-            onFocus={() => handleFocus('email')}
+            onFocus={() => handleFocus("email")}
             required
             className="bg-background/50 h-12 text-base"
           />
@@ -150,27 +171,35 @@ export function ContactForm() {
             placeholder="Subject*"
             value={formData.subject}
             onChange={handleInputChange}
-            onFocus={() => handleFocus('subject')}
+            onFocus={() => handleFocus("subject")}
             required
-            className={getFieldClassName('subject', "bg-background/50 h-12 text-base")}
+            className={getFieldClassName(
+              "subject",
+              "bg-background/50 h-12 text-base"
+            )}
           />
         </div>
 
         <div className="space-y-2">
           <Textarea
+            ref={textareaRef}
             name="message"
             placeholder="Your message*"
             value={formData.message}
             onChange={handleInputChange}
-            onFocus={() => handleFocus('message')}
+            onFocus={() => handleFocus("message")}
             required
-            className={getFieldClassName('message', "bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none")}
+            className={getFieldClassName(
+              "message",
+              "bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none sm:resize-y w-full overflow-hidden max-h-[50vh] sm:max-h-[70vh] transition-[height]"
+            )}
+            style={{ fontSize: "16px" }}
           />
         </div>
 
-        <Button 
-          type="submit" 
-          className="w-full group h-12 text-base font-medium" 
+        <Button
+          type="submit"
+          className="w-full group h-12 text-base font-medium"
           disabled={isSubmitting}
         >
           <span className="flex items-center justify-center">
@@ -185,9 +214,13 @@ export function ContactForm() {
           </span>
         </Button>
         {successMessage && (
-          <p className="text-green-600 text-center mt-4 text-base">{successMessage}</p>
+          <p className="text-green-600 text-center mt-4 text-base">
+            {successMessage}
+          </p>
         )}
-        <p className="text-muted-foreground text-sm text-center">* Mandatory fields</p>
+        <p className="text-muted-foreground text-sm text-center">
+          * Mandatory fields
+        </p>
       </form>
     </div>
   );
