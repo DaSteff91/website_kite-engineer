@@ -68,13 +68,35 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
-      - name: Get current version tag
+      - name: Debug git tag and commit
+        run: |
+          echo "Commit SHA: $(git rev-parse HEAD)"
+          echo "All tags: $(git tag -l)"
+          echo "Tags pointing to HEAD: $(git tag --points-at HEAD)"
+          echo "Git log:"
+          git log -1 --oneline
+
+      # - name: Get current version tag
+      #   id: get_tag
+      #   run: |
+      #     CURRENT_TAG=$(git tag --points-at HEAD)
+      #     echo "Current tag: $CURRENT_TAG"
+      #     echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
+      #     echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
+
+      - name: Get version tag
         id: get_tag
         run: |
-          CURRENT_TAG=$(git tag --points-at HEAD)
-          echo "Current tag: $CURRENT_TAG"
-          echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
-          echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
+          # Fetch all tags from remote
+          git fetch --tags
+          
+          # Try multiple methods to get tag
+          TAG=$(git describe --tags --exact-match HEAD 2>/dev/null || echo "")
+          [ -z "$TAG" ] && TAG=$(git tag --points-at HEAD | head -1)
+          
+          echo "Detected tag: ${TAG:-none}"
+          echo "tag=${TAG}" >> $GITHUB_OUTPUT
+          echo "TAG=${TAG}" >> $GITHUB_ENV
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
