@@ -1,3 +1,11 @@
+## [1.14.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.0...v1.14.1) (2025-06-25)
+
+
+### Bug Fixes
+
+* rollback + testing new action to wait for another action to finish ([c54c4a5](https://github.com/DaSteff91/website_kite-engineer/commit/c54c4a594e5c8e21f49e8f543e14c225e8c56f3f))
+* testing ci pipeline ([6a10f69](https://github.com/DaSteff91/website_kite-engineer/commit/6a10f69d30ed3386c9645531ccc5736edadf8601))
+
 # [1.14.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.13.0...v1.14.0) (2025-06-23)
 
 
