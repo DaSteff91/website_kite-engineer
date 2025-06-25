@@ -1,10 +1,10 @@
 name: Dev - Build, Push to GHCR and Deploy on Server
 
 on:
-  workflow_run:
-    workflows: ["Semantic Versioning"]
-    branches: [main, dev, development]
-    types: [completed]
+  push:
+    branches:
+      - dev
+      - development
 
 jobs:
   get-and-wait:
@@ -45,7 +45,7 @@ jobs:
         if: steps.get-run-id.outputs.result != ''
         uses: fountainhead/action-wait-for-check@v1.0.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PACKAGE_TOKEN }}
           runId: ${{ steps.get-run-id.outputs.result }}
           intervalSeconds: 10 
           timeoutSeconds: 600
