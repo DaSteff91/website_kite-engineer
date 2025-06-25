@@ -1,3 +1,10 @@
+## [1.14.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.3...v1.14.4) (2025-06-25)
+
+
+### Bug Fixes
+
+* testing elements from ealier to wait for a workflow ([0eae1f1](https://github.com/DaSteff91/website_kite-engineer/commit/0eae1f1752d302ea9079bd842043267b8d3f8b27))
+
 ## [1.14.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.2...v1.14.3) (2025-06-25)
 
 
