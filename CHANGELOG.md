@@ -1,3 +1,10 @@
+## [1.14.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.2...v1.14.3) (2025-06-25)
+
+
+### Bug Fixes
+
+* delete doubly entry ([29d5d2d](https://github.com/DaSteff91/website_kite-engineer/commit/29d5d2d7658ee0c5f8723708990f636e4b0cbbfa))
+
 ## [1.14.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.1...v1.14.2) (2025-06-25)
 
 
