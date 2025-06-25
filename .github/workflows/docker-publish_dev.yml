@@ -5,15 +5,6 @@ on:
     branches:
       - dev
       - development
-    paths-ignore:
-      - "README.md"
-      - "docs/**"
-      - ".next/**"
-      - "node_modules/**"
-      - ".env*"
-      - "*ignore*"
-      - ".github/workflows/**"
-      - ".husky/**"
 
 jobs:  
   build-and-push:
@@ -23,45 +14,6 @@ jobs:
       packages: write
 
     steps:
-      # - name: Get Target Workflow Run ID
-      #   id: get-run-id
-      #   uses: actions/github-script@v6
-      #   with:
-      #     script: |
-      #       const { owner, repo } = context.repo;
-      #       const workflowFileName = "release_dev.yml";
-      #       const branch = "dev";
-
-      #       // Get the most recent run of the target workflow
-      #       const runs = await github.rest.actions.listWorkflowRuns({
-      #         owner,
-      #         repo,
-      #         workflow_id: workflowFileName,
-      #         branch,
-      #         event: "push",
-      #         status: "in_progress",
-      #         per_page: 1,
-      #       });
-
-      #       if (runs.data.workflow_runs.length === 0) {
-      #         console.log('No matching runs found.');
-      #         return '';
-      #       }
-
-      #       const runId = runs.data.workflow_runs[0].id;
-      #       console.log(`Found Run ID: ${runId}`);
-      #       return runId;
-      #     result-encoding: string
-
-      # - name: Wait for Workflow Completion
-      #   if: steps.get-run-id.outputs.result != ''
-      #   uses: fountainhead/action-wait-for-check@v1.0.0
-      #   with:
-      #     token: ${{ secrets.GH_PACKAGE_TOKEN }}
-      #     runId: ${{ steps.get-run-id.outputs.result }}
-      #     intervalSeconds: 10 
-      #     timeoutSeconds: 600
-
       - name: Checkout the repository code
         uses: actions/checkout@v4
         with:
