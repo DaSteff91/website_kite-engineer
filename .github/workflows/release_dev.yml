@@ -32,3 +32,10 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.SEMVERSIONING }}
+
+      - name: Verify semantic-release tag
+        run: |
+          echo "Latest tag: $(git describe --tags --abbrev=0)"
+          echo "Tag SHA:    $(git rev-list -n 1 v1.14.8)"
+          echo "HEAD SHA:   $(git rev-parse HEAD)"
+          git log -1 --oneline
