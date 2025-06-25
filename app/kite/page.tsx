@@ -99,9 +99,8 @@ export default function KitePage() {
                     Whether you need a VDWS-certified instructor, shop
                     assistance, or someone to manage the bar, I've got you
                     covered. Flexibility is my strength.
-                    
                     <div className="mt-4 flex flex-col gap-2">
-                      <Link 
+                      <Link
                         href="/kite/school-support"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
@@ -130,16 +129,15 @@ export default function KitePage() {
                     Looking for someone how organizes your kite trip? Or even
                     accompanies you as a personal coach? No problem, you get
                     well served
-                    
                     <div className="mt-4 flex flex-col gap-2">
-                      <Link 
+                      <Link
                         href="/kite/travel-services"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
                       </Link>
                       <Link
-                        href="/contact?subject=About your travel services (Your Subject)*&message=Hey Steff!%0A%0AYour travel services sound amazing! I'm thinking about organizing a kite trip and could use some help. Whether it's planning or having you as a personal coach - let's make it happen!%0A%0AHere's what I have in mind:%0A%0A[Tell me about your dream kite destination, travel dates, skill level, and what kind of trip experience you're looking for]%0A%0AStoked to hear from you! (Your Message)*"
+                        href="/contact?subject=About your travel services (Your Subject)*&message=Hey Steff!%0A%0AYour travel services sound amazing! I'm thinking about organizing a kite trip and could use some help.%0A%0AHere's what I have in mind:%0A%0A[Tell me about your dream kite destination, travel dates, skill level, and what kind of trip experience you're looking for]%0A%0AStoked to hear from you! (Your Message)*"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         Contact
@@ -159,9 +157,8 @@ export default function KitePage() {
                     selecting the right kiteboarding equipment. Need someone to
                     represent the sport? I like talking in front of people and
                     deliver a message to others
-                    
                     <div className="mt-4 flex flex-col gap-2">
-                      <Link 
+                      <Link
                         href="/kite/consulting"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
@@ -197,9 +194,8 @@ export default function KitePage() {
                     Why not pulling the bar? Let's break down the "science"
                     behind the sport—from wind dynamics to material technology.
                     Choose your topic and pace; I'll make it clear and engaging.
-                    
                     <div className="mt-4 flex flex-col gap-2">
-                      <Link 
+                      <Link
                         href="/kite/theory"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
@@ -225,9 +221,8 @@ export default function KitePage() {
                     Whether you're beginning a new kite journey or returning
                     after a break, I'll help you (re-)gain confidence on the
                     water.
-                    
                     <div className="mt-4 flex flex-col gap-2">
-                      <Link 
+                      <Link
                         href="/kite/starting"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
@@ -254,9 +249,8 @@ export default function KitePage() {
                     nailing loops, let's tackle challenges together. Or you
                     prefer a supervised sessions? No problem! You can as well
                     bring your camera or drone!
-                    
                     <div className="mt-4 flex flex-col gap-2">
-                      <Link 
+                      <Link
                         href="/kite/advanced"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >

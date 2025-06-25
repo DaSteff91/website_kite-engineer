@@ -1,25 +1,30 @@
-name: Dev - Build, Push to GHCR and Deploy on Server
+name: Build, Push to GHCR and Deploy on Server
 
 on:
-  workflow_run:
-    workflows: ["Semantic Versioning"]
-    branches: [main, dev, development]
-    types: [completed]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Ref to build'
+        required: true
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
     steps:
       - name: Checkout the repository code
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_PACKAGE_TOKEN }}
+          ref: ${{ github.event.inputs.ref }}
           persist-credentials: false
           fetch-depth: 0
+
+      - name: Get current ref
+        run: echo "Building for ${{ github.event.inputs.ref }}"
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3
@@ -28,15 +33,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
-      - name: Get current version tag # commented out to test the version below in order to get some more tags like branch and latest (only on main)
+      - name: Get current version tag
         id: get_tag
         run: |
           CURRENT_TAG=$(git tag --points-at HEAD)
           echo "Current tag: $CURRENT_TAG"
           echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
           echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
-
-      
 
       - name: Extract Docker metadata
         id: meta
