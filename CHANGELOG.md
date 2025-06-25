@@ -1,3 +1,10 @@
+## [1.14.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.4...v1.14.5) (2025-06-25)
+
+
+### Bug Fixes
+
+* didnt execute the previous change. Why? ([905bc5a](https://github.com/DaSteff91/website_kite-engineer/commit/905bc5a3f60d33ab6af39acc8d34b95152ee6aa5))
+
 ## [1.14.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.3...v1.14.4) (2025-06-25)
 
 
