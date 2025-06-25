@@ -32,10 +32,3 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.SEMVERSIONING }}
-
-      - name: Dispatch build-deploy workflow
-        uses: the-actions-org/workflow-dispatch-and-wait@v4
-        with:
-          workflow: 'Dev - Build, Push to GHCR and Deploy on Server'
-          ref: ${{ github.ref }}
-          token: ${{ secrets.SEMVERSIONING }}

@@ -1,30 +1,68 @@
-name: Build, Push to GHCR and Deploy on Server
+name: Dev - Build, Push to GHCR and Deploy on Server
 
 on:
-  workflow_dispatch:
-    inputs:
-      ref:
-        description: 'Ref to build'
-        required: true
-
-permissions:
-  contents: read
-  packages: write
+  workflow_run:
+    workflows: ["Semantic Versioning"]
+    branches: [main, dev, development]
+    types: [completed]
 
 jobs:
+  get-and-wait:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Get the latest run ID of the target workflow
+      - name: Get Target Workflow Run ID
+        id: get-run-id
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const workflowFileName = "release_dev.yml";
+            const branch = "dev";
+
+            // Get the most recent run of the target workflow
+            const runs = await github.rest.actions.listWorkflowRuns({
+              owner,
+              repo,
+              workflow_id: workflowFileName,
+              branch,
+              event: "push",
+              status: "in_progress",
+              per_page: 1,
+            });
+
+            if (runs.data.workflow_runs.length === 0) {
+              console.log('No matching runs found.');
+              return '';
+            }
+
+            const runId = runs.data.workflow_runs[0].id;
+            console.log(`Found Run ID: ${runId}`);
+            return runId;
+          result-encoding: string
+
+      - name: Wait for Workflow Completion
+        if: steps.get-run-id.outputs.result != ''
+        uses: fountainhead/action-wait-for-check@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          runId: ${{ steps.get-run-id.outputs.result }}
+          intervalSeconds: 10 
+          timeoutSeconds: 600
+  
   build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
     steps:
       - name: Checkout the repository code
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_PACKAGE_TOKEN }}
-          ref: ${{ github.event.inputs.ref }}
           persist-credentials: false
           fetch-depth: 0
-
-      - name: Get current ref
-        run: echo "Building for ${{ github.event.inputs.ref }}"
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3
