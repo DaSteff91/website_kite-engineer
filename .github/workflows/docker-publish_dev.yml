@@ -14,8 +14,6 @@ on:
       - "*ignore*"
       - ".github/workflows/**"
       - ".husky/**"
-    tags:
-      - "v*.*.*"
 
 jobs:  
   build-and-push:
