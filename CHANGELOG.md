@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.1...v1.14.2) (2025-06-25)
+
+
+### Bug Fixes
+
+* testing ci pipeline ([b70e36d](https://github.com/DaSteff91/website_kite-engineer/commit/b70e36d883752a0c1ffe987f9163ff3a8282e3c9))
+
 ## [1.14.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.0...v1.14.1) (2025-06-25)
 
 
