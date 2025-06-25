@@ -1,3 +1,10 @@
+## [1.14.8](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.7...v1.14.8) (2025-06-25)
+
+
+### Bug Fixes
+
+* debugging why tag is missing ([bc33078](https://github.com/DaSteff91/website_kite-engineer/commit/bc3307813fdcaf78c1583c2bf9b95b110163f54b))
+
 ## [1.14.7](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.6...v1.14.7) (2025-06-25)
 
 
