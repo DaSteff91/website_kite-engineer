@@ -79,16 +79,6 @@ jobs:
           echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
           echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
 
-      - name: Extract Docker metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ghcr.io/dasteff91/ghcr-test
-          tags: |
-            type=raw,value=${{ steps.get_tag.outputs.tag }},enable=${{ steps.get_tag.outputs.tag != '' }}
-            type=ref,event=branch
-            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
