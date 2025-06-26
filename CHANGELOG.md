@@ -1,3 +1,10 @@
+## [1.14.13](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.12...v1.14.13) (2025-06-26)
+
+
+### Bug Fixes
+
+* update navigation link to exclude intermediary pages for kite ([7f01a19](https://github.com/DaSteff91/website_kite-engineer/commit/7f01a19d64ff31e5b36adfa9e2426fe11d9bb471))
+
 ## [1.14.12](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.11...v1.14.12) (2025-06-26)
 
 
