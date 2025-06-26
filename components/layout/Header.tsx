@@ -1,10 +1,18 @@
-'use client';
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sun, Moon, Globe, ChevronDown, ChevronRight } from "lucide-react";
+import {
+  Menu,
+  X,
+  Sun,
+  Moon,
+  Globe,
+  ChevronDown,
+  ChevronRight,
+} from "lucide-react";
 import { useTheme } from "next-themes";
 import {
   DropdownMenu,
@@ -23,78 +31,173 @@ import { cn } from "@/lib/utils";
   { code: "de", label: "Deutsch" },
 ];*/
 
+type LinkItem = {
+  type: "link";
+  label: string;
+  href: string;
+};
+
+type SubmenuItem = {
+  type: "submenu";
+  label: string;
+  items: LinkItem[];
+};
+
+type DropdownItem = LinkItem | SubmenuItem;
+
+export type NavItem = {
+  label: string;
+  href?: string;
+  dropdownItems?: DropdownItem[];
+};
+
 const NAV_ITEMS = [
-  { 
-    href: "/kite", 
+  {
+    href: "/kite",
     label: "Kite",
     hasDropdown: true,
     dropdownItems: [
       { href: "/kite", label: "All Kite Services" },
-      { href: "/kite/school-support", label: "School Support" },
-      { href: "/kite/travel-services", label: "Travel Services" },
-      { href: "/kite/consulting", label: "Consulting" },
-      { href: "/kite/theory", label: "Theory Courses" },
-      { href: "/kite/starting", label: "Starting Courses" },
-      { href: "/kite/advanced", label: "Advanced Courses" },
-    ]
+      {
+        label: "Freelancer Services",
+        isSubmenu: true,
+        items: [
+          { href: "/kite/freelancer/school-support", label: "School Support" },
+          {
+            href: "/kite/freelancer/travel-services",
+            label: "Travel Services",
+          },
+          { href: "/kite/freelancer/consulting", label: "Consulting" },
+        ],
+      },
+      {
+        label: "Courses",
+        isSubmenu: true,
+        items: [
+          { href: "/kite/courses/theory", label: "Theory Courses" },
+          { href: "/kite/courses/starting", label: "Starting Courses" },
+          { href: "/kite/courses/advanced", label: "Advanced Courses" },
+        ],
+      },
+    ],
   },
-  { 
-    href: "/engineer", 
+  {
+    href: "/engineer",
     label: "Engineer",
     hasDropdown: true,
     dropdownItems: [
       { href: "/engineer", label: "All Engineering Services" },
-      { 
+      {
         label: "Process Engineering",
         isSubmenu: true,
         items: [
-          { href: "/engineer/process-engineering/process-control", label: "Process Control" },
-          { href: "/engineer/process-engineering/process-optimization", label: "Process Optimization" },
-          { href: "/engineer/process-engineering/change-management", label: "Change Management" },
-          { href: "/engineer/process-engineering/monitoring", label: "Monitoring" },
-        ]
+          {
+            href: "/engineer/process-engineering/process-control",
+            label: "Process Control",
+          },
+          {
+            href: "/engineer/process-engineering/process-optimization",
+            label: "Process Optimization",
+          },
+          {
+            href: "/engineer/process-engineering/change-management",
+            label: "Change Management",
+          },
+          {
+            href: "/engineer/process-engineering/monitoring",
+            label: "Monitoring",
+          },
+        ],
       },
-      { 
+      {
         label: "Process Development",
         isSubmenu: true,
         items: [
-          { href: "/engineer/process-development/creativity", label: "Creativity" },
-          { href: "/engineer/process-development/process-design", label: "Process Design" },
-          { href: "/engineer/process-development/simulation-prototyping", label: "Simulation & Prototyping" },
-          { href: "/engineer/process-development/equipment-roadmap", label: "Equipment Roadmap" },
-        ]
+          {
+            href: "/engineer/process-development/creativity",
+            label: "Creativity",
+          },
+          {
+            href: "/engineer/process-development/process-design",
+            label: "Process Design",
+          },
+          {
+            href: "/engineer/process-development/simulation-prototyping",
+            label: "Simulation & Prototyping",
+          },
+          {
+            href: "/engineer/process-development/equipment-roadmap",
+            label: "Equipment Roadmap",
+          },
+        ],
       },
-      { 
+      {
         label: "Software Development",
         isSubmenu: true,
         items: [
-          { href: "/engineer/software-development/custom-solutions", label: "Custom Solutions" },
-          { href: "/engineer/software-development/database-management", label: "Database Management" },
-          { href: "/engineer/software-development/workflow-automation", label: "Workflow Automation" },
-          { href: "/engineer/software-development/web-development", label: "Web Development" },
-        ]
+          {
+            href: "/engineer/software-development/custom-solutions",
+            label: "Custom Solutions",
+          },
+          {
+            href: "/engineer/software-development/database-management",
+            label: "Database Management",
+          },
+          {
+            href: "/engineer/software-development/workflow-automation",
+            label: "Workflow Automation",
+          },
+          {
+            href: "/engineer/software-development/web-development",
+            label: "Web Development",
+          },
+        ],
       },
-      { 
+      {
         label: "Project Management",
         isSubmenu: true,
         items: [
-          { href: "/engineer/project-management/project-setup", label: "Project Setup" },
-          { href: "/engineer/project-management/timeline-management", label: "Timeline Management" },
-          { href: "/engineer/project-management/deviation-management", label: "Deviation Management" },
-          { href: "/engineer/project-management/documentation", label: "Documentation" },
-        ]
+          {
+            href: "/engineer/project-management/project-setup",
+            label: "Project Setup",
+          },
+          {
+            href: "/engineer/project-management/timeline-management",
+            label: "Timeline Management",
+          },
+          {
+            href: "/engineer/project-management/deviation-management",
+            label: "Deviation Management",
+          },
+          {
+            href: "/engineer/project-management/documentation",
+            label: "Documentation",
+          },
+        ],
       },
-      { 
+      {
         label: "Technical Consulting",
         isSubmenu: true,
         items: [
-          { href: "/engineer/technical-consulting/process-assessment", label: "Process Assessment" },
-          { href: "/engineer/technical-consulting/technical-research", label: "Technical Research" },
-          { href: "/engineer/technical-consulting/training-knowledge-transfer", label: "Training & Knowledge Transfer" },
-          { href: "/engineer/technical-consulting/competitor-analysis", label: "Competitor Analysis" },
-        ]
-      }
-    ]
+          {
+            href: "/engineer/technical-consulting/process-assessment",
+            label: "Process Assessment",
+          },
+          {
+            href: "/engineer/technical-consulting/technical-research",
+            label: "Technical Research",
+          },
+          {
+            href: "/engineer/technical-consulting/training-knowledge-transfer",
+            label: "Training & Knowledge Transfer",
+          },
+          {
+            href: "/engineer/technical-consulting/competitor-analysis",
+            label: "Competitor Analysis",
+          },
+        ],
+      },
+    ],
   },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -103,15 +206,21 @@ const NAV_ITEMS = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null);
-  const [expandedMobileSubmenu, setExpandedMobileSubmenu] = useState<string | null>(null);
-  const [expandedDesktopSubmenu, setExpandedDesktopSubmenu] = useState<string | null>(null);
+  const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(
+    null
+  );
+  const [expandedMobileSubmenu, setExpandedMobileSubmenu] = useState<
+    string | null
+  >(null);
+  const [expandedDesktopSubmenu, setExpandedDesktopSubmenu] = useState<
+    string | null
+  >(null);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const pathname = usePathname();
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
-  
+
   useEffect(() => {
     setMounted(true);
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -134,9 +243,9 @@ export function Header() {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMobileMenuOpen]);
 
@@ -237,8 +346,8 @@ export function Header() {
                           <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                         </button>
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent 
-                        align="start" 
+                      <DropdownMenuContent
+                        align="start"
                         className="w-72 bg-background/95 backdrop-blur-md border border-white/20 p-1"
                         sideOffset={8}
                       >
@@ -258,56 +367,90 @@ export function Header() {
                           </Link>
                         </DropdownMenuItem>
                         <DropdownMenuSeparator className="bg-white/20 my-1" />
-                        
+
                         {/* Direct Service Links */}
                         {item.dropdownItems?.map((dropdownItem, index) => {
                           if (dropdownItem.isSubmenu) {
                             return (
-                              <div key={dropdownItem.label} className="space-y-1">
+                              <div
+                                key={dropdownItem.label}
+                                className="space-y-1"
+                              >
                                 {/* Submenu Header - Full Line Clickable */}
                                 <button
-                                  onClick={() => handleDesktopSubmenuClick(dropdownItem.label)}
+                                  onClick={() =>
+                                    handleDesktopSubmenuClick(
+                                      dropdownItem.label
+                                    )
+                                  }
                                   className="w-full flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded-sm text-left transition-colors"
                                 >
                                   <span className="text-sm font-medium text-white/80 hover:text-white">
                                     {dropdownItem.label}
                                   </span>
-                                  <ChevronRight 
+                                  <ChevronRight
                                     className={cn(
                                       "h-4 w-4 transition-transform duration-200 text-white/60",
-                                      expandedDesktopSubmenu === dropdownItem.label && "rotate-90"
+                                      expandedDesktopSubmenu ===
+                                        dropdownItem.label && "rotate-90"
                                     )}
                                   />
                                 </button>
 
                                 {/* Expanded Items */}
-                                {expandedDesktopSubmenu === dropdownItem.label && (
+                                {expandedDesktopSubmenu ===
+                                  dropdownItem.label && (
                                   <div className="pl-4 space-y-1">
-                                    {dropdownItem.items?.map((subItem) => (
-                                      <DropdownMenuItem key={subItem.href} asChild className="p-0">
-                                        <Link
-                                          href={subItem.href}
-                                          className={cn(
-                                            "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
-                                            "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
-                                            pathname === subItem.href
-                                              ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                              : "text-white/70"
-                                          )}
-                                        >
-                                          {subItem.label}
-                                        </Link>
-                                      </DropdownMenuItem>
-                                    ))}
+                                    {dropdownItem.items?.map(
+                                      (subItem, index) => {
+                                        // Submenu header (no href)
+                                        if (!("href" in subItem)) {
+                                          return (
+                                            <div
+                                              key={`header-${index}`}
+                                              className="px-3 py-2 text-sm font-semibold text-white/60 uppercase tracking-wide"
+                                            >
+                                              {subItem.label}
+                                            </div>
+                                          );
+                                        }
+
+                                        // Real link item
+                                        return (
+                                          <DropdownMenuItem
+                                            key={subItem.href}
+                                            asChild
+                                            className="p-0"
+                                          >
+                                            <Link
+                                              href={subItem.href}
+                                              className={cn(
+                                                "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
+                                                "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                                                pathname === subItem.href
+                                                  ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                                  : "text-white/70"
+                                              )}
+                                            >
+                                              {subItem.label}
+                                            </Link>
+                                          </DropdownMenuItem>
+                                        );
+                                      }
+                                    )}
                                   </div>
                                 )}
-                                
+
                                 <DropdownMenuSeparator className="bg-white/10 my-1" />
                               </div>
                             );
                           } else if (!dropdownItem.isSubmenu && index > 0) {
                             return (
-                              <DropdownMenuItem key={dropdownItem.href} asChild className="p-0">
+                              <DropdownMenuItem
+                                key={dropdownItem.href}
+                                asChild
+                                className="p-0"
+                              >
                                 <Link
                                   href={dropdownItem.href}
                                   className={cn(
@@ -398,7 +541,7 @@ export function Header() {
                           onClick={() => handleMobileItemClick(item.label)}
                           className="p-2 text-white/80 hover:text-white transition-colors"
                         >
-                          <ChevronRight 
+                          <ChevronRight
                             className={cn(
                               "h-5 w-5 transition-transform duration-200",
                               expandedMobileItem === item.label && "rotate-90"
@@ -410,67 +553,81 @@ export function Header() {
                       {/* Expanded Items */}
                       {expandedMobileItem === item.label && (
                         <div className="pl-4 space-y-2 border-l border-white/20 ml-4">
-                          {item.dropdownItems?.filter(item => !item.isSubmenu && item.href !== "/kite" && item.href !== "/engineer").map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.href}
-                              href={dropdownItem.href}
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              className={cn(
-                                "block px-3 py-2 text-base font-medium rounded-md text-left",
-                                "transition-all duration-200",
-                                "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                                pathname === dropdownItem.href
-                                  ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                  : "text-white/80"
-                              )}
-                            >
-                              {dropdownItem.label}
-                            </Link>
-                          ))}
-                          
-                          {/* Submenu Items */}
-                          {item.dropdownItems?.filter(item => item.isSubmenu).map((submenu) => (
-                            <div key={submenu.label} className="space-y-1">
-                              {/* Submenu Header - Full Line Clickable */}
-                              <button
-                                onClick={() => handleMobileSubmenuClick(submenu.label)}
-                                className="w-full flex items-center justify-between px-3 py-2 text-left hover:bg-white/5 rounded-sm transition-colors"
+                          {item.dropdownItems
+                            ?.filter(
+                              (item) =>
+                                !item.isSubmenu &&
+                                item.href !== "/kite" &&
+                                item.href !== "/engineer"
+                            )
+                            .map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.href}
+                                href={dropdownItem.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className={cn(
+                                  "block px-3 py-2 text-base font-medium rounded-md text-left",
+                                  "transition-all duration-200",
+                                  "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                  pathname === dropdownItem.href
+                                    ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                    : "text-white/80"
+                                )}
                               >
-                                <span className="text-base font-medium text-white/80">
-                                  {submenu.label}
-                                </span>
-                                <ChevronRight 
-                                  className={cn(
-                                    "h-4 w-4 transition-transform duration-200 text-white/60",
-                                    expandedMobileSubmenu === submenu.label && "rotate-90"
-                                  )}
-                                />
-                              </button>
+                                {dropdownItem.label}
+                              </Link>
+                            ))}
 
-                              {/* Submenu Items */}
-                              {expandedMobileSubmenu === submenu.label && (
-                                <div className="pl-3 space-y-1">
-                                  {submenu.items?.map((subItem) => (
-                                    <Link
-                                      key={subItem.href}
-                                      href={subItem.href}
-                                      onClick={() => setIsMobileMenuOpen(false)}
-                                      className={cn(
-                                        "block px-3 py-2 text-sm font-medium rounded-md text-left",
-                                        "transition-all duration-200",
-                                        "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                                        pathname === subItem.href
-                                          ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                          : "text-white/70"
-                                      )}
-                                    >
-                                      {subItem.label}
-                                    </Link>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
-                          ))}
+                          {/* Submenu Items */}
+                          {item.dropdownItems
+                            ?.filter((item) => item.isSubmenu)
+                            .map((submenu) => (
+                              <div key={submenu.label} className="space-y-1">
+                                {/* Submenu Header - Full Line Clickable */}
+                                <button
+                                  onClick={() =>
+                                    handleMobileSubmenuClick(submenu.label)
+                                  }
+                                  className="w-full flex items-center justify-between px-3 py-2 text-left hover:bg-white/5 rounded-sm transition-colors"
+                                >
+                                  <span className="text-base font-medium text-white/80">
+                                    {submenu.label}
+                                  </span>
+                                  <ChevronRight
+                                    className={cn(
+                                      "h-4 w-4 transition-transform duration-200 text-white/60",
+                                      expandedMobileSubmenu === submenu.label &&
+                                        "rotate-90"
+                                    )}
+                                  />
+                                </button>
+
+                                {/* Submenu Items */}
+                                {expandedMobileSubmenu === submenu.label && (
+                                  <div className="pl-3 space-y-1">
+                                    {submenu.items?.map((subItem) => (
+                                      <Link
+                                        key={subItem.href}
+                                        href={subItem.href}
+                                        onClick={() =>
+                                          setIsMobileMenuOpen(false)
+                                        }
+                                        className={cn(
+                                          "block px-3 py-2 text-sm font-medium rounded-md text-left",
+                                          "transition-all duration-200",
+                                          "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                          pathname === subItem.href
+                                            ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                            : "text-white/70"
+                                        )}
+                                      >
+                                        {subItem.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            ))}
                         </div>
                       )}
                     </div>
