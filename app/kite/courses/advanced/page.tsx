@@ -3,7 +3,16 @@ import background_image_darker from "@/public/images/background_image_darker.jpe
 import kite_hero_image from "@/public/images/kite_hero_image.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, ArrowBigUpDash, Zap, Trophy, Camera, Wind, Target } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  ArrowBigUpDash,
+  Zap,
+  Trophy,
+  Camera,
+  Wind,
+  Target,
+} from "lucide-react";
 
 export default function AdvancedPage() {
   return (
@@ -49,12 +58,12 @@ export default function AdvancedPage() {
         <div className="container mx-auto px-4">
           {/* Back Navigation */}
           <div className="mb-8">
-            <Link 
-              href="/kite/courses" 
+            <Link
+              href="/kite"
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Courses
+              Back to All Kite Services
             </Link>
           </div>
 
@@ -67,7 +76,8 @@ export default function AdvancedPage() {
               Push Your Limits Safely
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              From first toeside rides to nailing loops - take your skills to the next level
+              From first toeside rides to nailing loops - take your skills to
+              the next level
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -77,7 +87,9 @@ export default function AdvancedPage() {
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <ArrowBigUpDash className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">Jumping & Airtime</h3>
+                <h3 className="text-lg font-semibold text-cyan-200">
+                  Jumping & Airtime
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Controlled jumping techniques</li>
@@ -91,7 +103,9 @@ export default function AdvancedPage() {
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Zap className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">Freestyle Tricks</h3>
+                <h3 className="text-lg font-semibold text-teal-200">
+                  Freestyle Tricks
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Basic unhooked riding</li>
@@ -105,7 +119,9 @@ export default function AdvancedPage() {
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Wind className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">Toeside Mastery</h3>
+                <h3 className="text-lg font-semibold text-emerald-200">
+                  Toeside Mastery
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Toeside riding fundamentals</li>
@@ -119,7 +135,9 @@ export default function AdvancedPage() {
             <div className="bg-gradient-to-br from-blue-900/35 via-card/35 to-cyan-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Trophy className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">Competition Prep</h3>
+                <h3 className="text-lg font-semibold text-blue-200">
+                  Competition Prep
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Contest strategy and tactics</li>
@@ -133,7 +151,9 @@ export default function AdvancedPage() {
             <div className="bg-gradient-to-br from-cyan-900/40 via-card/40 to-teal-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Camera className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">Video Analysis</h3>
+                <h3 className="text-lg font-semibold text-cyan-200">
+                  Video Analysis
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Professional video documentation</li>
@@ -147,7 +167,9 @@ export default function AdvancedPage() {
             <div className="bg-gradient-to-br from-teal-900/45 via-card/45 to-emerald-900/45 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">Supervised Sessions</h3>
+                <h3 className="text-lg font-semibold text-teal-200">
+                  Supervised Sessions
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Safety-focused progression</li>
@@ -162,7 +184,8 @@ export default function AdvancedPage() {
           {/* Contact Section */}
           <div className="text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to push your limits and master advanced kiteboarding skills? Let's take your riding to the next level safely.
+              Ready to push your limits and master advanced kiteboarding skills?
+              Let's take your riding to the next level safely.
             </p>
             <Link href="/contact?subject=Advanced Kiteboarding Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your advanced courses. Please provide information about:%0A%0A- Available advanced skills and progression levels%0A- Coaching methods and safety protocols%0A- Video documentation options%0A- Scheduling and pricing%0A%0AMy current level and goals:%0A[Please describe your current kiteboarding skills, specific tricks or techniques you want to learn, competition interests, and any particular goals or challenges]%0A%0AReady to send it safely!">
               <Button

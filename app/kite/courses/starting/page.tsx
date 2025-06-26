@@ -3,7 +3,16 @@ import background_image_darker from "@/public/images/background_image_darker.jpe
 import kite_hero_image from "@/public/images/kite_hero_image.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, CirclePlay, Heart, RotateCcw, Target, Users, Clock } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  CirclePlay,
+  Heart,
+  RotateCcw,
+  Target,
+  Users,
+  Clock,
+} from "lucide-react";
 
 export default function StartingPage() {
   return (
@@ -49,12 +58,12 @@ export default function StartingPage() {
         <div className="container mx-auto px-4">
           {/* Back Navigation */}
           <div className="mb-8">
-            <Link 
-              href="/kite/courses" 
+            <Link
+              href="/kite"
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Courses
+              Back to All Kite Services
             </Link>
           </div>
 
@@ -67,7 +76,8 @@ export default function StartingPage() {
               Begin or Rediscover Your Passion
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Whether you're taking your first steps or returning after a break - build confidence on the water
+              Whether you're taking your first steps or returning after a break
+              - build confidence on the water
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -78,9 +88,11 @@ export default function StartingPage() {
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <CirclePlay className="h-7 w-7 text-cyan-400" />
-                <h3 className="text-xl font-bold text-cyan-200">Complete Beginner Courses</h3>
+                <h3 className="text-xl font-bold text-cyan-200">
+                  Complete Beginner Courses
+                </h3>
               </div>
-              
+
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
@@ -116,9 +128,11 @@ export default function StartingPage() {
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <RotateCcw className="h-7 w-7 text-teal-400" />
-                <h3 className="text-xl font-bold text-teal-200">Restart Programs</h3>
+                <h3 className="text-xl font-bold text-teal-200">
+                  Restart Programs
+                </h3>
               </div>
-              
+
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
@@ -154,7 +168,8 @@ export default function StartingPage() {
           {/* Contact Section */}
           <div className="text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to start or restart your kiteboarding journey? Let's build your confidence and skills on the water.
+              Ready to start or restart your kiteboarding journey? Let's build
+              your confidence and skills on the water.
             </p>
             <Link href="/contact?subject=Starting/Restarting Kiteboarding Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your starting/restarting courses. Please provide information about:%0A%0A- Course options and scheduling%0A- Pricing and duration%0A- Equipment and safety measures%0A- Location and conditions%0A%0AMy situation:%0A[Please describe if you're a complete beginner or returning after a break, your previous experience, physical fitness level, and any specific concerns or goals]%0A%0AExcited to get started!">
               <Button

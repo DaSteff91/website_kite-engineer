@@ -3,7 +3,16 @@ import background_image_darker from "@/public/images/background_image_darker.jpe
 import kite_hero_image from "@/public/images/kite_hero_image.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, MessageSquareText, ShoppingCart, Presentation, Wind, Wrench, Target } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  MessageSquareText,
+  ShoppingCart,
+  Presentation,
+  Wind,
+  Wrench,
+  Target,
+} from "lucide-react";
 
 export default function ConsultingPage() {
   return (
@@ -49,12 +58,12 @@ export default function ConsultingPage() {
         <div className="container mx-auto px-4">
           {/* Back Navigation */}
           <div className="mb-8">
-            <Link 
-              href="/kite/freelancer" 
+            <Link
+              href="/kite"
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to Freelancer Services
+              Back to All Kite Services
             </Link>
           </div>
 
@@ -67,7 +76,8 @@ export default function ConsultingPage() {
               Expert Guidance for Your Kite Journey
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              From gear selection to sport representation - get professional advice tailored to your needs
+              From gear selection to sport representation - get professional
+              advice tailored to your needs
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -77,7 +87,9 @@ export default function ConsultingPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <ShoppingCart className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">Equipment Selection</h3>
+                <h3 className="text-lg font-semibold text-blue-200">
+                  Equipment Selection
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Kite size and model recommendations</li>
@@ -91,7 +103,9 @@ export default function ConsultingPage() {
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Wind className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">Conditions Analysis</h3>
+                <h3 className="text-lg font-semibold text-cyan-200">
+                  Conditions Analysis
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Local wind pattern assessment</li>
@@ -105,7 +119,9 @@ export default function ConsultingPage() {
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">Skill Development</h3>
+                <h3 className="text-lg font-semibold text-teal-200">
+                  Skill Development
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Progression pathway planning</li>
@@ -119,7 +135,9 @@ export default function ConsultingPage() {
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Presentation className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">Sport Representation</h3>
+                <h3 className="text-lg font-semibold text-emerald-200">
+                  Sport Representation
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Public speaking and presentations</li>
@@ -133,7 +151,9 @@ export default function ConsultingPage() {
             <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Wrench className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">Maintenance Guidance</h3>
+                <h3 className="text-lg font-semibold text-blue-200">
+                  Maintenance Guidance
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Equipment care and maintenance</li>
@@ -147,7 +167,9 @@ export default function ConsultingPage() {
             <div className="bg-gradient-to-br from-cyan-900/45 via-card/45 to-teal-900/45 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <MessageSquareText className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">Personal Consultation</h3>
+                <h3 className="text-lg font-semibold text-cyan-200">
+                  Personal Consultation
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• One-on-one advisory sessions</li>
@@ -162,7 +184,8 @@ export default function ConsultingPage() {
           {/* Contact Section */}
           <div className="text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to get expert guidance for your kite journey? Let's discuss your specific needs and goals.
+              Ready to get expert guidance for your kite journey? Let's discuss
+              your specific needs and goals.
             </p>
             <Link href="/contact?subject=Kite Consulting Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your consulting services. I need guidance with:%0A%0A- Equipment selection and recommendations%0A- Skill development and progression planning%0A- Local conditions and spot advice%0A- Sport representation and presentations%0A%0AMy current situation:%0A[Please describe your skill level, current equipment, local conditions, specific challenges, and goals]%0A%0ALooking forward to your expert advice!">
               <Button
