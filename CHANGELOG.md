@@ -1,3 +1,10 @@
+## [1.14.12](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.11...v1.14.12) (2025-06-26)
+
+
+### Bug Fixes
+
+* previous version, same typescript error ([dd60a8c](https://github.com/DaSteff91/website_kite-engineer/commit/dd60a8c8025812f0239e81d62f4210ebdac673dc))
+
 ## [1.14.11](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.10...v1.14.11) (2025-06-26)
 
 
