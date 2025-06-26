@@ -68,35 +68,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_PACKAGE_TOKEN }}
 
-      - name: Debug git tag and commit
+      - name: Get semantic-release tag
+        id: get_release_tag
         run: |
-          echo "Commit SHA: $(git rev-parse HEAD)"
-          echo "All tags: $(git tag -l)"
-          echo "Tags pointing to HEAD: $(git tag --points-at HEAD)"
-          echo "Git log:"
-          git log -1 --oneline
-
-      # - name: Get current version tag
-      #   id: get_tag
-      #   run: |
-      #     CURRENT_TAG=$(git tag --points-at HEAD)
-      #     echo "Current tag: $CURRENT_TAG"
-      #     echo "tag=${CURRENT_TAG}" >> $GITHUB_OUTPUT
-      #     echo "CURRENT_TAG=$CURRENT_TAG" >> $GITHUB_ENV
-
-      - name: Get version tag
-        id: get_tag
-        run: |
-          # Fetch all tags from remote
-          git fetch --tags
-          
-          # Try multiple methods to get tag
-          TAG=$(git describe --tags --exact-match HEAD 2>/dev/null || echo "")
-          [ -z "$TAG" ] && TAG=$(git tag --points-at HEAD | head -1)
-          
-          echo "Detected tag: ${TAG:-none}"
-          echo "tag=${TAG}" >> $GITHUB_OUTPUT
-          echo "TAG=${TAG}" >> $GITHUB_ENV
+          git fetch --tags  # Ensure all tags are available
+          LATEST_TAG=$(git describe --tags --abbrev=0)
+          echo "Using release tag: $LATEST_TAG"
+          echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -109,14 +87,8 @@ jobs:
         with:
           images: ghcr.io/dasteff91/ghcr-test
           tags: |
-            type=raw,value=${{ steps.get_tag.outputs.tag }}
+            type=raw,value=${{ steps.get_release_tag.outputs.tag }}
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/dev' }}
-
-      - name: Verify Dockerfile
-        run: |
-          echo "=== Dockerfile Contents ==="
-          cat Dockerfile
-          echo "=========================="
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
@@ -153,7 +125,6 @@ jobs:
 
             echo ${{ secrets.GH_PACKAGE_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
-            docker pull ghcr.io/dasteff91/website_kite-engineer:$IMAGE_TAG
             docker stop $CONTAINER_NAME || true
             docker rm $CONTAINER_NAME || true
             docker run -d \
@@ -161,4 +132,4 @@ jobs:
               --restart unless-stopped \
               -p $PORT_HOST:3000 \
               --env-file /home/steff_deployment/website_kite-engineer/.env \
-              ghcr.io/dasteff91/website_kite-engineer:$IMAGE_TAG
+              ghcr.io/dasteff91/website_kite-engineer:${{ steps.get_release_tag.outputs.tag }}
