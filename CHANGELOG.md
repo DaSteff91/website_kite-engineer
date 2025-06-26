@@ -1,3 +1,10 @@
+## [1.14.11](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.10...v1.14.11) (2025-06-26)
+
+
+### Bug Fixes
+
+* having a typescript error, but the menu structure of the nav menu is perfect! ([7271782](https://github.com/DaSteff91/website_kite-engineer/commit/7271782c4383b4f7780a146edd2c9e3818f1b857))
+
 ## [1.14.10](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.9...v1.14.10) (2025-06-26)
 
 
