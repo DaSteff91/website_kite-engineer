@@ -101,7 +101,7 @@ export default function KitePage() {
                     covered. Flexibility is my strength.
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
-                        href="/kite/school-support"
+                        href="/kite/freelancer/school-support"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -131,7 +131,7 @@ export default function KitePage() {
                     well served
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
-                        href="/kite/travel-services"
+                        href="/kite/freelancer/travel-services"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -159,7 +159,7 @@ export default function KitePage() {
                     deliver a message to others
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
-                        href="/kite/consulting"
+                        href="/kite/freelancer/consulting"
                         className="text-blue-400 hover:text-blue-300 underline text-sm"
                       >
                         More
@@ -196,7 +196,7 @@ export default function KitePage() {
                     Choose your topic and pace; I'll make it clear and engaging.
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
-                        href="/kite/theory"
+                        href="/kite/courses/theory"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
@@ -223,7 +223,7 @@ export default function KitePage() {
                     water.
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
-                        href="/kite/starting"
+                        href="/kite/courses/starting"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
@@ -251,7 +251,7 @@ export default function KitePage() {
                     bring your camera or drone!
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
-                        href="/kite/advanced"
+                        href="/kite/courses/advanced"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm"
                       >
                         More
