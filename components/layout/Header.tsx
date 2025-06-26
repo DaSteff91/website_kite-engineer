@@ -32,24 +32,17 @@ import { cn } from "@/lib/utils";
 ];*/
 
 type LinkItem = {
-  type: "link";
   label: string;
   href: string;
 };
 
 type SubmenuItem = {
-  type: "submenu";
   label: string;
+  isSubmenu: true;
   items: LinkItem[];
 };
 
 type DropdownItem = LinkItem | SubmenuItem;
-
-export type NavItem = {
-  label: string;
-  href?: string;
-  dropdownItems?: DropdownItem[];
-};
 
 const NAV_ITEMS = [
   {
@@ -401,43 +394,26 @@ export function Header() {
                                 {expandedDesktopSubmenu ===
                                   dropdownItem.label && (
                                   <div className="pl-4 space-y-1">
-                                    {dropdownItem.items?.map(
-                                      (subItem, index) => {
-                                        // Submenu header (no href)
-                                        if (!("href" in subItem)) {
-                                          return (
-                                            <div
-                                              key={`header-${index}`}
-                                              className="px-3 py-2 text-sm font-semibold text-white/60 uppercase tracking-wide"
-                                            >
-                                              {subItem.label}
-                                            </div>
-                                          );
-                                        }
-
-                                        // Real link item
-                                        return (
-                                          <DropdownMenuItem
-                                            key={subItem.href}
-                                            asChild
-                                            className="p-0"
-                                          >
-                                            <Link
-                                              href={subItem.href}
-                                              className={cn(
-                                                "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
-                                                "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
-                                                pathname === subItem.href
-                                                  ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                                  : "text-white/70"
-                                              )}
-                                            >
-                                              {subItem.label}
-                                            </Link>
-                                          </DropdownMenuItem>
-                                        );
-                                      }
-                                    )}
+                                    {dropdownItem.items?.map((subItem) => (
+                                      <DropdownMenuItem
+                                        key={subItem.href}
+                                        asChild
+                                        className="p-0"
+                                      >
+                                        <Link
+                                          href={subItem.href}
+                                          className={cn(
+                                            "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
+                                            "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                                            pathname === subItem.href
+                                              ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                              : "text-white/70"
+                                          )}
+                                        >
+                                          {subItem.label}
+                                        </Link>
+                                      </DropdownMenuItem>
+                                    ))}
                                   </div>
                                 )}
 
