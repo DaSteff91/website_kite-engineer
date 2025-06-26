@@ -1,3 +1,10 @@
+## [1.14.14](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.13...v1.14.14) (2025-06-26)
+
+
+### Bug Fixes
+
+* delete obsolete folders + match page linking ([d916796](https://github.com/DaSteff91/website_kite-engineer/commit/d916796eb2ad4b293194a70d686c6104ea5d4035))
+
 ## [1.14.13](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.12...v1.14.13) (2025-06-26)
 
 
