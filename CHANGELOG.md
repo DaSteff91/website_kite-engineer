@@ -1,3 +1,10 @@
+## [1.14.10](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.9...v1.14.10) (2025-06-26)
+
+
+### Bug Fixes
+
+* sync with notebook ([24d2589](https://github.com/DaSteff91/website_kite-engineer/commit/24d25895360b893575f795c1bac94cb22ef5a5eb))
+
 ## [1.14.9](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.8...v1.14.9) (2025-06-25)
 
 
