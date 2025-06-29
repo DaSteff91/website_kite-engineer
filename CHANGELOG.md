@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.14...v1.15.0) (2025-06-29)
+
+
+### Features
+
+* add phone number to footer. First version ([5649689](https://github.com/DaSteff91/website_kite-engineer/commit/5649689d6a083cb705c1db5f1e083cf7f0e56b46))
+
 ## [1.14.14](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.13...v1.14.14) (2025-06-26)
 
 
