@@ -137,7 +137,7 @@ export function Footer() {
 function PhoneNumberReveal() {
   const [revealed, setRevealed] = useState(false);
   const [copied, setCopied] = useState(false);
-  const phoneNumber = "+1 (234) 567-890";
+  const phoneNumber = "+491719501856";
   const numericPhone = phoneNumber.replace(/\D/g, "");
 
   const handleCopy = (e: React.MouseEvent) => {
