@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.0...v1.15.1) (2025-06-29)
+
+
+### Bug Fixes
+
+* enter real phone number ([77228fd](https://github.com/DaSteff91/website_kite-engineer/commit/77228fdf9e862a1aa6e3de629d3f33146606407b))
+
 # [1.15.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.14.14...v1.15.0) (2025-06-29)
 
 
