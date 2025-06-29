@@ -3,6 +3,7 @@
 import Link from "next/link";
 // import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 // const SOCIAL_LINKS = [
 //   { icon: Facebook, href: "#", label: "Facebook" },
@@ -23,21 +24,24 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-3 text-center sm:text-left">
             <h3 className="text-lg font-semibold">Contact</h3>
-            {/* <address className="not-italic text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm">
+              {/* <address className="not-italic text-sm text-muted-foreground">
               123 Main Street
               <br />
               City, Country 12345
               <br /> */}
-            <a 
-              href="mailto:stefan@kite-engineer.de" 
-              className="hover:text-primary text-sm block break-all"
-            >
-              stefan@kite-engineer.de
-            </a>
-            <br />
-            {/* <a href="tel:+1234567890" className="hover:text-primary">
-              +1 (234) 567-890
-            </a> */}
+              <li>
+                <a
+                  href="mailto:stefan@kite-engineer.de"
+                  className="hover:text-primary text-sm block break-all text-muted-foreground "
+                >
+                  stefan@kite-engineer.de
+                </a>
+              </li>
+              <li>
+                <PhoneNumberReveal />
+              </li>
+            </ul>
           </div>
 
           <div className="space-y-3 text-center sm:text-left">
@@ -100,9 +104,9 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-3 text-center sm:text-left">
-            {/* <h3 className="text-lg font-semibold">Follow Me</h3> */}
-            {/* <div className="flex gap-4">
+          {/* <div className="space-y-3 text-center sm:text-left">
+            <h3 className="text-lg font-semibold">Follow Me</h3>
+            <div className="flex gap-4">
               {SOCIAL_LINKS.map((social) => (
                 <a
                   key={social.label}
@@ -115,8 +119,8 @@ export function Footer() {
                   <span className="sr-only">{social.label}</span>
                 </a>
               ))}
-            </div> */}
-          </div>
+            </div>
+          </div>  */}
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
@@ -127,5 +131,48 @@ export function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function PhoneNumberReveal() {
+  const [revealed, setRevealed] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const phoneNumber = "+1 (234) 567-890";
+  const numericPhone = phoneNumber.replace(/\D/g, "");
+
+  const handleCopy = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(numericPhone);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div
+      onClick={() => !revealed && setRevealed(true)}
+      className={`${!revealed ? "cursor-pointer" : ""} w-full`}
+    >
+      {revealed ? (
+        <div className="flex flex-col sm:flex-row sm:items-center justify-center sm:justify-start gap-1">
+          <a
+            href={`tel:${numericPhone}`}
+            className="hover:text-primary text-sm text-muted-foreground text-center sm:text-left"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {phoneNumber}
+          </a>
+          <button
+            onClick={handleCopy}
+            className="text-xs text-muted-foreground hover:text-primary text-center sm:text-left"
+          >
+            {copied ? "(Copied!)" : "(Copy)"}
+          </button>
+        </div>
+      ) : (
+        <span className="text-sm text-muted-foreground text-center sm:text-left block">
+          Click to reveal phone number
+        </span>
+      )}
+    </div>
   );
 }
