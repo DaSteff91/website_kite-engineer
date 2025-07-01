@@ -71,9 +71,11 @@ jobs:
       - name: Get semantic-release tag
         id: get_release_tag
         run: |
-          git fetch --tags
-          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || git rev-parse --short HEAD)
-          echo "Using release tag: $LATEST_TAG"
+          git fetch --tags -f
+          LATEST_TAG_old=$(git describe --tags --abbrev=0 2>/dev/null || git rev-parse --short HEAD)
+          LATEST_TAG=$(git tag --sort=-creatordate | head -n 1)
+          echo "Using release tag (new version): $LATEST_TAG"
+          echo "Using release tag (old version): $LATEST_TAG_old"
           echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
 
       - name: Set up Docker Buildx
@@ -115,11 +117,11 @@ jobs:
       - name: Get latest version tag
         id: get_tag
         run: |
-          git fetch --tags
-          LATEST_TAG=$(git describe --tags --abbrev=0)
+          git fetch --tags -f
+          LATEST_TAG=$(git tag --sort=-creatordate | head -n 1)
           echo "Using version tag: $LATEST_TAG"
           echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
-          
+                
       - name: SSH and Deploy to Server
         uses: appleboy/ssh-action@v1.2.2
         with:
