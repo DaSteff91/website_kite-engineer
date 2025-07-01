@@ -1,3 +1,10 @@
+## [1.15.10](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.9...v1.15.10) (2025-07-01)
+
+
+### Bug Fixes
+
+* testing new version tag pulling ([8d150a3](https://github.com/DaSteff91/website_kite-engineer/commit/8d150a36dda145227ee2317a0507797e4e9a5d70))
+
 ## [1.15.9](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.8...v1.15.9) (2025-07-01)
 
 
