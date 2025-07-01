@@ -108,14 +108,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Verify image exists
-        run: |
-          IMAGE_TAG=${{ steps.get_release_tag.outputs.tag || github.sha }}
-          if ! docker manifest inspect ghcr.io/dasteff91/website_kite-engineer:$IMAGE_TAG >/dev/null 2>&1; then
-            echo "Error: Image with tag $IMAGE_TAG not found in registry"
-            exit 1
-          fi
-
       - name: SSH and Deploy to Server
         uses: appleboy/ssh-action@v1.2.2
         with:
