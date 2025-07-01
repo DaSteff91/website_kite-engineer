@@ -1,3 +1,10 @@
+## [1.15.9](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.8...v1.15.9) (2025-07-01)
+
+
+### Bug Fixes
+
+* testing different deploy strategy ([042938c](https://github.com/DaSteff91/website_kite-engineer/commit/042938c3b49a5f3942c73e560c1a042cf7e232f3))
+
 ## [1.15.8](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.7...v1.15.8) (2025-07-01)
 
 
