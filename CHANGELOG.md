@@ -1,3 +1,10 @@
+## [1.15.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.4...v1.15.5) (2025-07-01)
+
+
+### Bug Fixes
+
+* fixing a formatting issue ([4753106](https://github.com/DaSteff91/website_kite-engineer/commit/475310636811e217a0cf45c4cd25d687462d6935))
+
 ## [1.15.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.3...v1.15.4) (2025-07-01)
 
 
