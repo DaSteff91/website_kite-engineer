@@ -423,12 +423,12 @@ export function Header() {
                           } else if (!dropdownItem.isSubmenu && index > 0) {
                             return (
                               <DropdownMenuItem
-                                key={dropdownItem.href}
+                                key={dropdownItem.href || index}
                                 asChild
                                 className="p-0"
                               >
                                 <Link
-                                  href={dropdownItem.href}
+                                  href={dropdownItem.href || "#"}
                                   className={cn(
                                     "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
                                     "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
@@ -539,7 +539,7 @@ export function Header() {
                             .map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.href}
-                                href={dropdownItem.href}
+                                href={dropdownItem.href || "#"}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className={cn(
                                   "block px-3 py-2 text-base font-medium rounded-md text-left",
