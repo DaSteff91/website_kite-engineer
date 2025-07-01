@@ -1,3 +1,10 @@
+## [1.15.7](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.6...v1.15.7) (2025-07-01)
+
+
+### Bug Fixes
+
+* removing switching between light and dark mode. Fixing root layout export ([f02fb5e](https://github.com/DaSteff91/website_kite-engineer/commit/f02fb5e496dc473a3dda09a3c260bd790c5a8c5a))
+
 ## [1.15.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.5...v1.15.6) (2025-07-01)
 
 
