@@ -85,8 +85,8 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/dasteff91/ghcr-test
-          tags: |
+          images: ghcr.io/dasteff91/website_kite-engineer
+
             type=raw,value=${{ steps.get_release_tag.outputs.tag }}
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/dev' }}
 
@@ -115,6 +115,7 @@ jobs:
           key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
           script: |
             IMAGE_TAG=${{ github.ref_name }}
+            GET_RELEASE_TAG=${{ steps.get_release_tag.outputs.tag }}
             TARGET=$([ "${{ github.ref }}" = "refs/heads/main" ] && echo "prod" || echo "dev")
             CONTAINER_NAME=www${TARGET:+-dev}.kite-engineer.de
             PORT_HOST=$([ "$TARGET" = "prod" ] && echo 3000 || echo 3001)
@@ -122,6 +123,7 @@ jobs:
             echo "Using image: $IMAGE_TAG"
             echo "Container name: $CONTAINER_NAME"
             echo "Host port: $PORT_HOST"
+            echo "Get release tag: $GET_RELEASE_TAG"
 
             echo ${{ secrets.GH_PACKAGE_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
