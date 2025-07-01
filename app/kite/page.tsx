@@ -273,8 +273,8 @@ export default function KitePage() {
           <div className="mt-16 text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               You can get a little bit of everything as well. The more you book,
-              the cheaper the services get. What´s holding you back? Let´s get
-              in touch.
+              the more discout you get. What´s holding you back? Let´s get in
+              touch.
             </p>
             <Link href="/contact">
               <Button

@@ -12,6 +12,7 @@ import {
   MapPin,
   Award,
   Shield,
+  Drama,
 } from "lucide-react";
 
 export default function SchoolSupportPage() {
@@ -73,11 +74,10 @@ export default function SchoolSupportPage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Professional Kite School Support
+              Have An Extra Employee At Hand
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              VDWS-certified instructor ready to support your kite school
-              operations
+              I´m ready to support your kite school operations
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -86,17 +86,18 @@ export default function SchoolSupportPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-16">
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <School className="h-6 w-6 text-blue-400" />
+                <Drama className="h-6 w-6 text-blue-400" />
                 <h3 className="text-lg font-semibold text-blue-200">
-                  Instruction Services
+                  Instructor Services
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• VDWS certified instructor</li>
                 <li>• Beginner to advanced lessons</li>
-                <li>• Safety-focused teaching approach</li>
+                <li>• Landboarding lessons</li>
                 <li>• Multi-language support (German, English, Portuguese)</li>
                 <li>• Group and individual sessions</li>
+                <li>• Supervision and filmingg</li>
               </ul>
             </div>
 
@@ -104,19 +105,20 @@ export default function SchoolSupportPage() {
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-cyan-400" />
                 <h3 className="text-lg font-semibold text-cyan-200">
-                  Shop Assistance
+                  General Assistance
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
+                <li>• Office and administration</li>
                 <li>• Customer service and sales support</li>
                 <li>• Equipment recommendations</li>
                 <li>• Gear maintenance advice</li>
-                <li>• Inventory management assistance</li>
+                <li>• Inventory management</li>
                 <li>• Product demonstrations</li>
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
+            {/* <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <MapPin className="h-6 w-6 text-teal-400" />
                 <h3 className="text-lg font-semibold text-teal-200">
@@ -130,7 +132,7 @@ export default function SchoolSupportPage() {
                 <li>• Weather condition assessment</li>
                 <li>• Emergency response protocols</li>
               </ul>
-            </div>
+            </div> */}
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
@@ -143,12 +145,15 @@ export default function SchoolSupportPage() {
                 <li>• Seasonal support available</li>
                 <li>• Weekend and holiday coverage</li>
                 <li>• Short-term and long-term contracts</li>
-                <li>• Peak season reinforcement</li>
-                <li>• Emergency staff replacement</li>
+                <li>
+                  • Providing support to multi-location schools and open to
+                  commuting between sites.
+                </li>
+                <li>• Driver’s license covering both car and motorcycle.</li>
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
+            {/* <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Award className="h-6 w-6 text-blue-400" />
                 <h3 className="text-lg font-semibold text-blue-200">
@@ -178,7 +183,7 @@ export default function SchoolSupportPage() {
                 <li>• Emergency action plans</li>
                 <li>• Student safety protocols</li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Section */}

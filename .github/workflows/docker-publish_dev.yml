@@ -71,8 +71,8 @@ jobs:
       - name: Get semantic-release tag
         id: get_release_tag
         run: |
-          git fetch --tags  # Ensure all tags are available
-          LATEST_TAG=$(git describe --tags --abbrev=0)
+          git fetch --tags
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || git rev-parse --short HEAD)
           echo "Using release tag: $LATEST_TAG"
           echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
 
@@ -107,6 +107,15 @@ jobs:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
+
+      - name: Verify image exists
+        run: |
+          IMAGE_TAG=${{ steps.get_release_tag.outputs.tag || github.sha }}
+          if ! docker manifest inspect ghcr.io/dasteff91/website_kite-engineer:$IMAGE_TAG >/dev/null 2>&1; then
+            echo "Error: Image with tag $IMAGE_TAG not found in registry"
+            exit 1
+          fi
+
       - name: SSH and Deploy to Server
         uses: appleboy/ssh-action@v1.2.2
         with:
@@ -114,24 +123,27 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
           script: |
-            IMAGE_TAG=${{ github.ref_name }}
-            GET_RELEASE_TAG=${{ steps.get_release_tag.outputs.tag }}
             TARGET=$([ "${{ github.ref }}" = "refs/heads/main" ] && echo "prod" || echo "dev")
             CONTAINER_NAME=www${TARGET:+-dev}.kite-engineer.de
             PORT_HOST=$([ "$TARGET" = "prod" ] && echo 3000 || echo 3001)
+            IMAGE_TAG=${{ steps.get_release_tag.outputs.tag || github.sha }}
+            IMAGE_NAME=ghcr.io/dasteff91/website_kite-engineer:$IMAGE_TAG
 
+            echo "Target environment: $TARGET"
             echo "Using image: $IMAGE_TAG"
             echo "Container name: $CONTAINER_NAME"
             echo "Host port: $PORT_HOST"
-            echo "Get release tag: $GET_RELEASE_TAG"
 
             echo ${{ secrets.GH_PACKAGE_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
+            docker pull $IMAGE_NAME || echo "Warning: Could not pull image, may need to build first"
+
             docker stop $CONTAINER_NAME || true
             docker rm $CONTAINER_NAME || true
+
             docker run -d \
               --name "$CONTAINER_NAME" \
               --restart unless-stopped \
               -p $PORT_HOST:3000 \
               --env-file /home/steff_deployment/website_kite-engineer/.env \
-              ghcr.io/dasteff91/website_kite-engineer:${{ steps.get_release_tag.outputs.tag }}
+              $IMAGE_NAME
