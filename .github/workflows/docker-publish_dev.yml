@@ -86,7 +86,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/dasteff91/website_kite-engineer
-
+          tags: |
             type=raw,value=${{ steps.get_release_tag.outputs.tag }}
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/dev' }}
 
