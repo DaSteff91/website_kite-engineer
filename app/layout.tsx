@@ -24,27 +24,42 @@ export const metadata: Metadata = {
   authors: [{ name: "Stefan Merthan" }],
   icons: [
     {
+      rel: "icon",
       media: "(prefers-color-scheme: light)",
-      url: "favicon_light.ico",
+      url: "/images/favicon_light.ico",
       type: "image/x-icon",
     },
     {
+      rel: "icon",
       media: "(prefers-color-scheme: dark)",
+      url: "/images/favicon_dark.ico",
+      type: "image/x-icon",
+    },
+    // Fallback icon
+    {
+      rel: "icon",
       url: "favicon_dark.ico",
       type: "image/x-icon",
     },
   ],
   keywords: "kiteboarding, engineering, kitesurf, engineer",
+  metadataBase: new URL("https://kite-engineer.de"),
   openGraph: {
     title: "Kite-Engineer",
     description: "The best of two worlds",
-    url: "${siteUrl}",
+    url: "/",
     siteName: "Kite-Engineer Combining Worlds",
     images: [
       {
-        url: "${siteUrl}/images/favicon_dark.ico",
-        width: 800,
-        height: 600,
+        url: "$/images/og_picture.png",
+        width: 1200,
+        height: 630,
+        alt: "Kite-Engineer Logo",
+      },
+      {
+        url: "/images/og_picture_square.png",
+        width: 1200,
+        height: 1200,
         alt: "Kite-Engineer Logo",
       },
     ],
@@ -63,7 +78,7 @@ export const metadata: Metadata = {
     title: "Kite-Engineer",
     description:
       "Combinging worlds by offering kiteboarding related services as well as engineering services",
-    images: ["${siteUrl}/images/favicon_dark.ico"],
+    images: ["/images/og_picture.png"],
   },
 };
 
