@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.1...v1.15.2) (2025-07-01)
+
+
+### Bug Fixes
+
+* adding new content + fixing a typescript error that currupted the build process ([3041569](https://github.com/DaSteff91/website_kite-engineer/commit/30415694966a50014fd7257839aa8c47a44ef989))
+
 ## [1.15.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.0...v1.15.1) (2025-06-29)
 
 
