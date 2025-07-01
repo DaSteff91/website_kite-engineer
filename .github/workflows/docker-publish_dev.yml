@@ -107,7 +107,19 @@ jobs:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo (to access tags)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      - name: Get latest version tag
+        id: get_tag
+        run: |
+          git fetch --tags
+          LATEST_TAG=$(git describe --tags --abbrev=0)
+          echo "Using version tag: $LATEST_TAG"
+          echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
+          
       - name: SSH and Deploy to Server
         uses: appleboy/ssh-action@v1.2.2
         with:
@@ -118,13 +130,14 @@ jobs:
             TARGET=$([ "${{ github.ref }}" = "refs/heads/main" ] && echo "prod" || echo "dev")
             CONTAINER_NAME=www${TARGET:+-dev}.kite-engineer.de
             PORT_HOST=$([ "$TARGET" = "prod" ] && echo 3000 || echo 3001)
-            IMAGE_TAG=${{ steps.get_release_tag.outputs.tag || github.sha }}
-            IMAGE_NAME=ghcr.io/dasteff91/website_kite-engineer:$IMAGE_TAG
+            IMAGE_TAG=${{ steps.get_tag.outputs.tag || github.sha }}
+            IMAGE_NAME=ghcr.io/dasteff91/website_kite-engineer:${{ steps.get_tag.outputs.tag }}
 
             echo "Target environment: $TARGET"
             echo "Using image: $IMAGE_TAG"
             echo "Container name: $CONTAINER_NAME"
             echo "Host port: $PORT_HOST"
+            echo "Deploying version: ${{ steps.get_tag.outputs.tag}}"
 
             echo ${{ secrets.GH_PACKAGE_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
