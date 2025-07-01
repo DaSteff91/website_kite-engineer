@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.2...v1.15.3) (2025-07-01)
+
+
+### Bug Fixes
+
+* changing ghcr to the actuall one ([2d7d767](https://github.com/DaSteff91/website_kite-engineer/commit/2d7d767d5b43d73ad2b751a09317d8cf3e5dce38))
+
 ## [1.15.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.1...v1.15.2) (2025-07-01)
 
 
