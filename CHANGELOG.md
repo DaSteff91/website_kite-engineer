@@ -1,3 +1,10 @@
+## [1.15.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.5...v1.15.6) (2025-07-01)
+
+
+### Bug Fixes
+
+* adding content + fixing workflow ([02ec045](https://github.com/DaSteff91/website_kite-engineer/commit/02ec04512ced1a9a70e70b3fe58c9d109616c1a9))
+
 ## [1.15.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.4...v1.15.5) (2025-07-01)
 
 
