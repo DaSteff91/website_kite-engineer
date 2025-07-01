@@ -1,3 +1,10 @@
+## [1.15.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.3...v1.15.4) (2025-07-01)
+
+
+### Bug Fixes
+
+* changing metadata pictures and favicon ([eec9281](https://github.com/DaSteff91/website_kite-engineer/commit/eec9281a064ed7c6fa9c11abe6a48976676c3c8d))
+
 ## [1.15.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.2...v1.15.3) (2025-07-01)
 
 
