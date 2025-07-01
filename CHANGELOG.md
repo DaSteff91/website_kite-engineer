@@ -1,3 +1,10 @@
+## [1.15.8](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.7...v1.15.8) (2025-07-01)
+
+
+### Bug Fixes
+
+* deleting unnecessary action ([afe2df3](https://github.com/DaSteff91/website_kite-engineer/commit/afe2df3c2c463a24fde5bb6c0d82dbc3e946d4e1))
+
 ## [1.15.7](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.6...v1.15.7) (2025-07-01)
 
 
