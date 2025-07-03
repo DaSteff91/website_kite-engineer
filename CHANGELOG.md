@@ -1,3 +1,11 @@
+## [1.15.11](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.10...v1.15.11) (2025-07-03)
+
+
+### Bug Fixes
+
+* adding target="_blank" to each contact link to open the contact form in a new page ([9a47f6f](https://github.com/DaSteff91/website_kite-engineer/commit/9a47f6f67ea49cdf0f56117e6f9f2194cb5c0a78))
+* make the phonennumber copy copying everything ([41b3e45](https://github.com/DaSteff91/website_kite-engineer/commit/41b3e45f83fb5f021a3eed3ab5899b973c3524e1))
+
 ## [1.15.10](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.9...v1.15.10) (2025-07-01)
 
 
