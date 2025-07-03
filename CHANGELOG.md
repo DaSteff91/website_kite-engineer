@@ -1,3 +1,18 @@
+# [1.16.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.13...v1.16.0) (2025-07-03)
+
+
+### Bug Fixes
+
+* small content changes in the contact form ([d6dc290](https://github.com/DaSteff91/website_kite-engineer/commit/d6dc29074b591e2aaf2cf07dd12a242c8ad3f3db))
+* unify the text of all buttons that link to my contact form ([94cc712](https://github.com/DaSteff91/website_kite-engineer/commit/94cc71200cf293660b2f37e59b2f201afdbb5260))
+
+
+### Features
+
+* first version of the freelancer/consulting page ([4ffdb6f](https://github.com/DaSteff91/website_kite-engineer/commit/4ffdb6f08b9dc2b2ed1e8240dd0f84f2172f4040))
+* first version of the freelancer/school-support page ([239b631](https://github.com/DaSteff91/website_kite-engineer/commit/239b6315a94afa5a262ad9504cf8d510251c8ca1))
+* freelancer/travel-services first version ready ([4cbb7a3](https://github.com/DaSteff91/website_kite-engineer/commit/4cbb7a35cff2646cb667f3a0eb20e8ff7ccb89bd))
+
 ## [1.15.13](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.12...v1.15.13) (2025-07-03)
 
 
