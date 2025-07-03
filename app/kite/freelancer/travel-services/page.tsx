@@ -12,6 +12,7 @@ import {
   Users,
   Camera,
   Compass,
+  DumbbellIcon,
 } from "lucide-react";
 
 export default function TravelServicesPage() {
@@ -48,7 +49,7 @@ export default function TravelServicesPage() {
    bg-clip-text text-transparent 
    [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
           >
-            Kite Travel Services
+            Travel Services
           </h1>
         </div>
       </section>
@@ -73,11 +74,12 @@ export default function TravelServicesPage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Your Perfect Kite Adventure Awaits
+              The world can be your playground - use it
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              From trip planning to personal coaching - let's create
-              unforgettable kite experiences
+              Even though I am not a travel agent I can look up everything for
+              you and put it together so you can easily decide what suites your
+              booking. Here you can rely on me:
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -92,46 +94,45 @@ export default function TravelServicesPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Complete trip planning and coordination</li>
-                <li>• Destination research and selection</li>
-                <li>• Accommodation booking</li>
-                <li>• Transportation arrangements</li>
-                <li>• Local kite school partnerships</li>
+                <li>
+                  • Trip planning and coordination for groups and individuals
+                </li>
+                <li>• Transfer arrangements</li>
+                <li>• Budget and timetable planing</li>
+                <li>• Health and insurance considerations</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <Users className="h-6 w-6 text-cyan-400" />
+                <DumbbellIcon className="h-6 w-6 text-cyan-400" />
                 <h3 className="text-lg font-semibold text-cyan-200">
                   Personal Coaching
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• One-on-one instruction during travel</li>
-                <li>• Skill development and progression</li>
-                <li>• Safety guidance in new locations</li>
-                <li>• Equipment setup and maintenance</li>
-                <li>• Local spot knowledge sharing</li>
+                <li>• Kite instructor services</li>
+                <li>• Functional fitness and HIIT coaching</li>
+                <li>• Master of your schedule</li>
+                <li>• Progress documentaion</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <MapPin className="h-6 w-6 text-teal-400" />
+                <Users className="h-6 w-6 text-teal-400" />
                 <h3 className="text-lg font-semibold text-teal-200">
-                  Destination Expertise
+                  Travel Buddy
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Best kite spots worldwide</li>
-                <li>• Seasonal wind condition analysis</li>
-                <li>• Local culture and customs guidance</li>
-                <li>• Hidden gems and secret spots</li>
-                <li>• Weather pattern insights</li>
+                <li>• Have fun: I am also a human</li>
+                <li>• Trip documentaion</li>
+                <li>• Organization of general activities</li>
+                <li>• Sharing expenses of daily needs</li>
               </ul>
             </div>
-
+            {/* 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar className="h-6 w-6 text-emerald-400" />
@@ -146,9 +147,9 @@ export default function TravelServicesPage() {
                 <li>• Equipment rental coordination</li>
                 <li>• Travel insurance guidance</li>
               </ul>
-            </div>
+            </div> */}
 
-            <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
+            {/* <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Camera className="h-6 w-6 text-blue-400" />
                 <h3 className="text-lg font-semibold text-blue-200">
@@ -178,14 +179,15 @@ export default function TravelServicesPage() {
                 <li>• Equipment transportation tips</li>
                 <li>• Travel logistics support</li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Section */}
           <div className="text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to plan your next kite adventure? Let's create an
-              unforgettable experience together.
+              Let's create an unforgettable experience together. I provide you
+              what is neccessary for it. Only the booking is yours. Is anything
+              missing? We find a solution. It all starts here:
             </p>
             <Link
               href="/contact?subject=Kite Travel Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your travel services for an upcoming kite trip. Please provide information about:%0A%0A- Available destinations and timing%0A- Personal coaching options%0A- Trip planning services%0A- Pricing and packages%0A%0AMy travel details:%0A[Please describe your skill level, preferred destinations, travel dates, group size, and specific interests]%0A%0ALooking forward to an amazing adventure!"
