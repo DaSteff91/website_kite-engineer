@@ -214,12 +214,13 @@ export function ContactForm() {
           </span>
         </Button>
         {successMessage && (
-          <p className="text-green-600 text-center mt-4 text-base">
+          <p className="text-green-600 text-left mt-4 text-base">
             {successMessage}
           </p>
         )}
-        <p className="text-muted-foreground text-sm text-center">
-          * Mandatory fields
+        <p className="text-muted-foreground text-sm text-left">
+          * Mandatory fields. <br></br> Please give me some time to respond. I
+          try keeping it lower then 2#ä days.
         </p>
       </form>
     </div>
