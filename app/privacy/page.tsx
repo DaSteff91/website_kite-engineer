@@ -17,27 +17,39 @@ export default function Privacy() {
           placeholder="blur"
         />
       </div>
-      <div className="max-w-4xl mx-auto p-4 sm:p-6 py-24 sm:py-36">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-6">Datenschutzbestimmung</h1>
+
+      {/* Content Section */}
+      <div className="max-w-4xl p-4 sm:p-6 py-24 sm:py-36">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-6">
+          Datenschutzbestimmung
+        </h1>
 
         <section className="mb-6 sm:mb-8">
           <h2 className="text-lg sm:text-xl font-semibold mb-2">
             Kontaktdaten des Verantwortlichen
           </h2>
-          <p className="mb-1 text-sm sm:text-base">Kite-Engineer by Stefan Merthan</p>
+          <p className="mb-1 text-sm sm:text-base">
+            Kite-Engineer by Stefan Merthan
+          </p>
           <p className="mb-1 text-sm sm:text-base">Stefan Merthan</p>
           <p className="mb-1 text-sm sm:text-base">Hauptstraße 6</p>
           <p className="mb-1 text-sm sm:text-base">84107 Weihmichl</p>
-          <p className="mb-1 text-sm sm:text-base break-all">stefan@kite-engineer.de</p>
+          <p className="mb-1 text-sm sm:text-base break-all">
+            stefan@kite-engineer.de
+          </p>
         </section>
 
         <section className="mb-6 sm:mb-8">
           <h2 className="text-lg sm:text-xl font-semibold mb-2">Cookies</h2>
-          <p className="mb-1 text-sm sm:text-base">Diese Website verwendet generell keine Cookies</p>
+          <p className="mb-1 text-sm sm:text-base">
+            Diese Website verwendet generell keine Cookies.
+          </p>
         </section>
 
         <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">Zugriffsprotokolle</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">
+            Zugriffsprotokolle
+          </h2>
           <p className="mb-1 text-sm sm:text-base leading-relaxed">
             Wenn Sie diese Website besuchen werden keine nutzerbezogenen Daten
             oder Zugriffsprotokolle erstellt, die mit der Nutzung in Verbindung
@@ -58,7 +70,7 @@ export default function Privacy() {
             statt. Der Inhalt wird nur in Form der erzeugten E-Mail in meinem
             Postfach gespeichert (siehe auch weiter unten). Ich gebe Ihre
             Mailadresse und sonstige von Ihnen angegebene Daten nicht ohne Ihre
-            Erlaubnis an Dritte weiter
+            Erlaubnis an Dritte weiter.
           </p>
         </section>
 
@@ -72,17 +84,20 @@ export default function Privacy() {
             Speicherung Ihrer E-Mail-Adresse und der versendeten Nachricht (und
             deren Inhalt) aus technisch notwendigen Gründen und aus berechtigtem
             Interesse heraus statt. Ich gebe Ihre Mailadresse und sonstige von
-            Ihnen angegebene Daten nicht ohne Ihre Erlaubnis an Dritte weiter
+            Ihnen angegebene Daten nicht ohne Ihre Erlaubnis an Dritte weiter.
           </p>
         </section>
 
         <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">Betroffenenrechte</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">
+            Betroffenenrechte
+          </h2>
           <p className="mb-1 text-sm sm:text-base leading-relaxed">
             Ihre Rechte finden Sie unter:{" "}
             <Link
               href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
               className="text-blue-500 underline break-all hover:text-blue-400 transition-colors"
+              target="_blank"
             >
               https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679
             </Link>{" "}
