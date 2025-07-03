@@ -138,11 +138,11 @@ function PhoneNumberReveal() {
   const [revealed, setRevealed] = useState(false);
   const [copied, setCopied] = useState(false);
   const phoneNumber = "+491719501856";
-  const numericPhone = phoneNumber.replace(/\D/g, "");
+  const telNumber = phoneNumber.replace(/[^\d+]/g, "");
 
   const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation();
-    navigator.clipboard.writeText(numericPhone);
+    navigator.clipboard.writeText(telNumber);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -155,7 +155,7 @@ function PhoneNumberReveal() {
       {revealed ? (
         <div className="flex flex-col sm:flex-row sm:items-center justify-center sm:justify-start gap-1">
           <a
-            href={`tel:${numericPhone}`}
+            href={`tel:${telNumber}`}
             className="hover:text-primary text-sm text-muted-foreground text-center sm:text-left"
             onClick={(e) => e.stopPropagation()}
           >
