@@ -1,3 +1,10 @@
+## [1.15.12](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.11...v1.15.12) (2025-07-03)
+
+
+### Bug Fixes
+
+* adding phone number into impres + modifying contact content ([01b4b16](https://github.com/DaSteff91/website_kite-engineer/commit/01b4b1606bdeafdb196d4001a9d8b5a057595e11))
+
 ## [1.15.11](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.10...v1.15.11) (2025-07-03)
 
 
