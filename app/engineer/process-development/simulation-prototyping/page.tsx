@@ -3,7 +3,14 @@ import background_image_darker from "@/public/images/background_image_darker.jpe
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, Radiation, Cpu, Box, Users } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  Radiation,
+  Cpu,
+  Box,
+  Users,
+} from "lucide-react";
 
 export default function SimulationPrototypingPage() {
   return (
@@ -49,8 +56,8 @@ export default function SimulationPrototypingPage() {
         <div className="container mx-auto px-4">
           {/* Back Navigation */}
           <div className="mb-8">
-            <Link 
-              href="/engineer" 
+            <Link
+              href="/engineer"
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
@@ -67,7 +74,8 @@ export default function SimulationPrototypingPage() {
               From Analogy Models to 3D Reality
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Advanced simulation and physical prototyping for comprehensive solution validation
+              Advanced simulation and physical prototyping for comprehensive
+              solution validation
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -77,7 +85,9 @@ export default function SimulationPrototypingPage() {
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Radiation className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">Advanced Simulation</h3>
+                <h3 className="text-lg font-semibold text-cyan-200">
+                  Advanced Simulation
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Process simulation software</li>
@@ -91,7 +101,9 @@ export default function SimulationPrototypingPage() {
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Box className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">3D Prototyping</h3>
+                <h3 className="text-lg font-semibold text-teal-200">
+                  3D Prototyping
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• 3D printing and additive manufacturing</li>
@@ -105,7 +117,9 @@ export default function SimulationPrototypingPage() {
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Cpu className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">Analogy Models</h3>
+                <h3 className="text-lg font-semibold text-emerald-200">
+                  Analogy Models
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Conceptual model development</li>
@@ -119,7 +133,9 @@ export default function SimulationPrototypingPage() {
             <div className="bg-gradient-to-br from-blue-900/35 via-card/35 to-cyan-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">Expert Network</h3>
+                <h3 className="text-lg font-semibold text-blue-200">
+                  Expert Network
+                </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>• Fabrication expert connections</li>
@@ -134,9 +150,13 @@ export default function SimulationPrototypingPage() {
           {/* Contact Section */}
           <div className="text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to bring your concepts to life? Let's create simulations and prototypes that validate your solutions.
+              Ready to bring your concepts to life? Let's create simulations and
+              prototypes that validate your solutions.
             </p>
-            <Link href="/contact?subject=Simulation & Prototyping Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your simulation and prototyping services. Please provide information about advanced modeling and 3D prototyping capabilities.%0A%0AMy requirements:%0A[Please describe your current simulation and prototyping needs]%0A%0ABest regards">
+            <Link
+              href="/contact?subject=Simulation & Prototyping Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your simulation and prototyping services. Please provide information about advanced modeling and 3D prototyping capabilities.%0A%0AMy requirements:%0A[Please describe your current simulation and prototyping needs]%0A%0ABest regards"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"

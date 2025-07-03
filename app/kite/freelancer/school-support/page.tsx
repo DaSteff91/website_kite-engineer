@@ -192,7 +192,10 @@ export default function SchoolSupportPage() {
               Ready to enhance your kite school operations? Let's discuss how I
               can support your team.
             </p>
-            <Link href="/contact?subject=School Support Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your school support services. Please provide more details about:%0A%0A- Available services and pricing%0A- Scheduling and availability%0A- Certification and insurance coverage%0A- Experience with similar operations%0A%0AMy school details:%0A[Please describe your kite school, location, typical season, and specific support needs]%0A%0ABest regards">
+            <Link
+              href="/contact?subject=School Support Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your school support services. Please provide more details about:%0A%0A- Available services and pricing%0A- Scheduling and availability%0A- Certification and insurance coverage%0A- Experience with similar operations%0A%0AMy school details:%0A[Please describe your kite school, location, typical season, and specific support needs]%0A%0ABest regards"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"

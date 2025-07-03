@@ -171,7 +171,10 @@ export default function StartingPage() {
               Ready to start or restart your kiteboarding journey? Let's build
               your confidence and skills on the water.
             </p>
-            <Link href="/contact?subject=Starting/Restarting Kiteboarding Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your starting/restarting courses. Please provide information about:%0A%0A- Course options and scheduling%0A- Pricing and duration%0A- Equipment and safety measures%0A- Location and conditions%0A%0AMy situation:%0A[Please describe if you're a complete beginner or returning after a break, your previous experience, physical fitness level, and any specific concerns or goals]%0A%0AExcited to get started!">
+            <Link
+              href="/contact?subject=Starting/Restarting Kiteboarding Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your starting/restarting courses. Please provide information about:%0A%0A- Course options and scheduling%0A- Pricing and duration%0A- Equipment and safety measures%0A- Location and conditions%0A%0AMy situation:%0A[Please describe if you're a complete beginner or returning after a break, your previous experience, physical fitness level, and any specific concerns or goals]%0A%0AExcited to get started!"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"

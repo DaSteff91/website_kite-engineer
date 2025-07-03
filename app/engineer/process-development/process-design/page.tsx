@@ -193,7 +193,10 @@ export default function ProcessDesignPage() {
               Ready to design breakthrough processes? Let's break through
               boundaries and create what needs to be done.
             </p>
-            <Link href="/contact?subject=Process Design Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process design services. Please provide information about process flow optimization and visualization solutions.%0A%0AMy requirements:%0A[Please describe your current process design challenges and development boundaries]%0A%0ABest regards">
+            <Link
+              href="/contact?subject=Process Design Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process design services. Please provide information about process flow optimization and visualization solutions.%0A%0AMy requirements:%0A[Please describe your current process design challenges and development boundaries]%0A%0ABest regards"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"

@@ -187,7 +187,10 @@ export default function ConsultingPage() {
               Ready to get expert guidance for your kite journey? Let's discuss
               your specific needs and goals.
             </p>
-            <Link href="/contact?subject=Kite Consulting Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your consulting services. I need guidance with:%0A%0A- Equipment selection and recommendations%0A- Skill development and progression planning%0A- Local conditions and spot advice%0A- Sport representation and presentations%0A%0AMy current situation:%0A[Please describe your skill level, current equipment, local conditions, specific challenges, and goals]%0A%0ALooking forward to your expert advice!">
+            <Link
+              href="/contact?subject=Kite Consulting Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your consulting services. I need guidance with:%0A%0A- Equipment selection and recommendations%0A- Skill development and progression planning%0A- Local conditions and spot advice%0A- Sport representation and presentations%0A%0AMy current situation:%0A[Please describe your skill level, current equipment, local conditions, specific challenges, and goals]%0A%0ALooking forward to your expert advice!"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"

@@ -187,7 +187,10 @@ export default function AdvancedPage() {
               Ready to push your limits and master advanced kiteboarding skills?
               Let's take your riding to the next level safely.
             </p>
-            <Link href="/contact?subject=Advanced Kiteboarding Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your advanced courses. Please provide information about:%0A%0A- Available advanced skills and progression levels%0A- Coaching methods and safety protocols%0A- Video documentation options%0A- Scheduling and pricing%0A%0AMy current level and goals:%0A[Please describe your current kiteboarding skills, specific tricks or techniques you want to learn, competition interests, and any particular goals or challenges]%0A%0AReady to send it safely!">
+            <Link
+              href="/contact?subject=Advanced Kiteboarding Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your advanced courses. Please provide information about:%0A%0A- Available advanced skills and progression levels%0A- Coaching methods and safety protocols%0A- Video documentation options%0A- Scheduling and pricing%0A%0AMy current level and goals:%0A[Please describe your current kiteboarding skills, specific tricks or techniques you want to learn, competition interests, and any particular goals or challenges]%0A%0AReady to send it safely!"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"

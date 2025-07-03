@@ -187,7 +187,10 @@ export default function TravelServicesPage() {
               Ready to plan your next kite adventure? Let's create an
               unforgettable experience together.
             </p>
-            <Link href="/contact?subject=Kite Travel Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your travel services for an upcoming kite trip. Please provide information about:%0A%0A- Available destinations and timing%0A- Personal coaching options%0A- Trip planning services%0A- Pricing and packages%0A%0AMy travel details:%0A[Please describe your skill level, preferred destinations, travel dates, group size, and specific interests]%0A%0ALooking forward to an amazing adventure!">
+            <Link
+              href="/contact?subject=Kite Travel Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your travel services for an upcoming kite trip. Please provide information about:%0A%0A- Available destinations and timing%0A- Personal coaching options%0A- Trip planning services%0A- Pricing and packages%0A%0AMy travel details:%0A[Please describe your skill level, preferred destinations, travel dates, group size, and specific interests]%0A%0ALooking forward to an amazing adventure!"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"

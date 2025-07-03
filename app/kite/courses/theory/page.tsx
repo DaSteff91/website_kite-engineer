@@ -232,7 +232,10 @@ export default function TheoryPage() {
               Ready to deepen your understanding of kiteboarding? Let's explore
               the fascinating science behind the sport.
             </p>
-            <Link href="/contact?subject=Kiteboarding Theory Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your theory courses. I'd like to learn more about:%0A%0A- Available course topics and formats%0A- Scheduling and duration options%0A- Personalized vs. group sessions%0A- Pricing and course materials%0A%0AMy background and interests:%0A[Please describe your current kiteboarding experience, specific theory topics you're interested in, and preferred learning format]%0A%0ALooking forward to expanding my knowledge!">
+            <Link
+              href="/contact?subject=Kiteboarding Theory Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your theory courses. I'd like to learn more about:%0A%0A- Available course topics and formats%0A- Scheduling and duration options%0A- Personalized vs. group sessions%0A- Pricing and course materials%0A%0AMy background and interests:%0A[Please describe your current kiteboarding experience, specific theory topics you're interested in, and preferred learning format]%0A%0ALooking forward to expanding my knowledge!"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"

@@ -209,7 +209,10 @@ export default function EquipmentRoadmapPage() {
               Ready to plan for the future? Let's outline the challenges and
               solutions for your next-generation technology.
             </p>
-            <Link href="/contact?subject=Equipment Roadmap Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your equipment roadmap services. Please provide information about technology assessment and future planning capabilities.%0A%0AMy requirements:%0A[Please describe your current technology roadmap challenges and future planning needs]%0A%0ABest regards">
+            <Link
+              href="/contact?subject=Equipment Roadmap Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your equipment roadmap services. Please provide information about technology assessment and future planning capabilities.%0A%0AMy requirements:%0A[Please describe your current technology roadmap challenges and future planning needs]%0A%0ABest regards"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"

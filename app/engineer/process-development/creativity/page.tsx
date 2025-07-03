@@ -184,7 +184,10 @@ export default function CreativityPage() {
               Ready to unlock your creative potential? Let's activate those
               neurons and generate breakthrough innovations.
             </p>
-            <Link href="/contact?subject=Creative Innovation Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your creative innovation services. Please provide information about advanced brainstorming and systematic innovation techniques.%0A%0AMy requirements:%0A[Please describe your current innovation challenges and creative goals]%0A%0ABest regards">
+            <Link
+              href="/contact?subject=Creative Innovation Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your creative innovation services. Please provide information about advanced brainstorming and systematic innovation techniques.%0A%0AMy requirements:%0A[Please describe your current innovation challenges and creative goals]%0A%0ABest regards"
+              target="_blank"
+            >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
