@@ -161,7 +161,7 @@ export default function DeviationManagementPage() {
                 size="lg"
                 className="group bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Manage Your Deviations
+                Connect with me
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>

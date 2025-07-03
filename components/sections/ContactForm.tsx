@@ -220,7 +220,7 @@ export function ContactForm() {
         )}
         <p className="text-muted-foreground text-sm text-left">
           * Mandatory fields. <br></br> Please give me some time to respond. I
-          try keeping it lower then 2#ä days.
+          try keeping it lower then 2 days.
         </p>
       </form>
     </div>

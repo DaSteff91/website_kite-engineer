@@ -161,7 +161,7 @@ export default function ProcessAssessmentPage() {
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Assess Your Processes
+                Connect with me
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>

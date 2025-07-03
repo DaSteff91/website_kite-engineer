@@ -424,7 +424,7 @@ export default function EngineerPage() {
                         className="text-teal-400 hover:text-teal-300 underline text-sm"
                         target="_blank"
                       >
-                        Contact
+                        Connect with me
                       </Link>
                     </div>
                   </AccordionContent>
