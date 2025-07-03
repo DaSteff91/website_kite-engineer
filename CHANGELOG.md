@@ -1,3 +1,10 @@
+## [1.15.13](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.12...v1.15.13) (2025-07-03)
+
+
+### Bug Fixes
+
+* updated the privacy page ([f040833](https://github.com/DaSteff91/website_kite-engineer/commit/f040833d305915602d8f782f67174b721664a5d9))
+
 ## [1.15.12](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.11...v1.15.12) (2025-07-03)
 
 
