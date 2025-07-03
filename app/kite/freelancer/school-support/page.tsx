@@ -77,7 +77,9 @@ export default function SchoolSupportPage() {
               Have An Extra Employee At Hand
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              I´m ready to support your kite school operations
+              I´m ready to support your school. Consider me as the one guy you
+              literally can put anywhere: Flexibility is my strength. Just tell
+              me up front what you need:
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -92,12 +94,12 @@ export default function SchoolSupportPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• VDWS certified instructor</li>
+                <li>• VDWS certified instructor since 2023</li>
                 <li>• Beginner to advanced lessons</li>
                 <li>• Landboarding lessons</li>
                 <li>• Multi-language support (German, English, Portuguese)</li>
                 <li>• Group and individual sessions</li>
-                <li>• Supervision and filmingg</li>
+                <li>• Supervision and filming</li>
               </ul>
             </div>
 
@@ -112,9 +114,10 @@ export default function SchoolSupportPage() {
                 <li>• Office and administration</li>
                 <li>• Customer service and sales support</li>
                 <li>• Equipment recommendations</li>
-                <li>• Gear maintenance advice</li>
-                <li>• Inventory management</li>
+                <li>• Gear maintenance and repairs</li>
+                <li>• Inventory management and logistics</li>
                 <li>• Product demonstrations</li>
+                <li>• Helping hand in day to day tasks</li>
               </ul>
             </div>
 
@@ -142,9 +145,10 @@ export default function SchoolSupportPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
+                <li>• Short-term and long-term contracts</li>
+                <li>• The more you book, the better the price</li>
                 <li>• Seasonal support available</li>
                 <li>• Weekend and holiday coverage</li>
-                <li>• Short-term and long-term contracts</li>
                 <li>
                   • Providing support to multi-location schools and open to
                   commuting between sites.
@@ -189,8 +193,9 @@ export default function SchoolSupportPage() {
           {/* Contact Section */}
           <div className="text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to enhance your kite school operations? Let's discuss how I
-              can support your team.
+              Let's see how I can support your team. Combine my services as you
+              wish, there are almost no restrictions. Is anything missing? We
+              find a solution. It all starts here:
             </p>
             <Link
               href="/contact?subject=School Support Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your school support services. Please provide more details about:%0A%0A- Available services and pricing%0A- Scheduling and availability%0A- Certification and insurance coverage%0A- Experience with similar operations%0A%0AMy school details:%0A[Please describe your kite school, location, typical season, and specific support needs]%0A%0ABest regards"
