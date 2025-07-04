@@ -15,7 +15,8 @@ const siteUrl =
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
+  minimumScale: 1,
+  maximumScale: 1.5,
 };
 
 export const metadata: Metadata = {

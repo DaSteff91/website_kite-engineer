@@ -1,30 +1,42 @@
-'use client';
+// 2025-07-04: The Features.tsx is currently not used and its not clear how it should be used in the future
 
-import { useRef, useEffect } from 'react';
-import { Lightbulb, Palette, Gauge, Users } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+"use client";
+
+import { useRef, useEffect } from "react";
+import { Lightbulb, Palette, Gauge, Users } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const FEATURES = [
   {
     icon: Lightbulb,
-    title: 'Innovative Design',
-    description: 'We create unique, cutting-edge designs that stand out from the competition.'
+    title: "Innovative Design",
+    description:
+      "We create unique, cutting-edge designs that stand out from the competition.",
   },
   {
     icon: Palette,
-    title: 'Beautiful Aesthetics',
-    description: 'Our designs focus on beauty and usability with attention to every detail.'
+    title: "Beautiful Aesthetics",
+    description:
+      "Our designs focus on beauty and usability with attention to every detail.",
   },
   {
     icon: Gauge,
-    title: 'Lightning Fast',
-    description: 'Optimized for performance to ensure the best user experience possible.'
+    title: "Lightning Fast",
+    description:
+      "Optimized for performance to ensure the best user experience possible.",
   },
   {
     icon: Users,
-    title: 'User Centered',
-    description: 'We design with your users in mind, creating intuitive interfaces they will love.'
-  }
+    title: "User Centered",
+    description:
+      "We design with your users in mind, creating intuitive interfaces they will love.",
+  },
 ];
 
 export function Features() {
@@ -36,21 +48,21 @@ export function Features() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
+            entry.target.classList.add("animate-in");
           }
         });
       },
       { threshold: 0.1 }
     );
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     cardsRef.current.forEach((card) => {
       if (card) observer.observe(card);
     });
-    
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
@@ -60,7 +72,7 @@ export function Features() {
       });
     };
   }, []);
-  
+
   return (
     <section
       ref={sectionRef}
@@ -72,10 +84,11 @@ export function Features() {
             What Makes Us Different
           </h2>
           <p className="text-lg text-muted-foreground">
-            We combine beautiful design with powerful technology to create websites that not only look good but perform exceptionally well.
+            We combine beautiful design with powerful technology to create
+            websites that not only look good but perform exceptionally well.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {FEATURES.map((feature, index) => (
             <div
