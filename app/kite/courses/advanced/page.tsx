@@ -123,7 +123,7 @@ export default function AdvancedPage() {
                 </li>
                 <li>• Learning new tricks in a save and guided environment</li>
                 <li>• Individualize your own style and get filmed</li>
-                <li>• Feedback and optimizations and on current riding</li>
+                <li>• Feedback and optimizations on current riding</li>
                 <li>• How to be a kite-buddy for less experienced</li>
                 <li>• Advanced theory that goes beyond the wind window</li>
                 <li>• Practising accident scenarios and self rescue</li>
