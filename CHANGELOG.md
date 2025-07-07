@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.17.0...v1.17.1) (2025-07-07)
+
+
+### Bug Fixes
+
+* typo ([81f58b7](https://github.com/DaSteff91/website_kite-engineer/commit/81f58b7de263e0933430a5d94016263980b70ad9))
+
 # [1.17.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.16.0...v1.17.0) (2025-07-07)
 
 
