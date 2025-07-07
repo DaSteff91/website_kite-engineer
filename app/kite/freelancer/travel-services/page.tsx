@@ -94,9 +94,7 @@ export default function TravelServicesPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>
-                  • Trip planning and coordination for groups and individuals
-                </li>
+                <li>• Trip planning and coordination</li>
                 <li>• Transfer arrangements</li>
                 <li>• Budget and timetable planing</li>
                 <li>• Health and insurance considerations</li>
