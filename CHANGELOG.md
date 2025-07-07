@@ -1,3 +1,12 @@
+# [1.17.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.16.0...v1.17.0) (2025-07-07)
+
+
+### Features
+
+* first version of the courses/advanced page ([5f4ad75](https://github.com/DaSteff91/website_kite-engineer/commit/5f4ad75bf69e7573cfb3f67ba581bbad06e5f08b))
+* first version of the courses/starting page ([1cc6c50](https://github.com/DaSteff91/website_kite-engineer/commit/1cc6c502f04bc97ffe040f9e651acf047f7a6974))
+* first version of the kite/theory page + fixing some typos and content on other pages ([02a0f9a](https://github.com/DaSteff91/website_kite-engineer/commit/02a0f9ab5847e478b943f98bd396ebe804bc884d))
+
 # [1.16.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.15.13...v1.16.0) (2025-07-03)
 
 
