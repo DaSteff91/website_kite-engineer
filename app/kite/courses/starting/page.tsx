@@ -50,7 +50,7 @@ export default function StartingPage() {
    bg-clip-text text-transparent 
    [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
           >
-            (Re-)Starter Services
+            (Re-)Starter Courses
           </h1>
         </div>
       </section>

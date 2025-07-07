@@ -6,12 +6,9 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   ArrowLeft,
-  ArrowBigUpDash,
-  Zap,
-  Trophy,
-  Camera,
-  Wind,
-  Target,
+  Clock,
+  ListCheck,
+  UserRoundSearch,
 } from "lucide-react";
 
 export default function AdvancedPage() {
@@ -73,110 +70,88 @@ export default function AdvancedPage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Push Your Limits Safely
+              After the first step comes the next. And then the next...
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              From first toeside rides to nailing loops - take your skills to
-              the next level
+              Why does that look so easy what they are doing on the water? There
+              is plenty to learn and my services are meant to support along the
+              way:
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
 
-          {/* Advanced Skills Grid */}
+          {/* Course Topics Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-16">
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <ArrowBigUpDash className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
-                  Jumping & Airtime
-                </h3>
+                <UserRoundSearch className="h-6 w-6 text-cyan-400" />
+                <h3 className="text-lg font-semibold text-cyan-200">Who?</h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Controlled jumping techniques</li>
-                <li>• Landing optimization</li>
-                <li>• Airtime extension methods</li>
-                <li>• Boost and send techniques</li>
-                <li>• Safety in high jumps</li>
+                <li>• Individuals or groups</li>
+                <li>• Schools or private</li>
+                <li>• Courses in German, English and Portugues</li>
+                <li>• Practical lessons: max. 4 people</li>
+                <li>• Theory lessons: max. 30 people</li>
+                <li>• No age limits but more then 30kg of weight</li>
+                <li>
+                  • Must be able to swim securely for more then a few minutes
+                </li>
+                <li>
+                  • Advanced = You are about to pass the first hurdles of the
+                  water start
+                </li>
+                <li>
+                  • Sorry, I can´t make someone a "King Of The Air" athlete. But
+                  I teach some cool tricks, sure
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <Zap className="h-6 w-6 text-teal-400" />
+                <ListCheck className="h-6 w-6 text-teal-400" />
                 <h3 className="text-lg font-semibold text-teal-200">
-                  Freestyle Tricks
+                  Possible Content
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Basic unhooked riding</li>
-                <li>• Handle passes and rotations</li>
-                <li>• Kiteloops and megaloop progression</li>
-                <li>• Wakestyle fundamentals</li>
-                <li>• Advanced trick combinations</li>
+                <li>• Develop routines to support your training</li>
+                <li>
+                  • Material modifications like changing board stances or
+                  testing different line setups
+                </li>
+                <li>• Learning new tricks in a save and guided environment</li>
+                <li>• Individualize your own style and get filmed</li>
+                <li>• Feedback and optimizations and on current riding</li>
+                <li>• How to be a kite-buddy for less experienced</li>
+                <li>• Advanced theory that goes beyond the wind window</li>
+                <li>• Practising accident scenarios and self rescue</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <Wind className="h-6 w-6 text-emerald-400" />
+                <Clock className="h-6 w-6 text-emerald-400" />
                 <h3 className="text-lg font-semibold text-emerald-200">
-                  Toeside Mastery
+                  Structure
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Toeside riding fundamentals</li>
-                <li>• Transition techniques</li>
-                <li>• Toeside jumping progression</li>
-                <li>• Switch stance development</li>
-                <li>• Blind and wrapped riding</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-900/35 via-card/35 to-cyan-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <Trophy className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
-                  Competition Prep
-                </h3>
-              </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Contest strategy and tactics</li>
-                <li>• Judging criteria understanding</li>
-                <li>• Performance optimization</li>
-                <li>• Mental preparation techniques</li>
-                <li>• Equipment tuning for competition</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-cyan-900/40 via-card/40 to-teal-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <Camera className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
-                  Video Analysis
-                </h3>
-              </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Professional video documentation</li>
-                <li>• Slow-motion technique analysis</li>
-                <li>• Progress tracking and comparison</li>
-                <li>• Drone footage sessions</li>
-                <li>• Social media content creation</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-teal-900/45 via-card/45 to-emerald-900/45 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <Target className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
-                  Supervised Sessions
-                </h3>
-              </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Safety-focused progression</li>
-                <li>• Real-time coaching and feedback</li>
-                <li>• Risk management guidance</li>
-                <li>• Confidence building approach</li>
-                <li>• Personalized skill development</li>
+                <li>• Up to 5 days intensive programs</li>
+                <li>
+                  • Flexible scheduling options, based on environmental and
+                  personal conditions
+                </li>
+                <li>• Buddy system: 2 people per Kite</li>
+                <li>• Individual: 1 person, 1 Kite</li>
+                <li>• Supervision-only format possible</li>
+                <li>• If available: Headset and video support</li>
+                <li>• Progress tracking and VDWS certification</li>
+                <li>
+                  • No-wind alternatives: Simulations, wakeboarding,
+                  landboarding, SUP, exercising,....
+                </li>
               </ul>
             </div>
           </div>
@@ -184,11 +159,12 @@ export default function AdvancedPage() {
           {/* Contact Section */}
           <div className="text-center">
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to push your limits and master advanced kiteboarding skills?
-              Let's take your riding to the next level safely.
+              There are many things to consider when giving courses but nothing
+              that can´t be arranged. Drop me a message and we´ll organize all
+              the details.
             </p>
             <Link
-              href="/contact?subject=Advanced Kiteboarding Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your advanced courses. Please provide information about:%0A%0A- Available advanced skills and progression levels%0A- Coaching methods and safety protocols%0A- Video documentation options%0A- Scheduling and pricing%0A%0AMy current level and goals:%0A[Please describe your current kiteboarding skills, specific tricks or techniques you want to learn, competition interests, and any particular goals or challenges]%0A%0AReady to send it safely!"
+              href="/contact?subject=Kiteboarding Theory Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your theory courses. I'd like to learn more about:%0A%0A- Available course topics and formats%0A- Scheduling and duration options%0A- Personalized vs. group sessions%0A- Pricing and course materials%0A%0AMy background and interests:%0A[Please describe your current kiteboarding experience, specific theory topics you're interested in, and preferred learning format]%0A%0ALooking forward to expanding my knowledge!"
               target="_blank"
             >
               <Button
