@@ -1,0 +1,156 @@
+name: Dev - Build, Push to GHCR and Deploy on Server
+
+on:
+  push:
+    branches:
+      - dev
+      - development
+
+jobs:  
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout the repository code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PACKAGE_TOKEN }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Clean previous build
+        run: rm -rf .next
+
+      - name: Get the run_id of the most recent run workflow
+        id: get_run_id
+        run: |
+          # Use the GitHub API to get the latest run_id of the first workflow
+          run_id=$(curl -s -H "Authorization: token ${{ secrets.GH_PACKAGE_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/release_dev.yml/runs" | \
+            jq -r '.workflow_runs[0].id')
+          echo "run_id=$run_id" >> $GITHUB_OUTPUT
+          echo "Current run_id: $run_id"
+
+      - name: Clone external action repository
+        run: |
+          git clone https://github.com/kamilchodola/wait-for-workflow-action.git /tmp/wait-for-workflow-action
+          ls -la /tmp/wait-for-workflow-action
+
+      - name: Make the script executable
+        run: |
+          if [ -f /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh ]; then
+            chmod +x /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh
+          else
+            echo "Error: /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh does not exist."
+            exit 1
+          fi
+
+      - name: Wait for Workflow Action
+        run: /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
+          WORKFLOW_ID: "build-and-push.yml"
+          RUN_ID: ${{ steps.get_run_id.outputs.run_id }}
+          MAX_WAIT_MINUTES: "3"
+          INTERVAL: "5"
+          TIMEOUT: "10"
+          ORG_NAME: "dasteff91"
+          REPO_NAME: "website_kite-engineer"
+          REF: "${{ github.ref }}"
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GH_PACKAGE_TOKEN }}
+
+      - name: Get semantic-release tag
+        id: get_release_tag
+        run: |
+          git fetch --tags -f
+          LATEST_TAG_old=$(git describe --tags --abbrev=0 2>/dev/null || git rev-parse --short HEAD)
+          LATEST_TAG=$(git tag --sort=-creatordate | head -n 1)
+          echo "Using release tag (new version): $LATEST_TAG"
+          echo "Using release tag (old version): $LATEST_TAG_old"
+          echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver: docker-container
+
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/dasteff91/website_kite-engineer
+          tags: |
+            type=raw,value=${{ steps.get_release_tag.outputs.tag }}
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/dev' }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64
+          tags: ${{ steps.meta.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          build-args: |
+            NEXT_PUBLIC_CLIENTVAR=clientvar
+
+  deploy:
+    name: Deploy to server
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo (to access tags)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get latest version tag
+        id: get_tag
+        run: |
+          git fetch --tags -f
+          LATEST_TAG=$(git tag --sort=-creatordate | head -n 1)
+          echo "Using version tag: $LATEST_TAG"
+          echo "tag=$LATEST_TAG" >> $GITHUB_OUTPUT
+                
+      - name: SSH and Deploy to Server
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
+          script: |
+            TARGET=$([ "${{ github.ref }}" = "refs/heads/main" ] && echo "prod" || echo "dev")
+            CONTAINER_NAME=www${TARGET:+-dev}.kite-engineer.de
+            PORT_HOST=$([ "$TARGET" = "prod" ] && echo 3000 || echo 3001)
+            IMAGE_TAG=${{ steps.get_tag.outputs.tag || github.sha }}
+            IMAGE_NAME=ghcr.io/dasteff91/website_kite-engineer:${{ steps.get_tag.outputs.tag }}
+
+            echo "Target environment: $TARGET"
+            echo "Using image: $IMAGE_TAG"
+            echo "Container name: $CONTAINER_NAME"
+            echo "Host port: $PORT_HOST"
+            echo "Deploying version: ${{ steps.get_tag.outputs.tag}}"
+
+            echo ${{ secrets.GH_PACKAGE_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+            docker pull $IMAGE_NAME || echo "Warning: Could not pull image, may need to build first"
+
+            docker stop $CONTAINER_NAME || true
+            docker rm $CONTAINER_NAME || true
+
+            docker run -d \
+              --name "$CONTAINER_NAME" \
+              --restart unless-stopped \
+              -p $PORT_HOST:3000 \
+              --env-file /home/steff_deployment/website_kite-engineer/.env \
+              $IMAGE_NAME
