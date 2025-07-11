@@ -189,7 +189,7 @@ export default function ProcessDesignPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to design breakthrough processes? Let's break through
               boundaries and create what needs to be done.
             </p>

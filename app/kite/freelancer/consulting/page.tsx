@@ -122,7 +122,7 @@ export default function ConsultingPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               This section revolves around anything that is somehow connected to
               the sport as well to the environment in which it´s carried out.
               Find out how we can work together:

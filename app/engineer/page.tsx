@@ -801,7 +801,7 @@ export default function EngineerPage() {
 
           {/* Enhanced Contact Section */}
           <div className="mt-16 text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to elevate your project? You always get whatever is
               necessary from my services. The provided overview is meant to be
               an orientation and only a glimps of what is possible. Reach out

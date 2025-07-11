@@ -157,7 +157,7 @@ export default function StartingPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               There are many things to consider when giving courses but nothing
               that can´t be arranged. Drop me a message and we´ll organize all
               the details.

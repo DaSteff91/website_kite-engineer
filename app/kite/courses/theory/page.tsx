@@ -172,7 +172,7 @@ export default function TheoryPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               "A course is good if both, the student and the teacher, learn from
               each other". Combine my services as you please and benefit from an
               individual discount. Something is not listed? I´m always open to

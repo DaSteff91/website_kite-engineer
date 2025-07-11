@@ -205,7 +205,7 @@ export default function EquipmentRoadmapPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to plan for the future? Let's outline the challenges and
               solutions for your next-generation technology.
             </p>

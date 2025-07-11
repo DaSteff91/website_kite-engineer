@@ -53,7 +53,6 @@ export default function AdvancedPage() {
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
-          {/* Back Navigation */}
           <div className="mb-8">
             <Link
               href="/kite"
@@ -158,7 +157,7 @@ export default function AdvancedPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               There are many things to consider when giving courses but nothing
               that can´t be arranged. Drop me a message and we´ll organize all
               the details.

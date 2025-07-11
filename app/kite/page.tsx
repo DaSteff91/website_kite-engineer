@@ -277,7 +277,7 @@ export default function KitePage() {
 
           {/* Enhanced Contact Section */}
           <div className="mt-16 text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               You can get a little bit of everything as well. The more you book,
               the more discout you get. What´s holding you back? Let´s get in
               touch.

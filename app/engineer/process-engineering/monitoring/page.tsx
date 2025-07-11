@@ -149,7 +149,7 @@ export default function MonitoringPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to implement comprehensive monitoring? Let's define the
               right parameters and methods for your production needs.
             </p>

@@ -180,7 +180,7 @@ export default function CreativityPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to unlock your creative potential? Let's activate those
               neurons and generate breakthrough innovations.
             </p>

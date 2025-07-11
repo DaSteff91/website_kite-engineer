@@ -149,7 +149,7 @@ export default function DocumentationPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to enhance team collaboration? Let's implement modern
               documentation and sharing systems.
             </p>

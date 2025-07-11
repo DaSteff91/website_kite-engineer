@@ -192,7 +192,7 @@ export default function SchoolSupportPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Let's see how I can support your team. Combine my services as you
               wish, there are almost no restrictions. Is anything missing? We
               find a solution. It all starts here:

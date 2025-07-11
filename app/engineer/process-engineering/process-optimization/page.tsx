@@ -149,7 +149,7 @@ export default function ProcessOptimizationPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to optimize your processes? Let's implement Six Sigma and
               Lean methodologies to achieve excellence.
             </p>

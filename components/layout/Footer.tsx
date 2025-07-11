@@ -21,7 +21,7 @@ export function Footer() {
   return (
     <footer className="border-t">
       <div className="container mx-auto px-4 md:px-6 py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="space-y-3 text-center sm:text-left">
             <h3 className="text-lg font-semibold">Contact</h3>
             <ul className="space-y-2 text-sm">

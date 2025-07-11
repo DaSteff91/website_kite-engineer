@@ -149,7 +149,7 @@ export default function CompetitorAnalysisPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to understand your competition? Let's analyze your
               competitors and identify strategic opportunities.
             </p>

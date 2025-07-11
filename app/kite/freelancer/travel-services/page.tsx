@@ -182,7 +182,7 @@ export default function TravelServicesPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Let's create an unforgettable experience together. I provide you
               what is neccessary for it. Only the booking is yours. Is anything
               missing? We find a solution. It all starts here:
