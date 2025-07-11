@@ -4,15 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import {
-  Menu,
-  X,
-  Sun,
-  Moon,
-  Globe,
-  ChevronDown,
-  ChevronRight,
-} from "lucide-react";
+import { Menu, X, House, ChevronDown, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import {
   DropdownMenu,
@@ -31,21 +23,8 @@ import { cn } from "@/lib/utils";
   { code: "de", label: "Deutsch" },
 ];*/
 
-type LinkItem = {
-  label: string;
-  href: string;
-};
-
-type SubmenuItem = {
-  label: string;
-  isSubmenu: true;
-  items: LinkItem[];
-};
-
-type DropdownItem = LinkItem | SubmenuItem;
-
 const NAV_ITEMS = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Home", icon: House },
   {
     href: "/kite",
     label: "Kite",
@@ -337,7 +316,11 @@ export function Header() {
                               : "text-white/90"
                           )}
                         >
-                          {item.label}
+                          {item.href === "/" ? (
+                            <House className="h-5 w-5" />
+                          ) : (
+                            item.label
+                          )}
                           <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                         </button>
                       </DropdownMenuTrigger>
@@ -460,7 +443,11 @@ export function Header() {
                           : "text-white/90"
                       )}
                     >
-                      {item.label}
+                      {item.href === "/" ? (
+                        <House className="h-5 w-5" />
+                      ) : (
+                        item.label
+                      )}
                     </Link>
                   )}
                 </div>
