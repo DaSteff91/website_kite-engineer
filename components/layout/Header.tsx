@@ -45,6 +45,7 @@ type SubmenuItem = {
 type DropdownItem = LinkItem | SubmenuItem;
 
 const NAV_ITEMS = [
+  { href: "/", label: "Home" },
   {
     href: "/kite",
     label: "Kite",
@@ -192,6 +193,7 @@ const NAV_ITEMS = [
       },
     ],
   },
+
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
