@@ -1,3 +1,11 @@
+## [1.17.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.17.1...v1.17.2) (2025-07-11)
+
+
+### Bug Fixes
+
+* adding a "home" to the header ([7b2a85a](https://github.com/DaSteff91/website_kite-engineer/commit/7b2a85abe228246937fbdaf7e5b4d6650e28b5f4))
+* adding my introduction to the about page ([97b57d5](https://github.com/DaSteff91/website_kite-engineer/commit/97b57d51a20dadc9e9a225d993fb8ff2ceba3406))
+
 ## [1.17.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.17.0...v1.17.1) (2025-07-07)
 
 
