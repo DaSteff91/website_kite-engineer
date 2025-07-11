@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.17.2...v1.18.0) (2025-07-11)
+
+
+### Features
+
+* adding a home function to the headers navigation menu + fixing hover over to white ([6e3f328](https://github.com/DaSteff91/website_kite-engineer/commit/6e3f3283df47679007987628feb9d6f58ea1389a))
+
 ## [1.17.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.17.1...v1.17.2) (2025-07-11)
 
 
