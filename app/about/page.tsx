@@ -1,6 +1,7 @@
 import Image from "next/image";
 import about_hero_image from "@/public/images/about_hero_image_3.jpg";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
+import about_content_image from "@/public/images/about_content.jpg";
 
 export default function AboutPage() {
   return (
@@ -61,6 +62,48 @@ export default function AboutPage() {
 
         {/* Box Section */}
         <div className="container mx-auto px-4">
+          <div className=" max-w-6xl mx-auto my-4">
+            <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
+              {/* <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
+                Hello, my name is Steff
+              </h3> */}
+              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-300">
+                Hello, my name is Steff...
+              </h3>
+              <p className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base">
+                Steff, short for Stefan. Born in 1991 in the south of Germany,
+                Bavaria. And fortunatelly the Bavarian dialect is part of my
+                "language" repertoire. So yes, you can call me a proud Bavarian.
+                And one day I will realize my vision of running my own café-like
+                place where people want to come together, enjoy each others
+                company and play board games. Until then I realize another
+                vision: The vision of <strong>combining worlds</strong>.
+                <br />
+                <br />
+                What does that mean? Basically this: I want to create a world
+                for myself that combines what I like doing - it´s about
+                combining the world of an engineer with the one of a kitesurf
+                instructor. E voilà, I now follow my own lifestyle of being a{" "}
+                <strong>Kite-Engineer</strong>, a freelancer that provides
+                services in particular fields of engineering as well as
+                providing services that are related to kiteboarding.
+                <br />
+                And no, I don´t design kites. It´s my unique way of dealing with
+                our beloved capitalism: I share what I like doing and you get
+                what you have not yet had before. That makes everyone a winner!
+              </p>
+              <br />
+              <Image
+                src={about_content_image}
+                alt="Content image"
+                className="object-cover object-top"
+                priority
+                placeholder="blur"
+                width={1102}
+                height={827}
+              ></Image>
+            </div>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
@@ -76,11 +119,13 @@ export default function AboutPage() {
                   Programmer, 2025
                 </li>
                 <li>
-                  Offering kitelessons in german, english and portugues, 2024
+                  Offering kitesurf lessons in german, english and portugues,
+                  2024
                 </li>
-                <li>VDWS instructor license, 2023</li>
+                <li>VDWS kitesurf instructor license, 2023</li>
                 <li>
-                  Certified Green Belt with focus on Lean Management, 2022
+                  Certified 6 Sigma Green Belt with focus on Lean Management,
+                  2022
                 </li>
                 <li>Privat kiteboarding lessons, 2021</li>
                 <li>First contact with kiteboarding, 2018</li>
@@ -100,13 +145,17 @@ export default function AboutPage() {
               </h3>
               <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
                 <li>"Be the change in the world you want to see"</li>
+                <li>I am an explorer, an adventurer and a nerd</li>
                 <li>Self-study was always more satisfying then school</li>
                 <li>Yes, even I´ve once played football. Until I was 14</li>
-                <li>Sports and outdoor activities as big part of my life</li>
+                <li>Sports and outdoor activities are a big part of my life</li>
                 <li>So is Linkin Park - being a fan since I´m 6 years old</li>
                 <li>Have you ever listened to Eckhart Tolle? </li>
                 <li>
-                  Philosophy, espacially stoicism, was added since I´m 30 -
+                  Smiling at people on the street helps sharing good vibes
+                </li>
+                <li>
+                  Philosophy, especially stoicism, was added since I´m 30 -
                   coincidence?
                 </li>
                 <li>
