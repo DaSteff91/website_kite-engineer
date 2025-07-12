@@ -72,7 +72,7 @@ export default function AboutPage() {
               </h3>
               <p className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base">
                 Steff, short for Stefan. Born in 1991 in the south of Germany,
-                Bavaria. And fortunatelly the Bavarian dialect is part of my
+                Bavaria. And fortunately the Bavarian dialect is part of my
                 "language" repertoire. So yes, you can call me a proud Bavarian.
                 And one day I will realize my vision of running my own café-like
                 place where people want to come together, enjoy each others
@@ -119,7 +119,7 @@ export default function AboutPage() {
                   Programmer, 2025
                 </li>
                 <li>
-                  Offering kitesurf lessons in german, english and portugues,
+                  Offering kitesurf lessons in german, english and Portuguese,
                   2024
                 </li>
                 <li>VDWS kitesurf instructor license, 2023</li>
@@ -127,11 +127,11 @@ export default function AboutPage() {
                   Certified 6 Sigma Green Belt with focus on Lean Management,
                   2022
                 </li>
-                <li>Privat kiteboarding lessons, 2021</li>
+                <li>Private kiteboarding lessons, 2021</li>
                 <li>First contact with kiteboarding, 2018</li>
                 <li>
                   Professional employments as process development engineer,
-                  process engineer and laboratory assisstant, 2015 - 2024
+                  process engineer and laboratory assistant, 2015 - 2024
                 </li>
                 <li>B.Sc. in Microsystems Engineering, 2015</li>
                 <li>

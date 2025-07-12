@@ -1,10 +1,14 @@
 .env
 Dockerfile
 .dockerignore
-node_modules/
+.gitignore
+.node_modules
 npm-debug.log
 README.md
 .next
 .git
-.husky/
-.github/
+.husky
+.github
+.vscode
+.commitlintrc.json
+CHANGELOG.md

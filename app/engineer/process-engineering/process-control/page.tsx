@@ -71,17 +71,17 @@ export default function ProcessControlPage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Advanced Process Control Solutions
+              Outsource your work
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              APC, SPC, and WER implementation with data analytics and
-              AI-powered insights
+              Invest my brainpower into your project and benefit from my
+              expertise I gathered while working as a process engineer.
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto mb-16">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 max-w-6xl mx-auto mb-16">
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <SlidersHorizontal className="h-6 w-6 text-blue-400" />
@@ -90,11 +90,53 @@ export default function ProcessControlPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• APC implementation and optimization</li>
-                <li>• Real-time process monitoring</li>
-                <li>• Feedback and feedforward control</li>
-                <li>• Model predictive control (MPC)</li>
-                <li>• Control loop tuning and validation</li>
+                <li>
+                  • Software procurement and setup - You already have lots of
+                  process data of your manufacturing processes available but you
+                  lack a centralized software that is providing what your team
+                  needs and on the same time integrates into what is already
+                  setup? I help you finding APC software as well I can take over
+                  all the communication with possible partner. Furthermore I
+                  offer to write requirement specifications, do first sample
+                  testing and support its rollout.
+                </li>
+                <li>
+                  • User training - Are you looking forward to standardize the
+                  way APC is used in your company? I provide a platform based
+                  training for you or your team to make it become a solid common
+                  ground of expertise for further steps. It has a step-based
+                  approach and starts with general APC ideas and rises to
+                  advanced approaches and specific topics that can also involve
+                  the software that you are using.{" "}
+                </li>
+                <li>
+                  • Mathematics - Not every measured signal from a sensor is
+                  automatically ready to be used in an APC environment. Math can
+                  be applied to create new or more reliable sources for your APC
+                  landscape. As well it can be used for limit calculations and
+                  violation rules like n of m. I do raw data analysis, signal
+                  optimization, limit-based calculations, outlier handling and
+                  apply whatever math is necessary wherever needed to get more
+                  out of the control mechanism APC shall be.
+                </li>
+                <li>
+                  • Strategic alignment - Typically APC is not used as only
+                  measure of control in a modern production. It shall be part of
+                  an ecosystem. But how does the APC-piece fit into that
+                  ecosystem and what expectations does it have to fulfill? Is it
+                  doing what it shall do? The view of an outsider on strategic
+                  topics can be a blessing. That´s where I step in.
+                </li>
+                <li>
+                  • Learning from the past - Data can tell stories, if asked
+                  correctly. Analyzing it and find correlations to certain
+                  events is not always straight forward and sometimes needs more
+                  time. Time that is precious within your team.
+                </li>
+                <li>
+                  • AI assistance - The buzzword of today: AI. It´s a powerful
+                  tool for analyzing your data.
+                </li>
               </ul>
             </div>
 
@@ -149,9 +191,13 @@ export default function ProcessControlPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to implement advanced process control? Let's optimize your
-              manufacturing processes with cutting-edge solutions.
+            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+              Miss something? We´ll find a solution. Primary I focus my services
+              around manufacturing, and in particular semiconductor
+              manufacturing. But on an abstract level I can deal with any kind
+              of manufacturing processes. Therefore I offer both short and long
+              term services and I work either project or time based. As well you
+              can combine any of my services to get the best result.
             </p>
             <Link
               href="/contact?subject=Process Control Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process control services. Please provide information about APC, SPC, and AI-powered solutions for my manufacturing processes.%0A%0AMy requirements:%0A[Please describe your current process control challenges and requirements]%0A%0ABest regards"
