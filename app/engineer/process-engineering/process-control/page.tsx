@@ -91,51 +91,93 @@ export default function ProcessControlPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li>
-                  • Software procurement and setup - You already have lots of
-                  process data of your manufacturing processes available but you
-                  lack a centralized software that is providing what your team
-                  needs and on the same time integrates into what is already
-                  setup? I help you finding APC software as well I can take over
-                  all the communication with possible partner. Furthermore I
-                  offer to write requirement specifications, do first sample
-                  testing and support its rollout.
+                  • <strong>Software procurement and setup</strong> - You
+                  already have lots of process data of your manufacturing
+                  processes available but you lack a centralized software that
+                  is providing what your team needs and at the same time
+                  integrates into what is already setup? I help you finding your
+                  <abbr title="advanced process control">APC</abbr> software as
+                  well I can take over all the communication with possible
+                  partner. Furthermore I offer to write requirement
+                  specifications, do first sample testing and support its
+                  rollout.
                 </li>
                 <li>
-                  • User training - Are you looking forward to standardize the
-                  way APC is used in your company? I provide a platform based
-                  training for you or your team to make it become a solid common
-                  ground of expertise for further steps. It has a step-based
-                  approach and starts with general APC ideas and rises to
-                  advanced approaches and specific topics that can also involve
-                  the software that you are using.{" "}
+                  • <strong>User training</strong> - Are you looking forward to
+                  standardize the way{" "}
+                  <abbr title="advanced process control">APC</abbr> is used in
+                  your company? I provide a platform based training for you or
+                  your team to make it become a solid common ground of expertise
+                  for further steps. It has a step-based approach and starts
+                  with general <abbr title="advanced process control">APC</abbr>{" "}
+                  ideas and rises to advanced approaches and specific topics
+                  that can also involve the software that you are using.{" "}
                 </li>
                 <li>
-                  • Mathematics - Not every measured signal from a sensor is
-                  automatically ready to be used in an APC environment. Math can
-                  be applied to create new or more reliable sources for your APC
-                  landscape. As well it can be used for limit calculations and
-                  violation rules like n of m. I do raw data analysis, signal
+                  • <strong>Mathematics</strong> - Not every measured signal
+                  from a sensor is automatically ready to be used in an{" "}
+                  <abbr title="advanced process control">APC</abbr>
+                  environment. Math can be applied to create new or more
+                  reliable sources for your{" "}
+                  <abbr title="advanced process control">APC</abbr> landscape.
+                  As well it can be used for limit calculations and violation
+                  rules like n of m. I do raw data analysis, signal
                   optimization, limit-based calculations, outlier handling and
                   apply whatever math is necessary wherever needed to get more
-                  out of the control mechanism APC shall be.
+                  out of the control mechanism{" "}
+                  <abbr title="advanced process control">APC</abbr> shall be.
                 </li>
                 <li>
-                  • Strategic alignment - Typically APC is not used as only
-                  measure of control in a modern production. It shall be part of
-                  an ecosystem. But how does the APC-piece fit into that
-                  ecosystem and what expectations does it have to fulfill? Is it
-                  doing what it shall do? The view of an outsider on strategic
-                  topics can be a blessing. That´s where I step in.
+                  • <strong>Strategic alignment</strong> - Typically{" "}
+                  <abbr title="advanced process control">APC</abbr> is not used
+                  as only measure of control in a modern production. It shall be
+                  part of an ecosystem. But how does the{" "}
+                  <abbr title="advanced process control">APC</abbr>-piece fit
+                  into that ecosystem and what expectations does it have to
+                  fulfill? Is it doing what it shall do? The view of an outsider
+                  on strategic topics can be a blessing. That´s where I step in.
                 </li>
                 <li>
-                  • Learning from the past - Data can tell stories, if asked
-                  correctly. Analyzing it and find correlations to certain
-                  events is not always straight forward and sometimes needs more
-                  time. Time that is precious within your team.
+                  • <strong>Learning from the past</strong> - Data can tell
+                  stories, if asked correctly. Analyzing it and find
+                  correlations to certain events is not always straight forward
+                  and sometimes needs more time. Time that is precious within
+                  your team. Hand this topic over to me and get answer to the
+                  your questions.
                 </li>
                 <li>
-                  • AI assistance - The buzzword of today: AI. It´s a powerful
-                  tool for analyzing your data.
+                  •{" "}
+                  <strong>
+                    <abbr title="artificial intelligence">AI</abbr> assistance
+                  </strong>{" "}
+                  - The buzzword of today:{" "}
+                  <abbr title="artificial intelligence">AI</abbr>. It´s a
+                  powerful tool for analyzing your data. I can help you finding
+                  the correct model for doing the job, run tests and help
+                  implementing a solution that fits your needs including all the
+                  communication and procurement procedure upfront.
+                </li>
+                <li>
+                  • <strong>New setup</strong> - Are you about to make the first
+                  steps into the world of{" "}
+                  <abbr title="advanced process control">APC</abbr>? Or are you
+                  planing to increase the coverage of your already existing{" "}
+                  <abbr title="advanced process control">APC</abbr> setup?
+                  Together we can evaluate a bunch of strategies and then decide
+                  the way to go to fit your house and processes. I also help you
+                  searching for adequate measurement systems, sensors and where
+                  to place them in order to monitor as good as possible whats of
+                  interest.
+                </li>
+                <li>
+                  • <strong>External software utilization</strong> - For reasons
+                  it may sometimes makes sense that you analyze gathered data
+                  with external tools. One of these tools could be one of the
+                  vast Python libraries like Pandas, Matplotlib, Numpy or SciPy.
+                  With them I can help you while you don´t have to bother with
+                  freeing up resources in order to learn something new for just
+                  one project. And if its not related to Python we´ll also
+                  figure out what to do.
                 </li>
               </ul>
             </div>
@@ -148,11 +190,86 @@ export default function ProcessControlPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• SPC chart implementation</li>
-                <li>• Control limit calculations</li>
-                <li>• Process capability studies</li>
-                <li>• Variation reduction strategies</li>
-                <li>• Quality metrics and KPIs</li>
+                <li>
+                  • <strong>Software procurement and setup</strong> - You
+                  already have lots of measurement data of your manufacturing
+                  processes available but you lack a centralized software that
+                  is providing what your team needs and at the same time
+                  integrates into what is already setup? I help you finding your
+                  <abbr title="statistical process control">SPC</abbr> software
+                  as well I can take over all the communication with possible
+                  partner. Furthermore I offer to write requirement
+                  specifications, do first sample testing and support its
+                  rollout.
+                </li>
+                <li>
+                  • <strong>User training</strong> - Are you looking forward to
+                  standardize the way{" "}
+                  <abbr title="statistical process control">SPC</abbr> is used
+                  in your company? I provide a platform based training for you
+                  or your team to make it become a solid common ground of
+                  expertise for further steps. It has a step-based approach and
+                  starts with general{" "}
+                  <abbr title="statistical process control">SPC</abbr> concepts
+                  and rises to advanced approaches and specific topics that can
+                  also involve the software that you are using.
+                </li>
+                <li>
+                  • <strong>WER implementation</strong> - I´d consider the
+                  <abbr title="western electric rules">WER</abbr>a backbone of
+                  <abbr title="statistical process control">SPC</abbr>. Rolling
+                  out <abbr title="statistical process control">SPC</abbr> on
+                  millions of data channels can not be overseen and managed by
+                  hand, that´s for sure. If you plan to do so and need expertise
+                  about setting limits: I can help you here.
+                </li>
+                <li>
+                  • <strong>Strategic alignment</strong> - Typically{" "}
+                  <abbr title="advanced process control">APC</abbr> is not used
+                  as only measure of control in a modern production. It shall be
+                  part of an ecosystem. But how does the{" "}
+                  <abbr title="advanced process control">APC</abbr>-piece fit
+                  into that ecosystem and what expectations does it have to
+                  fulfill? Is it doing what it shall do? The view of an outsider
+                  on strategic topics can be a blessing. That´s where I step in.
+                </li>
+                <li>
+                  • <strong>Learning from the past</strong> - Data can tell
+                  stories, if asked correctly. Analyzing it and find
+                  correlations to certain events is not always straight forward
+                  and sometimes needs more time. Time that is precious within
+                  your team. Hand this topic over to me and get answer to the
+                  your questions.
+                </li>
+                <li>
+                  • <strong>AI assistance</strong> - The buzzword of today: AI.
+                  It´s a powerful tool for analyzing your data. I can help you
+                  finding the correct model for doing the job, run tests and
+                  help implementing a solution that fits your needs including
+                  all the communication and procurement procedure upfront.
+                </li>
+                <li>
+                  • <strong>New setup</strong> - Are you about to make the first
+                  steps into the world of{" "}
+                  <abbr title="advanced process control">APC</abbr>? Or are you
+                  planing to increase the coverage of your already existing{" "}
+                  <abbr title="advanced process control">APC</abbr> setup?
+                  Together we can evaluate a bunch of strategies and then decide
+                  the way to go to fit your house and processes. I also help you
+                  searching for adequate measurement systems, sensors and where
+                  to place them in order to monitor as good as possible whats of
+                  interest.
+                </li>
+                <li>
+                  • <strong>External software utilization</strong> - For reasons
+                  it may sometimes makes sense that you analyze gathered data
+                  with external tools. One of these tools could be one of the
+                  vast Python libraries like Pandas, Matplotlib, Numpy or SciPy.
+                  With them I can help you while you don´t have to bother with
+                  freeing up resources in order to learn something new for just
+                  one project. And if its not related to Python we´ll also
+                  figure out what to do.
+                </li>
               </ul>
             </div>
 
@@ -160,14 +277,37 @@ export default function ProcessControlPage() {
               <div className="flex items-center gap-3 mb-4">
                 <TrendingUp className="h-6 w-6 text-teal-400" />
                 <h3 className="text-lg font-semibold text-teal-200">
-                  Data Analytics
+                  Data Analytics and Custom Solutions
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Python-based data analysis</li>
-                <li>• Machine learning for process insights</li>
-                <li>• Predictive analytics models</li>
-                <li>• Dashboard and visualization tools</li>
+                <li>
+                  • <strong>Python-based data analysis</strong> - Libraries like
+                  Pandas, Matplotlib, Numpy or SciPy are well established in the
+                  realm of data science. This service is especially meant to
+                  support where not much samples are collected to have APC or
+                  SPC with day to day samples. Or the analysis requirements
+                  differ from the established procedure.
+                </li>
+                <li>
+                  • <strong>Data classification</strong> - Are you dealing with
+                  a new data type or quality and do not yet know how to make it
+                  fit your established catalog of classifications? Or did you
+                  just update your failure catalog and need someone to perform a
+                  re-classification of existing data? Even though I won´t do
+                  this by myself I help you search qualified 3rd parties to do
+                  the job.
+                </li>
+                <li>
+                  • <strong>Custom Solution and Prototyping</strong> - You need
+                  a demo or sample of data prepared in a one-time manner? It
+                  shall be connected within an highly integrated process
+                  landscape where lots of things depend on one another in
+                  feedback loops? Something needs to be responsive in almost
+                  real-time? This is where engineering can shine and you can
+                  save your resources and let me do that for you.
+                </li>
+                <li>• Process control sheets</li>
                 <li>• Automated reporting systems</li>
               </ul>
             </div>
@@ -200,7 +340,7 @@ export default function ProcessControlPage() {
               can combine any of my services to get the best result.
             </p>
             <Link
-              href="/contact?subject=Process Control Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process control services. Please provide information about APC, SPC, and AI-powered solutions for my manufacturing processes.%0A%0AMy requirements:%0A[Please describe your current process control challenges and requirements]%0A%0ABest regards"
+              href="/contact?subject=Process Control Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process control services. Please provide information about APC, SPC and AI-powered solutions for my manufacturing processes.%0A%0AMy requirements:%0A[Please describe your current process control challenges and requirements]%0A%0ABest regards"
               target="_blank"
             >
               <Button
