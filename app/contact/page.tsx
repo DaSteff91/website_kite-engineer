@@ -1,6 +1,6 @@
 import { ContactForm } from "@/components/sections/ContactForm";
 import Image from "next/image";
-import contact_hero_image from "@/public/images/contack_hero_image.jpg";
+import contact_hero_image from "@/public/images/contact_hero_image.jpg";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 
 export default function ContactPage() {

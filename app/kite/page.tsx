@@ -97,7 +97,7 @@ export default function KitePage() {
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80">
                     Whether you need a VDWS-certified instructor, shop
-                    assistance, or someone to manage the bar, I've got you
+                    assistance, or someone to help behind the bar, I've got you
                     covered. Flexibility is my strength.
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
