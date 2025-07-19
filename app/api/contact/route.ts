@@ -3,6 +3,16 @@ import nodemailer from 'nodemailer';
 import { sendEmail } from '@/utilities/nodemailer';
 
 export async function POST(req: NextRequest) {
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0] 
+          || req.headers.get('x-real-ip') 
+          || 'unknown';  // reliably detect client IP :contentReference[oaicite:1]{index=1}
+  console.log({
+    ip,
+    origin: req.headers.get('origin'),
+    userAgent: req.headers.get('user-agent'),
+    body: await req.clone().json(),
+    timestamp: new Date().toISOString(),
+  });  
   try {
     const { name, email, subject, message } = await req.json();
 
