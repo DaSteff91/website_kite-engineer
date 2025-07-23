@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useAutoGrowTextarea } from "@/hooks/useAutoGrowTextarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -138,91 +140,102 @@ export function ContactForm() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-        <div className="space-y-2">
-          <Input
-            name="name"
-            placeholder="Your name*"
-            value={formData.name}
-            onChange={handleInputChange}
-            onFocus={() => handleFocus("name")}
-            required
-            className="bg-background/50 h-12 text-base"
-          />
-        </div>
+    <form
+      onSubmit={handleSubmit}
+      className="w-full max-w-2xl mx-auto space-y-4 sm:space-y-6"
+    >
+      <div className="space-y-2">
+        <Input
+          name="name"
+          placeholder="Your name*"
+          value={formData.name}
+          onChange={handleInputChange}
+          onFocus={() => handleFocus("name")}
+          required
+          className="bg-background/50 h-12 text-base"
+        />
+      </div>
 
-        <div className="space-y-2">
-          <Input
-            type="email"
-            name="email"
-            placeholder="Your email*"
-            value={formData.email}
-            onChange={handleInputChange}
-            onFocus={() => handleFocus("email")}
-            required
-            className="bg-background/50 h-12 text-base"
-          />
-        </div>
+      <div className="space-y-2">
+        <Input
+          type="email"
+          name="email"
+          placeholder="Your email*"
+          value={formData.email}
+          onChange={handleInputChange}
+          onFocus={() => handleFocus("email")}
+          required
+          className="bg-background/50 h-12 text-base"
+        />
+      </div>
 
-        <div className="space-y-2">
-          <Input
-            name="subject"
-            placeholder="Subject*"
-            value={formData.subject}
-            onChange={handleInputChange}
-            onFocus={() => handleFocus("subject")}
-            required
-            className={getFieldClassName(
-              "subject",
-              "bg-background/50 h-12 text-base"
-            )}
-          />
-        </div>
+      <div className="space-y-2">
+        <Input
+          name="subject"
+          placeholder="Subject*"
+          value={formData.subject}
+          onChange={handleInputChange}
+          onFocus={() => handleFocus("subject")}
+          required
+          className={getFieldClassName(
+            "subject",
+            "bg-background/50 h-12 text-base"
+          )}
+        />
+      </div>
 
-        <div className="space-y-2">
-          <Textarea
-            ref={textareaRef}
-            name="message"
-            placeholder="Your message*"
-            value={formData.message}
-            onChange={handleInputChange}
-            onFocus={() => handleFocus("message")}
-            required
-            className={getFieldClassName(
-              "message",
-              "bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none sm:resize-y w-full overflow-hidden max-h-[50vh] sm:max-h-[70vh] transition-[height]"
-            )}
-            style={{ fontSize: "16px" }}
-          />
-        </div>
+      <div className="space-y-2">
+        <Textarea
+          ref={textareaRef}
+          name="message"
+          placeholder="Your message*"
+          value={formData.message}
+          onChange={handleInputChange}
+          onFocus={() => handleFocus("message")}
+          required
+          className={getFieldClassName(
+            "message",
+            "bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none sm:resize-y w-full overflow-hidden max-h-[50vh] sm:max-h-[70vh] transition-[height]"
+          )}
+          style={{ fontSize: "16px" }}
+        />
+      </div>
 
-        <Button
-          type="submit"
-          className="w-full group h-12 text-base font-medium"
-          disabled={isSubmitting}
+      <div className="flex items-center gap-3">
+        <Checkbox id="terms" />
+        <Label
+          htmlFor="terms"
+          className="text-muted-foreground text-sm text-left"
         >
-          <span className="flex items-center justify-center">
-            {isSubmitting ? (
-              "Sending..."
-            ) : (
-              <>
-                Send Message
-                <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </>
-            )}
-          </span>
-        </Button>
-        {successMessage && (
-          <p className="text-green-600 text-left mt-4 text-base">
-            {successMessage}
-          </p>
-        )}
-        <p className="text-muted-foreground text-sm text-left">
-          * Mandatory fields. <br></br> Please give me some time to respond. I
-          try keeping it lower then 2 days.
+          Accept data processing for contacting me*
+        </Label>
+      </div>
+
+      <Button
+        type="submit"
+        className="w-full group h-12 text-base font-medium"
+        disabled={isSubmitting}
+      >
+        <span className="flex items-center justify-center">
+          {isSubmitting ? (
+            "Sending..."
+          ) : (
+            <>
+              Send Message
+              <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </>
+          )}
+        </span>
+      </Button>
+      {successMessage && (
+        <p className="text-green-600 text-left mt-4 text-base">
+          {successMessage}
         </p>
-      </form>
-    </div>
+      )}
+      <p className="text-muted-foreground text-sm text-left">
+        * Mandatory fields. <br></br> Please give me some time to respond. I try
+        keeping it lower then 2 days.
+      </p>
+    </form>
   );
 }
