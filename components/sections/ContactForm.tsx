@@ -18,6 +18,10 @@ export function ContactForm() {
     subject: "",
     message: "",
   });
+
+  const [isChecked, setIsChecked] = useState(false);
+  const [checkboxError, setCheckboxError] = useState(false);
+
   const textareaRef = useAutoGrowTextarea(formData.message);
   const [prefilledFields, setPrefilledFields] = useState<{
     subject: boolean;
@@ -97,6 +101,12 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!isChecked) {
+      setCheckboxError(true);
+      return;
+    }
+
     setIsSubmitting(true);
     setSuccessMessage("");
 
@@ -127,6 +137,7 @@ export function ContactForm() {
           subject: false,
           message: false,
         });
+        setIsChecked(false);
       } else {
         const result = await response.json();
         alert(result.message || "An error occurred.");
@@ -202,13 +213,25 @@ export function ContactForm() {
       </div>
 
       <div className="flex items-center gap-3">
-        <Checkbox id="terms" />
+        <Checkbox
+          id="terms"
+          checked={isChecked}
+          onCheckedChange={(checked) => {
+            setIsChecked(checked === true);
+            if (checked) setCheckboxError(false);
+          }}
+        />
         <Label
           htmlFor="terms"
           className="text-muted-foreground text-sm text-left"
         >
           Accept data processing for contacting me*
         </Label>
+        {checkboxError && (
+          <p className="text-red-500 text-sm mt-1">
+            Please accept data processing to continue.
+          </p>
+        )}
       </div>
 
       <Button
