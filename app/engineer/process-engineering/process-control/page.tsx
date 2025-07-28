@@ -10,6 +10,7 @@ import {
   BarChart3,
   TrendingUp,
   Target,
+  BaggageClaim,
 } from "lucide-react";
 
 export default function ProcessControlPage() {
@@ -267,17 +268,17 @@ export default function ProcessControlPage() {
                   vast Python libraries like Pandas, Matplotlib, Numpy or SciPy.
                   With them I can help you while you don´t have to bother with
                   freeing up resources in order to learn something new for just
-                  one project. And if its not related to Python we´ll also
-                  figure out what to do.
+                  one project. And if its not related to Python I´m ready to
+                  delve into other environments as well, just let me know.
                 </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <TrendingUp className="h-6 w-6 text-teal-400" />
+                <BaggageClaim className="h-6 w-6 text-teal-400" />
                 <h3 className="text-lg font-semibold text-teal-200">
-                  Data Analytics and Custom Solutions
+                  Custom Solutions
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
@@ -299,20 +300,25 @@ export default function ProcessControlPage() {
                   the job.
                 </li>
                 <li>
-                  • <strong>Custom Solution and Prototyping</strong> - You need
-                  a demo or sample of data prepared in a one-time manner? It
-                  shall be connected within an highly integrated process
-                  landscape where lots of things depend on one another in
-                  feedback loops? Something needs to be responsive in almost
-                  real-time? This is where engineering can shine and you can
-                  save your resources and let me do that for you.
+                  • <strong>Data creation and prototyping</strong> - You need a
+                  demo or sample of data prepared in a one-time manner? It shall
+                  be connected within an highly integrated process landscape
+                  where lots of things depend on one another in feedback loops?
+                  Something needs to be responsive in almost real-time? This is
+                  where engineering can shine and you can save your resources
+                  and let me do that for you. I
                 </li>
-                <li>• Process control sheets</li>
-                <li>• Automated reporting systems</li>
+                <li>
+                  • <strong>Maintenance and review</strong> - The process
+                  control tools you use are historically grown and need a review
+                  or a restructuring? You use manual manpower to maintain these
+                  tools? Whatever it is, outsource it and let an experienced
+                  helping hand do that for you.
+                </li>
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
+            {/* <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-emerald-400" />
                 <h3 className="text-lg font-semibold text-emerald-200">
@@ -326,18 +332,18 @@ export default function ProcessControlPage() {
                 <li>• Automated anomaly detection</li>
                 <li>• Smart process optimization</li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Section */}
           <div className="text-center">
             <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
-              Miss something? We´ll find a solution. Primary I focus my services
-              around manufacturing, and in particular semiconductor
-              manufacturing. But on an abstract level I can deal with any kind
-              of manufacturing processes. Therefore I offer both short and long
-              term services and I work either project or time based. As well you
-              can combine any of my services to get the best result.
+              Miss something? We´ll find a solution. Primary I offer my services
+              for manufacturing processes, and in particular semiconductor
+              manufacturing. But I am absolutely open for new topics. My
+              services can be booked in both ways: short and long term. And I
+              work either project or time based. As well you can combine any of
+              my services to get the best result.
             </p>
             <Link
               href="/contact?subject=Process Control Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process control services. Please provide information about APC, SPC and AI-powered solutions for my manufacturing processes.%0A%0AMy requirements:%0A[Please describe your current process control challenges and requirements]%0A%0ABest regards"
