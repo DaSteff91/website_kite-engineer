@@ -1,3 +1,16 @@
+# [1.19.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.18.1...v1.19.0) (2025-07-29)
+
+
+### Bug Fixes
+
+* implement user acknowledgement ([3f63dff](https://github.com/DaSteff91/website_kite-engineer/commit/3f63dff923e42c336d939a2be2d57688d76f7d49))
+* insert logging to start implementing CORS ([ed27870](https://github.com/DaSteff91/website_kite-engineer/commit/ed27870e8e09a0265cb6525e73f805639b247d07))
+
+
+### Features
+
+*  sanitation and validation for contact form and preparing a checkbox for submission ([8cc4cc5](https://github.com/DaSteff91/website_kite-engineer/commit/8cc4cc5aa91a1dc180c4f324cb2b492773faeb5f))
+
 ## [1.18.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.18.0...v1.18.1) (2025-07-29)
 
 
