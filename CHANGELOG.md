@@ -1,3 +1,14 @@
+## [1.18.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.18.0...v1.18.1) (2025-07-29)
+
+
+### Bug Fixes
+
+*  layout changes in the contact section of all pages ([80845ca](https://github.com/DaSteff91/website_kite-engineer/commit/80845ca42c0731c3d7a2e40647f732fc0bfd1024))
+* adding some details and fix some wording ([6590c14](https://github.com/DaSteff91/website_kite-engineer/commit/6590c14eb1834124295de1bb59c33ac2f376032d))
+* fixing typos ([947200d](https://github.com/DaSteff91/website_kite-engineer/commit/947200d1aba0de1051b003a8511fb35ade9f3979))
+* typos and adding a spellchecker; ([79ddb85](https://github.com/DaSteff91/website_kite-engineer/commit/79ddb85af95bf162923c1da133d54c5b6f9b8545))
+* update some content ([8bdb025](https://github.com/DaSteff91/website_kite-engineer/commit/8bdb025f1801013a17f863f797467162e79e5187))
+
 # [1.18.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.17.2...v1.18.0) (2025-07-11)
 
 
