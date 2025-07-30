@@ -23,15 +23,10 @@ export function ContactForm() {
   const [checkboxError, setCheckboxError] = useState(false);
 
   const textareaRef = useAutoGrowTextarea(formData.message);
-  const [prefilledFields, setPrefilledFields] = useState<{
-    subject: boolean;
-    message: boolean;
-  }>({ subject: false, message: false });
-  const [touchedFields, setTouchedFields] = useState({
-    name: false,
-    email: false,
-    subject: false,
-    message: false,
+
+  const [placeholderValues, setPlaceholderValues] = useState({
+    subject: "",
+    message: "",
   });
 
   useEffect(() => {
@@ -41,22 +36,16 @@ export function ContactForm() {
     meta.content = "width=device-width, initial-scale=1, maximum-scale=1";
     document.head.appendChild(meta);
 
-    // Get URL parameters for prefilling
+    // Get URL parameters for placeholders
     const urlParams = new URLSearchParams(window.location.search);
     const subject = urlParams.get("subject");
     const message = urlParams.get("message");
 
     if (subject || message) {
-      setFormData((prev) => ({
-        ...prev,
-        subject: subject ? decodeURIComponent(subject) : prev.subject,
-        message: message ? decodeURIComponent(message) : prev.message,
-      }));
-
-      // Mark fields as prefilled
-      setPrefilledFields({
-        subject: !!subject,
-        message: !!message,
+      // Store decoded values for placeholders
+      setPlaceholderValues({
+        subject: subject ? decodeURIComponent(subject) : "",
+        message: message ? decodeURIComponent(message) : "",
       });
     }
     return () => {
@@ -77,26 +66,6 @@ export function ContactForm() {
       ...prev,
       [name]: value,
     }));
-  };
-
-  const handleFocus = (fieldName: string) => {
-    setTouchedFields((prev) => ({
-      ...prev,
-      [fieldName]: true,
-    }));
-  };
-
-  const getFieldClassName = (
-    fieldName: keyof typeof prefilledFields,
-    baseClassName: string
-  ) => {
-    const isPrefilled = prefilledFields[fieldName];
-    const isTouched = touchedFields[fieldName];
-
-    if (isPrefilled && !isTouched) {
-      return `${baseClassName} text-muted-foreground italic`;
-    }
-    return baseClassName;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -127,16 +96,6 @@ export function ContactForm() {
           subject: "",
           message: "",
         });
-        setPrefilledFields({
-          subject: false,
-          message: false,
-        });
-        setTouchedFields({
-          name: false,
-          email: false,
-          subject: false,
-          message: false,
-        });
         setIsChecked(false);
       } else {
         const result = await response.json();
@@ -161,7 +120,6 @@ export function ContactForm() {
           placeholder="Your name*"
           value={formData.name}
           onChange={handleInputChange}
-          onFocus={() => handleFocus("name")}
           required
           className="bg-background/50 h-12 text-base"
         />
@@ -174,7 +132,6 @@ export function ContactForm() {
           placeholder="Your email*"
           value={formData.email}
           onChange={handleInputChange}
-          onFocus={() => handleFocus("email")}
           required
           className="bg-background/50 h-12 text-base"
         />
@@ -183,15 +140,11 @@ export function ContactForm() {
       <div className="space-y-2">
         <Input
           name="subject"
-          placeholder="Subject*"
+          placeholder={placeholderValues.subject || "Subject*"}
           value={formData.subject}
           onChange={handleInputChange}
-          onFocus={() => handleFocus("subject")}
           required
-          className={getFieldClassName(
-            "subject",
-            "bg-background/50 h-12 text-base"
-          )}
+          className="bg-background/50 h-12 text-base"
         />
       </div>
 
@@ -199,15 +152,11 @@ export function ContactForm() {
         <Textarea
           ref={textareaRef}
           name="message"
-          placeholder="Your message*"
+          placeholder={placeholderValues.message || "Your message*"}
           value={formData.message}
           onChange={handleInputChange}
-          onFocus={() => handleFocus("message")}
           required
-          className={getFieldClassName(
-            "message",
-            "bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none sm:resize-y w-full overflow-hidden max-h-[50vh] sm:max-h-[70vh] transition-[height]"
-          )}
+          className="bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none sm:resize-y w-full overflow-hidden max-h-[50vh] sm:max-h-[70vh] transition-[height]"
           style={{ fontSize: "16px" }}
         />
       </div>
