@@ -1,3 +1,11 @@
+## [1.20.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.20.0...v1.20.1) (2025-08-11)
+
+
+### Bug Fixes
+
+* dont know what happened here ([7435337](https://github.com/DaSteff91/website_kite-engineer/commit/74353378b82c8f0fa38cda80fabe221e3512f3a2))
+* preparing for merge ([389c8b4](https://github.com/DaSteff91/website_kite-engineer/commit/389c8b4a8b3ae83e0ad071c33957954a34558f9a))
+
 # [1.20.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.19.0...v1.20.0) (2025-08-11)
 
 ### Features
