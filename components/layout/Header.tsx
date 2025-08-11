@@ -23,6 +23,7 @@ import { cn } from "@/lib/utils";
   { code: "de", label: "Deutsch" },
 ];*/
 
+// ONE DAY: PUT ALL THESE NAV_ITEMS ETC INTO A CONSTANTS FOLDER!!!!!
 const NAV_ITEMS = [
   { href: "/", label: "Home", icon: House },
   {
@@ -176,6 +177,7 @@ const NAV_ITEMS = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
+// ONE DAY: PUT ALL THESE NAV_ITEMS ETC FROM ABOVE INTO A CONSTANTS FOLDER!!!!!
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

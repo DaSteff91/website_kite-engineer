@@ -55,8 +55,8 @@ export default function ContactPage() {
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Whether it's about kiteboarding, engineering, or anything in
-              between. Found a bug or typo? I´ll be forever thankfull if you
-              report it here.
+              between. Reach out via mail, phone or contact form below. Found a
+              bug or typo? I´ll be forever thankful if you report it.
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
