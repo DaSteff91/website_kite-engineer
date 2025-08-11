@@ -1,3 +1,15 @@
+# [1.21.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.20.1...v1.21.0) (2025-08-11)
+
+
+### Bug Fixes
+
+* added the new subpages ([ed7c56d](https://github.com/DaSteff91/website_kite-engineer/commit/ed7c56d5759693f13698f1dea78ea687229aee0d))
+
+
+### Features
+
+* implement a site wide metadata layout. Needs to be filled later ([6efd73b](https://github.com/DaSteff91/website_kite-engineer/commit/6efd73bd3a3fd4a352c3f0373c9038b43fd97d85))
+
 ## [1.20.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.20.0...v1.20.1) (2025-08-11)
 
 
