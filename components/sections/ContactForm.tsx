@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useAutoGrowTextarea } from "@/hooks/useAutoGrowTextarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import Link from "next/link";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -174,7 +175,15 @@ export function ContactForm() {
           htmlFor="terms"
           className="text-muted-foreground text-sm text-left"
         >
-          Accept data processing for contacting me*
+          Accept{" "}
+          <Link
+            href="/privacy"
+            className="inline-flex items-center gap-2 hover:text-blue-300 underline transition-colors"
+            target="_blank"
+          >
+            data processing
+          </Link>{" "}
+          for contacting me*
         </Label>
         {checkboxError && (
           <p className="text-red-500 text-sm mt-1">
