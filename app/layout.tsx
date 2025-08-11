@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ClientLayoutWrapper } from "./ClientLayoutWrapper";
+import { SITE } from "@/lib/constants/site-config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,8 +20,11 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Kite-Engineer",
-  description: "The best of two worlds",
+  title: {
+    template: `%s | ${SITE.name}`,
+    default: SITE.name,
+  },
+  description: SITE.description,
   authors: [{ name: "Stefan Merthan" }],
   icons: [
     {
@@ -42,16 +46,17 @@ export const metadata: Metadata = {
       type: "image/x-icon",
     },
   ],
-  keywords: "kiteboarding, engineering, kitesurf, engineer",
+  keywords:
+    "kiteboarding, engineering, kitesurf, engineer, consultant, representative, kitesurfing, sport, consulting, freelancer, outsourcing",
   metadataBase: new URL("https://kite-engineer.de"),
   openGraph: {
-    title: "Kite-Engineer",
-    description: "The best of two worlds",
-    url: "/",
-    siteName: "Kite-Engineer Combining Worlds",
+    title: SITE.name,
+    description: SITE.description,
+    url: SITE.url,
+    siteName: SITE.name,
     images: [
       {
-        url: "$/images/og_picture.png",
+        url: SITE.ogImage,
         width: 1200,
         height: 630,
         alt: "Kite-Engineer Logo",
@@ -74,11 +79,10 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Kite-Engineer",
-    description:
-      "Combinging worlds by offering kiteboarding related services as well as engineering services",
-    images: ["/images/og_picture.png"],
+    card: SITE.twitterCard,
+    title: SITE.name,
+    description: SITE.description,
+    images: [SITE.ogImage],
   },
 };
 

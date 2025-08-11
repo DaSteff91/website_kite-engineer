@@ -2,6 +2,9 @@ import Image from "next/image";
 import about_hero_image from "@/public/images/about_hero_image_3.jpg";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import about_content_image from "@/public/images/about_content.jpg";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata = PAGE_METADATA.about;
 
 export default function AboutPage() {
   return (
