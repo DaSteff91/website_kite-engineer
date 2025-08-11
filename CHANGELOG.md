@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.19.0...v1.20.0) (2025-08-11)
+
+
+### Features
+
+* contact form doesn´t handle prefills but placeholder now when linked to it ([873ab57](https://github.com/DaSteff91/website_kite-engineer/commit/873ab5723d885cb7c69e944f51b12e610f0f6f29))
+
 # [1.19.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.18.1...v1.19.0) (2025-07-29)
 
 
