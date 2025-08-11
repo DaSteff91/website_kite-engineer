@@ -89,7 +89,6 @@ export default function CreativityPage() {
                   Creativity Techniques and Problem-Solving
                 </h3>
                 <p className="block text-muted-foreground mb-4 sm:mb-6 pl-5 sm:pl-6 pr-4 sm:pr-5 sm:text-base text-sm -mx-4 sm:-mx-6 w-auto">
-                  {" "}
                   While becomming and working as a green belt I learned to host
                   sessions and workshops to solve technical problems or to find
                   solutions for overcomming obstacles that arise during the
