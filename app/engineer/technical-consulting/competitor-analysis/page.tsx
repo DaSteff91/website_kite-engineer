@@ -11,6 +11,10 @@ import {
   BarChart3,
   Target,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata =
+  PAGE_METADATA["engineer/technical-consulting/competitor-analysis"];
 
 export default function CompetitorAnalysisPage() {
   return (

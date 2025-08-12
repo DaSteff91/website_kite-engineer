@@ -11,35 +11,22 @@ import {
 } from "@/components/ui/accordion";
 import {
   Settings,
-  Code2,
   ClipboardList,
   Lightbulb,
   Gauge,
-  Cpu,
   BarChart3,
-  Workflow,
-  Binary,
   Network,
-  Projector as ProjectorChart,
-  Users,
-  ShieldAlert,
   FileSearch,
-  Router,
   GraduationCap,
   ArrowRight,
   FlaskRound,
   Microscope,
-  LineChart,
-  Braces,
   PocketKnife,
   SlidersHorizontal,
   RefreshCw,
   WandSparkles,
   Radiation,
-  MapPinPlus,
-  MapPinPlusInsideIcon,
   MapIcon,
-  ForkKnife,
   Database,
   MonitorCheck,
   FolderKanban,
@@ -50,6 +37,10 @@ import {
   UserRoundCheck,
   Terminal,
 } from "lucide-react";
+
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata = PAGE_METADATA.engineer;
 
 export default function EngineerPage() {
   return (

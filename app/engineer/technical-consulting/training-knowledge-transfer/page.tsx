@@ -11,6 +11,10 @@ import {
   BookOpen,
   Target,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata =
+  PAGE_METADATA["engineer/technical-consulting/training-knowledge-transfer"];
 
 export default function TrainingKnowledgeTransferPage() {
   return (

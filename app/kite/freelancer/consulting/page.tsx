@@ -6,13 +6,12 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   ArrowLeft,
-  MessageSquareText,
   ShoppingCart,
   Presentation,
-  Wind,
-  Wrench,
-  Target,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata = PAGE_METADATA["kite/freelancer/consulting"];
 
 export default function ConsultingPage() {
   return (

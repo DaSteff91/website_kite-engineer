@@ -12,6 +12,10 @@ import {
   Target,
   BaggageClaim,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata =
+  PAGE_METADATA["engineer/process-engineering/process-control"];
 
 export default function ProcessControlPage() {
   return (
@@ -96,7 +100,7 @@ export default function ProcessControlPage() {
                   already have lots of process data of your manufacturing
                   processes available but you lack a centralized software that
                   is providing what your team needs and at the same time
-                  integrates into what is already setup? I help you finding your
+                  integrates into what is already setup? I help you finding your{" "}
                   <abbr title="advanced process control">APC</abbr> software as
                   well I can take over all the communication with possible
                   partner. Furthermore I offer to write requirement
@@ -117,12 +121,11 @@ export default function ProcessControlPage() {
                 <li>
                   • <strong>Mathematics</strong> - Not every measured signal
                   from a sensor is automatically ready to be used in an{" "}
-                  <abbr title="advanced process control">APC</abbr>
-                  environment. Math can be applied to create new or more
-                  reliable sources for your{" "}
-                  <abbr title="advanced process control">APC</abbr> landscape.
-                  As well it can be used for limit calculations and violation
-                  rules like n of m. I do raw data analysis, signal
+                  <abbr title="advanced process control">APC</abbr> environment.
+                  Math can be applied to create new or more reliable sources for
+                  your <abbr title="advanced process control">APC</abbr>{" "}
+                  landscape. As well it can be used for limit calculations and
+                  violation rules like n of m. I do raw data analysis, signal
                   optimization, limit-based calculations, outlier handling and
                   apply whatever math is necessary wherever needed to get more
                   out of the control mechanism{" "}
@@ -196,7 +199,7 @@ export default function ProcessControlPage() {
                   already have lots of measurement data of your manufacturing
                   processes available but you lack a centralized software that
                   is providing what your team needs and at the same time
-                  integrates into what is already setup? I help you finding your
+                  integrates into what is already setup? I help you finding your{" "}
                   <abbr title="statistical process control">SPC</abbr> software
                   as well I can take over all the communication with possible
                   partner. Furthermore I offer to write requirement
@@ -216,8 +219,8 @@ export default function ProcessControlPage() {
                   also involve the software that you are using.
                 </li>
                 <li>
-                  • <strong>WER implementation</strong> - I´d consider the
-                  <abbr title="western electric rules">WER</abbr>a backbone of
+                  • <strong>WER implementation</strong> - I´d consider the{" "}
+                  <abbr title="western electric rules">WER</abbr> a backbone of{" "}
                   <abbr title="statistical process control">SPC</abbr>. Rolling
                   out <abbr title="statistical process control">SPC</abbr> on
                   millions of data channels can not be overseen and managed by

@@ -14,6 +14,9 @@ import {
   Shield,
   Drama,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata = PAGE_METADATA["kite/freelancer/school-support"];
 
 export default function SchoolSupportPage() {
   return (

@@ -12,6 +12,11 @@ import {
   Target,
 } from "lucide-react";
 
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata =
+  PAGE_METADATA["engineer/process-development/equipment-roadmap"];
+
 export default function EquipmentRoadmapPage() {
   return (
     <main className="relative min-h-screen">

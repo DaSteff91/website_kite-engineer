@@ -15,6 +15,9 @@ import {
   ListCheck,
   UserRoundSearch,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata = PAGE_METADATA["kite/courses/starting"];
 
 export default function StartingPage() {
   return (

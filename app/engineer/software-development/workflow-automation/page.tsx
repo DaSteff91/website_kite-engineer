@@ -11,6 +11,10 @@ import {
   Clock,
   Workflow,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata =
+  PAGE_METADATA["engineer/software-development/workflow-automation"];
 
 export default function WorkflowAutomationPage() {
   return (

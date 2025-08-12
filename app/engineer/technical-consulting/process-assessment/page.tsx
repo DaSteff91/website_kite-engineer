@@ -11,6 +11,10 @@ import {
   BarChart3,
   Zap,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata =
+  PAGE_METADATA["engineer/technical-consulting/process-assessment"];
 
 export default function ProcessAssessmentPage() {
   return (

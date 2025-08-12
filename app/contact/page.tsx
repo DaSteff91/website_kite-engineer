@@ -2,6 +2,9 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import Image from "next/image";
 import contact_hero_image from "@/public/images/contact_hero_image.jpg";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata = PAGE_METADATA.contact;
 
 export default function ContactPage() {
   return (

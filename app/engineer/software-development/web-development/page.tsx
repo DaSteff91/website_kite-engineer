@@ -11,6 +11,10 @@ import {
   Cloud,
   Shield,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata =
+  PAGE_METADATA["engineer/software-development/web-development"];
 
 export default function WebDevelopmentPage() {
   return (

@@ -12,6 +12,11 @@ import {
   FileText,
 } from "lucide-react";
 
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata =
+  PAGE_METADATA["engineer/project-management/documentation"];
+
 export default function DocumentationPage() {
   return (
     <main className="relative min-h-screen">

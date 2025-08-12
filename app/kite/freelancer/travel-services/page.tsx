@@ -14,6 +14,9 @@ import {
   Compass,
   DumbbellIcon,
 } from "lucide-react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata = PAGE_METADATA["kite/freelancer/travel-services"];
 
 export default function TravelServicesPage() {
   return (

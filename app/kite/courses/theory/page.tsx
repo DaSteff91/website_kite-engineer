@@ -17,6 +17,10 @@ import {
   Unplug,
 } from "lucide-react";
 
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+export const metadata = PAGE_METADATA["kite/courses/theory"];
+
 export default function TheoryPage() {
   return (
     <main className="relative min-h-screen">
