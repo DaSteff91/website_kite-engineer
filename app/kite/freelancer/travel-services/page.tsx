@@ -7,11 +7,7 @@ import {
   ArrowRight,
   ArrowLeft,
   Plane,
-  MapPin,
-  Calendar,
   Users,
-  Camera,
-  Compass,
   DumbbellIcon,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";

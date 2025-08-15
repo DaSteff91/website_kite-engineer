@@ -83,14 +83,14 @@ export function Footer() {
           </div>
 
           <div className="space-y-3 text-center sm:text-left">
-            <h3 className="text-lg font-semibold">Legal/ Rechtliches</h3>
+            <h3 className="text-lg font-semibold">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/privacy"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Privacy Policy/ Datenschutz
+                  Privacy Policy
                 </Link>
               </li>
               <li>
@@ -98,7 +98,7 @@ export function Footer() {
                   href="/imprint"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Imprint/ Impressum
+                  Imprint
                 </Link>
               </li>
             </ul>

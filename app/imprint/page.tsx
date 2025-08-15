@@ -6,9 +6,9 @@ import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { useState } from "react";
 
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+// import { PAGE_METADATA } from "@/lib/constants/metadata";
 
-export const metadata = PAGE_METADATA.imprint;
+// export const metadata = PAGE_METADATA.imprint;
 
 export default function Imprint() {
   return (
