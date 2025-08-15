@@ -1,3 +1,16 @@
+# [1.22.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.21.0...v1.22.0) (2025-08-15)
+
+
+### Bug Fixes
+
+* make the textarea scrollable ([8de76ed](https://github.com/DaSteff91/website_kite-engineer/commit/8de76eddcd1617751e70b338d079be41f4da3488))
+* minor changes ([004b993](https://github.com/DaSteff91/website_kite-engineer/commit/004b9938b6b1749a86c320a6792c65f035166372))
+
+
+### Features
+
+* fixing typos and continue to implement page specific meta data ([6393c69](https://github.com/DaSteff91/website_kite-engineer/commit/6393c691ef3882651d2e9820924a48d057fd0d8f))
+
 # [1.21.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.20.1...v1.21.0) (2025-08-11)
 
 
