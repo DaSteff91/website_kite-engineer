@@ -157,7 +157,7 @@ export function ContactForm() {
           value={formData.message}
           onChange={handleInputChange}
           required
-          className="bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none sm:resize-y w-full overflow-hidden max-h-[50vh] sm:max-h-[70vh] transition-[height]"
+          className="bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none sm:resize-y w-full overflow-y-auto max-h-[50vh] sm:max-h-[70vh] transition-[height]"
           style={{ fontSize: "16px" }}
         />
       </div>
