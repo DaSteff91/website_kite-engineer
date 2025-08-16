@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendEmail } from '@/utilities/nodemailer';
+import { sendEmail } from '@/lib/utils/nodemailer';
 import { RateLimiterMemory } from 'rate-limiter-flexible';
 import { contactSchema, type ContactInput } from '@/lib/schemas/contact';
 import { sanitizeInput } from '@/lib/utils/sanitize';
