@@ -1,3 +1,10 @@
+## [1.22.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.0...v1.22.1) (2025-08-16)
+
+
+### Bug Fixes
+
+* commented out all more links to where not yet any content is available ([97a1155](https://github.com/DaSteff91/website_kite-engineer/commit/97a1155d83467cfca5ccf24465e48249ec4e1e91))
+
 # [1.22.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.21.0...v1.22.0) (2025-08-15)
 
 
