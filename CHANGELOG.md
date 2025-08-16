@@ -1,3 +1,10 @@
+## [1.22.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.1...v1.22.2) (2025-08-16)
+
+
+### Bug Fixes
+
+* fixing type error during build process ([f78e69f](https://github.com/DaSteff91/website_kite-engineer/commit/f78e69fc7c64d0ae2b3c6cdd3a2f8ebf4f15c9a0))
+
 ## [1.22.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.0...v1.22.1) (2025-08-16)
 
 
