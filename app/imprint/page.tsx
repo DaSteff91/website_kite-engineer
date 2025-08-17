@@ -61,7 +61,7 @@ export default function Imprint() {
     "https://ec.europa.eu/consumers/odr/main/?event=main.consumer.rights#inline-nav-2";
 
   return (
-    <main className="relative min-h-screen" aria-label="Imprint page">
+    <div className="relative min-h-screen" aria-label="Imprint page">
       {/* Background Image with priority loading */}
       <div className="fixed inset-0 -z-10" aria-hidden="true">
         <Image
@@ -132,7 +132,7 @@ export default function Imprint() {
           </div>
         </article>
       </div>
-    </main>
+    </div>
   );
 }
 

@@ -98,13 +98,8 @@ export default function RootLayout({
           attribute="class"
           forcedTheme="dark"
           enableSystem={false}
-          disableTransitionOnChange
         >
-          <ClientLayoutWrapper>
-            <div className="min-h-screen flex flex-col">
-              <main className="flex-grow">{children}</main>
-            </div>
-          </ClientLayoutWrapper>
+          <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
         </ThemeProvider>
       </body>
     </html>
