@@ -1,3 +1,10 @@
+## [1.22.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.3...v1.22.4) (2025-08-17)
+
+
+### Bug Fixes
+
+* adjusting html structure in the layout.tsx, wrapper and pages.tsx ([f12c08b](https://github.com/DaSteff91/website_kite-engineer/commit/f12c08b2071f4ab85c84e9be52ccf0cb4f23591e))
+
 ## [1.22.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.2...v1.22.3) (2025-08-17)
 
 
