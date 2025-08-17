@@ -1,3 +1,11 @@
+## [1.22.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.5...v1.22.6) (2025-08-17)
+
+
+### Bug Fixes
+
+* typo ([d326ab3](https://github.com/DaSteff91/website_kite-engineer/commit/d326ab39f53dd13948058fa8053321318c94b48f))
+* updated content, added UX elements ([ab8d61f](https://github.com/DaSteff91/website_kite-engineer/commit/ab8d61f0dbbe39320f0ffefb4b27aa601fc368dd))
+
 ## [1.22.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.4...v1.22.5) (2025-08-17)
 
 
