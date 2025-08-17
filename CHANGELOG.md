@@ -1,3 +1,10 @@
+## [1.22.7](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.6...v1.22.7) (2025-08-17)
+
+
+### Bug Fixes
+
+* adding UX symbols for links ([79404ce](https://github.com/DaSteff91/website_kite-engineer/commit/79404cec56d0f4c6b2dbb615a11a4e1b72fb15bb))
+
 ## [1.22.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.5...v1.22.6) (2025-08-17)
 
 
