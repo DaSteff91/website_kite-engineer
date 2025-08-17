@@ -6,84 +6,131 @@ import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { useState } from "react";
 
-// import { PAGE_METADATA } from "@/lib/constants/metadata";
+type SectionProps = {
+  title: string;
+  children: React.ReactNode;
+  ariaLabel?: string;
+};
 
-// export const metadata = PAGE_METADATA.imprint;
+const Section = ({ title, children, ariaLabel }: SectionProps) => (
+  <section aria-labelledby={`section-${title}`} className="mb-6 sm:mb-8">
+    <h2
+      id={`section-${title}`}
+      className=" text-lg sm:text-xl font-semibold mb-2"
+    >
+      {title}
+    </h2>
+    <div aria-label={ariaLabel}>{children}</div>
+  </section>
+);
+
+const ContactInfoLine = ({
+  label,
+  value,
+  isEmail = false,
+}: {
+  label?: string;
+  value: string;
+  isEmail?: boolean;
+}) => (
+  <p className=" mb-1 text-sm sm:text-base">
+    {label && `${label}: `}
+    {isEmail ? (
+      <Link
+        href={`mailto:${value}`}
+        className="text-blue-500 hover:text-blue-400 transition-colors underline"
+        aria-label={`Contact via email: ${value}`}
+      >
+        {value}
+      </Link>
+    ) : (
+      value
+    )}
+  </p>
+);
 
 export default function Imprint() {
+  const contactData = [
+    { value: "Kite-Engineer by Stefan Merthan" },
+    { value: "Stefan Merthan" },
+    { value: "Hauptstraße 6" },
+    { value: "84107 Weihmichl" },
+  ];
+
+  const odrLink =
+    "https://ec.europa.eu/consumers/odr/main/?event=main.consumer.rights#inline-nav-2";
+
   return (
-    <main className="relative min-h-screen">
-      {/* Background Image*/}
-      <div className="fixed inset-0 -z-10">
+    <main className="relative min-h-screen" aria-label="Imprint page">
+      {/* Background Image with priority loading */}
+      <div className="fixed inset-0 -z-10" aria-hidden="true">
         <Image
           src={background_image_darker}
-          alt="Background"
+          alt="Decorative background"
           fill
           className="brightness-50 object-cover object-top"
           priority
           placeholder="blur"
+          quality={80}
         />
       </div>
 
-      {/* Content Section */}
-      <div className="max-w-4xl p-4 sm:p-6 py-24 sm:py-36">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-6">Impressum</h1>
+      {/* Content Container */}
+      <div className="container mx-auto px-4 max-w-6xl p-4 sm:p-6 py-24 sm:py-36">
+        <article className="max-w-6xl mx-auto my-4">
+          <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] w-full">
+            <header>
+              <h1 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 ">
+                Impressum
+              </h1>
+            </header>
 
-        <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">
-            Angaben gemäß § 5 TMG
-          </h2>
-          <p className="mb-1 text-sm sm:text-base">
-            Kite-Engineer by Stefan Merthan
-          </p>
-          <p className="mb-1 text-sm sm:text-base">Stefan Merthan</p>
-          <p className="mb-1 text-sm sm:text-base">Hauptstraße 6</p>
-          <p className="mb-1 text-sm sm:text-base">84107 Weihmichl</p>
-        </section>
-
-        <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">Kontakt</h2>
-          <p className="mb-1 text-sm sm:text-base break-all">
-            E-Mail: stefan@kite-engineer.de
-          </p>
-          <span className="mb-1 text-sm sm:text-base">
-            {" "}
-            <PhoneNumberReveal />
-          </span>
-        </section>
-
-        <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">
-            Umsatzsteuer-ID
-          </h2>
-          <p className="mb-1 text-sm sm:text-base">
-            Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
-          </p>
-          <p className="text-sm sm:text-base">DE452689906</p>
-        </section>
-
-        <section className="mb-6 sm:mb-8">
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">
-            Instrumente für die Streitbeilegung
-          </h2>
-          <p className="mb-1 text-sm sm:text-base leading-relaxed">
-            Verbraucher haben die Möglichkeit, sich über die Instrumente für die
-            Streitbeilegung auf der Streitbeilegungsplattform der Europäischen
-            Kommission unter:{" "}
-            <Link
-              href="https://ec.europa.eu/consumers/odr/main/?event=main.consumer.rights#inline-nav-2"
-              className="text-blue-500 underline break-all hover:text-blue-400 transition-colors"
-              target="_blank"
+            <Section
+              title="Angaben gemäß § 5 TMG"
+              ariaLabel="Legal information according to German law"
             >
-              https://ec.europa.eu/consumers/odr/main/?event=main.consumer.rights#inline-nav-2
-            </Link>{" "}
-            zu informieren. Die dafür notwendigen Kontaktdaten finden Sie
-            oberhalb in meinem Impressum. Ich möchten Sie jedoch darauf
-            hinweisen, dass ich nicht bereit oder verpflichtet bin, an
-            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-            teilzunehmen.
-          </p>
-        </section>
+              {contactData.map((item, index) => (
+                <ContactInfoLine key={`contact-${index}`} value={item.value} />
+              ))}
+            </Section>
+
+            <Section title="Kontakt" ariaLabel="Contact information">
+              <ContactInfoLine
+                label="E-Mail"
+                value="stefan@kite-engineer.de"
+                isEmail
+              />
+              <div className="mb-1 text-sm sm:text-base ">
+                <PhoneNumberReveal />
+              </div>
+            </Section>
+
+            <Section
+              title="Instrumente für die Streitbeilegung"
+              ariaLabel="Dispute resolution instruments"
+            >
+              <p className=" mb-1 text-sm sm:text-base leading-relaxed">
+                Verbraucher haben die Möglichkeit, sich über die Instrumente für
+                die Streitbeilegung auf der Streitbeilegungsplattform der
+                Europäischen Kommission unter:{" "}
+                <Link
+                  href={odrLink}
+                  className="text-blue-500 underline break-all hover:text-blue-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="European Commission Online Dispute Resolution platform"
+                >
+                  {odrLink}
+                </Link>{" "}
+                zu informieren. Die dafür notwendigen Kontaktdaten finden Sie
+                oberhalb in meinem Impressum. Ich möchten Sie jedoch darauf
+                hinweisen, dass ich nicht bereit oder verpflichtet bin, an
+                Streitbeilegungsverfahren vor einer
+                Verbraucherschlichtungsstelle teilzunehmen.
+              </p>
+            </Section>
+          </div>
+        </article>
       </div>
     </main>
   );

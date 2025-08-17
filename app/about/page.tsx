@@ -70,7 +70,7 @@ export default function AboutPage() {
               {/* <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
                 Hello, my name is Steff
               </h3> */}
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-300">
+              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-200">
                 Hello, my name is Steff...
               </h3>
               <p className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base">
