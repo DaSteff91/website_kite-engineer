@@ -67,33 +67,42 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className=" max-w-6xl mx-auto my-4">
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
-              {/* <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
-                Hello, my name is Steff
-              </h3> */}
               <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-200">
-                Hello, my name is Steff...
+                Hi, my name is Steff...
               </h3>
               <p className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base">
-                Steff, short for Stefan. Born in 1991 in the south of Germany,
-                Bavaria. And fortunately the Bavarian dialect is part of my
-                "language" repertoire. So yes, you can call me a proud Bavarian.
-                And one day I will realize my vision of running my own café-like
-                place where people want to come together, enjoy each others
-                company and play board games. Until then I realize another
-                vision: The vision of <strong>combining worlds</strong>.
+                Steff, short for Stefan. Born in 1991 in a small town in the
+                south of Germany, Bavaria. And yes, you can call me a proud
+                Bavarian too.
+                <br />
+                What can you expect? An open-minded character who seeks to
+                challenge himself. A person who follows his mission: To realize
+                the vision of <strong>combining worlds</strong>.
                 <br />
                 <br />
-                What does that mean? Basically this: I want to create a world
-                for myself that combines what I like doing - it´s about
-                combining the world of an engineer with the one of a kitesurf
-                instructor. E voilà, I now follow my own lifestyle of being a{" "}
-                <strong>Kite-Engineer</strong>, a freelancer that provides
-                services in particular fields of engineering as well as
-                providing services that are related to kiteboarding.
+                But what does that mean? Basically this: It´s about combining
+                the world of being an engineer with the one of being a kitesurf
+                instructor. E voilà, I created my own lifestyle of being a{" "}
+                <strong>Kite-Engineer</strong>.
+                <br />A freelancer that provides services :
+              </p>
+              <ul className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base my-2">
+                <li>
+                  • that are related to the sport of kiteboarding as well as
+                </li>
+                <li>
+                  • in particular fields of engineering like semiconductor
+                  manufacturing.
+                </li>
+              </ul>
+              <p className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base">
+                And no, I don´t design kites. Nor am I looking forward to
+                integrate electronics into kites. At least not for now - who
+                knows?
                 <br />
-                And no, I don´t design kites. It´s my unique way of dealing with
-                our beloved capitalism: I share what I like doing and you get
-                what you have not yet had before. That makes everyone a winner!
+                It´s my unique way of dealing with our beloved capitalism: I
+                share what I like doing and you get what you have not yet had
+                before. That makes everyone a winner!
               </p>
               <br />
               <Image
