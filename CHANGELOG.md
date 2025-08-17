@@ -1,3 +1,10 @@
+## [1.22.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.4...v1.22.5) (2025-08-17)
+
+
+### Bug Fixes
+
+* replacing all page.tsx main elements with div elements ([6fdb5f8](https://github.com/DaSteff91/website_kite-engineer/commit/6fdb5f81e59b277d032a8a04180eed523ae4fcd5))
+
 ## [1.22.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.3...v1.22.4) (2025-08-17)
 
 
