@@ -19,7 +19,7 @@ export const metadata =
 
 export default function ProcessDesignPage() {
   return (
-    <main className="relative min-h-screen">
+    <div className="relative min-h-screen">
       {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
@@ -213,6 +213,6 @@ export default function ProcessDesignPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

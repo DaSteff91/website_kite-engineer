@@ -23,7 +23,7 @@ export const metadata = PAGE_METADATA["kite/courses/theory"];
 
 export default function TheoryPage() {
   return (
-    <main className="relative min-h-screen">
+    <div className="relative min-h-screen">
       {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
@@ -197,6 +197,6 @@ export default function TheoryPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

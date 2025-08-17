@@ -59,7 +59,7 @@ export default function Privacy() {
     "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679";
 
   return (
-    <main className="relative min-h-screen" aria-label="Privacy policy page">
+    <div className="relative min-h-screen" aria-label="Privacy policy page">
       {/* Background Image */}
       <div className="fixed inset-0 -z-10" aria-hidden="true">
         <Image
@@ -162,6 +162,6 @@ export default function Privacy() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

@@ -8,7 +8,7 @@ export const metadata = PAGE_METADATA.contact;
 
 export default function ContactPage() {
   return (
-    <main className="relative min-h-screen">
+    <div className="relative min-h-screen">
       {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
@@ -73,6 +73,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

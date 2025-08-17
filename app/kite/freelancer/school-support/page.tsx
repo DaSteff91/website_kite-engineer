@@ -20,7 +20,7 @@ export const metadata = PAGE_METADATA["kite/freelancer/school-support"];
 
 export default function SchoolSupportPage() {
   return (
-    <main className="relative min-h-screen">
+    <div className="relative min-h-screen">
       {/* Background Image*/}
       <div className="fixed inset-0 -z-10">
         <Image
@@ -215,6 +215,6 @@ export default function SchoolSupportPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
