@@ -1,3 +1,10 @@
+## [1.22.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.2...v1.22.3) (2025-08-17)
+
+
+### Bug Fixes
+
+* refactor imprint and privacy page + design changes ([6d9a46f](https://github.com/DaSteff91/website_kite-engineer/commit/6d9a46f30b7ba0a63631fb7218bb906c4e68168d))
+
 ## [1.22.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.1...v1.22.2) (2025-08-16)
 
 
