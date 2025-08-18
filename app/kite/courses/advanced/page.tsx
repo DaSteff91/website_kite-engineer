@@ -10,6 +10,7 @@ import {
   ListCheck,
   UserRoundSearch,
 } from "lucide-react";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 
 export const metadata = PAGE_METADATA["kite/courses/advanced"];
@@ -166,7 +167,7 @@ export default function AdvancedPage() {
               the details.
             </p>
             <Link
-              href="/contact?subject=Kiteboarding Theory Course Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your theory courses. I'd like to learn more about:%0A%0A- Available course topics and formats%0A- Scheduling and duration options%0A- Personalized vs. group sessions%0A- Pricing and course materials%0A%0AMy background and interests:%0A[Please describe your current kiteboarding experience, specific theory topics you're interested in, and preferred learning format]%0A%0ALooking forward to expanding my knowledge!"
+              href={generateContactHref("kite/courses/advanced")}
               target="_blank"
             >
               <Button
