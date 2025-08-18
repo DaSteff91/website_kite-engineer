@@ -1,3 +1,15 @@
+# [1.24.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.23.1...v1.24.0) (2025-08-18)
+
+
+### Bug Fixes
+
+* correcting typos + delete old images ([ca606e5](https://github.com/DaSteff91/website_kite-engineer/commit/ca606e56fde312f00d828aa9d49bf1b89ad8cbec))
+
+
+### Features
+
+* start implementing responsive hero section based on screen width ([0e8d590](https://github.com/DaSteff91/website_kite-engineer/commit/0e8d59052e47879e114c905d43e156ceeb43ebe5))
+
 ## [1.23.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.23.0...v1.23.1) (2025-08-18)
 
 
