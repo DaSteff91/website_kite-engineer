@@ -61,116 +61,117 @@ const NAV_ITEMS = [
     hasDropdown: true,
     dropdownItems: [
       { href: "/engineer", label: "All Engineering Services" },
-      {
-        label: "Process Engineering",
-        isSubmenu: true,
-        items: [
-          {
-            href: "/engineer/process-engineering/process-control",
-            label: "Process Control",
-          },
-          {
-            href: "/engineer/process-engineering/process-optimization",
-            label: "Process Optimization",
-          },
-          {
-            href: "/engineer/process-engineering/change-management",
-            label: "Change Management",
-          },
-          {
-            href: "/engineer/process-engineering/monitoring",
-            label: "Monitoring",
-          },
-        ],
-      },
-      {
-        label: "Process Development",
-        isSubmenu: true,
-        items: [
-          {
-            href: "/engineer/process-development/creativity",
-            label: "Creativity",
-          },
-          {
-            href: "/engineer/process-development/process-design",
-            label: "Process Design",
-          },
-          {
-            href: "/engineer/process-development/simulation-prototyping",
-            label: "Simulation & Prototyping",
-          },
-          {
-            href: "/engineer/process-development/equipment-roadmap",
-            label: "Equipment Roadmap",
-          },
-        ],
-      },
-      {
-        label: "Software Development",
-        isSubmenu: true,
-        items: [
-          {
-            href: "/engineer/software-development/custom-solutions",
-            label: "Custom Solutions",
-          },
-          {
-            href: "/engineer/software-development/database-management",
-            label: "Database Management",
-          },
-          {
-            href: "/engineer/software-development/workflow-automation",
-            label: "Workflow Automation",
-          },
-          {
-            href: "/engineer/software-development/web-development",
-            label: "Web Development",
-          },
-        ],
-      },
-      {
-        label: "Project Management",
-        isSubmenu: true,
-        items: [
-          {
-            href: "/engineer/project-management/project-setup",
-            label: "Project Setup",
-          },
-          {
-            href: "/engineer/project-management/timeline-management",
-            label: "Timeline Management",
-          },
-          {
-            href: "/engineer/project-management/deviation-management",
-            label: "Deviation Management",
-          },
-          {
-            href: "/engineer/project-management/documentation",
-            label: "Documentation",
-          },
-        ],
-      },
-      {
-        label: "Technical Consulting",
-        isSubmenu: true,
-        items: [
-          {
-            href: "/engineer/technical-consulting/process-assessment",
-            label: "Process Assessment",
-          },
-          {
-            href: "/engineer/technical-consulting/technical-research",
-            label: "Technical Research",
-          },
-          {
-            href: "/engineer/technical-consulting/training-knowledge-transfer",
-            label: "Training & Knowledge Transfer",
-          },
-          {
-            href: "/engineer/technical-consulting/competitor-analysis",
-            label: "Competitor Analysis",
-          },
-        ],
-      },
+      // 18.08.2025: Commented out until the content is available
+      // {
+      //   label: "Process Engineering",
+      //   isSubmenu: true,
+      //   items: [
+      //     {
+      //       href: "/engineer/process-engineering/process-control",
+      //       label: "Process Control",
+      //     },
+      //     {
+      //       href: "/engineer/process-engineering/process-optimization",
+      //       label: "Process Optimization",
+      //     },
+      //     {
+      //       href: "/engineer/process-engineering/change-management",
+      //       label: "Change Management",
+      //     },
+      //     {
+      //       href: "/engineer/process-engineering/monitoring",
+      //       label: "Monitoring",
+      //     },
+      //   ],
+      // },
+      // {
+      //   label: "Process Development",
+      //   isSubmenu: true,
+      //   items: [
+      //     {
+      //       href: "/engineer/process-development/creativity",
+      //       label: "Creativity",
+      //     },
+      //     {
+      //       href: "/engineer/process-development/process-design",
+      //       label: "Process Design",
+      //     },
+      //     {
+      //       href: "/engineer/process-development/simulation-prototyping",
+      //       label: "Simulation & Prototyping",
+      //     },
+      //     {
+      //       href: "/engineer/process-development/equipment-roadmap",
+      //       label: "Equipment Roadmap",
+      //     },
+      //   ],
+      // },
+      // {
+      //   label: "Software Development",
+      //   isSubmenu: true,
+      //   items: [
+      //     {
+      //       href: "/engineer/software-development/custom-solutions",
+      //       label: "Custom Solutions",
+      //     },
+      //     {
+      //       href: "/engineer/software-development/database-management",
+      //       label: "Database Management",
+      //     },
+      //     {
+      //       href: "/engineer/software-development/workflow-automation",
+      //       label: "Workflow Automation",
+      //     },
+      //     {
+      //       href: "/engineer/software-development/web-development",
+      //       label: "Web Development",
+      //     },
+      //   ],
+      // },
+      // {
+      //   label: "Project Management",
+      //   isSubmenu: true,
+      //   items: [
+      //     {
+      //       href: "/engineer/project-management/project-setup",
+      //       label: "Project Setup",
+      //     },
+      //     {
+      //       href: "/engineer/project-management/timeline-management",
+      //       label: "Timeline Management",
+      //     },
+      //     {
+      //       href: "/engineer/project-management/deviation-management",
+      //       label: "Deviation Management",
+      //     },
+      //     {
+      //       href: "/engineer/project-management/documentation",
+      //       label: "Documentation",
+      //     },
+      //   ],
+      // },
+      // {
+      //   label: "Technical Consulting",
+      //   isSubmenu: true,
+      //   items: [
+      //     {
+      //       href: "/engineer/technical-consulting/process-assessment",
+      //       label: "Process Assessment",
+      //     },
+      //     {
+      //       href: "/engineer/technical-consulting/technical-research",
+      //       label: "Technical Research",
+      //     },
+      //     {
+      //       href: "/engineer/technical-consulting/training-knowledge-transfer",
+      //       label: "Training & Knowledge Transfer",
+      //     },
+      //     {
+      //       href: "/engineer/technical-consulting/competitor-analysis",
+      //       label: "Competitor Analysis",
+      //     },
+      //   ],
+      // },
     ],
   },
 
