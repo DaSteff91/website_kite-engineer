@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import kite_hero_image from "@/public/images/kite_hero_image.jpg";
+import { Hero } from "@/components/sections/Hero";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -64,6 +65,24 @@ export default function KitePage() {
           </h1>
         </div>
       </section>
+
+      {/* <Hero
+        imageBaseName="kite_hero"
+        altText="Kiteboarding"
+        objectPosition="center 45%"
+        brightness={50}
+        minHeight="60vh"
+        className="my-custom-class"
+      >
+        <h1
+          className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+     bg-gradient-to-r from-white via-gray-200 to-gray-300 
+     bg-clip-text text-transparent 
+     [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+        >
+          Combining Worlds...
+        </h1>
+      </Hero> */}
 
       {/* Content Section */}
       <section className="py-16">
