@@ -1,3 +1,10 @@
+## [1.23.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.23.0...v1.23.1) (2025-08-18)
+
+
+### Bug Fixes
+
+* commented out the navigation menus for subpages without content ([e9b8bea](https://github.com/DaSteff91/website_kite-engineer/commit/e9b8bea034f194b5fa83f4adb9e40795ae6b1e53))
+
 # [1.23.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.7...v1.23.0) (2025-08-18)
 
 
