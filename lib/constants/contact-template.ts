@@ -6,7 +6,7 @@ type ContactTemplate = {
 export const CONTACT_TEMPLATES: Record<string, ContactTemplate> = {
   // Kite related subpages
 
-  "kite/freelancer/school-support": {
+  "/kite/freelancer/school-support": {
   subject: "School Support Inquiry [Your subject*]",
   message: `Hey Steff,
 
@@ -15,7 +15,7 @@ With the following I could need your help. [Your message*]
 Cheers`
 },
 
-  "kite/freelancer/travel-services": {
+  "/kite/freelancer/travel-services": {
       subject: "Travel Services Inquiry [Your subject*]",
       message: `Hey Steff,
 
@@ -23,7 +23,7 @@ Cheers`
 
   Cheers`
     },
-    "kite/freelancer/consulting": {
+    "/kite/freelancer/consulting": {
       subject: "Consulting Inquiry [Your subject*]",
       message: `Hey Steff,
 
@@ -31,7 +31,7 @@ Cheers`
 
   Cheers`
     },
-    "kite/courses/theory": {
+    "/kite/courses/theory": {
       subject: "Theory Course Inquiry [Your subject*]",
       message: `Hey Steff,
 
@@ -39,7 +39,7 @@ Cheers`
 
   Cheers`
     },
-    "kite/courses/starting": {
+    "/kite/courses/starting": {
       subject: "Beginner Course Inquiry [Your subject*]",
       message: `Hey Steff,
 
@@ -47,7 +47,7 @@ Cheers`
 
   Cheers`
     },
-    "kite/courses/advanced": {
+    "/kite/courses/advanced": {
       subject: "Advanced Course Inquiry [Your subject*]",
       message: `Hey Steff,
 
