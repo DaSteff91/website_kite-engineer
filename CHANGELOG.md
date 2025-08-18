@@ -1,3 +1,16 @@
+# [1.23.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.7...v1.23.0) (2025-08-18)
+
+
+### Bug Fixes
+
+* changed some content and implementation of the prefilled contact form for engineer contact ([d3e6184](https://github.com/DaSteff91/website_kite-engineer/commit/d3e6184386363fb8a655a5e9bbf113a893ec67cb))
+* update all contact form links to the new format ([7d79d88](https://github.com/DaSteff91/website_kite-engineer/commit/7d79d88a70d405d628c4b241fc3bacda224d0255))
+
+
+### Features
+
+* implemented a centralized filling function for the contact form ([aae5f36](https://github.com/DaSteff91/website_kite-engineer/commit/aae5f36096d19502fccd08982dcf41932ef58a31))
+
 ## [1.22.7](https://github.com/DaSteff91/website_kite-engineer/compare/v1.22.6...v1.22.7) (2025-08-17)
 
 
