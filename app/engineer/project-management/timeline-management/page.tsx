@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/project-management/timeline-management"];
@@ -159,7 +160,7 @@ export default function TimelineManagementPage() {
               schedule and get back on track.
             </p>
             <Link
-              href="/contact?subject=Timeline Management Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your timeline management services. Please provide information about schedule optimization and timeline recovery.%0A%0AMy requirements:%0A[Please describe your current timeline challenges and project scheduling needs]%0A%0ABest regards"
+              href={generateContactHref("/engineer/project-management/timeline-management")}
               target="_blank"
             >
               <Button

@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/process-development/simulation-prototyping"];
@@ -159,7 +160,7 @@ export default function SimulationPrototypingPage() {
               prototypes that validate your solutions.
             </p>
             <Link
-              href="/contact?subject=Simulation & Prototyping Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your simulation and prototyping services. Please provide information about advanced modeling and 3D prototyping capabilities.%0A%0AMy requirements:%0A[Please describe your current simulation and prototyping needs]%0A%0ABest regards"
+              href={generateContactHref("/engineer/process-development/simulation-prototyping")}
               target="_blank"
             >
               <Button

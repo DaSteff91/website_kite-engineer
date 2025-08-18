@@ -12,6 +12,7 @@ import {
   Target,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/technical-consulting/competitor-analysis"];
@@ -158,7 +159,9 @@ export default function CompetitorAnalysisPage() {
               competitors and identify strategic opportunities.
             </p>
             <Link
-              href="/contact?subject=Competitor Analysis Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your competitor analysis services. Please provide information about technology analysis and market positioning assessment.%0A%0AMy requirements:%0A[Please describe your current competitive landscape and analysis needs]%0A%0ABest regards"
+              href={generateContactHref(
+                "/engineer/technical-consulting/competitor-analysis"
+              )}
               target="_blank"
             >
               <Button

@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/process-development/creativity"];
@@ -189,7 +190,7 @@ export default function CreativityPage() {
               neurons and generate breakthrough innovations.
             </p>
             <Link
-              href="/contact?subject=Creative Innovation Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your creative innovation services. Please provide information about advanced brainstorming and systematic innovation techniques.%0A%0AMy requirements:%0A[Please describe your current innovation challenges and creative goals]%0A%0ABest regards"
+              href={generateContactHref("/engineer/process-development/creativity")}
               target="_blank"
             >
               <Button

@@ -21,6 +21,7 @@ import {
   MessageSquareText,
   ExternalLink,
 } from "lucide-react";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 
 export const metadata = PAGE_METADATA.kite;
@@ -112,7 +113,9 @@ export default function KitePage() {
                         More
                       </Link>
                       <Link
-                        href="/contact?subject=About your school support services [Your Subject]*!&message=Hey Steff!%0A%0A[Your Message – I love details]* %0A%0A Cheers! "
+                        href={generateContactHref(
+                          "/kite/freelancer/school-support"
+                        )}
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >
@@ -145,7 +148,9 @@ export default function KitePage() {
                         More
                       </Link>
                       <Link
-                        href="/contact?subject=About your travel services [Your Subject]*&message=Hey Steff!%0A%0AYour travel services sound amazing! I'm thinking about organizing a kite trip and could use some help.%0A%0AHere's what I have in mind:%0A%0A[Tell me about your dream kite destination, travel dates, skill level, and what kind of trip experience you're looking for]%0A%0AStoked to hear from you! [Your Message]*"
+                        href={generateContactHref(
+                          "/kite/freelancer/travel-services"
+                        )}
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >
@@ -176,7 +181,9 @@ export default function KitePage() {
                         More
                       </Link>
                       <Link
-                        href="/contact?subject=About your consulting service [Your Subject]*&message=Hey Steff!%0A%0AI could really use your expertise! The gear choices are overwhelming and I want to make sure I get the right setup. %0A%0AHere's what I need help with:%0A%0A[Tell me about your current skill level, riding style, budget, local conditions, or presentation needs]%0A%0ALooking forward to your advice! [Your Message]*"
+                        href={generateContactHref(
+                          "/kite/freelancer/consulting"
+                        )}
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >
@@ -216,7 +223,7 @@ export default function KitePage() {
                         More
                       </Link>
                       <Link
-                        href="/contact?subject=About your theory lessons [Your Subject]*!&message=Hey Steff!%0A%0AThe theory behind kiteboarding sounds fascinating! I'd love to understand the science better - wind dynamics, material tech, all that good stuff. Let's make it fun and engaging!%0A%0AWhat I'm curious about:%0A%0A[Tell me what aspects of kite theory interest you most - wind windows, kite design, safety systems, etc.]%0A%0AReady to learn! [Your Message]*"
+                        href={generateContactHref("/kite/courses/theory")}
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >
@@ -246,7 +253,7 @@ export default function KitePage() {
                         More
                       </Link>
                       <Link
-                        href="/contact?subject=About your (-re)starter classes [Your Subject]*&message=Hey Steff!%0A%0AI'm excited to start (restart) my kiteboarding journey! I could use some guidance to build confidence and get back on the water safely. Let's make it happen!%0A%0AMy situation:%0A%0A[Tell me if you're a complete beginner or returning after a break, your previous experience, and what you hope to achieve]%0A%0ACan't wait to get started! [Your Message]*"
+                        href={generateContactHref("/kite/courses/starting")}
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >
@@ -277,7 +284,7 @@ export default function KitePage() {
                         More
                       </Link>
                       <Link
-                        href="/contact?subject=About your advanced classes [Your Subject]*&message=Hey Steff!%0A%0AI'm ready to take my kiteboarding to the next level! Whether it's toeside, loops, or other advanced moves - I want to push my limits safely. Supervised sessions sound perfect!%0A%0AWhat I want to work on:%0A%0A[Tell me about your current skill level and what advanced moves or techniques you want to learn]%0A%0ALet's send it! [Your Message]*"
+                        href={generateContactHref("/kite/courses/advanced")}
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >

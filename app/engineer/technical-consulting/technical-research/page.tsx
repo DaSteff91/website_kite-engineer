@@ -12,6 +12,7 @@ import {
   Search,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/technical-consulting/technical-research"];
@@ -158,7 +159,7 @@ export default function TechnicalResearchPage() {
               information that matters for your business.
             </p>
             <Link
-              href="/contact?subject=Technical Research Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your technical research services. Please provide information about technology landscape analysis and literature review.%0A%0AMy requirements:%0A[Please describe your current research needs and technical topics of interest]%0A%0ABest regards"
+              href={generateContactHref("/engineer/technical-consulting/technical-research")}
               target="_blank"
             >
               <Button

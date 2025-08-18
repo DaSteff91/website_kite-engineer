@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/project-management/documentation"];
@@ -159,7 +160,7 @@ export default function DocumentationPage() {
               documentation and sharing systems.
             </p>
             <Link
-              href="/contact?subject=Documentation & Sharing Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your documentation and sharing services. Please provide information about version control and collaborative workspaces.%0A%0AMy requirements:%0A[Please describe your current documentation challenges and team collaboration needs]%0A%0ABest regards"
+              href={generateContactHref("/engineer/project-management/documentation")}
               target="_blank"
             >
               <Button

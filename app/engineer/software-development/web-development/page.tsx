@@ -12,6 +12,7 @@ import {
   Shield,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/software-development/web-development"];
@@ -158,7 +159,7 @@ export default function WebDevelopmentPage() {
               server setup and website development needs.
             </p>
             <Link
-              href="/contact?subject=Web Development Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your web development services. Please provide information about server setup, website development, and maintenance.%0A%0AMy requirements:%0A[Please describe your current web development needs and technical requirements]%0A%0ABest regards"
+              href={generateContactHref("/engineer/software-development/web-development")}
               target="_blank"
             >
               <Button

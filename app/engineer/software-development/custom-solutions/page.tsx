@@ -12,6 +12,7 @@ import {
   Zap,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/software-development/custom-solutions"];
@@ -158,7 +159,7 @@ export default function CustomSolutionsPage() {
               you need into the perfect software.
             </p>
             <Link
-              href="/contact?subject=Custom Software Solutions Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your custom software solutions. Please provide information about tailored applications and system integration.%0A%0AMy requirements:%0A[Please describe your current software needs and integration challenges]%0A%0ABest regards"
+              href={generateContactHref("/engineer/software-development/custom-solutions")}
               target="_blank"
             >
               <Button

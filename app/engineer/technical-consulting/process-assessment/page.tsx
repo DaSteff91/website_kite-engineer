@@ -12,6 +12,7 @@ import {
   Zap,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/technical-consulting/process-assessment"];
@@ -158,7 +159,7 @@ export default function ProcessAssessmentPage() {
               identify improvement opportunities.
             </p>
             <Link
-              href="/contact?subject=Process Assessment Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process assessment services. Please provide information about process evaluation and improvement opportunities.%0A%0AMy requirements:%0A[Please describe your current business processes and assessment needs]%0A%0ABest regards"
+              href={generateContactHref("/engineer/technical-consulting/process-assessment")}
               target="_blank"
             >
               <Button

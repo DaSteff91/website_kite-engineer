@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/process-engineering/change-management"];
@@ -159,7 +160,7 @@ export default function ChangeManagementPage() {
               your transitions are smooth and compliant.
             </p>
             <Link
-              href="/contact?subject=Change Management Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your change management services. Please provide information about documentation, release gates, and traceability systems.%0A%0AMy requirements:%0A[Please describe your current change management challenges and compliance needs]%0A%0ABest regards"
+              href={generateContactHref("/engineer/process-engineering/change-management")}
               target="_blank"
             >
               <Button

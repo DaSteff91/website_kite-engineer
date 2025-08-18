@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/process-engineering/monitoring"];
@@ -159,7 +160,7 @@ export default function MonitoringPage() {
               right parameters and methods for your production needs.
             </p>
             <Link
-              href="/contact?subject=Process Monitoring Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process monitoring services. Please provide information about parameter selection and monitoring solutions.%0A%0AMy requirements:%0A[Please describe your current monitoring challenges and production volume]%0A%0ABest regards"
+              href={generateContactHref("/engineer/process-engineering/monitoring")}
               target="_blank"
             >
               <Button

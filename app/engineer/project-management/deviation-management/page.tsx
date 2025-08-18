@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/project-management/deviation-management"];
@@ -159,7 +160,7 @@ export default function DeviationManagementPage() {
               changes and get your project back on track.
             </p>
             <Link
-              href="/contact?subject=Deviation Management Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your deviation management services. Please provide information about change request management and stakeholder communication.%0A%0AMy requirements:%0A[Please describe your current deviation management challenges and external communication needs]%0A%0ABest regards"
+              href={generateContactHref("/engineer/project-management/deviation-management")}
               target="_blank"
             >
               <Button

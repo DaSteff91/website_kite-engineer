@@ -13,6 +13,7 @@ import {
   BaggageClaim,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/process-engineering/process-control"];
@@ -349,7 +350,7 @@ export default function ProcessControlPage() {
               my services to get the best result.
             </p>
             <Link
-              href="/contact?subject=Process Control Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process control services. Please provide information about APC, SPC and AI-powered solutions for my manufacturing processes.%0A%0AMy requirements:%0A[Please describe your current process control challenges and requirements]%0A%0ABest regards"
+              href={generateContactHref("/engineer/process-engineering/process-control")}
               target="_blank"
             >
               <Button

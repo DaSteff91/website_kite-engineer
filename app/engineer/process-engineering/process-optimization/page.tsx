@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/process-engineering/process-optimization"];
@@ -159,7 +160,7 @@ export default function ProcessOptimizationPage() {
               Lean methodologies to achieve excellence.
             </p>
             <Link
-              href="/contact?subject=Process Optimization Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process optimization services. Please provide information about Six Sigma and Lean methodologies for my operations.%0A%0AMy requirements:%0A[Please describe your current process optimization challenges and goals]%0A%0ABest regards"
+              href={generateContactHref("/engineer/process-engineering/process-optimization")}
               target="_blank"
             >
               <Button

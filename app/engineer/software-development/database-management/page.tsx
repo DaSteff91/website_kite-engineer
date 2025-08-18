@@ -12,6 +12,7 @@ import {
   BarChart3,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/software-development/database-management"];
@@ -158,7 +159,7 @@ export default function DatabaseManagementPage() {
               a robust database system.
             </p>
             <Link
-              href="/contact?subject=Database Management Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your database management services. Please provide information about RDBMS design and data migration.%0A%0AMy requirements:%0A[Please describe your current data storage challenges and database requirements]%0A%0ABest regards"
+              href={generateContactHref("/engineer/software-development/database-management")}
               target="_blank"
             >
               <Button

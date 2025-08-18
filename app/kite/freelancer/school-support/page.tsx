@@ -15,6 +15,7 @@ import {
   Drama,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata = PAGE_METADATA["kite/freelancer/school-support"];
 
@@ -201,7 +202,7 @@ export default function SchoolSupportPage() {
               find a solution. It all starts here:
             </p>
             <Link
-              href="/contact?subject=School Support Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your school support services. Please provide more details about:%0A%0A- Available services and pricing%0A- Scheduling and availability%0A- Certification and insurance coverage%0A- Experience with similar operations%0A%0AMy school details:%0A[Please describe your kite school, location, typical season, and specific support needs]%0A%0ABest regards"
+              href={generateContactHref("/kite/freelancer/school-support")}
               target="_blank"
             >
               <Button

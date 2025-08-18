@@ -10,6 +10,7 @@ import {
   Presentation,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata = PAGE_METADATA["kite/freelancer/consulting"];
 
@@ -127,7 +128,7 @@ export default function ConsultingPage() {
               Find out how we can work together:
             </p>
             <Link
-              href="/contact?subject=Kite Consulting Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your consulting services. I need guidance with:%0A%0A- Equipment selection and recommendations%0A- Skill development and progression planning%0A- Local conditions and spot advice%0A- Sport representation and presentations%0A%0AMy current situation:%0A[Please describe your skill level, current equipment, local conditions, specific challenges, and goals]%0A%0ALooking forward to your expert advice!"
+              href={generateContactHref("/kite/freelancer/consulting")}
               target="_blank"
             >
               <Button

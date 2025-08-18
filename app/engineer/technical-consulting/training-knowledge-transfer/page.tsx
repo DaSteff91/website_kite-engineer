@@ -12,6 +12,7 @@ import {
   Target,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/technical-consulting/training-knowledge-transfer"];
@@ -158,7 +159,7 @@ export default function TrainingKnowledgeTransferPage() {
               programs and knowledge sharing systems.
             </p>
             <Link
-              href="/contact?subject=Training & Knowledge Transfer Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your training and knowledge transfer services. Please provide information about technical training programs and knowledge sharing workshops.%0A%0AMy requirements:%0A[Please describe your current training needs and knowledge gaps]%0A%0ABest regards"
+              href={generateContactHref("/engineer/technical-consulting/training-knowledge-transfer")}
               target="_blank"
             >
               <Button

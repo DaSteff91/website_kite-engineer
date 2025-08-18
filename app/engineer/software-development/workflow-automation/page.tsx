@@ -12,6 +12,7 @@ import {
   Workflow,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/software-development/workflow-automation"];
@@ -158,7 +159,7 @@ export default function WorkflowAutomationPage() {
               and optimize your processes.
             </p>
             <Link
-              href="/contact?subject=Workflow Automation Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your workflow automation services. Please provide information about process automation and integration solutions.%0A%0AMy requirements:%0A[Please describe your current repetitive tasks and automation needs]%0A%0ABest regards"
+              href={generateContactHref("/engineer/software-development/workflow-automation")}
               target="_blank"
             >
               <Button

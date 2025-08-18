@@ -11,6 +11,7 @@ import {
   DumbbellIcon,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata = PAGE_METADATA["kite/freelancer/travel-services"];
 
@@ -187,7 +188,7 @@ export default function TravelServicesPage() {
               missing? We find a solution. It all starts here:
             </p>
             <Link
-              href="/contact?subject=Kite Travel Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your travel services for an upcoming kite trip. Please provide information about:%0A%0A- Available destinations and timing%0A- Personal coaching options%0A- Trip planning services%0A- Pricing and packages%0A%0AMy travel details:%0A[Please describe your skill level, preferred destinations, travel dates, group size, and specific interests]%0A%0ALooking forward to an amazing adventure!"
+              href={generateContactHref("/kite/freelancer/travel-services")}
               target="_blank"
             >
               <Button

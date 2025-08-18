@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/process-development/process-design"];
@@ -199,7 +200,7 @@ export default function ProcessDesignPage() {
               boundaries and create what needs to be done.
             </p>
             <Link
-              href="/contact?subject=Process Design Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your process design services. Please provide information about process flow optimization and visualization solutions.%0A%0AMy requirements:%0A[Please describe your current process design challenges and development boundaries]%0A%0ABest regards"
+              href={generateContactHref("/engineer/process-development/process-design")}
               target="_blank"
             >
               <Button

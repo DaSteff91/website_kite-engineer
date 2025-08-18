@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { generateContactHref } from "@/lib/utils/contact-filler";
 
 export const metadata =
   PAGE_METADATA["engineer/project-management/project-setup"];
@@ -159,7 +160,7 @@ export default function ProjectSetupPage() {
               foundation for sustainable goal achievement.
             </p>
             <Link
-              href="/contact?subject=Project Setup Services Inquiry&message=Hello Kite-Engineer,%0A%0AI'm interested in your project setup services. Please provide information about scope definition, planning, and risk assessment.%0A%0AMy requirements:%0A[Please describe your current project setup challenges and planning needs]%0A%0ABest regards"
+              href={generateContactHref("/engineer/project-management/project-setup")}
               target="_blank"
             >
               <Button
