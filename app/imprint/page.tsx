@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
+import { Hero } from "@/components/sections/Hero";
 import { useState } from "react";
 
 type SectionProps = {
@@ -74,6 +75,23 @@ export default function Imprint() {
           quality={80}
         />
       </div>
+
+      {/* Hero Section */}
+      <Hero
+        route="/imprint"
+        objectPosition="center 45%"
+        brightness={50}
+        minHeight="60vh"
+      >
+        <h1
+          className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+           bg-gradient-to-r from-white via-gray-200 to-gray-300 
+           bg-clip-text text-transparent 
+           [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+        >
+          Imprint
+        </h1>
+      </Hero>
 
       {/* Content Container */}
       <div className="container mx-auto px-4 max-w-6xl p-4 sm:p-6 py-24 sm:py-36">
