@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA.privacy;
 
@@ -73,8 +74,25 @@ export default function Privacy() {
         />
       </div>
 
+      {/* Hero Section */}
+      <Hero
+        route="/imprint"
+        objectPosition="center 45%"
+        brightness={50}
+        minHeight="60vh"
+      >
+        <h1
+          className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+                 bg-gradient-to-r from-white via-gray-200 to-gray-300 
+                 bg-clip-text text-transparent 
+                 [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+        >
+          Privacy
+        </h1>
+      </Hero>
+
       {/* Content Section */}
-      <div className="container mx-auto px-4 max-w-6xl p-4 sm:p-6 py-24 sm:py-36">
+      <div className="container mx-auto px-4 max-w-6xl p-4 sm:p-6 py-12 sm:py-8">
         <div className="max-w-6xl mx-auto my-4">
           <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] w-full">
             <header>
@@ -83,10 +101,7 @@ export default function Privacy() {
               </h1>
             </header>
 
-            <Section
-              title="Kontaktdaten des Verantwortlichen"
-              ariaLabel="Controller contact details"
-            >
+            <Section title="Datenschutzbestimmungen" ariaLabel="Privacy Policy">
               {contactData.map((info, index) => (
                 <TextLine
                   key={`contact-${index}`}

@@ -3,6 +3,7 @@ import about_hero_image from "@/public/images/about_hero_image_3.jpg";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import about_content_image from "@/public/images/about_content.jpg";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA.about;
 
@@ -22,7 +23,7 @@ export default function AboutPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center">
+      {/* <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
             src={about_hero_image}
@@ -43,7 +44,23 @@ export default function AboutPage() {
             Combining Worlds...
           </h1>
         </div>
-      </section>
+      </section> */}
+
+      <Hero
+        route="/about"
+        objectPosition="center 45%"
+        brightness={50}
+        minHeight="60vh"
+      >
+        <h1
+          className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+           bg-gradient-to-r from-white via-gray-200 to-gray-300 
+           bg-clip-text text-transparent 
+           [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+        >
+          Combining Worlds...
+        </h1>
+      </Hero>
 
       {/* Content Section */}
       <section className="py-12 sm:py-16">
@@ -71,11 +88,11 @@ export default function AboutPage() {
                 Hi, my name is Steff...
               </h3>
               <p className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base">
-                Steff, short for Stefan. Born in 1991 in a small town in the
-                south of Germany, Bavaria. And yes, you can call me a proud
+                Steff, short for Stefan. Born in 1991 in a small town in
+                southern Germany, Bavaria. And yes, you can call me a proud
                 Bavarian too.
                 <br />
-                What can you expect? An open-minded character who seeks to
+                What can you expect of me? An open-minded character who seeks to
                 challenge himself. A person who follows his mission: To realize
                 the vision of <strong>combining worlds</strong>.
                 <br />
@@ -84,7 +101,7 @@ export default function AboutPage() {
                 the world of being an engineer with the one of being a kitesurf
                 instructor. E voilà, I created my own lifestyle of being a{" "}
                 <strong>Kite-Engineer</strong>.
-                <br />A freelancer that provides services :
+                <br />A freelancer that provides services:
               </p>
               <ul className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base my-2">
                 <li>
