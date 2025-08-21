@@ -1,3 +1,10 @@
+## [1.24.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.24.1...v1.24.2) (2025-08-21)
+
+
+### Bug Fixes
+
+* adding the hero section to more pages + adjusting pictures ([fb2d610](https://github.com/DaSteff91/website_kite-engineer/commit/fb2d6105dd06c6b72d745c4e3d2953e402a1f70c))
+
 ## [1.24.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.24.0...v1.24.1) (2025-08-21)
 
 
