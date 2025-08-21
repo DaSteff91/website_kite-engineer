@@ -94,14 +94,12 @@ export default function Imprint() {
       </Hero>
 
       {/* Content Container */}
-      <div className="container mx-auto px-4 max-w-6xl p-4 sm:p-6 py-24 sm:py-36">
+      <div className="container mx-auto px-4 max-w-6xl p-4 sm:p-6 py-12 sm:py-8">
         <article className="max-w-6xl mx-auto my-4">
           <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] w-full">
-            <header>
-              <h1 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 ">
-                Impressum
-              </h1>
-            </header>
+            <h1 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 ">
+              Impressum
+            </h1>
 
             <Section
               title="Angaben gemäß § 5 TMG"
