@@ -1,3 +1,11 @@
+## [1.24.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.24.0...v1.24.1) (2025-08-21)
+
+
+### Bug Fixes
+
+* implementing blur function along side the new hero section to act as placeholder ([9324286](https://github.com/DaSteff91/website_kite-engineer/commit/93242865e2b3dd1796b16fca7cb726299250d24b))
+* implementing ssr hero section only for now ([893cdce](https://github.com/DaSteff91/website_kite-engineer/commit/893cdce7deb06be818eaf5ba831088685ceaf19e))
+
 # [1.24.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.23.1...v1.24.0) (2025-08-18)
 
 
