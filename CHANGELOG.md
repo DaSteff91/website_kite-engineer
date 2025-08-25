@@ -1,3 +1,10 @@
+## [1.25.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.25.0...v1.25.1) (2025-08-25)
+
+
+### Bug Fixes
+
+* new hero image for large screens ([e250204](https://github.com/DaSteff91/website_kite-engineer/commit/e250204d3ef9f236a20dd4daa1ddc06a3950e1ac))
+
 # [1.25.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.24.2...v1.25.0) (2025-08-25)
 
 
