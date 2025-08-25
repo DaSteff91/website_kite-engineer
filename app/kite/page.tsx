@@ -43,46 +43,21 @@ export default function KitePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center">
-        <div className="absolute inset-0">
-          <Image
-            src={kite_hero_image}
-            alt="Kiteboarding"
-            fill
-            className="object-cover object-[center_45%] brightness-50"
-            priority
-            placeholder="blur"
-          />
-        </div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1
-            className="pb-1 text-4xl md:text-5xl font-bold mb-6 
-   bg-gradient-to-r from-white via-gray-200 to-gray-300 
-   bg-clip-text text-transparent 
-   [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
-          >
-            Combining Worlds...
-          </h1>
-        </div>
-      </section>
-
-      {/* <Hero
-        imageBaseName="kite_hero"
-        altText="Kiteboarding"
+      <Hero
+        route="/kite"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
-        className="my-custom-class"
       >
         <h1
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
-     bg-gradient-to-r from-white via-gray-200 to-gray-300 
-     bg-clip-text text-transparent 
-     [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+           bg-gradient-to-r from-white via-gray-200 to-gray-300 
+           bg-clip-text text-transparent 
+           [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
           Combining Worlds...
         </h1>
-      </Hero> */}
+      </Hero>
 
       {/* Content Section */}
       <section className="py-16">

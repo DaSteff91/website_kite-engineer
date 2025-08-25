@@ -35,5 +35,6 @@ yarn-error.log*
 # idea files
 .idea
 
-
+# Helper scripts
 content_replacer.py
+hero_replacer.py

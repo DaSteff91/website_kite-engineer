@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { generateContactHref } from "@/lib/utils/contact-filler";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA["kite/courses/advanced"];
 
@@ -31,28 +32,21 @@ export default function AdvancedPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center">
-        <div className="absolute inset-0">
-          <Image
-            src={kite_hero_image}
-            alt="Advanced Courses"
-            fill
-            className="object-cover object-[center_45%] brightness-50"
-            priority
-            placeholder="blur"
-          />
-        </div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1
-            className="pb-1 text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 
-   bg-gradient-to-r from-white via-gray-200 to-gray-300 
-   bg-clip-text text-transparent 
-   [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
-          >
-            Advanced Kiteboarding Courses
-          </h1>
-        </div>
-      </section>
+            <Hero
+        route="/kite"
+        objectPosition="center 45%"
+        brightness={50}
+        minHeight="60vh"
+      >
+        <h1
+          className="pb-1 text-4xl md:text-5xl font-bold mb-6 
+           bg-gradient-to-r from-white via-gray-200 to-gray-300 
+           bg-clip-text text-transparent 
+           [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+        >
+          Advanced Kiteboarding Courses
+        </h1>
+      </Hero>
 
       {/* Content Section */}
       <section className="py-12 sm:py-16">
