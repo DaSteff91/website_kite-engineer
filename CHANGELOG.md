@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.24.2...v1.25.0) (2025-08-25)
+
+
+### Features
+
+* implement the new hero section in all pages.tsx ([6dd268b](https://github.com/DaSteff91/website_kite-engineer/commit/6dd268b4e64cb54a6088480bf50e4633aca90b9c))
+
 ## [1.24.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.24.1...v1.24.2) (2025-08-21)
 
 
