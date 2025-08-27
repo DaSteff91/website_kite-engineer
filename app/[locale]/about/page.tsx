@@ -4,10 +4,12 @@ import background_image_darker from "@/public/images/background_image_darker.jpe
 import about_content_image from "@/public/images/about_content.jpg";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
+import { useTranslations } from "next-intl";
 
 export const metadata = PAGE_METADATA.about;
 
 export default function AboutPage() {
+  const t = useTranslations("AboutPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -58,7 +60,7 @@ export default function AboutPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Combining Worlds...
+          {t("title")}
         </h1>
       </Hero>
 
