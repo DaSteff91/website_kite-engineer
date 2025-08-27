@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     // Fallback icon
     {
       rel: "icon",
-      url: "favicon_dark.ico",
+      url: "/images/favicon_dark.ico",
       type: "image/x-icon",
     },
   ],
