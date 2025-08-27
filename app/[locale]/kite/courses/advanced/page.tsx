@@ -32,7 +32,7 @@ export default function AdvancedPage() {
       </div>
 
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/kite"
         objectPosition="center 45%"
         brightness={50}
@@ -95,8 +95,8 @@ export default function AdvancedPage() {
                   • Must be able to swim securely for more then a few minutes
                 </li>
                 <li>
-                  • Advanced = You are about to pass the first hurdles of the
-                  water start
+                  • Advanced = You are confidently and reproducible riding after
+                  the waterstart
                 </li>
                 <li>
                   • Sorry, I can´t make someone a "King Of The Air" athlete. But
@@ -161,7 +161,7 @@ export default function AdvancedPage() {
               the details.
             </p>
             <Link
-              href={generateContactHref("kite/courses/advanced")}
+              href={generateContactHref("/kite/courses/advanced")}
               target="_blank"
             >
               <Button

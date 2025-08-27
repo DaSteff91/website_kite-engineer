@@ -39,12 +39,6 @@ export const metadata: Metadata = {
       url: "/images/favicon_dark.ico",
       type: "image/x-icon",
     },
-    // Fallback icon
-    {
-      rel: "icon",
-      url: "/images/favicon_dark.ico",
-      type: "image/x-icon",
-    },
   ],
   keywords:
     "kiteboarding, engineering, kitesurf, engineer, consultant, representative, kitesurfing, sport, consulting, freelancer, outsourcing",
@@ -76,6 +70,7 @@ export const metadata: Metadata = {
     languages: {
       "en-US": "/en-US",
       "de-DE": "/de-DE",
+      "pt-BR": "/pt-BR",
     },
   },
   twitter: {
