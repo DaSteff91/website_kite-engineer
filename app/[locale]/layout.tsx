@@ -2,6 +2,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+// import { SITE } from "@/lib/constants/site-config";
 
 // Generate static params for all supported locales
 export function generateStaticParams() {
@@ -9,16 +10,20 @@ export function generateStaticParams() {
 }
 
 // // Generate metadata with translations - [27.08.2025] For now leave that aside
-// export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: Promise<{ locale: string }>;
+// }) {
 //   const { locale } = await params;
-//   const t = await getTranslations({ locale, namespace: 'Metadata' });
+//   const t = await getTranslations({ locale, namespace: "Metadata" });
 
 //   return {
 //     title: {
 //       template: `%s | ${SITE.name}`,
 //       default: SITE.name,
 //     },
-//     description: t('description'),
+//     description: t("description"),
 //     // ... other metadata properties that should be localized
 //   };
 // }
@@ -41,12 +46,8 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      {children}
+    </NextIntlClientProvider>
   );
 }

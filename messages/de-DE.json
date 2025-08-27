@@ -1,5 +1,19 @@
 {
-    "AboutPage":
-    {"title": "That is a title"
-}
+  "AboutPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Die Geschichte und Motivation hinter allem",
+    "sectionQuote": "\"Es geht darum, zu handeln und nicht darauf zu warten, dass Dinge von selbst passieren\"",
+    "introductionTitle": "Hallo, mein Name ist Steff...",
+    "introductionText1": "Steff, die Kurzform für Stefan. 1991 in einer kleinen Stadt im süddeutschen Bayern geboren. Und ja, man kann mich einen stolzen Bayern nennen.",
+    "introductionText2": "Was kannst Du von mir erwarten? Einen aufgeschlossenen Charakter, der sich selbst herausfordern will. Eine Person, die ihre Mission verfolgt: die Vision, zwei Welten zu verbinden: <strong>Combining Worlds...</strong>",
+    "introductionText3": "Aber was bedeutet das? Im Grunde genommen Folgendes: Es geht darum, die Welt eines Ingenieurs mit der eines Kitesurflehrers zu verbinden. E voilà, ich habe meinen eigenen Lifestyle als <strong>Kite-Engineer</strong> geschaffen. Ein Freelancer, der Dienstleistungen anbietet:",
+    "introductionListItem1": "• im Zusammenhang mit der Sportart Kiten, oder",
+    "introductionListItem2": "• in bestimmten Ingenieurbereichen wie der Halbleiterfertigung oder der IT.",
+    "introductionText4": "Und nein, ich designe keine Kites. Auch hab ich nicht vor, Elektronik in Kite zu integriere. Zumindest vorerst nicht - wer weiß?",
+    "introductionText5": "Das ist meine eigene Art, mit unserem geliebten Kapitalismus umzugehen: Ich teile, was ich gerne tue, und du bekommst, was du vorher noch nicht hattest. So gewinnen alle!",
+    "professionalTitle": "Professioneller Teil",
+    "professionalItems": "<li>Launching my freelancer career as Kite-Engineer to combine my worlds into one, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in german, english and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt with focus on Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
+    "personalTitle": "Persönlicher Teil",
+    "personalItems": "<li>\"Be the change in the world you want to see\"</li><li>I am an explorer, an adventurer and a nerd</li><li>Self-study was always more satisfying then school</li><li>Yes, even I´ve once played football. Until I was 14</li><li>Sports and outdoor activities are a big part of my life</li><li>So is Linkin Park - being a fan since I´m 6 years old</li><li>Have you ever listened to Eckhart Tolle?</li><li>Smiling at people on the street helps sharing good vibes</li><li>Philosophy, especially stoicism, was added since I´m 30 - coincidence?</li><li>A book that changed my life? O Alquimista - Paulo Coelho</li><li>Follower of the \"Free and Open Source Idea\"</li><li>Growing as a community is satisfaction times x</li>"
+  }
 }
