@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation";
+// import Link from "next/link";
+// import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { Menu, X, House, ChevronDown, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import {
@@ -15,13 +16,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-// Commented out for later implementation
-/*const LANGUAGES = [
-  { code: "en", label: "English" },
-  { code: "pt-BR", label: "Português (Brasil)" },
-  { code: "de", label: "Deutsch" },
-];*/
+import LocaleSwitcher from "../ui/localeSwitcher";
 
 // ONE DAY: PUT ALL THESE NAV_ITEMS ETC INTO A CONSTANTS FOLDER!!!!!
 const NAV_ITEMS = [
@@ -304,6 +299,7 @@ export function Header() {
             </Link>
 
             <div className="hidden md:flex items-center gap-4 lg:gap-6 h-full">
+              <LocaleSwitcher />
               {NAV_ITEMS.map((item) => (
                 <div key={item.href} className="h-full flex items-center">
                   {item.hasDropdown ? (
@@ -490,6 +486,7 @@ export function Header() {
                   {item.hasDropdown ? (
                     <div className="space-y-2">
                       {/* Main Item with Expand/Collapse - Full Line Clickable */}
+                      <LocaleSwitcher />
                       <div className="flex items-center">
                         <Link
                           href={item.href}

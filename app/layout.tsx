@@ -4,6 +4,9 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ClientLayoutWrapper } from "./ClientLayoutWrapper";
 import { SITE } from "@/lib/constants/site-config";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -81,21 +84,32 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // 1. Hardcode the default locale for the initial client-side context.
+  // This ensures the Header/LocaleSwitcher have valid data to render immediately.
+  // The middleware and [locale] layout will handle the correct locale for the main content.
+  const locale = routing.defaultLocale; // 'en-US'
+
+  // 2. Fetch the messages for the hardcoded default locale.
+  // This provides the initial translations for client components.
+  const messages = await getMessages();
+
   return (
-    <html suppressHydrationWarning>
+    <html suppressHydrationWarning lang={locale}>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          forcedTheme="dark"
-          enableSystem={false}
-        >
-          <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
-        </ThemeProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            forcedTheme="dark"
+            enableSystem={false}
+          >
+            <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

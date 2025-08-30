@@ -75,6 +75,70 @@
   }
 }
 
+@layer components {
+  /* Locale Switcher Styles with Tailwind */
+  .locale-switcher {
+    @apply relative inline-block min-w-[140px];
+  }
+
+  .locale-select {
+    @apply appearance-none w-full py-2 pl-3 pr-8 border border-gray-200 rounded-md bg-white text-sm font-medium text-gray-800 cursor-pointer transition-all duration-200 shadow-sm;
+
+    /* Vendor prefixes for appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .locale-select:hover {
+    @apply border-gray-300 shadow-md;
+  }
+
+  .locale-select:focus {
+    @apply outline-none border-blue-500 ring-blue-100;
+  }
+
+  .select-arrow {
+    @apply absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400 text-xs;
+  }
+
+  /* For better flag display */
+  .locale-select option {
+    @apply text-base py-2;
+  }
+
+  /* Dark mode support */
+  .dark .locale-select {
+    @apply bg-gray-800 border-gray-600 text-gray-100;
+  }
+
+  .dark .locale-select:hover {
+    @apply border-gray-500;
+  }
+
+  .dark .locale-select:focus {
+    @apply border-blue-400 ring-blue-900/20;
+  }
+
+  .dark .select-arrow {
+    @apply text-gray-500;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .locale-switcher {
+      @apply min-w-[120px];
+    }
+
+    .locale-select {
+      @apply py-1.5 pl-2.5 pr-7 text-xs;
+    }
+
+    .select-arrow {
+      @apply right-2.5 text-[0.65rem];
+    }
+  }
+}
+
 .circuit-pattern {
   background-image: radial-gradient(
     circle at 2px 2px,

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import kite_hero_image from "@/public/images/kite_hero_image.jpg";
 import { Hero } from "@/components/sections/Hero";
 import { Button } from "@/components/ui/button";
 import {
