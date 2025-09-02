@@ -40,7 +40,7 @@ export default function TechnicalResearchPage() {
         brightness={50}
         minHeight="60vh"
       >
-        <h1
+        <h1 id="technical-research-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -148,7 +148,7 @@ export default function TechnicalResearchPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p id="technical-research-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to gain technical insights? Let's research and analyze the
               information that matters for your business.
             </p>

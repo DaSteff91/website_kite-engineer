@@ -40,7 +40,7 @@ export default function WorkflowAutomationPage() {
         brightness={50}
         minHeight="60vh"
       >
-        <h1
+        <h1 id="workflow-automation-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -148,7 +148,7 @@ export default function WorkflowAutomationPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p id="workflow-automation-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to automate your workflows? Let's eliminate repetitive tasks
               and optimize your processes.
             </p>

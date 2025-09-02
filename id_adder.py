@@ -25,11 +25,13 @@ def add_ids_to_page(file_path: str) -> bool:
     content, modified2 = _process_service_sections(content, file_path)
     content, modified3 = _process_accordion_items(content, file_path)
     content, modified4 = _process_service_grids(content, file_path)
+    content, modified5 = _process_hero_sections(content, file_path)
+    content, modified6 = _process_contact_sections(content, file_path)
 
     # Clean up any malformed tags that might have been created
     content = _cleanup_malformed_h3_tags(content)
     
-    modified = modified1 or modified2 or modified3 or modified4
+    modified = modified1 or modified2 or modified3 or modified4 or modified5 or modified6
     
     # Write back to file if modifications were made
     if modified:
@@ -379,6 +381,79 @@ def _cleanup_malformed_h3_tags(content: str) -> str:
     
     return content
 
+def _process_hero_sections(content: str, file_path: str) -> Tuple[str, bool]:
+    """
+    Process Hero sections by adding IDs to h1 elements based on directory names.
+    
+    Args:
+        content: The file content to process
+        file_path: Path to the file (for directory name extraction)
+        
+    Returns:
+        Tuple of (modified_content, was_modified)
+    """
+    modified = False
+    
+    # Pattern to find Hero components with h1 elements
+    hero_pattern: Pattern = re.compile(
+        r'(<Hero[^>]*>.*?<h1)([^>]*)(>.*?</h1>.*?</Hero>)',
+        re.DOTALL | re.IGNORECASE
+    )
+    
+    # Find all Hero section matches
+    for match in hero_pattern.finditer(content):
+        h1_attrs = match.group(2)
+        
+        # Get the last directory name from the file path
+        last_dir: str = Path(file_path).parent.name
+        hero_id: str = f"{last_dir}-hero"
+        
+        # Check if ID already exists to avoid duplicates
+        if 'id=' not in h1_attrs:
+            # Create the replacement
+            replacement: str = f"{match.group(1)} id=\"{hero_id}\"{h1_attrs}{match.group(3)}"
+            content = content.replace(match.group(0), replacement)
+            modified = True
+            print(f"Added ID '{hero_id}' to Hero section in {file_path}")
+    
+    return content, modified
+
+def _process_contact_sections(content: str, file_path: str) -> Tuple[str, bool]:
+    """
+    Process Contact sections by adding IDs to p elements based on directory names.
+    
+    Args:
+        content: The file content to process
+        file_path: Path to the file (for directory name extraction)
+        
+    Returns:
+        Tuple of (modified_content, was_modified)
+    """
+    modified = False
+    
+    # Pattern to find Contact sections with comments and p elements
+    contact_pattern: Pattern = re.compile(
+        r'(\{\s*/\*\s*Contact Section\s*\*/\s*\})(.*?<p)([^>]*)(>.*?</p>.*?</div>)',
+        re.DOTALL | re.IGNORECASE
+    )
+    
+    # Find all Contact section matches
+    for match in contact_pattern.finditer(content):
+        p_attrs = match.group(3)
+        
+        # Get the last directory name from the file path
+        last_dir: str = Path(file_path).parent.name
+        contact_id: str = f"{last_dir}-contact"
+        
+        # Check if ID already exists to avoid duplicates
+        if 'id=' not in p_attrs:
+            # Create the replacement
+            replacement: str = f"{match.group(1)}{match.group(2)} id=\"{contact_id}\"{p_attrs}{match.group(4)}"
+            content = content.replace(match.group(0), replacement)
+            modified = True
+            print(f"Added ID '{contact_id}' to Contact section in {file_path}")
+    
+    return content, modified
 
 def process_directory(base_dir: str) -> None:
     """

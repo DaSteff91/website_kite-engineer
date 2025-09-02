@@ -38,7 +38,7 @@ export default function AdvancedPage() {
         brightness={50}
         minHeight="60vh"
       >
-        <h1
+        <h1 id="advanced-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -155,7 +155,7 @@ export default function AdvancedPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p id="advanced-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               There are many things to consider when giving courses but nothing
               that can´t be arranged. Drop me a message and we´ll organize all
               the details.

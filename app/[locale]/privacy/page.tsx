@@ -81,7 +81,7 @@ export default function Privacy() {
         brightness={50}
         minHeight="60vh"
       >
-        <h1
+        <h1 id="privacy-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
                  bg-gradient-to-r from-white via-gray-200 to-gray-300 
                  bg-clip-text text-transparent 

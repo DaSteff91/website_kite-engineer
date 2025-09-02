@@ -41,7 +41,7 @@ export default function SimulationPrototypingPage() {
         brightness={50}
         minHeight="60vh"
       >
-        <h1
+        <h1 id="simulation-prototyping-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -149,7 +149,7 @@ export default function SimulationPrototypingPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p id="simulation-prototyping-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
               Ready to bring your concepts to life? Let's create simulations and
               prototypes that validate your solutions.
             </p>

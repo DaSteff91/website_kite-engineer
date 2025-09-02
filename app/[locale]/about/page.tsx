@@ -31,7 +31,7 @@ export default function AboutPage() {
         brightness={50}
         minHeight="60vh"
       >
-        <h1
+        <h1 id="about-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -63,7 +63,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className=" max-w-6xl mx-auto my-4">
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-200">
+              <h3
+                id="introduction-title"
+                className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-teal-200"
+              >
                 {t("introductionTitle")}
               </h3>
               <p className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base">
@@ -80,8 +83,8 @@ export default function AboutPage() {
                 })}
               </p>
               <ul className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base my-2">
-                <li>{t("introductionListItem1")}</li>
-                <li>{t("introductionListItem2")}</li>
+                <li id="t-introductiontitle-list-element1">{t("introductionListItem1")}</li>
+                <li id="t-introductiontitle-list-element2">{t("introductionListItem2")}</li>
               </ul>
               <p className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base">
                 {t("introductionText4")}
@@ -103,22 +106,28 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
+              <h3
+                id="professional-title"
+                className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200"
+              >
                 {t("professionalTitle")}
               </h3>
               <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
                 {t.rich("professionalItems", {
-                  li: (chunks) => <li>{chunks}</li>,
+                  li: (chunks) => <li id="t-professionaltitle-list-element1">{chunks}</li>,
                 })}
               </ul>
             </div>
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
+              <h3
+                id="personal-title"
+                className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200"
+              >
                 {t("personalTitle")}
               </h3>
               <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
                 {t.rich("personalItems", {
-                  li: (chunks) => <li>{chunks}</li>,
+                  li: (chunks) => <li id="t-personaltitle-list-element1">{chunks}</li>,
                 })}
               </ul>
             </div>
