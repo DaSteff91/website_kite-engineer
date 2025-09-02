@@ -91,10 +91,10 @@ export default function DocumentationPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="version-control-list-element1">• Git-based version control setup</li>
-                <li id="version-control-list-element1">• Branching strategy development</li>
-                <li id="version-control-list-element1">• Document versioning systems</li>
-                <li id="version-control-list-element1">• Change history tracking</li>
-                <li id="version-control-list-element1">• Conflict resolution procedures</li>
+                <li id="version-control-list-element2">• Branching strategy development</li>
+                <li id="version-control-list-element3">• Document versioning systems</li>
+                <li id="version-control-list-element4">• Change history tracking</li>
+                <li id="version-control-list-element5">• Conflict resolution procedures</li>
               </ul>
             </div>
 
@@ -106,11 +106,11 @@ export default function DocumentationPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="version-control-list-element1">• Shared workspace configuration</li>
-                <li id="version-control-list-element1">• Cloud-based collaboration tools</li>
-                <li id="version-control-list-element1">• Real-time editing capabilities</li>
-                <li id="version-control-list-element1">• Access control and permissions</li>
-                <li id="version-control-list-element1">• Cross-platform compatibility</li>
+                <li id="collaborative-workspace-list-element1">• Shared workspace configuration</li>
+                <li id="collaborative-workspace-list-element2">• Cloud-based collaboration tools</li>
+                <li id="collaborative-workspace-list-element3">• Real-time editing capabilities</li>
+                <li id="collaborative-workspace-list-element4">• Access control and permissions</li>
+                <li id="collaborative-workspace-list-element5">• Cross-platform compatibility</li>
               </ul>
             </div>
 
@@ -122,11 +122,11 @@ export default function DocumentationPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="version-control-list-element1">• Knowledge base development</li>
-                <li id="version-control-list-element1">• Documentation standards</li>
-                <li id="version-control-list-element1">• Information architecture design</li>
-                <li id="version-control-list-element1">• Search and retrieval optimization</li>
-                <li id="version-control-list-element1">• Knowledge retention strategies</li>
+                <li id="knowledge-management-list-element1">• Knowledge base development</li>
+                <li id="knowledge-management-list-element2">• Documentation standards</li>
+                <li id="knowledge-management-list-element3">• Information architecture design</li>
+                <li id="knowledge-management-list-element4">• Search and retrieval optimization</li>
+                <li id="knowledge-management-list-element5">• Knowledge retention strategies</li>
               </ul>
             </div>
 
@@ -138,11 +138,11 @@ export default function DocumentationPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="version-control-list-element1">• Collaboration workflow design</li>
-                <li id="version-control-list-element1">• Communication protocol development</li>
-                <li id="version-control-list-element1">• Team integration strategies</li>
-                <li id="version-control-list-element1">• Cross-functional coordination</li>
-                <li id="version-control-list-element1">• Collaborative culture building</li>
+                <li id="team-synergy-list-element1">• Collaboration workflow design</li>
+                <li id="team-synergy-list-element2">• Communication protocol development</li>
+                <li id="team-synergy-list-element3">• Team integration strategies</li>
+                <li id="team-synergy-list-element4">• Cross-functional coordination</li>
+                <li id="team-synergy-list-element5">• Collaborative culture building</li>
               </ul>
             </div>
           </div>

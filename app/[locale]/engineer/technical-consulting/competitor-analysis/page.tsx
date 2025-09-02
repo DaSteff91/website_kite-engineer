@@ -90,10 +90,10 @@ export default function CompetitorAnalysisPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="competitor-technology-analysis-list-element1">• Technology stack assessment</li>
-                <li id="competitor-technology-analysis-list-element1">• Product feature comparison</li>
-                <li id="competitor-technology-analysis-list-element1">• Technical capability evaluation</li>
-                <li id="competitor-technology-analysis-list-element1">• Innovation trajectory analysis</li>
-                <li id="competitor-technology-analysis-list-element1">• Technology gap identification</li>
+                <li id="competitor-technology-analysis-list-element2">• Product feature comparison</li>
+                <li id="competitor-technology-analysis-list-element3">• Technical capability evaluation</li>
+                <li id="competitor-technology-analysis-list-element4">• Innovation trajectory analysis</li>
+                <li id="competitor-technology-analysis-list-element5">• Technology gap identification</li>
               </ul>
             </div>
 
@@ -105,11 +105,11 @@ export default function CompetitorAnalysisPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="competitor-technology-analysis-list-element1">• Competitive landscape mapping</li>
-                <li id="competitor-technology-analysis-list-element1">• Market share analysis</li>
-                <li id="competitor-technology-analysis-list-element1">• Positioning strategy assessment</li>
-                <li id="competitor-technology-analysis-list-element1">• Value proposition comparison</li>
-                <li id="competitor-technology-analysis-list-element1">• Differentiation opportunity identification</li>
+                <li id="market-positioning-list-element1">• Competitive landscape mapping</li>
+                <li id="market-positioning-list-element2">• Market share analysis</li>
+                <li id="market-positioning-list-element3">• Positioning strategy assessment</li>
+                <li id="market-positioning-list-element4">• Value proposition comparison</li>
+                <li id="market-positioning-list-element5">• Differentiation opportunity identification</li>
               </ul>
             </div>
 
@@ -121,11 +121,11 @@ export default function CompetitorAnalysisPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="competitor-technology-analysis-list-element1">• Strategic direction analysis</li>
-                <li id="competitor-technology-analysis-list-element1">• Investment pattern identification</li>
-                <li id="competitor-technology-analysis-list-element1">• Partnership and alliance assessment</li>
-                <li id="competitor-technology-analysis-list-element1">• Expansion strategy evaluation</li>
-                <li id="competitor-technology-analysis-list-element1">• Future trajectory prediction</li>
+                <li id="strategic-intelligence-list-element1">• Strategic direction analysis</li>
+                <li id="strategic-intelligence-list-element2">• Investment pattern identification</li>
+                <li id="strategic-intelligence-list-element3">• Partnership and alliance assessment</li>
+                <li id="strategic-intelligence-list-element4">• Expansion strategy evaluation</li>
+                <li id="strategic-intelligence-list-element5">• Future trajectory prediction</li>
               </ul>
             </div>
 
@@ -137,11 +137,11 @@ export default function CompetitorAnalysisPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="competitor-technology-analysis-list-element1">• Strength and weakness analysis</li>
-                <li id="competitor-technology-analysis-list-element1">• Competitive advantage identification</li>
-                <li id="competitor-technology-analysis-list-element1">• Opportunity assessment</li>
-                <li id="competitor-technology-analysis-list-element1">• Threat evaluation</li>
-                <li id="competitor-technology-analysis-list-element1">• Strategic recommendation development</li>
+                <li id="competitive-advantage-list-element1">• Strength and weakness analysis</li>
+                <li id="competitive-advantage-list-element2">• Competitive advantage identification</li>
+                <li id="competitive-advantage-list-element3">• Opportunity assessment</li>
+                <li id="competitive-advantage-list-element4">• Threat evaluation</li>
+                <li id="competitive-advantage-list-element5">• Strategic recommendation development</li>
               </ul>
             </div>
           </div>

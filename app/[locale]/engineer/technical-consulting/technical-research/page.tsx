@@ -90,10 +90,10 @@ export default function TechnicalResearchPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="technology-landscape-analysis-list-element1">• Technology trend identification</li>
-                <li id="technology-landscape-analysis-list-element1">• Emerging technology assessment</li>
-                <li id="technology-landscape-analysis-list-element1">• Competitive technology mapping</li>
-                <li id="technology-landscape-analysis-list-element1">• Technology maturity evaluation</li>
-                <li id="technology-landscape-analysis-list-element1">• Adoption potential analysis</li>
+                <li id="technology-landscape-analysis-list-element2">• Emerging technology assessment</li>
+                <li id="technology-landscape-analysis-list-element3">• Competitive technology mapping</li>
+                <li id="technology-landscape-analysis-list-element4">• Technology maturity evaluation</li>
+                <li id="technology-landscape-analysis-list-element5">• Adoption potential analysis</li>
               </ul>
             </div>
 
@@ -105,11 +105,11 @@ export default function TechnicalResearchPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technology-landscape-analysis-list-element1">• Academic literature analysis</li>
-                <li id="technology-landscape-analysis-list-element1">• Technical publication review</li>
-                <li id="technology-landscape-analysis-list-element1">• Research synthesis</li>
-                <li id="technology-landscape-analysis-list-element1">• State-of-the-art assessment</li>
-                <li id="technology-landscape-analysis-list-element1">• Knowledge gap identification</li>
+                <li id="literature-review-list-element1">• Academic literature analysis</li>
+                <li id="literature-review-list-element2">• Technical publication review</li>
+                <li id="literature-review-list-element3">• Research synthesis</li>
+                <li id="literature-review-list-element4">• State-of-the-art assessment</li>
+                <li id="literature-review-list-element5">• Knowledge gap identification</li>
               </ul>
             </div>
 
@@ -121,11 +121,11 @@ export default function TechnicalResearchPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technology-landscape-analysis-list-element1">• Patent landscape analysis</li>
-                <li id="technology-landscape-analysis-list-element1">• Freedom-to-operate assessment</li>
-                <li id="technology-landscape-analysis-list-element1">• IP strategy recommendations</li>
-                <li id="technology-landscape-analysis-list-element1">• Competitive IP positioning</li>
-                <li id="technology-landscape-analysis-list-element1">• Technology protection strategies</li>
+                <li id="patent-ip-research-list-element1">• Patent landscape analysis</li>
+                <li id="patent-ip-research-list-element2">• Freedom-to-operate assessment</li>
+                <li id="patent-ip-research-list-element3">• IP strategy recommendations</li>
+                <li id="patent-ip-research-list-element4">• Competitive IP positioning</li>
+                <li id="patent-ip-research-list-element5">• Technology protection strategies</li>
               </ul>
             </div>
 
@@ -137,11 +137,11 @@ export default function TechnicalResearchPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technology-landscape-analysis-list-element1">• Technical feasibility studies</li>
-                <li id="technology-landscape-analysis-list-element1">• Risk assessment</li>
-                <li id="technology-landscape-analysis-list-element1">• Resource requirement analysis</li>
-                <li id="technology-landscape-analysis-list-element1">• Implementation pathway evaluation</li>
-                <li id="technology-landscape-analysis-list-element1">• Alternative technology comparison</li>
+                <li id="technical-feasibility-list-element1">• Technical feasibility studies</li>
+                <li id="technical-feasibility-list-element2">• Risk assessment</li>
+                <li id="technical-feasibility-list-element3">• Resource requirement analysis</li>
+                <li id="technical-feasibility-list-element4">• Implementation pathway evaluation</li>
+                <li id="technical-feasibility-list-element5">• Alternative technology comparison</li>
               </ul>
             </div>
           </div>

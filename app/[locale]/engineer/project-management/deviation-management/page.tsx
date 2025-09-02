@@ -91,10 +91,10 @@ export default function DeviationManagementPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="change-request-management-list-element1">• Deviation documentation</li>
-                <li id="change-request-management-list-element1">• Impact assessment</li>
-                <li id="change-request-management-list-element1">• Change request preparation</li>
-                <li id="change-request-management-list-element1">• Approval workflow management</li>
-                <li id="change-request-management-list-element1">• Implementation tracking</li>
+                <li id="change-request-management-list-element2">• Impact assessment</li>
+                <li id="change-request-management-list-element3">• Change request preparation</li>
+                <li id="change-request-management-list-element4">• Approval workflow management</li>
+                <li id="change-request-management-list-element5">• Implementation tracking</li>
               </ul>
             </div>
 
@@ -106,11 +106,11 @@ export default function DeviationManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="change-request-management-list-element1">• Expectation management</li>
-                <li id="change-request-management-list-element1">• Communication strategy development</li>
-                <li id="change-request-management-list-element1">• External party negotiations</li>
-                <li id="change-request-management-list-element1">• Presentation preparation</li>
-                <li id="change-request-management-list-element1">• Stakeholder alignment</li>
+                <li id="stakeholder-communication-list-element1">• Expectation management</li>
+                <li id="stakeholder-communication-list-element2">• Communication strategy development</li>
+                <li id="stakeholder-communication-list-element3">• External party negotiations</li>
+                <li id="stakeholder-communication-list-element4">• Presentation preparation</li>
+                <li id="stakeholder-communication-list-element5">• Stakeholder alignment</li>
               </ul>
             </div>
 
@@ -122,11 +122,11 @@ export default function DeviationManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="change-request-management-list-element1">• Recovery strategy development</li>
-                <li id="change-request-management-list-element1">• Action plan creation</li>
-                <li id="change-request-management-list-element1">• Resource reallocation</li>
-                <li id="change-request-management-list-element1">• Timeline adjustment</li>
-                <li id="change-request-management-list-element1">• Progress monitoring</li>
+                <li id="recovery-planning-list-element1">• Recovery strategy development</li>
+                <li id="recovery-planning-list-element2">• Action plan creation</li>
+                <li id="recovery-planning-list-element3">• Resource reallocation</li>
+                <li id="recovery-planning-list-element4">• Timeline adjustment</li>
+                <li id="recovery-planning-list-element5">• Progress monitoring</li>
               </ul>
             </div>
 
@@ -138,11 +138,11 @@ export default function DeviationManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="change-request-management-list-element1">• Root cause analysis</li>
-                <li id="change-request-management-list-element1">• Deviation documentation</li>
-                <li id="change-request-management-list-element1">• Process improvement recommendations</li>
-                <li id="change-request-management-list-element1">• Knowledge capture and sharing</li>
-                <li id="change-request-management-list-element1">• Preventive measure development</li>
+                <li id="lessons-learned-list-element1">• Root cause analysis</li>
+                <li id="lessons-learned-list-element2">• Deviation documentation</li>
+                <li id="lessons-learned-list-element3">• Process improvement recommendations</li>
+                <li id="lessons-learned-list-element4">• Knowledge capture and sharing</li>
+                <li id="lessons-learned-list-element5">• Preventive measure development</li>
               </ul>
             </div>
           </div>

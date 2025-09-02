@@ -90,10 +90,10 @@ export default function WebDevelopmentPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="server-domain-setup-list-element1">• Server configuration and management</li>
-                <li id="server-domain-setup-list-element1">• Domain registration and DNS setup</li>
-                <li id="server-domain-setup-list-element1">• SSL certificate installation</li>
-                <li id="server-domain-setup-list-element1">• Performance optimization</li>
-                <li id="server-domain-setup-list-element1">• Security hardening</li>
+                <li id="server-domain-setup-list-element2">• Domain registration and DNS setup</li>
+                <li id="server-domain-setup-list-element3">• SSL certificate installation</li>
+                <li id="server-domain-setup-list-element4">• Performance optimization</li>
+                <li id="server-domain-setup-list-element5">• Security hardening</li>
               </ul>
             </div>
 
@@ -105,11 +105,11 @@ export default function WebDevelopmentPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="server-domain-setup-list-element1">• Full-stack web applications</li>
-                <li id="server-domain-setup-list-element1">• Responsive design implementation</li>
-                <li id="server-domain-setup-list-element1">• Modern frontend frameworks</li>
-                <li id="server-domain-setup-list-element1">• Backend API development</li>
-                <li id="server-domain-setup-list-element1">• Database integration</li>
+                <li id="website-development-list-element1">• Full-stack web applications</li>
+                <li id="website-development-list-element2">• Responsive design implementation</li>
+                <li id="website-development-list-element3">• Modern frontend frameworks</li>
+                <li id="website-development-list-element4">• Backend API development</li>
+                <li id="website-development-list-element5">• Database integration</li>
               </ul>
             </div>
 
@@ -121,11 +121,11 @@ export default function WebDevelopmentPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="server-domain-setup-list-element1">• Nextcloud setup and configuration</li>
-                <li id="server-domain-setup-list-element1">• Private cloud storage solutions</li>
-                <li id="server-domain-setup-list-element1">• Email server configuration</li>
-                <li id="server-domain-setup-list-element1">• Custom application hosting</li>
-                <li id="server-domain-setup-list-element1">• Data sovereignty and privacy</li>
+                <li id="self-hosted-solutions-list-element1">• Nextcloud setup and configuration</li>
+                <li id="self-hosted-solutions-list-element2">• Private cloud storage solutions</li>
+                <li id="self-hosted-solutions-list-element3">• Email server configuration</li>
+                <li id="self-hosted-solutions-list-element4">• Custom application hosting</li>
+                <li id="self-hosted-solutions-list-element5">• Data sovereignty and privacy</li>
               </ul>
             </div>
 
@@ -137,11 +137,11 @@ export default function WebDevelopmentPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="server-domain-setup-list-element1">• Regular security updates</li>
-                <li id="server-domain-setup-list-element1">• Performance monitoring</li>
-                <li id="server-domain-setup-list-element1">• Backup and recovery systems</li>
-                <li id="server-domain-setup-list-element1">• Uptime monitoring</li>
-                <li id="server-domain-setup-list-element1">• Technical support and maintenance</li>
+                <li id="maintenance-security-list-element1">• Regular security updates</li>
+                <li id="maintenance-security-list-element2">• Performance monitoring</li>
+                <li id="maintenance-security-list-element3">• Backup and recovery systems</li>
+                <li id="maintenance-security-list-element4">• Uptime monitoring</li>
+                <li id="maintenance-security-list-element5">• Technical support and maintenance</li>
               </ul>
             </div>
           </div>

@@ -88,10 +88,10 @@ export default function ConsultingPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="general-consulting-list-element1">• Individual equipment recommendations</li>
-                <li id="general-consulting-list-element1">• Transportation, maintenance and logistics</li>
-                <li id="general-consulting-list-element1">• Equipment review and demo testings</li>
-                <li id="general-consulting-list-element1">• Quote review</li>
-                <li id="general-consulting-list-element1">• Karma: Influence on society and the environment</li>
+                <li id="general-consulting-list-element2">• Transportation, maintenance and logistics</li>
+                <li id="general-consulting-list-element3">• Equipment review and demo testings</li>
+                <li id="general-consulting-list-element4">• Quote review</li>
+                <li id="general-consulting-list-element5">• Karma: Influence on society and the environment</li>
               </ul>
             </div>
 
@@ -103,13 +103,13 @@ export default function ConsultingPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="general-consulting-list-element1">
+                <li id="sport-representation-list-element1">
                   • Public speaking and presentations about sport related topics
                 </li>
-                <li id="general-consulting-list-element1">• Educational workshops for almost all ages</li>
-                <li id="general-consulting-list-element1">• Media interviews and content, also for B2B</li>
-                <li id="general-consulting-list-element1">• Community outreach programs</li>
-                <li id="general-consulting-list-element1">• Sport promotion initiatives</li>
+                <li id="sport-representation-list-element2">• Educational workshops for almost all ages</li>
+                <li id="sport-representation-list-element3">• Media interviews and content, also for B2B</li>
+                <li id="sport-representation-list-element4">• Community outreach programs</li>
+                <li id="sport-representation-list-element5">• Sport promotion initiatives</li>
               </ul>
             </div>
           </div>

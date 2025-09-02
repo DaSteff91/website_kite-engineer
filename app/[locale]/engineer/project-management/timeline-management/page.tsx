@@ -91,10 +91,10 @@ export default function TimelineManagementPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="critical-path-analysis-list-element1">• Critical path identification</li>
-                <li id="critical-path-analysis-list-element1">• Dependency optimization</li>
-                <li id="critical-path-analysis-list-element1">• Float time analysis</li>
-                <li id="critical-path-analysis-list-element1">• Schedule compression techniques</li>
-                <li id="critical-path-analysis-list-element1">• Critical chain methodology</li>
+                <li id="critical-path-analysis-list-element2">• Dependency optimization</li>
+                <li id="critical-path-analysis-list-element3">• Float time analysis</li>
+                <li id="critical-path-analysis-list-element4">• Schedule compression techniques</li>
+                <li id="critical-path-analysis-list-element5">• Critical chain methodology</li>
               </ul>
             </div>
 
@@ -106,11 +106,11 @@ export default function TimelineManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="critical-path-analysis-list-element1">• Resource leveling and smoothing</li>
-                <li id="critical-path-analysis-list-element1">• Timeline rebalancing</li>
-                <li id="critical-path-analysis-list-element1">• Fast-tracking opportunities</li>
-                <li id="critical-path-analysis-list-element1">• Crashing analysis</li>
-                <li id="critical-path-analysis-list-element1">• Schedule risk assessment</li>
+                <li id="schedule-optimization-list-element1">• Resource leveling and smoothing</li>
+                <li id="schedule-optimization-list-element2">• Timeline rebalancing</li>
+                <li id="schedule-optimization-list-element3">• Fast-tracking opportunities</li>
+                <li id="schedule-optimization-list-element4">• Crashing analysis</li>
+                <li id="schedule-optimization-list-element5">• Schedule risk assessment</li>
               </ul>
             </div>
 
@@ -122,11 +122,11 @@ export default function TimelineManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="critical-path-analysis-list-element1">• Dependency identification</li>
-                <li id="critical-path-analysis-list-element1">• Constraint analysis</li>
-                <li id="critical-path-analysis-list-element1">• Parallel task optimization</li>
-                <li id="critical-path-analysis-list-element1">• Handoff process improvement</li>
-                <li id="critical-path-analysis-list-element1">• Bottleneck resolution</li>
+                <li id="dependency-management-list-element1">• Dependency identification</li>
+                <li id="dependency-management-list-element2">• Constraint analysis</li>
+                <li id="dependency-management-list-element3">• Parallel task optimization</li>
+                <li id="dependency-management-list-element4">• Handoff process improvement</li>
+                <li id="dependency-management-list-element5">• Bottleneck resolution</li>
               </ul>
             </div>
 
@@ -138,11 +138,11 @@ export default function TimelineManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="critical-path-analysis-list-element1">• Delay impact assessment</li>
-                <li id="critical-path-analysis-list-element1">• Recovery plan development</li>
-                <li id="critical-path-analysis-list-element1">• Acceleration strategies</li>
-                <li id="critical-path-analysis-list-element1">• Scope adjustment recommendations</li>
-                <li id="critical-path-analysis-list-element1">• Stakeholder communication planning</li>
+                <li id="timeline-recovery-list-element1">• Delay impact assessment</li>
+                <li id="timeline-recovery-list-element2">• Recovery plan development</li>
+                <li id="timeline-recovery-list-element3">• Acceleration strategies</li>
+                <li id="timeline-recovery-list-element4">• Scope adjustment recommendations</li>
+                <li id="timeline-recovery-list-element5">• Stakeholder communication planning</li>
               </ul>
             </div>
           </div>

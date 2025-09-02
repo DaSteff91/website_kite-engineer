@@ -90,10 +90,10 @@ export default function TrainingKnowledgeTransferPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="technical-training-programs-list-element1">• Customized training curriculum</li>
-                <li id="technical-training-programs-list-element1">• Hands-on technical workshops</li>
-                <li id="technical-training-programs-list-element1">• Process-specific training</li>
-                <li id="technical-training-programs-list-element1">• Software and tool training</li>
-                <li id="technical-training-programs-list-element1">• Technical skill development</li>
+                <li id="technical-training-programs-list-element2">• Hands-on technical workshops</li>
+                <li id="technical-training-programs-list-element3">• Process-specific training</li>
+                <li id="technical-training-programs-list-element4">• Software and tool training</li>
+                <li id="technical-training-programs-list-element5">• Technical skill development</li>
               </ul>
             </div>
 
@@ -105,11 +105,11 @@ export default function TrainingKnowledgeTransferPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technical-training-programs-list-element1">• Interactive knowledge sessions</li>
-                <li id="technical-training-programs-list-element1">• Cross-functional knowledge sharing</li>
-                <li id="technical-training-programs-list-element1">• Best practice dissemination</li>
-                <li id="technical-training-programs-list-element1">• Lessons learned workshops</li>
-                <li id="technical-training-programs-list-element1">• Collaborative problem-solving</li>
+                <li id="knowledge-sharing-workshops-list-element1">• Interactive knowledge sessions</li>
+                <li id="knowledge-sharing-workshops-list-element2">• Cross-functional knowledge sharing</li>
+                <li id="knowledge-sharing-workshops-list-element3">• Best practice dissemination</li>
+                <li id="knowledge-sharing-workshops-list-element4">• Lessons learned workshops</li>
+                <li id="knowledge-sharing-workshops-list-element5">• Collaborative problem-solving</li>
               </ul>
             </div>
 
@@ -121,11 +121,11 @@ export default function TrainingKnowledgeTransferPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technical-training-programs-list-element1">• Technical documentation creation</li>
-                <li id="technical-training-programs-list-element1">• Process documentation</li>
-                <li id="technical-training-programs-list-element1">• Standard operating procedures</li>
-                <li id="technical-training-programs-list-element1">• Training materials development</li>
-                <li id="technical-training-programs-list-element1">• Knowledge base creation</li>
+                <li id="documentation-development-list-element1">• Technical documentation creation</li>
+                <li id="documentation-development-list-element2">• Process documentation</li>
+                <li id="documentation-development-list-element3">• Standard operating procedures</li>
+                <li id="documentation-development-list-element4">• Training materials development</li>
+                <li id="documentation-development-list-element5">• Knowledge base creation</li>
               </ul>
             </div>
 
@@ -137,11 +137,11 @@ export default function TrainingKnowledgeTransferPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technical-training-programs-list-element1">• Skill gap analysis</li>
-                <li id="technical-training-programs-list-element1">• Development roadmap creation</li>
-                <li id="technical-training-programs-list-element1">• Learning path definition</li>
-                <li id="technical-training-programs-list-element1">• Progress tracking methods</li>
-                <li id="technical-training-programs-list-element1">• Continuous improvement planning</li>
+                <li id="skill-development-planning-list-element1">• Skill gap analysis</li>
+                <li id="skill-development-planning-list-element2">• Development roadmap creation</li>
+                <li id="skill-development-planning-list-element3">• Learning path definition</li>
+                <li id="skill-development-planning-list-element4">• Progress tracking methods</li>
+                <li id="skill-development-planning-list-element5">• Continuous improvement planning</li>
               </ul>
             </div>
           </div>

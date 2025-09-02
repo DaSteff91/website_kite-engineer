@@ -91,10 +91,10 @@ export default function ProcessOptimizationPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="six-sigma-methodologies-list-element1">• DMAIC project execution</li>
-                <li id="six-sigma-methodologies-list-element1">• Statistical analysis and hypothesis testing</li>
-                <li id="six-sigma-methodologies-list-element1">• Root cause analysis</li>
-                <li id="six-sigma-methodologies-list-element1">• Process capability studies</li>
-                <li id="six-sigma-methodologies-list-element1">• Defect reduction strategies</li>
+                <li id="six-sigma-methodologies-list-element2">• Statistical analysis and hypothesis testing</li>
+                <li id="six-sigma-methodologies-list-element3">• Root cause analysis</li>
+                <li id="six-sigma-methodologies-list-element4">• Process capability studies</li>
+                <li id="six-sigma-methodologies-list-element5">• Defect reduction strategies</li>
               </ul>
             </div>
 
@@ -106,11 +106,11 @@ export default function ProcessOptimizationPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="six-sigma-methodologies-list-element1">• Waste elimination (8 wastes)</li>
-                <li id="six-sigma-methodologies-list-element1">• Value stream mapping</li>
-                <li id="six-sigma-methodologies-list-element1">• 5S workplace organization</li>
-                <li id="six-sigma-methodologies-list-element1">• Kaizen continuous improvement</li>
-                <li id="six-sigma-methodologies-list-element1">• Just-in-time implementation</li>
+                <li id="lean-manufacturing-list-element1">• Waste elimination (8 wastes)</li>
+                <li id="lean-manufacturing-list-element2">• Value stream mapping</li>
+                <li id="lean-manufacturing-list-element3">• 5S workplace organization</li>
+                <li id="lean-manufacturing-list-element4">• Kaizen continuous improvement</li>
+                <li id="lean-manufacturing-list-element5">• Just-in-time implementation</li>
               </ul>
             </div>
 
@@ -122,11 +122,11 @@ export default function ProcessOptimizationPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="six-sigma-methodologies-list-element1">• Factorial design planning</li>
-                <li id="six-sigma-methodologies-list-element1">• Response surface methodology</li>
-                <li id="six-sigma-methodologies-list-element1">• Optimization studies</li>
-                <li id="six-sigma-methodologies-list-element1">• Robust parameter design</li>
-                <li id="six-sigma-methodologies-list-element1">• Statistical modeling</li>
+                <li id="design-of-experiments-list-element1">• Factorial design planning</li>
+                <li id="design-of-experiments-list-element2">• Response surface methodology</li>
+                <li id="design-of-experiments-list-element3">• Optimization studies</li>
+                <li id="design-of-experiments-list-element4">• Robust parameter design</li>
+                <li id="design-of-experiments-list-element5">• Statistical modeling</li>
               </ul>
             </div>
 
@@ -138,11 +138,11 @@ export default function ProcessOptimizationPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="six-sigma-methodologies-list-element1">• Yield analysis and improvement</li>
-                <li id="six-sigma-methodologies-list-element1">• Pareto analysis for prioritization</li>
-                <li id="six-sigma-methodologies-list-element1">• Process efficiency metrics</li>
-                <li id="six-sigma-methodologies-list-element1">• Cost reduction strategies</li>
-                <li id="six-sigma-methodologies-list-element1">• Performance benchmarking</li>
+                <li id="yield-enhancement-list-element1">• Yield analysis and improvement</li>
+                <li id="yield-enhancement-list-element2">• Pareto analysis for prioritization</li>
+                <li id="yield-enhancement-list-element3">• Process efficiency metrics</li>
+                <li id="yield-enhancement-list-element4">• Cost reduction strategies</li>
+                <li id="yield-enhancement-list-element5">• Performance benchmarking</li>
               </ul>
             </div>
           </div>

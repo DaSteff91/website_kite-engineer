@@ -86,19 +86,19 @@ export default function AdvancedPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="who-list-element1">• Individuals or groups</li>
-                <li id="who-list-element1">• Schools or private</li>
-                <li id="who-list-element1">• Courses in German, English and Portugues</li>
-                <li id="who-list-element1">• Practical lessons: max. 4 people</li>
-                <li id="who-list-element1">• Theory lessons: max. 30 people</li>
-                <li id="who-list-element1">• No age limits but more then 30kg of weight</li>
-                <li id="who-list-element1">
+                <li id="who-list-element2">• Schools or private</li>
+                <li id="who-list-element3">• Courses in German, English and Portugues</li>
+                <li id="who-list-element4">• Practical lessons: max. 4 people</li>
+                <li id="who-list-element5">• Theory lessons: max. 30 people</li>
+                <li id="who-list-element6">• No age limits but more then 30kg of weight</li>
+                <li id="who-list-element7">
                   • Must be able to swim securely for more then a few minutes
                 </li>
-                <li id="who-list-element1">
+                <li id="who-list-element8">
                   • Advanced = You are confidently and reproducible riding after
                   the waterstart
                 </li>
-                <li id="who-list-element1">
+                <li id="who-list-element9">
                   • Sorry, I can´t make someone a "King Of The Air" athlete. But
                   I teach some cool tricks, sure
                 </li>
@@ -113,17 +113,17 @@ export default function AdvancedPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="who-list-element1">• Develop routines to support your training</li>
-                <li id="who-list-element1">
+                <li id="possible-content-list-element1">• Develop routines to support your training</li>
+                <li id="possible-content-list-element2">
                   • Material modifications like changing board stances or
                   testing different line setups
                 </li>
-                <li id="who-list-element1">• Learning new tricks in a save and guided environment</li>
-                <li id="who-list-element1">• Individualize your own style and get filmed</li>
-                <li id="who-list-element1">• Feedback and optimizations on current riding</li>
-                <li id="who-list-element1">• How to be a kite-buddy for less experienced</li>
-                <li id="who-list-element1">• Advanced theory that goes beyond the wind window</li>
-                <li id="who-list-element1">• Practising accident scenarios and self rescue</li>
+                <li id="possible-content-list-element3">• Learning new tricks in a save and guided environment</li>
+                <li id="possible-content-list-element4">• Individualize your own style and get filmed</li>
+                <li id="possible-content-list-element5">• Feedback and optimizations on current riding</li>
+                <li id="possible-content-list-element6">• How to be a kite-buddy for less experienced</li>
+                <li id="possible-content-list-element7">• Advanced theory that goes beyond the wind window</li>
+                <li id="possible-content-list-element8">• Practising accident scenarios and self rescue</li>
               </ul>
             </div>
 
@@ -135,17 +135,17 @@ export default function AdvancedPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="who-list-element1">• Up to 5 days intensive programs</li>
-                <li id="who-list-element1">
+                <li id="structure-list-element1">• Up to 5 days intensive programs</li>
+                <li id="structure-list-element2">
                   • Flexible scheduling options, based on environmental and
                   personal conditions
                 </li>
-                <li id="who-list-element1">• Buddy system: 2 people per Kite</li>
-                <li id="who-list-element1">• Individual: 1 person, 1 Kite</li>
-                <li id="who-list-element1">• Supervision-only format possible</li>
-                <li id="who-list-element1">• If available: Headset and video support</li>
-                <li id="who-list-element1">• Progress tracking and VDWS certification</li>
-                <li id="who-list-element1">
+                <li id="structure-list-element3">• Buddy system: 2 people per Kite</li>
+                <li id="structure-list-element4">• Individual: 1 person, 1 Kite</li>
+                <li id="structure-list-element5">• Supervision-only format possible</li>
+                <li id="structure-list-element6">• If available: Headset and video support</li>
+                <li id="structure-list-element7">• Progress tracking and VDWS certification</li>
+                <li id="structure-list-element8">
                   • No-wind alternatives: Simulations, wakeboarding,
                   landboarding, SUP, exercising,....
                 </li>

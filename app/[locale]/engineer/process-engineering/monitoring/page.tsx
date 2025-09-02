@@ -91,10 +91,10 @@ export default function MonitoringPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="parameter-selection-list-element1">• Critical parameter identification</li>
-                <li id="parameter-selection-list-element1">• Monitoring strategy development</li>
-                <li id="parameter-selection-list-element1">• Sensor placement optimization</li>
-                <li id="parameter-selection-list-element1">• Data collection frequency</li>
-                <li id="parameter-selection-list-element1">• Measurement system analysis</li>
+                <li id="parameter-selection-list-element2">• Monitoring strategy development</li>
+                <li id="parameter-selection-list-element3">• Sensor placement optimization</li>
+                <li id="parameter-selection-list-element4">• Data collection frequency</li>
+                <li id="parameter-selection-list-element5">• Measurement system analysis</li>
               </ul>
             </div>
 
@@ -106,11 +106,11 @@ export default function MonitoringPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="parameter-selection-list-element1">• Real-time alarm configuration</li>
-                <li id="parameter-selection-list-element1">• Multi-level notification systems</li>
-                <li id="parameter-selection-list-element1">• Escalation procedures</li>
-                <li id="parameter-selection-list-element1">• Mobile alert integration</li>
-                <li id="parameter-selection-list-element1">• Alarm rationalization</li>
+                <li id="alarm-notification-systems-list-element1">• Real-time alarm configuration</li>
+                <li id="alarm-notification-systems-list-element2">• Multi-level notification systems</li>
+                <li id="alarm-notification-systems-list-element3">• Escalation procedures</li>
+                <li id="alarm-notification-systems-list-element4">• Mobile alert integration</li>
+                <li id="alarm-notification-systems-list-element5">• Alarm rationalization</li>
               </ul>
             </div>
 
@@ -122,11 +122,11 @@ export default function MonitoringPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="parameter-selection-list-element1">• Historical data analysis</li>
-                <li id="parameter-selection-list-element1">• Trend identification and reporting</li>
-                <li id="parameter-selection-list-element1">• Predictive trend modeling</li>
-                <li id="parameter-selection-list-element1">• Performance drift detection</li>
-                <li id="parameter-selection-list-element1">• Long-term stability assessment</li>
+                <li id="trend-analysis-list-element1">• Historical data analysis</li>
+                <li id="trend-analysis-list-element2">• Trend identification and reporting</li>
+                <li id="trend-analysis-list-element3">• Predictive trend modeling</li>
+                <li id="trend-analysis-list-element4">• Performance drift detection</li>
+                <li id="trend-analysis-list-element5">• Long-term stability assessment</li>
               </ul>
             </div>
 
@@ -138,11 +138,11 @@ export default function MonitoringPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="parameter-selection-list-element1">• Baseline establishment</li>
-                <li id="parameter-selection-list-element1">• Performance metrics definition</li>
-                <li id="parameter-selection-list-element1">• Comparative analysis</li>
-                <li id="parameter-selection-list-element1">• Industry benchmarking</li>
-                <li id="parameter-selection-list-element1">• Continuous improvement tracking</li>
+                <li id="performance-benchmarking-list-element1">• Baseline establishment</li>
+                <li id="performance-benchmarking-list-element2">• Performance metrics definition</li>
+                <li id="performance-benchmarking-list-element3">• Comparative analysis</li>
+                <li id="performance-benchmarking-list-element4">• Industry benchmarking</li>
+                <li id="performance-benchmarking-list-element5">• Continuous improvement tracking</li>
               </ul>
             </div>
           </div>

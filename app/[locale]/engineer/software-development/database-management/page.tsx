@@ -90,10 +90,10 @@ export default function DatabaseManagementPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="rdbms-design-implementation-list-element1">• Database architecture design</li>
-                <li id="rdbms-design-implementation-list-element1">• Schema optimization</li>
-                <li id="rdbms-design-implementation-list-element1">• Relational model implementation</li>
-                <li id="rdbms-design-implementation-list-element1">• Performance tuning</li>
-                <li id="rdbms-design-implementation-list-element1">• Scalability planning</li>
+                <li id="rdbms-design-implementation-list-element2">• Schema optimization</li>
+                <li id="rdbms-design-implementation-list-element3">• Relational model implementation</li>
+                <li id="rdbms-design-implementation-list-element4">• Performance tuning</li>
+                <li id="rdbms-design-implementation-list-element5">• Scalability planning</li>
               </ul>
             </div>
 
@@ -105,11 +105,11 @@ export default function DatabaseManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="rdbms-design-implementation-list-element1">• Excel to database migration</li>
-                <li id="rdbms-design-implementation-list-element1">• File-based data conversion</li>
-                <li id="rdbms-design-implementation-list-element1">• Data cleaning and validation</li>
-                <li id="rdbms-design-implementation-list-element1">• Legacy system migration</li>
-                <li id="rdbms-design-implementation-list-element1">• Data integrity verification</li>
+                <li id="data-migration-list-element1">• Excel to database migration</li>
+                <li id="data-migration-list-element2">• File-based data conversion</li>
+                <li id="data-migration-list-element3">• Data cleaning and validation</li>
+                <li id="data-migration-list-element4">• Legacy system migration</li>
+                <li id="data-migration-list-element5">• Data integrity verification</li>
               </ul>
             </div>
 
@@ -121,11 +121,11 @@ export default function DatabaseManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="rdbms-design-implementation-list-element1">• Automated backup solutions</li>
-                <li id="rdbms-design-implementation-list-element1">• Disaster recovery planning</li>
-                <li id="rdbms-design-implementation-list-element1">• Point-in-time recovery</li>
-                <li id="rdbms-design-implementation-list-element1">• Data redundancy strategies</li>
-                <li id="rdbms-design-implementation-list-element1">• Recovery testing procedures</li>
+                <li id="backup-recovery-list-element1">• Automated backup solutions</li>
+                <li id="backup-recovery-list-element2">• Disaster recovery planning</li>
+                <li id="backup-recovery-list-element3">• Point-in-time recovery</li>
+                <li id="backup-recovery-list-element4">• Data redundancy strategies</li>
+                <li id="backup-recovery-list-element5">• Recovery testing procedures</li>
               </ul>
             </div>
 
@@ -137,11 +137,11 @@ export default function DatabaseManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="rdbms-design-implementation-list-element1">• Advanced reporting capabilities</li>
-                <li id="rdbms-design-implementation-list-element1">• Data analytics and insights</li>
-                <li id="rdbms-design-implementation-list-element1">• Dashboard development</li>
-                <li id="rdbms-design-implementation-list-element1">• Business intelligence tools</li>
-                <li id="rdbms-design-implementation-list-element1">• Custom query optimization</li>
+                <li id="analytics-reporting-list-element1">• Advanced reporting capabilities</li>
+                <li id="analytics-reporting-list-element2">• Data analytics and insights</li>
+                <li id="analytics-reporting-list-element3">• Dashboard development</li>
+                <li id="analytics-reporting-list-element4">• Business intelligence tools</li>
+                <li id="analytics-reporting-list-element5">• Custom query optimization</li>
               </ul>
             </div>
           </div>

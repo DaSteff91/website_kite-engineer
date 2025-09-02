@@ -93,16 +93,16 @@ export default function StartingPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="who-list-element1">• Individuals or groups</li>
-                <li id="who-list-element1">• Schools or private</li>
-                <li id="who-list-element1">• Courses in German, English and Portugues</li>
-                <li id="who-list-element1">• Practical lessons: max. 4 people</li>
-                <li id="who-list-element1">• Theory lessons: max. 30 people</li>
-                <li id="who-list-element1">• No age limits but more then 30kg of weight</li>
-                <li id="who-list-element1">
+                <li id="who-list-element2">• Schools or private</li>
+                <li id="who-list-element3">• Courses in German, English and Portugues</li>
+                <li id="who-list-element4">• Practical lessons: max. 4 people</li>
+                <li id="who-list-element5">• Theory lessons: max. 30 people</li>
+                <li id="who-list-element6">• No age limits but more then 30kg of weight</li>
+                <li id="who-list-element7">
                   • Must be able to swim securely for more then a few minutes
                 </li>
-                <li id="who-list-element1">• Starter = You never used a kite before in your life</li>
-                <li id="who-list-element1">• Restarter = You used a kite before in your life</li>
+                <li id="who-list-element8">• Starter = You never used a kite before in your life</li>
+                <li id="who-list-element9">• Restarter = You used a kite before in your life</li>
               </ul>
             </div>
 
@@ -112,15 +112,15 @@ export default function StartingPage() {
                 <h3 id="content-title" className="text-lg font-semibold text-teal-200">Content</h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="who-list-element1">• Introduction and safety basics</li>
-                <li id="who-list-element1">• Equipment familiarization and setup</li>
-                <li id="who-list-element1">• Basic kite control witout board</li>
-                <li id="who-list-element1">• Body dragging techniques</li>
-                <li id="who-list-element1">• Advanced kite steering techniques</li>
-                <li id="who-list-element1">• Water start fundamentals and first few meters</li>
-                <li id="who-list-element1">• Theory lessons when necessary</li>
-                <li id="who-list-element1">• Orientation on the water and dangers</li>
-                <li id="who-list-element1">
+                <li id="content-list-element1">• Introduction and safety basics</li>
+                <li id="content-list-element2">• Equipment familiarization and setup</li>
+                <li id="content-list-element3">• Basic kite control witout board</li>
+                <li id="content-list-element4">• Body dragging techniques</li>
+                <li id="content-list-element5">• Advanced kite steering techniques</li>
+                <li id="content-list-element6">• Water start fundamentals and first few meters</li>
+                <li id="content-list-element7">• Theory lessons when necessary</li>
+                <li id="content-list-element8">• Orientation on the water and dangers</li>
+                <li id="content-list-element9">
                   • Student can safely practise water starts on their own after
                   the course
                 </li>
@@ -135,17 +135,17 @@ export default function StartingPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="who-list-element1">• Up to 5 days intensive programs</li>
-                <li id="who-list-element1">
+                <li id="structure-list-element1">• Up to 5 days intensive programs</li>
+                <li id="structure-list-element2">
                   • Flexible scheduling options, based on environmental and
                   personal conditions
                 </li>
-                <li id="who-list-element1">• Buddy system: 2 people per Kite</li>
-                <li id="who-list-element1">• Individual: 1 person, 1 Kite</li>
-                <li id="who-list-element1">• Supervision-only format possible</li>
-                <li id="who-list-element1">• If available: Headset and video support</li>
-                <li id="who-list-element1">• Progress tracking and VDWS certification</li>
-                <li id="who-list-element1">
+                <li id="structure-list-element3">• Buddy system: 2 people per Kite</li>
+                <li id="structure-list-element4">• Individual: 1 person, 1 Kite</li>
+                <li id="structure-list-element5">• Supervision-only format possible</li>
+                <li id="structure-list-element6">• If available: Headset and video support</li>
+                <li id="structure-list-element7">• Progress tracking and VDWS certification</li>
+                <li id="structure-list-element8">
                   • No-wind alternatives: Simulations, wakeboarding,
                   landboarding, SUP, exercising,....
                 </li>

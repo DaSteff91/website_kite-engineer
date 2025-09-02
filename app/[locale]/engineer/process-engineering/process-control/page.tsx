@@ -102,7 +102,7 @@ export default function ProcessControlPage() {
                   specifications, do first sample testing and support its
                   rollout.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="advanced-process-control-list-element2">
                   • <strong>User training</strong> - Are you looking forward to
                   standardize the way{" "}
                   <abbr title="advanced process control">APC</abbr> is used in
@@ -113,7 +113,7 @@ export default function ProcessControlPage() {
                   ideas and rises to advanced approaches and specific topics
                   that can also involve the software that you are using.{" "}
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="advanced-process-control-list-element3">
                   • <strong>Mathematics</strong> - Not every measured signal
                   from a sensor is automatically ready to be used in an{" "}
                   <abbr title="advanced process control">APC</abbr> environment.
@@ -126,7 +126,7 @@ export default function ProcessControlPage() {
                   out of the control mechanism{" "}
                   <abbr title="advanced process control">APC</abbr> shall be.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="advanced-process-control-list-element4">
                   • <strong>Strategic alignment</strong> - Typically{" "}
                   <abbr title="advanced process control">APC</abbr> is not used
                   as only measure of control in a modern production. It shall be
@@ -136,7 +136,7 @@ export default function ProcessControlPage() {
                   fulfill? Is it doing what it shall do? The view of an outsider
                   on strategic topics can be a blessing. That´s where I step in.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="advanced-process-control-list-element5">
                   • <strong>Learning from the past</strong> - Data can tell
                   stories, if asked correctly. Analyzing it and find
                   correlations to certain events is not always straight forward
@@ -144,7 +144,7 @@ export default function ProcessControlPage() {
                   your team. Hand this topic over to me and get answer to the
                   your questions.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="advanced-process-control-list-element6">
                   •{" "}
                   <strong>
                     <abbr title="artificial intelligence">AI</abbr> assistance
@@ -156,7 +156,7 @@ export default function ProcessControlPage() {
                   implementing a solution that fits your needs including all the
                   communication and procurement procedure upfront.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="advanced-process-control-list-element7">
                   • <strong>New setup</strong> - Are you about to make the first
                   steps into the world of{" "}
                   <abbr title="advanced process control">APC</abbr>? Or are you
@@ -168,7 +168,7 @@ export default function ProcessControlPage() {
                   to place them in order to monitor as good as possible whats of
                   interest.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="advanced-process-control-list-element8">
                   • <strong>External software utilization</strong> - For reasons
                   it may sometimes makes sense that you analyze gathered data
                   with external tools. One of these tools could be one of the
@@ -189,7 +189,7 @@ export default function ProcessControlPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-process-control-list-element1">
+                <li id="statistical-process-control-list-element1">
                   • <strong>Software procurement and setup</strong> - You
                   already have lots of measurement data of your manufacturing
                   processes available but you lack a centralized software that
@@ -201,7 +201,7 @@ export default function ProcessControlPage() {
                   specifications, do first sample testing and support its
                   rollout.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="statistical-process-control-list-element2">
                   • <strong>User training</strong> - Are you looking forward to
                   standardize the way{" "}
                   <abbr title="statistical process control">SPC</abbr> is used
@@ -213,7 +213,7 @@ export default function ProcessControlPage() {
                   and rises to advanced approaches and specific topics that can
                   also involve the software that you are using.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="statistical-process-control-list-element3">
                   • <strong>WER implementation</strong> - I´d consider the{" "}
                   <abbr title="western electric rules">WER</abbr> a backbone of{" "}
                   <abbr title="statistical process control">SPC</abbr>. Rolling
@@ -222,7 +222,7 @@ export default function ProcessControlPage() {
                   hand, that´s for sure. If you plan to do so and need expertise
                   about setting limits: I can help you here.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="statistical-process-control-list-element4">
                   • <strong>Strategic alignment</strong> - Typically{" "}
                   <abbr title="advanced process control">APC</abbr> is not used
                   as only measure of control in a modern production. It shall be
@@ -232,7 +232,7 @@ export default function ProcessControlPage() {
                   fulfill? Is it doing what it shall do? The view of an outsider
                   on strategic topics can be a blessing. That´s where I step in.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="statistical-process-control-list-element5">
                   • <strong>Learning from the past</strong> - Data can tell
                   stories, if asked correctly. Analyzing it and find
                   correlations to certain events is not always straight forward
@@ -240,14 +240,14 @@ export default function ProcessControlPage() {
                   your team. Hand this topic over to me and get answer to the
                   your questions.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="statistical-process-control-list-element6">
                   • <strong>AI assistance</strong> - The buzzword of today: AI.
                   It´s a powerful tool for analyzing your data. I can help you
                   finding the correct model for doing the job, run tests and
                   help implementing a solution that fits your needs including
                   all the communication and procurement procedure upfront.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="statistical-process-control-list-element7">
                   • <strong>New setup</strong> - Are you about to make the first
                   steps into the world of{" "}
                   <abbr title="advanced process control">APC</abbr>? Or are you
@@ -259,7 +259,7 @@ export default function ProcessControlPage() {
                   to place them in order to monitor as good as possible whats of
                   interest.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="statistical-process-control-list-element8">
                   • <strong>External software utilization</strong> - For reasons
                   it may sometimes makes sense that you analyze gathered data
                   with external tools. One of these tools could be one of the
@@ -280,7 +280,7 @@ export default function ProcessControlPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-process-control-list-element1">
+                <li id="custom-solutions-list-element1">
                   • <strong>Python-based data analysis</strong> - Libraries like
                   Pandas, Matplotlib, Numpy or SciPy are well established in the
                   realm of data science. This service is especially meant to
@@ -288,7 +288,7 @@ export default function ProcessControlPage() {
                   SPC with day to day samples. Or the analysis requirements
                   differ from the established procedure.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="custom-solutions-list-element2">
                   • <strong>Data classification</strong> - Are you dealing with
                   a new data type or quality and do not yet know how to make it
                   fit your established catalog of classifications? Or did you
@@ -297,7 +297,7 @@ export default function ProcessControlPage() {
                   this by myself I help you search qualified 3rd parties to do
                   the job.
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="custom-solutions-list-element3">
                   • <strong>Data creation and prototyping</strong> - You need a
                   demo or sample of data prepared in a one-time manner? It shall
                   be connected within an highly integrated process landscape
@@ -306,7 +306,7 @@ export default function ProcessControlPage() {
                   where engineering can shine and you can save your resources
                   and let me do that for you. I
                 </li>
-                <li id="advanced-process-control-list-element1">
+                <li id="custom-solutions-list-element4">
                   • <strong>Maintenance and review</strong> - The process
                   control tools you use are historically grown and need a review
                   or a restructuring? You use manual manpower to maintain these
@@ -324,11 +324,11 @@ export default function ProcessControlPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-process-control-list-element1">• AI training for failure detection</li>
-                <li id="advanced-process-control-list-element1">• Intelligent alarm systems</li>
-                <li id="advanced-process-control-list-element1">• Predictive maintenance models</li>
-                <li id="advanced-process-control-list-element1">• Automated anomaly detection</li>
-                <li id="advanced-process-control-list-element1">• Smart process optimization</li>
+                <li id="ai-powered-solutions-list-element1">• AI training for failure detection</li>
+                <li id="ai-powered-solutions-list-element2">• Intelligent alarm systems</li>
+                <li id="ai-powered-solutions-list-element3">• Predictive maintenance models</li>
+                <li id="ai-powered-solutions-list-element4">• Automated anomaly detection</li>
+                <li id="ai-powered-solutions-list-element5">• Smart process optimization</li>
               </ul>
             </div> */}
           </div>

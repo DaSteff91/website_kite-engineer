@@ -93,11 +93,11 @@ export default function SchoolSupportPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="instructor-services-list-element1">• VDWS certified instructor since 2023</li>
-                <li id="instructor-services-list-element1">• Beginner to advanced lessons</li>
-                <li id="instructor-services-list-element1">• Landboarding lessons</li>
-                <li id="instructor-services-list-element1">• Multi-language support (German, English, Portuguese)</li>
-                <li id="instructor-services-list-element1">• Group and individual sessions</li>
-                <li id="instructor-services-list-element1">• Supervision and filming</li>
+                <li id="instructor-services-list-element2">• Beginner to advanced lessons</li>
+                <li id="instructor-services-list-element3">• Landboarding lessons</li>
+                <li id="instructor-services-list-element4">• Multi-language support (German, English, Portuguese)</li>
+                <li id="instructor-services-list-element5">• Group and individual sessions</li>
+                <li id="instructor-services-list-element6">• Supervision and filming</li>
               </ul>
             </div>
 
@@ -109,13 +109,13 @@ export default function SchoolSupportPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="instructor-services-list-element1">• Office and administration</li>
-                <li id="instructor-services-list-element1">• Customer service and sales support</li>
-                <li id="instructor-services-list-element1">• Equipment recommendations</li>
-                <li id="instructor-services-list-element1">• Gear maintenance and repairs</li>
-                <li id="instructor-services-list-element1">• Inventory management and logistics</li>
-                <li id="instructor-services-list-element1">• Product demonstrations</li>
-                <li id="instructor-services-list-element1">• Helping hand in day to day tasks</li>
+                <li id="general-assistance-list-element1">• Office and administration</li>
+                <li id="general-assistance-list-element2">• Customer service and sales support</li>
+                <li id="general-assistance-list-element3">• Equipment recommendations</li>
+                <li id="general-assistance-list-element4">• Gear maintenance and repairs</li>
+                <li id="general-assistance-list-element5">• Inventory management and logistics</li>
+                <li id="general-assistance-list-element6">• Product demonstrations</li>
+                <li id="general-assistance-list-element7">• Helping hand in day to day tasks</li>
               </ul>
             </div>
 
@@ -127,11 +127,11 @@ export default function SchoolSupportPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="instructor-services-list-element1">• Beach setup and organization</li>
-                <li id="instructor-services-list-element1">• Safety area management</li>
-                <li id="instructor-services-list-element1">• Equipment handling and storage</li>
-                <li id="instructor-services-list-element1">• Weather condition assessment</li>
-                <li id="instructor-services-list-element1">• Emergency response protocols</li>
+                <li id="beach-management-list-element1">• Beach setup and organization</li>
+                <li id="beach-management-list-element2">• Safety area management</li>
+                <li id="beach-management-list-element3">• Equipment handling and storage</li>
+                <li id="beach-management-list-element4">• Weather condition assessment</li>
+                <li id="beach-management-list-element5">• Emergency response protocols</li>
               </ul>
             </div> */}
 
@@ -143,15 +143,15 @@ export default function SchoolSupportPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="instructor-services-list-element1">• Short-term and long-term contracts</li>
-                <li id="instructor-services-list-element1">• The more you book, the better the price</li>
-                <li id="instructor-services-list-element1">• Seasonal support available</li>
-                <li id="instructor-services-list-element1">• Weekend and holiday coverage</li>
-                <li id="instructor-services-list-element1">
+                <li id="flexible-scheduling-list-element1">• Short-term and long-term contracts</li>
+                <li id="flexible-scheduling-list-element2">• The more you book, the better the price</li>
+                <li id="flexible-scheduling-list-element3">• Seasonal support available</li>
+                <li id="flexible-scheduling-list-element4">• Weekend and holiday coverage</li>
+                <li id="flexible-scheduling-list-element5">
                   • Providing support to multi-location schools and open to
                   commuting between sites.
                 </li>
-                <li id="instructor-services-list-element1">• Driver’s license covering both car and motorcycle.</li>
+                <li id="flexible-scheduling-list-element6">• Driver’s license covering both car and motorcycle.</li>
               </ul>
             </div>
 
@@ -163,11 +163,11 @@ export default function SchoolSupportPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="instructor-services-list-element1">• VDWS instructor certification</li>
-                <li id="instructor-services-list-element1">• First aid certified</li>
-                <li id="instructor-services-list-element1">• Water safety trained</li>
-                <li id="instructor-services-list-element1">• Insurance coverage available</li>
-                <li id="instructor-services-list-element1">• Professional liability protection</li>
+                <li id="certifications-list-element1">• VDWS instructor certification</li>
+                <li id="certifications-list-element2">• First aid certified</li>
+                <li id="certifications-list-element3">• Water safety trained</li>
+                <li id="certifications-list-element4">• Insurance coverage available</li>
+                <li id="certifications-list-element5">• Professional liability protection</li>
               </ul>
             </div>
 
@@ -179,11 +179,11 @@ export default function SchoolSupportPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="instructor-services-list-element1">• Risk assessment and management</li>
-                <li id="instructor-services-list-element1">• Safety equipment inspection</li>
-                <li id="instructor-services-list-element1">• Weather monitoring and alerts</li>
-                <li id="instructor-services-list-element1">• Emergency action plans</li>
-                <li id="instructor-services-list-element1">• Student safety protocols</li>
+                <li id="safety-focus-list-element1">• Risk assessment and management</li>
+                <li id="safety-focus-list-element2">• Safety equipment inspection</li>
+                <li id="safety-focus-list-element3">• Weather monitoring and alerts</li>
+                <li id="safety-focus-list-element4">• Emergency action plans</li>
+                <li id="safety-focus-list-element5">• Student safety protocols</li>
               </ul>
             </div> */}
           </div>

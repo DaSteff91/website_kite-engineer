@@ -108,26 +108,26 @@ export default function EquipmentRoadmapPage() {
                     Consider: Usually established and new things run in parallel
                     for some time
                   </li>
-                  <li id="detailes-of-the-roadmap-services-list-element1">
+                  <li id="detailes-of-the-roadmap-services-list-element2">
                     Process and tool ranking: Creating an overview of what could
                     be possible while establishing some outlines and categories
                     for the following decision making. Usually you learn
                     something new during that process because there is always
                     more then one can imagine.
                   </li>
-                  <li id="detailes-of-the-roadmap-services-list-element1">
+                  <li id="detailes-of-the-roadmap-services-list-element3">
                     Decision matrix: Because not everything is equally important
                     its about carefully analyzing and comparing what you get for
                     what investment or trade-off. Together we apply established
                     procedures to come to a well-founded decision.
                   </li>
-                  <li id="detailes-of-the-roadmap-services-list-element1">
+                  <li id="detailes-of-the-roadmap-services-list-element4">
                     Documentation: Since everything is now decided, lets put it
                     into effect by applying a timeline to it and rolling it out
                     in your documentation system
                   </li>
 
-                  <li id="detailes-of-the-roadmap-services-list-element1">
+                  <li id="detailes-of-the-roadmap-services-list-element5">
                     Review: And in case you already have a roadmap strategy: no
                     problem - I also offer you to analyze it for you and give
                     you an objective 3rd party oppinion.
@@ -146,11 +146,11 @@ export default function EquipmentRoadmapPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="detailes-of-the-roadmap-services-list-element1">• Future technology evaluation</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Technology maturity analysis</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Competitive landscape mapping</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Innovation trend identification</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Technology readiness assessment</li>
+                <li id="technology-assessment-list-element1">• Future technology evaluation</li>
+                <li id="technology-assessment-list-element2">• Technology maturity analysis</li>
+                <li id="technology-assessment-list-element3">• Competitive landscape mapping</li>
+                <li id="technology-assessment-list-element4">• Innovation trend identification</li>
+                <li id="technology-assessment-list-element5">• Technology readiness assessment</li>
               </ul>
             </div>
 
@@ -162,11 +162,11 @@ export default function EquipmentRoadmapPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="detailes-of-the-roadmap-services-list-element1">• Equipment lifecycle planning</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Upgrade pathway definition</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Performance evolution tracking</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Obsolescence management</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Next-generation preparation</li>
+                <li id="equipment-evolution-planning-list-element1">• Equipment lifecycle planning</li>
+                <li id="equipment-evolution-planning-list-element2">• Upgrade pathway definition</li>
+                <li id="equipment-evolution-planning-list-element3">• Performance evolution tracking</li>
+                <li id="equipment-evolution-planning-list-element4">• Obsolescence management</li>
+                <li id="equipment-evolution-planning-list-element5">• Next-generation preparation</li>
               </ul>
             </div>
 
@@ -178,11 +178,11 @@ export default function EquipmentRoadmapPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="detailes-of-the-roadmap-services-list-element1">• Technology risk assessment</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Mitigation strategy development</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Contingency planning</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Alternative technology evaluation</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Risk monitoring frameworks</li>
+                <li id="risk-mitigation-list-element1">• Technology risk assessment</li>
+                <li id="risk-mitigation-list-element2">• Mitigation strategy development</li>
+                <li id="risk-mitigation-list-element3">• Contingency planning</li>
+                <li id="risk-mitigation-list-element4">• Alternative technology evaluation</li>
+                <li id="risk-mitigation-list-element5">• Risk monitoring frameworks</li>
               </ul>
             </div>
 
@@ -194,11 +194,11 @@ export default function EquipmentRoadmapPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="detailes-of-the-roadmap-services-list-element1">• ROI analysis and modeling</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Investment timeline optimization</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Budget allocation strategies</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Cost-benefit evaluation</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Strategic investment planning</li>
+                <li id="investment-prioritization-list-element1">• ROI analysis and modeling</li>
+                <li id="investment-prioritization-list-element2">• Investment timeline optimization</li>
+                <li id="investment-prioritization-list-element3">• Budget allocation strategies</li>
+                <li id="investment-prioritization-list-element4">• Cost-benefit evaluation</li>
+                <li id="investment-prioritization-list-element5">• Strategic investment planning</li>
               </ul>
             </div>
           </div>

@@ -296,6 +296,7 @@ def _process_service_grids(content: str, file_path: str) -> Tuple[str, bool]:
 def _process_service_grid_list_items(content: str, service_id: str, grid_content: str) -> Tuple[str, bool]:
     """
     Process list items within a service grid by adding numbered IDs.
+    Uses position-based replacement to avoid cross-contamination.
     
     Args:
         content: The file content to process
@@ -307,23 +308,50 @@ def _process_service_grid_list_items(content: str, service_id: str, grid_content
     """
     modified = False
     
-    # Pattern to find list items within the service grid
+    # Find the position of this grid in the content
+    grid_start = content.find(grid_content)
+    if grid_start == -1:
+        return content, False  # Grid not found (shouldn't happen)
+    
+    grid_end = grid_start + len(grid_content)
+    
+    # Extract this specific grid section
+    before_grid = content[:grid_start]
+    after_grid = content[grid_end:]
+    current_grid = grid_content
+    
+    # Process list items within this grid only
     list_item_pattern: Pattern = re.compile(r'(<li)([^>]*)(>)', re.DOTALL)
+    list_items = list(list_item_pattern.finditer(current_grid))
     
-    # Find all list item matches within the grid content
-    list_items = list_item_pattern.finditer(grid_content)
-    
-    for i, match in enumerate(list_items, 1):
+    # Process in reverse order to avoid position shifting
+    for i in range(len(list_items) - 1, -1, -1):
+        match = list_items[i]
         li_attrs = match.group(2)
+        expected_id = f"{service_id}-list-element{i + 1}"
         
-        # Check if ID already exists to avoid duplicates
-        if 'id=' not in li_attrs:
-            li_id = f"{service_id}-list-element{i}"
-            new_li = f'<li id="{li_id}"{li_attrs}{match.group(3)}'
-            # Replace in the original content
-            content = content.replace(match.group(0), new_li)
+        # Check if the list item already has an ID
+        id_match = re.search(r'id="([^"]*)"', li_attrs)
+        
+        if id_match:
+            current_id = id_match.group(1)
+            if current_id != expected_id:
+                # Fix the incorrect ID
+                new_attrs = re.sub(r'id="[^"]*"', f'id="{expected_id}"', li_attrs)
+                new_li = f'<li{new_attrs}{match.group(3)}'
+                current_grid = current_grid[:match.start()] + new_li + current_grid[match.end():]
+                modified = True
+                print(f"Fixed ID: '{current_id}' -> '{expected_id}'")
+        else:
+            # List item doesn't have an ID - add it
+            new_li = f'<li id="{expected_id}"{li_attrs}{match.group(3)}'
+            current_grid = current_grid[:match.start()] + new_li + current_grid[match.end():]
             modified = True
-            print(f"Added ID '{li_id}' to list item in service grid")
+            print(f"Added ID: '{expected_id}'")
+    
+    # Reconstruct the content
+    if modified:
+        content = before_grid + current_grid + after_grid
     
     return content, modified
 

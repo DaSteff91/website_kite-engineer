@@ -102,15 +102,15 @@ export default function ProcessDesignPage() {
                   <li id="detailes-of-the-roadmap-services-list-element1">
                     Naming conventions: What is best to name your process flows?
                   </li>
-                  <li id="detailes-of-the-roadmap-services-list-element1">Vizualisation</li>
-                  <li id="detailes-of-the-roadmap-services-list-element1">Scaleablity</li>
-                  <li id="detailes-of-the-roadmap-services-list-element1">
+                  <li id="detailes-of-the-roadmap-services-list-element2">Vizualisation</li>
+                  <li id="detailes-of-the-roadmap-services-list-element3">Scaleablity</li>
+                  <li id="detailes-of-the-roadmap-services-list-element4">
                     Documentation: Since everything is now decided, lets put it
                     into effect by applying a timeline to it and rolling it out
                     in your documentation system
                   </li>
 
-                  <li id="detailes-of-the-roadmap-services-list-element1">
+                  <li id="detailes-of-the-roadmap-services-list-element5">
                     Review: And in case you already have a roadmap strategy: no
                     problem - I also offer you to analyze it for you and give
                     you an objective 3rd party oppinion.
@@ -130,11 +130,11 @@ export default function ProcessDesignPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="detailes-of-the-roadmap-services-list-element1">• Process flow mapping and analysis</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Bottleneck identification and removal</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Workflow optimization strategies</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Cycle time reduction techniques</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Throughput maximization</li>
+                <li id="process-flow-optimization-list-element1">• Process flow mapping and analysis</li>
+                <li id="process-flow-optimization-list-element2">• Bottleneck identification and removal</li>
+                <li id="process-flow-optimization-list-element3">• Workflow optimization strategies</li>
+                <li id="process-flow-optimization-list-element4">• Cycle time reduction techniques</li>
+                <li id="process-flow-optimization-list-element5">• Throughput maximization</li>
               </ul>
             </div>
 
@@ -146,11 +146,11 @@ export default function ProcessDesignPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="detailes-of-the-roadmap-services-list-element1">• Equipment specification and selection</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Optimal layout configuration</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Material flow optimization</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Space utilization efficiency</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Ergonomic considerations</li>
+                <li id="equipment-layout-design-list-element1">• Equipment specification and selection</li>
+                <li id="equipment-layout-design-list-element2">• Optimal layout configuration</li>
+                <li id="equipment-layout-design-list-element3">• Material flow optimization</li>
+                <li id="equipment-layout-design-list-element4">• Space utilization efficiency</li>
+                <li id="equipment-layout-design-list-element5">• Ergonomic considerations</li>
               </ul>
             </div>
 
@@ -162,11 +162,11 @@ export default function ProcessDesignPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="detailes-of-the-roadmap-services-list-element1">• 3D process modeling</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Interactive visualization tools</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Virtual reality walkthroughs</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Animation and simulation</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Stakeholder communication aids</li>
+                <li id="process-visualization-list-element1">• 3D process modeling</li>
+                <li id="process-visualization-list-element2">• Interactive visualization tools</li>
+                <li id="process-visualization-list-element3">• Virtual reality walkthroughs</li>
+                <li id="process-visualization-list-element4">• Animation and simulation</li>
+                <li id="process-visualization-list-element5">• Stakeholder communication aids</li>
               </ul>
             </div>
 
@@ -178,11 +178,11 @@ export default function ProcessDesignPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="detailes-of-the-roadmap-services-list-element1">• Future capacity planning</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Modular design principles</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Expansion pathway definition</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Flexibility and adaptability</li>
-                <li id="detailes-of-the-roadmap-services-list-element1">• Technology evolution readiness</li>
+                <li id="scalability-planning-list-element1">• Future capacity planning</li>
+                <li id="scalability-planning-list-element2">• Modular design principles</li>
+                <li id="scalability-planning-list-element3">• Expansion pathway definition</li>
+                <li id="scalability-planning-list-element4">• Flexibility and adaptability</li>
+                <li id="scalability-planning-list-element5">• Technology evolution readiness</li>
               </ul>
             </div>
           </div>

@@ -90,10 +90,10 @@ export default function WorkflowAutomationPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="process-automation-list-element1">• Repetitive task elimination</li>
-                <li id="process-automation-list-element1">• Business process automation</li>
-                <li id="process-automation-list-element1">• Document processing workflows</li>
-                <li id="process-automation-list-element1">• Data entry automation</li>
-                <li id="process-automation-list-element1">• Report generation automation</li>
+                <li id="process-automation-list-element2">• Business process automation</li>
+                <li id="process-automation-list-element3">• Document processing workflows</li>
+                <li id="process-automation-list-element4">• Data entry automation</li>
+                <li id="process-automation-list-element5">• Report generation automation</li>
               </ul>
             </div>
 
@@ -105,11 +105,11 @@ export default function WorkflowAutomationPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-automation-list-element1">• Multi-step workflow design</li>
-                <li id="process-automation-list-element1">• Conditional logic implementation</li>
-                <li id="process-automation-list-element1">• Error handling and recovery</li>
-                <li id="process-automation-list-element1">• Workflow monitoring and logging</li>
-                <li id="process-automation-list-element1">• Performance optimization</li>
+                <li id="workflow-orchestration-list-element1">• Multi-step workflow design</li>
+                <li id="workflow-orchestration-list-element2">• Conditional logic implementation</li>
+                <li id="workflow-orchestration-list-element3">• Error handling and recovery</li>
+                <li id="workflow-orchestration-list-element4">• Workflow monitoring and logging</li>
+                <li id="workflow-orchestration-list-element5">• Performance optimization</li>
               </ul>
             </div>
 
@@ -121,11 +121,11 @@ export default function WorkflowAutomationPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-automation-list-element1">• Existing software integration</li>
-                <li id="process-automation-list-element1">• API connectivity and automation</li>
-                <li id="process-automation-list-element1">• Data synchronization</li>
-                <li id="process-automation-list-element1">• Third-party service integration</li>
-                <li id="process-automation-list-element1">• Legacy system connectivity</li>
+                <li id="integration-solutions-list-element1">• Existing software integration</li>
+                <li id="integration-solutions-list-element2">• API connectivity and automation</li>
+                <li id="integration-solutions-list-element3">• Data synchronization</li>
+                <li id="integration-solutions-list-element4">• Third-party service integration</li>
+                <li id="integration-solutions-list-element5">• Legacy system connectivity</li>
               </ul>
             </div>
 
@@ -137,11 +137,11 @@ export default function WorkflowAutomationPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-automation-list-element1">• Real-time workflow monitoring</li>
-                <li id="process-automation-list-element1">• Automated alert systems</li>
-                <li id="process-automation-list-element1">• Performance metrics tracking</li>
-                <li id="process-automation-list-element1">• Failure detection and notification</li>
-                <li id="process-automation-list-element1">• Audit trail and compliance</li>
+                <li id="monitoring-alerting-list-element1">• Real-time workflow monitoring</li>
+                <li id="monitoring-alerting-list-element2">• Automated alert systems</li>
+                <li id="monitoring-alerting-list-element3">• Performance metrics tracking</li>
+                <li id="monitoring-alerting-list-element4">• Failure detection and notification</li>
+                <li id="monitoring-alerting-list-element5">• Audit trail and compliance</li>
               </ul>
             </div>
           </div>

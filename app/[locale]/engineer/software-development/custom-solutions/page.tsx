@@ -90,10 +90,10 @@ export default function CustomSolutionsPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="tailored-applications-list-element1">• Custom software development</li>
-                <li id="tailored-applications-list-element1">• Feature integration and combination</li>
-                <li id="tailored-applications-list-element1">• Business-specific solutions</li>
-                <li id="tailored-applications-list-element1">• Legacy system modernization</li>
-                <li id="tailored-applications-list-element1">• Bespoke functionality implementation</li>
+                <li id="tailored-applications-list-element2">• Feature integration and combination</li>
+                <li id="tailored-applications-list-element3">• Business-specific solutions</li>
+                <li id="tailored-applications-list-element4">• Legacy system modernization</li>
+                <li id="tailored-applications-list-element5">• Bespoke functionality implementation</li>
               </ul>
             </div>
 
@@ -105,11 +105,11 @@ export default function CustomSolutionsPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="tailored-applications-list-element1">• Automation script development</li>
-                <li id="tailored-applications-list-element1">• Data processing tools</li>
-                <li id="tailored-applications-list-element1">• Custom utilities and helpers</li>
-                <li id="tailored-applications-list-element1">• Integration scripts</li>
-                <li id="tailored-applications-list-element1">• Performance optimization tools</li>
+                <li id="custom-scripts-tools-list-element1">• Automation script development</li>
+                <li id="custom-scripts-tools-list-element2">• Data processing tools</li>
+                <li id="custom-scripts-tools-list-element3">• Custom utilities and helpers</li>
+                <li id="custom-scripts-tools-list-element4">• Integration scripts</li>
+                <li id="custom-scripts-tools-list-element5">• Performance optimization tools</li>
               </ul>
             </div>
 
@@ -121,11 +121,11 @@ export default function CustomSolutionsPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="tailored-applications-list-element1">• API development and integration</li>
-                <li id="tailored-applications-list-element1">• Third-party service connections</li>
-                <li id="tailored-applications-list-element1">• Data synchronization solutions</li>
-                <li id="tailored-applications-list-element1">• Middleware development</li>
-                <li id="tailored-applications-list-element1">• Cross-platform compatibility</li>
+                <li id="system-integration-list-element1">• API development and integration</li>
+                <li id="system-integration-list-element2">• Third-party service connections</li>
+                <li id="system-integration-list-element3">• Data synchronization solutions</li>
+                <li id="system-integration-list-element4">• Middleware development</li>
+                <li id="system-integration-list-element5">• Cross-platform compatibility</li>
               </ul>
             </div>
 
@@ -137,11 +137,11 @@ export default function CustomSolutionsPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="tailored-applications-list-element1">• Docker containerization</li>
-                <li id="tailored-applications-list-element1">• Microservices architecture</li>
-                <li id="tailored-applications-list-element1">• Container orchestration</li>
-                <li id="tailored-applications-list-element1">• Deployment automation</li>
-                <li id="tailored-applications-list-element1">• Scalable infrastructure setup</li>
+                <li id="containerization-list-element1">• Docker containerization</li>
+                <li id="containerization-list-element2">• Microservices architecture</li>
+                <li id="containerization-list-element3">• Container orchestration</li>
+                <li id="containerization-list-element4">• Deployment automation</li>
+                <li id="containerization-list-element5">• Scalable infrastructure setup</li>
               </ul>
             </div>
           </div>

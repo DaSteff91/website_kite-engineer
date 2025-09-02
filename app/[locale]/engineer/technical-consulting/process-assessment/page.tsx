@@ -90,10 +90,10 @@ export default function ProcessAssessmentPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="process-evaluation-list-element1">• Comprehensive process review</li>
-                <li id="process-evaluation-list-element1">• Workflow analysis</li>
-                <li id="process-evaluation-list-element1">• Efficiency assessment</li>
-                <li id="process-evaluation-list-element1">• Compliance evaluation</li>
-                <li id="process-evaluation-list-element1">• Documentation review</li>
+                <li id="process-evaluation-list-element2">• Workflow analysis</li>
+                <li id="process-evaluation-list-element3">• Efficiency assessment</li>
+                <li id="process-evaluation-list-element4">• Compliance evaluation</li>
+                <li id="process-evaluation-list-element5">• Documentation review</li>
               </ul>
             </div>
 
@@ -105,11 +105,11 @@ export default function ProcessAssessmentPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-evaluation-list-element1">• Constraint analysis</li>
-                <li id="process-evaluation-list-element1">• Throughput assessment</li>
-                <li id="process-evaluation-list-element1">• Cycle time evaluation</li>
-                <li id="process-evaluation-list-element1">• Resource utilization review</li>
-                <li id="process-evaluation-list-element1">• Capacity limitation identification</li>
+                <li id="bottleneck-identification-list-element1">• Constraint analysis</li>
+                <li id="bottleneck-identification-list-element2">• Throughput assessment</li>
+                <li id="bottleneck-identification-list-element3">• Cycle time evaluation</li>
+                <li id="bottleneck-identification-list-element4">• Resource utilization review</li>
+                <li id="bottleneck-identification-list-element5">• Capacity limitation identification</li>
               </ul>
             </div>
 
@@ -121,11 +121,11 @@ export default function ProcessAssessmentPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-evaluation-list-element1">• Optimization recommendations</li>
-                <li id="process-evaluation-list-element1">• Automation potential assessment</li>
-                <li id="process-evaluation-list-element1">• Waste elimination strategies</li>
-                <li id="process-evaluation-list-element1">• Quality enhancement opportunities</li>
-                <li id="process-evaluation-list-element1">• Cost reduction possibilities</li>
+                <li id="improvement-opportunities-list-element1">• Optimization recommendations</li>
+                <li id="improvement-opportunities-list-element2">• Automation potential assessment</li>
+                <li id="improvement-opportunities-list-element3">• Waste elimination strategies</li>
+                <li id="improvement-opportunities-list-element4">• Quality enhancement opportunities</li>
+                <li id="improvement-opportunities-list-element5">• Cost reduction possibilities</li>
               </ul>
             </div>
 
@@ -137,11 +137,11 @@ export default function ProcessAssessmentPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-evaluation-list-element1">• Industry standard comparison</li>
-                <li id="process-evaluation-list-element1">• Best practice identification</li>
-                <li id="process-evaluation-list-element1">• Performance gap analysis</li>
-                <li id="process-evaluation-list-element1">• Competitive positioning</li>
-                <li id="process-evaluation-list-element1">• Adoption recommendations</li>
+                <li id="best-practice-benchmarking-list-element1">• Industry standard comparison</li>
+                <li id="best-practice-benchmarking-list-element2">• Best practice identification</li>
+                <li id="best-practice-benchmarking-list-element3">• Performance gap analysis</li>
+                <li id="best-practice-benchmarking-list-element4">• Competitive positioning</li>
+                <li id="best-practice-benchmarking-list-element5">• Adoption recommendations</li>
               </ul>
             </div>
           </div>

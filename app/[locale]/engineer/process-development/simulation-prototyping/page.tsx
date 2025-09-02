@@ -91,10 +91,10 @@ export default function SimulationPrototypingPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="advanced-simulation-list-element1">• Process simulation software</li>
-                <li id="advanced-simulation-list-element1">• Computational fluid dynamics (CFD)</li>
-                <li id="advanced-simulation-list-element1">• Finite element analysis (FEA)</li>
-                <li id="advanced-simulation-list-element1">• Monte Carlo simulations</li>
-                <li id="advanced-simulation-list-element1">• Digital twin development</li>
+                <li id="advanced-simulation-list-element2">• Computational fluid dynamics (CFD)</li>
+                <li id="advanced-simulation-list-element3">• Finite element analysis (FEA)</li>
+                <li id="advanced-simulation-list-element4">• Monte Carlo simulations</li>
+                <li id="advanced-simulation-list-element5">• Digital twin development</li>
               </ul>
             </div>
 
@@ -106,11 +106,11 @@ export default function SimulationPrototypingPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-simulation-list-element1">• 3D printing and additive manufacturing</li>
-                <li id="advanced-simulation-list-element1">• Rapid prototyping techniques</li>
-                <li id="advanced-simulation-list-element1">• Scale model development</li>
-                <li id="advanced-simulation-list-element1">• Physical model testing</li>
-                <li id="advanced-simulation-list-element1">• Material property validation</li>
+                <li id="3d-prototyping-list-element1">• 3D printing and additive manufacturing</li>
+                <li id="3d-prototyping-list-element2">• Rapid prototyping techniques</li>
+                <li id="3d-prototyping-list-element3">• Scale model development</li>
+                <li id="3d-prototyping-list-element4">• Physical model testing</li>
+                <li id="3d-prototyping-list-element5">• Material property validation</li>
               </ul>
             </div>
 
@@ -122,11 +122,11 @@ export default function SimulationPrototypingPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-simulation-list-element1">• Conceptual model development</li>
-                <li id="advanced-simulation-list-element1">• Analogical problem solving</li>
-                <li id="advanced-simulation-list-element1">• Simplified system representation</li>
-                <li id="advanced-simulation-list-element1">• Proof-of-concept validation</li>
-                <li id="advanced-simulation-list-element1">• Design principle verification</li>
+                <li id="analogy-models-list-element1">• Conceptual model development</li>
+                <li id="analogy-models-list-element2">• Analogical problem solving</li>
+                <li id="analogy-models-list-element3">• Simplified system representation</li>
+                <li id="analogy-models-list-element4">• Proof-of-concept validation</li>
+                <li id="analogy-models-list-element5">• Design principle verification</li>
               </ul>
             </div>
 
@@ -138,11 +138,11 @@ export default function SimulationPrototypingPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-simulation-list-element1">• Fabrication expert connections</li>
-                <li id="advanced-simulation-list-element1">• Specialized manufacturing partners</li>
-                <li id="advanced-simulation-list-element1">• Testing facility access</li>
-                <li id="advanced-simulation-list-element1">• Technical consultation network</li>
-                <li id="advanced-simulation-list-element1">• Quality assurance partnerships</li>
+                <li id="expert-network-list-element1">• Fabrication expert connections</li>
+                <li id="expert-network-list-element2">• Specialized manufacturing partners</li>
+                <li id="expert-network-list-element3">• Testing facility access</li>
+                <li id="expert-network-list-element4">• Technical consultation network</li>
+                <li id="expert-network-list-element5">• Quality assurance partnerships</li>
               </ul>
             </div>
           </div>

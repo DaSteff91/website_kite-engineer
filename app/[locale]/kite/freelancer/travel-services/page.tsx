@@ -89,9 +89,9 @@ export default function TravelServicesPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="trip-organization-list-element1">• Trip planning and coordination</li>
-                <li id="trip-organization-list-element1">• Transfer arrangements</li>
-                <li id="trip-organization-list-element1">• Budget and timetable planing</li>
-                <li id="trip-organization-list-element1">• Health and insurance considerations</li>
+                <li id="trip-organization-list-element2">• Transfer arrangements</li>
+                <li id="trip-organization-list-element3">• Budget and timetable planing</li>
+                <li id="trip-organization-list-element4">• Health and insurance considerations</li>
               </ul>
             </div>
 
@@ -103,10 +103,10 @@ export default function TravelServicesPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="trip-organization-list-element1">• Kite instructor services</li>
-                <li id="trip-organization-list-element1">• Functional fitness and HIIT coaching</li>
-                <li id="trip-organization-list-element1">• Master of your schedule</li>
-                <li id="trip-organization-list-element1">• Progress documentaion</li>
+                <li id="personal-coaching-list-element1">• Kite instructor services</li>
+                <li id="personal-coaching-list-element2">• Functional fitness and HIIT coaching</li>
+                <li id="personal-coaching-list-element3">• Master of your schedule</li>
+                <li id="personal-coaching-list-element4">• Progress documentaion</li>
               </ul>
             </div>
 
@@ -118,10 +118,10 @@ export default function TravelServicesPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="trip-organization-list-element1">• Have fun: I am also a human</li>
-                <li id="trip-organization-list-element1">• Trip documentaion</li>
-                <li id="trip-organization-list-element1">• Organization of general activities</li>
-                <li id="trip-organization-list-element1">• Sharing expenses of daily needs</li>
+                <li id="travel-buddy-list-element1">• Have fun: I am also a human</li>
+                <li id="travel-buddy-list-element2">• Trip documentaion</li>
+                <li id="travel-buddy-list-element3">• Organization of general activities</li>
+                <li id="travel-buddy-list-element4">• Sharing expenses of daily needs</li>
               </ul>
             </div>
             {/* 
@@ -133,11 +133,11 @@ export default function TravelServicesPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="trip-organization-list-element1">• Optimal timing recommendations</li>
-                <li id="trip-organization-list-element1">• Itinerary development</li>
-                <li id="trip-organization-list-element1">• Budget planning and optimization</li>
-                <li id="trip-organization-list-element1">• Equipment rental coordination</li>
-                <li id="trip-organization-list-element1">• Travel insurance guidance</li>
+                <li id="trip-planning-list-element1">• Optimal timing recommendations</li>
+                <li id="trip-planning-list-element2">• Itinerary development</li>
+                <li id="trip-planning-list-element3">• Budget planning and optimization</li>
+                <li id="trip-planning-list-element4">• Equipment rental coordination</li>
+                <li id="trip-planning-list-element5">• Travel insurance guidance</li>
               </ul>
             </div> */}
 
@@ -149,11 +149,11 @@ export default function TravelServicesPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="trip-organization-list-element1">• Professional photo sessions</li>
-                <li id="trip-organization-list-element1">• Video documentation of progress</li>
-                <li id="trip-organization-list-element1">• Drone footage coordination</li>
-                <li id="trip-organization-list-element1">• Social media content creation</li>
-                <li id="trip-organization-list-element1">• Trip memory preservation</li>
+                <li id="documentation-list-element1">• Professional photo sessions</li>
+                <li id="documentation-list-element2">• Video documentation of progress</li>
+                <li id="documentation-list-element3">• Drone footage coordination</li>
+                <li id="documentation-list-element4">• Social media content creation</li>
+                <li id="documentation-list-element5">• Trip memory preservation</li>
               </ul>
             </div>
 
@@ -165,11 +165,11 @@ export default function TravelServicesPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="trip-organization-list-element1">• Safety protocols for new locations</li>
-                <li id="trip-organization-list-element1">• Local emergency contacts</li>
-                <li id="trip-organization-list-element1">• Cultural sensitivity training</li>
-                <li id="trip-organization-list-element1">• Equipment transportation tips</li>
-                <li id="trip-organization-list-element1">• Travel logistics support</li>
+                <li id="adventure-guidance-list-element1">• Safety protocols for new locations</li>
+                <li id="adventure-guidance-list-element2">• Local emergency contacts</li>
+                <li id="adventure-guidance-list-element3">• Cultural sensitivity training</li>
+                <li id="adventure-guidance-list-element4">• Equipment transportation tips</li>
+                <li id="adventure-guidance-list-element5">• Travel logistics support</li>
               </ul>
             </div> */}
           </div>

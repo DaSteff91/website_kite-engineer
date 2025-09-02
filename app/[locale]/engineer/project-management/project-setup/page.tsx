@@ -91,10 +91,10 @@ export default function ProjectSetupPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="project-scope-definition-list-element1">• Comprehensive scope documentation</li>
-                <li id="project-scope-definition-list-element1">• Requirements gathering and analysis</li>
-                <li id="project-scope-definition-list-element1">• Project boundaries definition</li>
-                <li id="project-scope-definition-list-element1">• Deliverables specification</li>
-                <li id="project-scope-definition-list-element1">• Acceptance criteria establishment</li>
+                <li id="project-scope-definition-list-element2">• Requirements gathering and analysis</li>
+                <li id="project-scope-definition-list-element3">• Project boundaries definition</li>
+                <li id="project-scope-definition-list-element4">• Deliverables specification</li>
+                <li id="project-scope-definition-list-element5">• Acceptance criteria establishment</li>
               </ul>
             </div>
 
@@ -106,11 +106,11 @@ export default function ProjectSetupPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="project-scope-definition-list-element1">• Hierarchical task decomposition</li>
-                <li id="project-scope-definition-list-element1">• Detailed activity definition</li>
-                <li id="project-scope-definition-list-element1">• Effort estimation</li>
-                <li id="project-scope-definition-list-element1">• Dependency identification</li>
-                <li id="project-scope-definition-list-element1">• Critical path analysis</li>
+                <li id="work-breakdown-structure-list-element1">• Hierarchical task decomposition</li>
+                <li id="work-breakdown-structure-list-element2">• Detailed activity definition</li>
+                <li id="work-breakdown-structure-list-element3">• Effort estimation</li>
+                <li id="work-breakdown-structure-list-element4">• Dependency identification</li>
+                <li id="work-breakdown-structure-list-element5">• Critical path analysis</li>
               </ul>
             </div>
 
@@ -122,11 +122,11 @@ export default function ProjectSetupPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="project-scope-definition-list-element1">• Resource allocation strategies</li>
-                <li id="project-scope-definition-list-element1">• Skill matrix development</li>
-                <li id="project-scope-definition-list-element1">• Capacity planning</li>
-                <li id="project-scope-definition-list-element1">• Budget allocation</li>
-                <li id="project-scope-definition-list-element1">• Resource leveling techniques</li>
+                <li id="resource-planning-list-element1">• Resource allocation strategies</li>
+                <li id="resource-planning-list-element2">• Skill matrix development</li>
+                <li id="resource-planning-list-element3">• Capacity planning</li>
+                <li id="resource-planning-list-element4">• Budget allocation</li>
+                <li id="resource-planning-list-element5">• Resource leveling techniques</li>
               </ul>
             </div>
 
@@ -138,11 +138,11 @@ export default function ProjectSetupPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="project-scope-definition-list-element1">• Risk identification workshops</li>
-                <li id="project-scope-definition-list-element1">• Probability and impact analysis</li>
-                <li id="project-scope-definition-list-element1">• Mitigation strategy development</li>
-                <li id="project-scope-definition-list-element1">• Contingency planning</li>
-                <li id="project-scope-definition-list-element1">• Risk monitoring framework</li>
+                <li id="risk-assessment-list-element1">• Risk identification workshops</li>
+                <li id="risk-assessment-list-element2">• Probability and impact analysis</li>
+                <li id="risk-assessment-list-element3">• Mitigation strategy development</li>
+                <li id="risk-assessment-list-element4">• Contingency planning</li>
+                <li id="risk-assessment-list-element5">• Risk monitoring framework</li>
               </ul>
             </div>
           </div>

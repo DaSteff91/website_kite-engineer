@@ -99,13 +99,13 @@ export default function CreativityPage() {
                 </p>
                 <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
                   <li id="creativity-techniques-and-problem-solving-list-element1">TRIZ - theory of inventive problem solving.</li>
-                  <li id="creativity-techniques-and-problem-solving-list-element1">
+                  <li id="creativity-techniques-and-problem-solving-list-element2">
                     Idea Generation Techniques - brain storming or brain
                     writing.
                   </li>
-                  <li id="creativity-techniques-and-problem-solving-list-element1">Six Thinking Hats.</li>
-                  <li id="creativity-techniques-and-problem-solving-list-element1">Lateral Thinking Process.</li>
-                  <li id="creativity-techniques-and-problem-solving-list-element1">Random-word, image, sound, or article technique.</li>
+                  <li id="creativity-techniques-and-problem-solving-list-element3">Six Thinking Hats.</li>
+                  <li id="creativity-techniques-and-problem-solving-list-element4">Lateral Thinking Process.</li>
+                  <li id="creativity-techniques-and-problem-solving-list-element5">Random-word, image, sound, or article technique.</li>
                 </ul>
               </div>
             </div>
@@ -120,11 +120,11 @@ export default function CreativityPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="creativity-techniques-and-problem-solving-list-element1">• TRIZ methodology application</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Systematic inventive thinking</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Contradiction resolution techniques</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Pattern-based innovation</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Cross-industry solution transfer</li>
+                <li id="advanced-brainstorming-list-element1">• TRIZ methodology application</li>
+                <li id="advanced-brainstorming-list-element2">• Systematic inventive thinking</li>
+                <li id="advanced-brainstorming-list-element3">• Contradiction resolution techniques</li>
+                <li id="advanced-brainstorming-list-element4">• Pattern-based innovation</li>
+                <li id="advanced-brainstorming-list-element5">• Cross-industry solution transfer</li>
               </ul>
             </div>
 
@@ -136,11 +136,11 @@ export default function CreativityPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Human-centered design approach</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Empathy mapping and user journey</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Ideation and prototyping sessions</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Cross-functional team facilitation</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Rapid iteration and testing</li>
+                <li id="design-thinking-workshops-list-element1">• Human-centered design approach</li>
+                <li id="design-thinking-workshops-list-element2">• Empathy mapping and user journey</li>
+                <li id="design-thinking-workshops-list-element3">• Ideation and prototyping sessions</li>
+                <li id="design-thinking-workshops-list-element4">• Cross-functional team facilitation</li>
+                <li id="design-thinking-workshops-list-element5">• Rapid iteration and testing</li>
               </ul>
             </div>
 
@@ -152,11 +152,11 @@ export default function CreativityPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Idea generation frameworks</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Innovation funnel management</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Concept evaluation criteria</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Portfolio optimization</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Innovation metrics and KPIs</li>
+                <li id="innovation-pipeline-list-element1">• Idea generation frameworks</li>
+                <li id="innovation-pipeline-list-element2">• Innovation funnel management</li>
+                <li id="innovation-pipeline-list-element3">• Concept evaluation criteria</li>
+                <li id="innovation-pipeline-list-element4">• Portfolio optimization</li>
+                <li id="innovation-pipeline-list-element5">• Innovation metrics and KPIs</li>
               </ul>
             </div>
 
@@ -168,11 +168,11 @@ export default function CreativityPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Lateral thinking techniques</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Biomimicry and nature-inspired solutions</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Analogical problem solving</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Constraint removal strategies</li>
-                <li id="creativity-techniques-and-problem-solving-list-element1">• Paradigm shift identification</li>
+                <li id="breakthrough-solutions-list-element1">• Lateral thinking techniques</li>
+                <li id="breakthrough-solutions-list-element2">• Biomimicry and nature-inspired solutions</li>
+                <li id="breakthrough-solutions-list-element3">• Analogical problem solving</li>
+                <li id="breakthrough-solutions-list-element4">• Constraint removal strategies</li>
+                <li id="breakthrough-solutions-list-element5">• Paradigm shift identification</li>
               </ul>
             </div>
           </div>

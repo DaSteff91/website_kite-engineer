@@ -91,10 +91,10 @@ export default function ChangeManagementPage() {
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="process-change-documentation-list-element1">• Change request documentation</li>
-                <li id="process-change-documentation-list-element1">• Impact assessment reports</li>
-                <li id="process-change-documentation-list-element1">• Risk analysis and mitigation</li>
-                <li id="process-change-documentation-list-element1">• Approval workflow management</li>
-                <li id="process-change-documentation-list-element1">• Change implementation tracking</li>
+                <li id="process-change-documentation-list-element2">• Impact assessment reports</li>
+                <li id="process-change-documentation-list-element3">• Risk analysis and mitigation</li>
+                <li id="process-change-documentation-list-element4">• Approval workflow management</li>
+                <li id="process-change-documentation-list-element5">• Change implementation tracking</li>
               </ul>
             </div>
 
@@ -106,11 +106,11 @@ export default function ChangeManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-change-documentation-list-element1">• Gate criteria definition</li>
-                <li id="process-change-documentation-list-element1">• Milestone preparation</li>
-                <li id="process-change-documentation-list-element1">• Review and approval processes</li>
-                <li id="process-change-documentation-list-element1">• Quality gate implementation</li>
-                <li id="process-change-documentation-list-element1">• Release readiness assessment</li>
+                <li id="release-gate-management-list-element1">• Gate criteria definition</li>
+                <li id="release-gate-management-list-element2">• Milestone preparation</li>
+                <li id="release-gate-management-list-element3">• Review and approval processes</li>
+                <li id="release-gate-management-list-element4">• Quality gate implementation</li>
+                <li id="release-gate-management-list-element5">• Release readiness assessment</li>
               </ul>
             </div>
 
@@ -122,11 +122,11 @@ export default function ChangeManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-change-documentation-list-element1">• Version control protocols</li>
-                <li id="process-change-documentation-list-element1">• Change history tracking</li>
-                <li id="process-change-documentation-list-element1">• Audit trail maintenance</li>
-                <li id="process-change-documentation-list-element1">• Document version management</li>
-                <li id="process-change-documentation-list-element1">• Compliance documentation</li>
+                <li id="traceability-systems-list-element1">• Version control protocols</li>
+                <li id="traceability-systems-list-element2">• Change history tracking</li>
+                <li id="traceability-systems-list-element3">• Audit trail maintenance</li>
+                <li id="traceability-systems-list-element4">• Document version management</li>
+                <li id="traceability-systems-list-element5">• Compliance documentation</li>
               </ul>
             </div>
 
@@ -138,11 +138,11 @@ export default function ChangeManagementPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-change-documentation-list-element1">• Regulatory compliance management</li>
-                <li id="process-change-documentation-list-element1">• Audit preparation and support</li>
-                <li id="process-change-documentation-list-element1">• Standard operating procedures</li>
-                <li id="process-change-documentation-list-element1">• Quality system documentation</li>
-                <li id="process-change-documentation-list-element1">• Corrective action tracking</li>
+                <li id="compliance-audit-support-list-element1">• Regulatory compliance management</li>
+                <li id="compliance-audit-support-list-element2">• Audit preparation and support</li>
+                <li id="compliance-audit-support-list-element3">• Standard operating procedures</li>
+                <li id="compliance-audit-support-list-element4">• Quality system documentation</li>
+                <li id="compliance-audit-support-list-element5">• Corrective action tracking</li>
               </ul>
             </div>
           </div>

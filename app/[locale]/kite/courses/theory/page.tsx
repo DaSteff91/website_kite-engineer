@@ -100,18 +100,18 @@ export default function TheoryPage() {
                   • Behaviour on and around the water: Concepts like karma and
                   the right of way
                 </li>
-                <li id="rider-essentials-list-element1">
+                <li id="rider-essentials-list-element2">
                   • Concepts to understand wind: Where it comes from and how you
                   can use it
                 </li>
-                <li id="rider-essentials-list-element1">
+                <li id="rider-essentials-list-element3">
                   • Self management and routines: Learn to educate yourself
                 </li>
-                <li id="rider-essentials-list-element1">
+                <li id="rider-essentials-list-element4">
                   • General (sailing and Navigation) terminology and expressions
                 </li>
-                <li id="rider-essentials-list-element1">• Steps to become more independent</li>
-                <li id="rider-essentials-list-element1">• Common mistakes and how to avoid them</li>
+                <li id="rider-essentials-list-element5">• Steps to become more independent</li>
+                <li id="rider-essentials-list-element6">• Common mistakes and how to avoid them</li>
               </ul>
             </div>
 
@@ -123,17 +123,17 @@ export default function TheoryPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="rider-essentials-list-element1">• What makes you ride: Concepts of forces and angels</li>
-                <li id="rider-essentials-list-element1">
+                <li id="advanced-theory-list-element1">• What makes you ride: Concepts of forces and angels</li>
+                <li id="advanced-theory-list-element2">
                   • More physics: What are aerodynamics and what wind really is
                   and where it comes from
                 </li>
-                <li id="rider-essentials-list-element1">
+                <li id="advanced-theory-list-element3">
                   • Overview and details to used materials such boards,
                   wetsuites or kites
                 </li>
-                <li id="rider-essentials-list-element1">• How do tricks and maneuvers work: A brake down</li>
-                <li id="rider-essentials-list-element1">
+                <li id="advanced-theory-list-element4">• How do tricks and maneuvers work: A brake down</li>
+                <li id="advanced-theory-list-element5">
                   • Next steps in kiteboarding: Additional exercises, lifestyle
                   and nutrition
                 </li>
@@ -148,20 +148,20 @@ export default function TheoryPage() {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="rider-essentials-list-element1">
+                <li id="environmental-stuff-list-element1">
                   • Environmental influences like what is weather and how you
                   can learn to use it to your advantage
                 </li>
-                <li id="rider-essentials-list-element1">
+                <li id="environmental-stuff-list-element2">
                   • We are not alone: Learn about the ecosystems where you
                   perfom your sport. Do you know that birds can die because of
                   you?
                 </li>
-                <li id="rider-essentials-list-element1">
+                <li id="environmental-stuff-list-element3">
                   • Kiteboarding on society level: How can you join an
                   organisation to serve a higher purpose related to kiteboarding
                 </li>
-                <li id="rider-essentials-list-element1">
+                <li id="environmental-stuff-list-element4">
                   • Laws, regulations and good habits that must be considered
                   when leaving the comfort zone
                 </li>
