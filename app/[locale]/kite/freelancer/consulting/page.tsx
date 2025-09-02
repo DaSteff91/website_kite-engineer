@@ -31,13 +31,14 @@ export default function ConsultingPage() {
       </div>
 
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/kite"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="consulting-hero"
+        <h1
+          id="consulting-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -62,14 +63,14 @@ export default function ConsultingPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2
+            <h2 id="consulting-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               There is a lot to ask
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p id="consulting-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Guidance and knowledge exchange is the key: Someone knows
               something and someone wants to learn it. Here I combine my role as
               a kitesurfer and -instructor with being part of society.
@@ -82,23 +83,37 @@ export default function ConsultingPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <ShoppingCart className="h-6 w-6 text-blue-400" />
-                <h3 id="general-consulting-title" className="text-lg font-semibold text-blue-200">
+                <h3
+                  id="general-consulting-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
                   General Consulting
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="general-consulting-list-element1">• Individual equipment recommendations</li>
-                <li id="general-consulting-list-element2">• Transportation, maintenance and logistics</li>
-                <li id="general-consulting-list-element3">• Equipment review and demo testings</li>
+                <li id="general-consulting-list-element1">
+                  • Individual equipment recommendations
+                </li>
+                <li id="general-consulting-list-element2">
+                  • Transportation, maintenance and logistics
+                </li>
+                <li id="general-consulting-list-element3">
+                  • Equipment review and demo testings
+                </li>
                 <li id="general-consulting-list-element4">• Quote review</li>
-                <li id="general-consulting-list-element5">• Karma: Influence on society and the environment</li>
+                <li id="general-consulting-list-element5">
+                  • Karma: Influence on society and the environment
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Presentation className="h-6 w-6 text-emerald-400" />
-                <h3 id="sport-representation-title" className="text-lg font-semibold text-emerald-200">
+                <h3
+                  id="sport-representation-title"
+                  className="text-lg font-semibold text-emerald-200"
+                >
                   Sport Representation
                 </h3>
               </div>
@@ -106,17 +121,28 @@ export default function ConsultingPage() {
                 <li id="sport-representation-list-element1">
                   • Public speaking and presentations about sport related topics
                 </li>
-                <li id="sport-representation-list-element2">• Educational workshops for almost all ages</li>
-                <li id="sport-representation-list-element3">• Media interviews and content, also for B2B</li>
-                <li id="sport-representation-list-element4">• Community outreach programs</li>
-                <li id="sport-representation-list-element5">• Sport promotion initiatives</li>
+                <li id="sport-representation-list-element2">
+                  • Educational workshops for almost all ages
+                </li>
+                <li id="sport-representation-list-element3">
+                  • Media interviews and content, also for B2B
+                </li>
+                <li id="sport-representation-list-element4">
+                  • Community outreach programs
+                </li>
+                <li id="sport-representation-list-element5">
+                  • Sport promotion initiatives
+                </li>
               </ul>
             </div>
           </div>
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="consulting-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p
+              id="consulting-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
               This section revolves around anything that is somehow connected to
               the sport as well to the environment in which it´s carried out.
               Find out how we can work together:
@@ -128,6 +154,7 @@ export default function ConsultingPage() {
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                id="contact-button"
               >
                 Connect with me
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

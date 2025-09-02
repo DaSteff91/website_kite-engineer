@@ -36,13 +36,14 @@ export default function SchoolSupportPage() {
       </div>
 
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/kite"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="school-support-hero"
+        <h1
+          id="school-support-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -67,14 +68,14 @@ export default function SchoolSupportPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2
+            <h2 id="school-support-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               Have An Extra Employee At Hand
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p id="school-support-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               I´m ready to support your school. Consider me as the one guy you
               literally can put anywhere: Flexibility is my strength. Just tell
               me up front what you need:
@@ -87,35 +88,67 @@ export default function SchoolSupportPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Drama className="h-6 w-6 text-blue-400" />
-                <h3 id="instructor-services-title" className="text-lg font-semibold text-blue-200">
+                <h3
+                  id="instructor-services-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
                   Instructor Services
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="instructor-services-list-element1">• VDWS certified instructor since 2023</li>
-                <li id="instructor-services-list-element2">• Beginner to advanced lessons</li>
-                <li id="instructor-services-list-element3">• Landboarding lessons</li>
-                <li id="instructor-services-list-element4">• Multi-language support (German, English, Portuguese)</li>
-                <li id="instructor-services-list-element5">• Group and individual sessions</li>
-                <li id="instructor-services-list-element6">• Supervision and filming</li>
+                <li id="instructor-services-list-element1">
+                  • VDWS certified instructor since 2023
+                </li>
+                <li id="instructor-services-list-element2">
+                  • Beginner to advanced lessons
+                </li>
+                <li id="instructor-services-list-element3">
+                  • Landboarding lessons
+                </li>
+                <li id="instructor-services-list-element4">
+                  • Multi-language support (German, English, Portuguese)
+                </li>
+                <li id="instructor-services-list-element5">
+                  • Group and individual sessions
+                </li>
+                <li id="instructor-services-list-element6">
+                  • Supervision and filming
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-cyan-400" />
-                <h3 id="general-assistance-title" className="text-lg font-semibold text-cyan-200">
+                <h3
+                  id="general-assistance-title"
+                  className="text-lg font-semibold text-cyan-200"
+                >
                   General Assistance
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="general-assistance-list-element1">• Office and administration</li>
-                <li id="general-assistance-list-element2">• Customer service and sales support</li>
-                <li id="general-assistance-list-element3">• Equipment recommendations</li>
-                <li id="general-assistance-list-element4">• Gear maintenance and repairs</li>
-                <li id="general-assistance-list-element5">• Inventory management and logistics</li>
-                <li id="general-assistance-list-element6">• Product demonstrations</li>
-                <li id="general-assistance-list-element7">• Helping hand in day to day tasks</li>
+                <li id="general-assistance-list-element1">
+                  • Office and administration
+                </li>
+                <li id="general-assistance-list-element2">
+                  • Customer service and sales support
+                </li>
+                <li id="general-assistance-list-element3">
+                  • Equipment recommendations
+                </li>
+                <li id="general-assistance-list-element4">
+                  • Gear maintenance and repairs
+                </li>
+                <li id="general-assistance-list-element5">
+                  • Inventory management and logistics
+                </li>
+                <li id="general-assistance-list-element6">
+                  • Product demonstrations
+                </li>
+                <li id="general-assistance-list-element7">
+                  • Helping hand in day to day tasks
+                </li>
               </ul>
             </div>
 
@@ -138,20 +171,33 @@ export default function SchoolSupportPage() {
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Clock className="h-6 w-6 text-emerald-400" />
-                <h3 id="flexible-scheduling-title" className="text-lg font-semibold text-emerald-200">
+                <h3
+                  id="flexible-scheduling-title"
+                  className="text-lg font-semibold text-emerald-200"
+                >
                   Flexible Scheduling
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="flexible-scheduling-list-element1">• Short-term and long-term contracts</li>
-                <li id="flexible-scheduling-list-element2">• The more you book, the better the price</li>
-                <li id="flexible-scheduling-list-element3">• Seasonal support available</li>
-                <li id="flexible-scheduling-list-element4">• Weekend and holiday coverage</li>
+                <li id="flexible-scheduling-list-element1">
+                  • Short-term and long-term contracts
+                </li>
+                <li id="flexible-scheduling-list-element2">
+                  • The more you book, the better the price
+                </li>
+                <li id="flexible-scheduling-list-element3">
+                  • Seasonal support available
+                </li>
+                <li id="flexible-scheduling-list-element4">
+                  • Weekend and holiday coverage
+                </li>
                 <li id="flexible-scheduling-list-element5">
                   • Providing support to multi-location schools and open to
                   commuting between sites.
                 </li>
-                <li id="flexible-scheduling-list-element6">• Driver’s license covering both car and motorcycle.</li>
+                <li id="flexible-scheduling-list-element6">
+                  • Driver’s license covering both car and motorcycle.
+                </li>
               </ul>
             </div>
 
@@ -190,7 +236,10 @@ export default function SchoolSupportPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="school-support-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p
+              id="school-support-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
               Let's see how I can support your team. Combine my services as you
               wish, there are almost no restrictions. Is anything missing? We
               find a solution. It all starts here:
@@ -202,6 +251,7 @@ export default function SchoolSupportPage() {
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                id="contact-button"
               >
                 Connect with me
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

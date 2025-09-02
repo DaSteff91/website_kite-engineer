@@ -65,14 +65,14 @@ export default function ProcessAssessmentPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2
+            <h2 id="process-assessment-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               Get an Outside Perspective
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p id="process-assessment-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Detailed feedback on what to preserve and what to improve in your
               business processes
             </p>

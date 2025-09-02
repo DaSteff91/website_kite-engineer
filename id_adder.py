@@ -27,11 +27,13 @@ def add_ids_to_page(file_path: str) -> bool:
     content, modified4 = _process_service_grids(content, file_path)
     content, modified5 = _process_hero_sections(content, file_path)
     content, modified6 = _process_contact_sections(content, file_path)
+    content, modified7 = _process_section_titles(content, file_path)
+    content, modified8 = _process_section_subtitles(content, file_path) 
 
     # Clean up any malformed tags that might have been created
     content = _cleanup_malformed_h3_tags(content)
     
-    modified = modified1 or modified2 or modified3 or modified4 or modified5 or modified6
+    modified = modified1 or modified2 or modified3 or modified4 or modified5 or modified6 or modified7 or modified8
     
     # Write back to file if modifications were made
     if modified:
@@ -452,6 +454,83 @@ def _process_contact_sections(content: str, file_path: str) -> Tuple[str, bool]:
             content = content.replace(match.group(0), replacement)
             modified = True
             print(f"Added ID '{contact_id}' to Contact section in {file_path}")
+    
+    return content, modified
+
+def _process_section_titles(content: str, file_path: str) -> Tuple[str, bool]:
+    """
+    Process section titles by adding IDs to h2 elements based on directory names.
+    
+    Args:
+        content: The file content to process
+        file_path: Path to the file (for directory name extraction)
+        
+    Returns:
+        Tuple of (modified_content, was_modified)
+    """
+    modified = False
+    
+    # Pattern to find h2 elements in section headers
+    h2_pattern: Pattern = re.compile(
+        r'(<div[^>]*>.*?<h2)([^>]*)(>.*?</h2>)',
+        re.DOTALL | re.IGNORECASE
+    )
+    
+    # Get the last directory name from the file path
+    last_dir: str = Path(file_path).parent.name
+    title_id: str = f"{last_dir}-section-title"
+    
+    # Find all h2 matches
+    for match in h2_pattern.finditer(content):
+        h2_attrs = match.group(2)
+        
+        # Check if ID already exists to avoid duplicates
+        if 'id=' not in h2_attrs:
+            # Create the replacement
+            replacement: str = f"{match.group(1)} id=\"{title_id}\"{h2_attrs}{match.group(3)}"
+            content = content.replace(match.group(0), replacement)
+            modified = True
+            print(f"Added ID '{title_id}' to section title in {file_path}")
+            break  # Only process the first h2
+    
+    return content, modified
+
+
+def _process_section_subtitles(content: str, file_path: str) -> Tuple[str, bool]:
+    """
+    Process section subtitles by adding IDs to p elements that follow h2 elements.
+    
+    Args:
+        content: The file content to process
+        file_path: Path to the file (for directory name extraction)
+        
+    Returns:
+        Tuple of (modified_content, was_modified)
+    """
+    modified = False
+    
+    # Pattern to find p elements that follow h2 elements in sections
+    p_pattern: Pattern = re.compile(
+        r'(<h2[^>]*>.*?</h2>.*?<p)([^>]*)(>.*?</p>)',
+        re.DOTALL | re.IGNORECASE
+    )
+    
+    # Get the last directory name from the file path
+    last_dir: str = Path(file_path).parent.name
+    subtitle_id: str = f"{last_dir}-section-subtitle"
+    
+    # Find all p matches that follow h2
+    for match in p_pattern.finditer(content):
+        p_attrs = match.group(2)
+        
+        # Check if ID already exists to avoid duplicates
+        if 'id=' not in p_attrs:
+            # Create the replacement
+            replacement: str = f"{match.group(1)} id=\"{subtitle_id}\"{p_attrs}{match.group(3)}"
+            content = content.replace(match.group(0), replacement)
+            modified = True
+            print(f"Added ID '{subtitle_id}' to section subtitle in {file_path}")
+            break  # Only process the first p after h2
     
     return content, modified
 

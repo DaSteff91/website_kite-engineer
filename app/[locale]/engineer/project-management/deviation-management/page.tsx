@@ -35,13 +35,14 @@ export default function DeviationManagementPage() {
       </div>
 
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/engineer"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="deviation-management-hero"
+        <h1
+          id="deviation-management-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -66,14 +67,14 @@ export default function DeviationManagementPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2
+            <h2 id="deviation-management-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               Navigate Unexpected Detours
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p id="deviation-management-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Professional communication and management of project deviations
               with external parties
             </p>
@@ -85,81 +86,139 @@ export default function DeviationManagementPage() {
             <div className="bg-gradient-to-br from-emerald-900/20 via-card/20 to-blue-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Navigation2Off className="h-6 w-6 text-emerald-400" />
-                <h3 id="change-request-management-title" className="text-lg font-semibold text-emerald-200">
+                <h3
+                  id="change-request-management-title"
+                  className="text-lg font-semibold text-emerald-200"
+                >
                   Change Request Management
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="change-request-management-list-element1">• Deviation documentation</li>
-                <li id="change-request-management-list-element2">• Impact assessment</li>
-                <li id="change-request-management-list-element3">• Change request preparation</li>
-                <li id="change-request-management-list-element4">• Approval workflow management</li>
-                <li id="change-request-management-list-element5">• Implementation tracking</li>
+                <li id="change-request-management-list-element1">
+                  • Deviation documentation
+                </li>
+                <li id="change-request-management-list-element2">
+                  • Impact assessment
+                </li>
+                <li id="change-request-management-list-element3">
+                  • Change request preparation
+                </li>
+                <li id="change-request-management-list-element4">
+                  • Approval workflow management
+                </li>
+                <li id="change-request-management-list-element5">
+                  • Implementation tracking
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/25 via-card/25 to-cyan-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-blue-400" />
-                <h3 id="stakeholder-communication-title" className="text-lg font-semibold text-blue-200">
+                <h3
+                  id="stakeholder-communication-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
                   Stakeholder Communication
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="stakeholder-communication-list-element1">• Expectation management</li>
-                <li id="stakeholder-communication-list-element2">• Communication strategy development</li>
-                <li id="stakeholder-communication-list-element3">• External party negotiations</li>
-                <li id="stakeholder-communication-list-element4">• Presentation preparation</li>
-                <li id="stakeholder-communication-list-element5">• Stakeholder alignment</li>
+                <li id="stakeholder-communication-list-element1">
+                  • Expectation management
+                </li>
+                <li id="stakeholder-communication-list-element2">
+                  • Communication strategy development
+                </li>
+                <li id="stakeholder-communication-list-element3">
+                  • External party negotiations
+                </li>
+                <li id="stakeholder-communication-list-element4">
+                  • Presentation preparation
+                </li>
+                <li id="stakeholder-communication-list-element5">
+                  • Stakeholder alignment
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/30 via-card/30 to-teal-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <AlertTriangle className="h-6 w-6 text-cyan-400" />
-                <h3 id="recovery-planning-title" className="text-lg font-semibold text-cyan-200">
+                <h3
+                  id="recovery-planning-title"
+                  className="text-lg font-semibold text-cyan-200"
+                >
                   Recovery Planning
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="recovery-planning-list-element1">• Recovery strategy development</li>
-                <li id="recovery-planning-list-element2">• Action plan creation</li>
-                <li id="recovery-planning-list-element3">• Resource reallocation</li>
-                <li id="recovery-planning-list-element4">• Timeline adjustment</li>
-                <li id="recovery-planning-list-element5">• Progress monitoring</li>
+                <li id="recovery-planning-list-element1">
+                  • Recovery strategy development
+                </li>
+                <li id="recovery-planning-list-element2">
+                  • Action plan creation
+                </li>
+                <li id="recovery-planning-list-element3">
+                  • Resource reallocation
+                </li>
+                <li id="recovery-planning-list-element4">
+                  • Timeline adjustment
+                </li>
+                <li id="recovery-planning-list-element5">
+                  • Progress monitoring
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/35 via-card/35 to-emerald-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="h-6 w-6 text-teal-400" />
-                <h3 id="lessons-learned-title" className="text-lg font-semibold text-teal-200">
+                <h3
+                  id="lessons-learned-title"
+                  className="text-lg font-semibold text-teal-200"
+                >
                   Lessons Learned
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="lessons-learned-list-element1">• Root cause analysis</li>
-                <li id="lessons-learned-list-element2">• Deviation documentation</li>
-                <li id="lessons-learned-list-element3">• Process improvement recommendations</li>
-                <li id="lessons-learned-list-element4">• Knowledge capture and sharing</li>
-                <li id="lessons-learned-list-element5">• Preventive measure development</li>
+                <li id="lessons-learned-list-element1">
+                  • Root cause analysis
+                </li>
+                <li id="lessons-learned-list-element2">
+                  • Deviation documentation
+                </li>
+                <li id="lessons-learned-list-element3">
+                  • Process improvement recommendations
+                </li>
+                <li id="lessons-learned-list-element4">
+                  • Knowledge capture and sharing
+                </li>
+                <li id="lessons-learned-list-element5">
+                  • Preventive measure development
+                </li>
               </ul>
             </div>
           </div>
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="deviation-management-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p
+              id="deviation-management-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
               Ready to manage project deviations? Let's handle unexpected
               changes and get your project back on track.
             </p>
             <Link
-              href={generateContactHref("/engineer/project-management/deviation-management")}
+              href={generateContactHref(
+                "/engineer/project-management/deviation-management"
+              )}
               target="_blank"
             >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                id="contact-button"
               >
                 Connect with me
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

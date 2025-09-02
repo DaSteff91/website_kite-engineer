@@ -66,14 +66,14 @@ export default function ProcessDesignPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2
+            <h2 id="process-design-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               Everything is a process.
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p id="process-design-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Layouting and designing what needs to be done with visualization
               and structured approaches.
             </p>

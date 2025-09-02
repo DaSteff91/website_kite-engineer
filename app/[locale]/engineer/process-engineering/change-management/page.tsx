@@ -35,13 +35,14 @@ export default function ChangeManagementPage() {
       </div>
 
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/engineer"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="change-management-hero"
+        <h1
+          id="change-management-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -66,14 +67,14 @@ export default function ChangeManagementPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2
+            <h2 id="change-management-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               Professional Change Management
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p id="change-management-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Milestone preparation, release gates, and comprehensive
               documentation for seamless transitions
             </p>
@@ -85,81 +86,139 @@ export default function ChangeManagementPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <RefreshCw className="h-6 w-6 text-blue-400" />
-                <h3 id="process-change-documentation-title" className="text-lg font-semibold text-blue-200">
+                <h3
+                  id="process-change-documentation-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
                   Process Change Documentation
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-change-documentation-list-element1">• Change request documentation</li>
-                <li id="process-change-documentation-list-element2">• Impact assessment reports</li>
-                <li id="process-change-documentation-list-element3">• Risk analysis and mitigation</li>
-                <li id="process-change-documentation-list-element4">• Approval workflow management</li>
-                <li id="process-change-documentation-list-element5">• Change implementation tracking</li>
+                <li id="process-change-documentation-list-element1">
+                  • Change request documentation
+                </li>
+                <li id="process-change-documentation-list-element2">
+                  • Impact assessment reports
+                </li>
+                <li id="process-change-documentation-list-element3">
+                  • Risk analysis and mitigation
+                </li>
+                <li id="process-change-documentation-list-element4">
+                  • Approval workflow management
+                </li>
+                <li id="process-change-documentation-list-element5">
+                  • Change implementation tracking
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="h-6 w-6 text-cyan-400" />
-                <h3 id="release-gate-management-title" className="text-lg font-semibold text-cyan-200">
+                <h3
+                  id="release-gate-management-title"
+                  className="text-lg font-semibold text-cyan-200"
+                >
                   Release Gate Management
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="release-gate-management-list-element1">• Gate criteria definition</li>
-                <li id="release-gate-management-list-element2">• Milestone preparation</li>
-                <li id="release-gate-management-list-element3">• Review and approval processes</li>
-                <li id="release-gate-management-list-element4">• Quality gate implementation</li>
-                <li id="release-gate-management-list-element5">• Release readiness assessment</li>
+                <li id="release-gate-management-list-element1">
+                  • Gate criteria definition
+                </li>
+                <li id="release-gate-management-list-element2">
+                  • Milestone preparation
+                </li>
+                <li id="release-gate-management-list-element3">
+                  • Review and approval processes
+                </li>
+                <li id="release-gate-management-list-element4">
+                  • Quality gate implementation
+                </li>
+                <li id="release-gate-management-list-element5">
+                  • Release readiness assessment
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <GitBranch className="h-6 w-6 text-teal-400" />
-                <h3 id="traceability-systems-title" className="text-lg font-semibold text-teal-200">
+                <h3
+                  id="traceability-systems-title"
+                  className="text-lg font-semibold text-teal-200"
+                >
                   Traceability Systems
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="traceability-systems-list-element1">• Version control protocols</li>
-                <li id="traceability-systems-list-element2">• Change history tracking</li>
-                <li id="traceability-systems-list-element3">• Audit trail maintenance</li>
-                <li id="traceability-systems-list-element4">• Document version management</li>
-                <li id="traceability-systems-list-element5">• Compliance documentation</li>
+                <li id="traceability-systems-list-element1">
+                  • Version control protocols
+                </li>
+                <li id="traceability-systems-list-element2">
+                  • Change history tracking
+                </li>
+                <li id="traceability-systems-list-element3">
+                  • Audit trail maintenance
+                </li>
+                <li id="traceability-systems-list-element4">
+                  • Document version management
+                </li>
+                <li id="traceability-systems-list-element5">
+                  • Compliance documentation
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="h-6 w-6 text-emerald-400" />
-                <h3 id="compliance-audit-support-title" className="text-lg font-semibold text-emerald-200">
+                <h3
+                  id="compliance-audit-support-title"
+                  className="text-lg font-semibold text-emerald-200"
+                >
                   Compliance & Audit Support
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="compliance-audit-support-list-element1">• Regulatory compliance management</li>
-                <li id="compliance-audit-support-list-element2">• Audit preparation and support</li>
-                <li id="compliance-audit-support-list-element3">• Standard operating procedures</li>
-                <li id="compliance-audit-support-list-element4">• Quality system documentation</li>
-                <li id="compliance-audit-support-list-element5">• Corrective action tracking</li>
+                <li id="compliance-audit-support-list-element1">
+                  • Regulatory compliance management
+                </li>
+                <li id="compliance-audit-support-list-element2">
+                  • Audit preparation and support
+                </li>
+                <li id="compliance-audit-support-list-element3">
+                  • Standard operating procedures
+                </li>
+                <li id="compliance-audit-support-list-element4">
+                  • Quality system documentation
+                </li>
+                <li id="compliance-audit-support-list-element5">
+                  • Corrective action tracking
+                </li>
               </ul>
             </div>
           </div>
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="change-management-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p
+              id="change-management-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
               Ready to implement professional change management? Let's ensure
               your transitions are smooth and compliant.
             </p>
             <Link
-              href={generateContactHref("/engineer/process-engineering/change-management")}
+              href={generateContactHref(
+                "/engineer/process-engineering/change-management"
+              )}
               target="_blank"
             >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                id="contact-button"
               >
                 Connect with me
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

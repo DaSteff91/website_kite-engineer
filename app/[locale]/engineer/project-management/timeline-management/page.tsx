@@ -35,13 +35,14 @@ export default function TimelineManagementPage() {
       </div>
 
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/engineer"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="timeline-management-hero"
+        <h1
+          id="timeline-management-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -66,14 +67,14 @@ export default function TimelineManagementPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2
+            <h2 id="timeline-management-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               It's All About Timing
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p id="timeline-management-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Rebalance project timelines with expert outside perspective and
               optimization strategies
             </p>
@@ -85,81 +86,139 @@ export default function TimelineManagementPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Clock1 className="h-6 w-6 text-blue-400" />
-                <h3 id="critical-path-analysis-title" className="text-lg font-semibold text-blue-200">
+                <h3
+                  id="critical-path-analysis-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
                   Critical Path Analysis
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="critical-path-analysis-list-element1">• Critical path identification</li>
-                <li id="critical-path-analysis-list-element2">• Dependency optimization</li>
-                <li id="critical-path-analysis-list-element3">• Float time analysis</li>
-                <li id="critical-path-analysis-list-element4">• Schedule compression techniques</li>
-                <li id="critical-path-analysis-list-element5">• Critical chain methodology</li>
+                <li id="critical-path-analysis-list-element1">
+                  • Critical path identification
+                </li>
+                <li id="critical-path-analysis-list-element2">
+                  • Dependency optimization
+                </li>
+                <li id="critical-path-analysis-list-element3">
+                  • Float time analysis
+                </li>
+                <li id="critical-path-analysis-list-element4">
+                  • Schedule compression techniques
+                </li>
+                <li id="critical-path-analysis-list-element5">
+                  • Critical chain methodology
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
-                <h3 id="schedule-optimization-title" className="text-lg font-semibold text-cyan-200">
+                <h3
+                  id="schedule-optimization-title"
+                  className="text-lg font-semibold text-cyan-200"
+                >
                   Schedule Optimization
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="schedule-optimization-list-element1">• Resource leveling and smoothing</li>
-                <li id="schedule-optimization-list-element2">• Timeline rebalancing</li>
-                <li id="schedule-optimization-list-element3">• Fast-tracking opportunities</li>
-                <li id="schedule-optimization-list-element4">• Crashing analysis</li>
-                <li id="schedule-optimization-list-element5">• Schedule risk assessment</li>
+                <li id="schedule-optimization-list-element1">
+                  • Resource leveling and smoothing
+                </li>
+                <li id="schedule-optimization-list-element2">
+                  • Timeline rebalancing
+                </li>
+                <li id="schedule-optimization-list-element3">
+                  • Fast-tracking opportunities
+                </li>
+                <li id="schedule-optimization-list-element4">
+                  • Crashing analysis
+                </li>
+                <li id="schedule-optimization-list-element5">
+                  • Schedule risk assessment
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <GitMerge className="h-6 w-6 text-teal-400" />
-                <h3 id="dependency-management-title" className="text-lg font-semibold text-teal-200">
+                <h3
+                  id="dependency-management-title"
+                  className="text-lg font-semibold text-teal-200"
+                >
                   Dependency Management
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="dependency-management-list-element1">• Dependency identification</li>
-                <li id="dependency-management-list-element2">• Constraint analysis</li>
-                <li id="dependency-management-list-element3">• Parallel task optimization</li>
-                <li id="dependency-management-list-element4">• Handoff process improvement</li>
-                <li id="dependency-management-list-element5">• Bottleneck resolution</li>
+                <li id="dependency-management-list-element1">
+                  • Dependency identification
+                </li>
+                <li id="dependency-management-list-element2">
+                  • Constraint analysis
+                </li>
+                <li id="dependency-management-list-element3">
+                  • Parallel task optimization
+                </li>
+                <li id="dependency-management-list-element4">
+                  • Handoff process improvement
+                </li>
+                <li id="dependency-management-list-element5">
+                  • Bottleneck resolution
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Zap className="h-6 w-6 text-emerald-400" />
-                <h3 id="timeline-recovery-title" className="text-lg font-semibold text-emerald-200">
+                <h3
+                  id="timeline-recovery-title"
+                  className="text-lg font-semibold text-emerald-200"
+                >
                   Timeline Recovery
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="timeline-recovery-list-element1">• Delay impact assessment</li>
-                <li id="timeline-recovery-list-element2">• Recovery plan development</li>
-                <li id="timeline-recovery-list-element3">• Acceleration strategies</li>
-                <li id="timeline-recovery-list-element4">• Scope adjustment recommendations</li>
-                <li id="timeline-recovery-list-element5">• Stakeholder communication planning</li>
+                <li id="timeline-recovery-list-element1">
+                  • Delay impact assessment
+                </li>
+                <li id="timeline-recovery-list-element2">
+                  • Recovery plan development
+                </li>
+                <li id="timeline-recovery-list-element3">
+                  • Acceleration strategies
+                </li>
+                <li id="timeline-recovery-list-element4">
+                  • Scope adjustment recommendations
+                </li>
+                <li id="timeline-recovery-list-element5">
+                  • Stakeholder communication planning
+                </li>
               </ul>
             </div>
           </div>
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="timeline-management-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p
+              id="timeline-management-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
               Ready to optimize your project timeline? Let's rebalance your
               schedule and get back on track.
             </p>
             <Link
-              href={generateContactHref("/engineer/project-management/timeline-management")}
+              href={generateContactHref(
+                "/engineer/project-management/timeline-management"
+              )}
               target="_blank"
             >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                id="contact-button"
               >
                 Connect with me
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

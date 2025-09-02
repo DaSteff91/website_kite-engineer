@@ -34,7 +34,7 @@ const ContactInfoLine = ({
   value: string;
   isEmail?: boolean;
 }) => (
-  <p className=" mb-1 text-sm sm:text-base">
+  <p id="imprint-section-subtitle" className=" mb-1 text-sm sm:text-base">
     {label && `${label}: `}
     {isEmail ? (
       <Link

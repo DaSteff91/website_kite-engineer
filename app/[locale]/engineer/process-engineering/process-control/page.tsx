@@ -41,7 +41,8 @@ export default function ProcessControlPage() {
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="process-control-hero"
+        <h1
+          id="process-control-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -66,14 +67,14 @@ export default function ProcessControlPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2
+            <h2 id="process-control-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               Outsource your work
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p id="process-control-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Invest my brainpower into your project and benefit from my
               expertise I gathered while working as a process engineer.
             </p>
@@ -85,7 +86,10 @@ export default function ProcessControlPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <SlidersHorizontal className="h-6 w-6 text-blue-400" />
-                <h3 id="advanced-process-control-title" className="text-lg font-semibold text-blue-200">
+                <h3
+                  id="advanced-process-control-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
                   Advanced Process Control
                 </h3>
               </div>
@@ -184,7 +188,10 @@ export default function ProcessControlPage() {
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
-                <h3 id="statistical-process-control-title" className="text-lg font-semibold text-cyan-200">
+                <h3
+                  id="statistical-process-control-title"
+                  className="text-lg font-semibold text-cyan-200"
+                >
                   Statistical Process Control
                 </h3>
               </div>
@@ -275,7 +282,10 @@ export default function ProcessControlPage() {
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BaggageClaim className="h-6 w-6 text-teal-400" />
-                <h3 id="custom-solutions-title" className="text-lg font-semibold text-teal-200">
+                <h3
+                  id="custom-solutions-title"
+                  className="text-lg font-semibold text-teal-200"
+                >
                   Custom Solutions
                 </h3>
               </div>
@@ -335,7 +345,10 @@ export default function ProcessControlPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="process-control-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p
+              id="process-control-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
               Miss something? We´ll find a solution. Primary I offer my services
               for manufacturing processes, and in particular semiconductor
               manufacturing. But I am absolutely open for new topics. My
@@ -352,6 +365,7 @@ export default function ProcessControlPage() {
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                id="contact-button"
               >
                 Connect with me
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

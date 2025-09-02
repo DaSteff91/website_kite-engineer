@@ -32,7 +32,7 @@ const TextLine = ({
   text: string;
   isEmail?: boolean;
 }) => (
-  <p className="mb-1 text-sm sm:text-base">
+  <p id="privacy-section-subtitle" className="mb-1 text-sm sm:text-base">
     {isEmail ? (
       <Link
         href={`mailto:${text}`}

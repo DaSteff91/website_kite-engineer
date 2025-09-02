@@ -32,13 +32,14 @@ export default function TravelServicesPage() {
       </div>
 
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/kite"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="travel-services-hero"
+        <h1
+          id="travel-services-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -63,14 +64,14 @@ export default function TravelServicesPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2
+            <h2 id="travel-services-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               The world can be your playground - use it
             </h2>
-            <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p id="travel-services-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
               Even though I am not a travel agent I can look up everything for
               you and put it together so you can easily decide what suites your
               booking. Here you can rely on me:
@@ -83,45 +84,76 @@ export default function TravelServicesPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Plane className="h-6 w-6 text-blue-400" />
-                <h3 id="trip-organization-title" className="text-lg font-semibold text-blue-200">
+                <h3
+                  id="trip-organization-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
                   Trip Organization
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="trip-organization-list-element1">• Trip planning and coordination</li>
-                <li id="trip-organization-list-element2">• Transfer arrangements</li>
-                <li id="trip-organization-list-element3">• Budget and timetable planing</li>
-                <li id="trip-organization-list-element4">• Health and insurance considerations</li>
+                <li id="trip-organization-list-element1">
+                  • Trip planning and coordination
+                </li>
+                <li id="trip-organization-list-element2">
+                  • Transfer arrangements
+                </li>
+                <li id="trip-organization-list-element3">
+                  • Budget and timetable planing
+                </li>
+                <li id="trip-organization-list-element4">
+                  • Health and insurance considerations
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <DumbbellIcon className="h-6 w-6 text-cyan-400" />
-                <h3 id="personal-coaching-title" className="text-lg font-semibold text-cyan-200">
+                <h3
+                  id="personal-coaching-title"
+                  className="text-lg font-semibold text-cyan-200"
+                >
                   Personal Coaching
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="personal-coaching-list-element1">• Kite instructor services</li>
-                <li id="personal-coaching-list-element2">• Functional fitness and HIIT coaching</li>
-                <li id="personal-coaching-list-element3">• Master of your schedule</li>
-                <li id="personal-coaching-list-element4">• Progress documentaion</li>
+                <li id="personal-coaching-list-element1">
+                  • Kite instructor services
+                </li>
+                <li id="personal-coaching-list-element2">
+                  • Functional fitness and HIIT coaching
+                </li>
+                <li id="personal-coaching-list-element3">
+                  • Master of your schedule
+                </li>
+                <li id="personal-coaching-list-element4">
+                  • Progress documentaion
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-teal-400" />
-                <h3 id="travel-buddy-title" className="text-lg font-semibold text-teal-200">
+                <h3
+                  id="travel-buddy-title"
+                  className="text-lg font-semibold text-teal-200"
+                >
                   Travel Buddy
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="travel-buddy-list-element1">• Have fun: I am also a human</li>
+                <li id="travel-buddy-list-element1">
+                  • Have fun: I am also a human
+                </li>
                 <li id="travel-buddy-list-element2">• Trip documentaion</li>
-                <li id="travel-buddy-list-element3">• Organization of general activities</li>
-                <li id="travel-buddy-list-element4">• Sharing expenses of daily needs</li>
+                <li id="travel-buddy-list-element3">
+                  • Organization of general activities
+                </li>
+                <li id="travel-buddy-list-element4">
+                  • Sharing expenses of daily needs
+                </li>
               </ul>
             </div>
             {/* 
@@ -176,7 +208,10 @@ export default function TravelServicesPage() {
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="travel-services-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
+            <p
+              id="travel-services-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
               Let's create an unforgettable experience together. I provide you
               what is neccessary for it. Only the booking is yours. Is anything
               missing? We find a solution. It all starts here:
@@ -188,6 +223,7 @@ export default function TravelServicesPage() {
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                id="contact-button"
               >
                 Connect with me
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
