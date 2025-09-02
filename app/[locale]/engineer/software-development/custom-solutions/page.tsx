@@ -84,64 +84,64 @@ export default function CustomSolutionsPage() {
             <div className="bg-gradient-to-br from-teal-900/20 via-card/20 to-emerald-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <PocketKnife className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="tailored-applications-title" className="text-lg font-semibold text-teal-200">
                   Tailored Applications
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Custom software development</li>
-                <li>• Feature integration and combination</li>
-                <li>• Business-specific solutions</li>
-                <li>• Legacy system modernization</li>
-                <li>• Bespoke functionality implementation</li>
+                <li id="tailored-applications-list-element1">• Custom software development</li>
+                <li id="tailored-applications-list-element1">• Feature integration and combination</li>
+                <li id="tailored-applications-list-element1">• Business-specific solutions</li>
+                <li id="tailored-applications-list-element1">• Legacy system modernization</li>
+                <li id="tailored-applications-list-element1">• Bespoke functionality implementation</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/25 via-card/25 to-blue-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Code className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="custom-scripts-tools-title" className="text-lg font-semibold text-emerald-200">
                   Custom Scripts & Tools
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Automation script development</li>
-                <li>• Data processing tools</li>
-                <li>• Custom utilities and helpers</li>
-                <li>• Integration scripts</li>
-                <li>• Performance optimization tools</li>
+                <li id="tailored-applications-list-element1">• Automation script development</li>
+                <li id="tailored-applications-list-element1">• Data processing tools</li>
+                <li id="tailored-applications-list-element1">• Custom utilities and helpers</li>
+                <li id="tailored-applications-list-element1">• Integration scripts</li>
+                <li id="tailored-applications-list-element1">• Performance optimization tools</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/30 via-card/30 to-cyan-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Layers className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="system-integration-title" className="text-lg font-semibold text-blue-200">
                   System Integration
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• API development and integration</li>
-                <li>• Third-party service connections</li>
-                <li>• Data synchronization solutions</li>
-                <li>• Middleware development</li>
-                <li>• Cross-platform compatibility</li>
+                <li id="tailored-applications-list-element1">• API development and integration</li>
+                <li id="tailored-applications-list-element1">• Third-party service connections</li>
+                <li id="tailored-applications-list-element1">• Data synchronization solutions</li>
+                <li id="tailored-applications-list-element1">• Middleware development</li>
+                <li id="tailored-applications-list-element1">• Cross-platform compatibility</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/35 via-card/35 to-teal-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Zap className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="containerization-title" className="text-lg font-semibold text-cyan-200">
                   Containerization
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Docker containerization</li>
-                <li>• Microservices architecture</li>
-                <li>• Container orchestration</li>
-                <li>• Deployment automation</li>
-                <li>• Scalable infrastructure setup</li>
+                <li id="tailored-applications-list-element1">• Docker containerization</li>
+                <li id="tailored-applications-list-element1">• Microservices architecture</li>
+                <li id="tailored-applications-list-element1">• Container orchestration</li>
+                <li id="tailored-applications-list-element1">• Deployment automation</li>
+                <li id="tailored-applications-list-element1">• Scalable infrastructure setup</li>
               </ul>
             </div>
           </div>

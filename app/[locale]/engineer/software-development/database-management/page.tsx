@@ -84,64 +84,64 @@ export default function DatabaseManagementPage() {
             <div className="bg-gradient-to-br from-teal-900/20 via-card/20 to-emerald-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Database className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="rdbms-design-implementation-title" className="text-lg font-semibold text-teal-200">
                   RDBMS Design & Implementation
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Database architecture design</li>
-                <li>• Schema optimization</li>
-                <li>• Relational model implementation</li>
-                <li>• Performance tuning</li>
-                <li>• Scalability planning</li>
+                <li id="rdbms-design-implementation-list-element1">• Database architecture design</li>
+                <li id="rdbms-design-implementation-list-element1">• Schema optimization</li>
+                <li id="rdbms-design-implementation-list-element1">• Relational model implementation</li>
+                <li id="rdbms-design-implementation-list-element1">• Performance tuning</li>
+                <li id="rdbms-design-implementation-list-element1">• Scalability planning</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/25 via-card/25 to-blue-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileSpreadsheet className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="data-migration-title" className="text-lg font-semibold text-emerald-200">
                   Data Migration
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Excel to database migration</li>
-                <li>• File-based data conversion</li>
-                <li>• Data cleaning and validation</li>
-                <li>• Legacy system migration</li>
-                <li>• Data integrity verification</li>
+                <li id="rdbms-design-implementation-list-element1">• Excel to database migration</li>
+                <li id="rdbms-design-implementation-list-element1">• File-based data conversion</li>
+                <li id="rdbms-design-implementation-list-element1">• Data cleaning and validation</li>
+                <li id="rdbms-design-implementation-list-element1">• Legacy system migration</li>
+                <li id="rdbms-design-implementation-list-element1">• Data integrity verification</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/30 via-card/30 to-cyan-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="backup-recovery-title" className="text-lg font-semibold text-blue-200">
                   Backup & Recovery
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Automated backup solutions</li>
-                <li>• Disaster recovery planning</li>
-                <li>• Point-in-time recovery</li>
-                <li>• Data redundancy strategies</li>
-                <li>• Recovery testing procedures</li>
+                <li id="rdbms-design-implementation-list-element1">• Automated backup solutions</li>
+                <li id="rdbms-design-implementation-list-element1">• Disaster recovery planning</li>
+                <li id="rdbms-design-implementation-list-element1">• Point-in-time recovery</li>
+                <li id="rdbms-design-implementation-list-element1">• Data redundancy strategies</li>
+                <li id="rdbms-design-implementation-list-element1">• Recovery testing procedures</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/35 via-card/35 to-teal-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="analytics-reporting-title" className="text-lg font-semibold text-cyan-200">
                   Analytics & Reporting
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Advanced reporting capabilities</li>
-                <li>• Data analytics and insights</li>
-                <li>• Dashboard development</li>
-                <li>• Business intelligence tools</li>
-                <li>• Custom query optimization</li>
+                <li id="rdbms-design-implementation-list-element1">• Advanced reporting capabilities</li>
+                <li id="rdbms-design-implementation-list-element1">• Data analytics and insights</li>
+                <li id="rdbms-design-implementation-list-element1">• Dashboard development</li>
+                <li id="rdbms-design-implementation-list-element1">• Business intelligence tools</li>
+                <li id="rdbms-design-implementation-list-element1">• Custom query optimization</li>
               </ul>
             </div>
           </div>

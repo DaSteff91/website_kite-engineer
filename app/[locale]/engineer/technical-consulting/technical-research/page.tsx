@@ -84,64 +84,64 @@ export default function TechnicalResearchPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Microscope className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="technology-landscape-analysis-title" className="text-lg font-semibold text-blue-200">
                   Technology Landscape Analysis
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Technology trend identification</li>
-                <li>• Emerging technology assessment</li>
-                <li>• Competitive technology mapping</li>
-                <li>• Technology maturity evaluation</li>
-                <li>• Adoption potential analysis</li>
+                <li id="technology-landscape-analysis-list-element1">• Technology trend identification</li>
+                <li id="technology-landscape-analysis-list-element1">• Emerging technology assessment</li>
+                <li id="technology-landscape-analysis-list-element1">• Competitive technology mapping</li>
+                <li id="technology-landscape-analysis-list-element1">• Technology maturity evaluation</li>
+                <li id="technology-landscape-analysis-list-element1">• Adoption potential analysis</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BookOpen className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="literature-review-title" className="text-lg font-semibold text-cyan-200">
                   Literature Review
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Academic literature analysis</li>
-                <li>• Technical publication review</li>
-                <li>• Research synthesis</li>
-                <li>• State-of-the-art assessment</li>
-                <li>• Knowledge gap identification</li>
+                <li id="technology-landscape-analysis-list-element1">• Academic literature analysis</li>
+                <li id="technology-landscape-analysis-list-element1">• Technical publication review</li>
+                <li id="technology-landscape-analysis-list-element1">• Research synthesis</li>
+                <li id="technology-landscape-analysis-list-element1">• State-of-the-art assessment</li>
+                <li id="technology-landscape-analysis-list-element1">• Knowledge gap identification</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Search className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="patent-ip-research-title" className="text-lg font-semibold text-teal-200">
                   Patent & IP Research
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Patent landscape analysis</li>
-                <li>• Freedom-to-operate assessment</li>
-                <li>• IP strategy recommendations</li>
-                <li>• Competitive IP positioning</li>
-                <li>• Technology protection strategies</li>
+                <li id="technology-landscape-analysis-list-element1">• Patent landscape analysis</li>
+                <li id="technology-landscape-analysis-list-element1">• Freedom-to-operate assessment</li>
+                <li id="technology-landscape-analysis-list-element1">• IP strategy recommendations</li>
+                <li id="technology-landscape-analysis-list-element1">• Competitive IP positioning</li>
+                <li id="technology-landscape-analysis-list-element1">• Technology protection strategies</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="technical-feasibility-title" className="text-lg font-semibold text-emerald-200">
                   Technical Feasibility
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Technical feasibility studies</li>
-                <li>• Risk assessment</li>
-                <li>• Resource requirement analysis</li>
-                <li>• Implementation pathway evaluation</li>
-                <li>• Alternative technology comparison</li>
+                <li id="technology-landscape-analysis-list-element1">• Technical feasibility studies</li>
+                <li id="technology-landscape-analysis-list-element1">• Risk assessment</li>
+                <li id="technology-landscape-analysis-list-element1">• Resource requirement analysis</li>
+                <li id="technology-landscape-analysis-list-element1">• Implementation pathway evaluation</li>
+                <li id="technology-landscape-analysis-list-element1">• Alternative technology comparison</li>
               </ul>
             </div>
           </div>

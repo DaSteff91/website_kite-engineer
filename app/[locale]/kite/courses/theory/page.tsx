@@ -91,49 +91,49 @@ export default function TheoryPage() {
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <TriangleAlert className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="rider-essentials-title" className="text-lg font-semibold text-cyan-200">
                   Rider Essentials
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>
+                <li id="rider-essentials-list-element1">
                   • Behaviour on and around the water: Concepts like karma and
                   the right of way
                 </li>
-                <li>
+                <li id="rider-essentials-list-element1">
                   • Concepts to understand wind: Where it comes from and how you
                   can use it
                 </li>
-                <li>
+                <li id="rider-essentials-list-element1">
                   • Self management and routines: Learn to educate yourself
                 </li>
-                <li>
+                <li id="rider-essentials-list-element1">
                   • General (sailing and Navigation) terminology and expressions
                 </li>
-                <li>• Steps to become more independent</li>
-                <li>• Common mistakes and how to avoid them</li>
+                <li id="rider-essentials-list-element1">• Steps to become more independent</li>
+                <li id="rider-essentials-list-element1">• Common mistakes and how to avoid them</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <PackagePlus className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="advanced-theory-title" className="text-lg font-semibold text-teal-200">
                   Advanced Theory
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• What makes you ride: Concepts of forces and angels</li>
-                <li>
+                <li id="rider-essentials-list-element1">• What makes you ride: Concepts of forces and angels</li>
+                <li id="rider-essentials-list-element1">
                   • More physics: What are aerodynamics and what wind really is
                   and where it comes from
                 </li>
-                <li>
+                <li id="rider-essentials-list-element1">
                   • Overview and details to used materials such boards,
                   wetsuites or kites
                 </li>
-                <li>• How do tricks and maneuvers work: A brake down</li>
-                <li>
+                <li id="rider-essentials-list-element1">• How do tricks and maneuvers work: A brake down</li>
+                <li id="rider-essentials-list-element1">
                   • Next steps in kiteboarding: Additional exercises, lifestyle
                   and nutrition
                 </li>
@@ -143,25 +143,25 @@ export default function TheoryPage() {
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Unplug className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="environmental-stuff-title" className="text-lg font-semibold text-emerald-200">
                   Environmental Stuff
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>
+                <li id="rider-essentials-list-element1">
                   • Environmental influences like what is weather and how you
                   can learn to use it to your advantage
                 </li>
-                <li>
+                <li id="rider-essentials-list-element1">
                   • We are not alone: Learn about the ecosystems where you
                   perfom your sport. Do you know that birds can die because of
                   you?
                 </li>
-                <li>
+                <li id="rider-essentials-list-element1">
                   • Kiteboarding on society level: How can you join an
                   organisation to serve a higher purpose related to kiteboarding
                 </li>
-                <li>
+                <li id="rider-essentials-list-element1">
                   • Laws, regulations and good habits that must be considered
                   when leaving the comfort zone
                 </li>

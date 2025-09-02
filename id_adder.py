@@ -3,7 +3,7 @@
 import os
 import re
 from pathlib import Path
-from typing import Tuple, Optional, Pattern, Match
+from typing import Tuple, Optional, Pattern, Match, List
 
 
 def add_ids_to_page(file_path: str) -> bool:
@@ -24,8 +24,12 @@ def add_ids_to_page(file_path: str) -> bool:
     content, modified1 = _process_content_sections(content, file_path)
     content, modified2 = _process_service_sections(content, file_path)
     content, modified3 = _process_accordion_items(content, file_path)
+    content, modified4 = _process_service_grids(content, file_path)
+
+    # Clean up any malformed tags that might have been created
+    content = _cleanup_malformed_h3_tags(content)
     
-    modified = modified1 or modified2 or modified3
+    modified = modified1 or modified2 or modified3 or modified4
     
     # Write back to file if modifications were made
     if modified:
@@ -208,6 +212,144 @@ def _process_accordion_content(content: str, value: str, clean_value: str, file_
             print(f"Added ID '{content_id}' to accordion content in {file_path}")
     
     return content, modified
+
+
+def _process_service_grids(content: str, file_path: str) -> Tuple[str, bool]:
+    """
+    Process service grid elements by adding IDs to h3 headings and list items.
+    
+    Args:
+        content: The file content to process
+        file_path: Path to the file (for logging)
+        
+    Returns:
+        Tuple of (modified_content, was_modified)
+    """
+    modified = False
+    
+    print(f"\n=== DEBUG: Processing service grids in {file_path} ===")
+    
+    # More flexible pattern to find service grid items
+    # Looks for divs containing both h3 and ul elements (likely service cards)
+    service_grid_pattern: Pattern = re.compile(
+        r'(<div[^>]*>.*?<h3)([^>]*)(>.*?</h3>.*?<ul[^>]*>.*?</ul>.*?</div>)',
+        re.DOTALL | re.IGNORECASE
+    )
+    
+    # Alternative: Look for service-like divs with common class patterns
+    service_class_pattern: Pattern = re.compile(
+        r'(<div[^>]*class="[^"]*(?:bg-|gradient|backdrop|card|service)[^"]*"[^>]*>.*?<h3)([^>]*)(>.*?</h3>.*?<ul[^>]*>.*?</ul>.*?</div>)',
+        re.DOTALL | re.IGNORECASE
+    )
+    
+    # Try both patterns
+    matches = list(service_grid_pattern.finditer(content))
+    if not matches:
+        matches = list(service_class_pattern.finditer(content))
+    
+    print(f"Found {len(matches)} service grid matches")
+    
+    # Find all service grid matches
+    for i, match in enumerate(matches):
+        h3_attrs = match.group(2)
+        h3_content = match.group(3)
+        
+        print(f"\nMatch {i+1}:")
+        print(f"Full match preview: '{match.group(0)[:200]}...'")
+        print(f"h3_attrs: '{h3_attrs}'")
+        
+        # Extract the text from the h3 element
+        h3_text_match = re.search(r'>(.*?)</h3>', h3_content, re.DOTALL)
+        if h3_text_match:
+            h3_text = h3_text_match.group(1).strip()
+            # Clean up text (remove HTML tags, extra spaces)
+            h3_text = re.sub(r'<[^>]*>', '', h3_text)  # Remove any inner HTML tags
+            h3_text = re.sub(r'\s+', ' ', h3_text).strip()  # Normalize whitespace
+            
+            print(f"Extracted h3 text: '{h3_text}'")
+            
+            # Convert to kebab-case for the ID
+            service_id = re.sub(r'[^a-zA-Z0-9]+', '-', h3_text.lower()).strip('-')
+            print(f"Generated service_id: '{service_id}'")
+            
+            # Add ID to h3 if not already present
+            if 'id=' not in h3_attrs:
+                print(f"Adding ID to h3: {service_id}-title")
+                new_h3 = f'<h3 id="{service_id}-title"{h3_attrs}{h3_content}'
+                content = content.replace(match.group(0), f'{match.group(1)}{new_h3}')
+                modified = True
+                print(f"Added ID '{service_id}-title' to service grid heading in {file_path}")
+            else:
+                print("h3 already has an ID attribute")
+            
+            # Process list items within this service grid
+            content, list_modified = _process_service_grid_list_items(content, service_id, match.group(0))
+            modified = modified or list_modified
+        else:
+            print("Could not extract h3 text from content")
+            print(f"h3_content: '{h3_content}'")
+    
+    print(f"=== DEBUG: Finished processing service grids (modified: {modified}) ===\n")
+    return content, modified
+
+
+def _process_service_grid_list_items(content: str, service_id: str, grid_content: str) -> Tuple[str, bool]:
+    """
+    Process list items within a service grid by adding numbered IDs.
+    
+    Args:
+        content: The file content to process
+        service_id: The base ID for the service
+        grid_content: The content of the service grid
+        
+    Returns:
+        Tuple of (modified_content, was_modified)
+    """
+    modified = False
+    
+    # Pattern to find list items within the service grid
+    list_item_pattern: Pattern = re.compile(r'(<li)([^>]*)(>)', re.DOTALL)
+    
+    # Find all list item matches within the grid content
+    list_items = list_item_pattern.finditer(grid_content)
+    
+    for i, match in enumerate(list_items, 1):
+        li_attrs = match.group(2)
+        
+        # Check if ID already exists to avoid duplicates
+        if 'id=' not in li_attrs:
+            li_id = f"{service_id}-list-element{i}"
+            new_li = f'<li id="{li_id}"{li_attrs}{match.group(3)}'
+            # Replace in the original content
+            content = content.replace(match.group(0), new_li)
+            modified = True
+            print(f"Added ID '{li_id}' to list item in service grid")
+    
+    return content, modified
+
+
+def _cleanup_malformed_h3_tags(content: str) -> str:
+    """
+    Clean up malformed H3 tags that have duplicate openings.
+    Example: <h3<h3 id="some-id" className="..."> -> <h3 id="some-id" className="...">
+    
+    Args:
+        content: The file content to clean up
+        
+    Returns:
+        Cleaned content
+    """
+    # Pattern to find malformed h3 tags with duplicate openings
+    malformed_h3_pattern: Pattern = re.compile(r'<h3<h3([^>]*)>', re.IGNORECASE)
+    
+    def replace_malformed(match):
+        # Extract the attributes and return proper h3 tag
+        return f'<h3{match.group(1)}>'
+    
+    # Replace all malformed h3 tags
+    content = malformed_h3_pattern.sub(replace_malformed, content)
+    
+    return content
 
 
 def process_directory(base_dir: str) -> None:

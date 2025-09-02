@@ -82,34 +82,34 @@ export default function ConsultingPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <ShoppingCart className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="general-consulting-title" className="text-lg font-semibold text-blue-200">
                   General Consulting
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Individual equipment recommendations</li>
-                <li>• Transportation, maintenance and logistics</li>
-                <li>• Equipment review and demo testings</li>
-                <li>• Quote review</li>
-                <li>• Karma: Influence on society and the environment</li>
+                <li id="general-consulting-list-element1">• Individual equipment recommendations</li>
+                <li id="general-consulting-list-element1">• Transportation, maintenance and logistics</li>
+                <li id="general-consulting-list-element1">• Equipment review and demo testings</li>
+                <li id="general-consulting-list-element1">• Quote review</li>
+                <li id="general-consulting-list-element1">• Karma: Influence on society and the environment</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Presentation className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="sport-representation-title" className="text-lg font-semibold text-emerald-200">
                   Sport Representation
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>
+                <li id="general-consulting-list-element1">
                   • Public speaking and presentations about sport related topics
                 </li>
-                <li>• Educational workshops for almost all ages</li>
-                <li>• Media interviews and content, also for B2B</li>
-                <li>• Community outreach programs</li>
-                <li>• Sport promotion initiatives</li>
+                <li id="general-consulting-list-element1">• Educational workshops for almost all ages</li>
+                <li id="general-consulting-list-element1">• Media interviews and content, also for B2B</li>
+                <li id="general-consulting-list-element1">• Community outreach programs</li>
+                <li id="general-consulting-list-element1">• Sport promotion initiatives</li>
               </ul>
             </div>
           </div>

@@ -85,64 +85,64 @@ export default function DeviationManagementPage() {
             <div className="bg-gradient-to-br from-emerald-900/20 via-card/20 to-blue-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Navigation2Off className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="change-request-management-title" className="text-lg font-semibold text-emerald-200">
                   Change Request Management
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Deviation documentation</li>
-                <li>• Impact assessment</li>
-                <li>• Change request preparation</li>
-                <li>• Approval workflow management</li>
-                <li>• Implementation tracking</li>
+                <li id="change-request-management-list-element1">• Deviation documentation</li>
+                <li id="change-request-management-list-element1">• Impact assessment</li>
+                <li id="change-request-management-list-element1">• Change request preparation</li>
+                <li id="change-request-management-list-element1">• Approval workflow management</li>
+                <li id="change-request-management-list-element1">• Implementation tracking</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/25 via-card/25 to-cyan-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="stakeholder-communication-title" className="text-lg font-semibold text-blue-200">
                   Stakeholder Communication
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Expectation management</li>
-                <li>• Communication strategy development</li>
-                <li>• External party negotiations</li>
-                <li>• Presentation preparation</li>
-                <li>• Stakeholder alignment</li>
+                <li id="change-request-management-list-element1">• Expectation management</li>
+                <li id="change-request-management-list-element1">• Communication strategy development</li>
+                <li id="change-request-management-list-element1">• External party negotiations</li>
+                <li id="change-request-management-list-element1">• Presentation preparation</li>
+                <li id="change-request-management-list-element1">• Stakeholder alignment</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/30 via-card/30 to-teal-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <AlertTriangle className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="recovery-planning-title" className="text-lg font-semibold text-cyan-200">
                   Recovery Planning
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Recovery strategy development</li>
-                <li>• Action plan creation</li>
-                <li>• Resource reallocation</li>
-                <li>• Timeline adjustment</li>
-                <li>• Progress monitoring</li>
+                <li id="change-request-management-list-element1">• Recovery strategy development</li>
+                <li id="change-request-management-list-element1">• Action plan creation</li>
+                <li id="change-request-management-list-element1">• Resource reallocation</li>
+                <li id="change-request-management-list-element1">• Timeline adjustment</li>
+                <li id="change-request-management-list-element1">• Progress monitoring</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/35 via-card/35 to-emerald-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="lessons-learned-title" className="text-lg font-semibold text-teal-200">
                   Lessons Learned
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Root cause analysis</li>
-                <li>• Deviation documentation</li>
-                <li>• Process improvement recommendations</li>
-                <li>• Knowledge capture and sharing</li>
-                <li>• Preventive measure development</li>
+                <li id="change-request-management-list-element1">• Root cause analysis</li>
+                <li id="change-request-management-list-element1">• Deviation documentation</li>
+                <li id="change-request-management-list-element1">• Process improvement recommendations</li>
+                <li id="change-request-management-list-element1">• Knowledge capture and sharing</li>
+                <li id="change-request-management-list-element1">• Preventive measure development</li>
               </ul>
             </div>
           </div>

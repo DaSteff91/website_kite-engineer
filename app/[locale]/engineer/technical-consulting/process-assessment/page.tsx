@@ -84,64 +84,64 @@ export default function ProcessAssessmentPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileSearch className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="process-evaluation-title" className="text-lg font-semibold text-blue-200">
                   Process Evaluation
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Comprehensive process review</li>
-                <li>• Workflow analysis</li>
-                <li>• Efficiency assessment</li>
-                <li>• Compliance evaluation</li>
-                <li>• Documentation review</li>
+                <li id="process-evaluation-list-element1">• Comprehensive process review</li>
+                <li id="process-evaluation-list-element1">• Workflow analysis</li>
+                <li id="process-evaluation-list-element1">• Efficiency assessment</li>
+                <li id="process-evaluation-list-element1">• Compliance evaluation</li>
+                <li id="process-evaluation-list-element1">• Documentation review</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="bottleneck-identification-title" className="text-lg font-semibold text-cyan-200">
                   Bottleneck Identification
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Constraint analysis</li>
-                <li>• Throughput assessment</li>
-                <li>• Cycle time evaluation</li>
-                <li>• Resource utilization review</li>
-                <li>• Capacity limitation identification</li>
+                <li id="process-evaluation-list-element1">• Constraint analysis</li>
+                <li id="process-evaluation-list-element1">• Throughput assessment</li>
+                <li id="process-evaluation-list-element1">• Cycle time evaluation</li>
+                <li id="process-evaluation-list-element1">• Resource utilization review</li>
+                <li id="process-evaluation-list-element1">• Capacity limitation identification</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Zap className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="improvement-opportunities-title" className="text-lg font-semibold text-teal-200">
                   Improvement Opportunities
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Optimization recommendations</li>
-                <li>• Automation potential assessment</li>
-                <li>• Waste elimination strategies</li>
-                <li>• Quality enhancement opportunities</li>
-                <li>• Cost reduction possibilities</li>
+                <li id="process-evaluation-list-element1">• Optimization recommendations</li>
+                <li id="process-evaluation-list-element1">• Automation potential assessment</li>
+                <li id="process-evaluation-list-element1">• Waste elimination strategies</li>
+                <li id="process-evaluation-list-element1">• Quality enhancement opportunities</li>
+                <li id="process-evaluation-list-element1">• Cost reduction possibilities</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Eye className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="best-practice-benchmarking-title" className="text-lg font-semibold text-emerald-200">
                   Best Practice Benchmarking
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Industry standard comparison</li>
-                <li>• Best practice identification</li>
-                <li>• Performance gap analysis</li>
-                <li>• Competitive positioning</li>
-                <li>• Adoption recommendations</li>
+                <li id="process-evaluation-list-element1">• Industry standard comparison</li>
+                <li id="process-evaluation-list-element1">• Best practice identification</li>
+                <li id="process-evaluation-list-element1">• Performance gap analysis</li>
+                <li id="process-evaluation-list-element1">• Competitive positioning</li>
+                <li id="process-evaluation-list-element1">• Adoption recommendations</li>
               </ul>
             </div>
           </div>

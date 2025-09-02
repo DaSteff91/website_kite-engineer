@@ -85,64 +85,64 @@ export default function MonitoringPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="parameter-selection-title" className="text-lg font-semibold text-blue-200">
                   Parameter Selection
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Critical parameter identification</li>
-                <li>• Monitoring strategy development</li>
-                <li>• Sensor placement optimization</li>
-                <li>• Data collection frequency</li>
-                <li>• Measurement system analysis</li>
+                <li id="parameter-selection-list-element1">• Critical parameter identification</li>
+                <li id="parameter-selection-list-element1">• Monitoring strategy development</li>
+                <li id="parameter-selection-list-element1">• Sensor placement optimization</li>
+                <li id="parameter-selection-list-element1">• Data collection frequency</li>
+                <li id="parameter-selection-list-element1">• Measurement system analysis</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Bell className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="alarm-notification-systems-title" className="text-lg font-semibold text-cyan-200">
                   Alarm & Notification Systems
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Real-time alarm configuration</li>
-                <li>• Multi-level notification systems</li>
-                <li>• Escalation procedures</li>
-                <li>• Mobile alert integration</li>
-                <li>• Alarm rationalization</li>
+                <li id="parameter-selection-list-element1">• Real-time alarm configuration</li>
+                <li id="parameter-selection-list-element1">• Multi-level notification systems</li>
+                <li id="parameter-selection-list-element1">• Escalation procedures</li>
+                <li id="parameter-selection-list-element1">• Mobile alert integration</li>
+                <li id="parameter-selection-list-element1">• Alarm rationalization</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <TrendingUp className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="trend-analysis-title" className="text-lg font-semibold text-teal-200">
                   Trend Analysis
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Historical data analysis</li>
-                <li>• Trend identification and reporting</li>
-                <li>• Predictive trend modeling</li>
-                <li>• Performance drift detection</li>
-                <li>• Long-term stability assessment</li>
+                <li id="parameter-selection-list-element1">• Historical data analysis</li>
+                <li id="parameter-selection-list-element1">• Trend identification and reporting</li>
+                <li id="parameter-selection-list-element1">• Predictive trend modeling</li>
+                <li id="parameter-selection-list-element1">• Performance drift detection</li>
+                <li id="parameter-selection-list-element1">• Long-term stability assessment</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BarChart3 className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="performance-benchmarking-title" className="text-lg font-semibold text-emerald-200">
                   Performance Benchmarking
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Baseline establishment</li>
-                <li>• Performance metrics definition</li>
-                <li>• Comparative analysis</li>
-                <li>• Industry benchmarking</li>
-                <li>• Continuous improvement tracking</li>
+                <li id="parameter-selection-list-element1">• Baseline establishment</li>
+                <li id="parameter-selection-list-element1">• Performance metrics definition</li>
+                <li id="parameter-selection-list-element1">• Comparative analysis</li>
+                <li id="parameter-selection-list-element1">• Industry benchmarking</li>
+                <li id="parameter-selection-list-element1">• Continuous improvement tracking</li>
               </ul>
             </div>
           </div>

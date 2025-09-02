@@ -85,64 +85,64 @@ export default function ProcessOptimizationPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Gauge className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="six-sigma-methodologies-title" className="text-lg font-semibold text-blue-200">
                   Six Sigma Methodologies
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• DMAIC project execution</li>
-                <li>• Statistical analysis and hypothesis testing</li>
-                <li>• Root cause analysis</li>
-                <li>• Process capability studies</li>
-                <li>• Defect reduction strategies</li>
+                <li id="six-sigma-methodologies-list-element1">• DMAIC project execution</li>
+                <li id="six-sigma-methodologies-list-element1">• Statistical analysis and hypothesis testing</li>
+                <li id="six-sigma-methodologies-list-element1">• Root cause analysis</li>
+                <li id="six-sigma-methodologies-list-element1">• Process capability studies</li>
+                <li id="six-sigma-methodologies-list-element1">• Defect reduction strategies</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <TrendingUp className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="lean-manufacturing-title" className="text-lg font-semibold text-cyan-200">
                   Lean Manufacturing
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Waste elimination (8 wastes)</li>
-                <li>• Value stream mapping</li>
-                <li>• 5S workplace organization</li>
-                <li>• Kaizen continuous improvement</li>
-                <li>• Just-in-time implementation</li>
+                <li id="six-sigma-methodologies-list-element1">• Waste elimination (8 wastes)</li>
+                <li id="six-sigma-methodologies-list-element1">• Value stream mapping</li>
+                <li id="six-sigma-methodologies-list-element1">• 5S workplace organization</li>
+                <li id="six-sigma-methodologies-list-element1">• Kaizen continuous improvement</li>
+                <li id="six-sigma-methodologies-list-element1">• Just-in-time implementation</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BarChart3 className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="design-of-experiments-title" className="text-lg font-semibold text-teal-200">
                   Design of Experiments
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Factorial design planning</li>
-                <li>• Response surface methodology</li>
-                <li>• Optimization studies</li>
-                <li>• Robust parameter design</li>
-                <li>• Statistical modeling</li>
+                <li id="six-sigma-methodologies-list-element1">• Factorial design planning</li>
+                <li id="six-sigma-methodologies-list-element1">• Response surface methodology</li>
+                <li id="six-sigma-methodologies-list-element1">• Optimization studies</li>
+                <li id="six-sigma-methodologies-list-element1">• Robust parameter design</li>
+                <li id="six-sigma-methodologies-list-element1">• Statistical modeling</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="yield-enhancement-title" className="text-lg font-semibold text-emerald-200">
                   Yield Enhancement
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Yield analysis and improvement</li>
-                <li>• Pareto analysis for prioritization</li>
-                <li>• Process efficiency metrics</li>
-                <li>• Cost reduction strategies</li>
-                <li>• Performance benchmarking</li>
+                <li id="six-sigma-methodologies-list-element1">• Yield analysis and improvement</li>
+                <li id="six-sigma-methodologies-list-element1">• Pareto analysis for prioritization</li>
+                <li id="six-sigma-methodologies-list-element1">• Process efficiency metrics</li>
+                <li id="six-sigma-methodologies-list-element1">• Cost reduction strategies</li>
+                <li id="six-sigma-methodologies-list-element1">• Performance benchmarking</li>
               </ul>
             </div>
           </div>

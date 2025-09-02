@@ -85,64 +85,64 @@ export default function ProjectSetupPage() {
             <div className="bg-gradient-to-br from-emerald-900/20 via-card/20 to-blue-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FolderKanban className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="project-scope-definition-title" className="text-lg font-semibold text-emerald-200">
                   Project Scope Definition
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Comprehensive scope documentation</li>
-                <li>• Requirements gathering and analysis</li>
-                <li>• Project boundaries definition</li>
-                <li>• Deliverables specification</li>
-                <li>• Acceptance criteria establishment</li>
+                <li id="project-scope-definition-list-element1">• Comprehensive scope documentation</li>
+                <li id="project-scope-definition-list-element1">• Requirements gathering and analysis</li>
+                <li id="project-scope-definition-list-element1">• Project boundaries definition</li>
+                <li id="project-scope-definition-list-element1">• Deliverables specification</li>
+                <li id="project-scope-definition-list-element1">• Acceptance criteria establishment</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/25 via-card/25 to-cyan-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="work-breakdown-structure-title" className="text-lg font-semibold text-blue-200">
                   Work Breakdown Structure
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Hierarchical task decomposition</li>
-                <li>• Detailed activity definition</li>
-                <li>• Effort estimation</li>
-                <li>• Dependency identification</li>
-                <li>• Critical path analysis</li>
+                <li id="project-scope-definition-list-element1">• Hierarchical task decomposition</li>
+                <li id="project-scope-definition-list-element1">• Detailed activity definition</li>
+                <li id="project-scope-definition-list-element1">• Effort estimation</li>
+                <li id="project-scope-definition-list-element1">• Dependency identification</li>
+                <li id="project-scope-definition-list-element1">• Critical path analysis</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/30 via-card/30 to-teal-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="resource-planning-title" className="text-lg font-semibold text-cyan-200">
                   Resource Planning
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Resource allocation strategies</li>
-                <li>• Skill matrix development</li>
-                <li>• Capacity planning</li>
-                <li>• Budget allocation</li>
-                <li>• Resource leveling techniques</li>
+                <li id="project-scope-definition-list-element1">• Resource allocation strategies</li>
+                <li id="project-scope-definition-list-element1">• Skill matrix development</li>
+                <li id="project-scope-definition-list-element1">• Capacity planning</li>
+                <li id="project-scope-definition-list-element1">• Budget allocation</li>
+                <li id="project-scope-definition-list-element1">• Resource leveling techniques</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/35 via-card/35 to-emerald-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="risk-assessment-title" className="text-lg font-semibold text-teal-200">
                   Risk Assessment
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Risk identification workshops</li>
-                <li>• Probability and impact analysis</li>
-                <li>• Mitigation strategy development</li>
-                <li>• Contingency planning</li>
-                <li>• Risk monitoring framework</li>
+                <li id="project-scope-definition-list-element1">• Risk identification workshops</li>
+                <li id="project-scope-definition-list-element1">• Probability and impact analysis</li>
+                <li id="project-scope-definition-list-element1">• Mitigation strategy development</li>
+                <li id="project-scope-definition-list-element1">• Contingency planning</li>
+                <li id="project-scope-definition-list-element1">• Risk monitoring framework</li>
               </ul>
             </div>
           </div>

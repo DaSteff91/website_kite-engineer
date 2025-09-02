@@ -84,64 +84,64 @@ export default function WorkflowAutomationPage() {
             <div className="bg-gradient-to-br from-teal-900/20 via-card/20 to-emerald-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Network className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="process-automation-title" className="text-lg font-semibold text-teal-200">
                   Process Automation
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Repetitive task elimination</li>
-                <li>• Business process automation</li>
-                <li>• Document processing workflows</li>
-                <li>• Data entry automation</li>
-                <li>• Report generation automation</li>
+                <li id="process-automation-list-element1">• Repetitive task elimination</li>
+                <li id="process-automation-list-element1">• Business process automation</li>
+                <li id="process-automation-list-element1">• Document processing workflows</li>
+                <li id="process-automation-list-element1">• Data entry automation</li>
+                <li id="process-automation-list-element1">• Report generation automation</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/25 via-card/25 to-blue-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Workflow className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="workflow-orchestration-title" className="text-lg font-semibold text-emerald-200">
                   Workflow Orchestration
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Multi-step workflow design</li>
-                <li>• Conditional logic implementation</li>
-                <li>• Error handling and recovery</li>
-                <li>• Workflow monitoring and logging</li>
-                <li>• Performance optimization</li>
+                <li id="process-automation-list-element1">• Multi-step workflow design</li>
+                <li id="process-automation-list-element1">• Conditional logic implementation</li>
+                <li id="process-automation-list-element1">• Error handling and recovery</li>
+                <li id="process-automation-list-element1">• Workflow monitoring and logging</li>
+                <li id="process-automation-list-element1">• Performance optimization</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/30 via-card/30 to-cyan-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Zap className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="integration-solutions-title" className="text-lg font-semibold text-blue-200">
                   Integration Solutions
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Existing software integration</li>
-                <li>• API connectivity and automation</li>
-                <li>• Data synchronization</li>
-                <li>• Third-party service integration</li>
-                <li>• Legacy system connectivity</li>
+                <li id="process-automation-list-element1">• Existing software integration</li>
+                <li id="process-automation-list-element1">• API connectivity and automation</li>
+                <li id="process-automation-list-element1">• Data synchronization</li>
+                <li id="process-automation-list-element1">• Third-party service integration</li>
+                <li id="process-automation-list-element1">• Legacy system connectivity</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/35 via-card/35 to-teal-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Clock className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="monitoring-alerting-title" className="text-lg font-semibold text-cyan-200">
                   Monitoring & Alerting
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Real-time workflow monitoring</li>
-                <li>• Automated alert systems</li>
-                <li>• Performance metrics tracking</li>
-                <li>• Failure detection and notification</li>
-                <li>• Audit trail and compliance</li>
+                <li id="process-automation-list-element1">• Real-time workflow monitoring</li>
+                <li id="process-automation-list-element1">• Automated alert systems</li>
+                <li id="process-automation-list-element1">• Performance metrics tracking</li>
+                <li id="process-automation-list-element1">• Failure detection and notification</li>
+                <li id="process-automation-list-element1">• Audit trail and compliance</li>
               </ul>
             </div>
           </div>

@@ -84,64 +84,64 @@ export default function CompetitorAnalysisPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <UserRoundCheck className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="competitor-technology-analysis-title" className="text-lg font-semibold text-blue-200">
                   Competitor Technology Analysis
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Technology stack assessment</li>
-                <li>• Product feature comparison</li>
-                <li>• Technical capability evaluation</li>
-                <li>• Innovation trajectory analysis</li>
-                <li>• Technology gap identification</li>
+                <li id="competitor-technology-analysis-list-element1">• Technology stack assessment</li>
+                <li id="competitor-technology-analysis-list-element1">• Product feature comparison</li>
+                <li id="competitor-technology-analysis-list-element1">• Technical capability evaluation</li>
+                <li id="competitor-technology-analysis-list-element1">• Innovation trajectory analysis</li>
+                <li id="competitor-technology-analysis-list-element1">• Technology gap identification</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="market-positioning-title" className="text-lg font-semibold text-cyan-200">
                   Market Positioning
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Competitive landscape mapping</li>
-                <li>• Market share analysis</li>
-                <li>• Positioning strategy assessment</li>
-                <li>• Value proposition comparison</li>
-                <li>• Differentiation opportunity identification</li>
+                <li id="competitor-technology-analysis-list-element1">• Competitive landscape mapping</li>
+                <li id="competitor-technology-analysis-list-element1">• Market share analysis</li>
+                <li id="competitor-technology-analysis-list-element1">• Positioning strategy assessment</li>
+                <li id="competitor-technology-analysis-list-element1">• Value proposition comparison</li>
+                <li id="competitor-technology-analysis-list-element1">• Differentiation opportunity identification</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Search className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="strategic-intelligence-title" className="text-lg font-semibold text-teal-200">
                   Strategic Intelligence
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Strategic direction analysis</li>
-                <li>• Investment pattern identification</li>
-                <li>• Partnership and alliance assessment</li>
-                <li>• Expansion strategy evaluation</li>
-                <li>• Future trajectory prediction</li>
+                <li id="competitor-technology-analysis-list-element1">• Strategic direction analysis</li>
+                <li id="competitor-technology-analysis-list-element1">• Investment pattern identification</li>
+                <li id="competitor-technology-analysis-list-element1">• Partnership and alliance assessment</li>
+                <li id="competitor-technology-analysis-list-element1">• Expansion strategy evaluation</li>
+                <li id="competitor-technology-analysis-list-element1">• Future trajectory prediction</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="competitive-advantage-title" className="text-lg font-semibold text-emerald-200">
                   Competitive Advantage
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Strength and weakness analysis</li>
-                <li>• Competitive advantage identification</li>
-                <li>• Opportunity assessment</li>
-                <li>• Threat evaluation</li>
-                <li>• Strategic recommendation development</li>
+                <li id="competitor-technology-analysis-list-element1">• Strength and weakness analysis</li>
+                <li id="competitor-technology-analysis-list-element1">• Competitive advantage identification</li>
+                <li id="competitor-technology-analysis-list-element1">• Opportunity assessment</li>
+                <li id="competitor-technology-analysis-list-element1">• Threat evaluation</li>
+                <li id="competitor-technology-analysis-list-element1">• Strategic recommendation development</li>
               </ul>
             </div>
           </div>

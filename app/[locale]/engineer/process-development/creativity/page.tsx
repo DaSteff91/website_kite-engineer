@@ -84,7 +84,7 @@ export default function CreativityPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
+                <h3 id="creativity-techniques-and-problem-solving-title" className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
                   <Brain className="h-6 w-6 text-teal-400" />
                   Creativity Techniques and Problem-Solving
                 </h3>
@@ -98,14 +98,14 @@ export default function CreativityPage() {
                   complete workshop combining it with other services:
                 </p>
                 <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
-                  <li>TRIZ - theory of inventive problem solving.</li>
-                  <li>
+                  <li id="creativity-techniques-and-problem-solving-list-element1">TRIZ - theory of inventive problem solving.</li>
+                  <li id="creativity-techniques-and-problem-solving-list-element1">
                     Idea Generation Techniques - brain storming or brain
                     writing.
                   </li>
-                  <li>Six Thinking Hats.</li>
-                  <li>Lateral Thinking Process.</li>
-                  <li>Random-word, image, sound, or article technique.</li>
+                  <li id="creativity-techniques-and-problem-solving-list-element1">Six Thinking Hats.</li>
+                  <li id="creativity-techniques-and-problem-solving-list-element1">Lateral Thinking Process.</li>
+                  <li id="creativity-techniques-and-problem-solving-list-element1">Random-word, image, sound, or article technique.</li>
                 </ul>
               </div>
             </div>
@@ -115,64 +115,64 @@ export default function CreativityPage() {
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Lightbulb className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="advanced-brainstorming-title" className="text-lg font-semibold text-cyan-200">
                   Advanced Brainstorming
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• TRIZ methodology application</li>
-                <li>• Systematic inventive thinking</li>
-                <li>• Contradiction resolution techniques</li>
-                <li>• Pattern-based innovation</li>
-                <li>• Cross-industry solution transfer</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• TRIZ methodology application</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Systematic inventive thinking</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Contradiction resolution techniques</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Pattern-based innovation</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Cross-industry solution transfer</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Brain className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="design-thinking-workshops-title" className="text-lg font-semibold text-teal-200">
                   Design Thinking Workshops
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Human-centered design approach</li>
-                <li>• Empathy mapping and user journey</li>
-                <li>• Ideation and prototyping sessions</li>
-                <li>• Cross-functional team facilitation</li>
-                <li>• Rapid iteration and testing</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Human-centered design approach</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Empathy mapping and user journey</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Ideation and prototyping sessions</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Cross-functional team facilitation</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Rapid iteration and testing</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Zap className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="innovation-pipeline-title" className="text-lg font-semibold text-emerald-200">
                   Innovation Pipeline
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Idea generation frameworks</li>
-                <li>• Innovation funnel management</li>
-                <li>• Concept evaluation criteria</li>
-                <li>• Portfolio optimization</li>
-                <li>• Innovation metrics and KPIs</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Idea generation frameworks</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Innovation funnel management</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Concept evaluation criteria</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Portfolio optimization</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Innovation metrics and KPIs</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/35 via-card/35 to-cyan-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="breakthrough-solutions-title" className="text-lg font-semibold text-blue-200">
                   Breakthrough Solutions
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Lateral thinking techniques</li>
-                <li>• Biomimicry and nature-inspired solutions</li>
-                <li>• Analogical problem solving</li>
-                <li>• Constraint removal strategies</li>
-                <li>• Paradigm shift identification</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Lateral thinking techniques</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Biomimicry and nature-inspired solutions</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Analogical problem solving</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Constraint removal strategies</li>
+                <li id="creativity-techniques-and-problem-solving-list-element1">• Paradigm shift identification</li>
               </ul>
             </div>
           </div>

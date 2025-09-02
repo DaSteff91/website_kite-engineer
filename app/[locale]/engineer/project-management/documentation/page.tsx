@@ -85,64 +85,64 @@ export default function DocumentationPage() {
             <div className="bg-gradient-to-br from-teal-900/20 via-card/20 to-emerald-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <GitBranch className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="version-control-title" className="text-lg font-semibold text-teal-200">
                   Version Control
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Git-based version control setup</li>
-                <li>• Branching strategy development</li>
-                <li>• Document versioning systems</li>
-                <li>• Change history tracking</li>
-                <li>• Conflict resolution procedures</li>
+                <li id="version-control-list-element1">• Git-based version control setup</li>
+                <li id="version-control-list-element1">• Branching strategy development</li>
+                <li id="version-control-list-element1">• Document versioning systems</li>
+                <li id="version-control-list-element1">• Change history tracking</li>
+                <li id="version-control-list-element1">• Conflict resolution procedures</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/25 via-card/25 to-blue-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Share2 className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="collaborative-workspace-title" className="text-lg font-semibold text-emerald-200">
                   Collaborative Workspace
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Shared workspace configuration</li>
-                <li>• Cloud-based collaboration tools</li>
-                <li>• Real-time editing capabilities</li>
-                <li>• Access control and permissions</li>
-                <li>• Cross-platform compatibility</li>
+                <li id="version-control-list-element1">• Shared workspace configuration</li>
+                <li id="version-control-list-element1">• Cloud-based collaboration tools</li>
+                <li id="version-control-list-element1">• Real-time editing capabilities</li>
+                <li id="version-control-list-element1">• Access control and permissions</li>
+                <li id="version-control-list-element1">• Cross-platform compatibility</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/30 via-card/30 to-cyan-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="knowledge-management-title" className="text-lg font-semibold text-blue-200">
                   Knowledge Management
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Knowledge base development</li>
-                <li>• Documentation standards</li>
-                <li>• Information architecture design</li>
-                <li>• Search and retrieval optimization</li>
-                <li>• Knowledge retention strategies</li>
+                <li id="version-control-list-element1">• Knowledge base development</li>
+                <li id="version-control-list-element1">• Documentation standards</li>
+                <li id="version-control-list-element1">• Information architecture design</li>
+                <li id="version-control-list-element1">• Search and retrieval optimization</li>
+                <li id="version-control-list-element1">• Knowledge retention strategies</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/35 via-card/35 to-teal-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="team-synergy-title" className="text-lg font-semibold text-cyan-200">
                   Team Synergy
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Collaboration workflow design</li>
-                <li>• Communication protocol development</li>
-                <li>• Team integration strategies</li>
-                <li>• Cross-functional coordination</li>
-                <li>• Collaborative culture building</li>
+                <li id="version-control-list-element1">• Collaboration workflow design</li>
+                <li id="version-control-list-element1">• Communication protocol development</li>
+                <li id="version-control-list-element1">• Team integration strategies</li>
+                <li id="version-control-list-element1">• Cross-functional coordination</li>
+                <li id="version-control-list-element1">• Collaborative culture building</li>
               </ul>
             </div>
           </div>

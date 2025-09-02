@@ -83,93 +83,93 @@ export default function TravelServicesPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Plane className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="trip-organization-title" className="text-lg font-semibold text-blue-200">
                   Trip Organization
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Trip planning and coordination</li>
-                <li>• Transfer arrangements</li>
-                <li>• Budget and timetable planing</li>
-                <li>• Health and insurance considerations</li>
+                <li id="trip-organization-list-element1">• Trip planning and coordination</li>
+                <li id="trip-organization-list-element1">• Transfer arrangements</li>
+                <li id="trip-organization-list-element1">• Budget and timetable planing</li>
+                <li id="trip-organization-list-element1">• Health and insurance considerations</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <DumbbellIcon className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="personal-coaching-title" className="text-lg font-semibold text-cyan-200">
                   Personal Coaching
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Kite instructor services</li>
-                <li>• Functional fitness and HIIT coaching</li>
-                <li>• Master of your schedule</li>
-                <li>• Progress documentaion</li>
+                <li id="trip-organization-list-element1">• Kite instructor services</li>
+                <li id="trip-organization-list-element1">• Functional fitness and HIIT coaching</li>
+                <li id="trip-organization-list-element1">• Master of your schedule</li>
+                <li id="trip-organization-list-element1">• Progress documentaion</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="travel-buddy-title" className="text-lg font-semibold text-teal-200">
                   Travel Buddy
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Have fun: I am also a human</li>
-                <li>• Trip documentaion</li>
-                <li>• Organization of general activities</li>
-                <li>• Sharing expenses of daily needs</li>
+                <li id="trip-organization-list-element1">• Have fun: I am also a human</li>
+                <li id="trip-organization-list-element1">• Trip documentaion</li>
+                <li id="trip-organization-list-element1">• Organization of general activities</li>
+                <li id="trip-organization-list-element1">• Sharing expenses of daily needs</li>
               </ul>
             </div>
             {/* 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="trip-planning-title" className="text-lg font-semibold text-emerald-200">
                   Trip Planning
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Optimal timing recommendations</li>
-                <li>• Itinerary development</li>
-                <li>• Budget planning and optimization</li>
-                <li>• Equipment rental coordination</li>
-                <li>• Travel insurance guidance</li>
+                <li id="trip-organization-list-element1">• Optimal timing recommendations</li>
+                <li id="trip-organization-list-element1">• Itinerary development</li>
+                <li id="trip-organization-list-element1">• Budget planning and optimization</li>
+                <li id="trip-organization-list-element1">• Equipment rental coordination</li>
+                <li id="trip-organization-list-element1">• Travel insurance guidance</li>
               </ul>
             </div> */}
 
             {/* <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Camera className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="documentation-title" className="text-lg font-semibold text-blue-200">
                   Documentation
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Professional photo sessions</li>
-                <li>• Video documentation of progress</li>
-                <li>• Drone footage coordination</li>
-                <li>• Social media content creation</li>
-                <li>• Trip memory preservation</li>
+                <li id="trip-organization-list-element1">• Professional photo sessions</li>
+                <li id="trip-organization-list-element1">• Video documentation of progress</li>
+                <li id="trip-organization-list-element1">• Drone footage coordination</li>
+                <li id="trip-organization-list-element1">• Social media content creation</li>
+                <li id="trip-organization-list-element1">• Trip memory preservation</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/45 via-card/45 to-teal-900/45 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Compass className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="adventure-guidance-title" className="text-lg font-semibold text-cyan-200">
                   Adventure Guidance
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Safety protocols for new locations</li>
-                <li>• Local emergency contacts</li>
-                <li>• Cultural sensitivity training</li>
-                <li>• Equipment transportation tips</li>
-                <li>• Travel logistics support</li>
+                <li id="trip-organization-list-element1">• Safety protocols for new locations</li>
+                <li id="trip-organization-list-element1">• Local emergency contacts</li>
+                <li id="trip-organization-list-element1">• Cultural sensitivity training</li>
+                <li id="trip-organization-list-element1">• Equipment transportation tips</li>
+                <li id="trip-organization-list-element1">• Travel logistics support</li>
               </ul>
             </div> */}
           </div>

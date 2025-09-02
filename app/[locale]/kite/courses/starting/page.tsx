@@ -89,38 +89,38 @@ export default function StartingPage() {
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <UserRoundSearch className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">Who?</h3>
+                <h3 id="who-title" className="text-lg font-semibold text-cyan-200">Who?</h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Individuals or groups</li>
-                <li>• Schools or private</li>
-                <li>• Courses in German, English and Portugues</li>
-                <li>• Practical lessons: max. 4 people</li>
-                <li>• Theory lessons: max. 30 people</li>
-                <li>• No age limits but more then 30kg of weight</li>
-                <li>
+                <li id="who-list-element1">• Individuals or groups</li>
+                <li id="who-list-element1">• Schools or private</li>
+                <li id="who-list-element1">• Courses in German, English and Portugues</li>
+                <li id="who-list-element1">• Practical lessons: max. 4 people</li>
+                <li id="who-list-element1">• Theory lessons: max. 30 people</li>
+                <li id="who-list-element1">• No age limits but more then 30kg of weight</li>
+                <li id="who-list-element1">
                   • Must be able to swim securely for more then a few minutes
                 </li>
-                <li>• Starter = You never used a kite before in your life</li>
-                <li>• Restarter = You used a kite before in your life</li>
+                <li id="who-list-element1">• Starter = You never used a kite before in your life</li>
+                <li id="who-list-element1">• Restarter = You used a kite before in your life</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <ListCheck className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">Content</h3>
+                <h3 id="content-title" className="text-lg font-semibold text-teal-200">Content</h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Introduction and safety basics</li>
-                <li>• Equipment familiarization and setup</li>
-                <li>• Basic kite control witout board</li>
-                <li>• Body dragging techniques</li>
-                <li>• Advanced kite steering techniques</li>
-                <li>• Water start fundamentals and first few meters</li>
-                <li>• Theory lessons when necessary</li>
-                <li>• Orientation on the water and dangers</li>
-                <li>
+                <li id="who-list-element1">• Introduction and safety basics</li>
+                <li id="who-list-element1">• Equipment familiarization and setup</li>
+                <li id="who-list-element1">• Basic kite control witout board</li>
+                <li id="who-list-element1">• Body dragging techniques</li>
+                <li id="who-list-element1">• Advanced kite steering techniques</li>
+                <li id="who-list-element1">• Water start fundamentals and first few meters</li>
+                <li id="who-list-element1">• Theory lessons when necessary</li>
+                <li id="who-list-element1">• Orientation on the water and dangers</li>
+                <li id="who-list-element1">
                   • Student can safely practise water starts on their own after
                   the course
                 </li>
@@ -130,22 +130,22 @@ export default function StartingPage() {
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Clock className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="structure-title" className="text-lg font-semibold text-emerald-200">
                   Structure
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Up to 5 days intensive programs</li>
-                <li>
+                <li id="who-list-element1">• Up to 5 days intensive programs</li>
+                <li id="who-list-element1">
                   • Flexible scheduling options, based on environmental and
                   personal conditions
                 </li>
-                <li>• Buddy system: 2 people per Kite</li>
-                <li>• Individual: 1 person, 1 Kite</li>
-                <li>• Supervision-only format possible</li>
-                <li>• If available: Headset and video support</li>
-                <li>• Progress tracking and VDWS certification</li>
-                <li>
+                <li id="who-list-element1">• Buddy system: 2 people per Kite</li>
+                <li id="who-list-element1">• Individual: 1 person, 1 Kite</li>
+                <li id="who-list-element1">• Supervision-only format possible</li>
+                <li id="who-list-element1">• If available: Headset and video support</li>
+                <li id="who-list-element1">• Progress tracking and VDWS certification</li>
+                <li id="who-list-element1">
                   • No-wind alternatives: Simulations, wakeboarding,
                   landboarding, SUP, exercising,....
                 </li>

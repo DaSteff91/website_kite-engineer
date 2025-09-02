@@ -84,64 +84,64 @@ export default function TrainingKnowledgeTransferPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <GraduationCap className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="technical-training-programs-title" className="text-lg font-semibold text-blue-200">
                   Technical Training Programs
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Customized training curriculum</li>
-                <li>• Hands-on technical workshops</li>
-                <li>• Process-specific training</li>
-                <li>• Software and tool training</li>
-                <li>• Technical skill development</li>
+                <li id="technical-training-programs-list-element1">• Customized training curriculum</li>
+                <li id="technical-training-programs-list-element1">• Hands-on technical workshops</li>
+                <li id="technical-training-programs-list-element1">• Process-specific training</li>
+                <li id="technical-training-programs-list-element1">• Software and tool training</li>
+                <li id="technical-training-programs-list-element1">• Technical skill development</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="knowledge-sharing-workshops-title" className="text-lg font-semibold text-cyan-200">
                   Knowledge Sharing Workshops
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Interactive knowledge sessions</li>
-                <li>• Cross-functional knowledge sharing</li>
-                <li>• Best practice dissemination</li>
-                <li>• Lessons learned workshops</li>
-                <li>• Collaborative problem-solving</li>
+                <li id="technical-training-programs-list-element1">• Interactive knowledge sessions</li>
+                <li id="technical-training-programs-list-element1">• Cross-functional knowledge sharing</li>
+                <li id="technical-training-programs-list-element1">• Best practice dissemination</li>
+                <li id="technical-training-programs-list-element1">• Lessons learned workshops</li>
+                <li id="technical-training-programs-list-element1">• Collaborative problem-solving</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BookOpen className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="documentation-development-title" className="text-lg font-semibold text-teal-200">
                   Documentation Development
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Technical documentation creation</li>
-                <li>• Process documentation</li>
-                <li>• Standard operating procedures</li>
-                <li>• Training materials development</li>
-                <li>• Knowledge base creation</li>
+                <li id="technical-training-programs-list-element1">• Technical documentation creation</li>
+                <li id="technical-training-programs-list-element1">• Process documentation</li>
+                <li id="technical-training-programs-list-element1">• Standard operating procedures</li>
+                <li id="technical-training-programs-list-element1">• Training materials development</li>
+                <li id="technical-training-programs-list-element1">• Knowledge base creation</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="skill-development-planning-title" className="text-lg font-semibold text-emerald-200">
                   Skill Development Planning
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Skill gap analysis</li>
-                <li>• Development roadmap creation</li>
-                <li>• Learning path definition</li>
-                <li>• Progress tracking methods</li>
-                <li>• Continuous improvement planning</li>
+                <li id="technical-training-programs-list-element1">• Skill gap analysis</li>
+                <li id="technical-training-programs-list-element1">• Development roadmap creation</li>
+                <li id="technical-training-programs-list-element1">• Learning path definition</li>
+                <li id="technical-training-programs-list-element1">• Progress tracking methods</li>
+                <li id="technical-training-programs-list-element1">• Continuous improvement planning</li>
               </ul>
             </div>
           </div>

@@ -85,64 +85,64 @@ export default function ChangeManagementPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <RefreshCw className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="process-change-documentation-title" className="text-lg font-semibold text-blue-200">
                   Process Change Documentation
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Change request documentation</li>
-                <li>• Impact assessment reports</li>
-                <li>• Risk analysis and mitigation</li>
-                <li>• Approval workflow management</li>
-                <li>• Change implementation tracking</li>
+                <li id="process-change-documentation-list-element1">• Change request documentation</li>
+                <li id="process-change-documentation-list-element1">• Impact assessment reports</li>
+                <li id="process-change-documentation-list-element1">• Risk analysis and mitigation</li>
+                <li id="process-change-documentation-list-element1">• Approval workflow management</li>
+                <li id="process-change-documentation-list-element1">• Change implementation tracking</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="release-gate-management-title" className="text-lg font-semibold text-cyan-200">
                   Release Gate Management
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Gate criteria definition</li>
-                <li>• Milestone preparation</li>
-                <li>• Review and approval processes</li>
-                <li>• Quality gate implementation</li>
-                <li>• Release readiness assessment</li>
+                <li id="process-change-documentation-list-element1">• Gate criteria definition</li>
+                <li id="process-change-documentation-list-element1">• Milestone preparation</li>
+                <li id="process-change-documentation-list-element1">• Review and approval processes</li>
+                <li id="process-change-documentation-list-element1">• Quality gate implementation</li>
+                <li id="process-change-documentation-list-element1">• Release readiness assessment</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <GitBranch className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="traceability-systems-title" className="text-lg font-semibold text-teal-200">
                   Traceability Systems
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Version control protocols</li>
-                <li>• Change history tracking</li>
-                <li>• Audit trail maintenance</li>
-                <li>• Document version management</li>
-                <li>• Compliance documentation</li>
+                <li id="process-change-documentation-list-element1">• Version control protocols</li>
+                <li id="process-change-documentation-list-element1">• Change history tracking</li>
+                <li id="process-change-documentation-list-element1">• Audit trail maintenance</li>
+                <li id="process-change-documentation-list-element1">• Document version management</li>
+                <li id="process-change-documentation-list-element1">• Compliance documentation</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="compliance-audit-support-title" className="text-lg font-semibold text-emerald-200">
                   Compliance & Audit Support
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Regulatory compliance management</li>
-                <li>• Audit preparation and support</li>
-                <li>• Standard operating procedures</li>
-                <li>• Quality system documentation</li>
-                <li>• Corrective action tracking</li>
+                <li id="process-change-documentation-list-element1">• Regulatory compliance management</li>
+                <li id="process-change-documentation-list-element1">• Audit preparation and support</li>
+                <li id="process-change-documentation-list-element1">• Standard operating procedures</li>
+                <li id="process-change-documentation-list-element1">• Quality system documentation</li>
+                <li id="process-change-documentation-list-element1">• Corrective action tracking</li>
               </ul>
             </div>
           </div>

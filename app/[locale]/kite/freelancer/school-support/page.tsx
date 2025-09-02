@@ -87,103 +87,103 @@ export default function SchoolSupportPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Drama className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="instructor-services-title" className="text-lg font-semibold text-blue-200">
                   Instructor Services
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• VDWS certified instructor since 2023</li>
-                <li>• Beginner to advanced lessons</li>
-                <li>• Landboarding lessons</li>
-                <li>• Multi-language support (German, English, Portuguese)</li>
-                <li>• Group and individual sessions</li>
-                <li>• Supervision and filming</li>
+                <li id="instructor-services-list-element1">• VDWS certified instructor since 2023</li>
+                <li id="instructor-services-list-element1">• Beginner to advanced lessons</li>
+                <li id="instructor-services-list-element1">• Landboarding lessons</li>
+                <li id="instructor-services-list-element1">• Multi-language support (German, English, Portuguese)</li>
+                <li id="instructor-services-list-element1">• Group and individual sessions</li>
+                <li id="instructor-services-list-element1">• Supervision and filming</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="general-assistance-title" className="text-lg font-semibold text-cyan-200">
                   General Assistance
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Office and administration</li>
-                <li>• Customer service and sales support</li>
-                <li>• Equipment recommendations</li>
-                <li>• Gear maintenance and repairs</li>
-                <li>• Inventory management and logistics</li>
-                <li>• Product demonstrations</li>
-                <li>• Helping hand in day to day tasks</li>
+                <li id="instructor-services-list-element1">• Office and administration</li>
+                <li id="instructor-services-list-element1">• Customer service and sales support</li>
+                <li id="instructor-services-list-element1">• Equipment recommendations</li>
+                <li id="instructor-services-list-element1">• Gear maintenance and repairs</li>
+                <li id="instructor-services-list-element1">• Inventory management and logistics</li>
+                <li id="instructor-services-list-element1">• Product demonstrations</li>
+                <li id="instructor-services-list-element1">• Helping hand in day to day tasks</li>
               </ul>
             </div>
 
             {/* <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <MapPin className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="beach-management-title" className="text-lg font-semibold text-teal-200">
                   Beach Management
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Beach setup and organization</li>
-                <li>• Safety area management</li>
-                <li>• Equipment handling and storage</li>
-                <li>• Weather condition assessment</li>
-                <li>• Emergency response protocols</li>
+                <li id="instructor-services-list-element1">• Beach setup and organization</li>
+                <li id="instructor-services-list-element1">• Safety area management</li>
+                <li id="instructor-services-list-element1">• Equipment handling and storage</li>
+                <li id="instructor-services-list-element1">• Weather condition assessment</li>
+                <li id="instructor-services-list-element1">• Emergency response protocols</li>
               </ul>
             </div> */}
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Clock className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="flexible-scheduling-title" className="text-lg font-semibold text-emerald-200">
                   Flexible Scheduling
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Short-term and long-term contracts</li>
-                <li>• The more you book, the better the price</li>
-                <li>• Seasonal support available</li>
-                <li>• Weekend and holiday coverage</li>
-                <li>
+                <li id="instructor-services-list-element1">• Short-term and long-term contracts</li>
+                <li id="instructor-services-list-element1">• The more you book, the better the price</li>
+                <li id="instructor-services-list-element1">• Seasonal support available</li>
+                <li id="instructor-services-list-element1">• Weekend and holiday coverage</li>
+                <li id="instructor-services-list-element1">
                   • Providing support to multi-location schools and open to
                   commuting between sites.
                 </li>
-                <li>• Driver’s license covering both car and motorcycle.</li>
+                <li id="instructor-services-list-element1">• Driver’s license covering both car and motorcycle.</li>
               </ul>
             </div>
 
             {/* <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Award className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="certifications-title" className="text-lg font-semibold text-blue-200">
                   Certifications
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• VDWS instructor certification</li>
-                <li>• First aid certified</li>
-                <li>• Water safety trained</li>
-                <li>• Insurance coverage available</li>
-                <li>• Professional liability protection</li>
+                <li id="instructor-services-list-element1">• VDWS instructor certification</li>
+                <li id="instructor-services-list-element1">• First aid certified</li>
+                <li id="instructor-services-list-element1">• Water safety trained</li>
+                <li id="instructor-services-list-element1">• Insurance coverage available</li>
+                <li id="instructor-services-list-element1">• Professional liability protection</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/45 via-card/45 to-teal-900/45 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="safety-focus-title" className="text-lg font-semibold text-cyan-200">
                   Safety Focus
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Risk assessment and management</li>
-                <li>• Safety equipment inspection</li>
-                <li>• Weather monitoring and alerts</li>
-                <li>• Emergency action plans</li>
-                <li>• Student safety protocols</li>
+                <li id="instructor-services-list-element1">• Risk assessment and management</li>
+                <li id="instructor-services-list-element1">• Safety equipment inspection</li>
+                <li id="instructor-services-list-element1">• Weather monitoring and alerts</li>
+                <li id="instructor-services-list-element1">• Emergency action plans</li>
+                <li id="instructor-services-list-element1">• Student safety protocols</li>
               </ul>
             </div> */}
           </div>

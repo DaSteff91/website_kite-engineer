@@ -83,7 +83,7 @@ export default function ProcessDesignPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
+                <h3 id="detailes-of-the-roadmap-services-title" className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
                   <Layout className="h-6 w-6 text-teal-400" />
                   Detailes of the Roadmap Services
                 </h3>
@@ -99,18 +99,18 @@ export default function ProcessDesignPage() {
                   following topics:
                 </p>
                 <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
-                  <li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">
                     Naming conventions: What is best to name your process flows?
                   </li>
-                  <li>Vizualisation</li>
-                  <li>Scaleablity</li>
-                  <li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">Vizualisation</li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">Scaleablity</li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">
                     Documentation: Since everything is now decided, lets put it
                     into effect by applying a timeline to it and rolling it out
                     in your documentation system
                   </li>
 
-                  <li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">
                     Review: And in case you already have a roadmap strategy: no
                     problem - I also offer you to analyze it for you and give
                     you an objective 3rd party oppinion.
@@ -125,64 +125,64 @@ export default function ProcessDesignPage() {
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <WandSparkles className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="process-flow-optimization-title" className="text-lg font-semibold text-cyan-200">
                   Process Flow Optimization
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Process flow mapping and analysis</li>
-                <li>• Bottleneck identification and removal</li>
-                <li>• Workflow optimization strategies</li>
-                <li>• Cycle time reduction techniques</li>
-                <li>• Throughput maximization</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Process flow mapping and analysis</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Bottleneck identification and removal</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Workflow optimization strategies</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Cycle time reduction techniques</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Throughput maximization</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Layout className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="equipment-layout-design-title" className="text-lg font-semibold text-teal-200">
                   Equipment Layout Design
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Equipment specification and selection</li>
-                <li>• Optimal layout configuration</li>
-                <li>• Material flow optimization</li>
-                <li>• Space utilization efficiency</li>
-                <li>• Ergonomic considerations</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Equipment specification and selection</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Optimal layout configuration</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Material flow optimization</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Space utilization efficiency</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Ergonomic considerations</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Eye className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="process-visualization-title" className="text-lg font-semibold text-emerald-200">
                   Process Visualization
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• 3D process modeling</li>
-                <li>• Interactive visualization tools</li>
-                <li>• Virtual reality walkthroughs</li>
-                <li>• Animation and simulation</li>
-                <li>• Stakeholder communication aids</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• 3D process modeling</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Interactive visualization tools</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Virtual reality walkthroughs</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Animation and simulation</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Stakeholder communication aids</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/35 via-card/35 to-cyan-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Workflow className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="scalability-planning-title" className="text-lg font-semibold text-blue-200">
                   Scalability Planning
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Future capacity planning</li>
-                <li>• Modular design principles</li>
-                <li>• Expansion pathway definition</li>
-                <li>• Flexibility and adaptability</li>
-                <li>• Technology evolution readiness</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Future capacity planning</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Modular design principles</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Expansion pathway definition</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Flexibility and adaptability</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Technology evolution readiness</li>
               </ul>
             </div>
           </div>

@@ -84,64 +84,64 @@ export default function WebDevelopmentPage() {
             <div className="bg-gradient-to-br from-teal-900/20 via-card/20 to-emerald-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Server className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="server-domain-setup-title" className="text-lg font-semibold text-teal-200">
                   Server & Domain Setup
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Server configuration and management</li>
-                <li>• Domain registration and DNS setup</li>
-                <li>• SSL certificate installation</li>
-                <li>• Performance optimization</li>
-                <li>• Security hardening</li>
+                <li id="server-domain-setup-list-element1">• Server configuration and management</li>
+                <li id="server-domain-setup-list-element1">• Domain registration and DNS setup</li>
+                <li id="server-domain-setup-list-element1">• SSL certificate installation</li>
+                <li id="server-domain-setup-list-element1">• Performance optimization</li>
+                <li id="server-domain-setup-list-element1">• Security hardening</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/25 via-card/25 to-blue-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <MonitorCheck className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="website-development-title" className="text-lg font-semibold text-emerald-200">
                   Website Development
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Full-stack web applications</li>
-                <li>• Responsive design implementation</li>
-                <li>• Modern frontend frameworks</li>
-                <li>• Backend API development</li>
-                <li>• Database integration</li>
+                <li id="server-domain-setup-list-element1">• Full-stack web applications</li>
+                <li id="server-domain-setup-list-element1">• Responsive design implementation</li>
+                <li id="server-domain-setup-list-element1">• Modern frontend frameworks</li>
+                <li id="server-domain-setup-list-element1">• Backend API development</li>
+                <li id="server-domain-setup-list-element1">• Database integration</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/30 via-card/30 to-cyan-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Cloud className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="self-hosted-solutions-title" className="text-lg font-semibold text-blue-200">
                   Self-Hosted Solutions
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Nextcloud setup and configuration</li>
-                <li>• Private cloud storage solutions</li>
-                <li>• Email server configuration</li>
-                <li>• Custom application hosting</li>
-                <li>• Data sovereignty and privacy</li>
+                <li id="server-domain-setup-list-element1">• Nextcloud setup and configuration</li>
+                <li id="server-domain-setup-list-element1">• Private cloud storage solutions</li>
+                <li id="server-domain-setup-list-element1">• Email server configuration</li>
+                <li id="server-domain-setup-list-element1">• Custom application hosting</li>
+                <li id="server-domain-setup-list-element1">• Data sovereignty and privacy</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/35 via-card/35 to-teal-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="maintenance-security-title" className="text-lg font-semibold text-cyan-200">
                   Maintenance & Security
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Regular security updates</li>
-                <li>• Performance monitoring</li>
-                <li>• Backup and recovery systems</li>
-                <li>• Uptime monitoring</li>
-                <li>• Technical support and maintenance</li>
+                <li id="server-domain-setup-list-element1">• Regular security updates</li>
+                <li id="server-domain-setup-list-element1">• Performance monitoring</li>
+                <li id="server-domain-setup-list-element1">• Backup and recovery systems</li>
+                <li id="server-domain-setup-list-element1">• Uptime monitoring</li>
+                <li id="server-domain-setup-list-element1">• Technical support and maintenance</li>
               </ul>
             </div>
           </div>

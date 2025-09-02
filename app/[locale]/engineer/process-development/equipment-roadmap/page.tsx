@@ -85,7 +85,7 @@ export default function EquipmentRoadmapPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
+                <h3 id="detailes-of-the-roadmap-services-title" className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
                   <MapIcon className="h-6 w-6 text-teal-400" />
                   Detailes of the Roadmap Services
                 </h3>
@@ -101,33 +101,33 @@ export default function EquipmentRoadmapPage() {
                   following topics:
                 </p>
                 <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
-                  <li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">
                     Requirement analysis: What is existing and what shall be
                     achived? When it may be necessary to change from an existing
                     process or equipment setup to a new one? What about costs?
                     Consider: Usually established and new things run in parallel
                     for some time
                   </li>
-                  <li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">
                     Process and tool ranking: Creating an overview of what could
                     be possible while establishing some outlines and categories
                     for the following decision making. Usually you learn
                     something new during that process because there is always
                     more then one can imagine.
                   </li>
-                  <li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">
                     Decision matrix: Because not everything is equally important
                     its about carefully analyzing and comparing what you get for
                     what investment or trade-off. Together we apply established
                     procedures to come to a well-founded decision.
                   </li>
-                  <li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">
                     Documentation: Since everything is now decided, lets put it
                     into effect by applying a timeline to it and rolling it out
                     in your documentation system
                   </li>
 
-                  <li>
+                  <li id="detailes-of-the-roadmap-services-list-element1">
                     Review: And in case you already have a roadmap strategy: no
                     problem - I also offer you to analyze it for you and give
                     you an objective 3rd party oppinion.
@@ -141,64 +141,64 @@ export default function EquipmentRoadmapPage() {
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <MapIcon className="h-6 w-6 text-cyan-400" />
-                <h3 className="text-lg font-semibold text-cyan-200">
+                <h3 id="technology-assessment-title" className="text-lg font-semibold text-cyan-200">
                   Technology Assessment
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Future technology evaluation</li>
-                <li>• Technology maturity analysis</li>
-                <li>• Competitive landscape mapping</li>
-                <li>• Innovation trend identification</li>
-                <li>• Technology readiness assessment</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Future technology evaluation</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Technology maturity analysis</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Competitive landscape mapping</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Innovation trend identification</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Technology readiness assessment</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <TrendingUp className="h-6 w-6 text-teal-400" />
-                <h3 className="text-lg font-semibold text-teal-200">
+                <h3 id="equipment-evolution-planning-title" className="text-lg font-semibold text-teal-200">
                   Equipment Evolution Planning
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Equipment lifecycle planning</li>
-                <li>• Upgrade pathway definition</li>
-                <li>• Performance evolution tracking</li>
-                <li>• Obsolescence management</li>
-                <li>• Next-generation preparation</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Equipment lifecycle planning</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Upgrade pathway definition</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Performance evolution tracking</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Obsolescence management</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Next-generation preparation</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="h-6 w-6 text-emerald-400" />
-                <h3 className="text-lg font-semibold text-emerald-200">
+                <h3 id="risk-mitigation-title" className="text-lg font-semibold text-emerald-200">
                   Risk Mitigation
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• Technology risk assessment</li>
-                <li>• Mitigation strategy development</li>
-                <li>• Contingency planning</li>
-                <li>• Alternative technology evaluation</li>
-                <li>• Risk monitoring frameworks</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Technology risk assessment</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Mitigation strategy development</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Contingency planning</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Alternative technology evaluation</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Risk monitoring frameworks</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/35 via-card/35 to-cyan-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-blue-400" />
-                <h3 className="text-lg font-semibold text-blue-200">
+                <h3 id="investment-prioritization-title" className="text-lg font-semibold text-blue-200">
                   Investment Prioritization
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li>• ROI analysis and modeling</li>
-                <li>• Investment timeline optimization</li>
-                <li>• Budget allocation strategies</li>
-                <li>• Cost-benefit evaluation</li>
-                <li>• Strategic investment planning</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• ROI analysis and modeling</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Investment timeline optimization</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Budget allocation strategies</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Cost-benefit evaluation</li>
+                <li id="detailes-of-the-roadmap-services-list-element1">• Strategic investment planning</li>
               </ul>
             </div>
           </div>
