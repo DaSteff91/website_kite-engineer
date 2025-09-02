@@ -35,7 +35,7 @@ yarn-error.log*
 # idea files
 .idea
 
-# Helper scripts
+# Helper scripts etc.
 content_replacer.py
 hero_replacer.py
 /i18n-codemod

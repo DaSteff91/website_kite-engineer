@@ -15,5 +15,138 @@
     "professionalItems": "<li>Launching my freelancer career as Kite-Engineer to combine my worlds into one, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in german, english and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt with focus on Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
     "personalTitle": "Personal Part",
     "personalItems": "<li>\"Be the change in the world you want to see\"</li><li>I am an explorer, an adventurer and a nerd</li><li>Self-study was always more satisfying then school</li><li>Yes, even I´ve once played football. Until I was 14</li><li>Sports and outdoor activities are a big part of my life</li><li>So is Linkin Park - being a fan since I´m 6 years old</li><li>Have you ever listened to Eckhart Tolle?</li><li>Smiling at people on the street helps sharing good vibes</li><li>Philosophy, especially stoicism, was added since I´m 30 - coincidence?</li><li>A book that changed my life? O Alquimista - Paulo Coelho</li><li>Follower of the \"Free and Open Source Idea\"</li><li>Growing as a community is satisfaction times x</li>"
+  },
+  "ContactPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Let´s Connect",
+    "sectionDescription": "Whether it's about kiteboarding, engineering, or anything in between. Reach out via mail, phone or contact form below. Found a bug or typo? I´ll be forever thankful if you report it."
+  },
+
+  "EngineerPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Expand your possibilities",
+    "sectionDescription": "Benefit from my engineering services in the fields of IT and semiconductors",
+    "contactButton": "Contact",
+    "processEngineering": {
+    "title": "Process Engineering",
+      "processControl": {
+        "title": "Process Control",
+        "description": "APC (Advanced Process control), SPC (Statistical Process Control) and WER (Western Electrical Rules) implementation as core competence. Data analytics using Python, AI training for failure detection, dashboards & KPI setup help along the way."
+      },
+      "processOptimization": {
+        "title": "Process Optimization",
+        "description": "Offering 6 sigma and lean techniques to achieve the best possible process outcome you want."
+      },
+      "changeManagement": {
+        "title": "Change Management",
+        "description": "Preparing milestones and passing release gates. It's about documentation and traceability - I do that for you"
+      },
+      "monitoring": {
+        "title": "Monitoring",
+        "description": "Don't know what parameters to monitor and how? Let's define a monitoring setup. And where necessary we find appropriate methods to get a solution for any type of produced volume"
+      }
+    },
+    "processDevelopment": {
+    "title": "Process Development",
+      "creativity": {
+        "title": "Creativity",
+        "description": "There is more then brainstorming - but you already know that. Right? Reach out and let´s activate neurons you´ve not yet known about"
+      },
+      "processDesign": {
+        "title": "Process Design",
+        "description": "You know what your process must achieve but have boundaries locking you into an neverending development cycle? We´ll break it here and now and design what needs to be done. Visualizations and structuring help a lot"
+      },
+      "simulationPrototyping": {
+        "title": "Simulation and Prototyping",
+        "description": "Ever considered to use an analogy model and a simulation to solve a problem? What about getting a physical model printed out in 3D? I prepare your project for any kind of further visualization and connect you with experts"
+      },
+      "processEquipmentRoadmap": {
+        "title": "Process and Equipment Roadmap",
+        "description": "Your competitors don´t wait for you to catch up. So better be prepared of what may be necessary in the future. I help you to outline what strategies of next generation technology can bring and how to make it beneficial for you."
+      }
+    },
+    "softwareDevelopment": {
+    "title": "Software Development",
+      "customizedSolutions": {
+        "title": "Customized Solutions",
+        "description": "Do you want to combine a feature of software A with one of software B and generate an output that fits specific needs? No worries, its just a matter of coffee and time to figure it out. From customized scripts to containerization to front- and and backend integration of custom projects."
+      },
+      "databaseManagement": {
+        "title": "Relational Database Management",
+        "description": "Wanna go from storing data in files like excel to a more sustainable and better manageable format? Or improve your already existing DB (database)? From setting up a completely new RDBMS (relational database management system) to adjust your DB - I figure it out what we can do."
+      },
+      "workflowAutomation": {
+        "title": "Workflow Automatization",
+        "description": "Save time and let software do your repeating tasks. We work out the concept and then implement it step by step, based on your needs. I´m sure a lot of your already used software already supports automatization"
+      },
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Server and domain related setup? Or wanna have an own Nextcloud? Outsource your web administration to me. And if you need a website too, bring your design and I also manage that for you"
+      }
+    },
+    "projectManagement": {
+    "title": "Project Management",
+      "projectSetup": {
+        "title": "Project Setup",
+        "description": "Get more time for other things and let me do the \"what shall be delivered until when by whom and how...\". Setting things up properly not only gives a good feeling, it also is the foundation to achieve goals sustainable"
+      },
+      "timelineManagement": {
+        "title": "Timeline Management",
+        "description": "It´s all about timing. Sometimes things don´t work out as planed and you need to rebalance your project timelines. Someone with an outside-view like me can help at that stage."
+      },
+      "deviationManagement": {
+        "title": "Deviation Management",
+        "description": "Especially when external parties are involved it´s not always easy to communicate unexpected detours in your project. Hand it over and get your back covered while you have time to rework a get back into your committed shape."
+      },
+      "documentationSharing": {
+        "title": "Documentation and Sharing",
+        "description": "Version control and data sharing is not executed on a top level if everyone works on their own devices and only shares on demand. These times are long gone - let´s create synergies in your team that always were there but were never used"
+      }
+    },
+    "technicalConsulting": {
+    "title": "Technical Consulting",
+      "processAssessment": {
+        "title": "Process Assessment",
+        "description": "Get an outside view onto what is running at your business. Detailed feedback on what shall not be changed and what offers potential for improvement and what may be necessary to be done for this."
+      },
+      "technicalResearch": {
+        "title": "Topic Related Research",
+        "description": "You know there are a lot of things going on around you and you can´t always figure out what to filter how to get to know what matters for you and your business. I like reading technical stuff - let me do this. Why shall we not work together?"
+      },
+      "trainingKnowledgeTransfer": {
+        "title": "Training & Knowledge Transfer",
+        "description": "I embrace everyone to never stop learning. Thus I am more then willing to share everything I know with you and your business."
+      },
+      "competitorAnalysis": {
+        "title": "Competitor Analysis",
+        "description": "Sure, everyone wants to know what others are up to - why not getting it done professionally and save your time for your business? I scout and report for you."
+      }
+    },
+    "contactSection": {
+      "description": "Ready to elevate your project? You always get whatever is necessary from my services. The provided overview is meant to be an orientation and only a glimpse of what is possible. Reach out for a free consultation and let's see how we can achieve your goals together.",
+      "buttonText": "Get Your Free Quote"}
+    },
+  "KitePage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Progress doesn´t grow on trees",
+    "sectionSubtitle": "My kiteboarding related services help you to achieve your goals",
+    "freelancerTitle": "Freelancer",
+    "freelancerSchoolSupportTitle": "School Support",
+    "freelancerSchoolSupportDescription": "Whether you need a VDWS-certified instructor, shop assistance, or someone to help behind the bar, I've got you covered. Flexibility is my strength.",
+    "freelancerTravelServicesTitle": "Travel Services",
+    "freelancerTravelServicesDescription": "Looking for someone how organizes your kite trip? Or even accompanies you as a personal coach? No problem, you get well served",
+    "freelancerConsultingTitle": "Consulting",
+    "freelancerConsultingDescription": "Overwhelmed by gear choices? Let me guide you through selecting the right kiteboarding equipment. Need someone to represent the sport? I like talking in front of people and deliver a message to others",
+    "coursesTitle": "Courses",
+    "coursesTheoryTitle": "Theory",
+    "coursesTheoryDescription": "Why not pulling the bar? Let's break down the \"science\" behind the sport—from wind dynamics to material technology. Choose your topic and pace; I'll make it clear and engaging.",
+    "coursesStartingTitle": "(Re-)Starting",
+    "coursesStartingDescription": "Whether you're beginning a new kite journey or returning after a break, I'll help you (re-)gain confidence on the water.",
+    "coursesAdvancedTitle": "Advanced",
+    "coursesAdvancedDescription": "Ready to push limits? From your first toeside ride to nailing loops, let's tackle challenges together. Or you prefer a supervised sessions? No problem! You can as well bring your camera or drone!",
+    "moreLink": "More",
+    "contactLink": "Contact",
+    "contactSectionText": "You can get a little bit of everything as well. The more you book, the more discount you get. What´s holding you back? Let´s get in touch.",
+    "contactButton": "Connect with me"
   }
 }

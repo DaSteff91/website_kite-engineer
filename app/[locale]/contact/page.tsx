@@ -1,13 +1,15 @@
 import { ContactForm } from "@/components/sections/ContactForm";
 import Image from "next/image";
-import contact_hero_image from "@/public/images/contact_hero_image.jpg";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
+import { useTranslations } from "next-intl";
 
 export const metadata = PAGE_METADATA.contact;
 
 export default function ContactPage() {
+  const t = useTranslations("ContactPage");
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -34,7 +36,7 @@ export default function ContactPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Combining Worlds...
+          {t("heroTitle")}
         </h1>
       </Hero>
 
@@ -47,12 +49,10 @@ export default function ContactPage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Let´s Connect
+              {t("sectionTitle")}
             </h2>
             <p className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Whether it's about kiteboarding, engineering, or anything in
-              between. Reach out via mail, phone or contact form below. Found a
-              bug or typo? I´ll be forever thankful if you report it.
+              {t("sectionDescription")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>

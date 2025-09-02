@@ -35,7 +35,7 @@ export default function ProcessControlPage() {
       </div>
 
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/engineer"
         objectPosition="center 45%"
         brightness={50}
@@ -344,7 +344,9 @@ export default function ProcessControlPage() {
               my services to get the best result.
             </p>
             <Link
-              href={generateContactHref("/engineer/process-engineering/process-control")}
+              href={generateContactHref(
+                "/engineer/process-engineering/process-control"
+              )}
               target="_blank"
             >
               <Button

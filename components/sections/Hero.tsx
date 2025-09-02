@@ -81,6 +81,7 @@ export function Hero({
   return (
     <section
       className={`relative w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[75vh] flex items-center justify-center ${className}`}
+      id="hero_section"
     >
       <div className="absolute inset-0 h-full w-full">
         {/* Hero Image */}

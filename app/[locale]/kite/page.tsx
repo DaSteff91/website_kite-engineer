@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Hero } from "@/components/sections/Hero";
@@ -23,10 +23,13 @@ import {
 } from "lucide-react";
 import { generateContactHref } from "@/lib/utils/contact-filler";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { useTranslations } from "next-intl";
 
 export const metadata = PAGE_METADATA.kite;
 
 export default function KitePage() {
+  const t = useTranslations("KitePage");
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -54,12 +57,12 @@ export default function KitePage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Combining Worlds...
+          {t("heroTitle")}
         </h1>
       </Hero>
 
       {/* Content Section */}
-      <section className="py-16">
+      <section className="py-16" id="content-section">
         <div className="container mx-auto px-4">
           <div className="relative mb-20">
             <h2
@@ -67,10 +70,10 @@ export default function KitePage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Progress doesn´t grow on trees
+              {t("sectionTitle")}
             </h2>
             <p className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              My kiteboarding related services help you to achieve your goals
+              {t("sectionSubtitle")}
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -78,9 +81,9 @@ export default function KitePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-start justify-items-center">
             {/* Freelancer Section */}
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl h-fit">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
+              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200" id="freelancer-section">
                 <HandPlatter className="h-7 w-7 text-blue-400" />
-                Freelancer
+                {t("freelancerTitle")}
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem
@@ -88,22 +91,26 @@ export default function KitePage() {
                   className="border-white/5"
                 >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
-                    <div className="flex items-center gap-2">
+                    <div
+                      className="flex items-center gap-2"
+                      id="school-support-title"
+                    >
                       <School className="h-5 w-5" />
-                      School Support
+                      {t("freelancerSchoolSupportTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
-                    Whether you need a VDWS-certified instructor, shop
-                    assistance, or someone to help behind the bar, I've got you
-                    covered. Flexibility is my strength.
+                  <AccordionContent
+                    className="text-white/80"
+                    id="school-support-description"
+                  >
+                    {t("freelancerSchoolSupportDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/freelancer/school-support"
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
+                        {t("moreLink")}
                       </Link>
                       <Link
                         href={generateContactHref(
@@ -113,7 +120,7 @@ export default function KitePage() {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        Contact
+                        {t("contactLink")}
                       </Link>
                     </div>
                   </AccordionContent>
@@ -123,22 +130,20 @@ export default function KitePage() {
                   className="border-white/5"
                 >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
-                    <div className="flex items-center gap-2">
+                    <div id="travel-service-title" className="flex items-center gap-2">
                       <Plane className="h-5 w-5" />
-                      Travel Services
+                      {t("freelancerTravelServicesTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
-                    Looking for someone how organizes your kite trip? Or even
-                    accompanies you as a personal coach? No problem, you get
-                    well served
+                  <AccordionContent id="travel-service-description" className="text-white/80">
+                    {t("freelancerTravelServicesDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/freelancer/travel-services"
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
+                        {t("moreLink")}
                       </Link>
                       <Link
                         href={generateContactHref(
@@ -148,30 +153,27 @@ export default function KitePage() {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        Contact
+                        {t("contactLink")}
                       </Link>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="consulting-1" className="border-white/5">
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
-                    <div className="flex items-center gap-2">
+                    <div id="consulting-title" className="flex items-center gap-2">
                       <MessageSquareText className="h-5 w-5" />
-                      Consulting
+                      {t("freelancerConsultingTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
-                    Overwhelmed by gear choices? Let me guide you through
-                    selecting the right kiteboarding equipment. Need someone to
-                    represent the sport? I like talking in front of people and
-                    deliver a message to others
+                  <AccordionContent id="consulting-description" className="text-white/80">
+                    {t("freelancerConsultingDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/freelancer/consulting"
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
+                        {t("moreLink")}
                       </Link>
                       <Link
                         href={generateContactHref(
@@ -181,7 +183,7 @@ export default function KitePage() {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        Contact
+                        {t("contactLink")}
                       </Link>
                     </div>
                   </AccordionContent>
@@ -191,29 +193,27 @@ export default function KitePage() {
 
             {/* Courses Section */}
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl h-fit">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200">
+              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200" id="courses-section">
                 <List className="h-7 w-7 text-cyan-400" />
-                Courses
+                {t("coursesTitle")}
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="theory-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
-                    <div className="flex items-center gap-2">
+                    <div id="theory-title" className="flex items-center gap-2">
                       <LibraryBig className="h-5 w-5" />
-                      Theory
+                      {t("coursesTheoryTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
-                    Why not pulling the bar? Let's break down the "science"
-                    behind the sport—from wind dynamics to material technology.
-                    Choose your topic and pace; I'll make it clear and engaging.
+                  <AccordionContent id="theory-description" className="text-white/80">
+                    {t("coursesTheoryDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/courses/theory"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
+                        {t("moreLink")}
                       </Link>
                       <Link
                         href={generateContactHref("/kite/courses/theory")}
@@ -221,29 +221,27 @@ export default function KitePage() {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        Contact
+                        {t("contactLink")}
                       </Link>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="starting-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
-                    <div className="flex items-center gap-2">
+                    <div id="starting-title" className="flex items-center gap-2">
                       <CirclePlay className="h-5 w-5" />
-                      (Re-)Starting
+                      {t("coursesStartingTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
-                    Whether you're beginning a new kite journey or returning
-                    after a break, I'll help you (re-)gain confidence on the
-                    water.
+                  <AccordionContent id="starting-description" className="text-white/80">
+                    {t("coursesStartingDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/courses/starting"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
+                        {t("moreLink")}
                       </Link>
                       <Link
                         href={generateContactHref("/kite/courses/starting")}
@@ -251,30 +249,27 @@ export default function KitePage() {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        Contact
+                        {t("contactLink")}
                       </Link>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="advanced-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
-                    <div className="flex items-center gap-2">
+                    <div id="advanced-title" className="flex items-center gap-2">
                       <ArrowBigUpDash className="h-5 w-5" />
-                      Advanced
+                      {t("coursesAdvancedTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80">
-                    Ready to push limits? From your first toeside ride to
-                    nailing loops, let's tackle challenges together. Or you
-                    prefer a supervised sessions? No problem! You can as well
-                    bring your camera or drone!
+                  <AccordionContent id="advanced-description" className="text-white/80">
+                    {t("coursesAdvancedDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/courses/advanced"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
+                        {t("moreLink")}
                       </Link>
                       <Link
                         href={generateContactHref("/kite/courses/advanced")}
@@ -282,7 +277,7 @@ export default function KitePage() {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        Contact
+                        {t("contactLink")}
                       </Link>
                     </div>
                   </AccordionContent>
@@ -294,16 +289,14 @@ export default function KitePage() {
           {/* Enhanced Contact Section */}
           <div className="mt-16 text-center">
             <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
-              You can get a little bit of everything as well. The more you book,
-              the more discount you get. What´s holding you back? <br />
-              Let´s get in touch.
+              {t("contactSectionText")}
             </p>
             <Link href="/contact" target="_blank">
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Connect with me
+                {t("contactButton")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
