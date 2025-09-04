@@ -1,17 +1,25 @@
 "use client";
 
 import Link from "next/link";
-// import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-// const SOCIAL_LINKS = [
-//   { icon: Facebook, href: "#", label: "Facebook" },
-//   { icon: Twitter, href: "#", label: "Twitter" },
-//   { icon: Instagram, href: "#", label: "Instagram" },
-//   { icon: Linkedin, href: "#", label: "LinkedIn" },
-//   { icon: Github, href: "#", label: "GitHub" },
-// ];
+const SOCIAL_LINKS = [
+  // { icon: Facebook, href: "#", label: "Facebook" },
+  // { icon: Twitter, href: "#", label: "Twitter" },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/steffkiteengineer/",
+    label: "Instagram",
+  },
+  {
+    icon: Linkedin,
+    href: "www.linkedin.com/in/stefan-merthan-09a264158",
+    label: "LinkedIn",
+  },
+  { icon: Github, href: "https://github.com/DaSteff91", label: "GitHub" },
+];
 
 export function Footer() {
   const pathname = usePathname();
@@ -21,15 +29,10 @@ export function Footer() {
   return (
     <footer className="border-t">
       <div className="container mx-auto px-4 md:px-6 py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-3 text-center sm:text-left">
             <h3 className="text-lg font-semibold">Contact</h3>
             <ul className="space-y-2 text-sm">
-              {/* <address className="not-italic text-sm text-muted-foreground">
-              123 Main Street
-              <br />
-              City, Country 12345
-              <br /> */}
               <li>
                 <a
                   href="mailto:stefan@kite-engineer.de"
@@ -45,12 +48,15 @@ export function Footer() {
           </div>
 
           <div className="space-y-3 text-center sm:text-left">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <h3 className="text-lg font-semibold" id="footer-quick-links">
+              Quick Links
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/kite"
                   className="text-muted-foreground hover:text-primary transition-colors"
+                  id="footer-text-kite"
                 >
                   Kite
                 </Link>
@@ -59,6 +65,7 @@ export function Footer() {
                 <Link
                   href="/engineer"
                   className="text-muted-foreground hover:text-primary transition-colors"
+                  id="footer-text-engineer"
                 >
                   Engineer
                 </Link>
@@ -67,6 +74,7 @@ export function Footer() {
                 <Link
                   href="/about"
                   className="text-muted-foreground hover:text-primary transition-colors"
+                  id="footer-text-about"
                 >
                   About
                 </Link>
@@ -75,6 +83,7 @@ export function Footer() {
                 <Link
                   href="/contact"
                   className="text-muted-foreground hover:text-primary transition-colors"
+                  id="footer-text-contact"
                 >
                   Contact
                 </Link>
@@ -89,6 +98,7 @@ export function Footer() {
                 <Link
                   href="/privacy"
                   className="text-muted-foreground hover:text-primary transition-colors"
+                  id="footer-text-privacy"
                 >
                   Privacy Policy
                 </Link>
@@ -97,6 +107,7 @@ export function Footer() {
                 <Link
                   href="/imprint"
                   className="text-muted-foreground hover:text-primary transition-colors"
+                  id="footer-text-imprint"
                 >
                   Imprint
                 </Link>
@@ -104,9 +115,9 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* <div className="space-y-3 text-center sm:text-left">
+          <div className="space-y-3 text-center sm:text-left">
             <h3 className="text-lg font-semibold">Follow Me</h3>
-            <div className="flex gap-4">
+            <div className="flex justify-center sm:justify-start gap-4 flex-wrap">
               {SOCIAL_LINKS.map((social) => (
                 <a
                   key={social.label}
@@ -120,11 +131,11 @@ export function Footer() {
                 </a>
               ))}
             </div>
-          </div>  */}
+          </div>
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p className="break-words">
+          <p className="break-words" id="break-words">
             © {currentYear} Kite-Engineer by Stefan Merthan. All rights
             reserved.
           </p>
@@ -169,7 +180,10 @@ function PhoneNumberReveal() {
           </button>
         </div>
       ) : (
-        <span className="text-sm text-muted-foreground text-center sm:text-left block">
+        <span
+          className="text-sm text-muted-foreground text-center sm:text-left block"
+          id="phone-number-reveal-text"
+        >
           Click to reveal phone number
         </span>
       )}
