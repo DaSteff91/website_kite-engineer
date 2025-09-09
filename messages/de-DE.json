@@ -15,5 +15,284 @@
     "professionalItems": "<li>Launching my freelancer career as Kite-Engineer to combine my worlds into one, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in german, english and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt with focus on Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
     "personalTitle": "Persönlicher Teil",
     "personalItems": "<li>\"Be the change in the world you want to see\"</li><li>I am an explorer, an adventurer and a nerd</li><li>Self-study was always more satisfying then school</li><li>Yes, even I´ve once played football. Until I was 14</li><li>Sports and outdoor activities are a big part of my life</li><li>So is Linkin Park - being a fan since I´m 6 years old</li><li>Have you ever listened to Eckhart Tolle?</li><li>Smiling at people on the street helps sharing good vibes</li><li>Philosophy, especially stoicism, was added since I´m 30 - coincidence?</li><li>A book that changed my life? O Alquimista - Paulo Coelho</li><li>Follower of the \"Free and Open Source Idea\"</li><li>Growing as a community is satisfaction times x</li>"
+  },
+   "ContactPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Lass uns verbinden",
+    "sectionDescription": "Ob es um Kitesurfen, Ingenieurwesen oder alles dazwischen geht. Melde dich per Mail, Telefon oder Kontaktformular unten. Hast du einen Fehler oder Tippfehler gefunden? Ich bin dir ewig dankbar, wenn du ihn meldest."
+  },
+  "EngineerPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Erweitere deine Möglichkeiten",
+    "sectionDescription": "Profitiere von meinen Ingenieurdienstleistungen in den Bereichen IT und Halbleiter",
+    "contactButton": "Kontakt",
+    "processEngineering": {
+      "title": "Prozessengineering",
+      "processControl": {
+        "title": "Prozesskontrolle",
+        "description": "APC (Advanced Process Control), SPC (Statistical Process Control) und WER (Western Electric Rules) Implementierung als Kernkompetenz. Datenanalyse mit Python, KI-Training zur Fehlererkennung, Dashboards & KPI-Setup helfen auf dem Weg."
+      },
+      "processOptimization": {
+        "title": "Prozessoptimierung",
+        "description": "Anbieten von 6-Sigma- und Lean-Techniken, um das bestmögliche Prozessergebnis zu erreichen."
+      },
+      "changeManagement": {
+        "title": "Change Management",
+        "description": "Meilensteine vorbereiten und Release-Gates passieren. Es geht um Dokumentation und Nachvollziehbarkeit – ich übernehme das für dich."
+      },
+      "monitoring": {
+        "title": "Monitoring",
+        "description": "Du weißt nicht, welche Parameter überwacht werden sollen und wie? Lass uns ein Monitoring-Setup definieren. Und wo nötig, finden wir geeignete Methoden für jedes Produktionsvolumen."
+      }
+    },
+    "processDevelopment": {
+      "title": "Prozessentwicklung",
+      "creativity": {
+        "title": "Kreativität",
+        "description": "Es gibt mehr als Brainstorming – das weißt du schon. Melde dich und lass uns bisher unbekannte Neuronen aktivieren."
+      },
+      "processDesign": {
+        "title": "Prozessdesign",
+        "description": "Du weißt, was dein Prozess erreichen muss, aber Grenzen halten dich in einem endlosen Entwicklungszyklus fest? Wir brechen das hier und jetzt auf und designen, was nötig ist. Visualisierungen und Strukturierung helfen enorm."
+      },
+      "simulationPrototyping": {
+        "title": "Simulation & Prototyping",
+        "description": "Schon einmal über Analogie-Modelle oder Simulationen zur Problemlösung nachgedacht? Oder ein physisches Modell 3D-drucken lassen? Ich bereite dein Projekt für jede Visualisierung vor und verbinde dich mit Experten."
+      },
+      "processEquipmentRoadmap": {
+        "title": "Prozess- & Anlagen-Roadmap",
+        "description": "Deine Konkurrenten warten nicht auf dich. Sei vorbereitet auf zukünftige Anforderungen. Ich helfe dir, Strategien der nächsten Generation aufzuzeigen und wie sie für dich nutzbar werden."
+      }
+    },
+    "softwareDevelopment": {
+      "title": "Softwareentwicklung",
+      "customizedSolutions": {
+        "title": "Individuelle Lösungen",
+        "description": "Willst du Funktionen von Software A mit B kombinieren und ein passendes Ergebnis erzeugen? Kein Problem – von Scripts über Containerisierung bis zur Front- & Backend-Integration."
+      },
+      "databaseManagement": {
+        "title": "Relationale Datenbankverwaltung",
+        "description": "Willst du Daten von Excel-Dateien in ein nachhaltigeres Format bringen oder deine bestehende DB verbessern? Von komplett neuen RDBMS bis Anpassungen – ich finde die Lösung."
+      },
+      "workflowAutomation": {
+        "title": "Workflow-Automatisierung",
+        "description": "Spare Zeit und lass Software wiederkehrende Aufgaben übernehmen. Konzept erarbeiten, Schritt für Schritt implementieren, basierend auf deinen Bedürfnissen."
+      },
+      "webDevelopment": {
+        "title": "Webentwicklung",
+        "description": "Server- und Domain-Setup? Oder eine eigene Nextcloud? Webadministration auslagern – und falls eine Website benötigt wird, manage ich das ebenfalls."
+      }
+    },
+    "projectManagement": {
+      "title": "Projektmanagement",
+      "projectSetup": {
+        "title": "Projektsetup",
+        "description": "Mehr Zeit für andere Dinge und ich kümmere mich um 'was bis wann von wem wie geliefert werden muss'. Richtig aufgesetzt ist die Grundlage für nachhaltige Zielerreichung."
+      },
+      "timelineManagement": {
+        "title": "Zeitmanagement",
+        "description": "Alles ist Timing. Manchmal läuft nicht alles wie geplant, und Projektzeitpläne müssen angepasst werden. Eine Außenperspektive wie meine hilft in solchen Fällen."
+      },
+      "deviationManagement": {
+        "title": "Abweichungsmanagement",
+        "description": "Besonders bei externen Parteien ist es nicht immer einfach, unerwartete Änderungen zu kommunizieren. Gib es an mich ab und sei abgesichert, während du nachjustierst."
+      },
+      "documentationSharing": {
+        "title": "Dokumentation & Sharing",
+        "description": "Versionskontrolle und Datenfreigabe funktionieren oft nicht optimal, wenn jeder für sich arbeitet. Lass uns Synergien im Team schaffen, die immer da waren, aber nie genutzt wurden."
+      }
+    },
+    "technicalConsulting": {
+      "title": "Technische Beratung",
+      "processAssessment": {
+        "title": "Prozessbewertung",
+        "description": "Externe Sicht auf laufende Prozesse. Feedback zu was bleiben sollte, Verbesserungspotenzial und notwendige Maßnahmen."
+      },
+      "technicalResearch": {
+        "title": "Forschungsprojekte",
+        "description": "Es gibt viele Vorgänge um dich herum, die man nicht immer richtig filtern kann. Ich lese technische Themen und übernehme die Recherche für dich."
+      },
+      "trainingKnowledgeTransfer": {
+        "title": "Training & Wissenstransfer",
+        "description": "Ich ermutige, nie aufzuhören zu lernen, und teile mein Wissen gerne mit dir und deinem Unternehmen."
+      },
+      "competitorAnalysis": {
+        "title": "Wettbewerbsanalyse",
+        "description": "Professionelle Analyse der Mitbewerber, um Zeit zu sparen und strategisch zu agieren. Ich scoute und berichte für dich."
+      }
+    },
+    "contactSection": {
+      "description": "Bereit, dein Projekt auf die nächste Stufe zu heben? Du bekommst alles Notwendige aus meinen Dienstleistungen. Der Überblick dient der Orientierung und zeigt nur einen Teil des Möglichen. Kontaktiere mich für ein kostenloses Beratungsgespräch.",
+      "buttonText": "Kostenloses Angebot"
+    }
+  },
+  "KitePage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Fortschritt wächst nicht auf Bäumen",
+    "sectionSubtitle": "Meine kiteboardspezifischen Dienstleistungen helfen dir, deine Ziele zu erreichen",
+    "freelancerTitle": "Freelancer",
+    "freelancerSchoolSupportTitle": "Schulunterstützung",
+    "freelancerSchoolSupportDescription": "Ob VDWS-zertifizierter Instructor, Shop-Unterstützung oder Hilfe hinter der Bar – ich bin für dich da. Flexibilität ist meine Stärke.",
+    "freelancerTravelServicesTitle": "Reiseservices",
+    "freelancerTravelServicesDescription": "Suchst du jemanden, der deine Kite-Reise organisiert oder dich als persönlichen Coach begleitet? Kein Problem, du bist bestens versorgt.",
+    "freelancerConsultingTitle": "Beratung",
+    "freelancerConsultingDescription": "Überfordert von der Auswahl der Ausrüstung? Ich begleite dich bei der Auswahl des richtigen Kite-Equipments. Brauchst du jemanden, der den Sport repräsentiert? Ich rede gerne vor Menschen und vermittle eine Botschaft.",
+    "coursesTitle": "Kurse",
+    "coursesTheoryTitle": "Theorie",
+    "coursesTheoryDescription": "Warum nicht die Bar ziehen? Wir analysieren die \"Wissenschaft\" hinter dem Sport – von Winddynamik bis Materialtechnologie. Wähle dein Thema und Tempo; ich erkläre es klar und spannend.",
+    "coursesStartingTitle": "(Neu-)Starten",
+    "coursesStartingDescription": "Ob du neu einsteigst oder nach einer Pause zurückkommst – ich helfe dir, dein Vertrauen aufs Wasser zurückzugewinnen.",
+    "coursesAdvancedTitle": "Fortgeschrittene",
+    "coursesAdvancedDescription": "Bereit, Grenzen zu verschieben? Vom ersten Toeside-Ride bis zu Loops – wir meistern die Herausforderungen zusammen. Oder bevorzugst du betreute Sessions? Kein Problem! Bring auch Kamera oder Drohne mit.",
+    "moreLink": "Mehr",
+    "contactLink": "Kontakt",
+    "contactSectionText": "Du kannst auch ein bisschen von allem buchen. Je mehr du buchst, desto höher der Rabatt. Was hält dich zurück? Lass uns in Kontakt treten.",
+    "contactButton": "Kontaktiere mich"
+  },
+  "ProcessControlPage": {
+    "process-control-hero": "Process Control Services",
+    "process-control-section-title": "Outsourcing deiner Arbeit",
+    "process-control-section-subtitle": "Nutze meine Expertise aus der Arbeit als Prozessingenieur für dein Projekt.",
+    "advanced-process-control-title": "Advanced Process Control",
+    "advanced-process-control-list-element1": "•<strong> Softwarebeschaffung und -einrichtung</strong> - Du hast bereits viele Prozessdaten, aber keine zentrale Software, die alles zusammenführt? Ich finde deine APC-Software und übernehme die Kommunikation mit Partnern, schreibe Anforderungsspezifikationen, führe erste Tests durch und unterstütze beim Rollout.",
+    "advanced-process-control-list-element2": "•<strong> Benutzerschulung </strong> - Standardisierung des APC-Einsatzes in deinem Unternehmen? Ich biete plattformbasierte Trainings für dich oder dein Team, Schritt für Schritt von Grundlagen bis zu spezifischen Software-Themen.",
+    "advanced-process-control-list-element3": "•<strong> Mathematik </strong> - Nicht jedes Sensorsignal ist direkt nutzbar. Mathematik kann neue, verlässlichere Quellen schaffen, Limit-Berechnungen durchführen, Ausreißer behandeln und die Mechanismen optimieren.",
+    "advanced-process-control-list-element4": "•<strong> Strategische Ausrichtung </strong> - APC ist Teil eines Produktions-Ökosystems. Wie passt das APC-Stück ins Gesamtbild und erfüllt es seine Aufgaben? Externe Sicht kann hier sehr wertvoll sein.",
+    "advanced-process-control-list-element5": "•<strong> Lernen aus der Vergangenheit </strong> - Daten erzählen Geschichten. Korrelationen erkennen kann zeitaufwendig sein – ich übernehme das und liefere Antworten.",
+    "advanced-process-control-list-element6": "•<strong> KI-Unterstützung </strong> - KI hilft, Daten zu analysieren. Ich finde das passende Modell, führe Tests durch und unterstütze bei der Implementierung inklusive Kommunikation und Beschaffung.",
+    "advanced-process-control-list-element7": "•<strong> Neue Einrichtung </strong> - Erste Schritte in APC oder Ausbau bestehender Setups? Ich evaluiere Strategien, suche passende Messsysteme und Sensoren, um relevante Daten bestmöglich zu erfassen.",
+    "advanced-process-control-list-element8": "•<strong> Nutzung externer Software </strong> - Manchmal lohnt sich die Analyse mit externen Tools wie Pandas, Matplotlib, Numpy oder SciPy. Ich unterstütze dich, ohne dass du Ressourcen für die Einarbeitung verschwenden musst.",
+    "statistical-process-control-title": "Statistische Prozesskontrolle",
+    "statistical-process-control-list-element1": "•<strong> Softwarebeschaffung und -einrichtung </strong> - Du hast Messdaten, aber keine zentrale Software? Ich finde SPC-Software, kommuniziere mit Partnern, schreibe Spezifikationen, teste und unterstütze beim Rollout.",
+    "statistical-process-control-list-element2": "•<strong> Benutzerschulung </strong> - Standardisierung von SPC in deinem Unternehmen. Schrittweise Schulungen von Grundlagen bis zu spezifischen Software-Themen.",
+    "statistical-process-control-list-element3": "•<strong> WER-Implementierung </strong> - Western Electric Rules (WER) bilden das Rückgrat der SPC. Limits setzen für Millionen Datenkanäle kann ich übernehmen.",
+    "statistical-process-control-list-element4": "•<strong> Strategische Ausrichtung </strong> - SPC ist Teil des Ökosystems. Ich analysiere die Einbindung und stelle sicher, dass die Ziele erfüllt werden.",
+    "statistical-process-control-list-element5": "•<strong> Lernen aus der Vergangenheit </strong> - Datenanalyse und Korrelationen erkennen, Zeit sparen für dein Team – ich liefere die Antworten.",
+    "statistical-process-control-list-element6": "•<strong> KI-Unterstützung </strong> - KI hilft bei der Analyse. Ich finde passende Modelle, führe Tests durch und implementiere Lösungen.",
+    "statistical-process-control-list-element7": "•<strong> Neue Einrichtung </strong> - Erste Schritte oder Ausbau bestehender SPC? Ich evaluiere Strategien und suche passende Messsysteme.",
+    "statistical-process-control-list-element8": "•<strong> Nutzung externer Software </strong> - Analyse mit Python oder anderen Tools? Ich unterstütze dich bei der Nutzung externer Software.",
+    "custom-solutions-title": "Individuelle Lösungen",
+    "custom-solutions-list-element1": "•<strong> Python-basierte Datenanalyse </strong> - Bibliotheken wie Pandas, Matplotlib, Numpy oder SciPy unterstützen bei fehlenden Samples oder speziellen Analyseanforderungen.",
+    "custom-solutions-list-element2": "•<strong> Datenklassifikation </strong> - Neue Datentypen oder Qualitätsklassen? Ich helfe bei der Klassifikation oder suche qualifizierte Dritte.",
+    "custom-solutions-list-element3": "•<strong> Datenerstellung & Prototyping </strong> - Ein Demo- oder Beispieldatensatz? Integriert in komplexe Prozesse? Ich erstelle es für dich.",
+    "custom-solutions-list-element4": "•<strong> Wartung & Überprüfung </strong> - Historisch gewachsene Prozesskontroll-Tools benötigen Review oder Restrukturierung? Überlasse es mir.",
+    "process-control-contact": "Fehlt etwas? Wir finden eine Lösung. Primär biete ich Dienstleistungen für Fertigungsprozesse, besonders Halbleiterproduktion, an. Aber ich bin offen für neue Themen. Buchbar kurz- oder langfristig, projekt- oder zeitbasiert. Kombination meiner Services möglich.",
+    "contact-button": "Kontaktiere mich"
+  },
+  "TravelServicesPage": {
+    "travel-services-hero": "Travel Services",
+    "travel-services-section-title": "Die Welt kann dein Spielplatz sein – nutze sie",
+    "travel-services-section-subtitle": "Auch wenn ich kein Reisebüro bin, kann ich alles recherchieren und zusammenstellen, damit du leicht entscheiden kannst, was zu deiner Buchung passt. Hier kannst du dich auf mich verlassen:",
+    "trip-organization-title": "Reiseorganisation",
+    "trip-organization-list-element1": "• Planung und Koordination von Reisen",
+    "trip-organization-list-element2": "• Transferorganisation",
+    "trip-organization-list-element3": "• Budget- und Zeitplanung",
+    "trip-organization-list-element4": "• Gesundheits- und Versicherungsaspekte",
+    "personal-coaching-title": "Persönliches Coaching",
+    "personal-coaching-list-element1": "• Kite-Instruktor-Dienste",
+    "personal-coaching-list-element2": "• Functional Fitness und HIIT-Coaching",
+    "personal-coaching-list-element3": "• Dein Zeitplan im Griff",
+    "personal-coaching-list-element4": "• Fortschrittsdokumentation",
+    "travel-buddy-title": "Reisebegleiter",
+    "travel-buddy-list-element1": "• Spaß haben: Ich bin auch nur ein Mensch",
+    "travel-buddy-list-element2": "• Reisedokumentation",
+    "travel-buddy-list-element3": "• Organisation allgemeiner Aktivitäten",
+    "travel-buddy-list-element4": "• Gemeinsame Kostenaufteilung für den Alltag",
+    "travel-services-contact": "Lass uns gemeinsam ein unvergessliches Erlebnis schaffen. Ich stelle alles Notwendige bereit – nur die Buchung liegt bei dir. Fehlt etwas? Wir finden eine Lösung. Alles beginnt hier:",
+    "contact-button": "Kontaktiere mich"
+  },
+  "TheoryPage": {
+    "theory-hero": "Kiteboarding Theory Courses",
+    "theory-section-title": "Machen macht Spaß! Aber verstehen ist der Schlüssel für nachhaltigen Fortschritt",
+    "theory-section-subtitle": "Im Folgenden findest du eine Übersicht der Theorie-Lektionen, die ich gebe, entweder als Teil eines Kurses oder optional buchbar.",
+    "rider-essentials-title": "Wichtige Grundlagen für Rider",
+    "rider-essentials-list-element1": "• Verhalten auf und um das Wasser: Konzepte wie Karma und Vorfahrtsregeln",
+    "rider-essentials-list-element2": "• Konzepte zum Verständnis des Windes: Woher er kommt und wie du ihn nutzen kannst",
+    "rider-essentials-list-element3": "• Selbstmanagement und Routinen: Lerne, dich selbst zu organisieren",
+    "rider-essentials-list-element4": "• Allgemeine (Segel- und Navigations-)Terminologie und Ausdrücke",
+    "rider-essentials-list-element5": "• Schritte, um unabhängiger zu werden",
+    "rider-essentials-list-element6": "• Häufige Fehler und wie man sie vermeidet",
+    "advanced-theory-title": "Fortgeschrittene Theorie",
+    "advanced-theory-list-element1": "• Was dich fahren lässt: Konzepte von Kräften und Winkeln",
+    "advanced-theory-list-element2": "• Mehr Physik: Aerodynamik und was Wind wirklich ist und woher er kommt",
+    "advanced-theory-list-element3": "• Überblick und Details zu verwendeten Materialien wie Boards, Neoprenanzüge oder Kites",
+    "advanced-theory-list-element4": "• Wie Tricks und Manöver funktionieren: Eine Aufschlüsselung",
+    "advanced-theory-list-element5": "• Nächste Schritte im Kiteboarding: Zusätzliche Übungen, Lifestyle und Ernährung",
+    "environmental-stuff-title": "Umweltbewusstsein",
+    "environmental-stuff-list-element1": "• Umwelteinflüsse wie Wetter und wie du sie zu deinem Vorteil nutzen kannst",
+    "environmental-stuff-list-element2": "• Wir sind nicht allein: Lerne die Ökosysteme kennen, in denen du deinen Sport betreibst. Weißt du, dass Vögel wegen uns sterben können?",
+    "environmental-stuff-list-element3": "• Kiteboarding auf gesellschaftlicher Ebene: Wie kannst du dich in Organisationen einbringen, die dem Sport dienen?",
+    "environmental-stuff-list-element4": "• Gesetze, Vorschriften und gute Gewohnheiten, die beim Verlassen der Komfortzone zu beachten sind",
+    "theory-contact": "\"Ein Kurs ist gut, wenn sowohl Schüler als auch Lehrer voneinander lernen\". Kombiniere meine Angebote nach Belieben und profitiere von einem individuellen Rabatt. Etwas nicht aufgelistet? Ich bin immer offen, etwas zu recherchieren und dir bereitzustellen."
+  },
+  "StartingPage": {
+    "starting-hero": "(Re-)Starter Courses",
+    "starting-section-title": "Alles beginnt irgendwann. Oder beginnt erneut?",
+    "starting-section-subtitle": "Es geht darum, sich zu verpflichten, die notwendigen Schritte zu unternehmen: Sich zu entscheiden, etwas (neu) zu starten und nicht nur davon zu träumen. Für die kommenden Teilnehmer biete ich folgende flexible Kursangebote:",
+    "who-title": "Für wen?",
+    "who-list-element1": "• Einzelpersonen oder Gruppen",
+    "who-list-element2": "• Schulen oder Privatpersonen",
+    "who-list-element3": "• Kurse auf Deutsch, Englisch und Portugiesisch",
+    "who-list-element4": "• Praktische Lektionen: max. 4 Personen",
+    "who-list-element5": "• Theorieunterricht: max. 30 Personen",
+    "who-list-element6": "• Keine Altersbeschränkung, Mindestgewicht 30 kg",
+    "who-list-element7": "• Sicher schwimmen können für mehr als ein paar Minuten",
+    "who-list-element8": "• Starter = Du hast noch nie einen Kite benutzt",
+    "who-list-element9": "• Restarter = Du hast bereits Erfahrung mit Kites",
+    "content-title": "Inhalt",
+    "content-list-element1": "• Einführung und Sicherheitsgrundlagen",
+    "content-list-element2": "• Vertraut machen mit Equipment und Aufbau",
+    "content-list-element3": "• Grundkontrolle des Kites ohne Board",
+    "content-list-element4": "• Body-Dragging-Techniken",
+    "content-list-element5": "• Fortgeschrittene Kite-Steuerungstechniken",
+    "content-list-element6": "• Waterstart-Grundlagen und erste Meter",
+    "content-list-element7": "• Theorieunterricht bei Bedarf",
+    "content-list-element8": "• Orientierung auf dem Wasser und Gefahren",
+    "content-list-element9": "• Schüler können Waterstarts nach dem Kurs sicher eigenständig üben",
+    "structure-title": "Struktur",
+    "structure-list-element1": "• Intensivprogramme bis zu 5 Tagen",
+    "structure-list-element2": "• Flexible Terminplanung, basierend auf Umwelt- und persönlichen Bedingungen",
+    "structure-list-element3": "• Buddy-System: 2 Personen pro Kite",
+    "structure-list-element4": "• Individuell: 1 Person, 1 Kite",
+    "structure-list-element5": "• Nur Betreuung-Format möglich",
+    "structure-list-element6": "• Bei Bedarf: Headset- und Video-Unterstützung",
+    "structure-list-element7": "• Fortschrittsverfolgung und VDWS-Zertifizierung",
+    "structure-list-element8": "• Alternativen bei Windstille: Simulationen, Wakeboarding, Landboarding, SUP, Fitnessübungen...",
+    "starting-contact": "Es gibt viele Dinge, die man beim Unterrichten beachten muss, aber fast nichts, was sich nicht arrangieren lässt. Schick mir eine Nachricht und wir organisieren alle Details."
+  },
+  "AdvancedPage": {
+    "advanced-hero": "Advanced Kiteboarding Courses",
+    "advanced-section-title": "Nach dem ersten Schritt folgt der nächste. Und dann der nächste...",
+    "advanced-section-subtitle": "Warum sieht das so einfach aus, was sie auf dem Wasser machen? Es gibt jede Menge zu lernen und meine Services sind dafür da, dich dabei zu unterstützen:",
+    "who-title": "Für wen?",
+    "who-list-element1": "• Einzelpersonen oder Gruppen",
+    "who-list-element2": "• Schulen oder Privatpersonen",
+    "who-list-element3": "• Kurse auf Deutsch, Englisch und Portugiesisch",
+    "who-list-element4": "• Praktische Lektionen: max. 4 Personen",
+    "who-list-element5": "• Theorieunterricht: max. 30 Personen",
+    "who-list-element6": "• Keine Altersgrenze, Mindestgewicht 30 kg",
+    "who-list-element7": "• Sicher schwimmen können für mehr als ein paar Minuten",
+    "who-list-element8": "• Advanced = Du fährst nach dem Waterstart sicher und reproduzierbar",
+    "who-list-element9": "• Sorry, ich kann niemanden zum \"King Of The Air\" machen. Aber coole Tricks lehre ich auf jeden Fall",
+    "possible-content-title": "Möglicher Inhalt",
+    "possible-content-list-element1": "• Routinen entwickeln, um dein Training zu unterstützen",
+    "possible-content-list-element2": "• Materialanpassungen, z. B. Board-Stellungen ändern oder verschiedene Leinen-Setups testen",
+    "possible-content-list-element3": "• Neue Tricks in einer sicheren und geführten Umgebung lernen",
+    "possible-content-list-element4": "• Deinen eigenen Stil individualisieren und filmen lassen",
+    "possible-content-list-element5": "• Feedback und Optimierungen zum aktuellen Fahrstil",
+    "possible-content-list-element6": "• Wie man ein Kite-Buddy für weniger erfahrene Fahrer sein kann",
+    "possible-content-list-element7": "• Fortgeschrittene Theorie, die über das Windfenster hinausgeht",
+    "possible-content-list-element8": "• Unfall- und Selbstrettungsszenarien üben",
+    "structure-title": "Struktur",
+    "structure-list-element1": "• Intensivprogramme bis zu 5 Tagen",
+    "structure-list-element2": "• Flexible Terminplanung, basierend auf Umwelt- und persönlichen Bedingungen",
+    "structure-list-element3": "• Buddy-System: 2 Personen pro Kite",
+    "structure-list-element4": "• Individuell: 1 Person, 1 Kite",
+    "structure-list-element5": "• Nur-Betreuungs-Format möglich",
+    "structure-list-element6": "• Bei Bedarf: Headset- und Video-Unterstützung",
+    "structure-list-element7": "• Fortschrittsverfolgung und VDWS-Zertifizierung",
+    "structure-list-element8": "• Alternativen bei Windstille: Simulationen, Wakeboarding, Landboarding, SUP, Fitnessübungen,...",
+    "advanced-contact": "Es gibt viele Dinge, die man beim Unterrichten beachten muss, aber fast nichts, was sich nicht arrangieren lässt. Schick mir eine Nachricht und wir organisieren alle Details."
   }
+
 }
