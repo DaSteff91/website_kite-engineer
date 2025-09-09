@@ -1,7 +1,8 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -20,6 +21,26 @@ export const metadata =
   PAGE_METADATA["engineer/process-engineering/process-control"];
 
 export default function ProcessControlPage() {
+  const t = useTranslations("ProcessControlPage");
+
+  const richTextHandlers = {
+    strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+    em: (chunks: React.ReactNode) => <em>{chunks}</em>,
+    abbr: (chunks: React.ReactNode) => {
+      // chunks will be an array: [text, <0>title</0>]
+      if (Array.isArray(chunks) && chunks.length > 1) {
+        const text = chunks[0];
+        const titleElement = chunks[1] as any;
+        const title = titleElement?.props?.children || "";
+        return <abbr title={title}>{text}</abbr>;
+      }
+      return <abbr>{chunks}</abbr>;
+    },
+    "0": (chunks: React.ReactNode) => chunks,
+    u: (chunks: React.ReactNode) => <u>{chunks}</u>,
+    s: (chunks: React.ReactNode) => <s>{chunks}</s>,
+  };
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -33,7 +54,6 @@ export default function ProcessControlPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/engineer"
@@ -48,10 +68,9 @@ export default function ProcessControlPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Process Control Services
+          {t("process-control-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -67,16 +86,19 @@ export default function ProcessControlPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="process-control-section-title"
+            <h2
+              id="process-control-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Outsource your work
+              {t("process-control-section-title")}
             </h2>
-            <p id="process-control-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Invest my brainpower into your project and benefit from my
-              expertise I gathered while working as a process engineer.
+            <p
+              id="process-control-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("process-control-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -90,97 +112,57 @@ export default function ProcessControlPage() {
                   id="advanced-process-control-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Advanced Process Control
+                  {t("advanced-process-control-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="advanced-process-control-list-element1">
-                  • <strong>Software procurement and setup</strong> - You
-                  already have lots of process data of your manufacturing
-                  processes available but you lack a centralized software that
-                  is providing what your team needs and at the same time
-                  integrates into what is already setup? I help you finding your{" "}
-                  <abbr title="advanced process control">APC</abbr> software as
-                  well I can take over all the communication with possible
-                  partner. Furthermore I offer to write requirement
-                  specifications, do first sample testing and support its
-                  rollout.
+                  {t.rich(
+                    "advanced-process-control-list-element1",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="advanced-process-control-list-element2">
-                  • <strong>User training</strong> - Are you looking forward to
-                  standardize the way{" "}
-                  <abbr title="advanced process control">APC</abbr> is used in
-                  your company? I provide a platform based training for you or
-                  your team to make it become a solid common ground of expertise
-                  for further steps. It has a step-based approach and starts
-                  with general <abbr title="advanced process control">APC</abbr>{" "}
-                  ideas and rises to advanced approaches and specific topics
-                  that can also involve the software that you are using.{" "}
+                  {t.rich(
+                    "advanced-process-control-list-element2",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="advanced-process-control-list-element3">
-                  • <strong>Mathematics</strong> - Not every measured signal
-                  from a sensor is automatically ready to be used in an{" "}
-                  <abbr title="advanced process control">APC</abbr> environment.
-                  Math can be applied to create new or more reliable sources for
-                  your <abbr title="advanced process control">APC</abbr>{" "}
-                  landscape. As well it can be used for limit calculations and
-                  violation rules like n of m. I do raw data analysis, signal
-                  optimization, limit-based calculations, outlier handling and
-                  apply whatever math is necessary wherever needed to get more
-                  out of the control mechanism{" "}
-                  <abbr title="advanced process control">APC</abbr> shall be.
+                  {t.rich(
+                    "advanced-process-control-list-element3",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="advanced-process-control-list-element4">
-                  • <strong>Strategic alignment</strong> - Typically{" "}
-                  <abbr title="advanced process control">APC</abbr> is not used
-                  as only measure of control in a modern production. It shall be
-                  part of an ecosystem. But how does the{" "}
-                  <abbr title="advanced process control">APC</abbr>-piece fit
-                  into that ecosystem and what expectations does it have to
-                  fulfill? Is it doing what it shall do? The view of an outsider
-                  on strategic topics can be a blessing. That´s where I step in.
+                  {t.rich(
+                    "advanced-process-control-list-element4",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="advanced-process-control-list-element5">
-                  • <strong>Learning from the past</strong> - Data can tell
-                  stories, if asked correctly. Analyzing it and find
-                  correlations to certain events is not always straight forward
-                  and sometimes needs more time. Time that is precious within
-                  your team. Hand this topic over to me and get answer to the
-                  your questions.
+                  {t.rich(
+                    "advanced-process-control-list-element5",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="advanced-process-control-list-element6">
-                  •{" "}
-                  <strong>
-                    <abbr title="artificial intelligence">AI</abbr> assistance
-                  </strong>{" "}
-                  - The buzzword of today:{" "}
-                  <abbr title="artificial intelligence">AI</abbr>. It´s a
-                  powerful tool for analyzing your data. I can help you finding
-                  the correct model for doing the job, run tests and help
-                  implementing a solution that fits your needs including all the
-                  communication and procurement procedure upfront.
+                  {t.rich(
+                    "advanced-process-control-list-element6",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="advanced-process-control-list-element7">
-                  • <strong>New setup</strong> - Are you about to make the first
-                  steps into the world of{" "}
-                  <abbr title="advanced process control">APC</abbr>? Or are you
-                  planing to increase the coverage of your already existing{" "}
-                  <abbr title="advanced process control">APC</abbr> setup?
-                  Together we can evaluate a bunch of strategies and then decide
-                  the way to go to fit your house and processes. I also help you
-                  searching for adequate measurement systems, sensors and where
-                  to place them in order to monitor as good as possible whats of
-                  interest.
+                  {t.rich(
+                    "advanced-process-control-list-element7",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="advanced-process-control-list-element8">
-                  • <strong>External software utilization</strong> - For reasons
-                  it may sometimes makes sense that you analyze gathered data
-                  with external tools. One of these tools could be one of the
-                  vast Python libraries like Pandas, Matplotlib, Numpy or SciPy.
-                  With them I can help you while you don´t have to bother with
-                  freeing up resources in order to learn something new for just
-                  one project. And if its not related to Python we´ll also
-                  figure out what to do.
+                  {t.rich(
+                    "advanced-process-control-list-element8",
+                    richTextHandlers
+                  )}
                 </li>
               </ul>
             </div>
@@ -192,89 +174,57 @@ export default function ProcessControlPage() {
                   id="statistical-process-control-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  Statistical Process Control
+                  {t("statistical-process-control-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="statistical-process-control-list-element1">
-                  • <strong>Software procurement and setup</strong> - You
-                  already have lots of measurement data of your manufacturing
-                  processes available but you lack a centralized software that
-                  is providing what your team needs and at the same time
-                  integrates into what is already setup? I help you finding your{" "}
-                  <abbr title="statistical process control">SPC</abbr> software
-                  as well I can take over all the communication with possible
-                  partner. Furthermore I offer to write requirement
-                  specifications, do first sample testing and support its
-                  rollout.
+                  {t.rich(
+                    "statistical-process-control-list-element1",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="statistical-process-control-list-element2">
-                  • <strong>User training</strong> - Are you looking forward to
-                  standardize the way{" "}
-                  <abbr title="statistical process control">SPC</abbr> is used
-                  in your company? I provide a platform based training for you
-                  or your team to make it become a solid common ground of
-                  expertise for further steps. It has a step-based approach and
-                  starts with general{" "}
-                  <abbr title="statistical process control">SPC</abbr> concepts
-                  and rises to advanced approaches and specific topics that can
-                  also involve the software that you are using.
+                  {t.rich(
+                    "statistical-process-control-list-element2",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="statistical-process-control-list-element3">
-                  • <strong>WER implementation</strong> - I´d consider the{" "}
-                  <abbr title="western electric rules">WER</abbr> a backbone of{" "}
-                  <abbr title="statistical process control">SPC</abbr>. Rolling
-                  out <abbr title="statistical process control">SPC</abbr> on
-                  millions of data channels can not be overseen and managed by
-                  hand, that´s for sure. If you plan to do so and need expertise
-                  about setting limits: I can help you here.
+                  {t.rich(
+                    "statistical-process-control-list-element3",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="statistical-process-control-list-element4">
-                  • <strong>Strategic alignment</strong> - Typically{" "}
-                  <abbr title="advanced process control">APC</abbr> is not used
-                  as only measure of control in a modern production. It shall be
-                  part of an ecosystem. But how does the{" "}
-                  <abbr title="advanced process control">APC</abbr>-piece fit
-                  into that ecosystem and what expectations does it have to
-                  fulfill? Is it doing what it shall do? The view of an outsider
-                  on strategic topics can be a blessing. That´s where I step in.
+                  {t.rich(
+                    "statistical-process-control-list-element4",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="statistical-process-control-list-element5">
-                  • <strong>Learning from the past</strong> - Data can tell
-                  stories, if asked correctly. Analyzing it and find
-                  correlations to certain events is not always straight forward
-                  and sometimes needs more time. Time that is precious within
-                  your team. Hand this topic over to me and get answer to the
-                  your questions.
+                  {t.rich(
+                    "statistical-process-control-list-element5",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="statistical-process-control-list-element6">
-                  • <strong>AI assistance</strong> - The buzzword of today: AI.
-                  It´s a powerful tool for analyzing your data. I can help you
-                  finding the correct model for doing the job, run tests and
-                  help implementing a solution that fits your needs including
-                  all the communication and procurement procedure upfront.
+                  {t.rich(
+                    "statistical-process-control-list-element6",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="statistical-process-control-list-element7">
-                  • <strong>New setup</strong> - Are you about to make the first
-                  steps into the world of{" "}
-                  <abbr title="advanced process control">APC</abbr>? Or are you
-                  planing to increase the coverage of your already existing{" "}
-                  <abbr title="advanced process control">APC</abbr> setup?
-                  Together we can evaluate a bunch of strategies and then decide
-                  the way to go to fit your house and processes. I also help you
-                  searching for adequate measurement systems, sensors and where
-                  to place them in order to monitor as good as possible whats of
-                  interest.
+                  {t.rich(
+                    "statistical-process-control-list-element7",
+                    richTextHandlers
+                  )}
                 </li>
                 <li id="statistical-process-control-list-element8">
-                  • <strong>External software utilization</strong> - For reasons
-                  it may sometimes makes sense that you analyze gathered data
-                  with external tools. One of these tools could be one of the
-                  vast Python libraries like Pandas, Matplotlib, Numpy or SciPy.
-                  With them I can help you while you don´t have to bother with
-                  freeing up resources in order to learn something new for just
-                  one project. And if its not related to Python I´m ready to
-                  delve into other environments as well, just let me know.
+                  {t.rich(
+                    "statistical-process-control-list-element8",
+                    richTextHandlers
+                  )}
                 </li>
               </ul>
             </div>
@@ -286,42 +236,21 @@ export default function ProcessControlPage() {
                   id="custom-solutions-title"
                   className="text-lg font-semibold text-teal-200"
                 >
-                  Custom Solutions
+                  {t("custom-solutions-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="custom-solutions-list-element1">
-                  • <strong>Python-based data analysis</strong> - Libraries like
-                  Pandas, Matplotlib, Numpy or SciPy are well established in the
-                  realm of data science. This service is especially meant to
-                  support where not much samples are collected to have APC or
-                  SPC with day to day samples. Or the analysis requirements
-                  differ from the established procedure.
+                  {t.rich("custom-solutions-list-element1", richTextHandlers)}
                 </li>
                 <li id="custom-solutions-list-element2">
-                  • <strong>Data classification</strong> - Are you dealing with
-                  a new data type or quality and do not yet know how to make it
-                  fit your established catalog of classifications? Or did you
-                  just update your failure catalog and need someone to perform a
-                  re-classification of existing data? Even though I won´t do
-                  this by myself I help you search qualified 3rd parties to do
-                  the job.
+                  {t.rich("custom-solutions-list-element2", richTextHandlers)}
                 </li>
                 <li id="custom-solutions-list-element3">
-                  • <strong>Data creation and prototyping</strong> - You need a
-                  demo or sample of data prepared in a one-time manner? It shall
-                  be connected within an highly integrated process landscape
-                  where lots of things depend on one another in feedback loops?
-                  Something needs to be responsive in almost real-time? This is
-                  where engineering can shine and you can save your resources
-                  and let me do that for you. I
+                  {t.rich("custom-solutions-list-element3", richTextHandlers)}
                 </li>
                 <li id="custom-solutions-list-element4">
-                  • <strong>Maintenance and review</strong> - The process
-                  control tools you use are historically grown and need a review
-                  or a restructuring? You use manual manpower to maintain these
-                  tools? Whatever it is, outsource it and let an experienced
-                  helping hand do that for you.
+                  {t.rich("custom-solutions-list-element4", richTextHandlers)}
                 </li>
               </ul>
             </div>
@@ -349,12 +278,7 @@ export default function ProcessControlPage() {
               id="process-control-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Miss something? We´ll find a solution. Primary I offer my services
-              for manufacturing processes, and in particular semiconductor
-              manufacturing. But I am absolutely open for new topics. My
-              services can be booked in both ways: short and long term. And I
-              work either project or time based. As well you can combine any of
-              my services to get the best result.
+              {t("process-control-contact")}
             </p>
             <Link
               href={generateContactHref(
@@ -367,8 +291,7 @@ export default function ProcessControlPage() {
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>
