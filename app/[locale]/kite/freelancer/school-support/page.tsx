@@ -1,7 +1,7 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import kite_hero_image from "@/public/images/kite_hero_image.jpg";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -21,6 +21,26 @@ import { Hero } from "@/components/sections/Hero";
 export const metadata = PAGE_METADATA["kite/freelancer/school-support"];
 
 export default function SchoolSupportPage() {
+  const t = useTranslations("SchoolSupportPage");
+
+  const richTextHandlers = {
+    strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+    em: (chunks: React.ReactNode) => <em>{chunks}</em>,
+    abbr: (chunks: React.ReactNode) => {
+      // chunks will be an array: [text, <0>title</0>]
+      if (Array.isArray(chunks) && chunks.length > 1) {
+        const text = chunks[0];
+        const titleElement = chunks[1] as any;
+        const title = titleElement?.props?.children || "";
+        return <abbr title={title}>{text}</abbr>;
+      }
+      return <abbr>{chunks}</abbr>;
+    },
+    "0": (chunks: React.ReactNode) => chunks,
+    u: (chunks: React.ReactNode) => <u>{chunks}</u>,
+    s: (chunks: React.ReactNode) => <s>{chunks}</s>,
+  };
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -34,7 +54,6 @@ export default function SchoolSupportPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/kite"
@@ -49,10 +68,9 @@ export default function SchoolSupportPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          School Support Services
+          {t("school-support-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -68,17 +86,19 @@ export default function SchoolSupportPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="school-support-section-title"
+            <h2
+              id="school-support-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Have An Extra Employee At Hand
+              {t("school-support-section-title")}
             </h2>
-            <p id="school-support-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              I´m ready to support your school. Consider me as the one guy you
-              literally can put anywhere: Flexibility is my strength. Just tell
-              me up front what you need:
+            <p
+              id="school-support-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("school-support-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -92,27 +112,27 @@ export default function SchoolSupportPage() {
                   id="instructor-services-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Instructor Services
+                  {t("instructor-services-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="instructor-services-list-element1">
-                  • VDWS certified instructor since 2023
+                  {t("instructor-services-list-element1")}
                 </li>
                 <li id="instructor-services-list-element2">
-                  • Beginner to advanced lessons
+                  {t("instructor-services-list-element2")}
                 </li>
                 <li id="instructor-services-list-element3">
-                  • Landboarding lessons
+                  {t("instructor-services-list-element3")}
                 </li>
                 <li id="instructor-services-list-element4">
-                  • Multi-language support (German, English, Portuguese)
+                  {t("instructor-services-list-element4")}
                 </li>
                 <li id="instructor-services-list-element5">
-                  • Group and individual sessions
+                  {t("instructor-services-list-element5")}
                 </li>
                 <li id="instructor-services-list-element6">
-                  • Supervision and filming
+                  {t("instructor-services-list-element6")}
                 </li>
               </ul>
             </div>
@@ -124,30 +144,30 @@ export default function SchoolSupportPage() {
                   id="general-assistance-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  General Assistance
+                  {t("general-assistance-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="general-assistance-list-element1">
-                  • Office and administration
+                  {t("general-assistance-list-element1")}
                 </li>
                 <li id="general-assistance-list-element2">
-                  • Customer service and sales support
+                  {t("general-assistance-list-element2")}
                 </li>
                 <li id="general-assistance-list-element3">
-                  • Equipment recommendations
+                  {t("general-assistance-list-element3")}
                 </li>
                 <li id="general-assistance-list-element4">
-                  • Gear maintenance and repairs
+                  {t("general-assistance-list-element4")}
                 </li>
                 <li id="general-assistance-list-element5">
-                  • Inventory management and logistics
+                  {t("general-assistance-list-element5")}
                 </li>
                 <li id="general-assistance-list-element6">
-                  • Product demonstrations
+                  {t("general-assistance-list-element6")}
                 </li>
                 <li id="general-assistance-list-element7">
-                  • Helping hand in day to day tasks
+                  {t("general-assistance-list-element7")}
                 </li>
               </ul>
             </div>
@@ -175,28 +195,27 @@ export default function SchoolSupportPage() {
                   id="flexible-scheduling-title"
                   className="text-lg font-semibold text-emerald-200"
                 >
-                  Flexible Scheduling
+                  {t("flexible-scheduling-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="flexible-scheduling-list-element1">
-                  • Short-term and long-term contracts
+                  {t("flexible-scheduling-list-element1")}
                 </li>
                 <li id="flexible-scheduling-list-element2">
-                  • The more you book, the better the price
+                  {t("flexible-scheduling-list-element2")}
                 </li>
                 <li id="flexible-scheduling-list-element3">
-                  • Seasonal support available
+                  {t("flexible-scheduling-list-element3")}
                 </li>
                 <li id="flexible-scheduling-list-element4">
-                  • Weekend and holiday coverage
+                  {t("flexible-scheduling-list-element4")}
                 </li>
                 <li id="flexible-scheduling-list-element5">
-                  • Providing support to multi-location schools and open to
-                  commuting between sites.
+                  {t("flexible-scheduling-list-element5")}
                 </li>
                 <li id="flexible-scheduling-list-element6">
-                  • Driver’s license covering both car and motorcycle.
+                  {t("flexible-scheduling-list-element6")}
                 </li>
               </ul>
             </div>
@@ -240,9 +259,7 @@ export default function SchoolSupportPage() {
               id="school-support-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Let's see how I can support your team. Combine my services as you
-              wish, there are almost no restrictions. Is anything missing? We
-              find a solution. It all starts here:
+              {t("school-support-contact")}
             </p>
             <Link
               href={generateContactHref("/kite/freelancer/school-support")}
@@ -253,8 +270,7 @@ export default function SchoolSupportPage() {
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>

@@ -1,7 +1,8 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import kite_hero_image from "@/public/images/kite_hero_image.jpg";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -16,6 +17,26 @@ import { Hero } from "@/components/sections/Hero";
 export const metadata = PAGE_METADATA["kite/freelancer/consulting"];
 
 export default function ConsultingPage() {
+  const t = useTranslations("ConsultingPage");
+
+  const richTextHandlers = {
+    strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+    em: (chunks: React.ReactNode) => <em>{chunks}</em>,
+    abbr: (chunks: React.ReactNode) => {
+      // chunks will be an array: [text, <0>title</0>]
+      if (Array.isArray(chunks) && chunks.length > 1) {
+        const text = chunks[0];
+        const titleElement = chunks[1] as any;
+        const title = titleElement?.props?.children || "";
+        return <abbr title={title}>{text}</abbr>;
+      }
+      return <abbr>{chunks}</abbr>;
+    },
+    "0": (chunks: React.ReactNode) => chunks,
+    u: (chunks: React.ReactNode) => <u>{chunks}</u>,
+    s: (chunks: React.ReactNode) => <s>{chunks}</s>,
+  };
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -29,7 +50,6 @@ export default function ConsultingPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/kite"
@@ -44,10 +64,9 @@ export default function ConsultingPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Kite Consulting Services
+          {t("consulting-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -63,17 +82,19 @@ export default function ConsultingPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="consulting-section-title"
+            <h2
+              id="consulting-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              There is a lot to ask
+              {t("consulting-section-title")}
             </h2>
-            <p id="consulting-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Guidance and knowledge exchange is the key: Someone knows
-              something and someone wants to learn it. Here I combine my role as
-              a kitesurfer and -instructor with being part of society.
+            <p
+              id="consulting-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("consulting-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -87,22 +108,24 @@ export default function ConsultingPage() {
                   id="general-consulting-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  General Consulting
+                  {t("general-consulting-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="general-consulting-list-element1">
-                  • Individual equipment recommendations
+                  {t("general-consulting-list-element1")}
                 </li>
                 <li id="general-consulting-list-element2">
-                  • Transportation, maintenance and logistics
+                  {t("general-consulting-list-element2")}
                 </li>
                 <li id="general-consulting-list-element3">
-                  • Equipment review and demo testings
+                  {t("general-consulting-list-element3")}
                 </li>
-                <li id="general-consulting-list-element4">• Quote review</li>
+                <li id="general-consulting-list-element4">
+                  {t("general-consulting-list-element4")}
+                </li>
                 <li id="general-consulting-list-element5">
-                  • Karma: Influence on society and the environment
+                  {t("general-consulting-list-element5")}
                 </li>
               </ul>
             </div>
@@ -114,24 +137,24 @@ export default function ConsultingPage() {
                   id="sport-representation-title"
                   className="text-lg font-semibold text-emerald-200"
                 >
-                  Sport Representation
+                  {t("sport-representation-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="sport-representation-list-element1">
-                  • Public speaking and presentations about sport related topics
+                  {t("sport-representation-list-element1")}
                 </li>
                 <li id="sport-representation-list-element2">
-                  • Educational workshops for almost all ages
+                  {t("sport-representation-list-element2")}
                 </li>
                 <li id="sport-representation-list-element3">
-                  • Media interviews and content, also for B2B
+                  {t("sport-representation-list-element3")}
                 </li>
                 <li id="sport-representation-list-element4">
-                  • Community outreach programs
+                  {t("sport-representation-list-element4")}
                 </li>
                 <li id="sport-representation-list-element5">
-                  • Sport promotion initiatives
+                  {t("sport-representation-list-element5")}
                 </li>
               </ul>
             </div>
@@ -143,9 +166,7 @@ export default function ConsultingPage() {
               id="consulting-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              This section revolves around anything that is somehow connected to
-              the sport as well to the environment in which it´s carried out.
-              Find out how we can work together:
+              {t("consulting-contact")}
             </p>
             <Link
               href={generateContactHref("/kite/freelancer/consulting")}
@@ -156,8 +177,7 @@ export default function ConsultingPage() {
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>

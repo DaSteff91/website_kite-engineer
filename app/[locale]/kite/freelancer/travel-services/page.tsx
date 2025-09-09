@@ -1,7 +1,7 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import kite_hero_image from "@/public/images/kite_hero_image.jpg";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -17,6 +17,26 @@ import { Hero } from "@/components/sections/Hero";
 export const metadata = PAGE_METADATA["kite/freelancer/travel-services"];
 
 export default function TravelServicesPage() {
+  const t = useTranslations("TravelServicesPage");
+
+  const richTextHandlers = {
+    strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+    em: (chunks: React.ReactNode) => <em>{chunks}</em>,
+    abbr: (chunks: React.ReactNode) => {
+      // chunks will be an array: [text, <0>title</0>]
+      if (Array.isArray(chunks) && chunks.length > 1) {
+        const text = chunks[0];
+        const titleElement = chunks[1] as any;
+        const title = titleElement?.props?.children || "";
+        return <abbr title={title}>{text}</abbr>;
+      }
+      return <abbr>{chunks}</abbr>;
+    },
+    "0": (chunks: React.ReactNode) => chunks,
+    u: (chunks: React.ReactNode) => <u>{chunks}</u>,
+    s: (chunks: React.ReactNode) => <s>{chunks}</s>,
+  };
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -30,7 +50,6 @@ export default function TravelServicesPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/kite"
@@ -45,10 +64,9 @@ export default function TravelServicesPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Travel Services
+          {t("travel-services-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -64,17 +82,19 @@ export default function TravelServicesPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="travel-services-section-title"
+            <h2
+              id="travel-services-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              The world can be your playground - use it
+              {t("travel-services-section-title")}
             </h2>
-            <p id="travel-services-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Even though I am not a travel agent I can look up everything for
-              you and put it together so you can easily decide what suites your
-              booking. Here you can rely on me:
+            <p
+              id="travel-services-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("travel-services-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -88,21 +108,21 @@ export default function TravelServicesPage() {
                   id="trip-organization-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Trip Organization
+                  {t("trip-organization-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="trip-organization-list-element1">
-                  • Trip planning and coordination
+                  {t("trip-organization-list-element1")}
                 </li>
                 <li id="trip-organization-list-element2">
-                  • Transfer arrangements
+                  {t("trip-organization-list-element2")}
                 </li>
                 <li id="trip-organization-list-element3">
-                  • Budget and timetable planing
+                  {t("trip-organization-list-element3")}
                 </li>
                 <li id="trip-organization-list-element4">
-                  • Health and insurance considerations
+                  {t("trip-organization-list-element4")}
                 </li>
               </ul>
             </div>
@@ -114,21 +134,21 @@ export default function TravelServicesPage() {
                   id="personal-coaching-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  Personal Coaching
+                  {t("personal-coaching-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="personal-coaching-list-element1">
-                  • Kite instructor services
+                  {t("personal-coaching-list-element1")}
                 </li>
                 <li id="personal-coaching-list-element2">
-                  • Functional fitness and HIIT coaching
+                  {t("personal-coaching-list-element2")}
                 </li>
                 <li id="personal-coaching-list-element3">
-                  • Master of your schedule
+                  {t("personal-coaching-list-element3")}
                 </li>
                 <li id="personal-coaching-list-element4">
-                  • Progress documentaion
+                  {t("personal-coaching-list-element4")}
                 </li>
               </ul>
             </div>
@@ -140,19 +160,21 @@ export default function TravelServicesPage() {
                   id="travel-buddy-title"
                   className="text-lg font-semibold text-teal-200"
                 >
-                  Travel Buddy
+                  {t("travel-buddy-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="travel-buddy-list-element1">
-                  • Have fun: I am also a human
+                  {t("travel-buddy-list-element1")}
                 </li>
-                <li id="travel-buddy-list-element2">• Trip documentaion</li>
+                <li id="travel-buddy-list-element2">
+                  {t("travel-buddy-list-element2")}
+                </li>
                 <li id="travel-buddy-list-element3">
-                  • Organization of general activities
+                  {t("travel-buddy-list-element3")}
                 </li>
                 <li id="travel-buddy-list-element4">
-                  • Sharing expenses of daily needs
+                  {t("travel-buddy-list-element4")}
                 </li>
               </ul>
             </div>
@@ -212,9 +234,7 @@ export default function TravelServicesPage() {
               id="travel-services-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Let's create an unforgettable experience together. I provide you
-              what is neccessary for it. Only the booking is yours. Is anything
-              missing? We find a solution. It all starts here:
+              {t("travel-services-contact")}
             </p>
             <Link
               href={generateContactHref("/kite/freelancer/travel-services")}
@@ -225,8 +245,7 @@ export default function TravelServicesPage() {
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>
