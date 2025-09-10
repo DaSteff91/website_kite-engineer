@@ -15,5 +15,332 @@
     "professionalItems": "<li>Launching my freelancer career as Kite-Engineer to combine my worlds into one, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in german, english and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt with focus on Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
     "personalTitle": "Parte privado",
     "personalItems": "<li>\"Be the change in the world you want to see\"</li><li>I am an explorer, an adventurer and a nerd</li><li>Self-study was always more satisfying then school</li><li>Yes, even I´ve once played football. Until I was 14</li><li>Sports and outdoor activities are a big part of my life</li><li>So is Linkin Park - being a fan since I´m 6 years old</li><li>Have you ever listened to Eckhart Tolle?</li><li>Smiling at people on the street helps sharing good vibes</li><li>Philosophy, especially stoicism, was added since I´m 30 - coincidence?</li><li>A book that changed my life? O Alquimista - Paulo Coelho</li><li>Follower of the \"Free and Open Source Idea\"</li><li>Growing as a community is satisfaction times x</li>"
+  },
+
+  "ContactPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Vamos nos conectar",
+    "sectionDescription": "Seja sobre kiteboarding, engenharia ou qualquer coisa entre os dois. Entre em contato por e-mail, telefone ou pelo formulário abaixo. Encontrou um bug ou erro de digitação? Serei eternamente grato se você reportar."
+  },
+  "EngineerPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Expanda suas possibilidades",
+    "sectionDescription": "Aproveite meus serviços de engenharia nas áreas de TI e semicondutores",
+    "contactButton": "Entrar em contato",
+    "processEngineering": {
+      "title": "Engenharia de Processo",
+      "processControl": {
+        "title": "Controle de Processo",
+        "description": "APC (Controle Avançado de Processo), SPC (Controle Estatístico de Processo) e implementação de WER (Regras Elétricas Ocidentais) como competência central. Análise de dados com Python, treinamento de IA para detecção de falhas, configuração de dashboards & KPIs ajuda pelo caminho."
+      },
+      "processOptimization": {
+        "title": "Otimização de Processo",
+        "description": "Aplicação de técnicas Six Sigma e lean para alcançar o melhor resultado de processo possível."
+      },
+      "changeManagement": {
+        "title": "Gestão de Mudanças",
+        "description": "Preparação de marcos e passagem de gates de liberação. É sobre documentação e rastreabilidade – eu cuido disso para você"
+      },
+      "monitoring": {
+        "title": "Monitoramento",
+        "description": "Não sabe quais parâmetros monitorar e como? Vamos definir uma configuração de monitoramento. E, quando necessário, encontramos métodos apropriados para obter uma solução para qualquer volume produzido"
+      }
+    },
+    "processDevelopment": {
+      "title": "Desenvolvimento de Processo",
+      "creativity": {
+        "title": "Criatividade",
+        "description": "Há mais do que brainstorming – mas você já sabe disso, certo? Entre em contato e vamos ativar neurônios que você ainda não conhecia"
+      },
+      "processDesign": {
+        "title": "Desenho de Processo",
+        "description": "Você sabe o que seu processo deve alcançar mas está preso em ciclos de desenvolvimento sem fim? Vamos romper isso agora e projetar o que precisa ser feito. Visualizações e estruturação ajudam muito"
+      },
+      "simulationPrototyping": {
+        "title": "Simulação e Prototipagem",
+        "description": "Já considerou usar um modelo analógico e uma simulação para resolver um problema? Que tal imprimir um modelo físico em 3D? Eu preparo seu projeto para qualquer tipo de visualização futura e conecto você com especialistas"
+      },
+      "processEquipmentRoadmap": {
+        "title": "Roteiro de Processo e Equipamento",
+        "description": "Seus concorrentes não esperam você alcançar. Então é melhor estar preparado para o que o futuro pode trazer. Eu ajudo a delinear quais estratégias de tecnologia de próxima geração podem trazer benefícios e como fazer isso funcionar a seu favor."
+      }
+    },
+    "softwareDevelopment": {
+      "title": "Desenvolvimento de Software",
+      "customizedSolutions": {
+        "title": "Soluções Personalizadas",
+        "description": "Quer combinar uma função do software A com outra do software B e gerar um resultado que atenda a necessidades específicas? Sem problemas, é só questão de café e tempo para descobrir. De scripts personalizados a containerização, integração front- e back-end de projetos sob medida."
+      },
+      "databaseManagement": {
+        "title": "Gerenciamento de Banco de Dados Relacional",
+        "description": "Quer sair de armazenar dados em arquivos como Excel para um formato mais sustentável e melhor gerenciável? Ou melhorar seu BD já existente? Desde configurar um RDBMS completo até ajustar seu banco de dados – descubro o que podemos fazer."
+      },
+      "workflowAutomation": {
+        "title": "Automatização de Fluxo de Trabalho",
+        "description": "Economize tempo e deixe o software fazer suas tarefas repetitivas. Trabalhamos o conceito e depois implementamos passo a passo, conforme suas necessidades. Tenho certeza de que boa parte do seu software já usado suporta automatização"
+      },
+      "webDevelopment": {
+        "title": "Desenvolvimento Web",
+        "description": "Configuração de servidor e domínio? Ou quer ter seu próprio Nextcloud? Terceirize sua administração web comigo. E se precisar de um site, traga seu design e eu gerencio isso também"
+      }
+    },
+    "projectManagement": {
+      "title": "Gestão de Projetos",
+      "projectSetup": {
+        "title": "Configuração de Projeto",
+        "description": "Ganhe mais tempo para outras coisas e deixe-me cuidar do “o que deve ser entregue até quando por quem e como...”. Configurar as coisas corretamente não só dá uma boa sensação, como também é a base para alcançar metas de forma sustentável"
+      },
+      "timelineManagement": {
+        "title": "Gestão de Cronograma",
+        "description": "É tudo uma questão de timing. Às vezes as coisas não acontecem conforme planejado e é preciso reequilibrar os cronogramas do projeto. Alguém com visão externa como eu pode ajudar nessa fase."
+      },
+      "deviationManagement": {
+        "title": "Gestão de Desvios",
+        "description": "Especialmente quando partes externas estão envolvidas, nem sempre é fácil comunicar desvios inesperados no projeto. Passe isso para mim e tenha suas costas cobertas enquanto reorganiza e retoma sua forma comprometida."
+      },
+      "documentationSharing": {
+        "title": "Documentação e Compartilhamento",
+        "description": "Controle de versão e compartilhamento de dados não estão otimizados se todos trabalham em seus próprios dispositivos e só compartilham quando necessário. Esses tempos ficaram para trás – vamos criar sinergias na sua equipe que sempre existiram, mas nunca foram usadas"
+      }
+    },
+    "technicalConsulting": {
+      "title": "Consultoria Técnica",
+      "processAssessment": {
+        "title": "Avaliação de Processo",
+        "description": "Tenha uma visão externa do que está funcionando no seu negócio. Feedback detalhado sobre o que não deve ser alterado, o que tem potencial de melhoria e o que pode ser necessário fazer."
+      },
+      "technicalResearch": {
+        "title": "Pesquisa Técnica por Tema",
+        "description": "Você sabe que muitas coisas estão acontecendo ao seu redor e nem sempre sabe o que filtrar para saber o que importa para você e seu negócio. Eu gosto de ler assuntos técnicos – deixe comigo. Por que não trabalharmos juntos?"
+      },
+      "trainingKnowledgeTransfer": {
+        "title": "Treinamento & Transferência de Conhecimento",
+        "description": "Acredito que todos nunca devem parar de aprender. Portanto, estou mais que disposto a compartilhar tudo que sei com você e sua empresa."
+      },
+      "competitorAnalysis": {
+        "title": "Análise de Concorrentes",
+        "description": "Claro, todo mundo quer saber o que os outros estão fazendo – por que não fazer isso profissionalmente e economizar tempo para o seu negócio? Eu pesquiso e relato para você."
+      }
+    },
+    "contactSection": {
+      "description": "Pronto para elevar seu projeto? Você sempre recebe tudo o que é necessário dos meus serviços. A visão geral fornecida é apenas uma orientação e apenas um vislumbre do que é possível. Entre em contato para uma consulta gratuita e vamos ver como podemos alcançar seus objetivos juntos.",
+      "buttonText": "Receba seu Orçamento Gratuito"
+    }
+  },
+  "KitePage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "O progresso não cresce em árvores",
+    "sectionSubtitle": "Meus serviços relacionados ao kiteboarding ajudam você a alcançar seus objetivos",
+    "freelancerTitle": "Freelancer",
+    "freelancerSchoolSupportTitle": "Apoio à Escola",
+    "freelancerSchoolSupportDescription": "Seja para precisar de um instrutor certificado pela VDWS, assistência na loja ou alguém para ajudar atrás do bar, estou à disposição. Flexibilidade é minha força.",
+    "freelancerTravelServicesTitle": "Serviços de Viagem",
+    "freelancerTravelServicesDescription": "Procurando alguém que organize sua viagem de kite? Ou até lhe acompanhe como coach pessoal? Sem problemas, você será bem atendido",
+    "freelancerConsultingTitle": "Consultoria",
+    "freelancerConsultingDescription": "Sobrecarregado com opções de equipamentos? Deixe-me guiá-lo na escolha certa para kiteboarding. Precisa de alguém para representar o esporte? Gosto de falar em público e transmitir uma mensagem",
+    "coursesTitle": "Cursos",
+    "coursesTheoryTitle": "Teoria",
+    "coursesTheoryDescription": "Que tal puxar a barra? Vamos desvendar a “ciência” por trás do esporte — desde dinâmica do vento até tecnologia dos materiais. Escolha o tema e o ritmo; farei de forma clara e envolvente.",
+    "coursesStartingTitle": "(Re)Iniciando",
+    "coursesStartingDescription": "Se você está começando uma nova jornada no kite ou voltando após uma pausa, ajudarei você a (re)ganhar confiança na água.",
+    "coursesAdvancedTitle": "Avançado",
+    "coursesAdvancedDescription": "Pronto para ultrapassar limites? Do seu primeiro toeside até acertar loops, vamos encarar desafios juntos. Ou prefere sessões com supervisão? Sem problema! Você também pode trazer sua câmera ou drone!",
+    "moreLink": "Mais",
+    "contactLink": "Contato",
+    "contactSectionText": "Você também pode combinar um pouco de tudo. Quanto mais reservar, maior o desconto. O que te segura? Vamos conversar.",
+    "contactButton": "Conectar comigo"
+  },
+  "ProcessControlPage": {
+    "process-control-hero": "Process Control Services",
+    "process-control-section-title": "Terceirize seu trabalho",
+    "process-control-section-subtitle": "Invista meu poder cerebral no seu projeto e aproveite minha expertise adquirida enquanto trabalhava como engenheiro de processo.",
+    "advanced-process-control-title": "Controle Avançado de Processo",
+    "advanced-process-control-list-element1": "•<strong> Aquisição e configuração de software</strong> – Você já possui muitos dados de processo da sua produção, mas falta um software centralizado que atenda às necessidades da sua equipe e se integre ao que já está implementado? Eu ajudo a encontrar seu software APC (Controle Avançado de Processo), posso assumir toda a comunicação com possíveis parceiros, além de redigir especificações de requisitos, realizar testes iniciais e apoiar a implantação.",
+    "advanced-process-control-list-element2": "•<strong> Treinamento de usuários</strong> – Deseja padronizar o uso de APC em sua empresa? Ofereço treinamentos baseados em plataforma para você ou sua equipe, criando uma base sólida de conhecimento. Com abordagem em etapas, começamos pelos conceitos gerais de APC até abordagens avançadas e tópicos específicos relacionados ao software que você utiliza.",
+    "advanced-process-control-list-element3": "•<strong> Matemática</strong> – Nem todo sinal medido por sensor está pronto para uso em ambiente APC. A matemática pode ser aplicada para criar fontes novas ou mais confiáveis. Também é útil para cálculos de limite, regras de violação (como n de m), análise de dados brutos, otimização de sinais, tratamento de outliers e aplicação de toda matemática necessária para maximizar o controle do mecanismo APC.",
+    "advanced-process-control-list-element4": "•<strong> Alinhamento estratégico</strong> – APC normalmente não é a única medida de controle numa produção moderna. Ele deve fazer parte de um ecossistema. Mas como o APC se encaixa nesse cenário e quais expectativas precisa atender? Está cumprindo seu papel? Uma visão externa sobre temas estratégicos pode ser valiosa — é aí que eu entro.",
+    "advanced-process-control-list-element5": "•<strong> Aprender com o passado</strong> – Dados podem contar histórias quando adequadamente analisados. Encontrar correlações com eventos nem sempre é simples e demanda tempo — tempo precioso em sua equipe. Confie esse tema a mim e receba respostas claras às suas perguntas.",
+    "advanced-process-control-list-element6": "•<strong> Assistência com inteligência artificial (IA)</strong> – IA é o termo do momento. Uma ferramenta poderosa para analisar dados. Posso ajudar a encontrar o modelo certo, rodar testes e implementar uma solução adequada, incluindo toda a comunicação e o processo de aquisição necessários.",
+    "advanced-process-control-list-element7": "•<strong> Nova configuração</strong> – Vai dar os primeiros passos com APC? Ou pretende expandir a cobertura existente? Podemos avaliar estratégias juntos e decidir o melhor caminho. Também ajudo na escolha de sistemas de medição adequados, sensores e posicionamento para um monitoramento eficaz.",
+    "advanced-process-control-list-element8": "•<strong> Uso de software externo</strong> – Às vezes, faz sentido analisar dados com ferramentas externas. Isso pode incluir bibliotecas Python como Pandas, Matplotlib, NumPy ou SciPy. Eu posso auxiliar nisso, poupando você de aprender algo novo para um único projeto. Se não for Python, buscaremos alternativas eficientes.",
+    "statistical-process-control-title": "Controle Estatístico de Processo",
+    "statistical-process-control-list-element1": "•<strong> Aquisição e configuração de software</strong> – Você possui muitos dados de medição da produção, mas falta um software centralizado que atenda sua equipe e se integre ao ambiente existente? Posso ajudar a encontrar sua solução SPC (Controle Estatístico de Processo), além de comunicar com parceiros, escrever especificações, testar e apoiar a implantação.",
+    "statistical-process-control-list-element2": "•<strong> Treinamento de usuários</strong> – Quer padronizar o uso de SPC na sua empresa? Ofereço treinamento em plataforma para você ou sua equipe, criando um alicerce de conhecimento. Com abordagem por estágios, partimos dos conceitos gerais de SPC até tópicos avançados ligados ao software que você utiliza.",
+    "statistical-process-control-list-element3": "•<strong> Implementação de WER</strong> – Considero as Regras de Elétrica Ocidentais (WER) fundamentais para SPC. Implantar SPC em milhões de canais de dados não é trivial. Se você planeja isso e precisa de expertise em definição de limites, posso ajudar.",
+    "statistical-process-control-list-element4": "•<strong> Alinhamento estratégico</strong> – Como no APC, o SPC precisa se integrar ao ecossistema de produção. Qual o papel do SPC nesse contexto? Está rendendo conforme esperado? Uma visão externa pode trazer clareza — e é aí que entro.",
+    "statistical-process-control-list-element5": "•<strong> Aprender com o passado</strong> – Dados contam histórias quando bem analisados. Encontrar correlações leva tempo — tempo escasso em sua equipe. Deixe esse trabalho comigo e tenha respostas claras às suas dúvidas.",
+    "statistical-process-control-list-element6": "•<strong> Assistência com IA</strong> – A IA é uma ferramenta valiosa para análise de dados. Posso ajudar a escolher o modelo certo, executar testes e implementar uma solução adequada às suas necessidades, incluindo toda a logística envolvida.",
+    "statistical-process-control-list-element7": "•<strong> Nova configuração</strong> – Seguindo com SPC? Seja expansão ou implantação inicial, podemos definir estratégias juntos. Também ajudo na busca por sistemas de medição, sensores e posicionamento adequado para monitoramento eficaz.",
+    "statistical-process-control-list-element8": "•<strong> Uso de software externo</strong> – Às vezes, é útil analisar dados com ferramentas externas como bibliotecas Python (Pandas, Matplotlib, NumPy, SciPy). Eu posso auxiliar nisso para que você não tenha que aprender algo novo apenas para um projeto. Se não for Python, busco alternativas adequadas.",
+    "custom-solutions-title": "Soluções Personalizadas",
+    "custom-solutions-list-element1": "•<strong> Análise de dados baseada em Python</strong> – Bibliotecas como Pandas, Matplotlib, NumPy ou SciPy são amplamente usadas em ciência de dados. Este serviço é especialmente útil quando não há amostras diárias para APC ou SPC, ou quando as análises exigem abordagem diferente.",
+    "custom-solutions-list-element2": "•<strong> Classificação de dados</strong> – Está lidando com novo tipo ou qualidade de dados e não sabe como categorizá-los? Ou atualizou seu catálogo de falhas e precisa reclassificar dados existentes? Posso ajudar a buscar terceiros qualificados para isso.",
+    "custom-solutions-list-element3": "•<strong> Criação e prototipagem de dados</strong> – Precisa de uma demonstração ou amostra de dados especial? Integrados a um sistema complexo com feedbacks em tempo real? Isso é engenharia — e você economiza recursos deixando comigo.",
+    "custom-solutions-list-element4": "•<strong> Manutenção e revisão</strong> – As ferramentas de controle de processo evoluíram de forma orgânica e precisam de revisão ou reestruturação? Se é feita manualmente, terceirize comigo um toque experiente.",
+    "process-control-contact": "Algo faltando? Encontramos uma solução. Ofereço serviços principalmente para processos de manufatura, especialmente de semicondutores. Porém, estou aberto a novos temas. Meus serviços podem ser contratados a curto ou longo prazo, por projeto ou por tempo, e você pode combinar serviços para obter o melhor resultado.",
+    "contact-button": "Conectar comigo"
+  },
+    "TravelServicesPage": {
+    "travel-services-hero": "Travel Services",
+    "travel-services-section-title": "O mundo pode ser seu playground – aproveite",
+    "travel-services-section-subtitle": "Mesmo não sendo agente de viagens, posso reunir tudo para você decidir com facilidade o que melhor se encaixa na sua reserva. Conte comigo:",
+    "trip-organization-title": "Organização de Viagem",
+    "trip-organization-list-element1": "• Planejamento e coordenação de viagem",
+    "trip-organization-list-element2": "• Arranjos de traslado",
+    "trip-organization-list-element3": "• Planejamento de orçamento e cronograma",
+    "trip-organization-list-element4": "• Considerações de saúde e seguro",
+    "personal-coaching-title": "Coaching Pessoal",
+    "personal-coaching-list-element1": "• Serviços como instrutor de kite",
+    "personal-coaching-list-element2": "• Coaching funcional e HIIT",
+    "personal-coaching-list-element3": "• Mestre do seu próprio cronograma",
+    "personal-coaching-list-element4": "• Documentação do progresso",
+    "travel-buddy-title": "Companheiro de Viagem",
+    "travel-buddy-list-element1": "• Divirta-se: também sou humano",
+    "travel-buddy-list-element2": "• Documentação da viagem",
+    "travel-buddy-list-element3": "• Organização de atividades gerais",
+    "travel-buddy-list-element4": "• Compartilhar despesas diárias",
+    "travel-services-contact": "Vamos criar uma experiência inesquecível juntos. Eu forneço o necessário — a reserva é por sua conta. Falta algo? Encontramos uma solução. Tudo começa aqui:",
+    "contact-button": "Conectar comigo"
+  },
+  "TheoryPage": {
+    "theory-hero": "Kiteboarding Theory Courses",
+    "theory-section-title": "Fazer é legal! Mas entender as coisas é a chave para um progresso sustentável",
+    "theory-section-subtitle": "A seguir, uma visão geral das categorias de aulas teóricas que ofereço — já incluídas em um curso ou disponíveis como complemento.",
+    "rider-essentials-title": "Essenciais do Cavaleiro",
+    "rider-essentials-list-element1": "• Comportamento na água e arredores: conceitos como karma e prioridade de passagem",
+    "rider-essentials-list-element2": "• Conceitos para entender o vento: de onde vem e como usá-lo",
+    "rider-essentials-list-element3": "• Autogestão e rotinas: aprender a se educar",
+    "rider-essentials-list-element4": "• Terminologia geral (vela e navegação)",
+    "rider-essentials-list-element5": "• Etapas para se tornar mais independente",
+    "rider-essentials-list-element6": "• Erros comuns e como evitá-los",
+    "advanced-theory-title": "Teoria Avançada",
+    "advanced-theory-list-element1": "• O que faz você navegar: conceitos de forças e ângulos",
+    "advanced-theory-list-element2": "• Mais física: o que é aerodinâmica, o que realmente é o vento e de onde vem",
+    "advanced-theory-list-element3": "• Visão geral e detalhes dos materiais usados como pranchas, roupas de neoprene ou kites",
+    "advanced-theory-list-element4": "• Como os truques e manobras funcionam: um breakdown",
+    "advanced-theory-list-element5": "• Próximos passos no kiteboarding: exercícios adicionais, estilo de vida e nutrição",
+    "environmental-stuff-title": "Questões Ambientais",
+    "environmental-stuff-list-element1": "• Influências ambientais como o que é o tempo e como aprender a usá-lo a seu favor",
+    "environmental-stuff-list-element2": "• Não estamos sozinhos: conheça os ecossistemas onde você pratica. Sabia que pássaros podem morrer por sua causa?",
+    "environmental-stuff-list-element3": "• Kiteboarding em nível social: como você pode se juntar a uma organização para servir um propósito maior relacionado ao esporte",
+    "environmental-stuff-list-element4": "• Leis, regulamentos e boas práticas que precisam ser consideradas ao sair da zona de conforto",
+    "theory-contact": "“Um curso é bom se tanto o aluno quanto o professor aprendem um com o outro”. Combine meus serviços como desejar e aproveite um desconto individual. Falta algo na lista? Estou sempre aberto a pesquisar e trazer para você."
+  },
+  "StartingPage": {
+    "starting-hero": "(Re-)Starter Courses",
+    "starting-section-title": "Tudo começa em algum momento. Ou recomeça?",
+    "starting-section-subtitle": "Trata-se de se comprometer a dar os passos necessários: decidir (re)começar algo, em vez de apenas sonhar. Para os que seguem, ofereço um serviço de curso flexível como este:",
+    "who-title": "Quem?",
+    "who-list-element1": "• Indivíduos ou grupos",
+    "who-list-element2": "• Escolas ou particular",
+    "who-list-element3": "• Aulas em alemão, inglês e português",
+    "who-list-element4": "• Aulas práticas: até 4 pessoas",
+    "who-list-element5": "• Aulas teóricas: até 30 pessoas",
+    "who-list-element6": "• Sem limite de idade, mas mais de 30 kg",
+    "who-list-element7": "• Precisa saber nadar com segurança por mais de alguns minutos",
+    "who-list-element8": "• Iniciante = você nunca usou um kite em sua vida",
+    "who-list-element9": "• Reiniciante = você já usou um kite antes na vida",
+    "content-title": "Conteúdo",
+    "content-list-element1": "• Introdução e noções de segurança",
+    "content-list-element2": "• Familiarização e montagem do equipamento",
+    "content-list-element3": "• Controle básico do kite sem prancha",
+    "content-list-element4": "• Técnicas de body dragging",
+    "content-list-element5": "• Técnicas avançadas de direção do kite",
+    "content-list-element6": "• Fundamentos do water start e primeiros metros",
+    "content-list-element7": "• Aulas teóricas quando necessário",
+    "content-list-element8": "• Orientação na água e perigos",
+    "content-list-element9": "• O aluno consegue praticar water starts com segurança por conta própria após o curso",
+    "structure-title": "Estrutura",
+    "structure-list-element1": "• Programas intensivos de até 5 dias",
+    "structure-list-element2": "• Opções de agendamento flexíveis, conforme condições ambientais e pessoais",
+    "structure-list-element3": "• Sistema de dupla: 2 pessoas por kite",
+    "structure-list-element4": "• Individual: 1 pessoa, 1 kite",
+    "structure-list-element5": "• Formato de só supervisão disponível",
+    "structure-list-element6": "• Se disponível: suporte com headset e vídeo",
+    "structure-list-element7": "• Monitoramento de progresso e certificação VDWS",
+    "structure-list-element8": "• Alternativas sem vento: simulações, wakeboard, landboard, SUP, exercícios, etc.",
+    "starting-contact": "São muitas coisas a considerar ao dar cursos, mas quase nada que não possa ser organizado. Envie uma mensagem e organizamos todos os detalhes."
+  },
+  "AdvancedPage": {
+    "advanced-hero": "Advanced Kiteboarding Courses",
+    "advanced-section-title": "Depois do primeiro passo, vem o próximo. E o outro...",
+    "advanced-section-subtitle": "Por que parece tão fácil o que eles fazem na água? Há muito o que aprender e meus serviços servem como apoio ao longo do caminho:",
+    "who-title": "Quem?",
+    "who-list-element1": "• Indivíduos ou grupos",
+    "who-list-element2": "• Escolas ou particular",
+    "who-list-element3": "• Aulas em alemão, inglês e português",
+    "who-list-element4": "• Aulas práticas: até 4 pessoas",
+    "who-list-element5": "• Aulas teóricas: até 30 pessoas",
+    "who-list-element6": "• Sem limite de idade, mas mais de 30 kg",
+    "who-list-element7": "• Precisa saber nadar com segurança por mais de alguns minutos",
+    "who-list-element8": "• Avançado = você já navega com consistência após o water start",
+    "who-list-element9": "• Desculpe, não posso transformar ninguém em atleta “King Of The Air”. Mas posso ensinar alguns truques irados, com certeza",
+    "possible-content-title": "Conteúdo Possível",
+    "possible-content-list-element1": "• Desenvolver rotinas para apoiar seu treinamento",
+    "possible-content-list-element2": "• Modificações de equipamento como ajustes de stance ou testar diferentes configurações de linhas",
+    "possible-content-list-element3": "• Aprender novos truques em ambiente seguro e guiado",
+    "possible-content-list-element4": "• Individualizar seu próprio estilo e ser filmado",
+    "possible-content-list-element5": "• Feedback e otimizações na sua navegação atual",
+    "possible-content-list-element6": "• Como ser kite-buddy para iniciantes",
+    "possible-content-list-element7": "• Teoria avançada além da janela de vento",
+    "possible-content-list-element8": "• Praticar cenários de acidente e auto-resgate",
+    "structure-title": "Estrutura",
+    "structure-list-element1": "• Programas intensivos de até 5 dias",
+    "structure-list-element2": "• Cronograma flexível, conforme condições ambientais e pessoais",
+    "structure-list-element3": "• Sistema de dupla: 2 pessoas por kite",
+    "structure-list-element4": "• Individual: 1 pessoa, 1 kite",
+    "structure-list-element5": "• Formato de só supervisão disponível",
+    "structure-list-element6": "• Se disponível: suporte com headset e vídeo",
+    "structure-list-element7": "• Monitoramento de progresso e certificação VDWS",
+    "structure-list-element8": "• Alternativas sem vento: simulações, wakeboard, landboard, SUP, exercícios, etc.",
+    "advanced-contact": "São muitas coisas a considerar ao oferecer cursos, mas quase nada que não possa ser organizado. Envie uma mensagem e organizamos todos os detalhes."
+  },
+  "SchoolSupportPage": {
+    "school-support-hero": "School Support Services",
+    "school-support-section-title": "Tenha um colaborador extra à disposição",
+    "school-support-section-subtitle": "Estou pronto para apoiar sua escola. Considere-me como aquele membro flexível que pode atuar onde você precisar: flexibilidade é minha força. Diga o que precisa:",
+    "instructor-services-title": "Serviços de Instrutor",
+    "instructor-services-list-element1": "• Instrutor certificado VDWS desde 2023",
+    "instructor-services-list-element2": "• Aulas do iniciante ao avançado",
+    "instructor-services-list-element3": "• Aulas de landboarding",
+    "instructor-services-list-element4": "• Suporte multilíngue (alemão, inglês, português)",
+    "instructor-services-list-element5": "• Sessões em grupo ou individuais",
+    "instructor-services-list-element6": "• Supervisão e filmagem",
+    "general-assistance-title": "Assistência Geral",
+    "general-assistance-list-element1": "• Escritório e administração",
+    "general-assistance-list-element2": "• Suporte ao cliente e vendas",
+    "general-assistance-list-element3": "• Recomendações de equipamento",
+    "general-assistance-list-element4": "• Manutenção e reparos de gear",
+    "general-assistance-list-element5": "• Gestão de inventário e logística",
+    "general-assistance-list-element6": "• Demonstrações de produto",
+    "general-assistance-list-element7": "• Ajuda nas tarefas do cotidiano",
+    "flexible-scheduling-title": "Agendamento Flexível",
+    "flexible-scheduling-list-element1": "• Contratos de curto e longo prazo",
+    "flexible-scheduling-list-element2": "• Quanto mais reservar, melhor o preço",
+    "flexible-scheduling-list-element3": "• Suporte sazonal disponível",
+    "flexible-scheduling-list-element4": "• Cobertura nos finais de semana e feriados",
+    "flexible-scheduling-list-element5": "• Apoio a escolas em múltiplos locais e disponibilidade para deslocamento",
+    "flexible-scheduling-list-element6": "• Carteira de motorista para carro e moto",
+    "school-support-contact": "Veja como posso apoiar sua equipe. Combine meus serviços como quiser, quase não há restrições. Falta algo? Encontramos uma solução. Tudo começa aqui:",
+    "contact-button": "Conectar comigo"
+  },
+  "ConsultingPage": {
+    "consulting-hero": "Kite Consulting Services",
+    "consulting-section-title": "Há muito o que perguntar",
+    "consulting-section-subtitle": "Orientação e troca de conhecimento são essenciais: alguém sabe algo e alguém quer aprender. Aqui, combino meu papel como kitesurfer e instrutor com estar inserido na sociedade.",
+    "general-consulting-title": "Consultoria Geral",
+    "general-consulting-list-element1": "• Recomendações de equipamentos personalizadas",
+    "general-consulting-list-element2": "• Transporte, manutenção e logística",
+    "general-consulting-list-element3": "• Avaliação de equipamentos e testes demonstrativos",
+    "general-consulting-list-element4": "• Revisão de orçamentos",
+    "general-consulting-list-element5": "• Karma: impacto na sociedade e no meio ambiente",
+    "sport-representation-title": "Representação Esportiva",
+    "sport-representation-list-element1": "• Palestras e apresentações sobre temas esportivos",
+    "sport-representation-list-element2": "• Oficinas educativas para todas as idades",
+    "sport-representation-list-element3": "• Entrevistas e conteúdo para mídia, inclusive B2B",
+    "sport-representation-list-element4": "• Programas de alcance comunitário",
+    "sport-representation-list-element5": "• Iniciativas de promoção do esporte",
+    "consulting-contact": "Esta seção abrange tudo relacionado ao esporte e ao ambiente em que é praticado. Descubra como podemos trabalhar juntos:",
+    "contact-button": "Conectar comigo"
   }
 }
