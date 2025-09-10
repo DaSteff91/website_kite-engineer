@@ -16,165 +16,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import LocaleSwitcher from "../ui/localeSwitcher";
-
-// ONE DAY: PUT ALL THESE NAV_ITEMS ETC INTO A CONSTANTS FOLDER!!!!!
-const NAV_ITEMS = [
-  { href: "/", label: "Home", icon: House },
-  {
-    href: "/kite",
-    label: "Kite",
-    hasDropdown: true,
-    dropdownItems: [
-      { href: "/kite", label: "All Kite Services" },
-      {
-        label: "Freelancer Services",
-        isSubmenu: true,
-        items: [
-          { href: "/kite/freelancer/school-support", label: "School Support" },
-          {
-            href: "/kite/freelancer/travel-services",
-            label: "Travel Services",
-          },
-          { href: "/kite/freelancer/consulting", label: "Consulting" },
-        ],
-      },
-      {
-        label: "Courses",
-        isSubmenu: true,
-        items: [
-          { href: "/kite/courses/theory", label: "Theory Courses" },
-          { href: "/kite/courses/starting", label: "Starting Courses" },
-          { href: "/kite/courses/advanced", label: "Advanced Courses" },
-        ],
-      },
-    ],
-  },
-  {
-    href: "/engineer",
-    label: "Engineer",
-    hasDropdown: true,
-    dropdownItems: [
-      { href: "/engineer", label: "All Engineering Services" },
-      // 18.08.2025: Commented out until the content is available
-      // {
-      //   label: "Process Engineering",
-      //   isSubmenu: true,
-      //   items: [
-      //     {
-      //       href: "/engineer/process-engineering/process-control",
-      //       label: "Process Control",
-      //     },
-      //     {
-      //       href: "/engineer/process-engineering/process-optimization",
-      //       label: "Process Optimization",
-      //     },
-      //     {
-      //       href: "/engineer/process-engineering/change-management",
-      //       label: "Change Management",
-      //     },
-      //     {
-      //       href: "/engineer/process-engineering/monitoring",
-      //       label: "Monitoring",
-      //     },
-      //   ],
-      // },
-      // {
-      //   label: "Process Development",
-      //   isSubmenu: true,
-      //   items: [
-      //     {
-      //       href: "/engineer/process-development/creativity",
-      //       label: "Creativity",
-      //     },
-      //     {
-      //       href: "/engineer/process-development/process-design",
-      //       label: "Process Design",
-      //     },
-      //     {
-      //       href: "/engineer/process-development/simulation-prototyping",
-      //       label: "Simulation & Prototyping",
-      //     },
-      //     {
-      //       href: "/engineer/process-development/equipment-roadmap",
-      //       label: "Equipment Roadmap",
-      //     },
-      //   ],
-      // },
-      // {
-      //   label: "Software Development",
-      //   isSubmenu: true,
-      //   items: [
-      //     {
-      //       href: "/engineer/software-development/custom-solutions",
-      //       label: "Custom Solutions",
-      //     },
-      //     {
-      //       href: "/engineer/software-development/database-management",
-      //       label: "Database Management",
-      //     },
-      //     {
-      //       href: "/engineer/software-development/workflow-automation",
-      //       label: "Workflow Automation",
-      //     },
-      //     {
-      //       href: "/engineer/software-development/web-development",
-      //       label: "Web Development",
-      //     },
-      //   ],
-      // },
-      // {
-      //   label: "Project Management",
-      //   isSubmenu: true,
-      //   items: [
-      //     {
-      //       href: "/engineer/project-management/project-setup",
-      //       label: "Project Setup",
-      //     },
-      //     {
-      //       href: "/engineer/project-management/timeline-management",
-      //       label: "Timeline Management",
-      //     },
-      //     {
-      //       href: "/engineer/project-management/deviation-management",
-      //       label: "Deviation Management",
-      //     },
-      //     {
-      //       href: "/engineer/project-management/documentation",
-      //       label: "Documentation",
-      //     },
-      //   ],
-      // },
-      // {
-      //   label: "Technical Consulting",
-      //   isSubmenu: true,
-      //   items: [
-      //     {
-      //       href: "/engineer/technical-consulting/process-assessment",
-      //       label: "Process Assessment",
-      //     },
-      //     {
-      //       href: "/engineer/technical-consulting/technical-research",
-      //       label: "Technical Research",
-      //     },
-      //     {
-      //       href: "/engineer/technical-consulting/training-knowledge-transfer",
-      //       label: "Training & Knowledge Transfer",
-      //     },
-      //     {
-      //       href: "/engineer/technical-consulting/competitor-analysis",
-      //       label: "Competitor Analysis",
-      //     },
-      //   ],
-      // },
-    ],
-  },
-
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
-// ONE DAY: PUT ALL THESE NAV_ITEMS ETC FROM ABOVE INTO A CONSTANTS FOLDER!!!!!
+import {
+  NAV_ITEMS,
+  NavItem,
+  NavSubmenu,
+} from "@/lib/constants/navigation-menu";
 
 export function Header() {
+  const t = useTranslations("NavigationMenu"); // translations namespace
+  const pathname = usePathname();
+  const { theme, setTheme } = useTheme();
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(
@@ -187,8 +39,7 @@ export function Header() {
     string | null
   >(null);
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const pathname = usePathname();
+
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -213,44 +64,43 @@ export function Header() {
         setExpandedMobileSubmenu(null);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isMobileMenuOpen]);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setExpandedMobileItem(null);
     setExpandedMobileSubmenu(null);
   }, [pathname]);
 
-  const handleMobileItemClick = (itemLabel: string) => {
-    if (expandedMobileItem === itemLabel) {
+  const handleMobileItemClick = (itemKey: string) => {
+    if (expandedMobileItem === itemKey) {
       setExpandedMobileItem(null);
       setExpandedMobileSubmenu(null);
     } else {
-      setExpandedMobileItem(itemLabel);
+      setExpandedMobileItem(itemKey);
       setExpandedMobileSubmenu(null);
     }
   };
 
-  const handleMobileSubmenuClick = (submenuLabel: string) => {
-    if (expandedMobileSubmenu === submenuLabel) {
-      setExpandedMobileSubmenu(null);
-    } else {
-      setExpandedMobileSubmenu(submenuLabel);
-    }
+  const handleMobileSubmenuClick = (submenuKey: string) => {
+    setExpandedMobileSubmenu((prev) =>
+      prev === submenuKey ? null : submenuKey
+    );
   };
 
-  const handleDesktopSubmenuClick = (submenuLabel: string) => {
-    if (expandedDesktopSubmenu === submenuLabel) {
-      setExpandedDesktopSubmenu(null);
-    } else {
-      setExpandedDesktopSubmenu(submenuLabel);
-    }
+  const handleDesktopSubmenuClick = (submenuKey: string) => {
+    setExpandedDesktopSubmenu((prev) =>
+      prev === submenuKey ? null : submenuKey
+    );
+  };
+
+  // Helper to map an item to the correct "All X Services" translation key
+  const getAllServicesLabel = (item: NavItem) => {
+    if (item.key === "kite") return t("allKiteServices");
+    if (item.key === "engineer") return t("allEngineeringServices");
+    return t(`all_${item.key}_services`);
   };
 
   if (pathname === "/") return null;
@@ -297,159 +147,168 @@ export function Header() {
               />
             </Link>
 
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-4 lg:gap-6 h-full">
               <LocaleSwitcher />
-              {NAV_ITEMS.map((item) => (
-                <div key={item.href} className="h-full flex items-center">
-                  {item.hasDropdown ? (
-                    <DropdownMenu modal={false}>
-                      <DropdownMenuTrigger asChild>
-                        <button
-                          className={cn(
-                            "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium gap-1",
-                            "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
-                            "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                            pathname.startsWith(item.href)
-                              ? "text-white border-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                              : "text-white/90"
-                          )}
-                        >
-                          {item.href === "/" ? (
-                            <House className="h-5 w-5" />
-                          ) : (
-                            item.label
-                          )}
-                          <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                        </button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent
-                        align="start"
-                        className="w-72 bg-background/95 backdrop-blur-md border border-white/20 p-1"
-                        sideOffset={8}
-                      >
-                        {/* All Services Link */}
-                        <DropdownMenuItem asChild className="p-0">
-                          <Link
-                            href={item.href}
+              {NAV_ITEMS.map((item) => {
+                const Icon = item.icon as React.ElementType | undefined;
+                return (
+                  <div key={item.key} className="h-full flex items-center">
+                    {item.hasDropdown ? (
+                      <DropdownMenu modal={false}>
+                        <DropdownMenuTrigger asChild>
+                          <button
                             className={cn(
-                              "w-full cursor-pointer transition-colors px-3 py-3 text-base font-medium rounded-sm block text-left",
-                              "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
-                              pathname === item.href
-                                ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                              "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium gap-1",
+                              "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
+                              "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                              pathname.startsWith(item.href)
+                                ? "text-white border-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                                 : "text-white/90"
                             )}
                           >
-                            All {item.label} Services
-                          </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuSeparator className="bg-white/20 my-1" />
+                            {item.href === "/" ? (
+                              <House className="h-5 w-5" />
+                            ) : Icon ? (
+                              <Icon className="h-5 w-5" />
+                            ) : (
+                              t(item.key)
+                            )}
+                            <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                          </button>
+                        </DropdownMenuTrigger>
 
-                        {/* Direct Service Links */}
-                        {item.dropdownItems?.map((dropdownItem, index) => {
-                          if (dropdownItem.isSubmenu) {
-                            return (
-                              <div
-                                key={dropdownItem.label}
-                                className="space-y-1"
-                              >
-                                {/* Submenu Header - Full Line Clickable */}
-                                <button
-                                  onClick={() =>
-                                    handleDesktopSubmenuClick(
-                                      dropdownItem.label
-                                    )
-                                  }
-                                  className="w-full flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded-sm text-left transition-colors"
-                                >
-                                  <span className="text-sm font-medium text-white/80 hover:text-white">
-                                    {dropdownItem.label}
-                                  </span>
-                                  <ChevronRight
-                                    className={cn(
-                                      "h-4 w-4 transition-transform duration-200 text-white/60",
-                                      expandedDesktopSubmenu ===
-                                        dropdownItem.label && "rotate-90"
-                                    )}
-                                  />
-                                </button>
+                        <DropdownMenuContent
+                          align="start"
+                          className="w-72 bg-background/95 backdrop-blur-md border border-white/20 p-1"
+                          sideOffset={8}
+                        >
+                          {/* Top "All X Services" Link */}
+                          <DropdownMenuItem asChild className="p-0">
+                            <Link
+                              href={item.href}
+                              className={cn(
+                                "w-full cursor-pointer transition-colors px-3 py-3 text-base font-medium rounded-sm block text-left",
+                                "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                                pathname === item.href
+                                  ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                  : "text-white/90"
+                              )}
+                            >
+                              {getAllServicesLabel(item)}
+                            </Link>
+                          </DropdownMenuItem>
+                          <DropdownMenuSeparator className="bg-white/20 my-1" />
 
-                                {/* Expanded Items */}
-                                {expandedDesktopSubmenu ===
-                                  dropdownItem.label && (
-                                  <div className="pl-4 space-y-1">
-                                    {dropdownItem.items?.map((subItem) => (
-                                      <DropdownMenuItem
-                                        key={subItem.href}
-                                        asChild
-                                        className="p-0"
-                                      >
-                                        <Link
-                                          href={subItem.href}
-                                          className={cn(
-                                            "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
-                                            "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
-                                            pathname === subItem.href
-                                              ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                              : "text-white/70"
-                                          )}
+                          {/* Direct Service Links (skip first plain link to avoid duplicate) */}
+                          {item.dropdownItems?.map((dropdownItem, index) => {
+                            if (
+                              "isSubmenu" in dropdownItem &&
+                              dropdownItem.isSubmenu
+                            ) {
+                              const submenu = dropdownItem as NavSubmenu;
+                              return (
+                                <div key={submenu.key} className="space-y-1">
+                                  <button
+                                    onClick={() =>
+                                      handleDesktopSubmenuClick(submenu.key)
+                                    }
+                                    className="w-full flex items-center justify-between px-3 py-2 hover:bg-white/5 rounded-sm text-left transition-colors"
+                                  >
+                                    <span className="text-sm font-medium text-white/80 hover:text-white">
+                                      {t(submenu.key)}
+                                    </span>
+                                    <ChevronRight
+                                      className={cn(
+                                        "h-4 w-4 transition-transform duration-200 text-white/60",
+                                        expandedDesktopSubmenu ===
+                                          submenu.key && "rotate-90"
+                                      )}
+                                    />
+                                  </button>
+
+                                  {expandedDesktopSubmenu === submenu.key && (
+                                    <div className="pl-4 space-y-1">
+                                      {submenu.items.map((subItem) => (
+                                        <DropdownMenuItem
+                                          key={subItem.href}
+                                          asChild
+                                          className="p-0"
                                         >
-                                          {subItem.label}
-                                        </Link>
-                                      </DropdownMenuItem>
-                                    ))}
-                                  </div>
-                                )}
-
-                                <DropdownMenuSeparator className="bg-white/10 my-1" />
-                              </div>
-                            );
-                          } else if (!dropdownItem.isSubmenu && index > 0) {
-                            return (
-                              <DropdownMenuItem
-                                key={dropdownItem.href || index}
-                                asChild
-                                className="p-0"
-                              >
-                                <Link
-                                  href={dropdownItem.href || "#"}
-                                  className={cn(
-                                    "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
-                                    "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
-                                    pathname === dropdownItem.href
-                                      ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                      : "text-white/90"
+                                          <Link
+                                            href={subItem.href}
+                                            className={cn(
+                                              "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
+                                              "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                                              pathname === subItem.href
+                                                ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                                : "text-white/70"
+                                            )}
+                                          >
+                                            {t(subItem.key)}
+                                          </Link>
+                                        </DropdownMenuItem>
+                                      ))}
+                                    </div>
                                   )}
+                                  <DropdownMenuSeparator className="bg-white/10 my-1" />
+                                </div>
+                              );
+                            } else if (
+                              !("isSubmenu" in dropdownItem) &&
+                              index > 0
+                            ) {
+                              // index > 0 prevents rendering the first plain item (duplicate)
+                              const navItem = dropdownItem as NavItem;
+                              return (
+                                <DropdownMenuItem
+                                  key={navItem.href || index}
+                                  asChild
+                                  className="p-0"
                                 >
-                                  {dropdownItem.label}
-                                </Link>
-                              </DropdownMenuItem>
-                            );
-                          }
-                          return null;
-                        })}
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium",
-                        "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
-                        "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                        pathname === item.href
-                          ? "text-white border-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                          : "text-white/90"
-                      )}
-                    >
-                      {item.href === "/" ? (
-                        <House className="h-5 w-5" />
-                      ) : (
-                        item.label
-                      )}
-                    </Link>
-                  )}
-                </div>
-              ))}
+                                  <Link
+                                    href={navItem.href || "#"}
+                                    className={cn(
+                                      "w-full cursor-pointer transition-colors px-3 py-2 text-sm font-medium rounded-sm block text-left",
+                                      "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5",
+                                      pathname === navItem.href
+                                        ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                        : "text-white/90"
+                                    )}
+                                  >
+                                    {t(navItem.key)}
+                                  </Link>
+                                </DropdownMenuItem>
+                              );
+                            }
+                            return null;
+                          })}
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          "h-full flex items-center px-2 lg:px-3 text-base lg:text-[1.2rem] font-medium",
+                          "transition-all duration-200 hover:scale-105 border-b-2 border-transparent",
+                          "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                          pathname === item.href
+                            ? "text-white border-white drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                            : "text-white/90"
+                        )}
+                      >
+                        {item.href === "/" ? (
+                          <House className="h-5 w-5" />
+                        ) : Icon ? (
+                          <Icon className="h-5 w-5" />
+                        ) : (
+                          t(item.key)
+                        )}
+                      </Link>
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             <Button
@@ -481,10 +340,9 @@ export function Header() {
           <div className="rounded-lg border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/95 backdrop-blur-md p-4">
             <nav className="flex flex-col gap-2">
               {NAV_ITEMS.map((item) => (
-                <div key={item.href}>
+                <div key={item.key}>
                   {item.hasDropdown ? (
                     <div className="space-y-2">
-                      {/* Main Item with Expand/Collapse - Full Line Clickable */}
                       <LocaleSwitcher />
                       <div className="flex items-center">
                         <Link
@@ -499,99 +357,110 @@ export function Header() {
                               : "text-white/90"
                           )}
                         >
-                          All {item.label} Services
+                          {getAllServicesLabel(item)}
                         </Link>
                         <button
-                          onClick={() => handleMobileItemClick(item.label)}
+                          onClick={() => handleMobileItemClick(item.key)}
                           className="p-2 text-white/80 hover:text-white transition-colors"
                         >
                           <ChevronRight
                             className={cn(
                               "h-5 w-5 transition-transform duration-200",
-                              expandedMobileItem === item.label && "rotate-90"
+                              expandedMobileItem === item.key && "rotate-90"
                             )}
                           />
                         </button>
                       </div>
 
-                      {/* Expanded Items */}
-                      {expandedMobileItem === item.label && (
+                      {expandedMobileItem === item.key && (
                         <div className="pl-4 space-y-2 border-l border-white/20 ml-4">
+                          {/* Mobile: filter out the top "All X Services" link (href === item.href) */}
                           {item.dropdownItems
                             ?.filter(
-                              (item) =>
-                                !item.isSubmenu &&
-                                item.href !== "/kite" &&
-                                item.href !== "/engineer"
+                              (dropdownItem) =>
+                                !("isSubmenu" in dropdownItem) &&
+                                (dropdownItem as NavItem).href !== item.href
                             )
-                            .map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.href}
-                                href={dropdownItem.href || "#"}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className={cn(
-                                  "block px-3 py-2 text-base font-medium rounded-md text-left",
-                                  "transition-all duration-200",
-                                  "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                                  pathname === dropdownItem.href
-                                    ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                    : "text-white/80"
-                                )}
-                              >
-                                {dropdownItem.label}
-                              </Link>
-                            ))}
+                            .map((dropdownItem) => {
+                              const navItem = dropdownItem as NavItem;
+                              return (
+                                <Link
+                                  key={navItem.href}
+                                  href={navItem.href || "#"}
+                                  onClick={() => setIsMobileMenuOpen(false)}
+                                  className={cn(
+                                    "block px-3 py-2 text-base font-medium rounded-md text-left",
+                                    "transition-all duration-200",
+                                    "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                    pathname === navItem.href
+                                      ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                      : "text-white/80"
+                                  )}
+                                >
+                                  {t(navItem.key)}
+                                </Link>
+                              );
+                            })}
 
                           {/* Submenu Items */}
                           {item.dropdownItems
-                            ?.filter((item) => item.isSubmenu)
-                            .map((submenu) => (
-                              <div key={submenu.label} className="space-y-1">
-                                {/* Submenu Header - Full Line Clickable */}
-                                <button
-                                  onClick={() =>
-                                    handleMobileSubmenuClick(submenu.label)
-                                  }
-                                  className="w-full flex items-center justify-between px-3 py-2 text-left hover:bg-white/5 rounded-sm transition-colors"
+                            ?.filter(
+                              (dropdownItem) =>
+                                "isSubmenu" in dropdownItem &&
+                                dropdownItem.isSubmenu
+                            )
+                            .map((submenu) => {
+                              const subMenuItem = submenu as NavSubmenu;
+                              return (
+                                <div
+                                  key={subMenuItem.key}
+                                  className="space-y-1"
                                 >
-                                  <span className="text-base font-medium text-white/80">
-                                    {submenu.label}
-                                  </span>
-                                  <ChevronRight
-                                    className={cn(
-                                      "h-4 w-4 transition-transform duration-200 text-white/60",
-                                      expandedMobileSubmenu === submenu.label &&
-                                        "rotate-90"
-                                    )}
-                                  />
-                                </button>
+                                  <button
+                                    onClick={() =>
+                                      handleMobileSubmenuClick(subMenuItem.key)
+                                    }
+                                    className="w-full flex items-center justify-between px-3 py-2 text-left hover:bg-white/5 rounded-sm transition-colors"
+                                  >
+                                    <span className="text-base font-medium text-white/80">
+                                      {t(subMenuItem.key)}
+                                    </span>
+                                    <ChevronRight
+                                      className={cn(
+                                        "h-4 w-4 transition-transform duration-200 text-white/60",
+                                        expandedMobileSubmenu ===
+                                          subMenuItem.key && "rotate-90"
+                                      )}
+                                    />
+                                  </button>
 
-                                {/* Submenu Items */}
-                                {expandedMobileSubmenu === submenu.label && (
-                                  <div className="pl-3 space-y-1">
-                                    {submenu.items?.map((subItem) => (
-                                      <Link
-                                        key={subItem.href}
-                                        href={subItem.href}
-                                        onClick={() =>
-                                          setIsMobileMenuOpen(false)
-                                        }
-                                        className={cn(
-                                          "block px-3 py-2 text-sm font-medium rounded-md text-left",
-                                          "transition-all duration-200",
-                                          "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                                          pathname === subItem.href
-                                            ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                            : "text-white/70"
-                                        )}
-                                      >
-                                        {subItem.label}
-                                      </Link>
-                                    ))}
-                                  </div>
-                                )}
-                              </div>
-                            ))}
+                                  {expandedMobileSubmenu ===
+                                    subMenuItem.key && (
+                                    <div className="pl-3 space-y-1">
+                                      {subMenuItem.items.map((subItem) => (
+                                        <Link
+                                          key={subItem.href}
+                                          href={subItem.href}
+                                          onClick={() =>
+                                            setIsMobileMenuOpen(false)
+                                          }
+                                          className={cn(
+                                            "block px-3 py-2 text-sm font-medium rounded-md text-left",
+                                            "transition-all duration-200",
+                                            "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                            pathname === subItem.href
+                                              ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                              : "text-white/70"
+                                          )}
+                                        >
+                                          {t(subItem.key)}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
                         </div>
                       )}
                     </div>
@@ -609,7 +478,7 @@ export function Header() {
                           : "text-white/90"
                       )}
                     >
-                      {item.label}
+                      {t(item.key)}
                     </Link>
                   )}
                 </div>
