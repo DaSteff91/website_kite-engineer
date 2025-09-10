@@ -1,15 +1,21 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import kite_landingpage_image from "@/public/images/kite_landingpage.jpg";
 import engineer_landingpage_image from "@/public/images/engineer_hero_image.jpg";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
+import LocaleSwitcher from "@/components/ui/localeSwitcher";
 
 export const metadata = PAGE_METADATA.home;
 
 export default function Home() {
+  const t = useTranslations("LandingPage");
   return (
     <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 relative">
+      <div className="z-50">
+        <LocaleSwitcher />
+      </div>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -53,7 +59,7 @@ export default function Home() {
               Kite
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80">
-              Curious? Let´s work together
+              {t("kite-subtitle-landing-page")}
             </p>
           </div>
         </Link>
@@ -86,7 +92,7 @@ export default function Home() {
               Engineer
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80">
-              Ambitious? It´s about solutions
+              {t("engineer-subtitle-landing-page")}
             </p>
           </div>
         </Link>

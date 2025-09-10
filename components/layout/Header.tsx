@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Menu, X, House, ChevronDown, ChevronRight } from "lucide-react";
 import { useTheme } from "next-themes";
