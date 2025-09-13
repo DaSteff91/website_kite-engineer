@@ -15,6 +15,10 @@ import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA["kite/courses/advanced"];
+interface AdvancedPageProps {
+  params: { locale: string };
+}
+
 
 export default async function AdvancedPage({ params }: AdvancedPageProps) {
   const t = await getTranslations({

@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -17,8 +18,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/technical-consulting/training-knowledge-transfer"];
+interface TrainingKnowledgeTransferPageProps {
+  params: { locale: string };
+}
 
-export default function TrainingKnowledgeTransferPage() {
+
+export default async function TrainingKnowledgeTransferPage({ params }: TrainingKnowledgeTransferPageProps) {
+  const t = await getTranslations("TrainingKnowledgeTransferPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -32,24 +38,23 @@ export default function TrainingKnowledgeTransferPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/engineer"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="training-knowledge-transfer-hero"
+        <h1
+          id="training-knowledge-transfer-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
-           bg-gradient-to-r from-white via-gray-200 to-gray-300 
-           bg-clip-text text-transparent 
-           [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+     bg-gradient-to-r from-white via-gray-200 to-gray-300 
+     bg-clip-text text-transparent 
+     [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Training & Knowledge Transfer
+          {t("training-knowledge-transfer-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -65,16 +70,19 @@ export default function TrainingKnowledgeTransferPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="training-knowledge-transfer-section-title"
+            <h2
+              id="training-knowledge-transfer-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Never Stop Learning
+              {t("training-knowledge-transfer-section-title")}
             </h2>
-            <p id="training-knowledge-transfer-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Share knowledge and develop skills through customized training
-              programs
+            <p
+              id="training-knowledge-transfer-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("training-knowledge-transfer-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -84,76 +92,132 @@ export default function TrainingKnowledgeTransferPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <GraduationCap className="h-6 w-6 text-blue-400" />
-                <h3 id="technical-training-programs-title" className="text-lg font-semibold text-blue-200">
-                  Technical Training Programs
+                <h3
+                  id="technical-training-programs-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
+                  {t("technical-training-programs-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technical-training-programs-list-element1">• Customized training curriculum</li>
-                <li id="technical-training-programs-list-element2">• Hands-on technical workshops</li>
-                <li id="technical-training-programs-list-element3">• Process-specific training</li>
-                <li id="technical-training-programs-list-element4">• Software and tool training</li>
-                <li id="technical-training-programs-list-element5">• Technical skill development</li>
+                <li id="technical-training-programs-list-element1">
+                  {t("technical-training-programs-list-element1")}
+                </li>
+                <li id="technical-training-programs-list-element2">
+                  {t("technical-training-programs-list-element2")}
+                </li>
+                <li id="technical-training-programs-list-element3">
+                  {t("technical-training-programs-list-element3")}
+                </li>
+                <li id="technical-training-programs-list-element4">
+                  {t("technical-training-programs-list-element4")}
+                </li>
+                <li id="technical-training-programs-list-element5">
+                  {t("technical-training-programs-list-element5")}
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-cyan-400" />
-                <h3 id="knowledge-sharing-workshops-title" className="text-lg font-semibold text-cyan-200">
-                  Knowledge Sharing Workshops
+                <h3
+                  id="knowledge-sharing-workshops-title"
+                  className="text-lg font-semibold text-cyan-200"
+                >
+                  {t("knowledge-sharing-workshops-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="knowledge-sharing-workshops-list-element1">• Interactive knowledge sessions</li>
-                <li id="knowledge-sharing-workshops-list-element2">• Cross-functional knowledge sharing</li>
-                <li id="knowledge-sharing-workshops-list-element3">• Best practice dissemination</li>
-                <li id="knowledge-sharing-workshops-list-element4">• Lessons learned workshops</li>
-                <li id="knowledge-sharing-workshops-list-element5">• Collaborative problem-solving</li>
+                <li id="knowledge-sharing-workshops-list-element1">
+                  {t("knowledge-sharing-workshops-list-element1")}
+                </li>
+                <li id="knowledge-sharing-workshops-list-element2">
+                  {t("knowledge-sharing-workshops-list-element2")}
+                </li>
+                <li id="knowledge-sharing-workshops-list-element3">
+                  {t("knowledge-sharing-workshops-list-element3")}
+                </li>
+                <li id="knowledge-sharing-workshops-list-element4">
+                  {t("knowledge-sharing-workshops-list-element4")}
+                </li>
+                <li id="knowledge-sharing-workshops-list-element5">
+                  {t("knowledge-sharing-workshops-list-element5")}
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BookOpen className="h-6 w-6 text-teal-400" />
-                <h3 id="documentation-development-title" className="text-lg font-semibold text-teal-200">
-                  Documentation Development
+                <h3
+                  id="documentation-development-title"
+                  className="text-lg font-semibold text-teal-200"
+                >
+                  {t("documentation-development-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="documentation-development-list-element1">• Technical documentation creation</li>
-                <li id="documentation-development-list-element2">• Process documentation</li>
-                <li id="documentation-development-list-element3">• Standard operating procedures</li>
-                <li id="documentation-development-list-element4">• Training materials development</li>
-                <li id="documentation-development-list-element5">• Knowledge base creation</li>
+                <li id="documentation-development-list-element1">
+                  {t("documentation-development-list-element1")}
+                </li>
+                <li id="documentation-development-list-element2">
+                  {t("documentation-development-list-element2")}
+                </li>
+                <li id="documentation-development-list-element3">
+                  {t("documentation-development-list-element3")}
+                </li>
+                <li id="documentation-development-list-element4">
+                  {t("documentation-development-list-element4")}
+                </li>
+                <li id="documentation-development-list-element5">
+                  {t("documentation-development-list-element5")}
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-emerald-400" />
-                <h3 id="skill-development-planning-title" className="text-lg font-semibold text-emerald-200">
-                  Skill Development Planning
+                <h3
+                  id="skill-development-planning-title"
+                  className="text-lg font-semibold text-emerald-200"
+                >
+                  {t("skill-development-planning-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="skill-development-planning-list-element1">• Skill gap analysis</li>
-                <li id="skill-development-planning-list-element2">• Development roadmap creation</li>
-                <li id="skill-development-planning-list-element3">• Learning path definition</li>
-                <li id="skill-development-planning-list-element4">• Progress tracking methods</li>
-                <li id="skill-development-planning-list-element5">• Continuous improvement planning</li>
+                <li id="skill-development-planning-list-element1">
+                  {t("skill-development-planning-list-element1")}
+                </li>
+                <li id="skill-development-planning-list-element2">
+                  {t("skill-development-planning-list-element2")}
+                </li>
+                <li id="skill-development-planning-list-element3">
+                  {t("skill-development-planning-list-element3")}
+                </li>
+                <li id="skill-development-planning-list-element4">
+                  {t("skill-development-planning-list-element4")}
+                </li>
+                <li id="skill-development-planning-list-element5">
+                  {t("skill-development-planning-list-element5")}
+                </li>
               </ul>
             </div>
           </div>
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="training-knowledge-transfer-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
-              Ready to develop your team's knowledge? Let's create training
-              programs and knowledge sharing systems.
+            <p
+              id="training-knowledge-transfer-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
+              {t("training-knowledge-transfer-contact")}
             </p>
             <Link
-              href={generateContactHref("/engineer/technical-consulting/training-knowledge-transfer")}
+              href={generateContactHref(
+                "/engineer/technical-consulting/training-knowledge-transfer"
+              )}
               target="_blank"
             >
               <Button

@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -18,8 +19,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/process-engineering/monitoring"];
+interface MonitoringPageProps {
+  params: { locale: string };
+}
 
-export default function MonitoringPage() {
+
+export default async function MonitoringPage({ params }: MonitoringPageProps) {
+  const t = await getTranslations("MonitoringPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -33,7 +39,6 @@ export default function MonitoringPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/engineer"
@@ -48,10 +53,9 @@ export default function MonitoringPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Process Monitoring Services
+          {t("monitoring-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -67,16 +71,19 @@ export default function MonitoringPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="monitoring-section-title"
+            <h2
+              id="monitoring-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Comprehensive Process Monitoring
+              {t("monitoring-section-title")}
             </h2>
-            <p id="monitoring-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Define monitoring parameters and implement solutions for any
-              production volume
+            <p
+              id="monitoring-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("monitoring-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -90,24 +97,24 @@ export default function MonitoringPage() {
                   id="parameter-selection-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Parameter Selection
+                  {t("parameter-selection-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="parameter-selection-list-element1">
-                  • Critical parameter identification
+                  {t("parameter-selection-list-element1")}
                 </li>
                 <li id="parameter-selection-list-element2">
-                  • Monitoring strategy development
+                  {t("parameter-selection-list-element2")}
                 </li>
                 <li id="parameter-selection-list-element3">
-                  • Sensor placement optimization
+                  {t("parameter-selection-list-element3")}
                 </li>
                 <li id="parameter-selection-list-element4">
-                  • Data collection frequency
+                  {t("parameter-selection-list-element4")}
                 </li>
                 <li id="parameter-selection-list-element5">
-                  • Measurement system analysis
+                  {t("parameter-selection-list-element5")}
                 </li>
               </ul>
             </div>
@@ -119,24 +126,24 @@ export default function MonitoringPage() {
                   id="alarm-notification-systems-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  Alarm & Notification Systems
+                  {t("alarm-notification-systems-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="alarm-notification-systems-list-element1">
-                  • Real-time alarm configuration
+                  {t("alarm-notification-systems-list-element1")}
                 </li>
                 <li id="alarm-notification-systems-list-element2">
-                  • Multi-level notification systems
+                  {t("alarm-notification-systems-list-element2")}
                 </li>
                 <li id="alarm-notification-systems-list-element3">
-                  • Escalation procedures
+                  {t("alarm-notification-systems-list-element3")}
                 </li>
                 <li id="alarm-notification-systems-list-element4">
-                  • Mobile alert integration
+                  {t("alarm-notification-systems-list-element4")}
                 </li>
                 <li id="alarm-notification-systems-list-element5">
-                  • Alarm rationalization
+                  {t("alarm-notification-systems-list-element5")}
                 </li>
               </ul>
             </div>
@@ -148,24 +155,24 @@ export default function MonitoringPage() {
                   id="trend-analysis-title"
                   className="text-lg font-semibold text-teal-200"
                 >
-                  Trend Analysis
+                  {t("trend-analysis-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="trend-analysis-list-element1">
-                  • Historical data analysis
+                  {t("trend-analysis-list-element1")}
                 </li>
                 <li id="trend-analysis-list-element2">
-                  • Trend identification and reporting
+                  {t("trend-analysis-list-element2")}
                 </li>
                 <li id="trend-analysis-list-element3">
-                  • Predictive trend modeling
+                  {t("trend-analysis-list-element3")}
                 </li>
                 <li id="trend-analysis-list-element4">
-                  • Performance drift detection
+                  {t("trend-analysis-list-element4")}
                 </li>
                 <li id="trend-analysis-list-element5">
-                  • Long-term stability assessment
+                  {t("trend-analysis-list-element5")}
                 </li>
               </ul>
             </div>
@@ -177,24 +184,24 @@ export default function MonitoringPage() {
                   id="performance-benchmarking-title"
                   className="text-lg font-semibold text-emerald-200"
                 >
-                  Performance Benchmarking
+                  {t("performance-benchmarking-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="performance-benchmarking-list-element1">
-                  • Baseline establishment
+                  {t("performance-benchmarking-list-element1")}
                 </li>
                 <li id="performance-benchmarking-list-element2">
-                  • Performance metrics definition
+                  {t("performance-benchmarking-list-element2")}
                 </li>
                 <li id="performance-benchmarking-list-element3">
-                  • Comparative analysis
+                  {t("performance-benchmarking-list-element3")}
                 </li>
                 <li id="performance-benchmarking-list-element4">
-                  • Industry benchmarking
+                  {t("performance-benchmarking-list-element4")}
                 </li>
                 <li id="performance-benchmarking-list-element5">
-                  • Continuous improvement tracking
+                  {t("performance-benchmarking-list-element5")}
                 </li>
               </ul>
             </div>
@@ -206,8 +213,7 @@ export default function MonitoringPage() {
               id="monitoring-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Ready to implement comprehensive monitoring? Let's define the
-              right parameters and methods for your production needs.
+              {t("monitoring-contact")}
             </p>
             <Link
               href={generateContactHref(
@@ -220,8 +226,7 @@ export default function MonitoringPage() {
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>

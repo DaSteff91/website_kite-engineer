@@ -10,6 +10,14 @@ interface PrivacyProps {
   params: { locale: string };
 }
 
+interface PrivacyProps {
+  params: { locale: string };
+}
+
+interface PrivacyProps {
+  params: { locale: string };
+}
+
 type SectionProps = {
   title: string;
   children: React.ReactNode;
@@ -50,7 +58,7 @@ const TextLine = ({
   </p>
 );
 
-export default function Privacy() {
+export default async function Privacy({ params }: PrivacyProps) {
   const contactData = [
     "Kite-Engineer by Stefan Merthan",
     "Stefan Merthan",

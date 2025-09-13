@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -18,8 +19,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/project-management/documentation"];
+interface DocumentationPageProps {
+  params: { locale: string };
+}
 
-export default function DocumentationPage() {
+
+export default async function DocumentationPage({ params }: DocumentationPageProps) {
+  const t = await getTranslations("DocumentationPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -33,7 +39,6 @@ export default function DocumentationPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/engineer"
@@ -48,10 +53,9 @@ export default function DocumentationPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Documentation & Sharing Services
+          {t("documentation-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -67,16 +71,19 @@ export default function DocumentationPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="documentation-section-title"
+            <h2
+              id="documentation-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Create Team Synergies
+              {t("documentation-section-title")}
             </h2>
-            <p id="documentation-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Modern version control and data sharing to unlock your team's
-              collaborative potential
+            <p
+              id="documentation-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("documentation-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -90,24 +97,24 @@ export default function DocumentationPage() {
                   id="version-control-title"
                   className="text-lg font-semibold text-teal-200"
                 >
-                  Version Control
+                  {t("version-control-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="version-control-list-element1">
-                  • Git-based version control setup
+                  {t("version-control-list-element1")}
                 </li>
                 <li id="version-control-list-element2">
-                  • Branching strategy development
+                  {t("version-control-list-element2")}
                 </li>
                 <li id="version-control-list-element3">
-                  • Document versioning systems
+                  {t("version-control-list-element3")}
                 </li>
                 <li id="version-control-list-element4">
-                  • Change history tracking
+                  {t("version-control-list-element4")}
                 </li>
                 <li id="version-control-list-element5">
-                  • Conflict resolution procedures
+                  {t("version-control-list-element5")}
                 </li>
               </ul>
             </div>
@@ -119,24 +126,24 @@ export default function DocumentationPage() {
                   id="collaborative-workspace-title"
                   className="text-lg font-semibold text-emerald-200"
                 >
-                  Collaborative Workspace
+                  {t("collaborative-workspace-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="collaborative-workspace-list-element1">
-                  • Shared workspace configuration
+                  {t("collaborative-workspace-list-element1")}
                 </li>
                 <li id="collaborative-workspace-list-element2">
-                  • Cloud-based collaboration tools
+                  {t("collaborative-workspace-list-element2")}
                 </li>
                 <li id="collaborative-workspace-list-element3">
-                  • Real-time editing capabilities
+                  {t("collaborative-workspace-list-element3")}
                 </li>
                 <li id="collaborative-workspace-list-element4">
-                  • Access control and permissions
+                  {t("collaborative-workspace-list-element4")}
                 </li>
                 <li id="collaborative-workspace-list-element5">
-                  • Cross-platform compatibility
+                  {t("collaborative-workspace-list-element5")}
                 </li>
               </ul>
             </div>
@@ -148,24 +155,24 @@ export default function DocumentationPage() {
                   id="knowledge-management-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Knowledge Management
+                  {t("knowledge-management-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="knowledge-management-list-element1">
-                  • Knowledge base development
+                  {t("knowledge-management-list-element1")}
                 </li>
                 <li id="knowledge-management-list-element2">
-                  • Documentation standards
+                  {t("knowledge-management-list-element2")}
                 </li>
                 <li id="knowledge-management-list-element3">
-                  • Information architecture design
+                  {t("knowledge-management-list-element3")}
                 </li>
                 <li id="knowledge-management-list-element4">
-                  • Search and retrieval optimization
+                  {t("knowledge-management-list-element4")}
                 </li>
                 <li id="knowledge-management-list-element5">
-                  • Knowledge retention strategies
+                  {t("knowledge-management-list-element5")}
                 </li>
               </ul>
             </div>
@@ -177,24 +184,24 @@ export default function DocumentationPage() {
                   id="team-synergy-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  Team Synergy
+                  {t("team-synergy-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="team-synergy-list-element1">
-                  • Collaboration workflow design
+                  {t("team-synergy-list-element1")}
                 </li>
                 <li id="team-synergy-list-element2">
-                  • Communication protocol development
+                  {t("team-synergy-list-element2")}
                 </li>
                 <li id="team-synergy-list-element3">
-                  • Team integration strategies
+                  {t("team-synergy-list-element3")}
                 </li>
                 <li id="team-synergy-list-element4">
-                  • Cross-functional coordination
+                  {t("team-synergy-list-element4")}
                 </li>
                 <li id="team-synergy-list-element5">
-                  • Collaborative culture building
+                  {t("team-synergy-list-element5")}
                 </li>
               </ul>
             </div>
@@ -206,8 +213,7 @@ export default function DocumentationPage() {
               id="documentation-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Ready to enhance team collaboration? Let's implement modern
-              documentation and sharing systems.
+              {t("documentation-contact")}
             </p>
             <Link
               href={generateContactHref(
@@ -220,8 +226,7 @@ export default function DocumentationPage() {
                 className="group bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>

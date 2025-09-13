@@ -50,7 +50,7 @@ const ContactInfoLine = ({
   </p>
 );
 
-export default function Imprint() {
+export default async function Imprint({ params }: ImprintProps) {
   const contactData = [
     { value: "Kite-Engineer by Stefan Merthan" },
     { value: "Stefan Merthan" },

@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -18,8 +19,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/process-engineering/process-optimization"];
+interface ProcessOptimizationPageProps {
+  params: { locale: string };
+}
 
-export default function ProcessOptimizationPage() {
+
+export default async function ProcessOptimizationPage({ params }: ProcessOptimizationPageProps) {
+  const t = await getTranslations("ProcessOptimizationPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -33,7 +39,6 @@ export default function ProcessOptimizationPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/engineer"
@@ -48,10 +53,9 @@ export default function ProcessOptimizationPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Process Optimization Services
+          {t("process-optimization-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -67,16 +71,19 @@ export default function ProcessOptimizationPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="process-optimization-section-title"
+            <h2
+              id="process-optimization-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Six Sigma & Lean Manufacturing Excellence
+              {t("process-optimization-section-title")}
             </h2>
-            <p id="process-optimization-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Achieve optimal process outcomes through proven methodologies and
-              data-driven approaches
+            <p
+              id="process-optimization-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("process-optimization-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -90,24 +97,24 @@ export default function ProcessOptimizationPage() {
                   id="six-sigma-methodologies-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Six Sigma Methodologies
+                  {t("six-sigma-methodologies-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="six-sigma-methodologies-list-element1">
-                  • DMAIC project execution
+                  {t("six-sigma-methodologies-list-element1")}
                 </li>
                 <li id="six-sigma-methodologies-list-element2">
-                  • Statistical analysis and hypothesis testing
+                  {t("six-sigma-methodologies-list-element2")}
                 </li>
                 <li id="six-sigma-methodologies-list-element3">
-                  • Root cause analysis
+                  {t("six-sigma-methodologies-list-element3")}
                 </li>
                 <li id="six-sigma-methodologies-list-element4">
-                  • Process capability studies
+                  {t("six-sigma-methodologies-list-element4")}
                 </li>
                 <li id="six-sigma-methodologies-list-element5">
-                  • Defect reduction strategies
+                  {t("six-sigma-methodologies-list-element5")}
                 </li>
               </ul>
             </div>
@@ -119,24 +126,24 @@ export default function ProcessOptimizationPage() {
                   id="lean-manufacturing-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  Lean Manufacturing
+                  {t("lean-manufacturing-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="lean-manufacturing-list-element1">
-                  • Waste elimination (8 wastes)
+                  {t("lean-manufacturing-list-element1")}
                 </li>
                 <li id="lean-manufacturing-list-element2">
-                  • Value stream mapping
+                  {t("lean-manufacturing-list-element2")}
                 </li>
                 <li id="lean-manufacturing-list-element3">
-                  • 5S workplace organization
+                  {t("lean-manufacturing-list-element3")}
                 </li>
                 <li id="lean-manufacturing-list-element4">
-                  • Kaizen continuous improvement
+                  {t("lean-manufacturing-list-element4")}
                 </li>
                 <li id="lean-manufacturing-list-element5">
-                  • Just-in-time implementation
+                  {t("lean-manufacturing-list-element5")}
                 </li>
               </ul>
             </div>
@@ -148,24 +155,24 @@ export default function ProcessOptimizationPage() {
                   id="design-of-experiments-title"
                   className="text-lg font-semibold text-teal-200"
                 >
-                  Design of Experiments
+                  {t("design-of-experiments-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="design-of-experiments-list-element1">
-                  • Factorial design planning
+                  {t("design-of-experiments-list-element1")}
                 </li>
                 <li id="design-of-experiments-list-element2">
-                  • Response surface methodology
+                  {t("design-of-experiments-list-element2")}
                 </li>
                 <li id="design-of-experiments-list-element3">
-                  • Optimization studies
+                  {t("design-of-experiments-list-element3")}
                 </li>
                 <li id="design-of-experiments-list-element4">
-                  • Robust parameter design
+                  {t("design-of-experiments-list-element4")}
                 </li>
                 <li id="design-of-experiments-list-element5">
-                  • Statistical modeling
+                  {t("design-of-experiments-list-element5")}
                 </li>
               </ul>
             </div>
@@ -177,24 +184,24 @@ export default function ProcessOptimizationPage() {
                   id="yield-enhancement-title"
                   className="text-lg font-semibold text-emerald-200"
                 >
-                  Yield Enhancement
+                  {t("yield-enhancement-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="yield-enhancement-list-element1">
-                  • Yield analysis and improvement
+                  {t("yield-enhancement-list-element1")}
                 </li>
                 <li id="yield-enhancement-list-element2">
-                  • Pareto analysis for prioritization
+                  {t("yield-enhancement-list-element2")}
                 </li>
                 <li id="yield-enhancement-list-element3">
-                  • Process efficiency metrics
+                  {t("yield-enhancement-list-element3")}
                 </li>
                 <li id="yield-enhancement-list-element4">
-                  • Cost reduction strategies
+                  {t("yield-enhancement-list-element4")}
                 </li>
                 <li id="yield-enhancement-list-element5">
-                  • Performance benchmarking
+                  {t("yield-enhancement-list-element5")}
                 </li>
               </ul>
             </div>
@@ -206,8 +213,7 @@ export default function ProcessOptimizationPage() {
               id="process-optimization-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Ready to optimize your processes? Let's implement Six Sigma and
-              Lean methodologies to achieve excellence.
+              {t("process-optimization-contact")}
             </p>
             <Link
               href={generateContactHref(
@@ -220,8 +226,7 @@ export default function ProcessOptimizationPage() {
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>

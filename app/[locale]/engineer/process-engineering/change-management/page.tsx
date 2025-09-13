@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -18,8 +19,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/process-engineering/change-management"];
+interface ChangeManagementPageProps {
+  params: { locale: string };
+}
 
-export default function ChangeManagementPage() {
+
+export default async function ChangeManagementPage({ params }: ChangeManagementPageProps) {
+  const t = await getTranslations("ChangeManagementPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -33,7 +39,6 @@ export default function ChangeManagementPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/engineer"
@@ -48,10 +53,9 @@ export default function ChangeManagementPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Change Management Services
+          {t("change-management-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -67,16 +71,19 @@ export default function ChangeManagementPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="change-management-section-title"
+            <h2
+              id="change-management-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Professional Change Management
+              {t("change-management-section-title")}
             </h2>
-            <p id="change-management-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Milestone preparation, release gates, and comprehensive
-              documentation for seamless transitions
+            <p
+              id="change-management-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("change-management-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -90,24 +97,24 @@ export default function ChangeManagementPage() {
                   id="process-change-documentation-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Process Change Documentation
+                  {t("process-change-documentation-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="process-change-documentation-list-element1">
-                  • Change request documentation
+                  {t("process-change-documentation-list-element1")}
                 </li>
                 <li id="process-change-documentation-list-element2">
-                  • Impact assessment reports
+                  {t("process-change-documentation-list-element2")}
                 </li>
                 <li id="process-change-documentation-list-element3">
-                  • Risk analysis and mitigation
+                  {t("process-change-documentation-list-element3")}
                 </li>
                 <li id="process-change-documentation-list-element4">
-                  • Approval workflow management
+                  {t("process-change-documentation-list-element4")}
                 </li>
                 <li id="process-change-documentation-list-element5">
-                  • Change implementation tracking
+                  {t("process-change-documentation-list-element5")}
                 </li>
               </ul>
             </div>
@@ -119,24 +126,24 @@ export default function ChangeManagementPage() {
                   id="release-gate-management-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  Release Gate Management
+                  {t("release-gate-management-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="release-gate-management-list-element1">
-                  • Gate criteria definition
+                  {t("release-gate-management-list-element1")}
                 </li>
                 <li id="release-gate-management-list-element2">
-                  • Milestone preparation
+                  {t("release-gate-management-list-element2")}
                 </li>
                 <li id="release-gate-management-list-element3">
-                  • Review and approval processes
+                  {t("release-gate-management-list-element3")}
                 </li>
                 <li id="release-gate-management-list-element4">
-                  • Quality gate implementation
+                  {t("release-gate-management-list-element4")}
                 </li>
                 <li id="release-gate-management-list-element5">
-                  • Release readiness assessment
+                  {t("release-gate-management-list-element5")}
                 </li>
               </ul>
             </div>
@@ -148,24 +155,24 @@ export default function ChangeManagementPage() {
                   id="traceability-systems-title"
                   className="text-lg font-semibold text-teal-200"
                 >
-                  Traceability Systems
+                  {t("traceability-systems-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="traceability-systems-list-element1">
-                  • Version control protocols
+                  {t("traceability-systems-list-element1")}
                 </li>
                 <li id="traceability-systems-list-element2">
-                  • Change history tracking
+                  {t("traceability-systems-list-element2")}
                 </li>
                 <li id="traceability-systems-list-element3">
-                  • Audit trail maintenance
+                  {t("traceability-systems-list-element3")}
                 </li>
                 <li id="traceability-systems-list-element4">
-                  • Document version management
+                  {t("traceability-systems-list-element4")}
                 </li>
                 <li id="traceability-systems-list-element5">
-                  • Compliance documentation
+                  {t("traceability-systems-list-element5")}
                 </li>
               </ul>
             </div>
@@ -177,24 +184,24 @@ export default function ChangeManagementPage() {
                   id="compliance-audit-support-title"
                   className="text-lg font-semibold text-emerald-200"
                 >
-                  Compliance & Audit Support
+                  {t("compliance-audit-support-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="compliance-audit-support-list-element1">
-                  • Regulatory compliance management
+                  {t("compliance-audit-support-list-element1")}
                 </li>
                 <li id="compliance-audit-support-list-element2">
-                  • Audit preparation and support
+                  {t("compliance-audit-support-list-element2")}
                 </li>
                 <li id="compliance-audit-support-list-element3">
-                  • Standard operating procedures
+                  {t("compliance-audit-support-list-element3")}
                 </li>
                 <li id="compliance-audit-support-list-element4">
-                  • Quality system documentation
+                  {t("compliance-audit-support-list-element4")}
                 </li>
                 <li id="compliance-audit-support-list-element5">
-                  • Corrective action tracking
+                  {t("compliance-audit-support-list-element5")}
                 </li>
               </ul>
             </div>
@@ -206,8 +213,7 @@ export default function ChangeManagementPage() {
               id="change-management-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Ready to implement professional change management? Let's ensure
-              your transitions are smooth and compliant.
+              {t("change-management-contact")}
             </p>
             <Link
               href={generateContactHref(
@@ -220,8 +226,7 @@ export default function ChangeManagementPage() {
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>

@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -18,8 +19,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/project-management/deviation-management"];
+interface DeviationManagementPageProps {
+  params: { locale: string };
+}
 
-export default function DeviationManagementPage() {
+
+export default async function DeviationManagementPage({ params }: DeviationManagementPageProps) {
+  const t = await getTranslations("DeviationManagementPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -33,7 +39,6 @@ export default function DeviationManagementPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/engineer"
@@ -48,10 +53,9 @@ export default function DeviationManagementPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Deviation Management Services
+          {t("deviation-management-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -67,16 +71,19 @@ export default function DeviationManagementPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="deviation-management-section-title"
+            <h2
+              id="deviation-management-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Navigate Unexpected Detours
+              {t("deviation-management-section-title")}
             </h2>
-            <p id="deviation-management-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Professional communication and management of project deviations
-              with external parties
+            <p
+              id="deviation-management-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("deviation-management-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -90,24 +97,24 @@ export default function DeviationManagementPage() {
                   id="change-request-management-title"
                   className="text-lg font-semibold text-emerald-200"
                 >
-                  Change Request Management
+                  {t("change-request-management-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="change-request-management-list-element1">
-                  • Deviation documentation
+                  {t("change-request-management-list-element1")}
                 </li>
                 <li id="change-request-management-list-element2">
-                  • Impact assessment
+                  {t("change-request-management-list-element2")}
                 </li>
                 <li id="change-request-management-list-element3">
-                  • Change request preparation
+                  {t("change-request-management-list-element3")}
                 </li>
                 <li id="change-request-management-list-element4">
-                  • Approval workflow management
+                  {t("change-request-management-list-element4")}
                 </li>
                 <li id="change-request-management-list-element5">
-                  • Implementation tracking
+                  {t("change-request-management-list-element5")}
                 </li>
               </ul>
             </div>
@@ -119,24 +126,24 @@ export default function DeviationManagementPage() {
                   id="stakeholder-communication-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Stakeholder Communication
+                  {t("stakeholder-communication-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="stakeholder-communication-list-element1">
-                  • Expectation management
+                  {t("stakeholder-communication-list-element1")}
                 </li>
                 <li id="stakeholder-communication-list-element2">
-                  • Communication strategy development
+                  {t("stakeholder-communication-list-element2")}
                 </li>
                 <li id="stakeholder-communication-list-element3">
-                  • External party negotiations
+                  {t("stakeholder-communication-list-element3")}
                 </li>
                 <li id="stakeholder-communication-list-element4">
-                  • Presentation preparation
+                  {t("stakeholder-communication-list-element4")}
                 </li>
                 <li id="stakeholder-communication-list-element5">
-                  • Stakeholder alignment
+                  {t("stakeholder-communication-list-element5")}
                 </li>
               </ul>
             </div>
@@ -148,24 +155,24 @@ export default function DeviationManagementPage() {
                   id="recovery-planning-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  Recovery Planning
+                  {t("recovery-planning-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="recovery-planning-list-element1">
-                  • Recovery strategy development
+                  {t("recovery-planning-list-element1")}
                 </li>
                 <li id="recovery-planning-list-element2">
-                  • Action plan creation
+                  {t("recovery-planning-list-element2")}
                 </li>
                 <li id="recovery-planning-list-element3">
-                  • Resource reallocation
+                  {t("recovery-planning-list-element3")}
                 </li>
                 <li id="recovery-planning-list-element4">
-                  • Timeline adjustment
+                  {t("recovery-planning-list-element4")}
                 </li>
                 <li id="recovery-planning-list-element5">
-                  • Progress monitoring
+                  {t("recovery-planning-list-element5")}
                 </li>
               </ul>
             </div>
@@ -177,24 +184,24 @@ export default function DeviationManagementPage() {
                   id="lessons-learned-title"
                   className="text-lg font-semibold text-teal-200"
                 >
-                  Lessons Learned
+                  {t("lessons-learned-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="lessons-learned-list-element1">
-                  • Root cause analysis
+                  {t("lessons-learned-list-element1")}
                 </li>
                 <li id="lessons-learned-list-element2">
-                  • Deviation documentation
+                  {t("lessons-learned-list-element2")}
                 </li>
                 <li id="lessons-learned-list-element3">
-                  • Process improvement recommendations
+                  {t("lessons-learned-list-element3")}
                 </li>
                 <li id="lessons-learned-list-element4">
-                  • Knowledge capture and sharing
+                  {t("lessons-learned-list-element4")}
                 </li>
                 <li id="lessons-learned-list-element5">
-                  • Preventive measure development
+                  {t("lessons-learned-list-element5")}
                 </li>
               </ul>
             </div>
@@ -206,8 +213,7 @@ export default function DeviationManagementPage() {
               id="deviation-management-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Ready to manage project deviations? Let's handle unexpected
-              changes and get your project back on track.
+              {t("deviation-management-contact")}
             </p>
             <Link
               href={generateContactHref(
@@ -220,8 +226,7 @@ export default function DeviationManagementPage() {
                 className="group bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>

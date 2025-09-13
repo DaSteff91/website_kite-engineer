@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -18,8 +19,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/process-development/equipment-roadmap"];
+interface EquipmentRoadmapPageProps {
+  params: { locale: string };
+}
 
-export default function EquipmentRoadmapPage() {
+
+export default async function EquipmentRoadmapPage({ params }: EquipmentRoadmapPageProps) {
+  const t = await getTranslations("EquipmentRoadmapPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -33,24 +39,23 @@ export default function EquipmentRoadmapPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/engineer"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="equipment-roadmap-hero"
+        <h1
+          id="equipment-roadmap-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
-           bg-gradient-to-r from-white via-gray-200 to-gray-300 
-           bg-clip-text text-transparent 
-           [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+     bg-gradient-to-r from-white via-gray-200 to-gray-300 
+     bg-clip-text text-transparent 
+     [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Equipment Roadmap Services
+          {t("equipment-roadmap-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -66,17 +71,19 @@ export default function EquipmentRoadmapPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="equipment-roadmap-section-title"
+            <h2
+              id="equipment-roadmap-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Stay up to date, plan ahead
+              {t("equipment-roadmap-section-title")}
             </h2>
-            <p id="equipment-roadmap-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Be prepared for what comes next - don´t wait for things to come to
-              you by themselves. Better follow a tailored strategy for your
-              business.
+            <p
+              id="equipment-roadmap-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("equipment-roadmap-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -85,9 +92,11 @@ export default function EquipmentRoadmapPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
-                <h3 id="detailes-of-the-roadmap-services-title" className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200">
-                  <MapIcon className="h-6 w-6 text-teal-400" />
-                  Detailes of the Roadmap Services
+                <h3
+                  id="detailes-of-the-roadmap-services-title"
+                  className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200"
+                >
+                  {t("detailes-of-the-roadmap-services-title")}
                 </h3>
                 <p className="block text-muted-foreground mb-4 sm:mb-6 pl-5 sm:pl-6 pr-4 sm:pr-5 sm:text-base text-sm -mx-4 sm:-mx-6 w-auto">
                   {" "}
@@ -102,35 +111,20 @@ export default function EquipmentRoadmapPage() {
                 </p>
                 <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
                   <li id="detailes-of-the-roadmap-services-list-element1">
-                    Requirement analysis: What is existing and what shall be
-                    achived? When it may be necessary to change from an existing
-                    process or equipment setup to a new one? What about costs?
-                    Consider: Usually established and new things run in parallel
-                    for some time
+                    {t("detailes-of-the-roadmap-services-list-element1")}
                   </li>
                   <li id="detailes-of-the-roadmap-services-list-element2">
-                    Process and tool ranking: Creating an overview of what could
-                    be possible while establishing some outlines and categories
-                    for the following decision making. Usually you learn
-                    something new during that process because there is always
-                    more then one can imagine.
+                    {t("detailes-of-the-roadmap-services-list-element2")}
                   </li>
                   <li id="detailes-of-the-roadmap-services-list-element3">
-                    Decision matrix: Because not everything is equally important
-                    its about carefully analyzing and comparing what you get for
-                    what investment or trade-off. Together we apply established
-                    procedures to come to a well-founded decision.
+                    {t("detailes-of-the-roadmap-services-list-element3")}
                   </li>
                   <li id="detailes-of-the-roadmap-services-list-element4">
-                    Documentation: Since everything is now decided, lets put it
-                    into effect by applying a timeline to it and rolling it out
-                    in your documentation system
+                    {t("detailes-of-the-roadmap-services-list-element4")}
                   </li>
 
                   <li id="detailes-of-the-roadmap-services-list-element5">
-                    Review: And in case you already have a roadmap strategy: no
-                    problem - I also offer you to analyze it for you and give
-                    you an objective 3rd party oppinion.
+                    {t("detailes-of-the-roadmap-services-list-element5")}
                   </li>
                 </ul>
               </div>
@@ -141,76 +135,132 @@ export default function EquipmentRoadmapPage() {
             <div className="bg-gradient-to-br from-cyan-900/20 via-card/20 to-teal-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <MapIcon className="h-6 w-6 text-cyan-400" />
-                <h3 id="technology-assessment-title" className="text-lg font-semibold text-cyan-200">
-                  Technology Assessment
+                <h3
+                  id="technology-assessment-title"
+                  className="text-lg font-semibold text-cyan-200"
+                >
+                  {t("technology-assessment-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technology-assessment-list-element1">• Future technology evaluation</li>
-                <li id="technology-assessment-list-element2">• Technology maturity analysis</li>
-                <li id="technology-assessment-list-element3">• Competitive landscape mapping</li>
-                <li id="technology-assessment-list-element4">• Innovation trend identification</li>
-                <li id="technology-assessment-list-element5">• Technology readiness assessment</li>
+                <li id="technology-assessment-list-element1">
+                  {t("technology-assessment-list-element1")}
+                </li>
+                <li id="technology-assessment-list-element2">
+                  {t("technology-assessment-list-element2")}
+                </li>
+                <li id="technology-assessment-list-element3">
+                  {t("technology-assessment-list-element3")}
+                </li>
+                <li id="technology-assessment-list-element4">
+                  {t("technology-assessment-list-element4")}
+                </li>
+                <li id="technology-assessment-list-element5">
+                  {t("technology-assessment-list-element5")}
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <TrendingUp className="h-6 w-6 text-teal-400" />
-                <h3 id="equipment-evolution-planning-title" className="text-lg font-semibold text-teal-200">
-                  Equipment Evolution Planning
+                <h3
+                  id="equipment-evolution-planning-title"
+                  className="text-lg font-semibold text-teal-200"
+                >
+                  {t("equipment-evolution-planning-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="equipment-evolution-planning-list-element1">• Equipment lifecycle planning</li>
-                <li id="equipment-evolution-planning-list-element2">• Upgrade pathway definition</li>
-                <li id="equipment-evolution-planning-list-element3">• Performance evolution tracking</li>
-                <li id="equipment-evolution-planning-list-element4">• Obsolescence management</li>
-                <li id="equipment-evolution-planning-list-element5">• Next-generation preparation</li>
+                <li id="equipment-evolution-planning-list-element1">
+                  {t("equipment-evolution-planning-list-element1")}
+                </li>
+                <li id="equipment-evolution-planning-list-element2">
+                  {t("equipment-evolution-planning-list-element2")}
+                </li>
+                <li id="equipment-evolution-planning-list-element3">
+                  {t("equipment-evolution-planning-list-element3")}
+                </li>
+                <li id="equipment-evolution-planning-list-element4">
+                  {t("equipment-evolution-planning-list-element4")}
+                </li>
+                <li id="equipment-evolution-planning-list-element5">
+                  {t("equipment-evolution-planning-list-element5")}
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Shield className="h-6 w-6 text-emerald-400" />
-                <h3 id="risk-mitigation-title" className="text-lg font-semibold text-emerald-200">
-                  Risk Mitigation
+                <h3
+                  id="risk-mitigation-title"
+                  className="text-lg font-semibold text-emerald-200"
+                >
+                  {t("risk-mitigation-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="risk-mitigation-list-element1">• Technology risk assessment</li>
-                <li id="risk-mitigation-list-element2">• Mitigation strategy development</li>
-                <li id="risk-mitigation-list-element3">• Contingency planning</li>
-                <li id="risk-mitigation-list-element4">• Alternative technology evaluation</li>
-                <li id="risk-mitigation-list-element5">• Risk monitoring frameworks</li>
+                <li id="risk-mitigation-list-element1">
+                  {t("risk-mitigation-list-element1")}
+                </li>
+                <li id="risk-mitigation-list-element2">
+                  {t("risk-mitigation-list-element2")}
+                </li>
+                <li id="risk-mitigation-list-element3">
+                  {t("risk-mitigation-list-element3")}
+                </li>
+                <li id="risk-mitigation-list-element4">
+                  {t("risk-mitigation-list-element4")}
+                </li>
+                <li id="risk-mitigation-list-element5">
+                  {t("risk-mitigation-list-element5")}
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/35 via-card/35 to-cyan-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-blue-400" />
-                <h3 id="investment-prioritization-title" className="text-lg font-semibold text-blue-200">
-                  Investment Prioritization
+                <h3
+                  id="investment-prioritization-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
+                  {t("investment-prioritization-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="investment-prioritization-list-element1">• ROI analysis and modeling</li>
-                <li id="investment-prioritization-list-element2">• Investment timeline optimization</li>
-                <li id="investment-prioritization-list-element3">• Budget allocation strategies</li>
-                <li id="investment-prioritization-list-element4">• Cost-benefit evaluation</li>
-                <li id="investment-prioritization-list-element5">• Strategic investment planning</li>
+                <li id="investment-prioritization-list-element1">
+                  {t("investment-prioritization-list-element1")}
+                </li>
+                <li id="investment-prioritization-list-element2">
+                  {t("investment-prioritization-list-element2")}
+                </li>
+                <li id="investment-prioritization-list-element3">
+                  {t("investment-prioritization-list-element3")}
+                </li>
+                <li id="investment-prioritization-list-element4">
+                  {t("investment-prioritization-list-element4")}
+                </li>
+                <li id="investment-prioritization-list-element5">
+                  {t("investment-prioritization-list-element5")}
+                </li>
               </ul>
             </div>
           </div>
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="equipment-roadmap-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
-              Ready to plan for the future? Let's outline the challenges and
-              solutions for your next-generation technology.
+            <p
+              id="equipment-roadmap-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
+              {t("equipment-roadmap-contact")}
             </p>
             <Link
-              href={generateContactHref("/engineer/process-development/equipment-roadmap")}
+              href={generateContactHref(
+                "/engineer/process-development/equipment-roadmap"
+              )}
               target="_blank"
             >
               <Button

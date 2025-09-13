@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -17,8 +18,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/technical-consulting/technical-research"];
+interface TechnicalResearchPageProps {
+  params: { locale: string };
+}
 
-export default function TechnicalResearchPage() {
+
+export default async function TechnicalResearchPage({ params }: TechnicalResearchPageProps) {
+  const t = await getTranslations("TechnicalResearchPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -32,24 +38,23 @@ export default function TechnicalResearchPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
-            <Hero
+      <Hero
         route="/engineer"
         objectPosition="center 45%"
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="technical-research-hero"
+        <h1
+          id="technical-research-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
-           bg-gradient-to-r from-white via-gray-200 to-gray-300 
-           bg-clip-text text-transparent 
-           [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
+     bg-gradient-to-r from-white via-gray-200 to-gray-300 
+     bg-clip-text text-transparent 
+     [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Technical Research Services
+          {t("technical-research-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -65,16 +70,19 @@ export default function TechnicalResearchPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="technical-research-section-title"
+            <h2
+              id="technical-research-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Filter What Matters for Your Business
+              {t("technical-research-section-title")}
             </h2>
-            <p id="technical-research-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Professional technical research and analysis to identify relevant
-              information and trends
+            <p
+              id="technical-research-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("technical-research-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -84,76 +92,132 @@ export default function TechnicalResearchPage() {
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Microscope className="h-6 w-6 text-blue-400" />
-                <h3 id="technology-landscape-analysis-title" className="text-lg font-semibold text-blue-200">
-                  Technology Landscape Analysis
+                <h3
+                  id="technology-landscape-analysis-title"
+                  className="text-lg font-semibold text-blue-200"
+                >
+                  {t("technology-landscape-analysis-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technology-landscape-analysis-list-element1">• Technology trend identification</li>
-                <li id="technology-landscape-analysis-list-element2">• Emerging technology assessment</li>
-                <li id="technology-landscape-analysis-list-element3">• Competitive technology mapping</li>
-                <li id="technology-landscape-analysis-list-element4">• Technology maturity evaluation</li>
-                <li id="technology-landscape-analysis-list-element5">• Adoption potential analysis</li>
+                <li id="technology-landscape-analysis-list-element1">
+                  {t("technology-landscape-analysis-list-element1")}
+                </li>
+                <li id="technology-landscape-analysis-list-element2">
+                  {t("technology-landscape-analysis-list-element2")}
+                </li>
+                <li id="technology-landscape-analysis-list-element3">
+                  {t("technology-landscape-analysis-list-element3")}
+                </li>
+                <li id="technology-landscape-analysis-list-element4">
+                  {t("technology-landscape-analysis-list-element4")}
+                </li>
+                <li id="technology-landscape-analysis-list-element5">
+                  {t("technology-landscape-analysis-list-element5")}
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <BookOpen className="h-6 w-6 text-cyan-400" />
-                <h3 id="literature-review-title" className="text-lg font-semibold text-cyan-200">
-                  Literature Review
+                <h3
+                  id="literature-review-title"
+                  className="text-lg font-semibold text-cyan-200"
+                >
+                  {t("literature-review-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="literature-review-list-element1">• Academic literature analysis</li>
-                <li id="literature-review-list-element2">• Technical publication review</li>
-                <li id="literature-review-list-element3">• Research synthesis</li>
-                <li id="literature-review-list-element4">• State-of-the-art assessment</li>
-                <li id="literature-review-list-element5">• Knowledge gap identification</li>
+                <li id="literature-review-list-element1">
+                  {t("literature-review-list-element1")}
+                </li>
+                <li id="literature-review-list-element2">
+                  {t("literature-review-list-element2")}
+                </li>
+                <li id="literature-review-list-element3">
+                  {t("literature-review-list-element3")}
+                </li>
+                <li id="literature-review-list-element4">
+                  {t("literature-review-list-element4")}
+                </li>
+                <li id="literature-review-list-element5">
+                  {t("literature-review-list-element5")}
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Search className="h-6 w-6 text-teal-400" />
-                <h3 id="patent-ip-research-title" className="text-lg font-semibold text-teal-200">
-                  Patent & IP Research
+                <h3
+                  id="patent-ip-research-title"
+                  className="text-lg font-semibold text-teal-200"
+                >
+                  {t("patent-ip-research-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="patent-ip-research-list-element1">• Patent landscape analysis</li>
-                <li id="patent-ip-research-list-element2">• Freedom-to-operate assessment</li>
-                <li id="patent-ip-research-list-element3">• IP strategy recommendations</li>
-                <li id="patent-ip-research-list-element4">• Competitive IP positioning</li>
-                <li id="patent-ip-research-list-element5">• Technology protection strategies</li>
+                <li id="patent-ip-research-list-element1">
+                  {t("patent-ip-research-list-element1")}
+                </li>
+                <li id="patent-ip-research-list-element2">
+                  {t("patent-ip-research-list-element2")}
+                </li>
+                <li id="patent-ip-research-list-element3">
+                  {t("patent-ip-research-list-element3")}
+                </li>
+                <li id="patent-ip-research-list-element4">
+                  {t("patent-ip-research-list-element4")}
+                </li>
+                <li id="patent-ip-research-list-element5">
+                  {t("patent-ip-research-list-element5")}
+                </li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <FileText className="h-6 w-6 text-emerald-400" />
-                <h3 id="technical-feasibility-title" className="text-lg font-semibold text-emerald-200">
-                  Technical Feasibility
+                <h3
+                  id="technical-feasibility-title"
+                  className="text-lg font-semibold text-emerald-200"
+                >
+                  {t("technical-feasibility-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technical-feasibility-list-element1">• Technical feasibility studies</li>
-                <li id="technical-feasibility-list-element2">• Risk assessment</li>
-                <li id="technical-feasibility-list-element3">• Resource requirement analysis</li>
-                <li id="technical-feasibility-list-element4">• Implementation pathway evaluation</li>
-                <li id="technical-feasibility-list-element5">• Alternative technology comparison</li>
+                <li id="technical-feasibility-list-element1">
+                  {t("technical-feasibility-list-element1")}
+                </li>
+                <li id="technical-feasibility-list-element2">
+                  {t("technical-feasibility-list-element2")}
+                </li>
+                <li id="technical-feasibility-list-element3">
+                  {t("technical-feasibility-list-element3")}
+                </li>
+                <li id="technical-feasibility-list-element4">
+                  {t("technical-feasibility-list-element4")}
+                </li>
+                <li id="technical-feasibility-list-element5">
+                  {t("technical-feasibility-list-element5")}
+                </li>
               </ul>
             </div>
           </div>
 
           {/* Contact Section */}
           <div className="text-center">
-            <p id="technical-research-contact" className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
-              Ready to gain technical insights? Let's research and analyze the
-              information that matters for your business.
+            <p
+              id="technical-research-contact"
+              className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
+            >
+              {t("technical-research-contact")}
             </p>
             <Link
-              href={generateContactHref("/engineer/technical-consulting/technical-research")}
+              href={generateContactHref(
+                "/engineer/technical-consulting/technical-research"
+              )}
               target="_blank"
             >
               <Button

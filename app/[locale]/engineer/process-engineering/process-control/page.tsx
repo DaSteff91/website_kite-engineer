@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Link } from "@/i18n/navigation";
@@ -24,9 +25,8 @@ interface ProcessControlPageProps {
   params: { locale: string };
 }
 
-export default async function ProcessControlPage({
-  params,
-}: ProcessControlPageProps) {
+export default async function ProcessControlPage({ params }: ProcessControlPageProps) {
+  const t = await getTranslations("ProcessControlPage");
   const t = await getTranslations({
     locale: params.locale,
     namespace: "ProcessControlPage",
@@ -126,52 +126,28 @@ export default async function ProcessControlPage({
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="advanced-process-control-list-element1">
-                  {t.rich(
-                    "advanced-process-control-list-element1",
-                    richTextHandlers
-                  )}
+                  {t("advanced-process-control-list-element1")}
                 </li>
                 <li id="advanced-process-control-list-element2">
-                  {t.rich(
-                    "advanced-process-control-list-element2",
-                    richTextHandlers
-                  )}
+                  {t("advanced-process-control-list-element2")}
                 </li>
                 <li id="advanced-process-control-list-element3">
-                  {t.rich(
-                    "advanced-process-control-list-element3",
-                    richTextHandlers
-                  )}
+                  {t("advanced-process-control-list-element3")}
                 </li>
                 <li id="advanced-process-control-list-element4">
-                  {t.rich(
-                    "advanced-process-control-list-element4",
-                    richTextHandlers
-                  )}
+                  {t("advanced-process-control-list-element4")}
                 </li>
                 <li id="advanced-process-control-list-element5">
-                  {t.rich(
-                    "advanced-process-control-list-element5",
-                    richTextHandlers
-                  )}
+                  {t("advanced-process-control-list-element5")}
                 </li>
                 <li id="advanced-process-control-list-element6">
-                  {t.rich(
-                    "advanced-process-control-list-element6",
-                    richTextHandlers
-                  )}
+                  {t("advanced-process-control-list-element6")}
                 </li>
                 <li id="advanced-process-control-list-element7">
-                  {t.rich(
-                    "advanced-process-control-list-element7",
-                    richTextHandlers
-                  )}
+                  {t("advanced-process-control-list-element7")}
                 </li>
                 <li id="advanced-process-control-list-element8">
-                  {t.rich(
-                    "advanced-process-control-list-element8",
-                    richTextHandlers
-                  )}
+                  {t("advanced-process-control-list-element8")}
                 </li>
               </ul>
             </div>
@@ -188,52 +164,28 @@ export default async function ProcessControlPage({
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="statistical-process-control-list-element1">
-                  {t.rich(
-                    "statistical-process-control-list-element1",
-                    richTextHandlers
-                  )}
+                  {t("statistical-process-control-list-element1")}
                 </li>
                 <li id="statistical-process-control-list-element2">
-                  {t.rich(
-                    "statistical-process-control-list-element2",
-                    richTextHandlers
-                  )}
+                  {t("statistical-process-control-list-element2")}
                 </li>
                 <li id="statistical-process-control-list-element3">
-                  {t.rich(
-                    "statistical-process-control-list-element3",
-                    richTextHandlers
-                  )}
+                  {t("statistical-process-control-list-element3")}
                 </li>
                 <li id="statistical-process-control-list-element4">
-                  {t.rich(
-                    "statistical-process-control-list-element4",
-                    richTextHandlers
-                  )}
+                  {t("statistical-process-control-list-element4")}
                 </li>
                 <li id="statistical-process-control-list-element5">
-                  {t.rich(
-                    "statistical-process-control-list-element5",
-                    richTextHandlers
-                  )}
+                  {t("statistical-process-control-list-element5")}
                 </li>
                 <li id="statistical-process-control-list-element6">
-                  {t.rich(
-                    "statistical-process-control-list-element6",
-                    richTextHandlers
-                  )}
+                  {t("statistical-process-control-list-element6")}
                 </li>
                 <li id="statistical-process-control-list-element7">
-                  {t.rich(
-                    "statistical-process-control-list-element7",
-                    richTextHandlers
-                  )}
+                  {t("statistical-process-control-list-element7")}
                 </li>
                 <li id="statistical-process-control-list-element8">
-                  {t.rich(
-                    "statistical-process-control-list-element8",
-                    richTextHandlers
-                  )}
+                  {t("statistical-process-control-list-element8")}
                 </li>
               </ul>
             </div>
@@ -250,16 +202,16 @@ export default async function ProcessControlPage({
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="custom-solutions-list-element1">
-                  {t.rich("custom-solutions-list-element1", richTextHandlers)}
+                  {t("custom-solutions-list-element1")}
                 </li>
                 <li id="custom-solutions-list-element2">
-                  {t.rich("custom-solutions-list-element2", richTextHandlers)}
+                  {t("custom-solutions-list-element2")}
                 </li>
                 <li id="custom-solutions-list-element3">
-                  {t.rich("custom-solutions-list-element3", richTextHandlers)}
+                  {t("custom-solutions-list-element3")}
                 </li>
                 <li id="custom-solutions-list-element4">
-                  {t.rich("custom-solutions-list-element4", richTextHandlers)}
+                  {t("custom-solutions-list-element4")}
                 </li>
               </ul>
             </div>

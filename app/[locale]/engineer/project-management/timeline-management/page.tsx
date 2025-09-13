@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -18,8 +19,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/project-management/timeline-management"];
+interface TimelineManagementPageProps {
+  params: { locale: string };
+}
 
-export default function TimelineManagementPage() {
+
+export default async function TimelineManagementPage({ params }: TimelineManagementPageProps) {
+  const t = await getTranslations("TimelineManagementPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -33,7 +39,6 @@ export default function TimelineManagementPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/engineer"
@@ -48,10 +53,9 @@ export default function TimelineManagementPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Timeline Management Services
+          {t("timeline-management-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -67,16 +71,19 @@ export default function TimelineManagementPage() {
           </div>
 
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="timeline-management-section-title"
+            <h2
+              id="timeline-management-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              It's All About Timing
+              {t("timeline-management-section-title")}
             </h2>
-            <p id="timeline-management-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
-              Rebalance project timelines with expert outside perspective and
-              optimization strategies
+            <p
+              id="timeline-management-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t("timeline-management-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -90,24 +97,24 @@ export default function TimelineManagementPage() {
                   id="critical-path-analysis-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Critical Path Analysis
+                  {t("critical-path-analysis-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="critical-path-analysis-list-element1">
-                  • Critical path identification
+                  {t("critical-path-analysis-list-element1")}
                 </li>
                 <li id="critical-path-analysis-list-element2">
-                  • Dependency optimization
+                  {t("critical-path-analysis-list-element2")}
                 </li>
                 <li id="critical-path-analysis-list-element3">
-                  • Float time analysis
+                  {t("critical-path-analysis-list-element3")}
                 </li>
                 <li id="critical-path-analysis-list-element4">
-                  • Schedule compression techniques
+                  {t("critical-path-analysis-list-element4")}
                 </li>
                 <li id="critical-path-analysis-list-element5">
-                  • Critical chain methodology
+                  {t("critical-path-analysis-list-element5")}
                 </li>
               </ul>
             </div>
@@ -119,24 +126,24 @@ export default function TimelineManagementPage() {
                   id="schedule-optimization-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  Schedule Optimization
+                  {t("schedule-optimization-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="schedule-optimization-list-element1">
-                  • Resource leveling and smoothing
+                  {t("schedule-optimization-list-element1")}
                 </li>
                 <li id="schedule-optimization-list-element2">
-                  • Timeline rebalancing
+                  {t("schedule-optimization-list-element2")}
                 </li>
                 <li id="schedule-optimization-list-element3">
-                  • Fast-tracking opportunities
+                  {t("schedule-optimization-list-element3")}
                 </li>
                 <li id="schedule-optimization-list-element4">
-                  • Crashing analysis
+                  {t("schedule-optimization-list-element4")}
                 </li>
                 <li id="schedule-optimization-list-element5">
-                  • Schedule risk assessment
+                  {t("schedule-optimization-list-element5")}
                 </li>
               </ul>
             </div>
@@ -148,24 +155,24 @@ export default function TimelineManagementPage() {
                   id="dependency-management-title"
                   className="text-lg font-semibold text-teal-200"
                 >
-                  Dependency Management
+                  {t("dependency-management-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="dependency-management-list-element1">
-                  • Dependency identification
+                  {t("dependency-management-list-element1")}
                 </li>
                 <li id="dependency-management-list-element2">
-                  • Constraint analysis
+                  {t("dependency-management-list-element2")}
                 </li>
                 <li id="dependency-management-list-element3">
-                  • Parallel task optimization
+                  {t("dependency-management-list-element3")}
                 </li>
                 <li id="dependency-management-list-element4">
-                  • Handoff process improvement
+                  {t("dependency-management-list-element4")}
                 </li>
                 <li id="dependency-management-list-element5">
-                  • Bottleneck resolution
+                  {t("dependency-management-list-element5")}
                 </li>
               </ul>
             </div>
@@ -177,24 +184,24 @@ export default function TimelineManagementPage() {
                   id="timeline-recovery-title"
                   className="text-lg font-semibold text-emerald-200"
                 >
-                  Timeline Recovery
+                  {t("timeline-recovery-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="timeline-recovery-list-element1">
-                  • Delay impact assessment
+                  {t("timeline-recovery-list-element1")}
                 </li>
                 <li id="timeline-recovery-list-element2">
-                  • Recovery plan development
+                  {t("timeline-recovery-list-element2")}
                 </li>
                 <li id="timeline-recovery-list-element3">
-                  • Acceleration strategies
+                  {t("timeline-recovery-list-element3")}
                 </li>
                 <li id="timeline-recovery-list-element4">
-                  • Scope adjustment recommendations
+                  {t("timeline-recovery-list-element4")}
                 </li>
                 <li id="timeline-recovery-list-element5">
-                  • Stakeholder communication planning
+                  {t("timeline-recovery-list-element5")}
                 </li>
               </ul>
             </div>
@@ -206,8 +213,7 @@ export default function TimelineManagementPage() {
               id="timeline-management-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Ready to optimize your project timeline? Let's rebalance your
-              schedule and get back on track.
+              {t("timeline-management-contact")}
             </p>
             <Link
               href={generateContactHref(
@@ -220,8 +226,7 @@ export default function TimelineManagementPage() {
                 className="group bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>

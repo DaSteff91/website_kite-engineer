@@ -1,8 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -18,8 +19,13 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
   PAGE_METADATA["engineer/project-management/project-setup"];
+interface ProjectSetupPageProps {
+  params: { locale: string };
+}
 
-export default function ProjectSetupPage() {
+
+export default async function ProjectSetupPage({ params }: ProjectSetupPageProps) {
+  const t = await getTranslations("ProjectSetupPage");
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -33,7 +39,6 @@ export default function ProjectSetupPage() {
           placeholder="blur"
         />
       </div>
-
       {/* Hero Section */}
       <Hero
         route="/engineer"
@@ -48,10 +53,9 @@ export default function ProjectSetupPage() {
            bg-clip-text text-transparent 
            [text-shadow:0_0_8px_rgba(209,213,219,0.6)]"
         >
-          Project Setup Services
+          {t("project-setup-hero")}
         </h1>
       </Hero>
-
       {/* Content Section */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
@@ -73,14 +77,13 @@ export default function ProjectSetupPage() {
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
-              Professional Project Foundation
+              {t("project-setup-section-title")}
             </h2>
             <p
               id="project-setup-section-subtitle"
               className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
             >
-              Establish a solid project foundation to achieve sustainable goals
-              and efficient execution
+              {t("project-setup-section-subtitle")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -94,24 +97,24 @@ export default function ProjectSetupPage() {
                   id="project-scope-definition-title"
                   className="text-lg font-semibold text-emerald-200"
                 >
-                  Project Scope Definition
+                  {t("project-scope-definition-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="project-scope-definition-list-element1">
-                  • Comprehensive scope documentation
+                  {t("project-scope-definition-list-element1")}
                 </li>
                 <li id="project-scope-definition-list-element2">
-                  • Requirements gathering and analysis
+                  {t("project-scope-definition-list-element2")}
                 </li>
                 <li id="project-scope-definition-list-element3">
-                  • Project boundaries definition
+                  {t("project-scope-definition-list-element3")}
                 </li>
                 <li id="project-scope-definition-list-element4">
-                  • Deliverables specification
+                  {t("project-scope-definition-list-element4")}
                 </li>
                 <li id="project-scope-definition-list-element5">
-                  • Acceptance criteria establishment
+                  {t("project-scope-definition-list-element5")}
                 </li>
               </ul>
             </div>
@@ -123,24 +126,24 @@ export default function ProjectSetupPage() {
                   id="work-breakdown-structure-title"
                   className="text-lg font-semibold text-blue-200"
                 >
-                  Work Breakdown Structure
+                  {t("work-breakdown-structure-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="work-breakdown-structure-list-element1">
-                  • Hierarchical task decomposition
+                  {t("work-breakdown-structure-list-element1")}
                 </li>
                 <li id="work-breakdown-structure-list-element2">
-                  • Detailed activity definition
+                  {t("work-breakdown-structure-list-element2")}
                 </li>
                 <li id="work-breakdown-structure-list-element3">
-                  • Effort estimation
+                  {t("work-breakdown-structure-list-element3")}
                 </li>
                 <li id="work-breakdown-structure-list-element4">
-                  • Dependency identification
+                  {t("work-breakdown-structure-list-element4")}
                 </li>
                 <li id="work-breakdown-structure-list-element5">
-                  • Critical path analysis
+                  {t("work-breakdown-structure-list-element5")}
                 </li>
               </ul>
             </div>
@@ -152,24 +155,24 @@ export default function ProjectSetupPage() {
                   id="resource-planning-title"
                   className="text-lg font-semibold text-cyan-200"
                 >
-                  Resource Planning
+                  {t("resource-planning-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="resource-planning-list-element1">
-                  • Resource allocation strategies
+                  {t("resource-planning-list-element1")}
                 </li>
                 <li id="resource-planning-list-element2">
-                  • Skill matrix development
+                  {t("resource-planning-list-element2")}
                 </li>
                 <li id="resource-planning-list-element3">
-                  • Capacity planning
+                  {t("resource-planning-list-element3")}
                 </li>
                 <li id="resource-planning-list-element4">
-                  • Budget allocation
+                  {t("resource-planning-list-element4")}
                 </li>
                 <li id="resource-planning-list-element5">
-                  • Resource leveling techniques
+                  {t("resource-planning-list-element5")}
                 </li>
               </ul>
             </div>
@@ -181,24 +184,24 @@ export default function ProjectSetupPage() {
                   id="risk-assessment-title"
                   className="text-lg font-semibold text-teal-200"
                 >
-                  Risk Assessment
+                  {t("risk-assessment-title")}
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-sm">
                 <li id="risk-assessment-list-element1">
-                  • Risk identification workshops
+                  {t("risk-assessment-list-element1")}
                 </li>
                 <li id="risk-assessment-list-element2">
-                  • Probability and impact analysis
+                  {t("risk-assessment-list-element2")}
                 </li>
                 <li id="risk-assessment-list-element3">
-                  • Mitigation strategy development
+                  {t("risk-assessment-list-element3")}
                 </li>
                 <li id="risk-assessment-list-element4">
-                  • Contingency planning
+                  {t("risk-assessment-list-element4")}
                 </li>
                 <li id="risk-assessment-list-element5">
-                  • Risk monitoring framework
+                  {t("risk-assessment-list-element5")}
                 </li>
               </ul>
             </div>
@@ -210,8 +213,7 @@ export default function ProjectSetupPage() {
               id="project-setup-contact"
               className="text-xl text-white/90 mb-8 max-w-6xl mx-auto"
             >
-              Ready to set up your project for success? Let's establish a solid
-              foundation for sustainable goal achievement.
+              {t("project-setup-contact")}
             </p>
             <Link
               href={generateContactHref(
@@ -224,8 +226,7 @@ export default function ProjectSetupPage() {
                 className="group bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 id="contact-button"
               >
-                Connect with me
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                {t("contact-button")}
               </Button>
             </Link>
           </div>
