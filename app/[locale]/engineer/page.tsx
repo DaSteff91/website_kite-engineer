@@ -40,12 +40,19 @@ import {
 import { generateContactHref } from "@/lib/utils/contact-filler";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = PAGE_METADATA.engineer;
+interface EngineerPageProps {
+  params: { locale: string };
+}
 
-export default function EngineerPage() {
-  const t = useTranslations("EngineerPage");
+
+export default async function EngineerPage({ params }: EngineerPageProps) {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "EngineerPage",
+  });
 
   return (
     <div className="relative min-h-screen">

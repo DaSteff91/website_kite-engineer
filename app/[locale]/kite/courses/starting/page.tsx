@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Link } from "@/i18n/navigation";
@@ -20,9 +20,15 @@ import { generateContactHref } from "@/lib/utils/contact-filler";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA["kite/courses/starting"];
+interface StartingPageProps {
+  params: { locale: string };
+}
 
-export default function StartingPage() {
-  const t = useTranslations("StartingPage");
+export default async function StartingPage({ params }: StartingPageProps) {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "StartingPage",
+  });
 
   const richTextHandlers = {
     strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,

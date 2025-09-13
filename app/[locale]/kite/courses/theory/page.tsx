@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Link } from "@/i18n/navigation";
@@ -23,8 +23,15 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA["kite/courses/theory"];
 
-export default function TheoryPage() {
-  const t = useTranslations("TheoryPage");
+interface TheoryPageProps {
+  params: { locale: string };
+}
+
+export default async function TheoryPage({ params }: TheoryPageProps) {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "TheoryPage",
+  });
 
   const richTextHandlers = {
     strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,

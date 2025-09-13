@@ -6,6 +6,9 @@ import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA.privacy;
+interface PrivacyProps {
+  params: { locale: string };
+}
 
 type SectionProps = {
   title: string;
@@ -81,7 +84,8 @@ export default function Privacy() {
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="privacy-hero"
+        <h1
+          id="privacy-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
                  bg-gradient-to-r from-white via-gray-200 to-gray-300 
                  bg-clip-text text-transparent 

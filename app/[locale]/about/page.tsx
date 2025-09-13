@@ -3,7 +3,6 @@ import background_image_darker from "@/public/images/background_image_darker.jpe
 import about_content_image from "@/public/images/about_content.jpg";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 export const metadata = PAGE_METADATA.about;

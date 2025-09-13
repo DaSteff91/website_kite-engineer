@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import kite_landingpage_image from "@/public/images/kite_landingpage.jpg";
 import engineer_landingpage_image from "@/public/images/engineer_hero_image.jpg";
@@ -8,9 +8,16 @@ import { PAGE_METADATA } from "@/lib/constants/metadata";
 import LocaleSwitcher from "@/components/ui/localeSwitcher";
 
 export const metadata = PAGE_METADATA.home;
+interface HomeProps {
+  params: { locale: string };
+}
 
-export default function Home() {
-  const t = useTranslations("LandingPage");
+
+export default async function Home({ params }: HomeProps) {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "Home",
+  });
   return (
     <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 relative">
       <div className="z-50">

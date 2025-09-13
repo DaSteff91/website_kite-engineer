@@ -23,12 +23,19 @@ import {
 } from "lucide-react";
 import { generateContactHref } from "@/lib/utils/contact-filler";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = PAGE_METADATA.kite;
+interface KitePageProps {
+  params: { locale: string };
+}
 
-export default function KitePage() {
-  const t = useTranslations("KitePage");
+
+export default async function KitePage({ params }: KitePageProps) {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "KitePage",
+  });
 
   return (
     <div className="relative min-h-screen">

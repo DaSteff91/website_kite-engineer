@@ -3,12 +3,19 @@ import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = PAGE_METADATA.contact;
+interface ContactPageProps {
+  params: { locale: string };
+}
 
-export default function ContactPage() {
-  const t = useTranslations("ContactPage");
+
+export default async function ContactPage({ params }: ContactPageProps) {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "ContactPage",
+  });
 
   return (
     <div className="relative min-h-screen">
