@@ -23,7 +23,7 @@ import {
 } from "@/lib/constants/navigation-menu";
 
 export function Header() {
-  const t = useTranslations("NavigationMenu"); // translations namespace
+  const t = useTranslations("NavigationMenu");
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
 
