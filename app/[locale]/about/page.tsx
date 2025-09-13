@@ -4,11 +4,18 @@ import about_content_image from "@/public/images/about_content.jpg";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = PAGE_METADATA.about;
+interface AboutPageProps {
+  params: { locale: string };
+}
 
-export default function AboutPage() {
-  const t = useTranslations("AboutPage");
+export default async function AboutPage({ params }: AboutPageProps) {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "AboutPage",
+  });
 
   return (
     <div className="relative min-h-screen">
@@ -31,7 +38,8 @@ export default function AboutPage() {
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="about-hero"
+        <h1
+          id="about-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -45,14 +53,18 @@ export default function AboutPage() {
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
           <div className="relative mb-16 sm:mb-20">
-            <h2 id="about-section-title"
+            <h2
+              id="about-section-title"
               className="text-xl sm:text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               {t("sectionTitle")}
             </h2>
-            <p id="about-section-subtitle" className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p
+              id="about-section-subtitle"
+              className="mt-4 text-lg sm:text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
               {t("sectionQuote")}
             </p>
             <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
@@ -83,8 +95,12 @@ export default function AboutPage() {
                 })}
               </p>
               <ul className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base my-2">
-                <li id="t-introductiontitle-list-element1">{t("introductionListItem1")}</li>
-                <li id="t-introductiontitle-list-element2">{t("introductionListItem2")}</li>
+                <li id="t-introductiontitle-list-element1">
+                  {t("introductionListItem1")}
+                </li>
+                <li id="t-introductiontitle-list-element2">
+                  {t("introductionListItem2")}
+                </li>
               </ul>
               <p className="text-muted-foreground leading-6 sm:leading-7 text-sm sm:text-base">
                 {t("introductionText4")}
@@ -114,7 +130,9 @@ export default function AboutPage() {
               </h3>
               <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
                 {t.rich("professionalItems", {
-                  li: (chunks) => <li id="t-professionaltitle-list-element1">{chunks}</li>,
+                  li: (chunks) => (
+                    <li id="t-professionaltitle-list-element1">{chunks}</li>
+                  ),
                 })}
               </ul>
             </div>
@@ -127,7 +145,9 @@ export default function AboutPage() {
               </h3>
               <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
                 {t.rich("personalItems", {
-                  li: (chunks) => <li id="t-personaltitle-list-element1">{chunks}</li>,
+                  li: (chunks) => (
+                    <li id="t-personaltitle-list-element1">{chunks}</li>
+                  ),
                 })}
               </ul>
             </div>
