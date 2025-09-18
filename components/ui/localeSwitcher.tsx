@@ -3,7 +3,8 @@
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Globe } from "lucide-react";
 
 export default function LocaleSwitcher() {
   const locale = useLocale();
@@ -12,13 +13,47 @@ export default function LocaleSwitcher() {
   // stateparameter that holds the selected language made by the user
   const [selectedLocale, setSelectedLocale] = useState(locale);
 
+  // state to control the globe-triggered dropdown
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     setSelectedLocale(locale);
   }, [locale]);
 
+  // Listening for clicks outside the switcher in order to close it
+  const switcherRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        switcherRef.current &&
+        !switcherRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
   const switchLocale = (newLocale: string) => {
     // Change the displayed language in the switcher
     setSelectedLocale(newLocale);
+
+    // close the dropdown (if open)
+    setIsOpen(false);
 
     // 1. Get the current (potentially corrupted) pathname
     const currentPathname = pathname; // e.g., "/pt-BR/about"
@@ -42,28 +77,44 @@ export default function LocaleSwitcher() {
   };
 
   const languages = [
-    { value: "en-US", label: "English", flag: "🇺🇸" },
-    { value: "de-DE", label: "Deutsch", flag: "🇩🇪" },
-    { value: "pt-BR", label: "Português", flag: "🇧🇷" },
+    { value: "en-US", label: "EN", flag: "🇺🇸" },
+    { value: "de-DE", label: "DE", flag: "🇩🇪" },
+    { value: "pt-BR", label: "PT", flag: "🇧🇷" },
   ];
 
   return (
-    <div className="locale-switcher">
-      <select
-        className="locale-select"
-        value={selectedLocale}
-        onChange={(e) => switchLocale(e.target.value)}
+    <div className="inline-block" ref={switcherRef}>
+      <button
+        type="button"
         aria-label="Select language"
+        aria-haspopup="menu"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen((s) => !s)}
+        className="locale-switcher-button inline-flex items-center justify-center p-0 w-5 h-5 min-w-0 min-h-0 self-center"
       >
-        {languages.map((language) => (
-          <option key={language.value} value={language.value}>
-            {language.flag} {language.label}
-          </option>
-        ))}
-      </select>
+        <Globe className="locale-switcher-icon block w-5 h-5" size={20} />
+      </button>
 
-      {/* Mobile-friendly dropdown indicator */}
-      <div className="select-arrow">▼</div>
+      {isOpen && (
+        <ul
+          role="menu"
+          className="locale-switcher-dropdown absolute right-0 mt-1 rounded-md border bg-background/95 backdrop-blur-md p-1"
+        >
+          {languages.map((language) => (
+            <li key={language.value} role="none">
+              <button
+                role="menuitem"
+                type="button"
+                className="w-full text-left px-3 py-2 rounded-sm hover:bg-white/5"
+                onClick={() => switchLocale(language.value)}
+              >
+                <span className="mr-2">{language.flag}</span>
+                <span>{language.label}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

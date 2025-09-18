@@ -25,8 +25,9 @@ interface StartingPageProps {
 }
 
 export default async function StartingPage({ params }: StartingPageProps) {
+  const { locale } = await params;
   const t = await getTranslations({
-    locale: params.locale,
+    locale,
     namespace: "StartingPage",
   });
 

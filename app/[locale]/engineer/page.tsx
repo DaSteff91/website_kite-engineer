@@ -47,10 +47,10 @@ interface EngineerPageProps {
   params: { locale: string };
 }
 
-
 export default async function EngineerPage({ params }: EngineerPageProps) {
+  const { locale } = await params;
   const t = await getTranslations({
-    locale: params.locale,
+    locale,
     namespace: "EngineerPage",
   });
 
@@ -75,7 +75,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="engineer-hero"
+        <h1
+          id="engineer-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -89,14 +90,18 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
       <section className="py-16" id="content-section">
         <div className="container mx-auto px-4">
           <div className="relative mb-20">
-            <h2 id="engineer-section-title"
+            <h2
+              id="engineer-section-title"
               className="text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               {t("sectionTitle")}
             </h2>
-            <p id="engineer-section-subtitle" className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p
+              id="engineer-section-subtitle"
+              className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
               {t("sectionDescription")}
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>

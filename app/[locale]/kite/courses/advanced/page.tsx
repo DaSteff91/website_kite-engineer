@@ -19,10 +19,10 @@ interface AdvancedPageProps {
   params: { locale: string };
 }
 
-
 export default async function AdvancedPage({ params }: AdvancedPageProps) {
+  const { locale } = await params;
   const t = await getTranslations({
-    locale: params.locale,
+    locale,
     namespace: "AdvancedPage",
   });
 

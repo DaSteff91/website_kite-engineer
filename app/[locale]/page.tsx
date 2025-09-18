@@ -8,15 +8,15 @@ import { PAGE_METADATA } from "@/lib/constants/metadata";
 import LocaleSwitcher from "@/components/ui/localeSwitcher";
 
 export const metadata = PAGE_METADATA.home;
-interface HomeProps {
+interface LandingPageProps {
   params: { locale: string };
 }
 
-
-export default async function Home({ params }: HomeProps) {
+export default async function Home({ params }: LandingPageProps) {
+  const { locale } = await params;
   const t = await getTranslations({
-    locale: params.locale,
-    namespace: "Home",
+    locale,
+    namespace: "LandingPage",
   });
   return (
     <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 relative">

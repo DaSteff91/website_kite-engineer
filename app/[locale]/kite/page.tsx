@@ -30,10 +30,10 @@ interface KitePageProps {
   params: { locale: string };
 }
 
-
 export default async function KitePage({ params }: KitePageProps) {
+  const { locale } = await params;
   const t = await getTranslations({
-    locale: params.locale,
+    locale,
     namespace: "KitePage",
   });
 
@@ -58,7 +58,8 @@ export default async function KitePage({ params }: KitePageProps) {
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="kite-hero"
+        <h1
+          id="kite-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 
@@ -72,14 +73,18 @@ export default async function KitePage({ params }: KitePageProps) {
       <section className="py-16" id="content-section">
         <div className="container mx-auto px-4">
           <div className="relative mb-20">
-            <h2 id="kite-section-title"
+            <h2
+              id="kite-section-title"
               className="text-2xl md:text-3xl font-bold text-center max-w-4xl mx-auto leading-relaxed 
    bg-[linear-gradient(to_right,white,rgba(229,231,235,0.8),rgba(209,213,219,1))] 
    bg-clip-text text-transparent animate-gradient"
             >
               {t("sectionTitle")}
             </h2>
-            <p id="kite-section-subtitle" className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p
+              id="kite-section-subtitle"
+              className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
+            >
               {t("sectionSubtitle")}
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
@@ -88,7 +93,10 @@ export default async function KitePage({ params }: KitePageProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-start justify-items-center">
             {/* Freelancer Section */}
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl h-fit">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200" id="freelancer-section">
+              <h3
+                className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200"
+                id="freelancer-section"
+              >
                 <HandPlatter className="h-7 w-7 text-blue-400" />
                 {t("freelancerTitle")}
               </h3>
@@ -137,12 +145,18 @@ export default async function KitePage({ params }: KitePageProps) {
                   className="border-white/5"
                 >
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
-                    <div id="travel-service-title" className="flex items-center gap-2">
+                    <div
+                      id="travel-service-title"
+                      className="flex items-center gap-2"
+                    >
                       <Plane className="h-5 w-5" />
                       {t("freelancerTravelServicesTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent id="travel-service-description" className="text-white/80">
+                  <AccordionContent
+                    id="travel-service-description"
+                    className="text-white/80"
+                  >
                     {t("freelancerTravelServicesDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
@@ -167,12 +181,18 @@ export default async function KitePage({ params }: KitePageProps) {
                 </AccordionItem>
                 <AccordionItem value="consulting-1" className="border-white/5">
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
-                    <div id="consulting-title" className="flex items-center gap-2">
+                    <div
+                      id="consulting-title"
+                      className="flex items-center gap-2"
+                    >
                       <MessageSquareText className="h-5 w-5" />
                       {t("freelancerConsultingTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent id="consulting-description" className="text-white/80">
+                  <AccordionContent
+                    id="consulting-description"
+                    className="text-white/80"
+                  >
                     {t("freelancerConsultingDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
@@ -200,7 +220,10 @@ export default async function KitePage({ params }: KitePageProps) {
 
             {/* Courses Section */}
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-6 rounded-lg border border-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full max-w-xl h-fit">
-              <h3 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200" id="courses-section">
+              <h3
+                className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200"
+                id="courses-section"
+              >
                 <List className="h-7 w-7 text-cyan-400" />
                 {t("coursesTitle")}
               </h3>
@@ -212,7 +235,10 @@ export default async function KitePage({ params }: KitePageProps) {
                       {t("coursesTheoryTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent id="theory-description" className="text-white/80">
+                  <AccordionContent
+                    id="theory-description"
+                    className="text-white/80"
+                  >
                     {t("coursesTheoryDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
@@ -235,12 +261,18 @@ export default async function KitePage({ params }: KitePageProps) {
                 </AccordionItem>
                 <AccordionItem value="starting-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
-                    <div id="starting-title" className="flex items-center gap-2">
+                    <div
+                      id="starting-title"
+                      className="flex items-center gap-2"
+                    >
                       <CirclePlay className="h-5 w-5" />
                       {t("coursesStartingTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent id="starting-description" className="text-white/80">
+                  <AccordionContent
+                    id="starting-description"
+                    className="text-white/80"
+                  >
                     {t("coursesStartingDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
@@ -263,12 +295,18 @@ export default async function KitePage({ params }: KitePageProps) {
                 </AccordionItem>
                 <AccordionItem value="advanced-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
-                    <div id="advanced-title" className="flex items-center gap-2">
+                    <div
+                      id="advanced-title"
+                      className="flex items-center gap-2"
+                    >
                       <ArrowBigUpDash className="h-5 w-5" />
                       {t("coursesAdvancedTitle")}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent id="advanced-description" className="text-white/80">
+                  <AccordionContent
+                    id="advanced-description"
+                    className="text-white/80"
+                  >
                     {t("coursesAdvancedDescription")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link

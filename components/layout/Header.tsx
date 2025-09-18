@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Link, usePathname } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
-import { Menu, X, House, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, House, ChevronDown, ChevronRight, Globe } from "lucide-react";
 import { useTheme } from "next-themes";
 import {
   DropdownMenu,
@@ -21,11 +21,14 @@ import {
   NavItem,
   NavSubmenu,
 } from "@/lib/constants/navigation-menu";
+import { routing } from "@/i18n/routing";
 
 export function Header() {
   const t = useTranslations("NavigationMenu");
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
+  const router = useRouter();
+  const locale = useLocale();
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -127,6 +130,26 @@ export function Header() {
     );
   }
 
+  const switchLocale = (newLocale: string) => {
+    let cleanPathname = pathname;
+
+    // Remove any existing locale prefix
+    routing.locales.forEach((loc) => {
+      cleanPathname = cleanPathname.replace(new RegExp(`^/${loc}`), "");
+    });
+
+    if (cleanPathname === "") cleanPathname = "/";
+
+    // Navigate via router.replace and let next-intl handle locale
+    router.replace(cleanPathname, { locale: newLocale });
+  };
+
+  const languages = [
+    { value: "en-US", label: "EN", flag: "🇺🇸" },
+    { value: "de-DE", label: "DE", flag: "🇩🇪" },
+    { value: "pt-BR", label: "PT", flag: "🇧🇷" },
+  ];
+
   return (
     <header className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-screen-xl z-50">
       <div className="relative">
@@ -149,7 +172,6 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-4 lg:gap-6 h-full">
-              <LocaleSwitcher />
               {NAV_ITEMS.map((item) => {
                 const Icon = item.icon as React.ElementType | undefined;
                 return (
@@ -309,6 +331,7 @@ export function Header() {
                   </div>
                 );
               })}
+              <LocaleSwitcher />
             </div>
 
             <Button
@@ -337,13 +360,20 @@ export function Header() {
             isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           )}
         >
-          <div className="rounded-lg border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/95 backdrop-blur-md p-4">
+          <div
+            className="rounded-lg border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/95 backdrop-blur-md p-4 overflow-y-auto"
+            style={{
+              // ensure the menu cannot grow taller than viewport minus header height (header is h-16 = 4rem)
+              maxHeight: "calc(100vh - 4rem)",
+              WebkitOverflowScrolling: "touch",
+              touchAction: "pan-y",
+            }}
+          >
             <nav className="flex flex-col gap-2">
               {NAV_ITEMS.map((item) => (
                 <div key={item.key}>
                   {item.hasDropdown ? (
                     <div className="space-y-2">
-                      <LocaleSwitcher />
                       <div className="flex items-center">
                         <Link
                           href={item.href}
@@ -483,6 +513,23 @@ export function Header() {
                   )}
                 </div>
               ))}
+              {/* Mobile Language Switcher */}
+              <div className="flex flex-row gap-3 px-4">
+                {languages
+                  .filter((lang) => lang.value !== locale) // hide current
+                  .map((lang) => (
+                    <button
+                      key={lang.value}
+                      onClick={() => switchLocale(lang.value)}
+                      className="flex items-center gap-2 text-base font-medium rounded-md transition-all duration-200
+                   hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]
+                   text-white/90 px-3"
+                    >
+                      <span>{lang.flag}</span>
+                      <span>{lang.label}</span>
+                    </button>
+                  ))}
+              </div>
             </nav>
           </div>
         </div>

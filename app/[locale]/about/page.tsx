@@ -11,8 +11,9 @@ interface AboutPageProps {
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {
+  const { locale } = await params;
   const t = await getTranslations({
-    locale: params.locale,
+    locale,
     namespace: "AboutPage",
   });
 
