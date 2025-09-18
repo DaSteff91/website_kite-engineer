@@ -24,7 +24,11 @@ interface ProcessAssessmentPageProps {
 
 
 export default async function ProcessAssessmentPage({ params }: ProcessAssessmentPageProps) {
-  const t = await getTranslations("ProcessAssessmentPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "ProcessAssessmentPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

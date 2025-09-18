@@ -24,7 +24,11 @@ interface CustomSolutionsPageProps {
 
 
 export default async function CustomSolutionsPage({ params }: CustomSolutionsPageProps) {
-  const t = await getTranslations("CustomSolutionsPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "CustomSolutionsPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

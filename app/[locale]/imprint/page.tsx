@@ -6,6 +6,12 @@ import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Hero } from "@/components/sections/Hero";
 import { useState } from "react";
+import { PAGE_METADATA } from "@/lib/constants/metadata";
+
+// export const metadata = PAGE_METADATA.engineer;
+interface ImprintProps {
+  params: { locale: string };
+}
 
 type SectionProps = {
   title: string;
@@ -51,6 +57,7 @@ const ContactInfoLine = ({
 );
 
 export default async function Imprint({ params }: ImprintProps) {
+  const { locale } = await params;
   const contactData = [
     { value: "Kite-Engineer by Stefan Merthan" },
     { value: "Stefan Merthan" },
@@ -83,7 +90,8 @@ export default async function Imprint({ params }: ImprintProps) {
         brightness={50}
         minHeight="60vh"
       >
-        <h1 id="imprint-hero"
+        <h1
+          id="imprint-hero"
           className="pb-1 text-4xl md:text-5xl font-bold mb-6 
            bg-gradient-to-r from-white via-gray-200 to-gray-300 
            bg-clip-text text-transparent 

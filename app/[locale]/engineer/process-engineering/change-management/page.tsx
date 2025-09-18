@@ -25,7 +25,11 @@ interface ChangeManagementPageProps {
 
 
 export default async function ChangeManagementPage({ params }: ChangeManagementPageProps) {
-  const t = await getTranslations("ChangeManagementPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "ChangeManagementPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

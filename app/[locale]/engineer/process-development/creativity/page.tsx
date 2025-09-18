@@ -25,7 +25,11 @@ interface CreativityPageProps {
 
 
 export default async function CreativityPage({ params }: CreativityPageProps) {
-  const t = await getTranslations("CreativityPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "CreativityPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

@@ -25,7 +25,11 @@ interface MonitoringPageProps {
 
 
 export default async function MonitoringPage({ params }: MonitoringPageProps) {
-  const t = await getTranslations("MonitoringPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "MonitoringPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

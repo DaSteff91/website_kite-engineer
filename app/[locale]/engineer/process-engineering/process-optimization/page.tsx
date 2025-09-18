@@ -25,7 +25,11 @@ interface ProcessOptimizationPageProps {
 
 
 export default async function ProcessOptimizationPage({ params }: ProcessOptimizationPageProps) {
-  const t = await getTranslations("ProcessOptimizationPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "ProcessOptimizationPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

@@ -24,7 +24,11 @@ interface CompetitorAnalysisPageProps {
 
 
 export default async function CompetitorAnalysisPage({ params }: CompetitorAnalysisPageProps) {
-  const t = await getTranslations("CompetitorAnalysisPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "CompetitorAnalysisPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

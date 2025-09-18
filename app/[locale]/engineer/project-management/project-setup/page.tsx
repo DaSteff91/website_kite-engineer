@@ -25,7 +25,11 @@ interface ProjectSetupPageProps {
 
 
 export default async function ProjectSetupPage({ params }: ProjectSetupPageProps) {
-  const t = await getTranslations("ProjectSetupPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "ProjectSetupPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

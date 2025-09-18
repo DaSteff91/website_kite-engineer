@@ -25,7 +25,11 @@ interface SimulationPrototypingPageProps {
 
 
 export default async function SimulationPrototypingPage({ params }: SimulationPrototypingPageProps) {
-  const t = await getTranslations("SimulationPrototypingPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "SimulationPrototypingPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

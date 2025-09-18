@@ -25,10 +25,10 @@ export const PAGE_METADATA = {
     title: "Privacy Policy",
     description: "About the privacy police and data processing on this website.",
   },
-  // imprint: {
-  //   title: "Imprint",
-  //   description: "Legal information about the Kite Engineer brand.",
-  // },
+  imprint: {
+    title: "Imprint",
+    description: "Legal information about the Kite Engineer brand.",
+  },
 
 // Kite related subpages
 

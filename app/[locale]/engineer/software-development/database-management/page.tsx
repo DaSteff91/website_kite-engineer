@@ -24,7 +24,11 @@ interface DatabaseManagementPageProps {
 
 
 export default async function DatabaseManagementPage({ params }: DatabaseManagementPageProps) {
-  const t = await getTranslations("DatabaseManagementPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "DatabaseManagementPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

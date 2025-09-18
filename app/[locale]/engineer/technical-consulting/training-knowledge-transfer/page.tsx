@@ -24,7 +24,11 @@ interface TrainingKnowledgeTransferPageProps {
 
 
 export default async function TrainingKnowledgeTransferPage({ params }: TrainingKnowledgeTransferPageProps) {
-  const t = await getTranslations("TrainingKnowledgeTransferPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "TrainingKnowledgeTransferPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

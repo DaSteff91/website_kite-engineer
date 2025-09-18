@@ -25,7 +25,11 @@ interface EquipmentRoadmapPageProps {
 
 
 export default async function EquipmentRoadmapPage({ params }: EquipmentRoadmapPageProps) {
-  const t = await getTranslations("EquipmentRoadmapPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "EquipmentRoadmapPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

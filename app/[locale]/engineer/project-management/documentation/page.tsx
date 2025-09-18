@@ -25,7 +25,11 @@ interface DocumentationPageProps {
 
 
 export default async function DocumentationPage({ params }: DocumentationPageProps) {
-  const t = await getTranslations("DocumentationPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "DocumentationPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

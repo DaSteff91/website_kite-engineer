@@ -25,7 +25,11 @@ interface TimelineManagementPageProps {
 
 
 export default async function TimelineManagementPage({ params }: TimelineManagementPageProps) {
-  const t = await getTranslations("TimelineManagementPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "TimelineManagementPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

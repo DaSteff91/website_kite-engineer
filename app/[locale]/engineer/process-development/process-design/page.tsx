@@ -25,7 +25,11 @@ interface ProcessDesignPageProps {
 
 
 export default async function ProcessDesignPage({ params }: ProcessDesignPageProps) {
-  const t = await getTranslations("ProcessDesignPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "ProcessDesignPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

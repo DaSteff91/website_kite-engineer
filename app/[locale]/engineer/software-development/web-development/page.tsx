@@ -24,7 +24,11 @@ interface WebDevelopmentPageProps {
 
 
 export default async function WebDevelopmentPage({ params }: WebDevelopmentPageProps) {
-  const t = await getTranslations("WebDevelopmentPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "WebDevelopmentPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

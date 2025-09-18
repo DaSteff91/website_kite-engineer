@@ -24,7 +24,11 @@ interface TechnicalResearchPageProps {
 
 
 export default async function TechnicalResearchPage({ params }: TechnicalResearchPageProps) {
-  const t = await getTranslations("TechnicalResearchPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "TechnicalResearchPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

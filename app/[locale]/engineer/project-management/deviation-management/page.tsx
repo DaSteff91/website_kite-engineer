@@ -25,7 +25,11 @@ interface DeviationManagementPageProps {
 
 
 export default async function DeviationManagementPage({ params }: DeviationManagementPageProps) {
-  const t = await getTranslations("DeviationManagementPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "DeviationManagementPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}

@@ -24,7 +24,11 @@ interface WorkflowAutomationPageProps {
 
 
 export default async function WorkflowAutomationPage({ params }: WorkflowAutomationPageProps) {
-  const t = await getTranslations("WorkflowAutomationPage");
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "WorkflowAutomationPage",
+  });
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
