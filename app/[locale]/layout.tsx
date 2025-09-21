@@ -4,11 +4,9 @@ import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-
-import { ClientLayoutWrapper } from "@/app/ClientLayoutWrapper"; // adjust the import path if needed
+import { ClientLayoutWrapper } from "@/app/ClientLayoutWrapper";
 
 // Generate static params for all supported locales
 export function generateStaticParams() {

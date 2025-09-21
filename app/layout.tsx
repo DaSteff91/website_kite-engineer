@@ -4,7 +4,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
-import { ClientLayoutWrapper } from "./ClientLayoutWrapper";
 import { SITE } from "@/lib/constants/site-config";
 import { routing } from "@/i18n/routing";
 

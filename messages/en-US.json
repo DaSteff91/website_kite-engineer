@@ -180,6 +180,7 @@
     "contact-button": "Connect with me"
   },
   "TravelServicesPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
     "travel-services-hero": "Travel Services",
     "travel-services-section-title": "The world can be your playground - use it",
     "travel-services-section-subtitle": "Even though I am not a travel agent I can look up everything for\n you and put it together so you can easily decide what suites your\n booking. Here you can rely on me:",
@@ -202,6 +203,7 @@
     "contact-button": "Connect with me"
   },
   "TheoryPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
     "theory-hero": "Kiteboarding Theory Courses",
     "theory-section-title": "Doing it is nice! But understanding things is the key for\n sustainable progress",
     "theory-section-subtitle": "The following is a overview of categories for theory lessons I\n give that are either already part of a course or can be booked\n additionally.",
@@ -226,6 +228,7 @@
     "theory-contact": "\"A course is good if both, the student and the teacher, learn from\n each other\". Combine my services as you please and benefit from an\n individual discount. Something is not listed? I´m always open to\n research something and bring it to you."
   },
   "StartingPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
     "starting-hero": "(Re-)Starter Courses",
     "starting-section-title": "Everything is starting somewhen. Or starting again?",
     "starting-section-subtitle": "It´s about committing oneself to make the necessary steps:\n Deciding to (re-)start something and not just dreaming about is\n the first. For the ones to come I have the following flexible\n course service available:",
@@ -261,6 +264,7 @@
     "starting-contact": "There are many things to consider when giving courses but almost nothing\n that can´t be arranged. Drop me a message and we´ll organize all\n the details."
   },
   "AdvancedPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
     "advanced-hero": "Advanced Kiteboarding Courses",
     "advanced-section-title": "After the first step comes the next. And then the next...",
     "advanced-section-subtitle": "Why does that look so easy what they are doing on the water? There\n is plenty to learn and my services are meant to support along the\n way:",
@@ -295,6 +299,7 @@
     "advanced-contact": "There are many things to consider when giving courses but almost nothing\n that can´t be arranged. Drop me a message and we´ll organize all\n the details."
   },
   "SchoolSupportPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
     "school-support-hero": "School Support Services",
     "school-support-section-title": "Have An Extra Employee At Hand",
     "school-support-section-subtitle": "I´m ready to support your school. Consider me as the one guy you\n literally can put anywhere: Flexibility is my strength. Just tell\n me up front what you need:",
@@ -324,6 +329,7 @@
     "contact-button": "Connect with me"
   },
   "ConsultingPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
     "consulting-hero": "Kite Consulting Services",
     "consulting-section-title": "There is a lot to ask",
     "consulting-section-subtitle": "Guidance and knowledge exchange is the key: Someone knows\n something and someone wants to learn it. Here I combine my role as\n a kitesurfer and -instructor with being part of society.",

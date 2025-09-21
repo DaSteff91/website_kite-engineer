@@ -1,15 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import kite_hero_image from "@/public/images/kite_hero_image.jpg";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  ArrowLeft,
-  ShoppingCart,
-  Presentation,
-} from "lucide-react";
+import { ArrowLeft, ShoppingCart, Presentation } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { generateContactHref } from "@/lib/utils/contact-filler";
 import { Hero } from "@/components/sections/Hero";
@@ -31,7 +25,6 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
     strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
     em: (chunks: React.ReactNode) => <em>{chunks}</em>,
     abbr: (chunks: React.ReactNode) => {
-      // chunks will be an array: [text, <0>title</0>]
       if (Array.isArray(chunks) && chunks.length > 1) {
         const text = chunks[0];
         const titleElement = chunks[1] as any;
@@ -83,9 +76,10 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
             <Link
               href="/kite"
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+              id="back-to-kite-services-nav"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to All Kite Services
+              {t("back-to-kite-services-nav")}
             </Link>
           </div>
 

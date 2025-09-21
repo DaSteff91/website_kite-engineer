@@ -31,24 +31,6 @@ export default async function StartingPage({ params }: StartingPageProps) {
     namespace: "StartingPage",
   });
 
-  const richTextHandlers = {
-    strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
-    em: (chunks: React.ReactNode) => <em>{chunks}</em>,
-    abbr: (chunks: React.ReactNode) => {
-      // chunks will be an array: [text, <0>title</0>]
-      if (Array.isArray(chunks) && chunks.length > 1) {
-        const text = chunks[0];
-        const titleElement = chunks[1] as any;
-        const title = titleElement?.props?.children || "";
-        return <abbr title={title}>{text}</abbr>;
-      }
-      return <abbr>{chunks}</abbr>;
-    },
-    "0": (chunks: React.ReactNode) => chunks,
-    u: (chunks: React.ReactNode) => <u>{chunks}</u>,
-    s: (chunks: React.ReactNode) => <s>{chunks}</s>,
-  };
-
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -87,9 +69,10 @@ export default async function StartingPage({ params }: StartingPageProps) {
             <Link
               href="/kite"
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+              id="back-to-kite-services-nav"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to All Kite Services
+              {t("back-to-kite-services-nav")}
             </Link>
           </div>
 
