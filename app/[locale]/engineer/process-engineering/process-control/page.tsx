@@ -24,7 +24,8 @@ interface ProcessControlPageProps {
 export default async function ProcessControlPage({
   params,
 }: ProcessControlPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "ProcessControlPage",

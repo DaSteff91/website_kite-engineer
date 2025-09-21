@@ -26,7 +26,8 @@ interface DocumentationPageProps {
 export default async function DocumentationPage({
   params,
 }: DocumentationPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "DocumentationPage",

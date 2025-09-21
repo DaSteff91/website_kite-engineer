@@ -26,7 +26,8 @@ interface ChangeManagementPageProps {
 export default async function ChangeManagementPage({
   params,
 }: ChangeManagementPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "ChangeManagementPage",

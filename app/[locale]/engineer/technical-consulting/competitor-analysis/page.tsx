@@ -25,7 +25,8 @@ interface CompetitorAnalysisPageProps {
 export default async function CompetitorAnalysisPage({
   params,
 }: CompetitorAnalysisPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "CompetitorAnalysisPage",

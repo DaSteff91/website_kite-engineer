@@ -26,7 +26,8 @@ interface TimelineManagementPageProps {
 export default async function TimelineManagementPage({
   params,
 }: TimelineManagementPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "TimelineManagementPage",

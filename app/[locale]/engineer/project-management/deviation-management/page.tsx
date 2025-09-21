@@ -26,7 +26,8 @@ interface DeviationManagementPageProps {
 export default async function DeviationManagementPage({
   params,
 }: DeviationManagementPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "DeviationManagementPage",

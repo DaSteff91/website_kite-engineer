@@ -15,7 +15,8 @@ interface ConsultingPageProps {
 }
 
 export default async function ConsultingPage({ params }: ConsultingPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "ConsultingPage",

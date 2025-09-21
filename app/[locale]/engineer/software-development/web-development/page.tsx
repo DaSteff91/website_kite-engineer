@@ -25,7 +25,8 @@ interface WebDevelopmentPageProps {
 export default async function WebDevelopmentPage({
   params,
 }: WebDevelopmentPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "WebDevelopmentPage",

@@ -57,7 +57,8 @@ const ContactInfoLine = ({
 );
 
 export default async function Imprint({ params }: ImprintProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const contactData = [
     { value: "Kite-Engineer by Stefan Merthan" },
     { value: "Stefan Merthan" },

@@ -25,7 +25,8 @@ interface CustomSolutionsPageProps {
 export default async function CustomSolutionsPage({
   params,
 }: CustomSolutionsPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "CustomSolutionsPage",

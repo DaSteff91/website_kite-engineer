@@ -26,7 +26,8 @@ interface SimulationPrototypingPageProps {
 export default async function SimulationPrototypingPage({
   params,
 }: SimulationPrototypingPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "SimulationPrototypingPage",

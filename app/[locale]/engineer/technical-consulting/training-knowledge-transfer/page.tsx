@@ -25,7 +25,8 @@ interface TrainingKnowledgeTransferPageProps {
 export default async function TrainingKnowledgeTransferPage({
   params,
 }: TrainingKnowledgeTransferPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "TrainingKnowledgeTransferPage",

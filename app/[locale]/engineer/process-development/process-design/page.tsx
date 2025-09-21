@@ -26,7 +26,8 @@ interface ProcessDesignPageProps {
 export default async function ProcessDesignPage({
   params,
 }: ProcessDesignPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "ProcessDesignPage",

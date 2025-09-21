@@ -26,7 +26,8 @@ interface EquipmentRoadmapPageProps {
 export default async function EquipmentRoadmapPage({
   params,
 }: EquipmentRoadmapPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "EquipmentRoadmapPage",

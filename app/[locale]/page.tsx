@@ -13,7 +13,8 @@ interface LandingPageProps {
 }
 
 export default async function Home({ params }: LandingPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "LandingPage",

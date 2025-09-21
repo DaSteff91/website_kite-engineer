@@ -25,7 +25,8 @@ interface ProcessAssessmentPageProps {
 export default async function ProcessAssessmentPage({
   params,
 }: ProcessAssessmentPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "ProcessAssessmentPage",

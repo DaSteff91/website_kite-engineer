@@ -48,7 +48,8 @@ interface EngineerPageProps {
 }
 
 export default async function EngineerPage({ params }: EngineerPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "EngineerPage",

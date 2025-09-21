@@ -26,7 +26,8 @@ interface ProcessOptimizationPageProps {
 export default async function ProcessOptimizationPage({
   params,
 }: ProcessOptimizationPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "ProcessOptimizationPage",

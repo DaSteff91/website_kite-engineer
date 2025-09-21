@@ -28,7 +28,8 @@ interface TheoryPageProps {
 }
 
 export default async function TheoryPage({ params }: TheoryPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "TheoryPage",

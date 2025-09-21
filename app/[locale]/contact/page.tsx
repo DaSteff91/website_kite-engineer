@@ -11,7 +11,8 @@ interface ContactPageProps {
 }
 
 export default async function ContactPage({ params }: ContactPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "ContactPage",

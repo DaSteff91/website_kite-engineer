@@ -26,7 +26,8 @@ interface ProjectSetupPageProps {
 export default async function ProjectSetupPage({
   params,
 }: ProjectSetupPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "ProjectSetupPage",

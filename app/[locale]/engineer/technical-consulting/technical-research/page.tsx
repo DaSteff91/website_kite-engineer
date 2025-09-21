@@ -25,7 +25,8 @@ interface TechnicalResearchPageProps {
 export default async function TechnicalResearchPage({
   params,
 }: TechnicalResearchPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "TechnicalResearchPage",

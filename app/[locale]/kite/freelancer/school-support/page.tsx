@@ -26,7 +26,8 @@ interface SchoolSupportPageProps {
 export default async function SchoolSupportPage({
   params,
 }: SchoolSupportPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "SchoolSupportPage",

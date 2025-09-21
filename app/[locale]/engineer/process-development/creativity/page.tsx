@@ -24,7 +24,8 @@ interface CreativityPageProps {
 }
 
 export default async function CreativityPage({ params }: CreativityPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "CreativityPage",

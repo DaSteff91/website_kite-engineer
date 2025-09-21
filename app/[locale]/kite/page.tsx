@@ -31,7 +31,8 @@ interface KitePageProps {
 }
 
 export default async function KitePage({ params }: KitePageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "KitePage",

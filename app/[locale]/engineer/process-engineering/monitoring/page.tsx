@@ -16,7 +16,8 @@ interface MonitoringPageProps {
 }
 
 export default async function MonitoringPage({ params }: MonitoringPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "MonitoringPage",

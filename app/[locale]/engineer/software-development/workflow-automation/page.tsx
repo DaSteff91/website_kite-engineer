@@ -25,7 +25,8 @@ interface WorkflowAutomationPageProps {
 export default async function WorkflowAutomationPage({
   params,
 }: WorkflowAutomationPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "WorkflowAutomationPage",

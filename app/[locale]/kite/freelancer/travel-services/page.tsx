@@ -22,7 +22,8 @@ interface TravelServicesPageProps {
 export default async function TravelServicesPage({
   params,
 }: TravelServicesPageProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "TravelServicesPage",

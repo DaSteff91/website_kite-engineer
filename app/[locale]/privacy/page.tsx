@@ -52,7 +52,8 @@ const TextLine = ({
 );
 
 export default async function Privacy({ params }: PrivacyProps) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   const t = await getTranslations({
     locale,
     namespace: "PrivacyPage",
