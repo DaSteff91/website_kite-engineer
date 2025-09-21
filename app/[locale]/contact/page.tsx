@@ -7,7 +7,7 @@ import { getTranslations } from "next-intl/server";
 
 export const metadata = PAGE_METADATA.contact;
 interface ContactPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function ContactPage({ params }: ContactPageProps) {

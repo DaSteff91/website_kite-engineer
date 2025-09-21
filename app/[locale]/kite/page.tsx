@@ -27,7 +27,7 @@ import { getTranslations } from "next-intl/server";
 
 export const metadata = PAGE_METADATA.kite;
 interface KitePageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function KitePage({ params }: KitePageProps) {

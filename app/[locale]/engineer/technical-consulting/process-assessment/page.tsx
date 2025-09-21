@@ -19,7 +19,7 @@ import { Hero } from "@/components/sections/Hero";
 export const metadata =
   PAGE_METADATA["engineer/technical-consulting/process-assessment"];
 interface ProcessAssessmentPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function ProcessAssessmentPage({

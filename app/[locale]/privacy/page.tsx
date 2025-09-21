@@ -8,7 +8,7 @@ import { getTranslations } from "next-intl/server";
 
 export const metadata = PAGE_METADATA.privacy;
 interface PrivacyProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 type SectionProps = {

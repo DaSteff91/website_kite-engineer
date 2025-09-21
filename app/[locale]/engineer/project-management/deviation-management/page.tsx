@@ -20,7 +20,7 @@ import { Hero } from "@/components/sections/Hero";
 export const metadata =
   PAGE_METADATA["engineer/project-management/deviation-management"];
 interface DeviationManagementPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function DeviationManagementPage({

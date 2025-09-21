@@ -20,7 +20,7 @@ import { Hero } from "@/components/sections/Hero";
 export const metadata =
   PAGE_METADATA["engineer/project-management/project-setup"];
 interface ProjectSetupPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function ProjectSetupPage({

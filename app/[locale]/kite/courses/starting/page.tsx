@@ -21,7 +21,7 @@ import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA["kite/courses/starting"];
 interface StartingPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function StartingPage({ params }: StartingPageProps) {

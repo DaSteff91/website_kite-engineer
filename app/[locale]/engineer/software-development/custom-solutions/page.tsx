@@ -19,7 +19,7 @@ import { Hero } from "@/components/sections/Hero";
 export const metadata =
   PAGE_METADATA["engineer/software-development/custom-solutions"];
 interface CustomSolutionsPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function CustomSolutionsPage({

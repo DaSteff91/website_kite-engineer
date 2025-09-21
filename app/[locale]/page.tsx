@@ -9,7 +9,7 @@ import LocaleSwitcher from "@/components/ui/localeSwitcher";
 
 export const metadata = PAGE_METADATA.home;
 interface LandingPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function Home({ params }: LandingPageProps) {

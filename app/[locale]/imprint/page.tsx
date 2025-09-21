@@ -10,7 +10,7 @@ import { PAGE_METADATA } from "@/lib/constants/metadata";
 
 // export const metadata = PAGE_METADATA.engineer;
 interface ImprintProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 type SectionProps = {

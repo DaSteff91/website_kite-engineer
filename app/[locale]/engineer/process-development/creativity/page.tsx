@@ -20,7 +20,7 @@ import { Hero } from "@/components/sections/Hero";
 export const metadata =
   PAGE_METADATA["engineer/process-development/creativity"];
 interface CreativityPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function CreativityPage({ params }: CreativityPageProps) {

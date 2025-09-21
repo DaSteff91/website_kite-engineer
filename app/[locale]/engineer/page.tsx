@@ -44,7 +44,7 @@ import { getTranslations } from "next-intl/server";
 
 export const metadata = PAGE_METADATA.engineer;
 interface EngineerPageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export default async function EngineerPage({ params }: EngineerPageProps) {
