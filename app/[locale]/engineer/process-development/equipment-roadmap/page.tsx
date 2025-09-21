@@ -23,8 +23,9 @@ interface EquipmentRoadmapPageProps {
   params: { locale: string };
 }
 
-
-export default async function EquipmentRoadmapPage({ params }: EquipmentRoadmapPageProps) {
+export default async function EquipmentRoadmapPage({
+  params,
+}: EquipmentRoadmapPageProps) {
   const { locale } = await params;
   const t = await getTranslations({
     locale,
@@ -67,10 +68,11 @@ export default async function EquipmentRoadmapPage({ params }: EquipmentRoadmapP
           <div className="mb-8">
             <Link
               href="/engineer"
+              id="back-to-engineer-services-nav"
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to All Engineering Services
+              {t("back-to-engineer-services-nav")}
             </Link>
           </div>
 
@@ -97,10 +99,10 @@ export default async function EquipmentRoadmapPage({ params }: EquipmentRoadmapP
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300 w-full">
                 <h3
-                  id="detailes-of-the-roadmap-services-title"
+                  id="details-of-the-roadmap-services-title"
                   className="text-xl sm:text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-blue-200"
                 >
-                  {t("detailes-of-the-roadmap-services-title")}
+                  {t("details-of-the-roadmap-services-title")}
                 </h3>
                 <p className="block text-muted-foreground mb-4 sm:mb-6 pl-5 sm:pl-6 pr-4 sm:pr-5 sm:text-base text-sm -mx-4 sm:-mx-6 w-auto">
                   {" "}
@@ -114,21 +116,21 @@ export default async function EquipmentRoadmapPage({ params }: EquipmentRoadmapP
                   following topics:
                 </p>
                 <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
-                  <li id="detailes-of-the-roadmap-services-list-element1">
-                    {t("detailes-of-the-roadmap-services-list-element1")}
+                  <li id="details-of-the-roadmap-services-list-element1">
+                    {t("details-of-the-roadmap-services-list-element1")}
                   </li>
-                  <li id="detailes-of-the-roadmap-services-list-element2">
-                    {t("detailes-of-the-roadmap-services-list-element2")}
+                  <li id="details-of-the-roadmap-services-list-element2">
+                    {t("details-of-the-roadmap-services-list-element2")}
                   </li>
-                  <li id="detailes-of-the-roadmap-services-list-element3">
-                    {t("detailes-of-the-roadmap-services-list-element3")}
+                  <li id="details-of-the-roadmap-services-list-element3">
+                    {t("details-of-the-roadmap-services-list-element3")}
                   </li>
-                  <li id="detailes-of-the-roadmap-services-list-element4">
-                    {t("detailes-of-the-roadmap-services-list-element4")}
+                  <li id="details-of-the-roadmap-services-list-element4">
+                    {t("details-of-the-roadmap-services-list-element4")}
                   </li>
 
-                  <li id="detailes-of-the-roadmap-services-list-element5">
-                    {t("detailes-of-the-roadmap-services-list-element5")}
+                  <li id="details-of-the-roadmap-services-list-element5">
+                    {t("details-of-the-roadmap-services-list-element5")}
                   </li>
                 </ul>
               </div>

@@ -150,6 +150,7 @@
     "contactButton": "Connect with me"
   },
   "ProcessControlPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "process-control-hero": "Process Control Services",
     "process-control-section-title": "Outsource your work",
     "process-control-section-subtitle": "Invest my brainpower into your project and benefit from my\n expertise I gathered while working as a process engineer.",
@@ -296,7 +297,8 @@
     "structure-list-element6": "• If available: Headset and video support",
     "structure-list-element7": "• Progress tracking and VDWS certification",
     "structure-list-element8": "• No-wind alternatives: Simulations, wakeboarding,\n landboarding, SUP, exercising,....",
-    "advanced-contact": "There are many things to consider when giving courses but almost nothing\n that can´t be arranged. Drop me a message and we´ll organize all\n the details."
+    "advanced-contact": "There are many things to consider when giving courses but almost nothing\n that can´t be arranged. Drop me a message and we´ll organize all\n the details.",
+    "contact-button": "Connect with me"
   },
   "SchoolSupportPage": {
     "back-to-kite-services-nav": "Back to All Kite Services",
@@ -395,6 +397,7 @@
     "contact": "Contact"
   },
   "ProcessOptimizationPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "process-optimization-hero": "Process Optimization Services",
     "process-optimization-section-title": "Six Sigma & Lean Manufacturing Excellence",
     "process-optimization-section-subtitle": "Achieve optimal process outcomes through proven methodologies and data-driven approaches",
@@ -426,6 +429,7 @@
     "contact-button": "Connect with me"
   },
   "SimulationPrototypingPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "simulation-prototyping-hero": "Simulation & Prototyping Services",
     "simulation-prototyping-section-title": "From Analogy Models to 3D Reality",
     "simulation-prototyping-section-subtitle": "Advanced simulation and physical prototyping for comprehensive solution validation",
@@ -456,6 +460,7 @@
     "simulation-prototyping-contact": "Ready to bring your concepts to life? Let's create simulations and prototypes that validate your solutions."
   },
   "ChangeManagementPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "change-management-hero": "Change Management Services",
     "change-management-section-title": "Professional Change Management",
     "change-management-section-subtitle": "Milestone preparation, release gates, and comprehensive documentation for seamless transitions",
@@ -487,6 +492,7 @@
     "contact-button": "Connect with me"
   },
   "WorkflowAutomationPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "workflow-automation-hero": "Workflow Automation Services",
     "workflow-automation-section-title": "Save Time, Let Software Work",
     "workflow-automation-section-subtitle": "Eliminate repetitive tasks and optimize workflows with intelligent automation",
@@ -517,6 +523,7 @@
     "workflow-automation-contact": "Ready to automate your workflows? Let's eliminate repetitive tasks and optimize your processes."
   },
   "TrainingKnowledgeTransferPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "training-knowledge-transfer-hero": "Training & Knowledge Transfer",
     "training-knowledge-transfer-section-title": "Never Stop Learning",
     "training-knowledge-transfer-section-subtitle": "Share knowledge and develop skills through customized training programs",
@@ -547,6 +554,7 @@
     "training-knowledge-transfer-contact": "Ready to develop your team's knowledge? Let's create training programs and knowledge sharing systems."
   },
   "DocumentationPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "documentation-hero": "Documentation & Sharing Services",
     "documentation-section-title": "Create Team Synergies",
     "documentation-section-subtitle": "Modern version control and data sharing to unlock your team's collaborative potential",
@@ -578,6 +586,7 @@
     "contact-button": "Connect with me"
   },
   "CompetitorAnalysisPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "competitor-analysis-hero": "Competitor Analysis Services",
     "competitor-analysis-section-title": "Know What Others Are Doing",
     "competitor-analysis-section-subtitle": "Professional competitive intelligence gathering and analysis to inform your strategy",
@@ -608,6 +617,7 @@
     "competitor-analysis-contact": "Ready to understand your competition? Let's analyze your competitors and identify strategic opportunities."
   },
   "MonitoringPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "monitoring-hero": "Process Monitoring Services",
     "monitoring-section-title": "Comprehensive Process Monitoring",
     "monitoring-section-subtitle": "Define monitoring parameters and implement solutions for any production volume",
@@ -639,6 +649,7 @@
     "contact-button": "Connect with me"
   },
   "WebDevelopmentPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "web-development-hero": "Web Development Services",
     "web-development-section-title": "Complete Web Solutions & Administration",
     "web-development-section-subtitle": "From server setup to website development - outsource your web administration needs",
@@ -669,6 +680,7 @@
     "web-development-contact": "Ready to outsource your web administration? Let's handle your server setup and website development needs."
   },
   "ProjectSetupPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "project-setup-hero": "Project Setup Services",
     "project-setup-section-title": "Professional Project Foundation",
     "project-setup-section-subtitle": "Establish a solid project foundation to achieve sustainable goals and efficient execution",
@@ -700,6 +712,7 @@
     "contact-button": "Connect with me"
   },
   "CustomSolutionsPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "custom-solutions-hero": "Custom Software Solutions",
     "custom-solutions-section-title": "Combine Features, Create Solutions",
     "custom-solutions-section-subtitle": "From custom scripts to full-stack applications - tailored software that fits your exact needs",
@@ -730,6 +743,7 @@
     "custom-solutions-contact": "Ready to build your custom solution? Let's combine the features you need into the perfect software."
   },
   "DeviationManagementPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "deviation-management-hero": "Deviation Management Services",
     "deviation-management-section-title": "Navigate Unexpected Detours",
     "deviation-management-section-subtitle": "Professional communication and management of project deviations with external parties",
@@ -761,6 +775,7 @@
     "contact-button": "Connect with me"
   },
   "ProcessAssessmentPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "process-assessment-hero": "Process Assessment Services",
     "process-assessment-section-title": "Get an Outside Perspective",
     "process-assessment-section-subtitle": "Detailed feedback on what to preserve and what to improve in your business processes",
@@ -791,6 +806,7 @@
     "process-assessment-contact": "Ready for an outside perspective? Let's assess your processes and identify improvement opportunities."
   },
   "TechnicalResearchPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "technical-research-hero": "Technical Research Services",
     "technical-research-section-title": "Filter What Matters for Your Business",
     "technical-research-section-subtitle": "Professional technical research and analysis to identify relevant information and trends",
@@ -821,6 +837,7 @@
     "technical-research-contact": "Ready to gain technical insights? Let's research and analyze the information that matters for your business."
   },
   "DatabaseManagementPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "database-management-hero": "Database Management Services",
     "database-management-section-title": "From Excel to Professional RDBMS",
     "database-management-section-subtitle": "Sustainable data management solutions with advanced reporting and analytics",
@@ -851,6 +868,7 @@
     "database-management-contact": "Ready to upgrade your data management? Let's migrate from files to a robust database system."
   },
   "TimelineManagementPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "timeline-management-hero": "Timeline Management Services",
     "timeline-management-section-title": "It's All About Timing",
     "timeline-management-section-subtitle": "Rebalance project timelines with expert outside perspective and optimization strategies",
@@ -882,15 +900,16 @@
     "contact-button": "Connect with me"
   },
   "ProcessDesignPage": {
+    "back-to-engineer-services-nav":"Back to All Engineering Services",
     "process-design-hero": "Process Design Services",
     "process-design-section-title": "Everything is a process.",
     "process-design-section-subtitle": "Layouting and designing what needs to be done with visualization and structured approaches.",
-    "detailes-of-the-roadmap-services-title": "Detailes of the Roadmap Services",
-    "detailes-of-the-roadmap-services-list-element1": "Naming conventions: What is best to name your process flows?",
-    "detailes-of-the-roadmap-services-list-element2": "Vizualisation",
-    "detailes-of-the-roadmap-services-list-element3": "Scaleablity",
-    "detailes-of-the-roadmap-services-list-element4": "Documentation: Since everything is now decided, lets put it into effect by applying a timeline to it and rolling it out in your documentation system",
-    "detailes-of-the-roadmap-services-list-element5": "Review: And in case you already have a roadmap strategy: no problem - I also offer you to analyze it for you and give you an objective 3rd party oppinion.",
+    "details-of-the-roadmap-services-title": "details of the Roadmap Services",
+    "details-of-the-roadmap-services-list-element1": "Naming conventions: What is best to name your process flows?",
+    "details-of-the-roadmap-services-list-element2": "Visualization",
+    "details-of-the-roadmap-services-list-element3": "Scaleablity",
+    "details-of-the-roadmap-services-list-element4": "Documentation: Since everything is now decided, lets put it into effect by applying a timeline to it and rolling it out in your documentation system",
+    "details-of-the-roadmap-services-list-element5": "Review: And in case you already have a roadmap strategy: no problem - I also offer you to analyze it for you and give you an objective 3rd party opinion.",
     "process-flow-optimization-title": "Process Flow Optimization",
     "process-flow-optimization-list-element1": "• Process flow mapping and analysis",
     "process-flow-optimization-list-element2": "• Bottleneck identification and removal",

@@ -23,7 +23,6 @@ interface CreativityPageProps {
   params: { locale: string };
 }
 
-
 export default async function CreativityPage({ params }: CreativityPageProps) {
   const { locale } = await params;
   const t = await getTranslations({
@@ -67,10 +66,11 @@ export default async function CreativityPage({ params }: CreativityPageProps) {
           <div className="mb-8">
             <Link
               href="/engineer"
+              id="back-to-engineer-services-nav"
               className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to All Engineering Services
+              {t("back-to-engineer-services-nav")}
             </Link>
           </div>
 

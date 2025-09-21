@@ -23,8 +23,9 @@ interface ProjectSetupPageProps {
   params: { locale: string };
 }
 
-
-export default async function ProjectSetupPage({ params }: ProjectSetupPageProps) {
+export default async function ProjectSetupPage({
+  params,
+}: ProjectSetupPageProps) {
   const { locale } = await params;
   const t = await getTranslations({
     locale,
@@ -67,10 +68,11 @@ export default async function ProjectSetupPage({ params }: ProjectSetupPageProps
           <div className="mb-8">
             <Link
               href="/engineer"
+              id="back-to-engineer-services-nav"
               className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to All Engineering Services
+              {t("back-to-engineer-services-nav")}
             </Link>
           </div>
 

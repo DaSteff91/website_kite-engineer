@@ -1,17 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
-import {
-  ArrowRight,
-  ArrowLeft,
-  Target,
-  TrendingUp,
-  Bell,
-  BarChart3,
-} from "lucide-react";
+import { ArrowLeft, Target, TrendingUp, Bell, BarChart3 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { generateContactHref } from "@/lib/utils/contact-filler";
@@ -23,13 +15,13 @@ interface MonitoringPageProps {
   params: { locale: string };
 }
 
-
 export default async function MonitoringPage({ params }: MonitoringPageProps) {
   const { locale } = await params;
   const t = await getTranslations({
     locale,
     namespace: "MonitoringPage",
   });
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -67,10 +59,11 @@ export default async function MonitoringPage({ params }: MonitoringPageProps) {
           <div className="mb-8">
             <Link
               href="/engineer"
+              id="back-to-engineer-services-nav"
               className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to All Engineering Services
+              {t("back-to-engineer-services-nav")}
             </Link>
           </div>
 
