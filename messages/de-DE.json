@@ -18,7 +18,7 @@
   },
    "ContactPage": {
     "heroTitle": "Combining Worlds...",
-    "sectionTitle": "Lass uns verbinden",
+    "sectionTitle": "Lass uns zusammenkommen",
     "sectionDescription": "Ob es um Kitesurfen, Ingenieurwesen oder alles dazwischen geht. Melde dich per Mail, Telefon oder Kontaktformular unten. Hast du einen Fehler oder Tippfehler gefunden? Ich bin dir ewig dankbar, wenn du ihn meldest."
   },
   "EngineerPage": {
@@ -149,37 +149,8 @@
     "contactSectionText": "Du kannst auch ein bisschen von allem buchen. Je mehr du buchst, desto höher der Rabatt. Was hält dich zurück? Lass uns in Kontakt treten.",
     "contactButton": "Kontaktiere mich"
   },
-  "ProcessControlPage": {
-    "process-control-hero": "Process Control Services",
-    "process-control-section-title": "Outsourcing deiner Arbeit",
-    "process-control-section-subtitle": "Nutze meine Expertise aus der Arbeit als Prozessingenieur für dein Projekt.",
-    "advanced-process-control-title": "Advanced Process Control",
-    "advanced-process-control-list-element1": "•<strong> Softwarebeschaffung und -einrichtung</strong> - Du hast bereits viele Prozessdaten, aber keine zentrale Software, die alles zusammenführt? Ich finde deine APC-Software und übernehme die Kommunikation mit Partnern, schreibe Anforderungsspezifikationen, führe erste Tests durch und unterstütze beim Rollout.",
-    "advanced-process-control-list-element2": "•<strong> Benutzerschulung </strong> - Standardisierung des APC-Einsatzes in deinem Unternehmen? Ich biete plattformbasierte Trainings für dich oder dein Team, Schritt für Schritt von Grundlagen bis zu spezifischen Software-Themen.",
-    "advanced-process-control-list-element3": "•<strong> Mathematik </strong> - Nicht jedes Sensorsignal ist direkt nutzbar. Mathematik kann neue, verlässlichere Quellen schaffen, Limit-Berechnungen durchführen, Ausreißer behandeln und die Mechanismen optimieren.",
-    "advanced-process-control-list-element4": "•<strong> Strategische Ausrichtung </strong> - APC ist Teil eines Produktions-Ökosystems. Wie passt das APC-Stück ins Gesamtbild und erfüllt es seine Aufgaben? Externe Sicht kann hier sehr wertvoll sein.",
-    "advanced-process-control-list-element5": "•<strong> Lernen aus der Vergangenheit </strong> - Daten erzählen Geschichten. Korrelationen erkennen kann zeitaufwendig sein – ich übernehme das und liefere Antworten.",
-    "advanced-process-control-list-element6": "•<strong> KI-Unterstützung </strong> - KI hilft, Daten zu analysieren. Ich finde das passende Modell, führe Tests durch und unterstütze bei der Implementierung inklusive Kommunikation und Beschaffung.",
-    "advanced-process-control-list-element7": "•<strong> Neue Einrichtung </strong> - Erste Schritte in APC oder Ausbau bestehender Setups? Ich evaluiere Strategien, suche passende Messsysteme und Sensoren, um relevante Daten bestmöglich zu erfassen.",
-    "advanced-process-control-list-element8": "•<strong> Nutzung externer Software </strong> - Manchmal lohnt sich die Analyse mit externen Tools wie Pandas, Matplotlib, Numpy oder SciPy. Ich unterstütze dich, ohne dass du Ressourcen für die Einarbeitung verschwenden musst.",
-    "statistical-process-control-title": "Statistische Prozesskontrolle",
-    "statistical-process-control-list-element1": "•<strong> Softwarebeschaffung und -einrichtung </strong> - Du hast Messdaten, aber keine zentrale Software? Ich finde SPC-Software, kommuniziere mit Partnern, schreibe Spezifikationen, teste und unterstütze beim Rollout.",
-    "statistical-process-control-list-element2": "•<strong> Benutzerschulung </strong> - Standardisierung von SPC in deinem Unternehmen. Schrittweise Schulungen von Grundlagen bis zu spezifischen Software-Themen.",
-    "statistical-process-control-list-element3": "•<strong> WER-Implementierung </strong> - Western Electric Rules (WER) bilden das Rückgrat der SPC. Limits setzen für Millionen Datenkanäle kann ich übernehmen.",
-    "statistical-process-control-list-element4": "•<strong> Strategische Ausrichtung </strong> - SPC ist Teil des Ökosystems. Ich analysiere die Einbindung und stelle sicher, dass die Ziele erfüllt werden.",
-    "statistical-process-control-list-element5": "•<strong> Lernen aus der Vergangenheit </strong> - Datenanalyse und Korrelationen erkennen, Zeit sparen für dein Team – ich liefere die Antworten.",
-    "statistical-process-control-list-element6": "•<strong> KI-Unterstützung </strong> - KI hilft bei der Analyse. Ich finde passende Modelle, führe Tests durch und implementiere Lösungen.",
-    "statistical-process-control-list-element7": "•<strong> Neue Einrichtung </strong> - Erste Schritte oder Ausbau bestehender SPC? Ich evaluiere Strategien und suche passende Messsysteme.",
-    "statistical-process-control-list-element8": "•<strong> Nutzung externer Software </strong> - Analyse mit Python oder anderen Tools? Ich unterstütze dich bei der Nutzung externer Software.",
-    "custom-solutions-title": "Individuelle Lösungen",
-    "custom-solutions-list-element1": "•<strong> Python-basierte Datenanalyse </strong> - Bibliotheken wie Pandas, Matplotlib, Numpy oder SciPy unterstützen bei fehlenden Samples oder speziellen Analyseanforderungen.",
-    "custom-solutions-list-element2": "•<strong> Datenklassifikation </strong> - Neue Datentypen oder Qualitätsklassen? Ich helfe bei der Klassifikation oder suche qualifizierte Dritte.",
-    "custom-solutions-list-element3": "•<strong> Datenerstellung & Prototyping </strong> - Ein Demo- oder Beispieldatensatz? Integriert in komplexe Prozesse? Ich erstelle es für dich.",
-    "custom-solutions-list-element4": "•<strong> Wartung & Überprüfung </strong> - Historisch gewachsene Prozesskontroll-Tools benötigen Review oder Restrukturierung? Überlasse es mir.",
-    "process-control-contact": "Fehlt etwas? Wir finden eine Lösung. Primär biete ich Dienstleistungen für Fertigungsprozesse, besonders Halbleiterproduktion, an. Aber ich bin offen für neue Themen. Buchbar kurz- oder langfristig, projekt- oder zeitbasiert. Kombination meiner Services möglich.",
-    "contact-button": "Kontaktiere mich"
-  },
   "TravelServicesPage": {
+    "back-to-kite-services-nav": "Zurück zur Service Übersicht",
     "travel-services-hero": "Travel Services",
     "travel-services-section-title": "Die Welt kann dein Spielplatz sein – nutze sie",
     "travel-services-section-subtitle": "Auch wenn ich kein Reisebüro bin, kann ich alles recherchieren und zusammenstellen, damit du leicht entscheiden kannst, was zu deiner Buchung passt. Hier kannst du dich auf mich verlassen:",
@@ -202,6 +173,7 @@
     "contact-button": "Kontaktiere mich"
   },
   "TheoryPage": {
+    "back-to-kite-services-nav": "Zurück zur Service Übersicht",
     "theory-hero": "Kiteboarding Theory Courses",
     "theory-section-title": "Machen macht Spaß! Aber verstehen ist der Schlüssel für nachhaltigen Fortschritt",
     "theory-section-subtitle": "Im Folgenden findest du eine Übersicht der Theorie-Lektionen, die ich gebe, entweder als Teil eines Kurses oder optional buchbar.",
@@ -223,7 +195,8 @@
     "environmental-stuff-list-element2": "• Wir sind nicht allein: Lerne die Ökosysteme kennen, in denen du deinen Sport betreibst. Weißt du, dass Vögel wegen uns sterben können?",
     "environmental-stuff-list-element3": "• Kiteboarding auf gesellschaftlicher Ebene: Wie kannst du dich in Organisationen einbringen, die dem Sport dienen?",
     "environmental-stuff-list-element4": "• Gesetze, Vorschriften und gute Gewohnheiten, die beim Verlassen der Komfortzone zu beachten sind",
-    "theory-contact": "\"Ein Kurs ist gut, wenn sowohl Schüler als auch Lehrer voneinander lernen\". Kombiniere meine Angebote nach Belieben und profitiere von einem individuellen Rabatt. Etwas nicht aufgelistet? Ich bin immer offen, etwas zu recherchieren und dir bereitzustellen."
+    "theory-contact": "\"Ein Kurs ist gut, wenn sowohl Schüler als auch Lehrer voneinander lernen\". Kombiniere meine Angebote nach Belieben und profitiere von einem individuellen Rabatt. Etwas nicht aufgelistet? Ich bin immer offen, etwas zu recherchieren und dir bereitzustellen.",
+    "contact-button": "Kontaktiere mich"
   },
   "Footer": {
     "footer-contact": "Kontakt",
@@ -246,6 +219,7 @@
     "footer-copyright": "© {year} Kite-Engineer by Stefan Merthan. Alle Rechte vorbehalten."
   },
   "StartingPage": {
+    "back-to-kite-services-nav": "Zurück zur Service Übersicht",
     "starting-hero": "(Re-)Starter Courses",
     "starting-section-title": "Alles beginnt irgendwann. Oder beginnt erneut?",
     "starting-section-subtitle": "Es geht darum, sich zu verpflichten, die notwendigen Schritte zu unternehmen: Sich zu entscheiden, etwas (neu) zu starten und nicht nur davon zu träumen. Für die kommenden Teilnehmer biete ich folgende flexible Kursangebote:",
@@ -278,9 +252,11 @@
     "structure-list-element6": "• Bei Bedarf: Headset- und Video-Unterstützung",
     "structure-list-element7": "• Fortschrittsverfolgung und VDWS-Zertifizierung",
     "structure-list-element8": "• Alternativen bei Windstille: Simulationen, Wakeboarding, Landboarding, SUP, Fitnessübungen...",
-    "starting-contact": "Es gibt viele Dinge, die man beim Unterrichten beachten muss, aber fast nichts, was sich nicht arrangieren lässt. Schick mir eine Nachricht und wir organisieren alle Details."
+    "starting-contact": "Es gibt viele Dinge, die man beim Unterrichten beachten muss, aber fast nichts, was sich nicht arrangieren lässt. Schick mir eine Nachricht und wir organisieren alle Details.",
+    "contact-button": "Kontaktiere mich"
   },
   "AdvancedPage": {
+    "back-to-kite-services-nav": "Zurück zur Service Übersicht",
     "advanced-hero": "Advanced Kiteboarding Courses",
     "advanced-section-title": "Nach dem ersten Schritt folgt der nächste. Und dann der nächste...",
     "advanced-section-subtitle": "Warum sieht das so einfach aus, was sie auf dem Wasser machen? Es gibt jede Menge zu lernen und meine Services sind dafür da, dich dabei zu unterstützen:",
@@ -312,9 +288,11 @@
     "structure-list-element6": "• Bei Bedarf: Headset- und Video-Unterstützung",
     "structure-list-element7": "• Fortschrittsverfolgung und VDWS-Zertifizierung",
     "structure-list-element8": "• Alternativen bei Windstille: Simulationen, Wakeboarding, Landboarding, SUP, Fitnessübungen,...",
-    "advanced-contact": "Es gibt viele Dinge, die man beim Unterrichten beachten muss, aber fast nichts, was sich nicht arrangieren lässt. Schick mir eine Nachricht und wir organisieren alle Details."
+    "advanced-contact": "Es gibt viele Dinge, die man beim Unterrichten beachten muss, aber fast nichts, was sich nicht arrangieren lässt. Schick mir eine Nachricht und wir organisieren alle Details.",
+    "contact-button": "Kontaktiere mich"
   },
   "SchoolSupportPage": {
+    "back-to-kite-services-nav": "Zurück zur Service Übersicht",
     "school-support-hero": "School Support Services",
     "school-support-section-title": "Eine zusätzliche Arbeitskraft zur Hand",
     "school-support-section-subtitle": "Ich bin bereit, deine Schule zu unterstützen. Betrachte mich als den einen Typen, den du wirklich überall einsetzen kannst: Flexibilität ist meine Stärke. Sag mir einfach vorher, was du brauchst:",
@@ -341,9 +319,10 @@
     "flexible-scheduling-list-element5": "• Unterstützung für Schulen mit mehreren Standorten und Bereitschaft zum Pendeln zwischen den Standorten",
     "flexible-scheduling-list-element6": "• Führerschein für Auto und Motorrad vorhanden",
     "school-support-contact": "Lass uns schauen, wie ich dein Team unterstützen kann. Kombiniere meine Leistungen nach Wunsch, es gibt fast keine Einschränkungen. Fehlt etwas? Wir finden eine Lösung. Hier beginnt alles:",
-    "contact-button": "Connect with me"
+    "contact-button": "Kontaktiere mich"
   },
   "ConsultingPage": {
+    "back-to-kite-services-nav": "Zurück zur Service Übersicht",
     "consulting-hero": "Kite Consulting Services",
     "consulting-section-title": "Es gibt viel zu fragen",
     "consulting-section-subtitle": "Anleitung und Wissensaustausch sind der Schlüssel: Jemand weiß etwas und jemand möchte es lernen. Hier verbinde ich meine Rolle als Kitesurfer und -Instruktor mit meiner Rolle als Teil der Gesellschaft.",
@@ -360,7 +339,7 @@
     "sport-representation-list-element4": "• Community-Outreach-Programme",
     "sport-representation-list-element5": "• Sportförderungs-Initiativen",
     "consulting-contact": "Dieser Bereich dreht sich um alles, was in irgendeiner Weise mit dem Sport und der Umgebung, in der er ausgeübt wird, verbunden ist. Finde heraus, wie wir zusammenarbeiten können:",
-    "contact-button": "Connect with me"
+    "contact-button": "Kontaktiere mich"
   },
   "LandingPage": {
     "kite-subtitle-landing-page": "Neugierig? Lass uns zusammenarbeiten!",
@@ -407,5 +386,35 @@
     "competitorAnalysis": "Wettbewerberanalyse",
     "about": "Über mich",
     "contact": "Kontakt"
+  },
+  "ProcessControlPage": {
+    "process-control-hero": "Process Control Services",
+    "process-control-section-title": "Outsourcing deiner Arbeit",
+    "process-control-section-subtitle": "Nutze meine Expertise aus der Arbeit als Prozessingenieur für dein Projekt.",
+    "advanced-process-control-title": "Advanced Process Control",
+    "advanced-process-control-list-element1": "•<strong> Softwarebeschaffung und -einrichtung</strong> - Du hast bereits viele Prozessdaten, aber keine zentrale Software, die alles zusammenführt? Ich finde deine APC-Software und übernehme die Kommunikation mit Partnern, schreibe Anforderungsspezifikationen, führe erste Tests durch und unterstütze beim Rollout.",
+    "advanced-process-control-list-element2": "•<strong> Benutzerschulung </strong> - Standardisierung des APC-Einsatzes in deinem Unternehmen? Ich biete plattformbasierte Trainings für dich oder dein Team, Schritt für Schritt von Grundlagen bis zu spezifischen Software-Themen.",
+    "advanced-process-control-list-element3": "•<strong> Mathematik </strong> - Nicht jedes Sensorsignal ist direkt nutzbar. Mathematik kann neue, verlässlichere Quellen schaffen, Limit-Berechnungen durchführen, Ausreißer behandeln und die Mechanismen optimieren.",
+    "advanced-process-control-list-element4": "•<strong> Strategische Ausrichtung </strong> - APC ist Teil eines Produktions-Ökosystems. Wie passt das APC-Stück ins Gesamtbild und erfüllt es seine Aufgaben? Externe Sicht kann hier sehr wertvoll sein.",
+    "advanced-process-control-list-element5": "•<strong> Lernen aus der Vergangenheit </strong> - Daten erzählen Geschichten. Korrelationen erkennen kann zeitaufwendig sein – ich übernehme das und liefere Antworten.",
+    "advanced-process-control-list-element6": "•<strong> KI-Unterstützung </strong> - KI hilft, Daten zu analysieren. Ich finde das passende Modell, führe Tests durch und unterstütze bei der Implementierung inklusive Kommunikation und Beschaffung.",
+    "advanced-process-control-list-element7": "•<strong> Neue Einrichtung </strong> - Erste Schritte in APC oder Ausbau bestehender Setups? Ich evaluiere Strategien, suche passende Messsysteme und Sensoren, um relevante Daten bestmöglich zu erfassen.",
+    "advanced-process-control-list-element8": "•<strong> Nutzung externer Software </strong> - Manchmal lohnt sich die Analyse mit externen Tools wie Pandas, Matplotlib, Numpy oder SciPy. Ich unterstütze dich, ohne dass du Ressourcen für die Einarbeitung verschwenden musst.",
+    "statistical-process-control-title": "Statistische Prozesskontrolle",
+    "statistical-process-control-list-element1": "•<strong> Softwarebeschaffung und -einrichtung </strong> - Du hast Messdaten, aber keine zentrale Software? Ich finde SPC-Software, kommuniziere mit Partnern, schreibe Spezifikationen, teste und unterstütze beim Rollout.",
+    "statistical-process-control-list-element2": "•<strong> Benutzerschulung </strong> - Standardisierung von SPC in deinem Unternehmen. Schrittweise Schulungen von Grundlagen bis zu spezifischen Software-Themen.",
+    "statistical-process-control-list-element3": "•<strong> WER-Implementierung </strong> - Western Electric Rules (WER) bilden das Rückgrat der SPC. Limits setzen für Millionen Datenkanäle kann ich übernehmen.",
+    "statistical-process-control-list-element4": "•<strong> Strategische Ausrichtung </strong> - SPC ist Teil des Ökosystems. Ich analysiere die Einbindung und stelle sicher, dass die Ziele erfüllt werden.",
+    "statistical-process-control-list-element5": "•<strong> Lernen aus der Vergangenheit </strong> - Datenanalyse und Korrelationen erkennen, Zeit sparen für dein Team – ich liefere die Antworten.",
+    "statistical-process-control-list-element6": "•<strong> KI-Unterstützung </strong> - KI hilft bei der Analyse. Ich finde passende Modelle, führe Tests durch und implementiere Lösungen.",
+    "statistical-process-control-list-element7": "•<strong> Neue Einrichtung </strong> - Erste Schritte oder Ausbau bestehender SPC? Ich evaluiere Strategien und suche passende Messsysteme.",
+    "statistical-process-control-list-element8": "•<strong> Nutzung externer Software </strong> - Analyse mit Python oder anderen Tools? Ich unterstütze dich bei der Nutzung externer Software.",
+    "custom-solutions-title": "Individuelle Lösungen",
+    "custom-solutions-list-element1": "•<strong> Python-basierte Datenanalyse </strong> - Bibliotheken wie Pandas, Matplotlib, Numpy oder SciPy unterstützen bei fehlenden Samples oder speziellen Analyseanforderungen.",
+    "custom-solutions-list-element2": "•<strong> Datenklassifikation </strong> - Neue Datentypen oder Qualitätsklassen? Ich helfe bei der Klassifikation oder suche qualifizierte Dritte.",
+    "custom-solutions-list-element3": "•<strong> Datenerstellung & Prototyping </strong> - Ein Demo- oder Beispieldatensatz? Integriert in komplexe Prozesse? Ich erstelle es für dich.",
+    "custom-solutions-list-element4": "•<strong> Wartung & Überprüfung </strong> - Historisch gewachsene Prozesskontroll-Tools benötigen Review oder Restrukturierung? Überlasse es mir.",
+    "process-control-contact": "Fehlt etwas? Wir finden eine Lösung. Primär biete ich Dienstleistungen für Fertigungsprozesse, besonders Halbleiterproduktion, an. Aber ich bin offen für neue Themen. Buchbar kurz- oder langfristig, projekt- oder zeitbasiert. Kombination meiner Services möglich.",
+    "contact-button": "Kontaktiere mich"
   }
 }

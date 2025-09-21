@@ -181,6 +181,7 @@
     "contact-button": "Conectar comigo"
   },
     "TravelServicesPage": {
+    "back-to-kite-services-nav": "Voltar para todos os servicos",
     "travel-services-hero": "Travel Services",
     "travel-services-section-title": "O mundo pode ser seu playground – aproveite",
     "travel-services-section-subtitle": "Mesmo não sendo agente de viagens, posso reunir tudo para você decidir com facilidade o que melhor se encaixa na sua reserva. Conte comigo:",
@@ -203,6 +204,7 @@
     "contact-button": "Conectar comigo"
   },
   "TheoryPage": {
+    "back-to-kite-services-nav": "Voltar para todos os servicos",
     "theory-hero": "Kiteboarding Theory Courses",
     "theory-section-title": "Fazer é legal! Mas entender as coisas é a chave para um progresso sustentável",
     "theory-section-subtitle": "A seguir, uma visão geral das categorias de aulas teóricas que ofereço — já incluídas em um curso ou disponíveis como complemento.",
@@ -224,9 +226,11 @@
     "environmental-stuff-list-element2": "• Não estamos sozinhos: conheça os ecossistemas onde você pratica. Sabia que pássaros podem morrer por sua causa?",
     "environmental-stuff-list-element3": "• Kiteboarding em nível social: como você pode se juntar a uma organização para servir um propósito maior relacionado ao esporte",
     "environmental-stuff-list-element4": "• Leis, regulamentos e boas práticas que precisam ser consideradas ao sair da zona de conforto",
-    "theory-contact": "“Um curso é bom se tanto o aluno quanto o professor aprendem um com o outro”. Combine meus serviços como desejar e aproveite um desconto individual. Falta algo na lista? Estou sempre aberto a pesquisar e trazer para você."
+    "theory-contact": "“Um curso é bom se tanto o aluno quanto o professor aprendem um com o outro”. Combine meus serviços como desejar e aproveite um desconto individual. Falta algo na lista? Estou sempre aberto a pesquisar e trazer para você.",
+    "contactButton": "Conectar comigo"
   },
   "StartingPage": {
+    "back-to-kite-services-nav": "Voltar para todos os servicos",
     "starting-hero": "(Re-)Starter Courses",
     "starting-section-title": "Tudo começa em algum momento. Ou recomeça?",
     "starting-section-subtitle": "Trata-se de se comprometer a dar os passos necessários: decidir (re)começar algo, em vez de apenas sonhar. Para os que seguem, ofereço um serviço de curso flexível como este:",
@@ -259,9 +263,11 @@
     "structure-list-element6": "• Se disponível: suporte com headset e vídeo",
     "structure-list-element7": "• Monitoramento de progresso e certificação VDWS",
     "structure-list-element8": "• Alternativas sem vento: simulações, wakeboard, landboard, SUP, exercícios, etc.",
-    "starting-contact": "São muitas coisas a considerar ao dar cursos, mas quase nada que não possa ser organizado. Envie uma mensagem e organizamos todos os detalhes."
+    "starting-contact": "São muitas coisas a considerar ao dar cursos, mas quase nada que não possa ser organizado. Envie uma mensagem e organizamos todos os detalhes.",
+    "contactButton": "Conectar comigo"
   },
   "AdvancedPage": {
+    "back-to-kite-services-nav": "Voltar para todos os servicos",
     "advanced-hero": "Advanced Kiteboarding Courses",
     "advanced-section-title": "Depois do primeiro passo, vem o próximo. E o outro...",
     "advanced-section-subtitle": "Por que parece tão fácil o que eles fazem na água? Há muito o que aprender e meus serviços servem como apoio ao longo do caminho:",
@@ -293,9 +299,11 @@
     "structure-list-element6": "• Se disponível: suporte com headset e vídeo",
     "structure-list-element7": "• Monitoramento de progresso e certificação VDWS",
     "structure-list-element8": "• Alternativas sem vento: simulações, wakeboard, landboard, SUP, exercícios, etc.",
-    "advanced-contact": "São muitas coisas a considerar ao oferecer cursos, mas quase nada que não possa ser organizado. Envie uma mensagem e organizamos todos os detalhes."
+    "advanced-contact": "São muitas coisas a considerar ao oferecer cursos, mas quase nada que não possa ser organizado. Envie uma mensagem e organizamos todos os detalhes.",
+    "contactButton": "Conectar comigo"
   },
   "SchoolSupportPage": {
+    "back-to-kite-services-nav": "Voltar para todos os servicos",
     "school-support-hero": "School Support Services",
     "school-support-section-title": "Tenha um colaborador extra à disposição",
     "school-support-section-subtitle": "Estou pronto para apoiar sua escola. Considere-me como aquele membro flexível que pode atuar onde você precisar: flexibilidade é minha força. Diga o que precisa:",
@@ -325,6 +333,7 @@
     "contact-button": "Conectar comigo"
   },
   "ConsultingPage": {
+    "back-to-kite-services-nav": "Voltar para todos os servicos",
     "consulting-hero": "Kite Consulting Services",
     "consulting-section-title": "Há muito o que perguntar",
     "consulting-section-subtitle": "Orientação e troca de conhecimento são essenciais: alguém sabe algo e alguém quer aprender. Aqui, combino meu papel como kitesurfer e instrutor com estar inserido na sociedade.",
