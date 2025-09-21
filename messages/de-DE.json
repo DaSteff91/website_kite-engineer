@@ -225,6 +225,26 @@
     "environmental-stuff-list-element4": "• Gesetze, Vorschriften und gute Gewohnheiten, die beim Verlassen der Komfortzone zu beachten sind",
     "theory-contact": "\"Ein Kurs ist gut, wenn sowohl Schüler als auch Lehrer voneinander lernen\". Kombiniere meine Angebote nach Belieben und profitiere von einem individuellen Rabatt. Etwas nicht aufgelistet? Ich bin immer offen, etwas zu recherchieren und dir bereitzustellen."
   },
+  "Footer": {
+    "footer-contact": "Kontakt",
+    "footer-contact-email": "stefan@kite-engineer.de",
+    "footer-quick-links": "Schnellzugriff",
+    "footer-text-kite": "Kite",
+    "footer-text-engineer": "Engineer",
+    "footer-text-about": "Über mich",
+    "footer-text-contact": "Kontakt",
+    "footer-legal": "Rechtliches",
+    "footer-text-privacy": "Datenschutzerklärung",
+    "footer-text-imprint": "Impressum",
+    "footer-follow-me": "Folge mir",
+    "footer-social-instagram": "Instagram",
+    "footer-social-linkedin": "LinkedIn",
+    "footer-social-github": "GitHub",
+    "phone-number-reveal-text": "Klicken für die Telefonnummer",
+    "footer-copy": "(Kopieren)",
+    "footer-copied": "(Kopiert!)",
+    "footer-copyright": "© {year} Kite-Engineer by Stefan Merthan. Alle Rechte vorbehalten."
+  },
   "StartingPage": {
     "starting-hero": "(Re-)Starter Courses",
     "starting-section-title": "Alles beginnt irgendwann. Oder beginnt erneut?",

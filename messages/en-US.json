@@ -396,6 +396,26 @@
     "about": "About",
     "contact": "Contact"
   },
+  "Footer": {
+    "footer-contact": "Contact",
+    "footer-contact-email": "stefan@kite-engineer.de",
+    "footer-quick-links": "Quick Links",
+    "footer-text-kite": "Kite",
+    "footer-text-engineer": "Engineer",
+    "footer-text-about": "About",
+    "footer-text-contact": "Contact",
+    "footer-legal": "Legal",
+    "footer-text-privacy": "Privacy Policy",
+    "footer-text-imprint": "Imprint",
+    "footer-follow-me": "Follow Me",
+    "footer-social-instagram": "Instagram",
+    "footer-social-linkedin": "LinkedIn",
+    "footer-social-github": "GitHub",
+    "phone-number-reveal-text": "Click to reveal phone number",
+    "footer-copy": "(Copy)",
+    "footer-copied": "(Copied!)",
+    "footer-copyright": "© {year} Kite-Engineer by Stefan Merthan. All rights reserved."
+  },
   "ProcessOptimizationPage": {
     "back-to-engineer-services-nav":"Back to All Engineering Services",
     "process-optimization-hero": "Process Optimization Services",

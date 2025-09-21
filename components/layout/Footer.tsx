@@ -1,44 +1,52 @@
 "use client";
 
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 const SOCIAL_LINKS = [
-  // { icon: Facebook, href: "#", label: "Facebook" },
-  // { icon: Twitter, href: "#", label: "Twitter" },
   {
     icon: Instagram,
     href: "https://www.instagram.com/steffkiteengineer/",
-    label: "Instagram",
+    labelKey: "footer-social-instagram",
   },
   {
     icon: Linkedin,
     href: "www.linkedin.com/in/stefan-merthan-09a264158",
-    label: "LinkedIn",
+    labelKey: "footer-social-linkedin",
   },
-  { icon: Github, href: "https://github.com/DaSteff91", label: "GitHub" },
+  {
+    icon: Github,
+    href: "https://github.com/DaSteff91",
+    labelKey: "footer-social-github",
+  },
 ];
 
 export function Footer() {
   const pathname = usePathname();
   if (pathname === "/") return null;
+
+  const t = useTranslations("Footer");
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t">
       <div className="container mx-auto px-4 md:px-6 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Contact */}
           <div className="space-y-3 text-center sm:text-left">
-            <h3 className="text-lg font-semibold">Contact</h3>
+            <h3 className="text-lg font-semibold" id="footer-contact">
+              {t("footer-contact")}
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:stefan@kite-engineer.de"
+                  href={`mailto:${t("footer-contact-email")}`}
                   className="hover:text-primary text-sm block break-all text-muted-foreground "
+                  id="footer-contact-email"
                 >
-                  stefan@kite-engineer.de
+                  {t("footer-contact-email")}
                 </a>
               </li>
               <li>
@@ -47,9 +55,10 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Quick Links */}
           <div className="space-y-3 text-center sm:text-left">
             <h3 className="text-lg font-semibold" id="footer-quick-links">
-              Quick Links
+              {t("footer-quick-links")}
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -58,7 +67,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                   id="footer-text-kite"
                 >
-                  Kite
+                  {t("footer-text-kite")}
                 </Link>
               </li>
               <li>
@@ -67,7 +76,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                   id="footer-text-engineer"
                 >
-                  Engineer
+                  {t("footer-text-engineer")}
                 </Link>
               </li>
               <li>
@@ -76,7 +85,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                   id="footer-text-about"
                 >
-                  About
+                  {t("footer-text-about")}
                 </Link>
               </li>
               <li>
@@ -85,14 +94,17 @@ export function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                   id="footer-text-contact"
                 >
-                  Contact
+                  {t("footer-text-contact")}
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* Legal */}
           <div className="space-y-3 text-center sm:text-left">
-            <h3 className="text-lg font-semibold">Legal</h3>
+            <h3 className="text-lg font-semibold" id="footer-legal">
+              {t("footer-legal")}
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -100,7 +112,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                   id="footer-text-privacy"
                 >
-                  Privacy Policy
+                  {t("footer-text-privacy")}
                 </Link>
               </li>
               <li>
@@ -109,35 +121,38 @@ export function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                   id="footer-text-imprint"
                 >
-                  Imprint
+                  {t("footer-text-imprint")}
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* Follow Me */}
           <div className="space-y-3 text-center sm:text-left">
-            <h3 className="text-lg font-semibold">Follow Me</h3>
+            <h3 className="text-lg font-semibold" id="footer-follow-me">
+              {t("footer-follow-me")}
+            </h3>
             <div className="flex justify-center sm:justify-start gap-4 flex-wrap">
               {SOCIAL_LINKS.map((social) => (
                 <a
-                  key={social.label}
+                  key={social.labelKey}
                   href={social.href}
                   className="text-muted-foreground hover:text-primary"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <social.icon className="h-5 w-5" />
-                  <span className="sr-only">{social.label}</span>
+                  <span className="sr-only">{t(social.labelKey)}</span>
                 </a>
               ))}
             </div>
           </div>
         </div>
 
+        {/* Copyright */}
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p className="break-words" id="break-words">
-            © {currentYear} Kite-Engineer by Stefan Merthan. All rights
-            reserved.
+          <p className="break-words" id="footer-copyright">
+            {t("footer-copyright", { year: currentYear })}
           </p>
         </div>
       </div>
@@ -146,6 +161,7 @@ export function Footer() {
 }
 
 function PhoneNumberReveal() {
+  const t = useTranslations("Footer");
   const [revealed, setRevealed] = useState(false);
   const [copied, setCopied] = useState(false);
   const phoneNumber = "+491719501856";
@@ -176,7 +192,7 @@ function PhoneNumberReveal() {
             onClick={handleCopy}
             className="text-xs text-muted-foreground hover:text-primary text-center sm:text-left"
           >
-            {copied ? "(Copied!)" : "(Copy)"}
+            {copied ? t("footer-copied") : t("footer-copy")}
           </button>
         </div>
       ) : (
@@ -184,7 +200,7 @@ function PhoneNumberReveal() {
           className="text-sm text-muted-foreground text-center sm:text-left block"
           id="phone-number-reveal-text"
         >
-          Click to reveal phone number
+          {t("phone-number-reveal-text")}
         </span>
       )}
     </div>
