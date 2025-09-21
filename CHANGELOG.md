@@ -1,3 +1,10 @@
+## [1.26.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.3...v1.26.4) (2025-09-21)
+
+
+### Bug Fixes
+
+* deleting unnecessary file ([31cda08](https://github.com/DaSteff91/website_kite-engineer/commit/31cda083a7a78078d727c4a409d454afc49c28c1))
+
 ## [1.26.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.2...v1.26.3) (2025-09-21)
 
 
