@@ -1,3 +1,10 @@
+## [1.26.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.4...v1.26.5) (2025-09-21)
+
+
+### Bug Fixes
+
+* typescript error resolving ([d53c9f1](https://github.com/DaSteff91/website_kite-engineer/commit/d53c9f1aeb6da5a0a00a1bb9f9142390004fb888))
+
 ## [1.26.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.3...v1.26.4) (2025-09-21)
 
 
