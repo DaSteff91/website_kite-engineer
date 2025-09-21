@@ -1,3 +1,10 @@
+## [1.26.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.2...v1.26.3) (2025-09-21)
+
+
+### Bug Fixes
+
+* dont work with destructured parameters when using a Promise ([77d5079](https://github.com/DaSteff91/website_kite-engineer/commit/77d5079d129db5161cb9e223de33080d286d1b08))
+
 ## [1.26.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.1...v1.26.2) (2025-09-21)
 
 
