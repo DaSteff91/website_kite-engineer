@@ -1,3 +1,10 @@
+## [1.26.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.0...v1.26.1) (2025-09-21)
+
+
+### Bug Fixes
+
+* removing unnecessary line + update gitignor ([aadc443](https://github.com/DaSteff91/website_kite-engineer/commit/aadc4434a16bdb68fca697282562f86f1862a248))
+
 # [1.26.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.25.1...v1.26.0) (2025-09-21)
 
 
