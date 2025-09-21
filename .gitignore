@@ -38,3 +38,4 @@ yarn-error.log*
 # Helper scripts
 content_replacer.py
 hero_replacer.py
+/i18n-codemod
