@@ -1,3 +1,10 @@
+## [1.26.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.1...v1.26.2) (2025-09-21)
+
+
+### Bug Fixes
+
+* make the params for i18n a Promise for next.js ([efd7434](https://github.com/DaSteff91/website_kite-engineer/commit/efd74341a62b8c06b6fae78127e02eb1107823a9))
+
 ## [1.26.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.0...v1.26.1) (2025-09-21)
 
 
