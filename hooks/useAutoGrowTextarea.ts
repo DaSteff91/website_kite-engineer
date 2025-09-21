@@ -16,5 +16,5 @@ export const useAutoGrowTextarea = (value: string): React.RefObject<HTMLTextArea
     }
   }, [value]);
 
-  return textareaRef;
+  return textareaRef as React.RefObject<HTMLTextAreaElement>;
 };
