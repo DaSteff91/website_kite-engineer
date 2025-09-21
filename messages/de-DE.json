@@ -348,7 +348,7 @@
   "NavigationMenu": {
     "home": "Home",
     "kite": "Kite",
-    "allKiteServices": "Alle Kite Services",
+    "allKiteServices": "Kite Services",
     "freelancer": "Freelancer Services",
     "schoolSupport": "Support für Schulen",
     "travelServices": "Reise Services",
@@ -358,7 +358,7 @@
     "starting": "(Neu-)Starter",
     "advanced": "Fortgeschritten",
     "engineer": "Engineer",
-    "allEngineeringServices": "Alle Engineer Services",
+    "allEngineeringServices": "Engineer Services",
     "processEngineering": "Process Engineering",
     "processControl": "Prozesskontrolle",
     "processOptimization": "Prozessoptimierung",
