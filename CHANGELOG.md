@@ -1,3 +1,46 @@
+# [1.26.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.25.1...v1.26.0) (2025-09-21)
+
+
+### Bug Fixes
+
+* adding ids to the page.tsx elements with i18n elements for later processing ([ed4abc1](https://github.com/DaSteff91/website_kite-engineer/commit/ed4abc162d21ce0abd977c15dff49fa09863fe44))
+* adding more ids ([a62d9fd](https://github.com/DaSteff91/website_kite-engineer/commit/a62d9fddafd55083cec5ae6ef9d8a7c8b0688d8c))
+* adding more ids ([c8e4a34](https://github.com/DaSteff91/website_kite-engineer/commit/c8e4a34111d231f13516200ef6faa5dc8257681a))
+* continue adding id attributes. Still not done. List items doent count up yet ([456d40d](https://github.com/DaSteff91/website_kite-engineer/commit/456d40df2904ce7151ddb95fa0f22f3e837e179e))
+* copying ([41d3dd6](https://github.com/DaSteff91/website_kite-engineer/commit/41d3dd6d98b9176564d8dedf51863f51001d5bfd))
+* delete previous rich text handler. change nav text. small fixes ([cffeada](https://github.com/DaSteff91/website_kite-engineer/commit/cffeada5f082a868777258b66aa3e081376504d5))
+* favicon is not working anymore. Testing ([9fcf1a0](https://github.com/DaSteff91/website_kite-engineer/commit/9fcf1a09d1ab3868d5950e9ffdb4ce1016abea3b))
+* finalizing the refactoring of the layout.tsx ([0c0c47e](https://github.com/DaSteff91/website_kite-engineer/commit/0c0c47e628f7c583e4b911c3ad6d51ea762036a6))
+* first draft of translation kite related pages ([88c8398](https://github.com/DaSteff91/website_kite-engineer/commit/88c83988c6e7cd1cff0ecf6ff41aa2db08ae80d1))
+* first tries of translation ([d3bb571](https://github.com/DaSteff91/website_kite-engineer/commit/d3bb5717421523e97841408b54c70053aec9e29b))
+* harmonize the export default async function PageName(...) of page.tsx files ([c3e8c4c](https://github.com/DaSteff91/website_kite-engineer/commit/c3e8c4c39593c9c4f920a48322349a7ab601bd56))
+* implement i18n ready footer ([54e248f](https://github.com/DaSteff91/website_kite-engineer/commit/54e248f2f062d972cb4a90b7eb43b26928163b05))
+* implementing an updated mobile language switcher, change swipe behaviour and add await params ([902bde0](https://github.com/DaSteff91/website_kite-engineer/commit/902bde06f866f87cf0fc42874249fbfe8c232515))
+* next i18n test ([cc83f99](https://github.com/DaSteff91/website_kite-engineer/commit/cc83f99b719e0f870bf345327f94121f07031275))
+* next test with rich text within the i18n replaced text ([1bb69c1](https://github.com/DaSteff91/website_kite-engineer/commit/1bb69c15cf9ac101cad1e69a2836ad428e4ba843))
+* prepare merge to dev branch ([c885a35](https://github.com/DaSteff91/website_kite-engineer/commit/c885a354e2edea875a697a50602440a6b0484ca4))
+* preparing for refactor the layout.tsx with i18n inside the locale directory ([815bbb5](https://github.com/DaSteff91/website_kite-engineer/commit/815bbb5de1cf3c95b7ef4f7303e21722c7510695))
+* refactoring the back navigation. Future: make it a component! ([2ada6ad](https://github.com/DaSteff91/website_kite-engineer/commit/2ada6ad6937150bfb4b2edfdaeae53b38aed8692))
+* replacing useTranslations with getTranslations via python script ([59233d1](https://github.com/DaSteff91/website_kite-engineer/commit/59233d1ea8601e499124616b024a2986de510c29))
+* small fixes ([a2d31fa](https://github.com/DaSteff91/website_kite-engineer/commit/a2d31fa2b481af70e7b739ebdd0f3584ba041926))
+* smaller fixes and updates because of the i18n implementation ([e078484](https://github.com/DaSteff91/website_kite-engineer/commit/e078484b2ab9746ab95e702f1cf04e9c62532129))
+* start header internationalization ([c3a718d](https://github.com/DaSteff91/website_kite-engineer/commit/c3a718d2d663d20c989555f10a8662219a7b03a9))
+* start implementing german translations as well as fixing some formating in the json ([7389f54](https://github.com/DaSteff91/website_kite-engineer/commit/7389f5403e41fb69d0dcf592b9992ff4c96fa33d))
+* start implementing social media stuff in the footer ([ec6f331](https://github.com/DaSteff91/website_kite-engineer/commit/ec6f33142c19e32189c9799367bae48dedc1716f))
+* tracking script ([8cfb096](https://github.com/DaSteff91/website_kite-engineer/commit/8cfb096859cea358be51ec545c462ae3e3212c27))
+* try making landing page translateable ([ab382c2](https://github.com/DaSteff91/website_kite-engineer/commit/ab382c2665ad39706a08c32eb0a020d065c4f8f1))
+* update ([79e1cef](https://github.com/DaSteff91/website_kite-engineer/commit/79e1cef1fdfa932671da56c63aa17efdb515cb22))
+* update a script ([e81fb32](https://github.com/DaSteff91/website_kite-engineer/commit/e81fb321972ad374be9a17c00f41013c905a22ee))
+* update all kite related pages with placeholders and extracted english ([d2f9e83](https://github.com/DaSteff91/website_kite-engineer/commit/d2f9e837eb771b4023ffc1a4550ef780bb7fed2c))
+* updating more ids on subpage page.tsx files ([9dca3f4](https://github.com/DaSteff91/website_kite-engineer/commit/9dca3f4112e7ea0468ea3474a7976a823e37aa8e))
+
+
+### Features
+
+* finalizing i18n implementation ([263e57e](https://github.com/DaSteff91/website_kite-engineer/commit/263e57ea6471080341bfa6fe2f935a908641ab91))
+* implementing a switch in the header to switch languages ([bf948a9](https://github.com/DaSteff91/website_kite-engineer/commit/bf948a94c0c26811d9a7234f3826b36d1b5fd54f))
+* this is a first version of a working i18n implementation for the about page with an h1 element ([091e7bc](https://github.com/DaSteff91/website_kite-engineer/commit/091e7bc8e75b436ab56ca951c19151f211a90423))
+
 ## [1.25.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.25.0...v1.25.1) (2025-08-25)
 
 
