@@ -1,3 +1,10 @@
+# [1.27.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.5...v1.27.0) (2025-09-22)
+
+
+### Features
+
+* first draft final for i18n implementation ([2e40ee8](https://github.com/DaSteff91/website_kite-engineer/commit/2e40ee8f266407f45744e9fd79ed19a64b8a23a9))
+
 ## [1.26.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.4...v1.26.5) (2025-09-21)
 
 
