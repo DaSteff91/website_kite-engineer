@@ -105,28 +105,28 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
                 <TriangleAlert className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="rider-essentials-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("rider-essentials-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="rider-essentials-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="rider-essentials-list-element1" className="pl-3 -indent-3">
                   {t("rider-essentials-list-element1")}
                 </li>
-                <li id="rider-essentials-list-element2">
+                <li id="rider-essentials-list-element2" className="pl-3 -indent-3">
                   {t("rider-essentials-list-element2")}
                 </li>
-                <li id="rider-essentials-list-element3">
+                <li id="rider-essentials-list-element3" className="pl-3 -indent-3">
                   {t("rider-essentials-list-element3")}
                 </li>
-                <li id="rider-essentials-list-element4">
+                <li id="rider-essentials-list-element4" className="pl-3 -indent-3">
                   {t("rider-essentials-list-element4")}
                 </li>
-                <li id="rider-essentials-list-element5">
+                <li id="rider-essentials-list-element5" className="pl-3 -indent-3">
                   {t("rider-essentials-list-element5")}
                 </li>
-                <li id="rider-essentials-list-element6">
+                <li id="rider-essentials-list-element6" className="pl-3 -indent-3">
                   {t("rider-essentials-list-element6")}
                 </li>
               </ul>
@@ -137,25 +137,25 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
                 <PackagePlus className="h-6 w-6 text-teal-400" />
                 <h3
                   id="advanced-theory-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("advanced-theory-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-theory-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="advanced-theory-list-element1" className="pl-3 -indent-3">
                   {t("advanced-theory-list-element1")}
                 </li>
-                <li id="advanced-theory-list-element2">
+                <li id="advanced-theory-list-element2" className="pl-3 -indent-3">
                   {t("advanced-theory-list-element2")}
                 </li>
-                <li id="advanced-theory-list-element3">
+                <li id="advanced-theory-list-element3" className="pl-3 -indent-3">
                   {t("advanced-theory-list-element3")}
                 </li>
-                <li id="advanced-theory-list-element4">
+                <li id="advanced-theory-list-element4" className="pl-3 -indent-3">
                   {t("advanced-theory-list-element4")}
                 </li>
-                <li id="advanced-theory-list-element5">
+                <li id="advanced-theory-list-element5" className="pl-3 -indent-3">
                   {t("advanced-theory-list-element5")}
                 </li>
               </ul>
@@ -166,22 +166,22 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
                 <Unplug className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="environmental-stuff-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("environmental-stuff-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="environmental-stuff-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="environmental-stuff-list-element1" className="pl-3 -indent-3">
                   {t("environmental-stuff-list-element1")}
                 </li>
-                <li id="environmental-stuff-list-element2">
+                <li id="environmental-stuff-list-element2" className="pl-3 -indent-3">
                   {t("environmental-stuff-list-element2")}
                 </li>
-                <li id="environmental-stuff-list-element3">
+                <li id="environmental-stuff-list-element3" className="pl-3 -indent-3">
                   {t("environmental-stuff-list-element3")}
                 </li>
-                <li id="environmental-stuff-list-element4">
+                <li id="environmental-stuff-list-element4" className="pl-3 -indent-3">
                   {t("environmental-stuff-list-element4")}
                 </li>
               </ul>

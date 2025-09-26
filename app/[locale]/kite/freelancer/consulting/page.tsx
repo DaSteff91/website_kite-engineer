@@ -109,25 +109,25 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
                 <ShoppingCart className="h-6 w-6 text-blue-400" />
                 <h3
                   id="general-consulting-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("general-consulting-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="general-consulting-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="general-consulting-list-element1" className="pl-3 -indent-3">
                   {t("general-consulting-list-element1")}
                 </li>
-                <li id="general-consulting-list-element2">
+                <li id="general-consulting-list-element2" className="pl-3 -indent-3">
                   {t("general-consulting-list-element2")}
                 </li>
-                <li id="general-consulting-list-element3">
+                <li id="general-consulting-list-element3" className="pl-3 -indent-3">
                   {t("general-consulting-list-element3")}
                 </li>
-                <li id="general-consulting-list-element4">
+                <li id="general-consulting-list-element4" className="pl-3 -indent-3">
                   {t("general-consulting-list-element4")}
                 </li>
-                <li id="general-consulting-list-element5">
+                <li id="general-consulting-list-element5" className="pl-3 -indent-3">
                   {t("general-consulting-list-element5")}
                 </li>
               </ul>
@@ -138,25 +138,25 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
                 <Presentation className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="sport-representation-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("sport-representation-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="sport-representation-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="sport-representation-list-element1" className="pl-3 -indent-3">
                   {t("sport-representation-list-element1")}
                 </li>
-                <li id="sport-representation-list-element2">
+                <li id="sport-representation-list-element2" className="pl-3 -indent-3">
                   {t("sport-representation-list-element2")}
                 </li>
-                <li id="sport-representation-list-element3">
+                <li id="sport-representation-list-element3" className="pl-3 -indent-3">
                   {t("sport-representation-list-element3")}
                 </li>
-                <li id="sport-representation-list-element4">
+                <li id="sport-representation-list-element4" className="pl-3 -indent-3">
                   {t("sport-representation-list-element4")}
                 </li>
-                <li id="sport-representation-list-element5">
+                <li id="sport-representation-list-element5" className="pl-3 -indent-3">
                   {t("sport-representation-list-element5")}
                 </li>
               </ul>

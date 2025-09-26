@@ -102,21 +102,21 @@ export default async function StartingPage({ params }: StartingPageProps) {
                 <UserRoundSearch className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="who-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("who-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="who-list-element1">{t("who-list-element1")}</li>
-                <li id="who-list-element2">{t("who-list-element2")}</li>
-                <li id="who-list-element3">{t("who-list-element3")}</li>
-                <li id="who-list-element4">{t("who-list-element4")}</li>
-                <li id="who-list-element5">{t("who-list-element5")}</li>
-                <li id="who-list-element6">{t("who-list-element6")}</li>
-                <li id="who-list-element7">{t("who-list-element7")}</li>
-                <li id="who-list-element8">{t("who-list-element8")}</li>
-                <li id="who-list-element9">{t("who-list-element9")}</li>
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="who-list-element1" className="pl-3 -indent-3">{t("who-list-element1")}</li>
+                <li id="who-list-element2" className="pl-3 -indent-3">{t("who-list-element2")}</li>
+                <li id="who-list-element3" className="pl-3 -indent-3">{t("who-list-element3")}</li>
+                <li id="who-list-element4" className="pl-3 -indent-3">{t("who-list-element4")}</li>
+                <li id="who-list-element5" className="pl-3 -indent-3">{t("who-list-element5")}</li>
+                <li id="who-list-element6" className="pl-3 -indent-3">{t("who-list-element6")}</li>
+                <li id="who-list-element7" className="pl-3 -indent-3">{t("who-list-element7")}</li>
+                <li id="who-list-element8" className="pl-3 -indent-3">{t("who-list-element8")}</li>
+                <li id="who-list-element9" className="pl-3 -indent-3">{t("who-list-element9")}</li>
               </ul>
             </div>
 
@@ -125,21 +125,21 @@ export default async function StartingPage({ params }: StartingPageProps) {
                 <ListCheck className="h-6 w-6 text-teal-400" />
                 <h3
                   id="content-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("content-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="content-list-element1">{t("content-list-element1")}</li>
-                <li id="content-list-element2">{t("content-list-element2")}</li>
-                <li id="content-list-element3">{t("content-list-element3")}</li>
-                <li id="content-list-element4">{t("content-list-element4")}</li>
-                <li id="content-list-element5">{t("content-list-element5")}</li>
-                <li id="content-list-element6">{t("content-list-element6")}</li>
-                <li id="content-list-element7">{t("content-list-element7")}</li>
-                <li id="content-list-element8">{t("content-list-element8")}</li>
-                <li id="content-list-element9">{t("content-list-element9")}</li>
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="content-list-element1" className="pl-3 -indent-3">{t("content-list-element1")}</li>
+                <li id="content-list-element2" className="pl-3 -indent-3">{t("content-list-element2")}</li>
+                <li id="content-list-element3" className="pl-3 -indent-3">{t("content-list-element3")}</li>
+                <li id="content-list-element4" className="pl-3 -indent-3">{t("content-list-element4")}</li>
+                <li id="content-list-element5" className="pl-3 -indent-3">{t("content-list-element5")}</li>
+                <li id="content-list-element6" className="pl-3 -indent-3">{t("content-list-element6")}</li>
+                <li id="content-list-element7" className="pl-3 -indent-3">{t("content-list-element7")}</li>
+                <li id="content-list-element8" className="pl-3 -indent-3">{t("content-list-element8")}</li>
+                <li id="content-list-element9" className="pl-3 -indent-3">{t("content-list-element9")}</li>
               </ul>
             </div>
 
@@ -148,34 +148,34 @@ export default async function StartingPage({ params }: StartingPageProps) {
                 <Clock className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="structure-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("structure-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="structure-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="structure-list-element1" className="pl-3 -indent-3">
                   {t("structure-list-element1")}
                 </li>
-                <li id="structure-list-element2">
+                <li id="structure-list-element2" className="pl-3 -indent-3">
                   {t("structure-list-element2")}
                 </li>
-                <li id="structure-list-element3">
+                <li id="structure-list-element3" className="pl-3 -indent-3">
                   {t("structure-list-element3")}
                 </li>
-                <li id="structure-list-element4">
+                <li id="structure-list-element4" className="pl-3 -indent-3">
                   {t("structure-list-element4")}
                 </li>
-                <li id="structure-list-element5">
+                <li id="structure-list-element5" className="pl-3 -indent-3">
                   {t("structure-list-element5")}
                 </li>
-                <li id="structure-list-element6">
+                <li id="structure-list-element6" className="pl-3 -indent-3">
                   {t("structure-list-element6")}
                 </li>
-                <li id="structure-list-element7">
+                <li id="structure-list-element7" className="pl-3 -indent-3">
                   {t("structure-list-element7")}
                 </li>
-                <li id="structure-list-element8">
+                <li id="structure-list-element8" className="pl-3 -indent-3">
                   {t("structure-list-element8")}
                 </li>
               </ul>
