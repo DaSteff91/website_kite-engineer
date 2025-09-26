@@ -3,7 +3,7 @@
     "heroTitle": "Combining Worlds...",
     "sectionTitle": "A história e a motivação para tudo isso",
     "sectionQuote": "\"É sobre fazer, não esperar que as coisas aconteçam por conta própria\"",
-    "introductionTitle": "Olá, meu nome é Steff...",
+    "introductionTitle": "Oi, meu nome é Steff...",
     "introductionText1": "Steff, abreviação de Stefan. Nascido em 1991 em uma pequena cidade no sul da Alemanha, Baviera. E sim, você pode me chamar de orgulhoso Bávaro também",
     "introductionText2": "O que você pode esperar de mim? Um personagem de mente aberta que procura se desafiar. Uma pessoa que segue sua missão: realizar a visão de combinar mundos <strong>combining worlds</strong>.",
     "introductionText3": "Mas o que isso significa? Basicamente isso: é sobre combinar o mundo de ser engenheiro com o instrutor de kitesurf. E voilà, criei meu próprio lifestyle de ser um <strong> kite-engineer</strong>. Um freelancer que oferece serviços:",
@@ -12,9 +12,9 @@
     "introductionText4": "E não, eu não vou desenhar kites. Nem sou ansioso para integrar eletrônicos em kites. Pelo menos não por enquanto - quem sabe?",
     "introductionText5": "É minha maneira única de lidar com nosso amado capitalismo: compartilho o que eu gosto de fazer e você recebe o que ainda não teve antes. Isso faz de todos um vencedor!",
     "professionalTitle": "Parte Profissional",
-    "professionalItems": "<li>Launching my freelancer career as Kite-Engineer to combine my worlds into one, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in german, english and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt with focus on Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
-    "personalTitle": "Parte privado",
-    "personalItems": "<li>\"Be the change in the world you want to see\"</li><li>I am an explorer, an adventurer and a nerd</li><li>Self-study was always more satisfying then school</li><li>Yes, even I´ve once played football. Until I was 14</li><li>Sports and outdoor activities are a big part of my life</li><li>So is Linkin Park - being a fan since I´m 6 years old</li><li>Have you ever listened to Eckhart Tolle?</li><li>Smiling at people on the street helps sharing good vibes</li><li>Philosophy, especially stoicism, was added since I´m 30 - coincidence?</li><li>A book that changed my life? O Alquimista - Paulo Coelho</li><li>Follower of the \"Free and Open Source Idea\"</li><li>Growing as a community is satisfaction times x</li>"
+    "professionalItems": "<li>Lançando minha carreira de freelancer como Kite-Engineer para unir meus mundos, 2025</li><li>Certificado da International University (IU) como Programador Python e SQL, 2025</li><li>Oferecendo aulas de kitesurf em alemão, inglês e português, 2024</li><li>Licença de instrutor de kitesurf VDWS, 2023</li><li>Certificado 6 Sigma Green Belt com foco em Lean Management, 2022</li><li>Aulas particulares de kitesurf, 2021</li><li>Primeiro contato com o kitesurf, 2018</li><li>Experiência profissional em desenvolvimento e otimização de processos (como engenheiro de processos, engenheiro de processo e assistente de laboratório), 2015 - 2024</li><li>Bacharelado em Engenharia de Microsistemas, 2015</li><li>Comecei a explorar as áreas de micro- e nanosistemas, 2010</li>",
+    "personalTitle": "Parte Pessoal",
+    "personalItems": "<li>\"Seja a mudança que você quer ver no mundo\"</li><li>Sou um explorador, um aventureiro e um nerd</li><li>Autodidata sempre foi mais satisfatório do que escola</li><li>Sim, até eu já joguei futebol. Até os 14 anos</li><li>Esportes e atividades ao ar livre são uma grande parte da minha vida</li><li>Assim como Linkin Park - sou fã desde os 6 anos de idade</li><li>Você já ouviu Eckhart Tolle?</li><li>Sorrir para as pessoas na rua ajuda a espalhar boas vibes</li><li>Filosofia, especialmente estoicismo, foi adicionada desde os 30 anos - coincidência?</li><li>Um livro que mudou a minha vida? O Alquimista - Paulo Coelho</li><li>Seguidor da ideia de \"Free and Open Source Software\"</li><li>Crescer como comunidade é satisfação vezes x</li>"
   },
 
   "ContactPage": {
@@ -151,6 +151,7 @@
     "contactButton": "Conectar comigo"
   },
   "ProcessControlPage": {
+    "back-to-engineer-services-nav":"Voltar para todos os serviços de engenharia",
     "process-control-hero": "Process Control Services",
     "process-control-section-title": "Terceirize seu trabalho",
     "process-control-section-subtitle": "Invista meu poder cerebral no seu projeto e aproveite minha expertise adquirida enquanto trabalhava como engenheiro de processo.",
@@ -194,11 +195,11 @@
     "personal-coaching-list-element1": "• Serviços como instrutor de kite",
     "personal-coaching-list-element2": "• Coaching funcional e HIIT",
     "personal-coaching-list-element3": "• Mestre do seu próprio cronograma",
-    "personal-coaching-list-element4": "• Documentação do progresso",
+    "personal-coaching-list-element4": "• Agendamento de treino e documentação de progresso",
     "travel-buddy-title": "Companheiro de Viagem",
     "travel-buddy-list-element1": "• Divirta-se: também sou humano",
-    "travel-buddy-list-element2": "• Documentação da viagem",
-    "travel-buddy-list-element3": "• Organização de atividades gerais",
+    "travel-buddy-list-element2": "• Documentação da viagem (fotos, vídeos,...)",
+    "travel-buddy-list-element3": "• Organização de diversas atividades e excursões",
     "travel-buddy-list-element4": "• Compartilhar despesas diárias",
     "travel-services-contact": "Vamos criar uma experiência inesquecível juntos. Eu forneço o necessário — a reserva é por sua conta. Falta algo? Encontramos uma solução. Tudo começa aqui:",
     "contact-button": "Conectar comigo"
@@ -306,7 +307,7 @@
     "back-to-kite-services-nav": "Voltar para todos os servicos",
     "school-support-hero": "School Support Services",
     "school-support-section-title": "Tenha um colaborador extra à disposição",
-    "school-support-section-subtitle": "Estou pronto para apoiar sua escola. Considere-me como aquele membro flexível que pode atuar onde você precisar: flexibilidade é minha força. Diga o que precisa:",
+    "school-support-section-subtitle": "Estou pronto para apoiar sua escola e empresa. Considere-me como aquele membro flexível que pode atuar onde você precisar: flexibilidade é minha força. Diga o que precisa:",
     "instructor-services-title": "Serviços de Instrutor",
     "instructor-services-list-element1": "• Instrutor certificado VDWS desde 2023",
     "instructor-services-list-element2": "• Aulas do iniciante ao avançado",
@@ -317,7 +318,7 @@
     "general-assistance-title": "Assistência Geral",
     "general-assistance-list-element1": "• Escritório e administração",
     "general-assistance-list-element2": "• Suporte ao cliente e vendas",
-    "general-assistance-list-element3": "• Recomendações de equipamento",
+    "general-assistance-list-element3": "• Recomendações na compra e venda de materiais",
     "general-assistance-list-element4": "• Manutenção e reparos de gear",
     "general-assistance-list-element5": "• Gestão de inventário e logística",
     "general-assistance-list-element6": "• Demonstrações de produto",
