@@ -99,22 +99,34 @@ export default async function TravelServicesPage({
                 <Plane className="h-6 w-6 text-blue-400" />
                 <h3
                   id="trip-organization-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("trip-organization-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="trip-organization-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="trip-organization-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("trip-organization-list-element1")}
                 </li>
-                <li id="trip-organization-list-element2">
+                <li
+                  id="trip-organization-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("trip-organization-list-element2")}
                 </li>
-                <li id="trip-organization-list-element3">
+                <li
+                  id="trip-organization-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("trip-organization-list-element3")}
                 </li>
-                <li id="trip-organization-list-element4">
+                <li
+                  id="trip-organization-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("trip-organization-list-element4")}
                 </li>
               </ul>
@@ -125,22 +137,34 @@ export default async function TravelServicesPage({
                 <DumbbellIcon className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="personal-coaching-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("personal-coaching-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="personal-coaching-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="personal-coaching-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("personal-coaching-list-element1")}
                 </li>
-                <li id="personal-coaching-list-element2">
+                <li
+                  id="personal-coaching-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("personal-coaching-list-element2")}
                 </li>
-                <li id="personal-coaching-list-element3">
+                <li
+                  id="personal-coaching-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("personal-coaching-list-element3")}
                 </li>
-                <li id="personal-coaching-list-element4">
+                <li
+                  id="personal-coaching-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("personal-coaching-list-element4")}
                 </li>
               </ul>
@@ -151,74 +175,26 @@ export default async function TravelServicesPage({
                 <Users className="h-6 w-6 text-teal-400" />
                 <h3
                   id="travel-buddy-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("travel-buddy-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="travel-buddy-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="travel-buddy-list-element1" className="pl-3 -indent-3">
                   {t("travel-buddy-list-element1")}
                 </li>
-                <li id="travel-buddy-list-element2">
+                <li id="travel-buddy-list-element2" className="pl-3 -indent-3">
                   {t("travel-buddy-list-element2")}
                 </li>
-                <li id="travel-buddy-list-element3">
+                <li id="travel-buddy-list-element3" className="pl-3 -indent-3">
                   {t("travel-buddy-list-element3")}
                 </li>
-                <li id="travel-buddy-list-element4">
+                <li id="travel-buddy-list-element4" className="pl-3 -indent-3">
                   {t("travel-buddy-list-element4")}
                 </li>
               </ul>
             </div>
-            {/* 
-            <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <Calendar className="h-6 w-6 text-emerald-400" />
-                <h3 id="trip-planning-title" className="text-lg font-semibold text-emerald-200">
-                  Trip Planning
-                </h3>
-              </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="trip-planning-list-element1">• Optimal timing recommendations</li>
-                <li id="trip-planning-list-element2">• Itinerary development</li>
-                <li id="trip-planning-list-element3">• Budget planning and optimization</li>
-                <li id="trip-planning-list-element4">• Equipment rental coordination</li>
-                <li id="trip-planning-list-element5">• Travel insurance guidance</li>
-              </ul>
-            </div> */}
-
-            {/* <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <Camera className="h-6 w-6 text-blue-400" />
-                <h3 id="documentation-title" className="text-lg font-semibold text-blue-200">
-                  Documentation
-                </h3>
-              </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="documentation-list-element1">• Professional photo sessions</li>
-                <li id="documentation-list-element2">• Video documentation of progress</li>
-                <li id="documentation-list-element3">• Drone footage coordination</li>
-                <li id="documentation-list-element4">• Social media content creation</li>
-                <li id="documentation-list-element5">• Trip memory preservation</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-cyan-900/45 via-card/45 to-teal-900/45 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <Compass className="h-6 w-6 text-cyan-400" />
-                <h3 id="adventure-guidance-title" className="text-lg font-semibold text-cyan-200">
-                  Adventure Guidance
-                </h3>
-              </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="adventure-guidance-list-element1">• Safety protocols for new locations</li>
-                <li id="adventure-guidance-list-element2">• Local emergency contacts</li>
-                <li id="adventure-guidance-list-element3">• Cultural sensitivity training</li>
-                <li id="adventure-guidance-list-element4">• Equipment transportation tips</li>
-                <li id="adventure-guidance-list-element5">• Travel logistics support</li>
-              </ul>
-            </div> */}
           </div>
 
           {/* Contact Section */}

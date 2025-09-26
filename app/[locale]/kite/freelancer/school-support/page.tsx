@@ -3,17 +3,7 @@ import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  ArrowLeft,
-  School,
-  Users,
-  Clock,
-  MapPin,
-  Award,
-  Shield,
-  Drama,
-} from "lucide-react";
+import { ArrowLeft, Users, Clock, Drama } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { generateContactHref } from "@/lib/utils/contact-filler";
 import { Hero } from "@/components/sections/Hero";
@@ -103,28 +93,46 @@ export default async function SchoolSupportPage({
                 <Drama className="h-6 w-6 text-blue-400" />
                 <h3
                   id="instructor-services-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("instructor-services-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="instructor-services-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="instructor-services-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("instructor-services-list-element1")}
                 </li>
-                <li id="instructor-services-list-element2">
+                <li
+                  id="instructor-services-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("instructor-services-list-element2")}
                 </li>
-                <li id="instructor-services-list-element3">
+                <li
+                  id="instructor-services-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("instructor-services-list-element3")}
                 </li>
-                <li id="instructor-services-list-element4">
+                <li
+                  id="instructor-services-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("instructor-services-list-element4")}
                 </li>
-                <li id="instructor-services-list-element5">
+                <li
+                  id="instructor-services-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("instructor-services-list-element5")}
                 </li>
-                <li id="instructor-services-list-element6">
+                <li
+                  id="instructor-services-list-element6"
+                  className="pl-3 -indent-3"
+                >
                   {t("instructor-services-list-element6")}
                 </li>
               </ul>
@@ -135,115 +143,106 @@ export default async function SchoolSupportPage({
                 <Users className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="general-assistance-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("general-assistance-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="general-assistance-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="general-assistance-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-assistance-list-element1")}
                 </li>
-                <li id="general-assistance-list-element2">
+                <li
+                  id="general-assistance-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-assistance-list-element2")}
                 </li>
-                <li id="general-assistance-list-element3">
+                <li
+                  id="general-assistance-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-assistance-list-element3")}
                 </li>
-                <li id="general-assistance-list-element4">
+                <li
+                  id="general-assistance-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-assistance-list-element4")}
                 </li>
-                <li id="general-assistance-list-element5">
+                <li
+                  id="general-assistance-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-assistance-list-element5")}
                 </li>
-                <li id="general-assistance-list-element6">
+                <li
+                  id="general-assistance-list-element6"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-assistance-list-element6")}
                 </li>
-                <li id="general-assistance-list-element7">
+                <li
+                  id="general-assistance-list-element7"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-assistance-list-element7")}
                 </li>
               </ul>
             </div>
-
-            {/* <div className="bg-gradient-to-br from-teal-900/30 via-card/30 to-emerald-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <MapPin className="h-6 w-6 text-teal-400" />
-                <h3 id="beach-management-title" className="text-lg font-semibold text-teal-200">
-                  Beach Management
-                </h3>
-              </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="beach-management-list-element1">• Beach setup and organization</li>
-                <li id="beach-management-list-element2">• Safety area management</li>
-                <li id="beach-management-list-element3">• Equipment handling and storage</li>
-                <li id="beach-management-list-element4">• Weather condition assessment</li>
-                <li id="beach-management-list-element5">• Emergency response protocols</li>
-              </ul>
-            </div> */}
 
             <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Clock className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="flexible-scheduling-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("flexible-scheduling-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="flexible-scheduling-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="flexible-scheduling-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("flexible-scheduling-list-element1")}
                 </li>
-                <li id="flexible-scheduling-list-element2">
+                <li
+                  id="flexible-scheduling-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("flexible-scheduling-list-element2")}
                 </li>
-                <li id="flexible-scheduling-list-element3">
+                <li
+                  id="flexible-scheduling-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("flexible-scheduling-list-element3")}
                 </li>
-                <li id="flexible-scheduling-list-element4">
+                <li
+                  id="flexible-scheduling-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("flexible-scheduling-list-element4")}
                 </li>
-                <li id="flexible-scheduling-list-element5">
+                <li
+                  id="flexible-scheduling-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("flexible-scheduling-list-element5")}
                 </li>
-                <li id="flexible-scheduling-list-element6">
+                <li
+                  id="flexible-scheduling-list-element6"
+                  className="pl-3 -indent-3"
+                >
                   {t("flexible-scheduling-list-element6")}
                 </li>
               </ul>
             </div>
-
-            {/* <div className="bg-gradient-to-br from-blue-900/40 via-card/40 to-cyan-900/40 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <Award className="h-6 w-6 text-blue-400" />
-                <h3 id="certifications-title" className="text-lg font-semibold text-blue-200">
-                  Certifications
-                </h3>
-              </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="certifications-list-element1">• VDWS instructor certification</li>
-                <li id="certifications-list-element2">• First aid certified</li>
-                <li id="certifications-list-element3">• Water safety trained</li>
-                <li id="certifications-list-element4">• Insurance coverage available</li>
-                <li id="certifications-list-element5">• Professional liability protection</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-cyan-900/45 via-card/45 to-teal-900/45 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <Shield className="h-6 w-6 text-cyan-400" />
-                <h3 id="safety-focus-title" className="text-lg font-semibold text-cyan-200">
-                  Safety Focus
-                </h3>
-              </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="safety-focus-list-element1">• Risk assessment and management</li>
-                <li id="safety-focus-list-element2">• Safety equipment inspection</li>
-                <li id="safety-focus-list-element3">• Weather monitoring and alerts</li>
-                <li id="safety-focus-list-element4">• Emergency action plans</li>
-                <li id="safety-focus-list-element5">• Student safety protocols</li>
-              </ul>
-            </div> */}
           </div>
 
           {/* Contact Section */}
