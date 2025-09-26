@@ -102,25 +102,25 @@ export default async function SimulationPrototypingPage({
                 <Radiation className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="advanced-simulation-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("advanced-simulation-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-simulation-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="advanced-simulation-list-element1" className="pl-3 -indent-3">
                   {t("advanced-simulation-list-element1")}
                 </li>
-                <li id="advanced-simulation-list-element2">
+                <li id="advanced-simulation-list-element2" className="pl-3 -indent-3">
                   {t("advanced-simulation-list-element2")}
                 </li>
-                <li id="advanced-simulation-list-element3">
+                <li id="advanced-simulation-list-element3" className="pl-3 -indent-3">
                   {t("advanced-simulation-list-element3")}
                 </li>
-                <li id="advanced-simulation-list-element4">
+                <li id="advanced-simulation-list-element4" className="pl-3 -indent-3">
                   {t("advanced-simulation-list-element4")}
                 </li>
-                <li id="advanced-simulation-list-element5">
+                <li id="advanced-simulation-list-element5" className="pl-3 -indent-3">
                   {t("advanced-simulation-list-element5")}
                 </li>
               </ul>
@@ -131,25 +131,25 @@ export default async function SimulationPrototypingPage({
                 <Box className="h-6 w-6 text-teal-400" />
                 <h3
                   id="3d-prototyping-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("3d-prototyping-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="3d-prototyping-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="3d-prototyping-list-element1" className="pl-3 -indent-3">
                   {t("3d-prototyping-list-element1")}
                 </li>
-                <li id="3d-prototyping-list-element2">
+                <li id="3d-prototyping-list-element2" className="pl-3 -indent-3">
                   {t("3d-prototyping-list-element2")}
                 </li>
-                <li id="3d-prototyping-list-element3">
+                <li id="3d-prototyping-list-element3" className="pl-3 -indent-3">
                   {t("3d-prototyping-list-element3")}
                 </li>
-                <li id="3d-prototyping-list-element4">
+                <li id="3d-prototyping-list-element4" className="pl-3 -indent-3">
                   {t("3d-prototyping-list-element4")}
                 </li>
-                <li id="3d-prototyping-list-element5">
+                <li id="3d-prototyping-list-element5" className="pl-3 -indent-3">
                   {t("3d-prototyping-list-element5")}
                 </li>
               </ul>
@@ -160,25 +160,25 @@ export default async function SimulationPrototypingPage({
                 <Cpu className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="analogy-models-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("analogy-models-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="analogy-models-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="analogy-models-list-element1" className="pl-3 -indent-3">
                   {t("analogy-models-list-element1")}
                 </li>
-                <li id="analogy-models-list-element2">
+                <li id="analogy-models-list-element2" className="pl-3 -indent-3">
                   {t("analogy-models-list-element2")}
                 </li>
-                <li id="analogy-models-list-element3">
+                <li id="analogy-models-list-element3" className="pl-3 -indent-3">
                   {t("analogy-models-list-element3")}
                 </li>
-                <li id="analogy-models-list-element4">
+                <li id="analogy-models-list-element4" className="pl-3 -indent-3">
                   {t("analogy-models-list-element4")}
                 </li>
-                <li id="analogy-models-list-element5">
+                <li id="analogy-models-list-element5" className="pl-3 -indent-3">
                   {t("analogy-models-list-element5")}
                 </li>
               </ul>
@@ -189,25 +189,25 @@ export default async function SimulationPrototypingPage({
                 <Users className="h-6 w-6 text-blue-400" />
                 <h3
                   id="expert-network-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("expert-network-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="expert-network-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="expert-network-list-element1" className="pl-3 -indent-3">
                   {t("expert-network-list-element1")}
                 </li>
-                <li id="expert-network-list-element2">
+                <li id="expert-network-list-element2" className="pl-3 -indent-3">
                   {t("expert-network-list-element2")}
                 </li>
-                <li id="expert-network-list-element3">
+                <li id="expert-network-list-element3" className="pl-3 -indent-3">
                   {t("expert-network-list-element3")}
                 </li>
-                <li id="expert-network-list-element4">
+                <li id="expert-network-list-element4" className="pl-3 -indent-3">
                   {t("expert-network-list-element4")}
                 </li>
-                <li id="expert-network-list-element5">
+                <li id="expert-network-list-element5" className="pl-3 -indent-3">
                   {t("expert-network-list-element5")}
                 </li>
               </ul>

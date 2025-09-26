@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import {
@@ -101,25 +100,40 @@ export default async function ProcessAssessmentPage({
                 <FileSearch className="h-6 w-6 text-blue-400" />
                 <h3
                   id="process-evaluation-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("process-evaluation-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-evaluation-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="process-evaluation-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-evaluation-list-element1")}
                 </li>
-                <li id="process-evaluation-list-element2">
+                <li
+                  id="process-evaluation-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-evaluation-list-element2")}
                 </li>
-                <li id="process-evaluation-list-element3">
+                <li
+                  id="process-evaluation-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-evaluation-list-element3")}
                 </li>
-                <li id="process-evaluation-list-element4">
+                <li
+                  id="process-evaluation-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-evaluation-list-element4")}
                 </li>
-                <li id="process-evaluation-list-element5">
+                <li
+                  id="process-evaluation-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-evaluation-list-element5")}
                 </li>
               </ul>
@@ -130,25 +144,40 @@ export default async function ProcessAssessmentPage({
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="bottleneck-identification-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("bottleneck-identification-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="bottleneck-identification-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="bottleneck-identification-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("bottleneck-identification-list-element1")}
                 </li>
-                <li id="bottleneck-identification-list-element2">
+                <li
+                  id="bottleneck-identification-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("bottleneck-identification-list-element2")}
                 </li>
-                <li id="bottleneck-identification-list-element3">
+                <li
+                  id="bottleneck-identification-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("bottleneck-identification-list-element3")}
                 </li>
-                <li id="bottleneck-identification-list-element4">
+                <li
+                  id="bottleneck-identification-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("bottleneck-identification-list-element4")}
                 </li>
-                <li id="bottleneck-identification-list-element5">
+                <li
+                  id="bottleneck-identification-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("bottleneck-identification-list-element5")}
                 </li>
               </ul>
@@ -159,25 +188,40 @@ export default async function ProcessAssessmentPage({
                 <Zap className="h-6 w-6 text-teal-400" />
                 <h3
                   id="improvement-opportunities-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("improvement-opportunities-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="improvement-opportunities-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="improvement-opportunities-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("improvement-opportunities-list-element1")}
                 </li>
-                <li id="improvement-opportunities-list-element2">
+                <li
+                  id="improvement-opportunities-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("improvement-opportunities-list-element2")}
                 </li>
-                <li id="improvement-opportunities-list-element3">
+                <li
+                  id="improvement-opportunities-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("improvement-opportunities-list-element3")}
                 </li>
-                <li id="improvement-opportunities-list-element4">
+                <li
+                  id="improvement-opportunities-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("improvement-opportunities-list-element4")}
                 </li>
-                <li id="improvement-opportunities-list-element5">
+                <li
+                  id="improvement-opportunities-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("improvement-opportunities-list-element5")}
                 </li>
               </ul>
@@ -188,25 +232,40 @@ export default async function ProcessAssessmentPage({
                 <Eye className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="best-practice-benchmarking-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("best-practice-benchmarking-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="best-practice-benchmarking-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="best-practice-benchmarking-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("best-practice-benchmarking-list-element1")}
                 </li>
-                <li id="best-practice-benchmarking-list-element2">
+                <li
+                  id="best-practice-benchmarking-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("best-practice-benchmarking-list-element2")}
                 </li>
-                <li id="best-practice-benchmarking-list-element3">
+                <li
+                  id="best-practice-benchmarking-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("best-practice-benchmarking-list-element3")}
                 </li>
-                <li id="best-practice-benchmarking-list-element4">
+                <li
+                  id="best-practice-benchmarking-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("best-practice-benchmarking-list-element4")}
                 </li>
-                <li id="best-practice-benchmarking-list-element5">
+                <li
+                  id="best-practice-benchmarking-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("best-practice-benchmarking-list-element5")}
                 </li>
               </ul>

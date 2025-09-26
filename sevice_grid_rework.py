@@ -249,7 +249,7 @@ class PageModernizer:
 
 def main() -> None:
     """Main function to execute the script."""
-    base_directory = Path("/home/steff/Projects/ongoing/Kite_engineer/website_kite-engineer/app/[locale]/kite")
+    base_directory = Path("/home/steff/Projects/ongoing/Kite_engineer/website_kite-engineer/app/[locale]/engineer")
     
     if not base_directory.exists():
         logger.error(f"Base directory not found: {base_directory}")

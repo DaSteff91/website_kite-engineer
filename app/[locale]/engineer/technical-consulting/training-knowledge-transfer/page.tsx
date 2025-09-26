@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import {
@@ -101,25 +100,40 @@ export default async function TrainingKnowledgeTransferPage({
                 <GraduationCap className="h-6 w-6 text-blue-400" />
                 <h3
                   id="technical-training-programs-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("technical-training-programs-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technical-training-programs-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="technical-training-programs-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-training-programs-list-element1")}
                 </li>
-                <li id="technical-training-programs-list-element2">
+                <li
+                  id="technical-training-programs-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-training-programs-list-element2")}
                 </li>
-                <li id="technical-training-programs-list-element3">
+                <li
+                  id="technical-training-programs-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-training-programs-list-element3")}
                 </li>
-                <li id="technical-training-programs-list-element4">
+                <li
+                  id="technical-training-programs-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-training-programs-list-element4")}
                 </li>
-                <li id="technical-training-programs-list-element5">
+                <li
+                  id="technical-training-programs-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-training-programs-list-element5")}
                 </li>
               </ul>
@@ -130,25 +144,40 @@ export default async function TrainingKnowledgeTransferPage({
                 <Users className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="knowledge-sharing-workshops-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("knowledge-sharing-workshops-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="knowledge-sharing-workshops-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="knowledge-sharing-workshops-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("knowledge-sharing-workshops-list-element1")}
                 </li>
-                <li id="knowledge-sharing-workshops-list-element2">
+                <li
+                  id="knowledge-sharing-workshops-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("knowledge-sharing-workshops-list-element2")}
                 </li>
-                <li id="knowledge-sharing-workshops-list-element3">
+                <li
+                  id="knowledge-sharing-workshops-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("knowledge-sharing-workshops-list-element3")}
                 </li>
-                <li id="knowledge-sharing-workshops-list-element4">
+                <li
+                  id="knowledge-sharing-workshops-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("knowledge-sharing-workshops-list-element4")}
                 </li>
-                <li id="knowledge-sharing-workshops-list-element5">
+                <li
+                  id="knowledge-sharing-workshops-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("knowledge-sharing-workshops-list-element5")}
                 </li>
               </ul>
@@ -159,25 +188,40 @@ export default async function TrainingKnowledgeTransferPage({
                 <BookOpen className="h-6 w-6 text-teal-400" />
                 <h3
                   id="documentation-development-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("documentation-development-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="documentation-development-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="documentation-development-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("documentation-development-list-element1")}
                 </li>
-                <li id="documentation-development-list-element2">
+                <li
+                  id="documentation-development-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("documentation-development-list-element2")}
                 </li>
-                <li id="documentation-development-list-element3">
+                <li
+                  id="documentation-development-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("documentation-development-list-element3")}
                 </li>
-                <li id="documentation-development-list-element4">
+                <li
+                  id="documentation-development-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("documentation-development-list-element4")}
                 </li>
-                <li id="documentation-development-list-element5">
+                <li
+                  id="documentation-development-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("documentation-development-list-element5")}
                 </li>
               </ul>
@@ -188,25 +232,40 @@ export default async function TrainingKnowledgeTransferPage({
                 <Target className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="skill-development-planning-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("skill-development-planning-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="skill-development-planning-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="skill-development-planning-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("skill-development-planning-list-element1")}
                 </li>
-                <li id="skill-development-planning-list-element2">
+                <li
+                  id="skill-development-planning-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("skill-development-planning-list-element2")}
                 </li>
-                <li id="skill-development-planning-list-element3">
+                <li
+                  id="skill-development-planning-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("skill-development-planning-list-element3")}
                 </li>
-                <li id="skill-development-planning-list-element4">
+                <li
+                  id="skill-development-planning-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("skill-development-planning-list-element4")}
                 </li>
-                <li id="skill-development-planning-list-element5">
+                <li
+                  id="skill-development-planning-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("skill-development-planning-list-element5")}
                 </li>
               </ul>

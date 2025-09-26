@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import {
@@ -101,25 +100,40 @@ export default async function TechnicalResearchPage({
                 <Microscope className="h-6 w-6 text-blue-400" />
                 <h3
                   id="technology-landscape-analysis-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("technology-landscape-analysis-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technology-landscape-analysis-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="technology-landscape-analysis-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-landscape-analysis-list-element1")}
                 </li>
-                <li id="technology-landscape-analysis-list-element2">
+                <li
+                  id="technology-landscape-analysis-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-landscape-analysis-list-element2")}
                 </li>
-                <li id="technology-landscape-analysis-list-element3">
+                <li
+                  id="technology-landscape-analysis-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-landscape-analysis-list-element3")}
                 </li>
-                <li id="technology-landscape-analysis-list-element4">
+                <li
+                  id="technology-landscape-analysis-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-landscape-analysis-list-element4")}
                 </li>
-                <li id="technology-landscape-analysis-list-element5">
+                <li
+                  id="technology-landscape-analysis-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-landscape-analysis-list-element5")}
                 </li>
               </ul>
@@ -130,25 +144,40 @@ export default async function TechnicalResearchPage({
                 <BookOpen className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="literature-review-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("literature-review-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="literature-review-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="literature-review-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("literature-review-list-element1")}
                 </li>
-                <li id="literature-review-list-element2">
+                <li
+                  id="literature-review-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("literature-review-list-element2")}
                 </li>
-                <li id="literature-review-list-element3">
+                <li
+                  id="literature-review-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("literature-review-list-element3")}
                 </li>
-                <li id="literature-review-list-element4">
+                <li
+                  id="literature-review-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("literature-review-list-element4")}
                 </li>
-                <li id="literature-review-list-element5">
+                <li
+                  id="literature-review-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("literature-review-list-element5")}
                 </li>
               </ul>
@@ -159,25 +188,40 @@ export default async function TechnicalResearchPage({
                 <Search className="h-6 w-6 text-teal-400" />
                 <h3
                   id="patent-ip-research-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("patent-ip-research-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="patent-ip-research-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="patent-ip-research-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("patent-ip-research-list-element1")}
                 </li>
-                <li id="patent-ip-research-list-element2">
+                <li
+                  id="patent-ip-research-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("patent-ip-research-list-element2")}
                 </li>
-                <li id="patent-ip-research-list-element3">
+                <li
+                  id="patent-ip-research-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("patent-ip-research-list-element3")}
                 </li>
-                <li id="patent-ip-research-list-element4">
+                <li
+                  id="patent-ip-research-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("patent-ip-research-list-element4")}
                 </li>
-                <li id="patent-ip-research-list-element5">
+                <li
+                  id="patent-ip-research-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("patent-ip-research-list-element5")}
                 </li>
               </ul>
@@ -188,25 +232,40 @@ export default async function TechnicalResearchPage({
                 <FileText className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="technical-feasibility-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("technical-feasibility-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technical-feasibility-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="technical-feasibility-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-feasibility-list-element1")}
                 </li>
-                <li id="technical-feasibility-list-element2">
+                <li
+                  id="technical-feasibility-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-feasibility-list-element2")}
                 </li>
-                <li id="technical-feasibility-list-element3">
+                <li
+                  id="technical-feasibility-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-feasibility-list-element3")}
                 </li>
-                <li id="technical-feasibility-list-element4">
+                <li
+                  id="technical-feasibility-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-feasibility-list-element4")}
                 </li>
-                <li id="technical-feasibility-list-element5">
+                <li
+                  id="technical-feasibility-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("technical-feasibility-list-element5")}
                 </li>
               </ul>

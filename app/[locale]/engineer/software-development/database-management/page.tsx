@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import {
@@ -101,25 +100,40 @@ export default async function DatabaseManagementPage({
                 <Database className="h-6 w-6 text-teal-400" />
                 <h3
                   id="rdbms-design-implementation-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("rdbms-design-implementation-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="rdbms-design-implementation-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="rdbms-design-implementation-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("rdbms-design-implementation-list-element1")}
                 </li>
-                <li id="rdbms-design-implementation-list-element2">
+                <li
+                  id="rdbms-design-implementation-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("rdbms-design-implementation-list-element2")}
                 </li>
-                <li id="rdbms-design-implementation-list-element3">
+                <li
+                  id="rdbms-design-implementation-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("rdbms-design-implementation-list-element3")}
                 </li>
-                <li id="rdbms-design-implementation-list-element4">
+                <li
+                  id="rdbms-design-implementation-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("rdbms-design-implementation-list-element4")}
                 </li>
-                <li id="rdbms-design-implementation-list-element5">
+                <li
+                  id="rdbms-design-implementation-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("rdbms-design-implementation-list-element5")}
                 </li>
               </ul>
@@ -130,25 +144,40 @@ export default async function DatabaseManagementPage({
                 <FileSpreadsheet className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="data-migration-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("data-migration-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="data-migration-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="data-migration-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("data-migration-list-element1")}
                 </li>
-                <li id="data-migration-list-element2">
+                <li
+                  id="data-migration-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("data-migration-list-element2")}
                 </li>
-                <li id="data-migration-list-element3">
+                <li
+                  id="data-migration-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("data-migration-list-element3")}
                 </li>
-                <li id="data-migration-list-element4">
+                <li
+                  id="data-migration-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("data-migration-list-element4")}
                 </li>
-                <li id="data-migration-list-element5">
+                <li
+                  id="data-migration-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("data-migration-list-element5")}
                 </li>
               </ul>
@@ -159,25 +188,40 @@ export default async function DatabaseManagementPage({
                 <Shield className="h-6 w-6 text-blue-400" />
                 <h3
                   id="backup-recovery-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("backup-recovery-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="backup-recovery-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="backup-recovery-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("backup-recovery-list-element1")}
                 </li>
-                <li id="backup-recovery-list-element2">
+                <li
+                  id="backup-recovery-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("backup-recovery-list-element2")}
                 </li>
-                <li id="backup-recovery-list-element3">
+                <li
+                  id="backup-recovery-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("backup-recovery-list-element3")}
                 </li>
-                <li id="backup-recovery-list-element4">
+                <li
+                  id="backup-recovery-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("backup-recovery-list-element4")}
                 </li>
-                <li id="backup-recovery-list-element5">
+                <li
+                  id="backup-recovery-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("backup-recovery-list-element5")}
                 </li>
               </ul>
@@ -188,25 +232,40 @@ export default async function DatabaseManagementPage({
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="analytics-reporting-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("analytics-reporting-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="analytics-reporting-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="analytics-reporting-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("analytics-reporting-list-element1")}
                 </li>
-                <li id="analytics-reporting-list-element2">
+                <li
+                  id="analytics-reporting-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("analytics-reporting-list-element2")}
                 </li>
-                <li id="analytics-reporting-list-element3">
+                <li
+                  id="analytics-reporting-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("analytics-reporting-list-element3")}
                 </li>
-                <li id="analytics-reporting-list-element4">
+                <li
+                  id="analytics-reporting-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("analytics-reporting-list-element4")}
                 </li>
-                <li id="analytics-reporting-list-element5">
+                <li
+                  id="analytics-reporting-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("analytics-reporting-list-element5")}
                 </li>
               </ul>

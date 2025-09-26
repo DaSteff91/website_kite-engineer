@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import {
@@ -101,25 +100,40 @@ export default async function CompetitorAnalysisPage({
                 <UserRoundCheck className="h-6 w-6 text-blue-400" />
                 <h3
                   id="competitor-technology-analysis-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("competitor-technology-analysis-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="competitor-technology-analysis-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="competitor-technology-analysis-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitor-technology-analysis-list-element1")}
                 </li>
-                <li id="competitor-technology-analysis-list-element2">
+                <li
+                  id="competitor-technology-analysis-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitor-technology-analysis-list-element2")}
                 </li>
-                <li id="competitor-technology-analysis-list-element3">
+                <li
+                  id="competitor-technology-analysis-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitor-technology-analysis-list-element3")}
                 </li>
-                <li id="competitor-technology-analysis-list-element4">
+                <li
+                  id="competitor-technology-analysis-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitor-technology-analysis-list-element4")}
                 </li>
-                <li id="competitor-technology-analysis-list-element5">
+                <li
+                  id="competitor-technology-analysis-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitor-technology-analysis-list-element5")}
                 </li>
               </ul>
@@ -130,25 +144,40 @@ export default async function CompetitorAnalysisPage({
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="market-positioning-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("market-positioning-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="market-positioning-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="market-positioning-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("market-positioning-list-element1")}
                 </li>
-                <li id="market-positioning-list-element2">
+                <li
+                  id="market-positioning-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("market-positioning-list-element2")}
                 </li>
-                <li id="market-positioning-list-element3">
+                <li
+                  id="market-positioning-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("market-positioning-list-element3")}
                 </li>
-                <li id="market-positioning-list-element4">
+                <li
+                  id="market-positioning-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("market-positioning-list-element4")}
                 </li>
-                <li id="market-positioning-list-element5">
+                <li
+                  id="market-positioning-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("market-positioning-list-element5")}
                 </li>
               </ul>
@@ -159,25 +188,40 @@ export default async function CompetitorAnalysisPage({
                 <Search className="h-6 w-6 text-teal-400" />
                 <h3
                   id="strategic-intelligence-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("strategic-intelligence-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="strategic-intelligence-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="strategic-intelligence-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("strategic-intelligence-list-element1")}
                 </li>
-                <li id="strategic-intelligence-list-element2">
+                <li
+                  id="strategic-intelligence-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("strategic-intelligence-list-element2")}
                 </li>
-                <li id="strategic-intelligence-list-element3">
+                <li
+                  id="strategic-intelligence-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("strategic-intelligence-list-element3")}
                 </li>
-                <li id="strategic-intelligence-list-element4">
+                <li
+                  id="strategic-intelligence-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("strategic-intelligence-list-element4")}
                 </li>
-                <li id="strategic-intelligence-list-element5">
+                <li
+                  id="strategic-intelligence-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("strategic-intelligence-list-element5")}
                 </li>
               </ul>
@@ -188,25 +232,40 @@ export default async function CompetitorAnalysisPage({
                 <Target className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="competitive-advantage-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("competitive-advantage-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="competitive-advantage-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="competitive-advantage-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitive-advantage-list-element1")}
                 </li>
-                <li id="competitive-advantage-list-element2">
+                <li
+                  id="competitive-advantage-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitive-advantage-list-element2")}
                 </li>
-                <li id="competitive-advantage-list-element3">
+                <li
+                  id="competitive-advantage-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitive-advantage-list-element3")}
                 </li>
-                <li id="competitive-advantage-list-element4">
+                <li
+                  id="competitive-advantage-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitive-advantage-list-element4")}
                 </li>
-                <li id="competitive-advantage-list-element5">
+                <li
+                  id="competitive-advantage-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("competitive-advantage-list-element5")}
                 </li>
               </ul>

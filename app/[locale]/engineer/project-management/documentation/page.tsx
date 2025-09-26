@@ -102,25 +102,25 @@ export default async function DocumentationPage({
                 <GitBranch className="h-6 w-6 text-teal-400" />
                 <h3
                   id="version-control-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("version-control-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="version-control-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="version-control-list-element1" className="pl-3 -indent-3">
                   {t("version-control-list-element1")}
                 </li>
-                <li id="version-control-list-element2">
+                <li id="version-control-list-element2" className="pl-3 -indent-3">
                   {t("version-control-list-element2")}
                 </li>
-                <li id="version-control-list-element3">
+                <li id="version-control-list-element3" className="pl-3 -indent-3">
                   {t("version-control-list-element3")}
                 </li>
-                <li id="version-control-list-element4">
+                <li id="version-control-list-element4" className="pl-3 -indent-3">
                   {t("version-control-list-element4")}
                 </li>
-                <li id="version-control-list-element5">
+                <li id="version-control-list-element5" className="pl-3 -indent-3">
                   {t("version-control-list-element5")}
                 </li>
               </ul>
@@ -131,25 +131,25 @@ export default async function DocumentationPage({
                 <Share2 className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="collaborative-workspace-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("collaborative-workspace-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="collaborative-workspace-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="collaborative-workspace-list-element1" className="pl-3 -indent-3">
                   {t("collaborative-workspace-list-element1")}
                 </li>
-                <li id="collaborative-workspace-list-element2">
+                <li id="collaborative-workspace-list-element2" className="pl-3 -indent-3">
                   {t("collaborative-workspace-list-element2")}
                 </li>
-                <li id="collaborative-workspace-list-element3">
+                <li id="collaborative-workspace-list-element3" className="pl-3 -indent-3">
                   {t("collaborative-workspace-list-element3")}
                 </li>
-                <li id="collaborative-workspace-list-element4">
+                <li id="collaborative-workspace-list-element4" className="pl-3 -indent-3">
                   {t("collaborative-workspace-list-element4")}
                 </li>
-                <li id="collaborative-workspace-list-element5">
+                <li id="collaborative-workspace-list-element5" className="pl-3 -indent-3">
                   {t("collaborative-workspace-list-element5")}
                 </li>
               </ul>
@@ -160,25 +160,25 @@ export default async function DocumentationPage({
                 <FileText className="h-6 w-6 text-blue-400" />
                 <h3
                   id="knowledge-management-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("knowledge-management-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="knowledge-management-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="knowledge-management-list-element1" className="pl-3 -indent-3">
                   {t("knowledge-management-list-element1")}
                 </li>
-                <li id="knowledge-management-list-element2">
+                <li id="knowledge-management-list-element2" className="pl-3 -indent-3">
                   {t("knowledge-management-list-element2")}
                 </li>
-                <li id="knowledge-management-list-element3">
+                <li id="knowledge-management-list-element3" className="pl-3 -indent-3">
                   {t("knowledge-management-list-element3")}
                 </li>
-                <li id="knowledge-management-list-element4">
+                <li id="knowledge-management-list-element4" className="pl-3 -indent-3">
                   {t("knowledge-management-list-element4")}
                 </li>
-                <li id="knowledge-management-list-element5">
+                <li id="knowledge-management-list-element5" className="pl-3 -indent-3">
                   {t("knowledge-management-list-element5")}
                 </li>
               </ul>
@@ -189,25 +189,25 @@ export default async function DocumentationPage({
                 <Users className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="team-synergy-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("team-synergy-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="team-synergy-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="team-synergy-list-element1" className="pl-3 -indent-3">
                   {t("team-synergy-list-element1")}
                 </li>
-                <li id="team-synergy-list-element2">
+                <li id="team-synergy-list-element2" className="pl-3 -indent-3">
                   {t("team-synergy-list-element2")}
                 </li>
-                <li id="team-synergy-list-element3">
+                <li id="team-synergy-list-element3" className="pl-3 -indent-3">
                   {t("team-synergy-list-element3")}
                 </li>
-                <li id="team-synergy-list-element4">
+                <li id="team-synergy-list-element4" className="pl-3 -indent-3">
                   {t("team-synergy-list-element4")}
                 </li>
-                <li id="team-synergy-list-element5">
+                <li id="team-synergy-list-element5" className="pl-3 -indent-3">
                   {t("team-synergy-list-element5")}
                 </li>
               </ul>

@@ -102,25 +102,25 @@ export default async function TimelineManagementPage({
                 <Clock1 className="h-6 w-6 text-blue-400" />
                 <h3
                   id="critical-path-analysis-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("critical-path-analysis-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="critical-path-analysis-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="critical-path-analysis-list-element1" className="pl-3 -indent-3">
                   {t("critical-path-analysis-list-element1")}
                 </li>
-                <li id="critical-path-analysis-list-element2">
+                <li id="critical-path-analysis-list-element2" className="pl-3 -indent-3">
                   {t("critical-path-analysis-list-element2")}
                 </li>
-                <li id="critical-path-analysis-list-element3">
+                <li id="critical-path-analysis-list-element3" className="pl-3 -indent-3">
                   {t("critical-path-analysis-list-element3")}
                 </li>
-                <li id="critical-path-analysis-list-element4">
+                <li id="critical-path-analysis-list-element4" className="pl-3 -indent-3">
                   {t("critical-path-analysis-list-element4")}
                 </li>
-                <li id="critical-path-analysis-list-element5">
+                <li id="critical-path-analysis-list-element5" className="pl-3 -indent-3">
                   {t("critical-path-analysis-list-element5")}
                 </li>
               </ul>
@@ -131,25 +131,25 @@ export default async function TimelineManagementPage({
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="schedule-optimization-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("schedule-optimization-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="schedule-optimization-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="schedule-optimization-list-element1" className="pl-3 -indent-3">
                   {t("schedule-optimization-list-element1")}
                 </li>
-                <li id="schedule-optimization-list-element2">
+                <li id="schedule-optimization-list-element2" className="pl-3 -indent-3">
                   {t("schedule-optimization-list-element2")}
                 </li>
-                <li id="schedule-optimization-list-element3">
+                <li id="schedule-optimization-list-element3" className="pl-3 -indent-3">
                   {t("schedule-optimization-list-element3")}
                 </li>
-                <li id="schedule-optimization-list-element4">
+                <li id="schedule-optimization-list-element4" className="pl-3 -indent-3">
                   {t("schedule-optimization-list-element4")}
                 </li>
-                <li id="schedule-optimization-list-element5">
+                <li id="schedule-optimization-list-element5" className="pl-3 -indent-3">
                   {t("schedule-optimization-list-element5")}
                 </li>
               </ul>
@@ -160,25 +160,25 @@ export default async function TimelineManagementPage({
                 <GitMerge className="h-6 w-6 text-teal-400" />
                 <h3
                   id="dependency-management-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("dependency-management-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="dependency-management-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="dependency-management-list-element1" className="pl-3 -indent-3">
                   {t("dependency-management-list-element1")}
                 </li>
-                <li id="dependency-management-list-element2">
+                <li id="dependency-management-list-element2" className="pl-3 -indent-3">
                   {t("dependency-management-list-element2")}
                 </li>
-                <li id="dependency-management-list-element3">
+                <li id="dependency-management-list-element3" className="pl-3 -indent-3">
                   {t("dependency-management-list-element3")}
                 </li>
-                <li id="dependency-management-list-element4">
+                <li id="dependency-management-list-element4" className="pl-3 -indent-3">
                   {t("dependency-management-list-element4")}
                 </li>
-                <li id="dependency-management-list-element5">
+                <li id="dependency-management-list-element5" className="pl-3 -indent-3">
                   {t("dependency-management-list-element5")}
                 </li>
               </ul>
@@ -189,25 +189,25 @@ export default async function TimelineManagementPage({
                 <Zap className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="timeline-recovery-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("timeline-recovery-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="timeline-recovery-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="timeline-recovery-list-element1" className="pl-3 -indent-3">
                   {t("timeline-recovery-list-element1")}
                 </li>
-                <li id="timeline-recovery-list-element2">
+                <li id="timeline-recovery-list-element2" className="pl-3 -indent-3">
                   {t("timeline-recovery-list-element2")}
                 </li>
-                <li id="timeline-recovery-list-element3">
+                <li id="timeline-recovery-list-element3" className="pl-3 -indent-3">
                   {t("timeline-recovery-list-element3")}
                 </li>
-                <li id="timeline-recovery-list-element4">
+                <li id="timeline-recovery-list-element4" className="pl-3 -indent-3">
                   {t("timeline-recovery-list-element4")}
                 </li>
-                <li id="timeline-recovery-list-element5">
+                <li id="timeline-recovery-list-element5" className="pl-3 -indent-3">
                   {t("timeline-recovery-list-element5")}
                 </li>
               </ul>

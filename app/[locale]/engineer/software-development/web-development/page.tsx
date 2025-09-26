@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import {
@@ -101,25 +100,40 @@ export default async function WebDevelopmentPage({
                 <Server className="h-6 w-6 text-teal-400" />
                 <h3
                   id="server-domain-setup-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("server-domain-setup-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="server-domain-setup-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="server-domain-setup-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("server-domain-setup-list-element1")}
                 </li>
-                <li id="server-domain-setup-list-element2">
+                <li
+                  id="server-domain-setup-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("server-domain-setup-list-element2")}
                 </li>
-                <li id="server-domain-setup-list-element3">
+                <li
+                  id="server-domain-setup-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("server-domain-setup-list-element3")}
                 </li>
-                <li id="server-domain-setup-list-element4">
+                <li
+                  id="server-domain-setup-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("server-domain-setup-list-element4")}
                 </li>
-                <li id="server-domain-setup-list-element5">
+                <li
+                  id="server-domain-setup-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("server-domain-setup-list-element5")}
                 </li>
               </ul>
@@ -130,25 +144,40 @@ export default async function WebDevelopmentPage({
                 <MonitorCheck className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="website-development-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("website-development-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="website-development-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="website-development-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("website-development-list-element1")}
                 </li>
-                <li id="website-development-list-element2">
+                <li
+                  id="website-development-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("website-development-list-element2")}
                 </li>
-                <li id="website-development-list-element3">
+                <li
+                  id="website-development-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("website-development-list-element3")}
                 </li>
-                <li id="website-development-list-element4">
+                <li
+                  id="website-development-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("website-development-list-element4")}
                 </li>
-                <li id="website-development-list-element5">
+                <li
+                  id="website-development-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("website-development-list-element5")}
                 </li>
               </ul>
@@ -159,25 +188,40 @@ export default async function WebDevelopmentPage({
                 <Cloud className="h-6 w-6 text-blue-400" />
                 <h3
                   id="self-hosted-solutions-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("self-hosted-solutions-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="self-hosted-solutions-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="self-hosted-solutions-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("self-hosted-solutions-list-element1")}
                 </li>
-                <li id="self-hosted-solutions-list-element2">
+                <li
+                  id="self-hosted-solutions-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("self-hosted-solutions-list-element2")}
                 </li>
-                <li id="self-hosted-solutions-list-element3">
+                <li
+                  id="self-hosted-solutions-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("self-hosted-solutions-list-element3")}
                 </li>
-                <li id="self-hosted-solutions-list-element4">
+                <li
+                  id="self-hosted-solutions-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("self-hosted-solutions-list-element4")}
                 </li>
-                <li id="self-hosted-solutions-list-element5">
+                <li
+                  id="self-hosted-solutions-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("self-hosted-solutions-list-element5")}
                 </li>
               </ul>
@@ -188,25 +232,40 @@ export default async function WebDevelopmentPage({
                 <Shield className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="maintenance-security-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("maintenance-security-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="maintenance-security-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="maintenance-security-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("maintenance-security-list-element1")}
                 </li>
-                <li id="maintenance-security-list-element2">
+                <li
+                  id="maintenance-security-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("maintenance-security-list-element2")}
                 </li>
-                <li id="maintenance-security-list-element3">
+                <li
+                  id="maintenance-security-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("maintenance-security-list-element3")}
                 </li>
-                <li id="maintenance-security-list-element4">
+                <li
+                  id="maintenance-security-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("maintenance-security-list-element4")}
                 </li>
-                <li id="maintenance-security-list-element5">
+                <li
+                  id="maintenance-security-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("maintenance-security-list-element5")}
                 </li>
               </ul>

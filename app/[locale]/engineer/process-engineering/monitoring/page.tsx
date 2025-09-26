@@ -93,25 +93,25 @@ export default async function MonitoringPage({ params }: MonitoringPageProps) {
                 <Target className="h-6 w-6 text-blue-400" />
                 <h3
                   id="parameter-selection-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("parameter-selection-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="parameter-selection-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="parameter-selection-list-element1" className="pl-3 -indent-3">
                   {t("parameter-selection-list-element1")}
                 </li>
-                <li id="parameter-selection-list-element2">
+                <li id="parameter-selection-list-element2" className="pl-3 -indent-3">
                   {t("parameter-selection-list-element2")}
                 </li>
-                <li id="parameter-selection-list-element3">
+                <li id="parameter-selection-list-element3" className="pl-3 -indent-3">
                   {t("parameter-selection-list-element3")}
                 </li>
-                <li id="parameter-selection-list-element4">
+                <li id="parameter-selection-list-element4" className="pl-3 -indent-3">
                   {t("parameter-selection-list-element4")}
                 </li>
-                <li id="parameter-selection-list-element5">
+                <li id="parameter-selection-list-element5" className="pl-3 -indent-3">
                   {t("parameter-selection-list-element5")}
                 </li>
               </ul>
@@ -122,25 +122,25 @@ export default async function MonitoringPage({ params }: MonitoringPageProps) {
                 <Bell className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="alarm-notification-systems-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("alarm-notification-systems-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="alarm-notification-systems-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="alarm-notification-systems-list-element1" className="pl-3 -indent-3">
                   {t("alarm-notification-systems-list-element1")}
                 </li>
-                <li id="alarm-notification-systems-list-element2">
+                <li id="alarm-notification-systems-list-element2" className="pl-3 -indent-3">
                   {t("alarm-notification-systems-list-element2")}
                 </li>
-                <li id="alarm-notification-systems-list-element3">
+                <li id="alarm-notification-systems-list-element3" className="pl-3 -indent-3">
                   {t("alarm-notification-systems-list-element3")}
                 </li>
-                <li id="alarm-notification-systems-list-element4">
+                <li id="alarm-notification-systems-list-element4" className="pl-3 -indent-3">
                   {t("alarm-notification-systems-list-element4")}
                 </li>
-                <li id="alarm-notification-systems-list-element5">
+                <li id="alarm-notification-systems-list-element5" className="pl-3 -indent-3">
                   {t("alarm-notification-systems-list-element5")}
                 </li>
               </ul>
@@ -151,25 +151,25 @@ export default async function MonitoringPage({ params }: MonitoringPageProps) {
                 <TrendingUp className="h-6 w-6 text-teal-400" />
                 <h3
                   id="trend-analysis-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("trend-analysis-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="trend-analysis-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="trend-analysis-list-element1" className="pl-3 -indent-3">
                   {t("trend-analysis-list-element1")}
                 </li>
-                <li id="trend-analysis-list-element2">
+                <li id="trend-analysis-list-element2" className="pl-3 -indent-3">
                   {t("trend-analysis-list-element2")}
                 </li>
-                <li id="trend-analysis-list-element3">
+                <li id="trend-analysis-list-element3" className="pl-3 -indent-3">
                   {t("trend-analysis-list-element3")}
                 </li>
-                <li id="trend-analysis-list-element4">
+                <li id="trend-analysis-list-element4" className="pl-3 -indent-3">
                   {t("trend-analysis-list-element4")}
                 </li>
-                <li id="trend-analysis-list-element5">
+                <li id="trend-analysis-list-element5" className="pl-3 -indent-3">
                   {t("trend-analysis-list-element5")}
                 </li>
               </ul>
@@ -180,25 +180,25 @@ export default async function MonitoringPage({ params }: MonitoringPageProps) {
                 <BarChart3 className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="performance-benchmarking-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("performance-benchmarking-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="performance-benchmarking-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="performance-benchmarking-list-element1" className="pl-3 -indent-3">
                   {t("performance-benchmarking-list-element1")}
                 </li>
-                <li id="performance-benchmarking-list-element2">
+                <li id="performance-benchmarking-list-element2" className="pl-3 -indent-3">
                   {t("performance-benchmarking-list-element2")}
                 </li>
-                <li id="performance-benchmarking-list-element3">
+                <li id="performance-benchmarking-list-element3" className="pl-3 -indent-3">
                   {t("performance-benchmarking-list-element3")}
                 </li>
-                <li id="performance-benchmarking-list-element4">
+                <li id="performance-benchmarking-list-element4" className="pl-3 -indent-3">
                   {t("performance-benchmarking-list-element4")}
                 </li>
-                <li id="performance-benchmarking-list-element5">
+                <li id="performance-benchmarking-list-element5" className="pl-3 -indent-3">
                   {t("performance-benchmarking-list-element5")}
                 </li>
               </ul>

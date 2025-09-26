@@ -102,25 +102,25 @@ export default async function ProjectSetupPage({
                 <FolderKanban className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="project-scope-definition-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("project-scope-definition-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="project-scope-definition-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="project-scope-definition-list-element1" className="pl-3 -indent-3">
                   {t("project-scope-definition-list-element1")}
                 </li>
-                <li id="project-scope-definition-list-element2">
+                <li id="project-scope-definition-list-element2" className="pl-3 -indent-3">
                   {t("project-scope-definition-list-element2")}
                 </li>
-                <li id="project-scope-definition-list-element3">
+                <li id="project-scope-definition-list-element3" className="pl-3 -indent-3">
                   {t("project-scope-definition-list-element3")}
                 </li>
-                <li id="project-scope-definition-list-element4">
+                <li id="project-scope-definition-list-element4" className="pl-3 -indent-3">
                   {t("project-scope-definition-list-element4")}
                 </li>
-                <li id="project-scope-definition-list-element5">
+                <li id="project-scope-definition-list-element5" className="pl-3 -indent-3">
                   {t("project-scope-definition-list-element5")}
                 </li>
               </ul>
@@ -131,25 +131,25 @@ export default async function ProjectSetupPage({
                 <FileText className="h-6 w-6 text-blue-400" />
                 <h3
                   id="work-breakdown-structure-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("work-breakdown-structure-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="work-breakdown-structure-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="work-breakdown-structure-list-element1" className="pl-3 -indent-3">
                   {t("work-breakdown-structure-list-element1")}
                 </li>
-                <li id="work-breakdown-structure-list-element2">
+                <li id="work-breakdown-structure-list-element2" className="pl-3 -indent-3">
                   {t("work-breakdown-structure-list-element2")}
                 </li>
-                <li id="work-breakdown-structure-list-element3">
+                <li id="work-breakdown-structure-list-element3" className="pl-3 -indent-3">
                   {t("work-breakdown-structure-list-element3")}
                 </li>
-                <li id="work-breakdown-structure-list-element4">
+                <li id="work-breakdown-structure-list-element4" className="pl-3 -indent-3">
                   {t("work-breakdown-structure-list-element4")}
                 </li>
-                <li id="work-breakdown-structure-list-element5">
+                <li id="work-breakdown-structure-list-element5" className="pl-3 -indent-3">
                   {t("work-breakdown-structure-list-element5")}
                 </li>
               </ul>
@@ -160,25 +160,25 @@ export default async function ProjectSetupPage({
                 <Users className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="resource-planning-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("resource-planning-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="resource-planning-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="resource-planning-list-element1" className="pl-3 -indent-3">
                   {t("resource-planning-list-element1")}
                 </li>
-                <li id="resource-planning-list-element2">
+                <li id="resource-planning-list-element2" className="pl-3 -indent-3">
                   {t("resource-planning-list-element2")}
                 </li>
-                <li id="resource-planning-list-element3">
+                <li id="resource-planning-list-element3" className="pl-3 -indent-3">
                   {t("resource-planning-list-element3")}
                 </li>
-                <li id="resource-planning-list-element4">
+                <li id="resource-planning-list-element4" className="pl-3 -indent-3">
                   {t("resource-planning-list-element4")}
                 </li>
-                <li id="resource-planning-list-element5">
+                <li id="resource-planning-list-element5" className="pl-3 -indent-3">
                   {t("resource-planning-list-element5")}
                 </li>
               </ul>
@@ -189,25 +189,25 @@ export default async function ProjectSetupPage({
                 <Target className="h-6 w-6 text-teal-400" />
                 <h3
                   id="risk-assessment-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("risk-assessment-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="risk-assessment-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="risk-assessment-list-element1" className="pl-3 -indent-3">
                   {t("risk-assessment-list-element1")}
                 </li>
-                <li id="risk-assessment-list-element2">
+                <li id="risk-assessment-list-element2" className="pl-3 -indent-3">
                   {t("risk-assessment-list-element2")}
                 </li>
-                <li id="risk-assessment-list-element3">
+                <li id="risk-assessment-list-element3" className="pl-3 -indent-3">
                   {t("risk-assessment-list-element3")}
                 </li>
-                <li id="risk-assessment-list-element4">
+                <li id="risk-assessment-list-element4" className="pl-3 -indent-3">
                   {t("risk-assessment-list-element4")}
                 </li>
-                <li id="risk-assessment-list-element5">
+                <li id="risk-assessment-list-element5" className="pl-3 -indent-3">
                   {t("risk-assessment-list-element5")}
                 </li>
               </ul>

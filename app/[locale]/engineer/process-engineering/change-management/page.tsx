@@ -102,25 +102,25 @@ export default async function ChangeManagementPage({
                 <RefreshCw className="h-6 w-6 text-blue-400" />
                 <h3
                   id="process-change-documentation-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("process-change-documentation-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-change-documentation-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="process-change-documentation-list-element1" className="pl-3 -indent-3">
                   {t("process-change-documentation-list-element1")}
                 </li>
-                <li id="process-change-documentation-list-element2">
+                <li id="process-change-documentation-list-element2" className="pl-3 -indent-3">
                   {t("process-change-documentation-list-element2")}
                 </li>
-                <li id="process-change-documentation-list-element3">
+                <li id="process-change-documentation-list-element3" className="pl-3 -indent-3">
                   {t("process-change-documentation-list-element3")}
                 </li>
-                <li id="process-change-documentation-list-element4">
+                <li id="process-change-documentation-list-element4" className="pl-3 -indent-3">
                   {t("process-change-documentation-list-element4")}
                 </li>
-                <li id="process-change-documentation-list-element5">
+                <li id="process-change-documentation-list-element5" className="pl-3 -indent-3">
                   {t("process-change-documentation-list-element5")}
                 </li>
               </ul>
@@ -131,25 +131,25 @@ export default async function ChangeManagementPage({
                 <FileText className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="release-gate-management-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("release-gate-management-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="release-gate-management-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="release-gate-management-list-element1" className="pl-3 -indent-3">
                   {t("release-gate-management-list-element1")}
                 </li>
-                <li id="release-gate-management-list-element2">
+                <li id="release-gate-management-list-element2" className="pl-3 -indent-3">
                   {t("release-gate-management-list-element2")}
                 </li>
-                <li id="release-gate-management-list-element3">
+                <li id="release-gate-management-list-element3" className="pl-3 -indent-3">
                   {t("release-gate-management-list-element3")}
                 </li>
-                <li id="release-gate-management-list-element4">
+                <li id="release-gate-management-list-element4" className="pl-3 -indent-3">
                   {t("release-gate-management-list-element4")}
                 </li>
-                <li id="release-gate-management-list-element5">
+                <li id="release-gate-management-list-element5" className="pl-3 -indent-3">
                   {t("release-gate-management-list-element5")}
                 </li>
               </ul>
@@ -160,25 +160,25 @@ export default async function ChangeManagementPage({
                 <GitBranch className="h-6 w-6 text-teal-400" />
                 <h3
                   id="traceability-systems-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("traceability-systems-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="traceability-systems-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="traceability-systems-list-element1" className="pl-3 -indent-3">
                   {t("traceability-systems-list-element1")}
                 </li>
-                <li id="traceability-systems-list-element2">
+                <li id="traceability-systems-list-element2" className="pl-3 -indent-3">
                   {t("traceability-systems-list-element2")}
                 </li>
-                <li id="traceability-systems-list-element3">
+                <li id="traceability-systems-list-element3" className="pl-3 -indent-3">
                   {t("traceability-systems-list-element3")}
                 </li>
-                <li id="traceability-systems-list-element4">
+                <li id="traceability-systems-list-element4" className="pl-3 -indent-3">
                   {t("traceability-systems-list-element4")}
                 </li>
-                <li id="traceability-systems-list-element5">
+                <li id="traceability-systems-list-element5" className="pl-3 -indent-3">
                   {t("traceability-systems-list-element5")}
                 </li>
               </ul>
@@ -189,25 +189,25 @@ export default async function ChangeManagementPage({
                 <Shield className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="compliance-audit-support-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("compliance-audit-support-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="compliance-audit-support-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="compliance-audit-support-list-element1" className="pl-3 -indent-3">
                   {t("compliance-audit-support-list-element1")}
                 </li>
-                <li id="compliance-audit-support-list-element2">
+                <li id="compliance-audit-support-list-element2" className="pl-3 -indent-3">
                   {t("compliance-audit-support-list-element2")}
                 </li>
-                <li id="compliance-audit-support-list-element3">
+                <li id="compliance-audit-support-list-element3" className="pl-3 -indent-3">
                   {t("compliance-audit-support-list-element3")}
                 </li>
-                <li id="compliance-audit-support-list-element4">
+                <li id="compliance-audit-support-list-element4" className="pl-3 -indent-3">
                   {t("compliance-audit-support-list-element4")}
                 </li>
-                <li id="compliance-audit-support-list-element5">
+                <li id="compliance-audit-support-list-element5" className="pl-3 -indent-3">
                   {t("compliance-audit-support-list-element5")}
                 </li>
               </ul>

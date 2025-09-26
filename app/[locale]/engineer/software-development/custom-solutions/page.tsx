@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import {
@@ -101,25 +100,40 @@ export default async function CustomSolutionsPage({
                 <PocketKnife className="h-6 w-6 text-teal-400" />
                 <h3
                   id="tailored-applications-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("tailored-applications-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="tailored-applications-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="tailored-applications-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("tailored-applications-list-element1")}
                 </li>
-                <li id="tailored-applications-list-element2">
+                <li
+                  id="tailored-applications-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("tailored-applications-list-element2")}
                 </li>
-                <li id="tailored-applications-list-element3">
+                <li
+                  id="tailored-applications-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("tailored-applications-list-element3")}
                 </li>
-                <li id="tailored-applications-list-element4">
+                <li
+                  id="tailored-applications-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("tailored-applications-list-element4")}
                 </li>
-                <li id="tailored-applications-list-element5">
+                <li
+                  id="tailored-applications-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("tailored-applications-list-element5")}
                 </li>
               </ul>
@@ -130,25 +144,40 @@ export default async function CustomSolutionsPage({
                 <Code className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="custom-scripts-tools-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("custom-scripts-tools-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="custom-scripts-tools-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="custom-scripts-tools-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("custom-scripts-tools-list-element1")}
                 </li>
-                <li id="custom-scripts-tools-list-element2">
+                <li
+                  id="custom-scripts-tools-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("custom-scripts-tools-list-element2")}
                 </li>
-                <li id="custom-scripts-tools-list-element3">
+                <li
+                  id="custom-scripts-tools-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("custom-scripts-tools-list-element3")}
                 </li>
-                <li id="custom-scripts-tools-list-element4">
+                <li
+                  id="custom-scripts-tools-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("custom-scripts-tools-list-element4")}
                 </li>
-                <li id="custom-scripts-tools-list-element5">
+                <li
+                  id="custom-scripts-tools-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("custom-scripts-tools-list-element5")}
                 </li>
               </ul>
@@ -159,25 +188,40 @@ export default async function CustomSolutionsPage({
                 <Layers className="h-6 w-6 text-blue-400" />
                 <h3
                   id="system-integration-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("system-integration-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="system-integration-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="system-integration-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("system-integration-list-element1")}
                 </li>
-                <li id="system-integration-list-element2">
+                <li
+                  id="system-integration-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("system-integration-list-element2")}
                 </li>
-                <li id="system-integration-list-element3">
+                <li
+                  id="system-integration-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("system-integration-list-element3")}
                 </li>
-                <li id="system-integration-list-element4">
+                <li
+                  id="system-integration-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("system-integration-list-element4")}
                 </li>
-                <li id="system-integration-list-element5">
+                <li
+                  id="system-integration-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("system-integration-list-element5")}
                 </li>
               </ul>
@@ -188,25 +232,40 @@ export default async function CustomSolutionsPage({
                 <Zap className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="containerization-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("containerization-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="containerization-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="containerization-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("containerization-list-element1")}
                 </li>
-                <li id="containerization-list-element2">
+                <li
+                  id="containerization-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("containerization-list-element2")}
                 </li>
-                <li id="containerization-list-element3">
+                <li
+                  id="containerization-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("containerization-list-element3")}
                 </li>
-                <li id="containerization-list-element4">
+                <li
+                  id="containerization-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("containerization-list-element4")}
                 </li>
-                <li id="containerization-list-element5">
+                <li
+                  id="containerization-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("containerization-list-element5")}
                 </li>
               </ul>

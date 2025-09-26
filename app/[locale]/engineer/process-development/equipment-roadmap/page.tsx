@@ -116,21 +116,36 @@ export default async function EquipmentRoadmapPage({
                   more than one year. In more detail I can help you with the
                   following topics:
                 </p>
-                <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
-                  <li id="details-of-the-roadmap-services-list-element1">
+                <ul className="text-muted-foreground list-outside sm:pl-5 space-y-3 sm:space-y-4 text-md sm:text-base list-none pl-0">
+                  <li
+                    id="details-of-the-roadmap-services-list-element1"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element1")}
                   </li>
-                  <li id="details-of-the-roadmap-services-list-element2">
+                  <li
+                    id="details-of-the-roadmap-services-list-element2"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element2")}
                   </li>
-                  <li id="details-of-the-roadmap-services-list-element3">
+                  <li
+                    id="details-of-the-roadmap-services-list-element3"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element3")}
                   </li>
-                  <li id="details-of-the-roadmap-services-list-element4">
+                  <li
+                    id="details-of-the-roadmap-services-list-element4"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element4")}
                   </li>
 
-                  <li id="details-of-the-roadmap-services-list-element5">
+                  <li
+                    id="details-of-the-roadmap-services-list-element5"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element5")}
                   </li>
                 </ul>
@@ -144,25 +159,40 @@ export default async function EquipmentRoadmapPage({
                 <MapIcon className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="technology-assessment-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("technology-assessment-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="technology-assessment-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="technology-assessment-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-assessment-list-element1")}
                 </li>
-                <li id="technology-assessment-list-element2">
+                <li
+                  id="technology-assessment-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-assessment-list-element2")}
                 </li>
-                <li id="technology-assessment-list-element3">
+                <li
+                  id="technology-assessment-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-assessment-list-element3")}
                 </li>
-                <li id="technology-assessment-list-element4">
+                <li
+                  id="technology-assessment-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-assessment-list-element4")}
                 </li>
-                <li id="technology-assessment-list-element5">
+                <li
+                  id="technology-assessment-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("technology-assessment-list-element5")}
                 </li>
               </ul>
@@ -173,25 +203,40 @@ export default async function EquipmentRoadmapPage({
                 <TrendingUp className="h-6 w-6 text-teal-400" />
                 <h3
                   id="equipment-evolution-planning-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("equipment-evolution-planning-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="equipment-evolution-planning-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="equipment-evolution-planning-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-evolution-planning-list-element1")}
                 </li>
-                <li id="equipment-evolution-planning-list-element2">
+                <li
+                  id="equipment-evolution-planning-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-evolution-planning-list-element2")}
                 </li>
-                <li id="equipment-evolution-planning-list-element3">
+                <li
+                  id="equipment-evolution-planning-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-evolution-planning-list-element3")}
                 </li>
-                <li id="equipment-evolution-planning-list-element4">
+                <li
+                  id="equipment-evolution-planning-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-evolution-planning-list-element4")}
                 </li>
-                <li id="equipment-evolution-planning-list-element5">
+                <li
+                  id="equipment-evolution-planning-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-evolution-planning-list-element5")}
                 </li>
               </ul>
@@ -202,25 +247,40 @@ export default async function EquipmentRoadmapPage({
                 <Shield className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="risk-mitigation-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("risk-mitigation-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="risk-mitigation-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="risk-mitigation-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("risk-mitigation-list-element1")}
                 </li>
-                <li id="risk-mitigation-list-element2">
+                <li
+                  id="risk-mitigation-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("risk-mitigation-list-element2")}
                 </li>
-                <li id="risk-mitigation-list-element3">
+                <li
+                  id="risk-mitigation-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("risk-mitigation-list-element3")}
                 </li>
-                <li id="risk-mitigation-list-element4">
+                <li
+                  id="risk-mitigation-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("risk-mitigation-list-element4")}
                 </li>
-                <li id="risk-mitigation-list-element5">
+                <li
+                  id="risk-mitigation-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("risk-mitigation-list-element5")}
                 </li>
               </ul>
@@ -231,25 +291,40 @@ export default async function EquipmentRoadmapPage({
                 <Target className="h-6 w-6 text-blue-400" />
                 <h3
                   id="investment-prioritization-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("investment-prioritization-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="investment-prioritization-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="investment-prioritization-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("investment-prioritization-list-element1")}
                 </li>
-                <li id="investment-prioritization-list-element2">
+                <li
+                  id="investment-prioritization-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("investment-prioritization-list-element2")}
                 </li>
-                <li id="investment-prioritization-list-element3">
+                <li
+                  id="investment-prioritization-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("investment-prioritization-list-element3")}
                 </li>
-                <li id="investment-prioritization-list-element4">
+                <li
+                  id="investment-prioritization-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("investment-prioritization-list-element4")}
                 </li>
-                <li id="investment-prioritization-list-element5">
+                <li
+                  id="investment-prioritization-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("investment-prioritization-list-element5")}
                 </li>
               </ul>

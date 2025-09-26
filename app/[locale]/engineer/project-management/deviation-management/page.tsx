@@ -102,25 +102,25 @@ export default async function DeviationManagementPage({
                 <Navigation2Off className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="change-request-management-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("change-request-management-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="change-request-management-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="change-request-management-list-element1" className="pl-3 -indent-3">
                   {t("change-request-management-list-element1")}
                 </li>
-                <li id="change-request-management-list-element2">
+                <li id="change-request-management-list-element2" className="pl-3 -indent-3">
                   {t("change-request-management-list-element2")}
                 </li>
-                <li id="change-request-management-list-element3">
+                <li id="change-request-management-list-element3" className="pl-3 -indent-3">
                   {t("change-request-management-list-element3")}
                 </li>
-                <li id="change-request-management-list-element4">
+                <li id="change-request-management-list-element4" className="pl-3 -indent-3">
                   {t("change-request-management-list-element4")}
                 </li>
-                <li id="change-request-management-list-element5">
+                <li id="change-request-management-list-element5" className="pl-3 -indent-3">
                   {t("change-request-management-list-element5")}
                 </li>
               </ul>
@@ -131,25 +131,25 @@ export default async function DeviationManagementPage({
                 <Users className="h-6 w-6 text-blue-400" />
                 <h3
                   id="stakeholder-communication-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("stakeholder-communication-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="stakeholder-communication-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="stakeholder-communication-list-element1" className="pl-3 -indent-3">
                   {t("stakeholder-communication-list-element1")}
                 </li>
-                <li id="stakeholder-communication-list-element2">
+                <li id="stakeholder-communication-list-element2" className="pl-3 -indent-3">
                   {t("stakeholder-communication-list-element2")}
                 </li>
-                <li id="stakeholder-communication-list-element3">
+                <li id="stakeholder-communication-list-element3" className="pl-3 -indent-3">
                   {t("stakeholder-communication-list-element3")}
                 </li>
-                <li id="stakeholder-communication-list-element4">
+                <li id="stakeholder-communication-list-element4" className="pl-3 -indent-3">
                   {t("stakeholder-communication-list-element4")}
                 </li>
-                <li id="stakeholder-communication-list-element5">
+                <li id="stakeholder-communication-list-element5" className="pl-3 -indent-3">
                   {t("stakeholder-communication-list-element5")}
                 </li>
               </ul>
@@ -160,25 +160,25 @@ export default async function DeviationManagementPage({
                 <AlertTriangle className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="recovery-planning-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("recovery-planning-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="recovery-planning-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="recovery-planning-list-element1" className="pl-3 -indent-3">
                   {t("recovery-planning-list-element1")}
                 </li>
-                <li id="recovery-planning-list-element2">
+                <li id="recovery-planning-list-element2" className="pl-3 -indent-3">
                   {t("recovery-planning-list-element2")}
                 </li>
-                <li id="recovery-planning-list-element3">
+                <li id="recovery-planning-list-element3" className="pl-3 -indent-3">
                   {t("recovery-planning-list-element3")}
                 </li>
-                <li id="recovery-planning-list-element4">
+                <li id="recovery-planning-list-element4" className="pl-3 -indent-3">
                   {t("recovery-planning-list-element4")}
                 </li>
-                <li id="recovery-planning-list-element5">
+                <li id="recovery-planning-list-element5" className="pl-3 -indent-3">
                   {t("recovery-planning-list-element5")}
                 </li>
               </ul>
@@ -189,25 +189,25 @@ export default async function DeviationManagementPage({
                 <FileText className="h-6 w-6 text-teal-400" />
                 <h3
                   id="lessons-learned-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("lessons-learned-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="lessons-learned-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="lessons-learned-list-element1" className="pl-3 -indent-3">
                   {t("lessons-learned-list-element1")}
                 </li>
-                <li id="lessons-learned-list-element2">
+                <li id="lessons-learned-list-element2" className="pl-3 -indent-3">
                   {t("lessons-learned-list-element2")}
                 </li>
-                <li id="lessons-learned-list-element3">
+                <li id="lessons-learned-list-element3" className="pl-3 -indent-3">
                   {t("lessons-learned-list-element3")}
                 </li>
-                <li id="lessons-learned-list-element4">
+                <li id="lessons-learned-list-element4" className="pl-3 -indent-3">
                   {t("lessons-learned-list-element4")}
                 </li>
-                <li id="lessons-learned-list-element5">
+                <li id="lessons-learned-list-element5" className="pl-3 -indent-3">
                   {t("lessons-learned-list-element5")}
                 </li>
               </ul>

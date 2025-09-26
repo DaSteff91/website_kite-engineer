@@ -102,25 +102,25 @@ export default async function ProcessOptimizationPage({
                 <Gauge className="h-6 w-6 text-blue-400" />
                 <h3
                   id="six-sigma-methodologies-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("six-sigma-methodologies-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="six-sigma-methodologies-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="six-sigma-methodologies-list-element1" className="pl-3 -indent-3">
                   {t("six-sigma-methodologies-list-element1")}
                 </li>
-                <li id="six-sigma-methodologies-list-element2">
+                <li id="six-sigma-methodologies-list-element2" className="pl-3 -indent-3">
                   {t("six-sigma-methodologies-list-element2")}
                 </li>
-                <li id="six-sigma-methodologies-list-element3">
+                <li id="six-sigma-methodologies-list-element3" className="pl-3 -indent-3">
                   {t("six-sigma-methodologies-list-element3")}
                 </li>
-                <li id="six-sigma-methodologies-list-element4">
+                <li id="six-sigma-methodologies-list-element4" className="pl-3 -indent-3">
                   {t("six-sigma-methodologies-list-element4")}
                 </li>
-                <li id="six-sigma-methodologies-list-element5">
+                <li id="six-sigma-methodologies-list-element5" className="pl-3 -indent-3">
                   {t("six-sigma-methodologies-list-element5")}
                 </li>
               </ul>
@@ -131,25 +131,25 @@ export default async function ProcessOptimizationPage({
                 <TrendingUp className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="lean-manufacturing-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("lean-manufacturing-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="lean-manufacturing-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="lean-manufacturing-list-element1" className="pl-3 -indent-3">
                   {t("lean-manufacturing-list-element1")}
                 </li>
-                <li id="lean-manufacturing-list-element2">
+                <li id="lean-manufacturing-list-element2" className="pl-3 -indent-3">
                   {t("lean-manufacturing-list-element2")}
                 </li>
-                <li id="lean-manufacturing-list-element3">
+                <li id="lean-manufacturing-list-element3" className="pl-3 -indent-3">
                   {t("lean-manufacturing-list-element3")}
                 </li>
-                <li id="lean-manufacturing-list-element4">
+                <li id="lean-manufacturing-list-element4" className="pl-3 -indent-3">
                   {t("lean-manufacturing-list-element4")}
                 </li>
-                <li id="lean-manufacturing-list-element5">
+                <li id="lean-manufacturing-list-element5" className="pl-3 -indent-3">
                   {t("lean-manufacturing-list-element5")}
                 </li>
               </ul>
@@ -160,25 +160,25 @@ export default async function ProcessOptimizationPage({
                 <BarChart3 className="h-6 w-6 text-teal-400" />
                 <h3
                   id="design-of-experiments-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("design-of-experiments-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="design-of-experiments-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="design-of-experiments-list-element1" className="pl-3 -indent-3">
                   {t("design-of-experiments-list-element1")}
                 </li>
-                <li id="design-of-experiments-list-element2">
+                <li id="design-of-experiments-list-element2" className="pl-3 -indent-3">
                   {t("design-of-experiments-list-element2")}
                 </li>
-                <li id="design-of-experiments-list-element3">
+                <li id="design-of-experiments-list-element3" className="pl-3 -indent-3">
                   {t("design-of-experiments-list-element3")}
                 </li>
-                <li id="design-of-experiments-list-element4">
+                <li id="design-of-experiments-list-element4" className="pl-3 -indent-3">
                   {t("design-of-experiments-list-element4")}
                 </li>
-                <li id="design-of-experiments-list-element5">
+                <li id="design-of-experiments-list-element5" className="pl-3 -indent-3">
                   {t("design-of-experiments-list-element5")}
                 </li>
               </ul>
@@ -189,25 +189,25 @@ export default async function ProcessOptimizationPage({
                 <Target className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="yield-enhancement-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("yield-enhancement-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="yield-enhancement-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="yield-enhancement-list-element1" className="pl-3 -indent-3">
                   {t("yield-enhancement-list-element1")}
                 </li>
-                <li id="yield-enhancement-list-element2">
+                <li id="yield-enhancement-list-element2" className="pl-3 -indent-3">
                   {t("yield-enhancement-list-element2")}
                 </li>
-                <li id="yield-enhancement-list-element3">
+                <li id="yield-enhancement-list-element3" className="pl-3 -indent-3">
                   {t("yield-enhancement-list-element3")}
                 </li>
-                <li id="yield-enhancement-list-element4">
+                <li id="yield-enhancement-list-element4" className="pl-3 -indent-3">
                   {t("yield-enhancement-list-element4")}
                 </li>
-                <li id="yield-enhancement-list-element5">
+                <li id="yield-enhancement-list-element5" className="pl-3 -indent-3">
                   {t("yield-enhancement-list-element5")}
                 </li>
               </ul>

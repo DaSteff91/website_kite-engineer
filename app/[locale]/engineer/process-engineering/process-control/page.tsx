@@ -21,6 +21,23 @@ interface ProcessControlPageProps {
   params: Promise<{ locale: string }>;
 }
 
+const richTextHandlers = {
+  strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
+  em: (chunks: React.ReactNode) => <em>{chunks}</em>,
+  abbr: (chunks: React.ReactNode) => {
+    if (Array.isArray(chunks) && chunks.length > 1) {
+      const text = chunks[0];
+      const titleElement = chunks[1] as any;
+      const title = titleElement?.props?.children || "";
+      return <abbr title={title}>{text}</abbr>;
+    }
+    return <abbr>{chunks}</abbr>;
+  },
+  "0": (chunks: React.ReactNode) => chunks,
+  u: (chunks: React.ReactNode) => <u>{chunks}</u>,
+  s: (chunks: React.ReactNode) => <s>{chunks}</s>,
+};
+
 export default async function ProcessControlPage({
   params,
 }: ProcessControlPageProps) {
@@ -101,34 +118,58 @@ export default async function ProcessControlPage({
                 <SlidersHorizontal className="h-6 w-6 text-blue-400" />
                 <h3
                   id="advanced-process-control-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("advanced-process-control-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-process-control-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="advanced-process-control-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-process-control-list-element1")}
                 </li>
-                <li id="advanced-process-control-list-element2">
+                <li
+                  id="advanced-process-control-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-process-control-list-element2")}
                 </li>
-                <li id="advanced-process-control-list-element3">
+                <li
+                  id="advanced-process-control-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-process-control-list-element3")}
                 </li>
-                <li id="advanced-process-control-list-element4">
+                <li
+                  id="advanced-process-control-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-process-control-list-element4")}
                 </li>
-                <li id="advanced-process-control-list-element5">
+                <li
+                  id="advanced-process-control-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-process-control-list-element5")}
                 </li>
-                <li id="advanced-process-control-list-element6">
+                <li
+                  id="advanced-process-control-list-element6"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-process-control-list-element6")}
                 </li>
-                <li id="advanced-process-control-list-element7">
+                <li
+                  id="advanced-process-control-list-element7"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-process-control-list-element7")}
                 </li>
-                <li id="advanced-process-control-list-element8">
+                <li
+                  id="advanced-process-control-list-element8"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-process-control-list-element8")}
                 </li>
               </ul>
@@ -139,34 +180,58 @@ export default async function ProcessControlPage({
                 <BarChart3 className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="statistical-process-control-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("statistical-process-control-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="statistical-process-control-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="statistical-process-control-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("statistical-process-control-list-element1")}
                 </li>
-                <li id="statistical-process-control-list-element2">
+                <li
+                  id="statistical-process-control-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("statistical-process-control-list-element2")}
                 </li>
-                <li id="statistical-process-control-list-element3">
+                <li
+                  id="statistical-process-control-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("statistical-process-control-list-element3")}
                 </li>
-                <li id="statistical-process-control-list-element4">
+                <li
+                  id="statistical-process-control-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("statistical-process-control-list-element4")}
                 </li>
-                <li id="statistical-process-control-list-element5">
+                <li
+                  id="statistical-process-control-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("statistical-process-control-list-element5")}
                 </li>
-                <li id="statistical-process-control-list-element6">
+                <li
+                  id="statistical-process-control-list-element6"
+                  className="pl-3 -indent-3"
+                >
                   {t("statistical-process-control-list-element6")}
                 </li>
-                <li id="statistical-process-control-list-element7">
+                <li
+                  id="statistical-process-control-list-element7"
+                  className="pl-3 -indent-3"
+                >
                   {t("statistical-process-control-list-element7")}
                 </li>
-                <li id="statistical-process-control-list-element8">
+                <li
+                  id="statistical-process-control-list-element8"
+                  className="pl-3 -indent-3"
+                >
                   {t("statistical-process-control-list-element8")}
                 </li>
               </ul>
@@ -177,22 +242,34 @@ export default async function ProcessControlPage({
                 <BaggageClaim className="h-6 w-6 text-teal-400" />
                 <h3
                   id="custom-solutions-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("custom-solutions-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="custom-solutions-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="custom-solutions-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("custom-solutions-list-element1")}
                 </li>
-                <li id="custom-solutions-list-element2">
+                <li
+                  id="custom-solutions-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("custom-solutions-list-element2")}
                 </li>
-                <li id="custom-solutions-list-element3">
+                <li
+                  id="custom-solutions-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("custom-solutions-list-element3")}
                 </li>
-                <li id="custom-solutions-list-element4">
+                <li
+                  id="custom-solutions-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("custom-solutions-list-element4")}
                 </li>
               </ul>
@@ -201,16 +278,16 @@ export default async function ProcessControlPage({
             {/* <div className="bg-gradient-to-br from-emerald-900/35 via-card/35 to-blue-900/35 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Target className="h-6 w-6 text-emerald-400" />
-                <h3 id="ai-powered-solutions-title" className="text-lg font-semibold text-emerald-200">
+                <h3 id="ai-powered-solutions-title" className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200">
                   AI-Powered Solutions
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="ai-powered-solutions-list-element1">• AI training for failure detection</li>
-                <li id="ai-powered-solutions-list-element2">• Intelligent alarm systems</li>
-                <li id="ai-powered-solutions-list-element3">• Predictive maintenance models</li>
-                <li id="ai-powered-solutions-list-element4">• Automated anomaly detection</li>
-                <li id="ai-powered-solutions-list-element5">• Smart process optimization</li>
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li id="ai-powered-solutions-list-element1" className="pl-3 -indent-3">• AI training for failure detection</li>
+                <li id="ai-powered-solutions-list-element2" className="pl-3 -indent-3">• Intelligent alarm systems</li>
+                <li id="ai-powered-solutions-list-element3" className="pl-3 -indent-3">• Predictive maintenance models</li>
+                <li id="ai-powered-solutions-list-element4" className="pl-3 -indent-3">• Automated anomaly detection</li>
+                <li id="ai-powered-solutions-list-element5" className="pl-3 -indent-3">• Smart process optimization</li>
               </ul>
             </div> */}
           </div>

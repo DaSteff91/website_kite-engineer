@@ -115,21 +115,36 @@ export default async function ProcessDesignPage({
                   more than one year. In more detail I can help you with the
                   following topics:
                 </p>
-                <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
-                  <li id="details-of-the-roadmap-services-list-element1">
+                <ul className="text-muted-foreground list-outside sm:pl-5 space-y-3 sm:space-y-4 text-md sm:text-base list-none pl-0">
+                  <li
+                    id="details-of-the-roadmap-services-list-element1"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element1")}
                   </li>
-                  <li id="details-of-the-roadmap-services-list-element2">
+                  <li
+                    id="details-of-the-roadmap-services-list-element2"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element2")}
                   </li>
-                  <li id="details-of-the-roadmap-services-list-element3">
+                  <li
+                    id="details-of-the-roadmap-services-list-element3"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element3")}
                   </li>
-                  <li id="details-of-the-roadmap-services-list-element4">
+                  <li
+                    id="details-of-the-roadmap-services-list-element4"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element4")}
                   </li>
 
-                  <li id="details-of-the-roadmap-services-list-element5">
+                  <li
+                    id="details-of-the-roadmap-services-list-element5"
+                    className="pl-3 -indent-3"
+                  >
                     {t("details-of-the-roadmap-services-list-element5")}
                   </li>
                 </ul>
@@ -144,25 +159,40 @@ export default async function ProcessDesignPage({
                 <WandSparkles className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="process-flow-optimization-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("process-flow-optimization-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-flow-optimization-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="process-flow-optimization-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-flow-optimization-list-element1")}
                 </li>
-                <li id="process-flow-optimization-list-element2">
+                <li
+                  id="process-flow-optimization-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-flow-optimization-list-element2")}
                 </li>
-                <li id="process-flow-optimization-list-element3">
+                <li
+                  id="process-flow-optimization-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-flow-optimization-list-element3")}
                 </li>
-                <li id="process-flow-optimization-list-element4">
+                <li
+                  id="process-flow-optimization-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-flow-optimization-list-element4")}
                 </li>
-                <li id="process-flow-optimization-list-element5">
+                <li
+                  id="process-flow-optimization-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-flow-optimization-list-element5")}
                 </li>
               </ul>
@@ -173,25 +203,40 @@ export default async function ProcessDesignPage({
                 <Layout className="h-6 w-6 text-teal-400" />
                 <h3
                   id="equipment-layout-design-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("equipment-layout-design-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="equipment-layout-design-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="equipment-layout-design-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-layout-design-list-element1")}
                 </li>
-                <li id="equipment-layout-design-list-element2">
+                <li
+                  id="equipment-layout-design-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-layout-design-list-element2")}
                 </li>
-                <li id="equipment-layout-design-list-element3">
+                <li
+                  id="equipment-layout-design-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-layout-design-list-element3")}
                 </li>
-                <li id="equipment-layout-design-list-element4">
+                <li
+                  id="equipment-layout-design-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-layout-design-list-element4")}
                 </li>
-                <li id="equipment-layout-design-list-element5">
+                <li
+                  id="equipment-layout-design-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("equipment-layout-design-list-element5")}
                 </li>
               </ul>
@@ -202,25 +247,40 @@ export default async function ProcessDesignPage({
                 <Eye className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="process-visualization-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("process-visualization-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="process-visualization-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="process-visualization-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-visualization-list-element1")}
                 </li>
-                <li id="process-visualization-list-element2">
+                <li
+                  id="process-visualization-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-visualization-list-element2")}
                 </li>
-                <li id="process-visualization-list-element3">
+                <li
+                  id="process-visualization-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-visualization-list-element3")}
                 </li>
-                <li id="process-visualization-list-element4">
+                <li
+                  id="process-visualization-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-visualization-list-element4")}
                 </li>
-                <li id="process-visualization-list-element5">
+                <li
+                  id="process-visualization-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("process-visualization-list-element5")}
                 </li>
               </ul>
@@ -231,25 +291,40 @@ export default async function ProcessDesignPage({
                 <Workflow className="h-6 w-6 text-blue-400" />
                 <h3
                   id="scalability-planning-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("scalability-planning-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="scalability-planning-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="scalability-planning-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("scalability-planning-list-element1")}
                 </li>
-                <li id="scalability-planning-list-element2">
+                <li
+                  id="scalability-planning-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("scalability-planning-list-element2")}
                 </li>
-                <li id="scalability-planning-list-element3">
+                <li
+                  id="scalability-planning-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("scalability-planning-list-element3")}
                 </li>
-                <li id="scalability-planning-list-element4">
+                <li
+                  id="scalability-planning-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("scalability-planning-list-element4")}
                 </li>
-                <li id="scalability-planning-list-element5">
+                <li
+                  id="scalability-planning-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("scalability-planning-list-element5")}
                 </li>
               </ul>

@@ -112,28 +112,43 @@ export default async function CreativityPage({ params }: CreativityPageProps) {
                   any kind of format - live, remote, in a singel session or a
                   complete workshop combining it with other services:
                 </p>
-                <ul className="text-muted-foreground list-disc list-outside pl-4 sm:pl-5 space-y-3 sm:space-y-4 text-sm sm:text-base">
-                  <li id="creativity-techniques-and-problem-solving-list-element1">
+                <ul className="text-muted-foreground list-outside sm:pl-5 space-y-3 sm:space-y-4 text-md sm:text-base list-none pl-0">
+                  <li
+                    id="creativity-techniques-and-problem-solving-list-element1"
+                    className="pl-3 -indent-3"
+                  >
                     {t(
                       "creativity-techniques-and-problem-solving-list-element1"
                     )}
                   </li>
-                  <li id="creativity-techniques-and-problem-solving-list-element2">
+                  <li
+                    id="creativity-techniques-and-problem-solving-list-element2"
+                    className="pl-3 -indent-3"
+                  >
                     {t(
                       "creativity-techniques-and-problem-solving-list-element2"
                     )}
                   </li>
-                  <li id="creativity-techniques-and-problem-solving-list-element3">
+                  <li
+                    id="creativity-techniques-and-problem-solving-list-element3"
+                    className="pl-3 -indent-3"
+                  >
                     {t(
                       "creativity-techniques-and-problem-solving-list-element3"
                     )}
                   </li>
-                  <li id="creativity-techniques-and-problem-solving-list-element4">
+                  <li
+                    id="creativity-techniques-and-problem-solving-list-element4"
+                    className="pl-3 -indent-3"
+                  >
                     {t(
                       "creativity-techniques-and-problem-solving-list-element4"
                     )}
                   </li>
-                  <li id="creativity-techniques-and-problem-solving-list-element5">
+                  <li
+                    id="creativity-techniques-and-problem-solving-list-element5"
+                    className="pl-3 -indent-3"
+                  >
                     {t(
                       "creativity-techniques-and-problem-solving-list-element5"
                     )}
@@ -149,25 +164,40 @@ export default async function CreativityPage({ params }: CreativityPageProps) {
                 <Lightbulb className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="advanced-brainstorming-title"
-                  className="text-lg font-semibold text-cyan-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"
                 >
                   {t("advanced-brainstorming-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="advanced-brainstorming-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="advanced-brainstorming-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-brainstorming-list-element1")}
                 </li>
-                <li id="advanced-brainstorming-list-element2">
+                <li
+                  id="advanced-brainstorming-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-brainstorming-list-element2")}
                 </li>
-                <li id="advanced-brainstorming-list-element3">
+                <li
+                  id="advanced-brainstorming-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-brainstorming-list-element3")}
                 </li>
-                <li id="advanced-brainstorming-list-element4">
+                <li
+                  id="advanced-brainstorming-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-brainstorming-list-element4")}
                 </li>
-                <li id="advanced-brainstorming-list-element5">
+                <li
+                  id="advanced-brainstorming-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-brainstorming-list-element5")}
                 </li>
               </ul>
@@ -178,25 +208,40 @@ export default async function CreativityPage({ params }: CreativityPageProps) {
                 <Brain className="h-6 w-6 text-teal-400" />
                 <h3
                   id="design-thinking-workshops-title"
-                  className="text-lg font-semibold text-teal-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
                 >
                   {t("design-thinking-workshops-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="design-thinking-workshops-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="design-thinking-workshops-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("design-thinking-workshops-list-element1")}
                 </li>
-                <li id="design-thinking-workshops-list-element2">
+                <li
+                  id="design-thinking-workshops-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("design-thinking-workshops-list-element2")}
                 </li>
-                <li id="design-thinking-workshops-list-element3">
+                <li
+                  id="design-thinking-workshops-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("design-thinking-workshops-list-element3")}
                 </li>
-                <li id="design-thinking-workshops-list-element4">
+                <li
+                  id="design-thinking-workshops-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("design-thinking-workshops-list-element4")}
                 </li>
-                <li id="design-thinking-workshops-list-element5">
+                <li
+                  id="design-thinking-workshops-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("design-thinking-workshops-list-element5")}
                 </li>
               </ul>
@@ -207,25 +252,40 @@ export default async function CreativityPage({ params }: CreativityPageProps) {
                 <Zap className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="innovation-pipeline-title"
-                  className="text-lg font-semibold text-emerald-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
                 >
                   {t("innovation-pipeline-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="innovation-pipeline-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="innovation-pipeline-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("innovation-pipeline-list-element1")}
                 </li>
-                <li id="innovation-pipeline-list-element2">
+                <li
+                  id="innovation-pipeline-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("innovation-pipeline-list-element2")}
                 </li>
-                <li id="innovation-pipeline-list-element3">
+                <li
+                  id="innovation-pipeline-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("innovation-pipeline-list-element3")}
                 </li>
-                <li id="innovation-pipeline-list-element4">
+                <li
+                  id="innovation-pipeline-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("innovation-pipeline-list-element4")}
                 </li>
-                <li id="innovation-pipeline-list-element5">
+                <li
+                  id="innovation-pipeline-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("innovation-pipeline-list-element5")}
                 </li>
               </ul>
@@ -236,25 +296,40 @@ export default async function CreativityPage({ params }: CreativityPageProps) {
                 <Target className="h-6 w-6 text-blue-400" />
                 <h3
                   id="breakthrough-solutions-title"
-                  className="text-lg font-semibold text-blue-200"
+                  className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
                 >
                   {t("breakthrough-solutions-title")}
                 </h3>
               </div>
-              <ul className="text-white/80 space-y-2 text-sm">
-                <li id="breakthrough-solutions-list-element1">
+              <ul className="text-white/80 space-y-2 text-md list-none pl-0">
+                <li
+                  id="breakthrough-solutions-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("breakthrough-solutions-list-element1")}
                 </li>
-                <li id="breakthrough-solutions-list-element2">
+                <li
+                  id="breakthrough-solutions-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("breakthrough-solutions-list-element2")}
                 </li>
-                <li id="breakthrough-solutions-list-element3">
+                <li
+                  id="breakthrough-solutions-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("breakthrough-solutions-list-element3")}
                 </li>
-                <li id="breakthrough-solutions-list-element4">
+                <li
+                  id="breakthrough-solutions-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("breakthrough-solutions-list-element4")}
                 </li>
-                <li id="breakthrough-solutions-list-element5">
+                <li
+                  id="breakthrough-solutions-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("breakthrough-solutions-list-element5")}
                 </li>
               </ul>
