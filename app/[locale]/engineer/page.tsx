@@ -37,7 +37,7 @@ import {
   Terminal,
   ExternalLink,
 } from "lucide-react";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
 import { getTranslations } from "next-intl/server";
@@ -53,6 +53,10 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
   const t = await getTranslations({
     locale,
     namespace: "EngineerPage",
+  });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
   });
 
   return (
@@ -161,7 +165,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/process-engineering/process-control"
                         )}
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
@@ -200,7 +205,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/process-engineering/process-optimization"
                         )}
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
@@ -239,7 +245,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/process-engineering/change-management"
                         )}
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
@@ -275,7 +282,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/process-engineering/monitoring"
                         )}
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
@@ -324,7 +332,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/process-development/creativity"
                         )}
                         className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
@@ -363,7 +372,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/process-development/process-design"
                         )}
                         className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
@@ -402,7 +412,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/process-development/simulation-prototyping"
                         )}
                         className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
@@ -443,7 +454,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/process-development/equipment-roadmap"
                         )}
                         className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
@@ -495,7 +507,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/software-development/custom-solutions"
                         )}
                         className="text-teal-400 hover:text-teal-300 flex items-center gap-2"
@@ -528,7 +541,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/software-development/database-management"
                         )}
                         className="text-teal-400 hover:text-teal-300 flex items-center gap-2"
@@ -567,7 +581,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/software-development/workflow-automation"
                         )}
                         className="text-teal-400 hover:text-teal-300 flex items-center gap-2"
@@ -606,7 +621,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/software-development/web-development"
                         )}
                         className="text-teal-400 hover:text-teal-300 flex items-center gap-2"
@@ -658,7 +674,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/project-management/project-setup"
                         )}
                         className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2"
@@ -697,7 +714,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/project-management/timeline-management"
                         )}
                         className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2"
@@ -736,7 +754,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/project-management/deviation-management"
                         )}
                         className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2"
@@ -775,7 +794,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/project-management/documentation"
                         )}
                         className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2"
@@ -827,7 +847,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/technical-consulting/process-assessment"
                         )}
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
@@ -866,7 +887,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/technical-consulting/technical-research"
                         )}
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
@@ -904,7 +926,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/technical-consulting/training-knowledge-transfer"
                         )}
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
@@ -943,7 +966,8 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                         More
                       </Link> */}
                       <Link
-                        href={generateContactHref(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/engineer/technical-consulting/competitor-analysis"
                         )}
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"

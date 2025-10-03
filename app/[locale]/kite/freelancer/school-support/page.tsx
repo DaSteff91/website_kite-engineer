@@ -1,11 +1,11 @@
 import { getTranslations } from "next-intl/server";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Users, Clock, Drama } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA["kite/freelancer/school-support"];
@@ -21,6 +21,10 @@ export default async function SchoolSupportPage({
   const t = await getTranslations({
     locale,
     namespace: "SchoolSupportPage",
+  });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
   });
 
   return (
@@ -278,7 +282,10 @@ export default async function SchoolSupportPage({
               {t("school-support-contact")}
             </p>
             <Link
-              href={generateContactHref("/kite/freelancer/school-support")}
+              href={hrefForTemplateWithTranslator(
+                contactT,
+                "/kite/freelancer/school-support"
+              )}
               target="_blank"
             >
               <Button

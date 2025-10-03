@@ -108,15 +108,33 @@ export default async function StartingPage({ params }: StartingPageProps) {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-md list-none pl-0">
-                <li id="who-list-element1" className="pl-3 -indent-3">{t("who-list-element1")}</li>
-                <li id="who-list-element2" className="pl-3 -indent-3">{t("who-list-element2")}</li>
-                <li id="who-list-element3" className="pl-3 -indent-3">{t("who-list-element3")}</li>
-                <li id="who-list-element4" className="pl-3 -indent-3">{t("who-list-element4")}</li>
-                <li id="who-list-element5" className="pl-3 -indent-3">{t("who-list-element5")}</li>
-                <li id="who-list-element6" className="pl-3 -indent-3">{t("who-list-element6")}</li>
-                <li id="who-list-element7" className="pl-3 -indent-3">{t("who-list-element7")}</li>
-                <li id="who-list-element8" className="pl-3 -indent-3">{t("who-list-element8")}</li>
-                <li id="who-list-element9" className="pl-3 -indent-3">{t("who-list-element9")}</li>
+                <li id="who-list-element1" className="pl-3 -indent-3">
+                  {t("who-list-element1")}
+                </li>
+                <li id="who-list-element2" className="pl-3 -indent-3">
+                  {t("who-list-element2")}
+                </li>
+                <li id="who-list-element3" className="pl-3 -indent-3">
+                  {t("who-list-element3")}
+                </li>
+                <li id="who-list-element4" className="pl-3 -indent-3">
+                  {t("who-list-element4")}
+                </li>
+                <li id="who-list-element5" className="pl-3 -indent-3">
+                  {t("who-list-element5")}
+                </li>
+                <li id="who-list-element6" className="pl-3 -indent-3">
+                  {t("who-list-element6")}
+                </li>
+                <li id="who-list-element7" className="pl-3 -indent-3">
+                  {t("who-list-element7")}
+                </li>
+                <li id="who-list-element8" className="pl-3 -indent-3">
+                  {t("who-list-element8")}
+                </li>
+                <li id="who-list-element9" className="pl-3 -indent-3">
+                  {t("who-list-element9")}
+                </li>
               </ul>
             </div>
 
@@ -131,15 +149,33 @@ export default async function StartingPage({ params }: StartingPageProps) {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-md list-none pl-0">
-                <li id="content-list-element1" className="pl-3 -indent-3">{t("content-list-element1")}</li>
-                <li id="content-list-element2" className="pl-3 -indent-3">{t("content-list-element2")}</li>
-                <li id="content-list-element3" className="pl-3 -indent-3">{t("content-list-element3")}</li>
-                <li id="content-list-element4" className="pl-3 -indent-3">{t("content-list-element4")}</li>
-                <li id="content-list-element5" className="pl-3 -indent-3">{t("content-list-element5")}</li>
-                <li id="content-list-element6" className="pl-3 -indent-3">{t("content-list-element6")}</li>
-                <li id="content-list-element7" className="pl-3 -indent-3">{t("content-list-element7")}</li>
-                <li id="content-list-element8" className="pl-3 -indent-3">{t("content-list-element8")}</li>
-                <li id="content-list-element9" className="pl-3 -indent-3">{t("content-list-element9")}</li>
+                <li id="content-list-element1" className="pl-3 -indent-3">
+                  {t("content-list-element1")}
+                </li>
+                <li id="content-list-element2" className="pl-3 -indent-3">
+                  {t("content-list-element2")}
+                </li>
+                <li id="content-list-element3" className="pl-3 -indent-3">
+                  {t("content-list-element3")}
+                </li>
+                <li id="content-list-element4" className="pl-3 -indent-3">
+                  {t("content-list-element4")}
+                </li>
+                <li id="content-list-element5" className="pl-3 -indent-3">
+                  {t("content-list-element5")}
+                </li>
+                <li id="content-list-element6" className="pl-3 -indent-3">
+                  {t("content-list-element6")}
+                </li>
+                <li id="content-list-element7" className="pl-3 -indent-3">
+                  {t("content-list-element7")}
+                </li>
+                <li id="content-list-element8" className="pl-3 -indent-3">
+                  {t("content-list-element8")}
+                </li>
+                <li id="content-list-element9" className="pl-3 -indent-3">
+                  {t("content-list-element9")}
+                </li>
               </ul>
             </div>
 
@@ -198,7 +234,7 @@ export default async function StartingPage({ params }: StartingPageProps) {
                 size="lg"
                 className="group bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Connect with me
+                {t("contact-button")}{" "}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>

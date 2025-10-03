@@ -21,10 +21,9 @@ import {
   MessageSquareText,
   ExternalLink,
 } from "lucide-react";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { getTranslations } from "next-intl/server";
-import { CONTACT_TEMPLATES } from "@/lib/constants/contact-template";
 
 export const metadata = PAGE_METADATA.kite;
 interface KitePageProps {
@@ -44,24 +43,6 @@ export default async function KitePage({ params }: KitePageProps) {
     locale,
     namespace: "ContactTemplates",
   });
-
-  // Helper: convert CONTACT_TEMPLATES key -> localized href
-  const hrefForTemplate = (templatePath: keyof typeof CONTACT_TEMPLATES) => {
-    const template = CONTACT_TEMPLATES[templatePath];
-    if (!template) return "/contact"; // fallback
-
-    const stripPrefix = (fullKey: string) =>
-      fullKey.replace(/^ContactTemplates\./, "");
-
-    const subjectKey = stripPrefix(template.subjectKey);
-    const messageKey = stripPrefix(template.messageKey);
-
-    // contactT resolves keys within ContactTemplates namespace, e.g. "schoolSupport.subject"
-    const localizedSubject = contactT(subjectKey);
-    const localizedMessage = contactT(messageKey);
-
-    return generateContactHref(localizedSubject, localizedMessage);
-  };
 
   return (
     <div className="relative min-h-screen">
@@ -154,7 +135,8 @@ export default async function KitePage({ params }: KitePageProps) {
                         {t("moreLink")}
                       </Link>
                       <Link
-                        href={hrefForTemplate(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/kite/freelancer/school-support"
                         )}
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
@@ -193,7 +175,8 @@ export default async function KitePage({ params }: KitePageProps) {
                         {t("moreLink")}
                       </Link>
                       <Link
-                        href={hrefForTemplate(
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
                           "/kite/freelancer/travel-services"
                         )}
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
@@ -229,7 +212,10 @@ export default async function KitePage({ params }: KitePageProps) {
                         {t("moreLink")}
                       </Link>
                       <Link
-                        href={hrefForTemplate("/kite/freelancer/consulting")}
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
+                          "/kite/freelancer/consulting"
+                        )}
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >
@@ -273,7 +259,10 @@ export default async function KitePage({ params }: KitePageProps) {
                         {t("moreLink")}
                       </Link>
                       <Link
-                        href={hrefForTemplate("/kite/courses/theory")}
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
+                          "/kite/courses/theory"
+                        )}
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >
@@ -307,7 +296,10 @@ export default async function KitePage({ params }: KitePageProps) {
                         {t("moreLink")}
                       </Link>
                       <Link
-                        href={hrefForTemplate("/kite/courses/starting")}
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
+                          "/kite/courses/starting"
+                        )}
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >
@@ -341,7 +333,10 @@ export default async function KitePage({ params }: KitePageProps) {
                         {t("moreLink")}
                       </Link>
                       <Link
-                        href={hrefForTemplate("/kite/courses/advanced")}
+                        href={hrefForTemplateWithTranslator(
+                          contactT,
+                          "/kite/courses/advanced"
+                        )}
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                         target="_blank"
                       >
