@@ -545,11 +545,16 @@
       "subject": "Betreff*",
       "message": "Ihre Nachricht*"
     },
-    "acceptDataProcessing": "Akzeptieren Sie die Datenverarbeitung zur Kontaktaufnahme*",
+    "acceptDataProcessing1": "Akzeptiere die",
+    "acceptDataProcessing2": "Datenverarbeitung",
+    "acceptDataProcessing3": "für die Kontaktaufnahme*",
     "checkboxError": "Bitte akzeptieren Sie die Datenverarbeitung, um fortzufahren.",
+    "responseError": "Ein Fehler ist aufgetreten.",
     "send": "Nachricht senden",
-    "sending": "Senden…",
-    "successMessage": "Vielen Dank für Ihre Nachricht!",
-    "mandatoryNote": "* Pflichtfelder. Bitte haben Sie etwas Geduld mit meiner Antwort. Ich versuche eine Antwort innerhalb von maximal 2 Tagen."
+    "sending": "Wird gesendet...",
+    "sendingError": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten.",
+    "successMessage": "Vielen Dank für Ihre Kontaktaufnahme!",
+    "mandatoryNote1": "* Pflichtfelder.",
+    "mandatoryNote2": "Bitte geben Sie mir etwas Zeit für eine Antwort. Ich versuche, diese unter 2 Tagen zu halten."
   }
 }

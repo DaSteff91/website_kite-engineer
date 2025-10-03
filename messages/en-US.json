@@ -1085,11 +1085,16 @@
       "subject": "Subject*",
       "message": "Your message*"
     },
-    "acceptDataProcessing": "Accept data processing for contacting me*",
+    "acceptDataProcessing1": "Accept",
+    "acceptDataProcessing2": "data processing",
+    "acceptDataProcessing3": "for contacting me*",
     "checkboxError": "Please accept data processing to continue.",
+    "responseError": "An error occurred.",
     "send": "Send Message",
     "sending": "Sending...",
+    "sendingError": "An error occurred while sending your message.",
     "successMessage": "Thank you for contacting us!",
-    "mandatoryNote": "* Mandatory fields. Please give me some time to respond. I try keeping it lower than 2 days."
+    "mandatoryNote1": "* Mandatory fields.",
+    "mandatoryNote2": "Please give me some time to respond. I try keeping it lower than 2 days."
   }
 }

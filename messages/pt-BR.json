@@ -539,7 +539,6 @@
       }
     }
   },
-
   "ContactForm": {
     "placeholder": {
       "name": "Seu nome*",
@@ -547,11 +546,16 @@
       "subject": "Assunto*",
       "message": "Sua mensagem*"
     },
-    "acceptDataProcessing": "Aceito o processamento de dados para contato*",
+    "acceptDataProcessing1": "Aceito o",
+    "acceptDataProcessing2": "processamento de dados",
+    "acceptDataProcessing3": "para contato*",
     "checkboxError": "Por favor, aceite o processamento de dados para continuar.",
+    "responseError": "Ocorreu um erro.",
     "send": "Enviar Mensagem",
     "sending": "Enviando...",
+    "sendingError": "Ocorreu um erro ao enviar sua mensagem.",
     "successMessage": "Obrigado por entrar em contato!",
-    "mandatoryNote": "* Campos obrigatórios. Por favor, dê-me algum tempo para responder. Tento manter abaixo de 2 dias."
+    "mandatoryNote1": "* Campos obrigatórios.",
+    "mandatoryNote2": "Por favor, dê-me algum tempo para responder. Tento manter abaixo de 2 dias."
   }
 }

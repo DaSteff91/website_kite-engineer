@@ -12,6 +12,7 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 
 export function ContactForm() {
+  const t = useTranslations("ContactForm");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [formData, setFormData] = useState({
@@ -91,7 +92,7 @@ export function ContactForm() {
       });
 
       if (response.ok) {
-        setSuccessMessage("Thank you for contacting us!");
+        setSuccessMessage(t("successMessage"));
         setFormData({
           name: "",
           email: "",
@@ -101,11 +102,11 @@ export function ContactForm() {
         setIsChecked(false);
       } else {
         const result = await response.json();
-        alert(result.message || "An error occurred.");
+        alert(result.message || t("responseError"));
       }
     } catch (error) {
       console.error(error);
-      alert("An error occurred while sending your message.");
+      alert(t("sendingError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -119,7 +120,7 @@ export function ContactForm() {
       <div className="space-y-2">
         <Input
           name="name"
-          placeholder="Your name*"
+          placeholder={t("placeholder.name")}
           value={formData.name}
           onChange={handleInputChange}
           required
@@ -131,7 +132,7 @@ export function ContactForm() {
         <Input
           type="email"
           name="email"
-          placeholder="Your email*"
+          placeholder={t("placeholder.email")}
           value={formData.email}
           onChange={handleInputChange}
           required
@@ -142,7 +143,7 @@ export function ContactForm() {
       <div className="space-y-2">
         <Input
           name="subject"
-          placeholder={placeholderValues.subject || "Subject*"}
+          placeholder={placeholderValues.subject || t("placeholder.subject")}
           value={formData.subject}
           onChange={handleInputChange}
           required
@@ -154,7 +155,7 @@ export function ContactForm() {
         <Textarea
           ref={textareaRef}
           name="message"
-          placeholder={placeholderValues.message || "Your message*"}
+          placeholder={placeholderValues.message || t("placeholder.message")}
           value={formData.message}
           onChange={handleInputChange}
           required
@@ -176,20 +177,18 @@ export function ContactForm() {
           htmlFor="terms"
           className="text-muted-foreground text-sm text-left"
         >
-          Accept{" "}
+          {t("acceptDataProcessing1")}{" "}
           <Link
             href="/privacy"
             className="inline-flex items-center gap-2 hover:text-blue-300 underline transition-colors"
             target="_blank"
           >
-            data processing
+            {t("acceptDataProcessing2")}
           </Link>{" "}
-          for contacting me*
+          {t("acceptDataProcessing3")}
         </Label>
         {checkboxError && (
-          <p className="text-red-500 text-sm mt-1">
-            Please accept data processing to continue.
-          </p>
+          <p className="text-red-500 text-sm mt-1">{t("checkboxError")}</p>
         )}
       </div>
 
@@ -200,10 +199,10 @@ export function ContactForm() {
       >
         <span className="flex items-center justify-center">
           {isSubmitting ? (
-            "Sending..."
+            t("sending")
           ) : (
             <>
-              Send Message
+              {t("send")}
               <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </>
           )}
@@ -215,8 +214,8 @@ export function ContactForm() {
         </p>
       )}
       <p className="text-muted-foreground text-sm text-left">
-        * Mandatory fields. <br></br> Please give me some time to respond. I try
-        keeping it lower then 2 days.
+        {t("mandatoryNote1")}
+        <br></br> {t("mandatoryNote2")}
       </p>
     </form>
   );
