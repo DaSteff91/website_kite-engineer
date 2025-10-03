@@ -1,3 +1,17 @@
+# [1.28.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.27.1...v1.28.0) (2025-10-03)
+
+
+### Bug Fixes
+
+* add i18n to the message templates sent to by certain links to contact form ([ec64240](https://github.com/DaSteff91/website_kite-engineer/commit/ec64240be298e174a5f89de00a9e72d64cb6f55a))
+* first draft of a working i18n prefilled template ([1e9ccd3](https://github.com/DaSteff91/website_kite-engineer/commit/1e9ccd32731c781528b16c6490a9f03dceb62314))
+* preparing subpages for contact template usage ([0def79a](https://github.com/DaSteff91/website_kite-engineer/commit/0def79a9baa9e46362a920e3cd88809050626421))
+
+
+### Features
+
+* internationalized contact form incl. prebuilt placeholders done ([c413be2](https://github.com/DaSteff91/website_kite-engineer/commit/c413be29b4e32d5055f3ab5a4caaad8b3b4dc300))
+
 ## [1.27.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.27.0...v1.27.1) (2025-10-03)
 
 
