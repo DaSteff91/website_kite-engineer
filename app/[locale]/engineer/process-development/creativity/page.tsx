@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
@@ -30,6 +30,11 @@ export default async function CreativityPage({ params }: CreativityPageProps) {
     locale,
     namespace: "CreativityPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -345,9 +350,7 @@ export default async function CreativityPage({ params }: CreativityPageProps) {
               {t("creativity-contact")}
             </p>
             <Link
-              href={generateContactHref(
-                "/engineer/process-development/creativity"
-              )}
+              href={hrefForTemplateWithTranslator(contactT, "/engineer/process-development/creativity")}
               target="_blank"
             >
               <Button

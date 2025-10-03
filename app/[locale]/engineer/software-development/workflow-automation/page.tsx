@@ -12,7 +12,7 @@ import {
   Workflow,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
@@ -30,6 +30,11 @@ export default async function WorkflowAutomationPage({
     locale,
     namespace: "WorkflowAutomationPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -281,9 +286,7 @@ export default async function WorkflowAutomationPage({
               {t("workflow-automation-contact")}
             </p>
             <Link
-              href={generateContactHref(
-                "/engineer/software-development/workflow-automation"
-              )}
+              href={hrefForTemplateWithTranslator(contactT, "/engineer/software-development/workflow-automation")}
               target="_blank"
             >
               <Button

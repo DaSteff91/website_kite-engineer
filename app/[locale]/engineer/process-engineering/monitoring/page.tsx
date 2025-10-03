@@ -6,7 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Target, TrendingUp, Bell, BarChart3 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
@@ -22,6 +22,11 @@ export default async function MonitoringPage({ params }: MonitoringPageProps) {
     locale,
     namespace: "MonitoringPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
 
   return (
     <div className="relative min-h-screen">
@@ -214,9 +219,7 @@ export default async function MonitoringPage({ params }: MonitoringPageProps) {
               {t("monitoring-contact")}
             </p>
             <Link
-              href={generateContactHref(
-                "/engineer/process-engineering/monitoring"
-              )}
+              href={hrefForTemplateWithTranslator(contactT, "/engineer/process-engineering/monitoring")}
               target="_blank"
             >
               <Button

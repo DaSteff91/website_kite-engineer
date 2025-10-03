@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
@@ -32,6 +32,11 @@ export default async function TimelineManagementPage({
     locale,
     namespace: "TimelineManagementPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -223,9 +228,7 @@ export default async function TimelineManagementPage({
               {t("timeline-management-contact")}
             </p>
             <Link
-              href={generateContactHref(
-                "/engineer/project-management/timeline-management"
-              )}
+              href={hrefForTemplateWithTranslator(contactT, "/engineer/project-management/timeline-management")}
               target="_blank"
             >
               <Button

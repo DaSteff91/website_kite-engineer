@@ -11,7 +11,7 @@ import {
   BaggageClaim,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
@@ -47,6 +47,11 @@ export default async function ProcessControlPage({
     locale,
     namespace: "ProcessControlPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
 
   return (
     <div className="relative min-h-screen">
@@ -301,9 +306,7 @@ export default async function ProcessControlPage({
               {t("process-control-contact")}
             </p>
             <Link
-              href={generateContactHref(
-                "/engineer/process-engineering/process-control"
-              )}
+              href={hrefForTemplateWithTranslator(contactT, "/engineer/process-engineering/process-control")}
               target="_blank"
             >
               <Button

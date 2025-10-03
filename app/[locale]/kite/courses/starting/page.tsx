@@ -16,7 +16,7 @@ import {
   UserRoundSearch,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA["kite/courses/starting"];
@@ -31,6 +31,11 @@ export default async function StartingPage({ params }: StartingPageProps) {
     locale,
     namespace: "StartingPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
 
   return (
     <div className="relative min-h-screen">
@@ -227,7 +232,7 @@ export default async function StartingPage({ params }: StartingPageProps) {
               {t("starting-contact")}
             </p>
             <Link
-              href={generateContactHref("/kite/courses/starting")}
+              href={hrefForTemplateWithTranslator(contactT, "/kite/courses/starting")}
               target="_blank"
             >
               <Button

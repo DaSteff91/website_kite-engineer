@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
@@ -32,6 +32,11 @@ export default async function ProcessDesignPage({
     locale,
     namespace: "ProcessDesignPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -340,9 +345,7 @@ export default async function ProcessDesignPage({
               {t("process-design-contact")}
             </p>
             <Link
-              href={generateContactHref(
-                "/engineer/process-development/process-design"
-              )}
+              href={hrefForTemplateWithTranslator(contactT, "/engineer/process-development/process-design")}
               target="_blank"
             >
               <Button

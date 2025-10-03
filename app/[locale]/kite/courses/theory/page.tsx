@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA["kite/courses/theory"];
@@ -34,6 +34,11 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
     locale,
     namespace: "TheoryPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
 
   return (
     <div className="relative min-h-screen">
@@ -197,7 +202,7 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
               {t("theory-contact")}
             </p>
             <Link
-              href={generateContactHref("/kite/courses/theory")}
+              href={hrefForTemplateWithTranslator(contactT, "/kite/courses/theory")}
               target="_blank"
             >
               <Button

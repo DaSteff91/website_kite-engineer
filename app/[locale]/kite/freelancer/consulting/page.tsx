@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ShoppingCart, Presentation } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata = PAGE_METADATA["kite/freelancer/consulting"];
@@ -21,6 +21,11 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
     locale,
     namespace: "ConsultingPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
 
   const richTextHandlers = {
     strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
@@ -172,7 +177,7 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
               {t("consulting-contact")}
             </p>
             <Link
-              href={generateContactHref("/kite/freelancer/consulting")}
+              href={hrefForTemplateWithTranslator(contactT, "/kite/freelancer/consulting")}
               target="_blank"
             >
               <Button

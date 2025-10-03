@@ -10,7 +10,7 @@ import {
   ListCheck,
   UserRoundSearch,
 } from "lucide-react";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
 import { Hero } from "@/components/sections/Hero";
 
@@ -26,6 +26,11 @@ export default async function AdvancedPage({ params }: AdvancedPageProps) {
     locale,
     namespace: "AdvancedPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
 
   return (
     <div className="relative min-h-screen">
@@ -200,7 +205,7 @@ export default async function AdvancedPage({ params }: AdvancedPageProps) {
               {t("advanced-contact")}
             </p>
             <Link
-              href={generateContactHref("/kite/courses/advanced")}
+              href={hrefForTemplateWithTranslator(contactT, "/kite/courses/advanced")}
               target="_blank"
             >
               <Button

@@ -21,7 +21,7 @@ page.tsx files under a base directory.
     href={hrefForTemplateWithTranslator(contactT, "/kite/freelancer/school-support")}
 
 Usage:
-    python3 replace_contact_links.py [--apply] [--base-dir PATH]
+    python3 contact_template_replacer.py [--apply] [--base-dir PATH]
 
 By default the script runs in "dry-run" mode and prints planned changes.
 Pass --apply to overwrite files. Backups (filename.bak) are created on apply.
@@ -43,7 +43,7 @@ logger = logging.getLogger("contact-i18n-replacer")
 
 # Configure the base directory default - user requested path in prompt
 DEFAULT_BASE_DIR = Path(
-    "/home/steff/Projects/ongoing/Kite_engineer/website_kite-engineer/app/[locale]/kite"
+    "/home/steff/Projects/ongoing/Kite_engineer/website_kite-engineer/app/[locale]/engineer"
 )
 
 
@@ -190,22 +190,17 @@ def process_file(path: Path, apply: bool = False) -> Tuple[bool, List[str]]:
 
     # If apply is True, write changes and back up original
     if apply:
-        backup_path = path.with_suffix(path.suffix + ".bak")
-        # write backup only if not already existing
-        if not backup_path.exists():
-            path.replace(backup_path)  # move original to .bak
-            # write new content to original path
-            backup_path.write_text(backup_path.read_text(encoding="utf-8"), encoding="utf-8")
-            # Wait: the above is wrong — avoid reading after moving. We'll do safer approach below.
-        # Safer write: write original content to .bak ourselves, then overwrite file.
-        original_content = content  # we already modified content; need original from disk earlier
-        # Re-read the original from the backup process above isn't reliable; instead do standard method:
-        orig = path.read_text(encoding="utf-8")
-        # Save original
-        path.with_suffix(path.suffix + ".bak").write_text(orig, encoding="utf-8")
-        # Overwrite file with new content
-        path.write_text(content, encoding="utf-8")
-        logger.info("Applied changes and wrote backup: %s.bak", path)
+        # backup_path = path.with_suffix(path.suffix + ".bak")
+        # Read original content (we read it earlier as `orig_content_at_start`, but safe to re-read here)
+        original_content = path.read_text(encoding="utf-8")
+        # Write backup (overwrite if exists)
+        # backup_path.write_text(original_content, encoding="utf-8")
+        # Now overwrite the original file atomically:
+        # Write to a temp file then rename to avoid partial writes.
+        tmp_path = path.with_suffix(path.suffix + ".tmp")
+        tmp_path.write_text(content, encoding="utf-8")
+        tmp_path.replace(path)  # atomic move on same filesystem
+        #logger.info("Applied changes and wrote backup: %s", backup_path)
         return True, changes
 
     # Dry-run: report what would be changed

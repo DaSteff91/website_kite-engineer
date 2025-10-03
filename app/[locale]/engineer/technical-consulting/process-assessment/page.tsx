@@ -12,7 +12,7 @@ import {
   Zap,
 } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/constants/metadata";
-import { generateContactHref } from "@/lib/utils/contact-filler";
+import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
 export const metadata =
@@ -30,6 +30,11 @@ export default async function ProcessAssessmentPage({
     locale,
     namespace: "ProcessAssessmentPage",
   });
+  const contactT = await getTranslations({
+    locale,
+    namespace: "ContactTemplates",
+  });
+
   return (
     <div className="relative min-h-screen">
       {/* Background Image*/}
@@ -281,9 +286,7 @@ export default async function ProcessAssessmentPage({
               {t("process-assessment-contact")}
             </p>
             <Link
-              href={generateContactHref(
-                "/engineer/technical-consulting/process-assessment"
-              )}
+              href={hrefForTemplateWithTranslator(contactT, "/engineer/technical-consulting/process-assessment")}
               target="_blank"
             >
               <Button
