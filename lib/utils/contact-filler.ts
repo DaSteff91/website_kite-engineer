@@ -1,32 +1,20 @@
-import { CONTACT_TEMPLATES } from "../constants/contact-template";
+export const generateContactHref = (subject: string, message: string): string => {
+  // Helper to coerce and sanitize inputs
+  const toSafeString = (value: unknown, maxLen = 2000) => {
+    if (typeof value !== "string") return "";
+    const trimmed = value.trim();
+    // Limit length to avoid extremely large URLs (tweak maxLen as desired)
+    return trimmed.length > maxLen ? trimmed.slice(0, maxLen) : trimmed;
+  };
 
-export const generateContactHref = (
-  templateKey: keyof typeof CONTACT_TEMPLATES,
-  customVariables?: Record<string, string>
-) => {
+  const safeSubject = toSafeString(subject);
+  const safeMessage = toSafeString(message);
 
-  if (!CONTACT_TEMPLATES[templateKey]) {
-    console.error(`Invalid template key: ${templateKey}`);
-    return "/contact";
-  }
+  const params = new URLSearchParams();
+  if (safeSubject) params.set("subject", safeSubject);
+  if (safeMessage) params.set("message", safeMessage);
 
-  const template = CONTACT_TEMPLATES[templateKey];
-  
-  // Process predefined variables for each subpage
-  let subject = template.subject;
-  let message = template.message;
-  
-  if (customVariables) {
-    Object.entries(customVariables).forEach(([key, value]) => {
-      const placeholder = `{${key}}`;
-      subject = subject.replaceAll(placeholder, value);
-      message = message.replaceAll(placeholder, value);
-    });
-  }
-
-  // URL encode and build the href using URL parameters
-  return `/contact?${new URLSearchParams({
-    subject,
-    message
-  }).toString()}`;
+  // Return relative path without locale prefix — your Link/createNavigation will add locale.
+  const query = params.toString();
+  return query ? `/contact?${query}` : `/contact`;
 };

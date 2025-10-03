@@ -959,5 +959,136 @@
     "scalability-planning-list-element4": "• Flexibility and adaptability",
     "scalability-planning-list-element5": "• Technology evolution readiness",
     "process-design-contact": "Ready to design breakthrough processes? Let's break through boundaries and create what needs to be done."
+  },
+  "ContactTemplates": {
+    "schoolSupport": {
+      "subject": "School Support Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nWith the following I could need your help. [Your message*]\n\nCheers"
+    },
+    "travelServices": {
+      "subject": "Travel Services Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nPlease share details about what you need help with. [Your message*]\n\nCheers"
+    },
+    "consulting": {
+      "subject": "Consulting Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nWith that topic I could need help. [Your message*]\n\nCheers"
+    },
+    "coursesTheory": {
+      "subject": "Theory Course Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nTell me about your theory course needs. [Your message*]\n\nCheers"
+    },
+    "coursesStarting": {
+      "subject": "Beginner Course Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nWhat kind of support are you looking for? [Your message*]\n\nCheers"
+    },
+    "coursesAdvanced": {
+      "subject": "Advanced Course Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nWhat kind of support are you looking for? [Your message*]\n\nCheers"
+    },
+    "processEngineering": {
+      "processControl": {
+        "subject": "Process Control Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nDescribe your process control needs. [Your message*]\n\nKind regards"
+      },
+      "processOptimization": {
+        "subject": "Process Optimization Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nDescribe your process optimization needs. [Your message*]\n\nKind regards"
+      },
+      "changeManagement": {
+        "subject": "Change Management Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nTell me about your change management challenge. [Your message*]\n\nKind regards"
+      },
+      "monitoring": {
+        "subject": "Process Monitoring Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nDescribe your needs for process monitoring. [Your message*]\n\nKind regards"
+      }
+    },
+    "processDevelopment": {
+      "creativity": {
+        "subject": "Creativity Support Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat creative challenge can I help with? [Your message*]\n\nKind regards"
+      },
+      "processDesign": {
+        "subject": "Process Design Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat process flow needs an outside perspective? [Your message*]\n\nKind regards"
+      },
+      "simulationPrototyping": {
+        "subject": "Simulation Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat simulation/prototyping support do you require? [Your message*]\n\nKind regards"
+      },
+      "equipmentRoadmap": {
+        "subject": "Equipment Roadmap Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat equipment planning assistance do you need? [Your message*]\n\nKind regards"
+      }
+    },
+    "softwareDevelopment": {
+      "customSolutions": {
+        "subject": "Custom Software Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat custom solution are you looking for? [Your message*]\n\nKind regards"
+      },
+      "databaseManagement": {
+        "subject": "Database Management Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat database support do you require? [Your message*]\n\nKind regards"
+      },
+      "workflowAutomation": {
+        "subject": "Workflow Automation Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat workflow would you like to automate? [Your message*]\n\nKind regards"
+      },
+      "webDevelopment": {
+        "subject": "Web Development Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat web development help do you need? [Your message*]\n\nKind regards"
+      }
+    },
+    "projectManagement": {
+      "projectSetup": {
+        "subject": "Project Setup Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat project setup assistance do you require? [Your message*]\n\nKind regards"
+      },
+      "timelineManagement": {
+        "subject": "Timeline Management Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat timeline management help do you need? [Your message*]\n\nKind regards"
+      },
+      "deviationManagement": {
+        "subject": "Deviation Management Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat deviation management support do you require? [Your message*]\n\nKind regards"
+      },
+      "documentation": {
+        "subject": "Project Documentation Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat documentation assistance do you need? [Your message*]\n\nKind regards"
+      }
+    },
+    "technicalConsulting": {
+      "processAssessment": {
+        "subject": "Process Assessment Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat process assessment help do you require? [Your message*]\n\nKind regards"
+      },
+      "technicalResearch": {
+        "subject": "Technical Research Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat technical research do you need? [Your message*]\n\nKind regards"
+      },
+      "trainingKnowledgeTransfer": {
+        "subject": "Training Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat training/knowledge transfer do you need? [Your message*]\n\nKind regards"
+      },
+      "competitorAnalysis": {
+        "subject": "Competitor Analysis Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat competitor analysis support do you require? [Your message*]\n\nKind regards"
+      }
+    }
+  },
+
+  "ContactForm": {
+    "placeholder": {
+      "name": "Your name*",
+      "email": "Your email*",
+      "subject": "Subject*",
+      "message": "Your message*"
+    },
+    "acceptDataProcessing": "Accept data processing for contacting me*",
+    "checkboxError": "Please accept data processing to continue.",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Thank you for contacting us!",
+    "mandatoryNote": "* Mandatory fields. Please give me some time to respond. I try keeping it lower than 2 days."
   }
 }

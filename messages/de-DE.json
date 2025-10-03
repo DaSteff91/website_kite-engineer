@@ -421,5 +421,135 @@
     "custom-solutions-list-element4": "•<strong> Wartung & Überprüfung </strong> - Historisch gewachsene Prozesskontroll-Tools benötigen Review oder Restrukturierung? Überlasse es mir.",
     "process-control-contact": "Fehlt etwas? Wir finden eine Lösung. Primär biete ich Dienstleistungen für Fertigungsprozesse, besonders Halbleiterproduktion, an. Aber ich bin offen für neue Themen. Buchbar kurz- oder langfristig, projekt- oder zeitbasiert. Kombination meiner Services möglich.",
     "contact-button": "Kontakt"
+  },
+  "ContactTemplates": {
+    "schoolSupport": {
+      "subject": "Anfrage Schulunterstützung [Ihr Betreff*]",
+      "message": "Hey Steff,\n\nBei folgendem Thema könnte ich deine Hilfe gebrauchen. [Ihre Nachricht*]\n\nLiebe Grüße"
+    },
+    "travelServices": {
+      "subject": "Anfrage Reisedienstleistungen [Ihr Betreff*]",
+      "message": "Hey Steff,\n\nBitte teile mit, wobei du Hilfe brauchst. [Ihre Nachricht*]\n\nLiebe Grüße"
+    },
+    "consulting": {
+      "subject": "Beratungsanfrage [Ihr Betreff*]",
+      "message": "Hey Steff,\n\nZu diesem Thema könnte ich Unterstützung gebrauchen. [Ihre Nachricht*]\n\nLiebe Grüße"
+    },
+    "coursesTheory": {
+      "subject": "Anfrage Theorie-Kurs [Ihr Betreff*]",
+      "message": "Hey Steff,\n\nErzähl mir von deinen Bedürfnissen im Theorie-Kurs. [Ihre Nachricht*]\n\nLiebe Grüße"
+    },
+    "coursesStarting": {
+      "subject": "Anfrage Einsteiger-Kurs [Ihr Betreff*]",
+      "message": "Hey Steff,\n\nWelche Art von Unterstützung suchst du? [Ihre Nachricht*]\n\nLiebe Grüße"
+    },
+    "coursesAdvanced": {
+      "subject": "Anfrage Fortgeschrittenenkurs [Ihr Betreff*]",
+      "message": "Hey Steff,\n\nWelche Unterstützung brauchst du? [Ihre Nachricht*]\n\nLiebe Grüße"
+    },
+    "processEngineering": {
+      "processControl": {
+        "subject": "Anfrage Prozesssteuerung [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nBeschreibe deine Anforderungen zur Prozesssteuerung. [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "processOptimization": {
+        "subject": "Anfrage Prozessoptimierung [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nBeschreibe deine Anforderungen zur Prozessoptimierung. [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "changeManagement": {
+        "subject": "Anfrage Change-Management [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nErzähl mir von deiner Herausforderung im Change-Management. [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "monitoring": {
+        "subject": "Anfrage Prozessüberwachung [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nBeschreibe deine Bedürfnisse in der Prozessüberwachung. [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      }
+    },
+    "processDevelopment": {
+      "creativity": {
+        "subject": "Anfrage Kreativitätsunterstützung [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche kreative Herausforderung darf ich dir helfen? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "processDesign": {
+        "subject": "Anfrage Prozessdesign [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelcher Prozessfluss benötigt eine externe Perspektive? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "simulationPrototyping": {
+        "subject": "Anfrage Simulation/Prototyping [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Unterstützung bei Simulation/Prototyping benötigst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "equipmentRoadmap": {
+        "subject": "Anfrage Equipment-Roadmap [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nBei welcher Ausrüstungsplanung darf ich dich unterstützen? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      }
+    },
+    "softwareDevelopment": {
+      "customSolutions": {
+        "subject": "Anfrage kundenspezifische Software [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche individuelle Lösung suchst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "databaseManagement": {
+        "subject": "Anfrage Datenbankverwaltung [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Datenbankunterstützung brauchst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "workflowAutomation": {
+        "subject": "Anfrage Automatisierung [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelchen Arbeitsablauf möchtest du automatisieren? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "webDevelopment": {
+        "subject": "Anfrage Webentwicklung [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Webentwicklungsunterstützung brauchst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      }
+    },
+    "projectManagement": {
+      "projectSetup": {
+        "subject": "Anfrage Projektsetup [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Unterstützung im Projektaufbau benötigst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "timelineManagement": {
+        "subject": "Anfrage Zeitplan-Management [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Hilfe im Zeitplan-Management brauchst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "deviationManagement": {
+        "subject": "Anfrage Abweichungsmanagement [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Unterstützung im Abweichungsmanagement benötigst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "documentation": {
+        "subject": "Anfrage Dokumentation [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Dokumentationsunterstützung brauchst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      }
+    },
+    "technicalConsulting": {
+      "processAssessment": {
+        "subject": "Anfrage Prozessbewertung [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Hilfe bei der Prozessbewertung benötigst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "technicalResearch": {
+        "subject": "Anfrage Technische Recherche [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche technische Recherche brauchst du? [Ihre Nachricht*]\n\nMit freundlichen Grüße"
+      },
+      "trainingKnowledgeTransfer": {
+        "subject": "Anfrage Schulung [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Schulung / Wissensvermittlung brauchst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      },
+      "competitorAnalysis": {
+        "subject": "Anfrage Wettbewerbsanalyse [Ihr Betreff*]",
+        "message": "Hallo Kite-Engineer,\n\nWelche Unterstützung bei der Wettbewerbsanalyse benötigst du? [Ihre Nachricht*]\n\nMit freundlichen Grüßen"
+      }
+    }
+  },
+  "ContactForm": {
+    "placeholder": {
+      "name": "Ihr Name*",
+      "email": "Ihre E-Mail*",
+      "subject": "Betreff*",
+      "message": "Ihre Nachricht*"
+    },
+    "acceptDataProcessing": "Akzeptieren Sie die Datenverarbeitung zur Kontaktaufnahme*",
+    "checkboxError": "Bitte akzeptieren Sie die Datenverarbeitung, um fortzufahren.",
+    "send": "Nachricht senden",
+    "sending": "Senden…",
+    "successMessage": "Vielen Dank für Ihre Nachricht!",
+    "mandatoryNote": "* Pflichtfelder. Bitte haben Sie etwas Geduld mit meiner Antwort. Ich versuche eine Antwort innerhalb von maximal 2 Tagen."
   }
 }

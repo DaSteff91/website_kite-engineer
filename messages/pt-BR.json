@@ -422,5 +422,136 @@
     "footer-copy": "(Copiar)",
     "footer-copied": "(Copiado!)",
     "footer-copyright": "© {year} Kite-Engineer by Stefan Merthan. Todos os direitos reservados."
+  },
+  "ContactTemplates": {
+    "schoolSupport": {
+      "subject": "Consulta sobre Suporte Escolar [Seu assunto*]",
+      "message": "Oi Steff,\n\nCom o seguinte eu precisaria da sua ajuda. [Sua mensagem*]\n\nAtenciosamente"
+    },
+    "travelServices": {
+      "subject": "Consulta sobre Serviços de Viagem [Seu assunto*]",
+      "message": "Oi Steff,\n\nPor favor, compartilhe detalhes sobre com o que você precisa de ajuda. [Sua mensagem*]\n\nAtenciosamente"
+    },
+    "consulting": {
+      "subject": "Consulta de Consultoria [Seu assunto*]",
+      "message": "Oi Steff,\n\nCom esse assunto eu precisaria de ajuda. [Sua mensagem*]\n\nAtenciosamente"
+    },
+    "coursesTheory": {
+      "subject": "Consulta sobre Curso Teórico [Seu assunto*]",
+      "message": "Oi Steff,\n\nConte-me sobre suas necessidades de curso teórico. [Sua mensagem*]\n\nAtenciosamente"
+    },
+    "coursesStarting": {
+      "subject": "Consulta sobre Curso para Iniciantes [Seu assunto*]",
+      "message": "Oi Steff,\n\nQue tipo de suporte você está procurando? [Sua mensagem*]\n\nAtenciosamente"
+    },
+    "coursesAdvanced": {
+      "subject": "Consulta sobre Curso Avançado [Seu assunto*]",
+      "message": "Oi Steff,\n\nQue tipo de suporte você está procurando? [Sua mensagem*]\n\nAtenciosamente"
+    },
+    "processEngineering": {
+      "processControl": {
+        "subject": "Consulta sobre Controle de Processos [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nDescreva suas necessidades de controle de processos. [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "processOptimization": {
+        "subject": "Consulta sobre Otimização de Processos [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nDescreva suas necessidades de otimização de processos. [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "changeManagement": {
+        "subject": "Consulta sobre Gestão de Mudanças [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nConte-me sobre seu desafio de gestão de mudanças. [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "monitoring": {
+        "subject": "Consulta sobre Monitoramento de Processos [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nDescreva suas necessidades de monitoramento de processos. [Sua mensagem*]\n\nAtenciosamente"
+      }
+    },
+    "processDevelopment": {
+      "creativity": {
+        "subject": "Consulta sobre Suporte em Criatividade [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nCom que desafio criativo posso ajudar? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "processDesign": {
+        "subject": "Consulta sobre Design de Processos [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQual fluxo de processo precisa de uma perspectiva externa? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "simulationPrototyping": {
+        "subject": "Consulta sobre Simulação [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue suporte em simulação/prototipagem você requer? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "equipmentRoadmap": {
+        "subject": "Consulta sobre Roteiro de Equipamentos [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue assistência em planejamento de equipamentos você precisa? [Sua mensagem*]\n\nAtenciosamente"
+      }
+    },
+    "softwareDevelopment": {
+      "customSolutions": {
+        "subject": "Consulta sobre Software Personalizado [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQual solução personalizada você está procurando? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "databaseManagement": {
+        "subject": "Consulta sobre Gerenciamento de Banco de Dados [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue suporte em banco de dados você requer? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "workflowAutomation": {
+        "subject": "Consulta sobre Automação de Fluxo de Trabalho [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQual fluxo de trabalho você gostaria de automatizar? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "webDevelopment": {
+        "subject": "Consulta sobre Desenvolvimento Web [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue ajuda em desenvolvimento web você precisa? [Sua mensagem*]\n\nAtenciosamente"
+      }
+    },
+    "projectManagement": {
+      "projectSetup": {
+        "subject": "Consulta sobre Configuração de Projeto [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue assistência na configuração do projeto você requer? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "timelineManagement": {
+        "subject": "Consulta sobre Gerenciamento de Cronograma [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue ajuda em gerenciamento de cronograma você precisa? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "deviationManagement": {
+        "subject": "Consulta sobre Gerenciamento de Desvios [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue suporte em gerenciamento de desvios você requer? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "documentation": {
+        "subject": "Consulta sobre Documentação de Projeto [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue assistência em documentação você precisa? [Sua mensagem*]\n\nAtenciosamente"
+      }
+    },
+    "technicalConsulting": {
+      "processAssessment": {
+        "subject": "Consulta sobre Avaliação de Processos [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue ajuda em avaliação de processos você requer? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "technicalResearch": {
+        "subject": "Consulta sobre Pesquisa Técnica [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue pesquisa técnica você precisa? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "trainingKnowledgeTransfer": {
+        "subject": "Consulta sobre Treinamento [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue treinamento/transferência de conhecimento você precisa? [Sua mensagem*]\n\nAtenciosamente"
+      },
+      "competitorAnalysis": {
+        "subject": "Consulta sobre Análise de Concorrentes [Seu assunto*]",
+        "message": "Olá Kite-Engineer,\n\nQue suporte em análise de concorrentes você requer? [Sua mensagem*]\n\nAtenciosamente"
+      }
+    }
+  },
+
+  "ContactForm": {
+    "placeholder": {
+      "name": "Seu nome*",
+      "email": "Seu e-mail*",
+      "subject": "Assunto*",
+      "message": "Sua mensagem*"
+    },
+    "acceptDataProcessing": "Aceito o processamento de dados para contato*",
+    "checkboxError": "Por favor, aceite o processamento de dados para continuar.",
+    "send": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "successMessage": "Obrigado por entrar em contato!",
+    "mandatoryNote": "* Campos obrigatórios. Por favor, dê-me algum tempo para responder. Tento manter abaixo de 2 dias."
   }
 }

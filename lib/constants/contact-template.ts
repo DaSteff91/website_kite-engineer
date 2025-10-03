@@ -1,223 +1,179 @@
+export type ContactTemplateKey =
+  | "/kite/freelancer/school-support"
+  | "/kite/freelancer/travel-services"
+  | "/kite/freelancer/consulting"
+  | "/kite/courses/theory"
+  | "/kite/courses/starting"
+  | "/kite/courses/advanced"
+  | "/engineer/process-engineering/process-control"
+  | "/engineer/process-engineering/process-optimization"
+  | "/engineer/process-engineering/change-management"
+  | "/engineer/process-engineering/monitoring"
+  | "/engineer/process-development/creativity"
+  | "/engineer/process-development/process-design"
+  | "/engineer/process-development/simulation-prototyping"
+  | "/engineer/process-development/equipment-roadmap"
+  | "/engineer/software-development/custom-solutions"
+  | "/engineer/software-development/database-management"
+  | "/engineer/software-development/workflow-automation"
+  | "/engineer/software-development/web-development"
+  | "/engineer/project-management/project-setup"
+  | "/engineer/project-management/timeline-management"
+  | "/engineer/project-management/deviation-management"
+  | "/engineer/project-management/documentation"
+  | "/engineer/technical-consulting/process-assessment"
+  | "/engineer/technical-consulting/technical-research"
+  | "/engineer/technical-consulting/training-knowledge-transfer"
+  | "/engineer/technical-consulting/competitor-analysis";
+
 type ContactTemplate = {
-  subject: string;
-  message: string;
+  subjectKey: string;
+  messageKey: string;
 };
 
-export const CONTACT_TEMPLATES: Record<string, ContactTemplate> = {
-  // Kite related subpages
-
+export const CONTACT_TEMPLATES: Record<ContactTemplateKey, ContactTemplate> = {
   "/kite/freelancer/school-support": {
-  subject: "School Support Inquiry [Your subject*]",
-  message: `Hey Steff,
-
-With the following I could need your help. [Your message*]
-
-Cheers`
-},
-
+    subjectKey: "ContactTemplates.schoolSupport.subject",
+    messageKey: "ContactTemplates.schoolSupport.message",
+  },
   "/kite/freelancer/travel-services": {
-      subject: "Travel Services Inquiry [Your subject*]",
-      message: `Hey Steff,
-
-  Please share details about what you need help with. [Your message*]
-
-  Cheers`
-    },
-    "/kite/freelancer/consulting": {
-      subject: "Consulting Inquiry [Your subject*]",
-      message: `Hey Steff,
-
-  With that topic I could need help. [Your message*]
-
-  Cheers`
-    },
-    "/kite/courses/theory": {
-      subject: "Theory Course Inquiry [Your subject*]",
-      message: `Hey Steff,
-
-  Tell me about your theory course needs. [Your message*]
-
-  Cheers`
-    },
-    "/kite/courses/starting": {
-      subject: "Beginner Course Inquiry [Your subject*]",
-      message: `Hey Steff,
-
-  What kind of support are you looking for? [Your message*]
-
-  Cheers`
-    },
-    "/kite/courses/advanced": {
-      subject: "Advanced Course Inquiry [Your subject*]",
-      message: `Hey Steff,
-
-  What kind of support are you looking for?  [Your message*]
-
-  Cheers`
-    },
-
-  // Engineer related subpages
-    "/engineer/process-engineering/process-control": {
-    subject: "Process Control Inquiry [Your subject*]",
-    message: `Hello Kite-Engineer,
-
-  Describe your process control needs. [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/process-engineering/process-optimization": {
-      subject: "Process Optimization Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  Describe your process optimization needs. [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/process-engineering/change-management": {
-      subject: "Change Management Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  Tell me about your change management challenge. [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/process-engineering/monitoring": {
-      subject: "Process Monitoring Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  Describe your needs for process monitoring. [Your message*]
-
-  Kind regards`
-    },
-
-    "/engineer/process-development/creativity": {
-      subject: "Creativity Support Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What creative challenge can I help with? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/process-development/process-design": {
-      subject: "Process Design Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What process flow needs an outside perspective? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/process-development/simulation-prototyping": {
-      subject: "Simulation Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What simulation/prototyping support do you require? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/process-development/equipment-roadmap": {
-      subject: "Equipment Roadmap Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What equipment planning assistance do you need? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/software-development/custom-solutions": {
-      subject: "Custom Software Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What custom solution are you looking for? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/software-development/database-management": {
-      subject: "Database Management Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What database support do you require? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/software-development/workflow-automation": {
-      subject: "Workflow Automation Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What workflow would you like to automate? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/software-development/web-development": {
-      subject: "Web Development Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What web development help do you need? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/project-management/project-setup": {
-      subject: "Project Setup Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What project setup assistance do you require? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/project-management/timeline-management": {
-      subject: "Timeline Management Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What timeline management help do you need? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/project-management/deviation-management": {
-      subject: "Deviation Management Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What deviation management support do you require? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/project-management/documentation": {
-      subject: "Project Documentation Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What documentation assistance do you need? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/technical-consulting/process-assessment": {
-      subject: "Process Assessment Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What process assessment help do you require? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/technical-consulting/technical-research": {
-      subject: "Technical Research Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What technical research do you need? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/technical-consulting/training-knowledge-transfer": {
-      subject: "Training Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What training/knowledge transfer do you need? [Your message*]
-
-  Kind regards`
-    },
-    "/engineer/technical-consulting/competitor-analysis": {
-      subject: "Competitor Analysis Inquiry [Your subject*]",
-      message: `Hello Kite-Engineer,
-
-  What competitor analysis support do you require? [Your message*]
-
-  Kind regards`
-    }
+    subjectKey: "ContactTemplates.travelServices.subject",
+    messageKey: "ContactTemplates.travelServices.message",
+  },
+  "/kite/freelancer/consulting": {
+    subjectKey: "ContactTemplates.consulting.subject",
+    messageKey: "ContactTemplates.consulting.message",
+  },
+  "/kite/courses/theory": {
+    subjectKey: "ContactTemplates.coursesTheory.subject",
+    messageKey: "ContactTemplates.coursesTheory.message",
+  },
+  "/kite/courses/starting": {
+    subjectKey: "ContactTemplates.coursesStarting.subject",
+    messageKey: "ContactTemplates.coursesStarting.message",
+  },
+  "/kite/courses/advanced": {
+    subjectKey: "ContactTemplates.coursesAdvanced.subject",
+    messageKey: "ContactTemplates.coursesAdvanced.message",
+  },
+  "/engineer/process-engineering/process-control": {
+    subjectKey:
+      "ContactTemplates.processEngineering.processControl.subject",
+    messageKey:
+      "ContactTemplates.processEngineering.processControl.message",
+  },
+  "/engineer/process-engineering/process-optimization": {
+    subjectKey:
+      "ContactTemplates.processEngineering.processOptimization.subject",
+    messageKey:
+      "ContactTemplates.processEngineering.processOptimization.message",
+  },
+  "/engineer/process-engineering/change-management": {
+    subjectKey:
+      "ContactTemplates.processEngineering.changeManagement.subject",
+    messageKey:
+      "ContactTemplates.processEngineering.changeManagement.message",
+  },
+  "/engineer/process-engineering/monitoring": {
+    subjectKey:
+      "ContactTemplates.processEngineering.monitoring.subject",
+    messageKey:
+      "ContactTemplates.processEngineering.monitoring.message",
+  },
+  "/engineer/process-development/creativity": {
+    subjectKey:
+      "ContactTemplates.processDevelopment.creativity.subject",
+    messageKey:
+      "ContactTemplates.processDevelopment.creativity.message",
+  },
+  "/engineer/process-development/process-design": {
+    subjectKey:
+      "ContactTemplates.processDevelopment.processDesign.subject",
+    messageKey:
+      "ContactTemplates.processDevelopment.processDesign.message",
+  },
+  "/engineer/process-development/simulation-prototyping": {
+    subjectKey:
+      "ContactTemplates.processDevelopment.simulationPrototyping.subject",
+    messageKey:
+      "ContactTemplates.processDevelopment.simulationPrototyping.message",
+  },
+  "/engineer/process-development/equipment-roadmap": {
+    subjectKey:
+      "ContactTemplates.processDevelopment.equipmentRoadmap.subject",
+    messageKey:
+      "ContactTemplates.processDevelopment.equipmentRoadmap.message",
+  },
+  "/engineer/software-development/custom-solutions": {
+    subjectKey:
+      "ContactTemplates.softwareDevelopment.customSolutions.subject",
+    messageKey:
+      "ContactTemplates.softwareDevelopment.customSolutions.message",
+  },
+  "/engineer/software-development/database-management": {
+    subjectKey:
+      "ContactTemplates.softwareDevelopment.databaseManagement.subject",
+    messageKey:
+      "ContactTemplates.softwareDevelopment.databaseManagement.message",
+  },
+  "/engineer/software-development/workflow-automation": {
+    subjectKey:
+      "ContactTemplates.softwareDevelopment.workflowAutomation.subject",
+    messageKey:
+      "ContactTemplates.softwareDevelopment.workflowAutomation.message",
+  },
+  "/engineer/software-development/web-development": {
+    subjectKey:
+      "ContactTemplates.softwareDevelopment.webDevelopment.subject",
+    messageKey:
+      "ContactTemplates.softwareDevelopment.webDevelopment.message",
+  },
+  "/engineer/project-management/project-setup": {
+    subjectKey:
+      "ContactTemplates.projectManagement.projectSetup.subject",
+    messageKey:
+      "ContactTemplates.projectManagement.projectSetup.message",
+  },
+  "/engineer/project-management/timeline-management": {
+    subjectKey:
+      "ContactTemplates.projectManagement.timelineManagement.subject",
+    messageKey:
+      "ContactTemplates.projectManagement.timelineManagement.message",
+  },
+  "/engineer/project-management/deviation-management": {
+    subjectKey:
+      "ContactTemplates.projectManagement.deviationManagement.subject",
+    messageKey:
+      "ContactTemplates.projectManagement.deviationManagement.message",
+  },
+  "/engineer/project-management/documentation": {
+    subjectKey:
+      "ContactTemplates.projectManagement.documentation.subject",
+    messageKey:
+      "ContactTemplates.projectManagement.documentation.message",
+  },
+  "/engineer/technical-consulting/process-assessment": {
+    subjectKey:
+      "ContactTemplates.technicalConsulting.processAssessment.subject",
+    messageKey:
+      "ContactTemplates.technicalConsulting.processAssessment.message",
+  },
+  "/engineer/technical-consulting/technical-research": {
+    subjectKey:
+      "ContactTemplates.technicalConsulting.technicalResearch.subject",
+    messageKey:
+      "ContactTemplates.technicalConsulting.technicalResearch.message",
+  },
+  "/engineer/technical-consulting/training-knowledge-transfer": {
+    subjectKey:
+      "ContactTemplates.technicalConsulting.trainingKnowledgeTransfer.subject",
+    messageKey:
+      "ContactTemplates.technicalConsulting.trainingKnowledgeTransfer.message",
+  },
+  "/engineer/technical-consulting/competitor-analysis": {
+    subjectKey:
+      "ContactTemplates.technicalConsulting.competitorAnalysis.subject",
+    messageKey:
+      "ContactTemplates.technicalConsulting.competitorAnalysis.message",
+  },
 };
-
-export type ContactTemplateKey = keyof typeof CONTACT_TEMPLATES;
