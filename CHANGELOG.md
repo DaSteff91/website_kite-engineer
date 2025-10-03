@@ -1,3 +1,14 @@
+## [1.27.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.27.0...v1.27.1) (2025-10-03)
+
+
+### Bug Fixes
+
+* prepare new grid style for future engineer pages ([0451384](https://github.com/DaSteff91/website_kite-engineer/commit/0451384cb10e2730c0fbfdc2108dbc40f60f8672))
+* prepare reworking design structures ([612900d](https://github.com/DaSteff91/website_kite-engineer/commit/612900d9e31d7d5e3a0be1d8c929f377199a4b72))
+* preparing for internationalized contact form placeholders ([2172b1a](https://github.com/DaSteff91/website_kite-engineer/commit/2172b1a513e872927b69dc7cf6260ddd1b97ecc4))
+* preparing new service grid style for kite pages ([c6df7ee](https://github.com/DaSteff91/website_kite-engineer/commit/c6df7ee8d4aca2743f420e372c45f0ece01b4cc3))
+* reworking translations ([f239273](https://github.com/DaSteff91/website_kite-engineer/commit/f23927356234c899b60c4ca4fa9df8cdc7ef924c))
+
 # [1.27.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.26.5...v1.27.0) (2025-09-22)
 
 
