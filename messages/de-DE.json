@@ -19,68 +19,68 @@
    "ContactPage": {
     "heroTitle": "Combining Worlds...",
     "sectionTitle": "So kommen wir zusammen",
-    "sectionDescription": "Ob es ums Kiten, Engineering oder um was dazwischen geht: Meld dich per Mail, Telefon oder über das Kontaktformular unten. Hast du einen Bug oder Tippfehler gefunden? Ich bin dir ewig dankbar, wenn Du ihn mir meldest."
+    "sectionDescription": "Ob es ums Kiten, Engineering oder um was dazwischen geht: Melde dich per Mail, Telefon oder über das Kontaktformular unten. Hast du einen Bug oder Tippfehler gefunden? Ich bin dir ewig dankbar, wenn Du ihn mir meldest."
   },
   "EngineerPage": {
     "heroTitle": "Combining Worlds...",
-    "sectionTitle": "Erweitere deine Möglichkeiten",
-    "sectionDescription": "Profitiere von meinen Ingenieurdienstleistungen in den Bereichen IT und Halbleiter",
+    "sectionTitle": "Eröffne Dir neue Möglichkeiten",
+    "sectionDescription": "Profitiere von meinen Dienstleistungen in den Bereichen Halbleitertechnik, Engineering und IT",
     "contactButton": "Kontakt",
     "processEngineering": {
       "title": "Prozessengineering",
       "processControl": {
         "title": "Prozesskontrolle",
-        "description": "APC (Advanced Process Control), SPC (Statistical Process Control) und WER (Western Electric Rules) Implementierung als Kernkompetenz. Datenanalyse mit Python, KI-Training zur Fehlererkennung, Dashboards & KPI-Setup helfen auf dem Weg."
+        "description": "APC (Advanced Process Control), SPC (Statistical Process Control) und WER (Western Electric Rules) Implementierung als Kernkompetenz. Zudem: Datenanalyse mit Python, KI-Training zur Fehlererkennung, Dashboards & KPI-Setup und weitere Optionen helfen entlang des Weges."
       },
       "processOptimization": {
         "title": "Prozessoptimierung",
-        "description": "Anbieten von 6-Sigma- und Lean-Techniken, um das bestmögliche Prozessergebnis zu erreichen."
+        "description": "6-Sigma- und Lean-Techniken sind bewährte Herangehensweisen, um das bestmögliche Prozessergebnis zu erreichen. Das in Kombination mit anderen Services helfen Dir dabei, Deine Ziele zu erreichen."
       },
       "changeManagement": {
         "title": "Change Management",
-        "description": "Meilensteine vorbereiten und Release-Gates passieren. Es geht um Dokumentation und Nachvollziehbarkeit – ich übernehme das für dich."
+        "description": "Die Vorbereitung für Meilenstein-Prozesse zur produktiven Freigabe ist müßig. Es geht um Dokumentation und Nachvollziehbarkeit – ich übernehme das für dich."
       },
       "monitoring": {
         "title": "Monitoring",
-        "description": "Du weißt nicht, welche Parameter überwacht werden sollen und wie? Lass uns ein Monitoring-Setup definieren. Und wo nötig, finden wir geeignete Methoden für jedes Produktionsvolumen."
+        "description": "Du weißt nicht, welche Parameter deiner Prozesse überwacht werden sollen und wie? Lass uns ein Monitoring-Setup definieren. Und wo nötig, finden wir geeignete Methoden für jedes Produktionsvolumen."
       }
     },
     "processDevelopment": {
       "title": "Prozessentwicklung",
       "creativity": {
         "title": "Kreativität",
-        "description": "Es gibt mehr als Brainstorming – das weißt du schon. Melde dich und lass uns bisher unbekannte Neuronen aktivieren."
+        "description": "Es gibt mehr als Brainstorming – das weißt Du schon. Schreib mir und wir können gemeinsam bisher unbekannte Neuronen bei Dir und Deinem Team aktivieren."
       },
       "processDesign": {
         "title": "Prozessdesign",
-        "description": "Du weißt, was dein Prozess erreichen muss, aber Grenzen halten dich in einem endlosen Entwicklungszyklus fest? Wir brechen das hier und jetzt auf und designen, was nötig ist. Visualisierungen und Strukturierung helfen enorm."
+        "description": "Du weißt, was dein Prozess erreichen muss, aber Störgrößen halten dich in einem endlosen Entwicklungszyklus fest? Wir zoomen etwas raus und gemeinsam können wir das durchbrechen und festlegen, was wie wo auszusehen hat. Visualisierungen und Strukturierung helfen dabei enorm."
       },
       "simulationPrototyping": {
         "title": "Simulation & Prototyping",
-        "description": "Schon einmal über Analogie-Modelle oder Simulationen zur Problemlösung nachgedacht? Oder ein physisches Modell 3D-drucken lassen? Ich bereite dein Projekt für jede Visualisierung vor und verbinde dich mit Experten."
+        "description": "Schon einmal über Analogie-Modelle oder Simulationen zur Problemlösung nachgedacht? Oder ein physisches Modell in 3D drucken lassen? Ich helfe Dir dabei, Dein Projekt darauf vorzubereitung und verbinde dich mit Experten."
       },
       "processEquipmentRoadmap": {
         "title": "Prozess- & Anlagen-Roadmap",
-        "description": "Deine Konkurrenten warten nicht auf dich. Sei vorbereitet auf zukünftige Anforderungen. Ich helfe dir, Strategien der nächsten Generation aufzuzeigen und wie sie für dich nutzbar werden."
+        "description": "Deine Konkurrenten warten nicht auf dich. Sei besser vorbereitet auf die Anforderungen der Zukunft. Ich helfe Dir dabei zu beleuchten, was es Neues in der nächsten Generation gibt und wie Du das für dich nutzbar machen kannst."
       }
     },
     "softwareDevelopment": {
       "title": "Softwareentwicklung",
       "customizedSolutions": {
         "title": "Individuelle Lösungen",
-        "description": "Willst du Funktionen von Software A mit B kombinieren und ein passendes Ergebnis erzeugen? Kein Problem – von Scripts über Containerisierung bis zur Front- & Backend-Integration."
+        "description": "Willst du Funktionen von Software A mit B kombinieren und daraus ein komplett neues Ergebnis erzeugen? Kein Problem – vom Scripting über Containerisierung bis zu Front- & Backend-Integration kann ich Dir helfen."
       },
       "databaseManagement": {
-        "title": "Relationale Datenbankverwaltung",
-        "description": "Willst du Daten von Excel-Dateien in ein nachhaltigeres Format bringen oder deine bestehende DB verbessern? Von komplett neuen RDBMS bis Anpassungen – ich finde die Lösung."
+        "title": "Relational Database Management",
+        "description": "Willst du endlich deine Daten aus Excel-Dateien raus in ein nachhaltigeres Format bringen oder deine bestehende Datenbank umstrukturieren? Von neuen RDBMS (relational database management systems) bis zu spezifischen Anpassungen – ich finde raus, was wir tun können."
       },
       "workflowAutomation": {
         "title": "Workflow-Automatisierung",
-        "description": "Spare Zeit und lass Software wiederkehrende Aufgaben übernehmen. Konzept erarbeiten, Schritt für Schritt implementieren, basierend auf deinen Bedürfnissen."
+        "description": "Spare Deine Zeit und lass Software wiederkehrende Aufgaben für Dich übernehmen. Zunächst erarbeiten wir gemeinsam ein Konzept, stimmen es auf die Bedürfnisse ab und implementieren es dann Schritt für Schritt. Ich bin mir sicher, dass viele Deiner bereits genutzten Software passende Features bietet."
       },
       "webDevelopment": {
         "title": "Webentwicklung",
-        "description": "Server- und Domain-Setup? Oder eine eigene Nextcloud? Webadministration auslagern – und falls eine Website benötigt wird, manage ich das ebenfalls."
+        "description": "Server- und Domain-Setup? Oder wie sieht es mit einer eigene Nextcloud aus? Du willst deine Webadministration auslagern? Oder brauchst sogar eine Website? Das alles manage ich für dich, kein Problem."
       }
     },
     "projectManagement": {
@@ -278,44 +278,48 @@
     "school-support-section-subtitle": "Ich hab Bock, Deine Schule und dein Unternehmen zu unterstützen. Sieh in mir den Typen, den du einfach überall einsetzen kannst: Flexibilität ist meine Stärke. Sag mir nur vorher, was Du brauchst:",
     "instructor-services-title": "Instructor-Services",
     "instructor-services-list-element1": "• VDWS-zertifizierter Instructor seit 2023",
-    "instructor-services-list-element2": "• Unterricht vom Einsteiger bis zum Fortgeschrittenen",
-    "instructor-services-list-element3": "• Landboarding-Unterricht",
-    "instructor-services-list-element4": "• Mehrsprachige aufgestellt: Deutsch, Englisch, Portugiesisch",
-    "instructor-services-list-element5": "• Gruppen- und Einzelunterricht",
-    "instructor-services-list-element6": "• Aufsicht am Wasser inkl. Video und Fotos",
+    "instructor-services-list-element2": "• Kungenadministration und -service",
+    "instructor-services-list-element3": "• Unterricht vom Einsteiger bis zum Fortgeschrittenen",
+    "instructor-services-list-element4": "• Basic Landboarding-Unterricht",
+    "instructor-services-list-element5": "• Basic Wakeboard-Unterricht",
+    "instructor-services-list-element6": "• Mehrsprachige aufgestellt: Deutsch, Englisch, Portugiesisch",
+    "instructor-services-list-element7": "• Gruppen- und Einzelunterricht",
+    "instructor-services-list-element8": "• Aufsicht am Wasser inkl. Video und Fotos",
     "general-assistance-title": "Allgemeine Unterstützung",
     "general-assistance-list-element1": "• Büro und Administration",
     "general-assistance-list-element2": "• Kundenservice und Vertriebsunterstützung",
     "general-assistance-list-element3": "• Beratung beim Materialkauf und -verkauf",
     "general-assistance-list-element4": "• Wartung und Reparatur von Material",
-    "general-assistance-list-element5": "• Bestandsmanagement und Logistik",
-    "general-assistance-list-element6": "• Produktvorführungen",
-    "general-assistance-list-element7": "• Helfende Hand im Alltag",
+    "general-assistance-list-element5": "• Lager und Logistik",
+    "general-assistance-list-element6": "• Produktvorführungen intern oder vor Kunden",
+    "general-assistance-list-element7": "• Kleinere handwerkliche Themen",
+    "general-assistance-list-element8": "• IT-Infrastruktur Themen",
     "flexible-scheduling-title": "Flexible Einsatzplanung",
-    "flexible-scheduling-list-element1": "• Kurz- und Langzeitverträge",
-    "flexible-scheduling-list-element2": "• Je mehr du buchst, desto besser der Preis",
-    "flexible-scheduling-list-element3": "• Saisonale Unterstützung verfügbar",
+    "flexible-scheduling-list-element1": "• Kurz- und Langzeitverträge möglich",
+    "flexible-scheduling-list-element2": "• Je mehr Du buchst, desto besser der wird Preis",
+    "flexible-scheduling-list-element3": "• International einsatzbereit",
     "flexible-scheduling-list-element4": "• Wochenend- und Feiertagsabdeckung",
     "flexible-scheduling-list-element5": "• Unterstützung für Schulen mit mehreren Standorten und Bereitschaft zum Pendeln zwischen den Standorten",
     "flexible-scheduling-list-element6": "• Führerschein für Auto und Motorrad vorhanden",
+    "flexible-scheduling-list-element7": "• Offene und ehrliche Kommunikation",
     "school-support-contact": "Lass uns schauen, wie ich dein Team unterstützen kann. Kombiniere meine Leistungen nach Wunsch, es gibt fast keine Einschränkungen. Fehlt etwas? Wir finden eine Lösung. Hier beginnt alles:",
     "contact-button": "Kontakt"
   },
   "ConsultingPage": {
     "back-to-kite-services-nav": "Zurück zur Service Übersicht",
     "consulting-hero": "Beratung Service",
-    "consulting-section-title": "Es gibt viel zu fragen",
-    "consulting-section-subtitle": "Anleitung und Wissensaustausch sind der Schlüssel: Jemand weiß etwas und jemand möchte es lernen. Hier verbinde ich meine Rolle als Kitesurfer und -Instruktor mit meiner Rolle als Teil der Gesellschaft.",
+    "consulting-section-title": "Es gibt so viele Fragen",
+    "consulting-section-subtitle": "Orientierung und Austausch sind essenziel: Jemand weiß etwas und ein anderer möchte was lernen. Hier verbinde ich meine Rolle als Kitesurfer und Instructor mit meiner Rolle als Teil der Gesellschaft.",
     "general-consulting-title": "Allgemeine Beratung",
     "general-consulting-list-element1": "• Individuelle Ausrüstungs-Empfehlungen",
-    "general-consulting-list-element2": "• Transport, Wartung und Logistik",
+    "general-consulting-list-element2": "• Transport, Pflege und Logistik",
     "general-consulting-list-element3": "• Material-Reviews und Test-Demos",
     "general-consulting-list-element4": "• Angebotsüberprüfung",
     "general-consulting-list-element5": "• Karma: Einfluss auf Gesellschaft und Umwelt",
     "sport-representation-title": "Sport-Repräsentation",
     "sport-representation-list-element1": "• Öffentlichkeitsarbeit und Repräsentation des Sports",
     "sport-representation-list-element2": "• Bildungs-Workshops für fast alle Altersgruppen",
-    "sport-representation-list-element3": "• Medieninterviews und Inhalte, auch B2B",
+    "sport-representation-list-element3": "• Medieninterviews und Inhalte",
     "sport-representation-list-element4": "• Community-Outreach-Programme",
     "sport-representation-list-element5": "• Sportförderungs-Initiativen",
     "consulting-contact": "Dieser Bereich dreht sich um alles, was in irgendeiner Weise mit dem Sport und der Umgebung, in der er ausgeübt wird, verbunden ist. Finde heraus, wie wir zusammenarbeiten können:",
@@ -351,7 +355,7 @@
     "equipmentRoadmap": "Anlagen Roadmap",
     "softwareDevelopment": "Softwareentwicklung",
     "customSolutions": "Kundenspezifisch Lösungen",
-    "databaseManagement": "Datenbanken Management",
+    "databaseManagement": "Datenbankmanagement",
     "workflowAutomation": "Automatisierung",
     "webDevelopment": "Webentwicklung",
     "projectManagement": "Projekt Management",

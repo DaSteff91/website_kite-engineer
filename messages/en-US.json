@@ -30,7 +30,7 @@
       "title": "Process Engineering",
       "processControl": {
         "title": "Process Control",
-        "description": "APC (Advanced Process control), SPC (Statistical Process Control) and WER (Western Electrical Rules) implementation as core competence. Data analytics using Python, AI training for failure detection, dashboards & KPI setup help along the way."
+        "description": "APC (Advanced Process control), SPC (Statistical Process Control) and WER (Western Electrical Rules) implementation as core competence. As well: Data analytics using Python, AI training for failure detection, dashboards & KPI setup help along the way."
       },
       "processOptimization": {
         "title": "Process Optimization",
@@ -42,7 +42,7 @@
       },
       "monitoring": {
         "title": "Monitoring",
-        "description": "Don't know what parameters to monitor and how? Let's define a monitoring setup. And where necessary we find appropriate methods to get a solution for any type of produced volume"
+        "description": "Don't know what parameters of your processes to monitor and how? Let's define a monitoring setup. And where necessary we find appropriate methods to get a solution for any type of produced volume"
       }
     },
     "processDevelopment": {
@@ -53,7 +53,7 @@
       },
       "processDesign": {
         "title": "Process Design",
-        "description": "You know what your process must achieve but have boundaries locking you into an neverending development cycle? We´ll break it here and now and design what needs to be done. Visualizations and structuring help a lot"
+        "description": "You know what your process must achieve but have boundaries locking you into an neverending development cycle? We zoom out a bit and together we can break through hurdles and determine what should look like where. Visualizations and structuring help a lot"
       },
       "simulationPrototyping": {
         "title": "Simulation and Prototyping",
@@ -307,11 +307,13 @@
     "school-support-section-subtitle": "I´m ready to support your school and business. Consider me as the one guy you\n literally can put anywhere: Flexibility is my strength. Just tell\n me up front what you need:",
     "instructor-services-title": "Instructor Services",
     "instructor-services-list-element1": "• VDWS certified instructor since 2023",
-    "instructor-services-list-element2": "• Beginner to advanced lessons",
-    "instructor-services-list-element3": "• Landboarding lessons",
-    "instructor-services-list-element4": "• Multi-language support (German, English, Portuguese)",
-    "instructor-services-list-element5": "• Group and individual sessions",
-    "instructor-services-list-element6": "• Supervision and filming",
+    "instructor-services-list-element2": "• Customer administration and service",
+    "instructor-services-list-element3": "• Beginner to advanced lessons",
+    "instructor-services-list-element4": "• Basic Landboarding lessons",
+    "instructor-services-list-element5": "• Basic Wakeboarding lessons",
+    "instructor-services-list-element6": "• Multi-language support (German, English, Portuguese)",
+    "instructor-services-list-element7": "• Group and individual sessions",
+    "instructor-services-list-element8": "• Supervision and filming",
     "general-assistance-title": "General Assistance",
     "general-assistance-list-element1": "• Office and administration",
     "general-assistance-list-element2": "• Customer service and sales support",
@@ -319,15 +321,17 @@
     "general-assistance-list-element4": "• Gear maintenance and repairs",
     "general-assistance-list-element5": "• Inventory management and logistics",
     "general-assistance-list-element6": "• Product demonstrations",
-    "general-assistance-list-element7": "• Helping hand in day to day tasks",
+    "general-assistance-list-element7": "• Helping hand in day to day tasks like crafting",
+    "general-assistance-list-element8": "• Small IT infrastructure topics",
     "flexible-scheduling-title": "Flexible Scheduling",
     "flexible-scheduling-list-element1": "• Short-term and long-term contracts",
     "flexible-scheduling-list-element2": "• The more you book, the better the price",
-    "flexible-scheduling-list-element3": "• Seasonal support available",
+    "flexible-scheduling-list-element3": "• Ready for international support",
     "flexible-scheduling-list-element4": "• Weekend and holiday coverage",
-    "flexible-scheduling-list-element5": "• Providing support to multi-location schools and open to\n commuting between sites.",
-    "flexible-scheduling-list-element6": "• Driver’s license covering both car and motorcycle.",
-    "school-support-contact": "Let's see how I can support your team. Combine my services as you\n wish, there are almost no restrictions. Is anything missing? We\n find a solution. It all starts here:",
+    "flexible-scheduling-list-element5": "• Providing support to multi-location schools and open to commuting between sites",
+    "flexible-scheduling-list-element6": "• Driver’s license covering both car and motorcycle",
+    "flexible-scheduling-list-element7": "• Open and honest communication",
+    "school-support-contact": "Let's see how I can support your team. Combine my services as you wish, there are almost no restrictions. Is anything missing? We find a solution. It all starts here:",
     "contact-button": "Connect with me"
   },
   "ConsultingPage": {
@@ -344,7 +348,7 @@
     "sport-representation-title": "Sport Representation",
     "sport-representation-list-element1": "• Public speaking and presentations about sport related topics",
     "sport-representation-list-element2": "• Educational workshops for almost all ages",
-    "sport-representation-list-element3": "• Media interviews and content, also for B2B",
+    "sport-representation-list-element3": "• Media interviews and content",
     "sport-representation-list-element4": "• Community outreach programs",
     "sport-representation-list-element5": "• Sport promotion initiatives",
     "consulting-contact": "This section revolves around anything that is somehow connected to\n the sport as well to the environment in which it´s carried out.\n Find out how we can work together:",

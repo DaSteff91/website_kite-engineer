@@ -8,7 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useAutoGrowTextarea } from "@/hooks/useAutoGrowTextarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from "next-intl";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);

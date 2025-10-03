@@ -43,7 +43,7 @@
       },
       "monitoring": {
         "title": "Monitoramento",
-        "description": "Não sabe quais parâmetros monitorar e como? Vamos definir uma configuração de monitoramento. E, quando necessário, encontramos métodos apropriados para obter uma solução para qualquer volume produzido"
+        "description": "Você não sabe quais parâmetros dos seus processos monitorar e como? Vamos definir uma configuração de monitoramento. E, quando necessário, encontramos métodos apropriados para obter uma solução para qualquer volume produzido"
       }
     },
     "processDevelopment": {
@@ -310,11 +310,13 @@
     "school-support-section-subtitle": "Estou pronto para apoiar sua escola e empresa. Considere-me como aquele membro flexível que pode atuar onde você precisar: flexibilidade é minha força. Diga o que precisa:",
     "instructor-services-title": "Serviços de Instrutor",
     "instructor-services-list-element1": "• Instrutor certificado VDWS desde 2023",
-    "instructor-services-list-element2": "• Aulas do iniciante ao avançado",
-    "instructor-services-list-element3": "• Aulas de landboarding",
-    "instructor-services-list-element4": "• Suporte multilíngue (alemão, inglês, português)",
-    "instructor-services-list-element5": "• Sessões em grupo ou individuais",
-    "instructor-services-list-element6": "• Supervisão e filmagem",
+    "instructor-services-list-element2": "• Administração e atendimento ao cliente",
+    "instructor-services-list-element3": "• Aulas do iniciante ao avançado",
+    "instructor-services-list-element4": "• Aulas basicas de landboarding",
+    "instructor-services-list-element5": "• Aulas basicas de wakeboarding",
+    "instructor-services-list-element6": "• Suporte multilíngue (alemão, inglês, português)",
+    "instructor-services-list-element7": "• Sessões em grupo ou individuais",
+    "instructor-services-list-element8": "• Supervisão e filmagem",
     "general-assistance-title": "Assistência Geral",
     "general-assistance-list-element1": "• Escritório e administração",
     "general-assistance-list-element2": "• Suporte ao cliente e vendas",
@@ -323,13 +325,15 @@
     "general-assistance-list-element5": "• Gestão de inventário e logística",
     "general-assistance-list-element6": "• Demonstrações de produto",
     "general-assistance-list-element7": "• Ajuda nas tarefas do cotidiano",
+    "general-assistance-list-element8": "• Pequenos tópicos de infraestrutura de TI",
     "flexible-scheduling-title": "Agendamento Flexível",
     "flexible-scheduling-list-element1": "• Contratos de curto e longo prazo",
     "flexible-scheduling-list-element2": "• Quanto mais reservar, melhor o preço",
-    "flexible-scheduling-list-element3": "• Suporte sazonal disponível",
+    "flexible-scheduling-list-element3": "• Pronto para trabalho internacional",
     "flexible-scheduling-list-element4": "• Cobertura nos finais de semana e feriados",
     "flexible-scheduling-list-element5": "• Apoio a escolas em múltiplos locais e disponibilidade para deslocamento",
     "flexible-scheduling-list-element6": "• Carteira de motorista para carro e moto",
+    "flexible-scheduling-list-element7": "• Comunicação aberta e honesta",
     "school-support-contact": "Veja como posso apoiar sua equipe. Combine meus serviços como quiser, quase não há restrições. Falta algo? Encontramos uma solução. Tudo começa aqui:",
     "contact-button": "Conectar comigo"
   },
@@ -347,7 +351,7 @@
     "sport-representation-title": "Representação Esportiva",
     "sport-representation-list-element1": "• Palestras e apresentações sobre temas esportivos",
     "sport-representation-list-element2": "• Oficinas educativas para todas as idades",
-    "sport-representation-list-element3": "• Entrevistas e conteúdo para mídia, inclusive B2B",
+    "sport-representation-list-element3": "• Entrevistas e conteúdo para mídia",
     "sport-representation-list-element4": "• Programas de alcance comunitário",
     "sport-representation-list-element5": "• Iniciativas de promoção do esporte",
     "consulting-contact": "Esta seção abrange tudo relacionado ao esporte e ao ambiente em que é praticado. Descubra como podemos trabalhar juntos:",

@@ -135,6 +135,18 @@ export default async function SchoolSupportPage({
                 >
                   {t("instructor-services-list-element6")}
                 </li>
+                <li
+                  id="instructor-services-list-element7"
+                  className="pl-3 -indent-3"
+                >
+                  {t("instructor-services-list-element7")}
+                </li>
+                <li
+                  id="instructor-services-list-element8"
+                  className="pl-3 -indent-3"
+                >
+                  {t("instructor-services-list-element8")}
+                </li>
               </ul>
             </div>
 
@@ -191,6 +203,12 @@ export default async function SchoolSupportPage({
                 >
                   {t("general-assistance-list-element7")}
                 </li>
+                <li
+                  id="general-assistance-list-element8"
+                  className="pl-3 -indent-3"
+                >
+                  {t("general-assistance-list-element8")}
+                </li>
               </ul>
             </div>
 
@@ -240,6 +258,12 @@ export default async function SchoolSupportPage({
                   className="pl-3 -indent-3"
                 >
                   {t("flexible-scheduling-list-element6")}
+                </li>
+                <li
+                  id="flexible-scheduling-list-element7"
+                  className="pl-3 -indent-3"
+                >
+                  {t("flexible-scheduling-list-element7")}
                 </li>
               </ul>
             </div>
