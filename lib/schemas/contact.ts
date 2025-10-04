@@ -15,5 +15,6 @@ export const contactSchema = z.object({
   message: z.string()
     .min(2, "Message too short")
     .max(1000, "Message too long"),
+  locale: z.enum(['en-US','de-DE','pt-BR']).optional()
 });
 export type ContactInput = z.infer<typeof contactSchema>;

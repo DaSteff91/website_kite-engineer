@@ -1095,6 +1095,10 @@
     "sendingError": "An error occurred while sending your message.",
     "successMessage": "Thank you for contacting us!",
     "mandatoryNote1": "* Mandatory fields.",
-    "mandatoryNote2": "Please give me some time to respond. I try keeping it lower than 2 days."
-  }
+    "mandatoryNote2": "Please give me some time to respond. I try keeping it lower than 2 days.",
+    "nodemailerAutoReplies": {
+      "subject":"RE: \"{subject}\"",
+      "body": "<p>Hello {name},</p>\n\n<p>Thanks for reaching out — I’ve received your message and will reply as soon as possible.</p>\n\n<p>Kind regards,<br/>Steff</p>\n\n<p><a href=\"https://www.kite-engineer.de\" target=\"_blank\">www.kite-engineer.de</a><br/><a href=\"mailto:stefan@kite-engineer.de\">stefan@kite-engineer.de</a></p>\n\n<hr />\n\n<p><strong>Your message:</strong></p>\n<pre style=\"white-space:pre-wrap;\">{originalMessage}</pre>"
+    }
+}
 }

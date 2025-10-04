@@ -555,6 +555,10 @@
     "sendingError": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten.",
     "successMessage": "Vielen Dank für Ihre Kontaktaufnahme!",
     "mandatoryNote1": "* Pflichtfelder.",
-    "mandatoryNote2": "Bitte geben Sie mir etwas Zeit für eine Antwort. Ich versuche, diese unter 2 Tagen zu halten."
+    "mandatoryNote2": "Bitte geben Sie mir etwas Zeit für eine Antwort. Ich versuche, diese unter 2 Tagen zu halten.",
+    "nodemailerAutoReplies": {
+      "subject":"AW: \"{subject}\"",
+      "body": "<p>Hallo {name},</p>\n\n<p>Schön, dass Du mir schreibst – ich habe Deine Nachricht erhalten und werde schnellstmöglich antworten.</p>\n\n<p>Viele Grüße,<br/>Steff</p>\n\n<p><a href=\"https://www.kite-engineer.de\" target=\"_blank\">www.kite-engineer.de</a><br/><a href=\"mailto:stefan@kite-engineer.de\">stefan@kite-engineer.de</a></p>\n\n<hr />\n\n<p><strong>Originalnachricht:</strong></p>\n<pre style=\"white-space:pre-wrap;\">{originalMessage}</pre>"
+    }
   }
 }

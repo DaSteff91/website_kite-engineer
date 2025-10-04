@@ -3,7 +3,7 @@ import { sendEmail } from '@/lib/utils/nodemailer';
 import { RateLimiterMemory } from 'rate-limiter-flexible';
 import { contactSchema, type ContactInput } from '@/lib/schemas/contact';
 import { sanitizeInput } from '@/lib/utils/sanitize';
-
+import { getTranslations } from 'next-intl/server';
 
 // Allowed CORS origins
 const allowedOrigins = [
@@ -34,6 +34,15 @@ export async function OPTIONS(req: NextRequest) {
 
 const limiter = new RateLimiterMemory({ points: 5, duration: 60 });
 
+// Supported locales whitelist (keep in sync with your routing/locales)
+const SUPPORTED_LOCALES = ["en-US", "de-DE", "pt-BR"];
+const DEFAULT_LOCALE = "en-US";
+
+function sanitizeHeaderValue(value: string, maxLen = 200): string {
+  // Remove CR/LF to avoid header injection, collapse whitespace, and limit length
+  if (!value) return "";
+  return value.replace(/[\r\n]+/g, " ").trim().slice(0, maxLen);
+}
 
 export async function POST(req: NextRequest) {
   const origin = req.headers.get('origin') ?? undefined;
@@ -72,37 +81,44 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+    // Parse request body (may contain optional locale)
     const raw = await req.json();
-    const validated = contactSchema.parse(raw);
+    // Validate the main contact fields (contactSchema now allows optional locale)
+    const validated = contactSchema.parse(raw as unknown);
 
-    const clean = sanitizeInput(validated);
+    // Determine locale: prefer client-sent locale if valid; fallback to DEFAULT_LOCALE
+    const requestedLocale = typeof (raw as any).locale === "string" ? (raw as any).locale : undefined;
+    const locale = requestedLocale && SUPPORTED_LOCALES.includes(requestedLocale) ? requestedLocale : DEFAULT_LOCALE;
+
+    const clean: ContactInput = sanitizeInput(validated);
 
     // Send email to yourself
     await sendEmail({
       to: process.env.CONTACT_EMAIL!,
-      subject: clean.subject,
+      subject: sanitizeHeaderValue(clean.subject),
       text: clean.message,
       replyTo: clean.email,
     });
 
+    // Build localized auto-reply using next-intl translations stored under ContactForm.nodemailerAutoReplies
+    const t = await getTranslations({locale, namespace: "ContactForm"});
+
+    // Compose localized subject (safe for headers)
+    const localizedSubject = t("nodemailerAutoReplies.subject", {subject: clean.subject});
+    const emailReplySubject = sanitizeHeaderValue(localizedSubject);
+
+    const rawTemplate = t.raw("nodemailerAutoReplies.body");
+
+    const localizedBodyHtml = rawTemplate
+      .replaceAll("{name}", clean.name)
+      .replaceAll("{subject}", clean.subject)
+      .replaceAll("{originalMessage}", clean.message);
+
     // Send auto-reply to sender
     await sendEmail({
       to: clean.email,
-      subject: `RE: "${clean.subject}"`,
-      html: `
-        <p>Hello ${clean.name},</p>
-        <p>Thanks for reaching out to me – I’ve received your message and will reply as soon as possible.</p>
-        <p>Schön, dass du mir schreibst – ich habe deine Nachricht erhalten und werde schnellstmöglich antworten.</p>
-        <p>Obrigado por entrar em contato comigo – eu recebi sua mensagem e responderei o mais cedo que possível.</p>
-        <p>Steff</p>
-        <p><strong>Kite-Engineer by Stefan Merthan</strong></p>
-        <p>
-          <a href="https://www.kite-engineer.de" target="_blank">www.kite-engineer.de</a><br/>
-          <a href="mailto:stefan@kite-engineer.de">stefan@kite-engineer.de</a>
-        </p>
-        <hr />
-        <p><strong>Original</strong><br/>${clean.message}</p>
-      `,
+      subject: emailReplySubject,
+      html: localizedBodyHtml,
       replyTo: process.env.CONTACT_EMAIL!,
     });
 

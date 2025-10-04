@@ -556,6 +556,10 @@
     "sendingError": "Ocorreu um erro ao enviar sua mensagem.",
     "successMessage": "Obrigado por entrar em contato!",
     "mandatoryNote1": "* Campos obrigatórios.",
-    "mandatoryNote2": "Por favor, dê-me algum tempo para responder. Tento manter abaixo de 2 dias."
+    "mandatoryNote2": "Por favor, dê-me algum tempo para responder. Tento manter abaixo de 2 dias.",
+    "nodemailerAutoReplies": {
+      "subject":"Re: \"{subject}\"",
+      "body": "<p>Olá {name},</p>\n\n<p>Obrigado por entrar em contato comigo — eu recebi sua mensagem e responderei o mais cedo possível.</p>\n\n<p>Atenciosamente,<br/>Steff</p>\n\n<p><a href=\"https://www.kite-engineer.de\" target=\"_blank\">www.kite-engineer.de</a><br/><a href=\"mailto:stefan@kite-engineer.de\">stefan@kite-engineer.de</a></p>\n\n<hr />\n\n<p><strong>Sua mensagem:</strong></p>\n<pre style=\"white-space:pre-wrap;\">{originalMessage}</pre>"
+    }
   }
 }

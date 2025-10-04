@@ -32,6 +32,8 @@ export function ContactForm() {
     message: "",
   });
 
+  const locale = useLocale();
+
   useEffect(() => {
     // Prevent zoom on focus
     const meta = document.createElement("meta");
@@ -83,12 +85,17 @@ export function ContactForm() {
     setSuccessMessage("");
 
     try {
+      const payload = {
+        ...formData,
+        locale,
+      };
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
