@@ -561,5 +561,10 @@
       "subject":"Re: \"{subject}\"",
       "body": "<p>Olá {name},</p>\n\n<p>Obrigado por entrar em contato comigo — eu recebi sua mensagem e responderei o mais cedo possível.</p>\n\n<p>Atenciosamente,<br/>Steff</p>\n\n<p><a href=\"https://www.kite-engineer.de\" target=\"_blank\">www.kite-engineer.de</a><br/><a href=\"mailto:stefan@kite-engineer.de\">stefan@kite-engineer.de</a></p>\n\n<hr />\n\n<p><strong>Sua mensagem:</strong></p>\n<pre style=\"white-space:pre-wrap;\">{originalMessage}</pre>"
     }
+  },
+  "NotFound": {
+    "title": "404 - Página não encontrada",
+    "description": "Desculpe, a página que você está procurando não foi encontrada.",
+    "backHome": "Início"
   }
 }

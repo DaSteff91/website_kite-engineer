@@ -1,5 +1,10 @@
 export const PAGE_METADATA = {
 
+  notFound: {
+    title: "404 Error",
+    description: "Page not found"
+  },
+
 //Main pages from the nav bar
   home: {
     title: "Home | Kite-Engineer",

@@ -1100,5 +1100,10 @@
       "subject":"RE: \"{subject}\"",
       "body": "<p>Hello {name},</p>\n\n<p>Thanks for reaching out — I’ve received your message and will reply as soon as possible.</p>\n\n<p>Kind regards,<br/>Steff</p>\n\n<p><a href=\"https://www.kite-engineer.de\" target=\"_blank\">www.kite-engineer.de</a><br/><a href=\"mailto:stefan@kite-engineer.de\">stefan@kite-engineer.de</a></p>\n\n<hr />\n\n<p><strong>Your message:</strong></p>\n<pre style=\"white-space:pre-wrap;\">{originalMessage}</pre>"
     }
-}
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "description": "Sorry, we couldn't find the page you're looking for.",
+    "backHome": "Home"
+  }
 }
