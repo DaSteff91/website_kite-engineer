@@ -1,3 +1,15 @@
+# [1.29.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.28.0...v1.29.0) (2025-10-05)
+
+
+### Bug Fixes
+
+* make locale based auto replies for contact form messages ([7442c5f](https://github.com/DaSteff91/website_kite-engineer/commit/7442c5fbf9438f1785c7d31841126e239f1745f3))
+
+
+### Features
+
+* implementing a i18n ready not-found.tsx page ([ec59152](https://github.com/DaSteff91/website_kite-engineer/commit/ec59152eecd59998cc30aee84e10f69a128369fd))
+
 # [1.28.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.27.1...v1.28.0) (2025-10-03)
 
 
