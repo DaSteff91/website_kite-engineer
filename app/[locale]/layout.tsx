@@ -1,5 +1,3 @@
-// File: app/[locale]/layout.tsx
-
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";

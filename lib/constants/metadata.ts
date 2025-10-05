@@ -1,3 +1,6 @@
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
+
 export const PAGE_METADATA = {
 
   notFound: {
@@ -7,7 +10,7 @@ export const PAGE_METADATA = {
 
 //Main pages from the nav bar
   home: {
-    title: "Home | Kite-Engineer",
+    title: "Home",
     description: "Welcome - The Kite-Engineer is a freelancer for kiteboarding and engineering related services. Customizable solutions and flexibility are the key. Any kind of customer and any kind of request is welcome - B2B or B2C.",
   },
   kite: {
