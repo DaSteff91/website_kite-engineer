@@ -1,3 +1,10 @@
+## [1.29.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.29.2...v1.29.3) (2025-10-06)
+
+
+### Bug Fixes
+
+* refactor KitePage content to align with EngineerPage ([0daa139](https://github.com/DaSteff91/website_kite-engineer/commit/0daa1393c554874aaaef98550c35b9a589261284))
+
 ## [1.29.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.29.1...v1.29.2) (2025-10-06)
 
 
