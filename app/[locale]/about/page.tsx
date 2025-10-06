@@ -1,13 +1,23 @@
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import about_content_image from "@/public/images/about_content.jpg";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { getTranslations } from "next-intl/server";
 
-export const metadata = PAGE_METADATA.about;
 interface AboutPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: AboutPageProps["params"];
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "about", "/about");
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {
