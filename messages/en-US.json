@@ -1107,35 +1107,35 @@
     "backHome": "Home"
   },
   "MetaData": {
-    "notFound": {
+    "NotFound": {
       "title": "404 Error",
       "description": "Page not found"
     },
-    "home": {
+    "Home": {
       "title": "Home",
       "description": "Welcome - The Kite-Engineer is a freelancer for kiteboarding and engineering related services. Customizable solutions and flexibility are the key. Any kind of customer and any kind of request is welcome - B2B or B2C."
     },
-    "kite": {
+    "Kite": {
       "title": "Kite Services",
       "description": "Explore my services related to kiteboarding. From kite school support to trip preparation. Consider me the helping hand you can rely on. I got you covered."
     },
-    "engineer": {
+    "Engineer": {
       "title": "Engineering Services",
       "description": "Explore my engineering related services. Mainly I provide project-related services in the field of semiconductor manufacturing. But I´m looking for new challenges as well. Coffee + Engineer = Solution."
     },
-    "about": {
+    "About": {
       "title": "About",
       "description": "The Kite-Engineer is a brand that combines the unique worlds of being a kitesurf instructor with the world of working as an engineer. Both jobs are offered on freelancer basis with flexible contract conditions."
     },
-    "contact": {
+    "Contact": {
       "title": "Contact",
       "description": "For more details or in order to request a quote: Get in touch with me. It's simple."
     },
-    "privacy": {
+    "Privacy": {
       "title": "Privacy Policy",
       "description": "About the privacy police and data processing on this website."
     },
-    "imprint": {
+    "Imprint": {
       "title": "Imprint",
       "description": "Legal information about the Kite Engineer brand."
     },

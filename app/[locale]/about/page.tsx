@@ -17,7 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "about", "/about");
+  return await getPageMetadata(locale, "About", "/about");
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {

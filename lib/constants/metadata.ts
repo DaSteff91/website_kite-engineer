@@ -4,7 +4,7 @@ import { getFullUrl, buildLocaleAlternates, SITE } from './site-config';
 
 type PageKey =
   // Main pages
-  | 'notFound' | 'home' | 'kite' | 'engineer' | 'about' | 'contact' | 'privacy' | 'imprint'
+  | 'notFound' | 'Home' | 'Kite' | 'Engineer' | 'About' | 'Contact' | 'Privacy' | 'Imprint'
   // Kite subpages
   | 'KiteSubpages.Freelancer.SchoolSupport'
   | 'KiteSubpages.Freelancer.TravelServices'
