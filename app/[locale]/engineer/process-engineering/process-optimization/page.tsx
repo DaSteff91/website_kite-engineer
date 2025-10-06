@@ -13,12 +13,18 @@ import {
   BarChart3,
 } from "lucide-react";
 
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/process-engineering/process-optimization"];
+export async function generateMetadata({
+  params,
+}: { params: ProcessOptimizationPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.ProcessEngineering.ProcessOptimization", "/engineer/process-engineering/process-optimization");
+}
 interface ProcessOptimizationPageProps {
   params: Promise<{ locale: string }>;
 }

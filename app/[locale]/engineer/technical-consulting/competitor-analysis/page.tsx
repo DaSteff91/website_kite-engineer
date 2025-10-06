@@ -11,12 +11,18 @@ import {
   BarChart3,
   Target,
 } from "lucide-react";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/technical-consulting/competitor-analysis"];
+export async function generateMetadata({
+  params,
+}: { params: CompetitorAnalysisPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.TechnicalConsulting.CompetitorAnalysis", "/engineer/technical-consulting/competitor-analysis");
+}
 interface CompetitorAnalysisPageProps {
   params: Promise<{ locale: string }>;
 }

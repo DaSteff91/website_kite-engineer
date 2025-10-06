@@ -13,12 +13,18 @@ import {
   AlertTriangle,
 } from "lucide-react";
 
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/project-management/deviation-management"];
+export async function generateMetadata({
+  params,
+}: { params: DeviationManagementPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.ProjectManagement.DeviationManagement", "/engineer/project-management/deviation-management");
+}
 interface DeviationManagementPageProps {
   params: Promise<{ locale: string }>;
 }

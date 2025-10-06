@@ -13,12 +13,18 @@ import {
   Target,
 } from "lucide-react";
 
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/process-development/equipment-roadmap"];
+export async function generateMetadata({
+  params,
+}: { params: EquipmentRoadmapPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.ProcessDevelopment.EquipmentRoadmap", "/engineer/process-development/equipment-roadmap");
+}
 interface EquipmentRoadmapPageProps {
   params: Promise<{ locale: string }>;
 }

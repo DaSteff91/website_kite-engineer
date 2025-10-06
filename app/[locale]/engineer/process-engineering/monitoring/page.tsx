@@ -5,12 +5,18 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Target, TrendingUp, Bell, BarChart3 } from "lucide-react";
 
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/process-engineering/monitoring"];
+export async function generateMetadata({
+  params,
+}: { params: MonitoringPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.ProcessEngineering.Monitoring", "/engineer/process-engineering/monitoring");
+}
 interface MonitoringPageProps {
   params: Promise<{ locale: string }>;
 }

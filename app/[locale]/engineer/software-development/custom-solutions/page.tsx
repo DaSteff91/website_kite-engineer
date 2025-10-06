@@ -11,12 +11,18 @@ import {
   Layers,
   Zap,
 } from "lucide-react";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/software-development/custom-solutions"];
+export async function generateMetadata({
+  params,
+}: { params: CustomSolutionsPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.SoftwareDevelopment.CustomSolutions", "/engineer/software-development/custom-solutions");
+}
 interface CustomSolutionsPageProps {
   params: Promise<{ locale: string }>;
 }

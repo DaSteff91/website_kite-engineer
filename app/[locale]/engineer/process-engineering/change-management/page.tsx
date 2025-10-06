@@ -13,12 +13,18 @@ import {
   GitBranch,
 } from "lucide-react";
 
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/process-engineering/change-management"];
+export async function generateMetadata({
+  params,
+}: { params: ChangeManagementPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.ProcessEngineering.ChangeManagement", "/engineer/process-engineering/change-management");
+}
 interface ChangeManagementPageProps {
   params: Promise<{ locale: string }>;
 }

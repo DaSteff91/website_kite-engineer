@@ -38,11 +38,18 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { getTranslations } from "next-intl/server";
 
-export const metadata = PAGE_METADATA.engineer;
+export async function generateMetadata({
+  params,
+}: { params: EngineerPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "Engineer", "/engineer");
+}
 interface EngineerPageProps {
   params: Promise<{ locale: string }>;
 }

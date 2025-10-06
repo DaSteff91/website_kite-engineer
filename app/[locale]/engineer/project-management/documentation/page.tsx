@@ -13,12 +13,18 @@ import {
   FileText,
 } from "lucide-react";
 
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/project-management/documentation"];
+export async function generateMetadata({
+  params,
+}: { params: DocumentationPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.ProjectManagement.Documentation", "/engineer/project-management/documentation");
+}
 interface DocumentationPageProps {
   params: Promise<{ locale: string }>;
 }

@@ -15,11 +15,18 @@ import {
   ListCheck,
   UserRoundSearch,
 } from "lucide-react";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata = PAGE_METADATA["kite/courses/starting"];
+export async function generateMetadata({
+  params,
+}: { params: StartingPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "KiteSubpages.Courses.Starting", "/kite/courses/starting");
+}
 interface StartingPageProps {
   params: Promise<{ locale: string }>;
 }

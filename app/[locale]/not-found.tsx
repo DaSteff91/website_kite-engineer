@@ -2,10 +2,19 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata = PAGE_METADATA.notFound;
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: NotFoundPageProps["params"];
+// }): Promise<Metadata> {
+//   const resolvedParams = await params;
+//   const { locale } = resolvedParams;
+//   return await getPageMetadata(locale, "About", "/about");
+// }
 
 export default async function NotFound() {
   const locale = await getLocale();

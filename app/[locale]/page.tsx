@@ -4,9 +4,16 @@ import Image from "next/image";
 import kite_landingpage_image from "@/public/images/kite_landingpage.jpg";
 import engineer_landingpage_image from "@/public/images/engineer_hero_image.jpg";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 
-export const metadata = PAGE_METADATA.home;
+export async function generateMetadata({
+  params,
+}: { params: LandingPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "Home", "/home");
+}
 interface LandingPageProps {
   params: Promise<{ locale: string }>;
 }

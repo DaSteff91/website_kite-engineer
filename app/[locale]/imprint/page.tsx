@@ -6,9 +6,16 @@ import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Hero } from "@/components/sections/Hero";
 import { useState } from "react";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 
-// export const metadata = PAGE_METADATA.engineer;
+// export async function generateMetadata({
+  params,
+}: { params: any }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "Engineer", "/engineer");
+}
 interface ImprintProps {
   params: Promise<{ locale: string }>;
 }

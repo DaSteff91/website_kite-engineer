@@ -10,11 +10,18 @@ import {
   Users,
   DumbbellIcon,
 } from "lucide-react";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata = PAGE_METADATA["kite/freelancer/travel-services"];
+export async function generateMetadata({
+  params,
+}: { params: TravelServicesPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "KiteSubpages.Freelancer.TravelServices", "/kite/freelancer/travel-services");
+}
 interface TravelServicesPageProps {
   params: Promise<{ locale: string }>;
 }

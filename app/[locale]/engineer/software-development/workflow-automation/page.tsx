@@ -11,12 +11,18 @@ import {
   Clock,
   Workflow,
 } from "lucide-react";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/software-development/workflow-automation"];
+export async function generateMetadata({
+  params,
+}: { params: WorkflowAutomationPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.SoftwareDevelopment.WorkflowAutomation", "/engineer/software-development/workflow-automation");
+}
 interface WorkflowAutomationPageProps {
   params: Promise<{ locale: string }>;
 }

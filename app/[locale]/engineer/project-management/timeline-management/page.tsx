@@ -13,12 +13,18 @@ import {
   Zap,
 } from "lucide-react";
 
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/project-management/timeline-management"];
+export async function generateMetadata({
+  params,
+}: { params: TimelineManagementPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.ProjectManagement.TimelineManagement", "/engineer/project-management/timeline-management");
+}
 interface TimelineManagementPageProps {
   params: Promise<{ locale: string }>;
 }

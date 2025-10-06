@@ -2,11 +2,18 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { getTranslations } from "next-intl/server";
 
-export const metadata = PAGE_METADATA.privacy;
+export async function generateMetadata({
+  params,
+}: { params: any }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "Privacy", "/privacy");
+}
 interface PrivacyProps {
   params: Promise<{ locale: string }>;
 }

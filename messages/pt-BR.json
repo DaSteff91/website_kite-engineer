@@ -566,5 +566,161 @@
     "title": "404 - Página não encontrada",
     "description": "Desculpe, a página que você está procurando não foi encontrada.",
     "backHome": "Início"
+  },
+  "MetaData": {
+    "NotFound": {
+      "title": "Erro 404",
+      "description": "Página não encontrada"
+    },
+    "Home": {
+      "title": "Início",
+      "description": "Bem-vindo - O Kite-Engineer é um freelancer para serviços relacionados a kitesurf e engenharia. Soluções personalizáveis e flexibilidade são a chave. Qualquer tipo de cliente e qualquer tipo de solicitação é bem-vinda - B2B ou B2C."
+    },
+    "Kite": {
+      "title": "Serviços de Kitesurf",
+      "description": "Explore meus serviços relacionados ao kitesurf. Desde suporte para escolas de kite até preparação para viagens. Considere-me a mão amiga na qual você pode confiar. Estou aqui para te ajudar."
+    },
+    "Engineer": {
+      "title": "Serviços de Engenharia",
+      "description": "Explore meus serviços relacionados à engenharia. Principalmente forneço serviços relacionados a projetos na área de fabricação de semicondutores. Mas também estou procurando novos desafios. Café + Engenheiro = Solução."
+    },
+    "About": {
+      "title": "Sobre",
+      "description": "O Kite-Engineer é uma marca que combina os mundos únicos de ser instrutor de kitesurf com o mundo de trabalhar como engenheiro. Ambos os trabalhos são oferecidos na base de freelancer com condições contratuais flexíveis."
+    },
+    "Contact": {
+      "title": "Contato",
+      "description": "Para mais detalhes ou para solicitar um orçamento: Entre em contato comigo. É simples."
+    },
+    "Privacy": {
+      "title": "Política de Privacidade",
+      "description": "Sobre a política de privacidade e processamento de dados neste site."
+    },
+    "Imprint": {
+      "title": "Impresso",
+      "description": "Informações legais sobre a marca Kite Engineer."
+    },
+    "KiteSubpages": {
+      "Freelancer": {
+        "SchoolSupport": {
+          "title": "Serviços de Suporte para Escolas",
+          "description": "Encontre informações sobre meus serviços como uma mão amiga para sua escola de kite ou negócio relacionado a kitesurf. Seja um instrutor que você precisa ou alguém para organizar cronogramas. Estou ao seu serviço"
+        },
+        "TravelServices": {
+          "title": "Serviços de Viagem",
+          "description": "Viajar é bom, com certeza. Mas o planejamento antes, a organização durante e a manutenção de uma rotina diária podem ser desafiadores. Descubra como posso ajudá-lo."
+        },
+        "Consulting": {
+          "title": "Serviços de Consultoria",
+          "description": "Você está curioso sobre certas áreas do kitesurf ou procura alguém para representar o esporte e transmitir uma mensagem para o público? Aqui você pode encontrar sua resposta."
+        }
+      },
+      "Courses": {
+        "Theory": {
+          "title": "Cursos Teóricos de Kitesurf",
+          "description": "Kitesurf não é apenas a coisa que acontece na água - com certeza você já percebeu isso. Aqui você pode encontrar uma visão geral do que te leva mais longe no esporte."
+        },
+        "Starting": {
+          "title": "Cursos de Kitesurf para Iniciantes",
+          "description": "Tudo precisa de um começo. Descubra o que posso fazer por alguém que quer começar ou reiniciar sua própria jornada no kitesurf"
+        },
+        "Advanced": {
+          "title": "Cursos de Kitesurf Avançados",
+          "description": "Continuar a jornada do kite é o que torna o esporte tão interessante. Descubra como meus serviços de instrutor podem ajudá-lo a progredir após aprender a pilotar com segurança"
+        }
+      }
+    },
+    "EngineerSubpages": {
+      "ProcessEngineering": {
+        "ProcessControl": {
+          "title": "Serviços de Controle de Processos",
+          "description": "Este serviço trata de ajudá-lo desde obter dados para algo até realmente saber como usar esses dados como um mecanismo de controle confiável no seu dia a dia de negócios."
+        },
+        "ProcessOptimization": {
+          "title": "Serviços de Otimização de Processos",
+          "description": "Obter mais com menos é o que todos nós sonhamos. Esta é literalmente a ideia por trás deste serviço. Algo precisa ser alcançado, mas você não tem recursos suficientes à mão? Terceirize seu trabalho."
+        },
+        "ChangeManagement": {
+          "title": "Serviços de Gestão de Mudanças",
+          "description": "Terceirize seu processo de gestão de mudanças para processos de fabricação e economize seus próprios recursos"
+        },
+        "Monitoring": {
+          "title": "Serviços de Monitoramento de Processos",
+          "description": "Monitorar o desenvolvimento de conceitos e auxiliar a implementação para qualquer tipo de processo de fabricação"
+        }
+      },
+      "ProcessDevelopment": {
+        "Creativity": {
+          "title": "Suporte em Criatividade",
+          "description": "Trazer uma mente criativa externa para um projeto pode ser o ponto de virada. Isso é o que ofereço com este serviço. Técnicas de criatividade além do brainstorming incluídas."
+        },
+        "ProcessDesign": {
+          "title": "Serviços de Design de Processos",
+          "description": "Do conceito à análise de requisitos até o suporte prático real para entregar à produção. Isso é o que ofereço com este serviço."
+        },
+        "SimulationPrototyping": {
+          "title": "Serviços de Simulação e Prototipagem",
+          "description": "Embora eu não possa fazer simulações completas e prototipagem sozinho, ofereço conectá-lo com empresas e pessoas que podem. Também ofereço acompanhar toda a fase até qualquer objetivo que definirmos"
+        },
+        "EquipmentRoadmap": {
+          "title": "Serviços de Roteiro de Equipamentos",
+          "description": "Saber o que pode se tornar necessário em que momento no futuro é essencial para permanecer competitivo. Mas é demorado fazer pesquisas para isso e derivar um roteiro do resultado. Simplesmente terceirize isso para mim."
+        }
+      },
+      "SoftwareDevelopment": {
+        "CustomSolutions": {
+          "title": "Soluções de Software Personalizadas",
+          "description": "Personalize um ambiente para suas necessidades com scripts, docker, um novo SO, hardware ou o que for necessário. Aqui é onde meu trabalho estruturado brilha e entrega resultados."
+        },
+        "DatabaseManagement": {
+          "title": "Serviços de Gerenciamento de Banco de Dados",
+          "description": "Do conceito ao design ERM até a implementação e manutenção real. O foco são bancos de dados baseados em SQL, mas estou sempre procurando novos desafios."
+        },
+        "WorkflowAutomation": {
+          "title": "Serviços de Automação de Fluxo de Trabalho",
+          "description": "Seja implementação VBA no Excel ou coisas mais complexas, como sincronizar dados em tempo real em vários dispositivos automaticamente. Tudo pode ser automatizado de alguma forma se estiver no seu computador."
+        },
+        "WebDevelopment": {
+          "title": "Serviços de Desenvolvimento Web",
+          "description": "Este serviço inclui coisas como: Configurar um servidor Linux, executar um servidor web nele, manter seus domínios e criar seu site. E muito mais. Você encontra aqui."
+        }
+      },
+      "ProjectManagement": {
+        "ProjectSetup": {
+          "title": "Serviços de Configuração de Projetos",
+          "description": "Desde ter uma mão amiga ao fazer uma análise de requisitos ou preparar seu FMEA do projeto - estou aqui para te ajudar. Conceitualmente e mais tarde durante a execução do projeto"
+        },
+        "TimelineManagement": {
+          "title": "Serviços de Gerenciamento de Cronograma",
+          "description": "Gerenciar seus pipelines e compromissos pode se tornar complicado com o tempo, especialmente se precisar de recursos extras que você não tem. Por que não contratar um freelancer para fazer isso por você."
+        },
+        "DeviationManagement": {
+          "title": "Serviços de Gerenciamento de Desvios",
+          "description": "Nada nunca sai conforme o planejado. Tenha um parceiro flexível ao seu lado que entre em ação quando você precisar exatamente nesse caso. Da documentação às lições aprendidas. Conte comigo."
+        },
+        "Documentation": {
+          "title": "Serviços de Documentação de Projetos",
+          "description": "Prepare resumos, relatórios, apresentações ou implemente um sistema completo novo de gerenciamento de documentos. Nada para temer com o parceiro certo"
+        }
+      },
+      "TechnicalConsulting": {
+        "ProcessAssessment": {
+          "title": "Serviços de Avaliação de Processos",
+          "description": "Obter uma visão externa sobre o que está acontecendo na sua fabricação ou negócio com feedback detalhado posteriormente. Também realizo serviços práticos como medições de trabalho."
+        },
+        "TechnicalResearch": {
+          "title": "Serviços de Pesquisa Técnica",
+          "description": "Revisão de artigos e artigos técnicos em uma área sobre a qual você quer saber mais. Elaboração de resumos e apresentações prontas para distribuição em seu ambiente."
+        },
+        "TrainingKnowledgeTransfer": {
+          "title": "Serviços de Treinamento e Transferência de Conhecimento",
+          "description": "Ofereço treinamentos básicos e avançados nas áreas de minhas competências. Também me aprofundo em novas áreas para você e publico o resultado para um público mais amplo."
+        },
+        "CompetitorAnalysis": {
+          "title": "Serviços de Análise de Concorrentes",
+          "description": "Coleto e analiso dados de empresas e também os preparo para seu processamento posterior."
+        }
+      }
+    }
   }
 }

@@ -11,12 +11,18 @@ import {
   BookOpen,
   Target,
 } from "lucide-react";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata =
-  PAGE_METADATA["engineer/technical-consulting/training-knowledge-transfer"];
+export async function generateMetadata({
+  params,
+}: { params: TrainingKnowledgeTransferPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "EngineerSubpages.TechnicalConsulting.TrainingKnowledgeTransfer", "/engineer/technical-consulting/training-knowledge-transfer");
+}
 interface TrainingKnowledgeTransferPageProps {
   params: Promise<{ locale: string }>;
 }

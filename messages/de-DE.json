@@ -565,5 +565,161 @@
     "title": "404 - Seite nicht gefunden",
     "description": "Entschuldige, die gesuchte Seite konnte nicht gefunden werden.",
     "backHome": "Startseite"
+  },
+  "MetaData": {
+    "NotFound": {
+      "title": "404 Fehler",
+      "description": "Seite nicht gefunden"
+    },
+    "Home": {
+      "title": "Startseite",
+      "description": "Willkommen - Der Kite-Engineer ist ein Freiberufler für Kitesurfing und technische Dienstleistungen. Anpassbare Lösungen und Flexibilität sind der Schlüssel. Jede Art von Kunde und jede Art von Anfrage ist willkommen - B2B oder B2C."
+    },
+    "Kite": {
+      "title": "Kite Services",
+      "description": "Entdecken Sie meine Dienstleistungen rund ums Kitesurfen. Von Kite-Schul-Support bis zur Reisevorbereitung. Betrachten Sie mich als die helfende Hand, auf die Sie sich verlassen können. Ich kümmere mich darum."
+    },
+    "Engineer": {
+      "title": "Engineering Services",
+      "description": "Entdecken Sie meine technischen Dienstleistungen. Hauptsächlich biete ich projektbezogene Dienstleistungen im Bereich der Halbleiterfertigung an. Aber ich suche auch nach neuen Herausforderungen. Kaffee + Ingenieur = Lösung."
+    },
+    "About": {
+      "title": "Über uns",
+      "description": "Der Kite-Engineer ist eine Marke, die die einzigartigen Welten eines Kitesurf-Lehrers mit der Welt eines Ingenieurs verbindet. Beide Tätigkeiten werden auf freiberuflicher Basis mit flexiblen Vertragsbedingungen angeboten."
+    },
+    "Contact": {
+      "title": "Kontakt",
+      "description": "Für weitere Details oder um ein Angebot anzufordern: Nehmen Sie Kontakt mit mir auf. Es ist einfach."
+    },
+    "Privacy": {
+      "title": "Datenschutzerklärung",
+      "description": "Über die Datenschutzbestimmungen und Datenverarbeitung auf dieser Website."
+    },
+    "Imprint": {
+      "title": "Impressum",
+      "description": "Rechtliche Informationen zur Marke Kite Engineer."
+    },
+    "KiteSubpages": {
+      "Freelancer": {
+        "SchoolSupport": {
+          "title": "Schul-Support Services",
+          "description": "Finden Sie Informationen über meine Dienstleistungen als helfende Hand für Ihre Kite-Schule oder Ihr Kite-bezogenes Geschäft. Ob Sie einen Lehrer benötigen oder jemanden, der Zeitpläne organisiert. Ich stehe zu Ihren Diensten"
+        },
+        "TravelServices": {
+          "title": "Reise Services",
+          "description": "Reisen ist schön, sicher. Die Planung davor, die Organisation währenddessen und die Aufrechterhaltung einer Alltagsroutine können jedoch herausfordernd sein. Finden Sie heraus, wie ich Ihnen helfen kann."
+        },
+        "Consulting": {
+          "title": "Beratungs Services",
+          "description": "Sie sind neugierig auf bestimmte Bereiche des Kitesurfens oder suchen jemanden, der den Sport repräsentiert und eine Botschaft vor Publikum vermittelt? Hier finden Sie vielleicht Ihre Antwort."
+        }
+      },
+      "Courses": {
+        "Theory": {
+          "title": "Theorie Kite Kurse",
+          "description": "Kitesurfen ist nicht nur das, was auf dem Wasser passiert - das haben Sie sicher schon bemerkt. Hier finden Sie einen Überblick darüber, was Sie im Sport weiterbringt."
+        },
+        "Starting": {
+          "title": "Anfänger Kite Kurse",
+          "description": "Alles braucht einen Anfang. Finden Sie heraus, was ich für jemanden tun kann, der seine Kitesurf-Reise beginnen oder neu starten möchte"
+        },
+        "Advanced": {
+          "title": "Fortgeschrittene Kite Kurse",
+          "description": "Die Kite-Reise fortzusetzen ist das, was den Sport so interessant macht. Finden Sie heraus, wie mein Unterricht Sie dabei unterstützen kann, nachdem Sie das sichere Fahren gelernt haben"
+        }
+      }
+    },
+    "EngineerSubpages": {
+      "ProcessEngineering": {
+        "ProcessControl": {
+          "title": "Prozesssteuerung Services",
+          "description": "Dieser Service hilft Ihnen dabei, von der Datenerfassung bis zur praktischen Anwendung dieser Daten als zuverlässiger Kontrollmechanismus in Ihrem Tagesgeschäft."
+        },
+        "ProcessOptimization": {
+          "title": "Prozessoptimierung Services",
+          "description": "Mehr mit weniger zu erreichen, davon träumen wir alle. Das ist buchstäblich die Idee hinter diesem Service. Etwas muss erreicht werden, aber Sie haben nicht genügend Ressourcen? Outsourcen Sie Ihre Arbeit."
+        },
+        "ChangeManagement": {
+          "title": "Change Management Services",
+          "description": "Outsourcen Sie Ihren Change-Management-Prozess für Fertigungsprozesse und sparen Sie eigene Ressourcen"
+        },
+        "Monitoring": {
+          "title": "Prozessmonitoring Services",
+          "description": "Überwachung der Konzeptentwicklung und Unterstützung bei der Implementierung für jede Art von Fertigungsprozess"
+        }
+      },
+      "ProcessDevelopment": {
+        "Creativity": {
+          "title": "Kreativität Support",
+          "description": "Externe kreative Köpfe in ein Projekt einzubringen, kann den entscheidenden Unterschied machen. Das biete ich mit diesem Service. Kreativitätstechniken jenseits von Brainstorming inklusive."
+        },
+        "ProcessDesign": {
+          "title": "Prozessdesign Services",
+          "description": "Vom Konzept über die Anforderungsanalyse bis hin zur praktischen Unterstützung bei der Übergabe an die Produktion. Das biete ich mit diesem Service."
+        },
+        "SimulationPrototyping": {
+          "title": "Simulations & Prototyping Services",
+          "description": "Obwohl ich keine vollständigen Simulationen und Prototypen selbst erstellen kann, biete ich an, Sie mit Unternehmen und Personen zu verbinden, die dies können. Ebenso begleite ich die gesamte Phase bis zu jedem von uns definierten Ziel"
+        },
+        "EquipmentRoadmap": {
+          "title": "Equipment Roadmap Services",
+          "description": "Zu wissen, was in Zukunft wann notwendig werden könnte, ist entscheidend für die Wettbewerbsfähigkeit. Aber es ist zeitaufwändig, dies zu recherchieren und eine Roadmap abzuleiten. Outsourcen Sie das einfach an mich."
+        }
+      },
+      "SoftwareDevelopment": {
+        "CustomSolutions": {
+          "title": "Individuelle Softwarelösungen",
+          "description": "Passen Sie eine Umgebung mit Skripten, Docker, einem neuen Betriebssystem, Hardware oder was immer nötig ist an Ihre Bedürfnisse an. Hier glänzt meine strukturierte Arbeit und liefert Ergebnisse."
+        },
+        "DatabaseManagement": {
+          "title": "Datenbankmanagement Services",
+          "description": "Vom Konzept über das ERM-Design bis zur tatsächlichen Implementierung und Wartung. Der Fokus liegt auf SQL-basierten Datenbanken, aber ich suche immer nach neuen Herausforderungen."
+        },
+        "WorkflowAutomation": {
+          "title": "Workflow-Automatisierung Services",
+          "description": "Ob VBA-Implementierung in Excel oder komplexere Aufgaben wie die automatische Synchronisierung von Echtzeitdaten über verschiedene Geräte. Alles kann irgendwie automatisiert werden, wenn es auf Ihrem Computer läuft."
+        },
+        "WebDevelopment": {
+          "title": "Webentwicklung Services",
+          "description": "Dieser Service umfasst Dinge wie: Einrichten eines Linux-Servers, Betrieb eines Webservers, Verwaltung Ihrer Domains und Erstellung Ihrer Website. Und vieles mehr. Sie finden es hier."
+        }
+      },
+      "ProjectManagement": {
+        "ProjectSetup": {
+          "title": "Projektaufbau Services",
+          "description": "Von der Unterstützung bei der Anforderungsanalyse bis zur Vorbereitung Ihrer Projekt-FMEA - ich bin für Sie da. Konzeptionell und später während der Projektdurchführung"
+        },
+        "TimelineManagement": {
+          "title": "Zeitplanmanagement Services",
+          "description": "Die Verwaltung Ihrer Pipelines und Verpflichtungen kann mit der Zeit schwierig werden, besonders wenn zusätzliche Ressourcen benötigt werden, die Sie nicht haben. Warum nicht einen Freiberufler damit beauftragen?"
+        },
+        "DeviationManagement": {
+          "title": "Abweichungsmanagement Services",
+          "description": "Nichts läuft jemals nach Plan. Haben Sie einen flexiblen Partner an Ihrer Seite, der genau in diesem Fall einspringt. Von der Dokumentation bis zu Lessons-Learned. Verlassen Sie sich auf mich."
+        },
+        "Documentation": {
+          "title": "Projektdokumentation Services",
+          "description": "Erstellen Sie Zusammenfassungen, Berichte, Präsentationen oder implementieren Sie ein komplett neues Dokumentenmanagementsystem. Nichts, wovor man Angst haben müsste, mit dem richtigen Partner"
+        }
+      },
+      "TechnicalConsulting": {
+        "ProcessAssessment": {
+          "title": "Prozessbewertung Services",
+          "description": "Eine Außenperspektive auf Ihre Fertigung oder Ihr Geschäft mit detailliertem Feedback danach. Ich führe auch praktische Dienstleistungen wie Arbeitsmessungen durch."
+        },
+        "TechnicalResearch": {
+          "title": "Technische Recherche Services",
+          "description": "Überprüfung technischer Artikel und Arbeiten in einem Bereich, über den Sie mehr wissen möchten. Erstellung von Zusammenfassungen und präsentationsfertigen Unterlagen für Ihre Umgebung."
+        },
+        "TrainingKnowledgeTransfer": {
+          "title": "Training & Wissenstransfer Services",
+          "description": "Ich biete Basis- und Fortgeschrittenen-Trainings in meinen Kompetenzbereichen an. Ebenso tauche ich für Sie in neue Bereiche ein und veröffentliche die Ergebnisse für ein breiteres Publikum."
+        },
+        "CompetitorAnalysis": {
+          "title": "Wettbewerbsanalyse Services",
+          "description": "Ich sammle und analysiere Daten von Unternehmen und bereite sie für Ihre weitere Verarbeitung auf."
+        }
+      }
+    }
   }
 }

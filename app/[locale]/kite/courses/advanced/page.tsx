@@ -11,10 +11,17 @@ import {
   UserRoundSearch,
 } from "lucide-react";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata = PAGE_METADATA["kite/courses/advanced"];
+export async function generateMetadata({
+  params,
+}: { params: AdvancedPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "KiteSubpages.Courses.Advanced", "/kite/courses/advanced");
+}
 interface AdvancedPageProps {
   params: Promise<{ locale: string }>;
 }

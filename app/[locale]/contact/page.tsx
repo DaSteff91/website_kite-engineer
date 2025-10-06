@@ -1,11 +1,18 @@
 import { ContactForm } from "@/components/sections/ContactForm";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { getTranslations } from "next-intl/server";
 
-export const metadata = PAGE_METADATA.contact;
+export async function generateMetadata({
+  params,
+}: { params: ContactPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "Contact", "/contact");
+}
 interface ContactPageProps {
   params: Promise<{ locale: string }>;
 }

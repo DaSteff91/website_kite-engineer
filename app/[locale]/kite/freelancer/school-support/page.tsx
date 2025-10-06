@@ -5,10 +5,17 @@ import background_image_darker from "@/public/images/background_image_darker.jpe
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Users, Clock, Drama } from "lucide-react";
-import { PAGE_METADATA } from "@/lib/constants/metadata";
+import { getPageMetadata } from "@/lib/constants/metadata";
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 
-export const metadata = PAGE_METADATA["kite/freelancer/school-support"];
+export async function generateMetadata({
+  params,
+}: { params: SchoolSupportPageProps["params"]; }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  return await getPageMetadata(locale, "KiteSubpages.Freelancer.SchoolSupport", "/kite/freelancer/school-support");
+}
 interface SchoolSupportPageProps {
   params: Promise<{ locale: string }>;
 }
