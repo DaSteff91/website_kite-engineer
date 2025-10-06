@@ -28,11 +28,14 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
   params,
-}: { params: KitePageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: KitePageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
   return await getPageMetadata(locale, "Kite", "/kite");
 }
+
 interface KitePageProps {
   params: Promise<{ locale: string }>;
 }
@@ -99,7 +102,7 @@ export default async function KitePage({ params }: KitePageProps) {
               id="kite-section-subtitle"
               className="mt-4 text-xl text-center text-white/80 max-w-3xl mx-auto leading-relaxed"
             >
-              {t("sectionSubtitle")}
+              {t("sectionDescription")}
             </p>
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 rounded-full"></div>
           </div>
@@ -112,7 +115,7 @@ export default async function KitePage({ params }: KitePageProps) {
                 id="freelancer-section"
               >
                 <HandPlatter className="h-7 w-7 text-blue-400" />
-                {t("freelancerTitle")}
+                {t("freelancer.title")}
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem
@@ -125,21 +128,21 @@ export default async function KitePage({ params }: KitePageProps) {
                       id="school-support-title"
                     >
                       <School className="h-5 w-5" />
-                      {t("freelancerSchoolSupportTitle")}
+                      {t("freelancer.schoolSupport.title")}
                     </div>
                   </AccordionTrigger>
                   <AccordionContent
                     className="text-white/80"
                     id="school-support-description"
                   >
-                    {t("freelancerSchoolSupportDescription")}
+                    {t("freelancer.schoolSupport.description")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/freelancer/school-support"
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("moreLink")}
+                        {t("links.more")}
                       </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
@@ -150,11 +153,12 @@ export default async function KitePage({ params }: KitePageProps) {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("contactLink")}
+                        {t("links.contact")}
                       </Link>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
+
                 <AccordionItem
                   value="travel-service-1"
                   className="border-white/5"
@@ -165,21 +169,21 @@ export default async function KitePage({ params }: KitePageProps) {
                       className="flex items-center gap-2"
                     >
                       <Plane className="h-5 w-5" />
-                      {t("freelancerTravelServicesTitle")}
+                      {t("freelancer.travelServices.title")}
                     </div>
                   </AccordionTrigger>
                   <AccordionContent
                     id="travel-service-description"
                     className="text-white/80"
                   >
-                    {t("freelancerTravelServicesDescription")}
+                    {t("freelancer.travelServices.description")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/freelancer/travel-services"
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("moreLink")}
+                        {t("links.more")}
                       </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
@@ -190,11 +194,12 @@ export default async function KitePage({ params }: KitePageProps) {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("contactLink")}
+                        {t("links.contact")}
                       </Link>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
+
                 <AccordionItem value="consulting-1" className="border-white/5">
                   <AccordionTrigger className="hover:text-blue-400 transition-colors text-lg text-left">
                     <div
@@ -202,21 +207,21 @@ export default async function KitePage({ params }: KitePageProps) {
                       className="flex items-center gap-2"
                     >
                       <MessageSquareText className="h-5 w-5" />
-                      {t("freelancerConsultingTitle")}
+                      {t("freelancer.consulting.title")}
                     </div>
                   </AccordionTrigger>
                   <AccordionContent
                     id="consulting-description"
                     className="text-white/80"
                   >
-                    {t("freelancerConsultingDescription")}
+                    {t("freelancer.consulting.description")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/freelancer/consulting"
                         className="text-blue-400 hover:text-blue-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("moreLink")}
+                        {t("links.more")}
                       </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
@@ -227,7 +232,7 @@ export default async function KitePage({ params }: KitePageProps) {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("contactLink")}
+                        {t("links.contact")}
                       </Link>
                     </div>
                   </AccordionContent>
@@ -242,28 +247,28 @@ export default async function KitePage({ params }: KitePageProps) {
                 id="courses-section"
               >
                 <List className="h-7 w-7 text-cyan-400" />
-                {t("coursesTitle")}
+                {t("courses.title")}
               </h3>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="theory-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
                     <div id="theory-title" className="flex items-center gap-2">
                       <LibraryBig className="h-5 w-5" />
-                      {t("coursesTheoryTitle")}
+                      {t("courses.theory.title")}
                     </div>
                   </AccordionTrigger>
                   <AccordionContent
                     id="theory-description"
                     className="text-white/80"
                   >
-                    {t("coursesTheoryDescription")}
+                    {t("courses.theory.description")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/courses/theory"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("moreLink")}
+                        {t("links.more")}
                       </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
@@ -274,11 +279,12 @@ export default async function KitePage({ params }: KitePageProps) {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("contactLink")}
+                        {t("links.contact")}
                       </Link>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
+
                 <AccordionItem value="starting-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
                     <div
@@ -286,21 +292,21 @@ export default async function KitePage({ params }: KitePageProps) {
                       className="flex items-center gap-2"
                     >
                       <CirclePlay className="h-5 w-5" />
-                      {t("coursesStartingTitle")}
+                      {t("courses.starting.title")}
                     </div>
                   </AccordionTrigger>
                   <AccordionContent
                     id="starting-description"
                     className="text-white/80"
                   >
-                    {t("coursesStartingDescription")}
+                    {t("courses.starting.description")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/courses/starting"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("moreLink")}
+                        {t("links.more")}
                       </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
@@ -311,11 +317,12 @@ export default async function KitePage({ params }: KitePageProps) {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("contactLink")}
+                        {t("links.contact")}
                       </Link>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
+
                 <AccordionItem value="advanced-2" className="border-white/5">
                   <AccordionTrigger className="hover:text-cyan-400 transition-colors text-lg text-left">
                     <div
@@ -323,21 +330,21 @@ export default async function KitePage({ params }: KitePageProps) {
                       className="flex items-center gap-2"
                     >
                       <ArrowBigUpDash className="h-5 w-5" />
-                      {t("coursesAdvancedTitle")}
+                      {t("courses.advanced.title")}
                     </div>
                   </AccordionTrigger>
                   <AccordionContent
                     id="advanced-description"
                     className="text-white/80"
                   >
-                    {t("coursesAdvancedDescription")}
+                    {t("courses.advanced.description")}
                     <div className="mt-4 flex flex-col gap-2">
                       <Link
                         href="/kite/courses/advanced"
                         className="text-cyan-400 hover:text-cyan-300 underline text-sm flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("moreLink")}
+                        {t("links.more")}
                       </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
@@ -348,7 +355,7 @@ export default async function KitePage({ params }: KitePageProps) {
                         target="_blank"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        {t("contactLink")}
+                        {t("links.contact")}
                       </Link>
                     </div>
                   </AccordionContent>
@@ -360,14 +367,14 @@ export default async function KitePage({ params }: KitePageProps) {
           {/* Enhanced Contact Section */}
           <div className="mt-16 text-center">
             <p className="text-xl text-white/90 mb-8 max-w-6xl mx-auto">
-              {t("contactSectionText")}
+              {t("contactSection.text")}
             </p>
             <Link href="/contact" target="_blank">
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                {t("contactButton")}
+                {t("contactSection.button")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>

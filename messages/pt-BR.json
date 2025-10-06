@@ -130,25 +130,45 @@
   "KitePage": {
     "heroTitle": "Combining Worlds...",
     "sectionTitle": "O progresso não cresce em árvores",
-    "sectionSubtitle": "Meus serviços relacionados ao kiteboarding ajudam você a alcançar seus objetivos",
-    "freelancerTitle": "Freelancer",
-    "freelancerSchoolSupportTitle": "Apoio à Escola",
-    "freelancerSchoolSupportDescription": "Seja para precisar de um instrutor certificado pela VDWS, assistência na loja ou alguém para ajudar atrás do bar, estou à disposição. Flexibilidade é minha força.",
-    "freelancerTravelServicesTitle": "Serviços de Viagem",
-    "freelancerTravelServicesDescription": "Procurando alguém que organize sua viagem de kite? Ou até lhe acompanhe como coach pessoal? Sem problemas, você será bem atendido",
-    "freelancerConsultingTitle": "Consultoria",
-    "freelancerConsultingDescription": "Sobrecarregado com opções de equipamentos? Deixe-me guiá-lo na escolha certa para kiteboarding. Precisa de alguém para representar o esporte? Gosto de falar em público e transmitir uma mensagem",
-    "coursesTitle": "Cursos",
-    "coursesTheoryTitle": "Teoria",
-    "coursesTheoryDescription": "Que tal puxar a barra? Vamos desvendar a “ciência” por trás do esporte — desde dinâmica do vento até tecnologia dos materiais. Escolha o tema e o ritmo; farei de forma clara e envolvente.",
-    "coursesStartingTitle": "(Re)Iniciando",
-    "coursesStartingDescription": "Se você está começando uma nova jornada no kite ou voltando após uma pausa, ajudarei você a (re)ganhar confiança na água.",
-    "coursesAdvancedTitle": "Avançado",
-    "coursesAdvancedDescription": "Pronto para ultrapassar limites? Do seu primeiro toeside até acertar loops, vamos encarar desafios juntos. Ou prefere sessões com supervisão? Sem problema! Você também pode trazer sua câmera ou drone!",
-    "moreLink": "Mais",
-    "contactLink": "Contato",
-    "contactSectionText": "Você também pode combinar um pouco de tudo. Quanto mais reservar, maior o desconto. O que te segura? Vamos conversar.",
-    "contactButton": "Conectar comigo"
+    "sectionDescription": "Meus serviços relacionados ao kiteboarding ajudam você a alcançar seus objetivos",
+    "freelancer": {
+      "title": "Freelancer",
+      "schoolSupport": {
+        "title": "Apoio à Escola",
+        "description": "Seja para precisar de um instrutor certificado pela VDWS, assistência na loja ou alguém para ajudar atrás do bar, estou à disposição. Flexibilidade é minha força."
+      },
+      "travelServices": {
+        "title": "Serviços de Viagem",
+        "description": "Procurando alguém que organize sua viagem de kite? Ou até lhe acompanhe como coach pessoal? Sem problemas, você será bem atendido"
+      },
+      "consulting": {
+        "title": "Consultoria",
+        "description": "Sobrecarregado com opções de equipamentos? Deixe-me guiá-lo na escolha certa para kiteboarding. Precisa de alguém para representar o esporte? Gosto de falar em público e transmitir uma mensagem"
+      }
+    },
+    "courses": {
+      "title": "Cursos",
+      "theory": {
+        "title": "Teoria",
+        "description": "Que tal puxar a barra? Vamos desvendar a “ciência” por trás do esporte — desde dinâmica do vento até tecnologia dos materiais. Escolha o tema e o ritmo; farei de forma clara e envolvente."
+      },
+      "starting": {
+        "title": "(Re)Iniciando",
+        "description": "Se você está começando uma nova jornada no kite ou voltando após uma pausa, ajudarei você a (re)ganhar confiança na água."
+      },
+      "advanced": {
+        "title": "Avançado",
+        "description": "Pronto para ultrapassar limites? Do seu primeiro toeside até acertar loops, vamos encarar desafios juntos. Ou prefere sessões com supervisão? Sem problema! Você também pode trazer sua câmera ou drone!"
+      }
+    },
+    "links": {
+      "more": "Mais",
+      "contact": "Contato"
+    },
+    "contactSection": {
+      "text": "Você também pode combinar um pouco de tudo. Quanto mais reservar, maior o desconto. O que te segura? Vamos conversar.",
+      "button": "Conectar comigo"
+    }
   },
   "ProcessControlPage": {
     "back-to-engineer-services-nav":"Voltar para todos os serviços de engenharia",

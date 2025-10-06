@@ -129,25 +129,45 @@
   "KitePage": {
     "heroTitle": "Combining Worlds...",
     "sectionTitle": "Progress doesn´t grow on trees",
-    "sectionSubtitle": "My kiteboarding related services help you to achieve your goals",
-    "freelancerTitle": "Freelancer",
-    "freelancerSchoolSupportTitle": "School Support",
-    "freelancerSchoolSupportDescription": "Whether you need a VDWS-certified instructor, shop assistance, or someone to help behind the bar, I've got you covered. Flexibility is my strength.",
-    "freelancerTravelServicesTitle": "Travel Services",
-    "freelancerTravelServicesDescription": "Looking for someone how organizes your kite trip? Or even accompanies you as a personal coach? No problem, you get well served",
-    "freelancerConsultingTitle": "Consulting",
-    "freelancerConsultingDescription": "Overwhelmed by gear choices? Let me guide you through selecting the right kiteboarding equipment. Need someone to represent the sport? I like talking in front of people and deliver a message to others",
-    "coursesTitle": "Courses",
-    "coursesTheoryTitle": "Theory",
-    "coursesTheoryDescription": "Why not pulling the bar? Let's break down the \"science\" behind the sport—from wind dynamics to material technology. Choose your topic and pace; I'll make it clear and descriptive.",
-    "coursesStartingTitle": "(Re-)Starting",
-    "coursesStartingDescription": "Whether you're beginning a new kite journey or returning after a break, I'll help you (re-)gain confidence in the sport.",
-    "coursesAdvancedTitle": "Advanced",
-    "coursesAdvancedDescription": "Ready to push limits? From your first toeside ride to nailing loops, let's tackle challenges together. Or you prefer a supervised sessions? No problem! You can as well bring your camera or drone!",
-    "moreLink": "More",
-    "contactLink": "Contact",
-    "contactSectionText": "You can get a little bit of everything as well. The more you book, the more discount you get. What´s holding you back? Let´s get in touch.",
-    "contactButton": "Connect with me"
+    "sectionDescription": "My kiteboarding related services help you to achieve your goals",
+    "freelancer": {
+      "title": "Freelancer",
+      "schoolSupport": {
+        "title": "School Support",
+        "description": "Whether you need a VDWS-certified instructor, shop assistance, or someone to help behind the bar, I've got you covered. Flexibility is my strength."
+      },
+      "travelServices": {
+        "title": "Travel Services",
+        "description": "Looking for someone how organizes your kite trip? Or even accompanies you as a personal coach? No problem, you get well served"
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "Overwhelmed by gear choices? Let me guide you through selecting the right kiteboarding equipment. Need someone to represent the sport? I like talking in front of people and deliver a message to others"
+      }
+    },
+    "courses": {
+      "title": "Courses",
+      "theory": {
+        "title": "Theory",
+        "description": "Why not pulling the bar? Let's break down the \"science\" behind the sport—from wind dynamics to material technology. Choose your topic and pace; I'll make it clear and descriptive."
+      },
+      "starting": {
+        "title": "(Re-)Starting",
+        "description": "Whether you're beginning a new kite journey or returning after a break, I'll help you (re-)gain confidence in the sport."
+      },
+      "advanced": {
+        "title": "Advanced",
+        "description": "Ready to push limits? From your first toeside ride to nailing loops, let's tackle challenges together. Or you prefer a supervised sessions? No problem! You can as well bring your camera or drone!"
+      }
+    },
+    "links": {
+      "more": "More",
+      "contact": "Contact"
+    },
+    "contactSection": {
+      "text": "You can get a little bit of everything as well. The more you book, the more discount you get. What´s holding you back? Let´s get in touch.",
+      "button": "Connect with me"
+    }
   },
   "ProcessControlPage": {
     "back-to-engineer-services-nav":"Back to All Engineering Services",

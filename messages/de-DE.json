@@ -129,25 +129,45 @@
   "KitePage": {
     "heroTitle": "Combining Worlds...",
     "sectionTitle": "Fortschritt wächst nicht auf Bäumen",
-    "sectionSubtitle": "Meine Services rum ums Kiten helfen Dir, Deine Ziele zu erreichen",
-    "freelancerTitle": "Freelancer",
-    "freelancerSchoolSupportTitle": "Schulunterstützung",
-    "freelancerSchoolSupportDescription": "Ob VDWS-zertifizierter Instructor, Shop-Unterstützer oder Hilfe hinter der Bar – ich bin für Dich da. Flexibilität ist meine Stärke.",
-    "freelancerTravelServicesTitle": "Reiseservices",
-    "freelancerTravelServicesDescription": "Suchst Du jemanden, der Deine Kite-Reise organisiert oder Dich als persönlichen Coach und Travel-Buddy begleitet? Kein Problem, da bist Du bei mir genau richtig.",
-    "freelancerConsultingTitle": "Beratung",
-    "freelancerConsultingDescription": "Überfordert mit der Materialauswahl? Ich begleite Dich bei der Auswahl des richtigen Equipments. Oder suchst Du jemanden, der den Sport repräsentiert? Vor Menschen zu reden und eine Botschaft zu vermitteln ist eine meiner Stärken.",
-    "coursesTitle": "Kurse",
-    "coursesTheoryTitle": "Theorie",
-    "coursesTheoryDescription": "Warum nicht an der Bar ziehen? Hier setzten wir uns mit der \"Wissenschaft\" hinter dem Sport auseinander: von A wie Aerodynamik bis Z wie Zehn-Meter-Sprünge. Wähle Dein Thema und Tempo; ich mache es klar und anschaulich.",
-    "coursesStartingTitle": "(Neu-)Starter",
-    "coursesStartingDescription": "Egal ob Du neu einsteigst oder nach einer Pause wieder anfangen möchtest – ich helfe Dir, Dein Vertrauen im Sport zurückzugewinnen. Im Stufenmodel gehts von einfachen Übungen wie Uhrzeiten abfliegen hin zu den Komplexeren wie Wasserstart und Wende.",
-    "coursesAdvancedTitle": "Fortgeschrittene",
-    "coursesAdvancedDescription": "Bereit, Deine Grenzen zu pushen? Von den ersten Toeside-Metern bis zu Loops – wir bekommen das schon hin. Oder hast Du mehr Interesse an einer offenen Session und Improvisation? Kein Problem! Bring gerne Deine Kamera oder Drohne mit.",
-    "moreLink": "Mehr",
-    "contactLink": "Kontakt",
-    "contactSectionText": "Du kannst Dir auch ein Bisschen von allem buchen. Je mehr Du buchst, desto höher der Rabatt. Was hält dich auf? Meld Dich bei mir.",
-    "contactButton": "Kontakt"
+    "sectionDescription": "Meine Services rum ums Kiten helfen Dir, Deine Ziele zu erreichen",
+    "freelancer": {
+      "title": "Freelancer",
+      "schoolSupport": {
+        "title": "Schulunterstützung",
+        "description": "Ob VDWS-zertifizierter Instructor, Shop-Unterstützer oder Hilfe hinter der Bar – ich bin für Dich da. Flexibilität ist meine Stärke."
+      },
+      "travelServices": {
+        "title": "Reiseservices",
+        "description": "Suchst Du jemanden, der Deine Kite-Reise organisiert oder Dich als persönlichen Coach und Travel-Buddy begleitet? Kein Problem, da bist Du bei mir genau richtig."
+      },
+      "consulting": {
+        "title": "Beratung",
+        "description": "Überfordert mit der Materialauswahl? Ich begleite Dich bei der Auswahl des richtigen Equipments. Oder suchst Du jemanden, der den Sport repräsentiert? Vor Menschen zu reden und eine Botschaft zu vermitteln ist eine meiner Stärken."
+      }
+    },
+    "courses": {
+      "title": "Kurse",
+      "theory": {
+        "title": "Theorie",
+        "description": "Warum nicht an der Bar ziehen? Hier setzten wir uns mit der \"Wissenschaft\" hinter dem Sport auseinander: von A wie Aerodynamik bis Z wie Zehn-Meter-Sprünge. Wähle Dein Thema und Tempo; ich mache es klar und anschaulich."
+      },
+      "starting": {
+        "title": "(Neu-)Starter",
+        "description": "Egal ob Du neu einsteigst oder nach einer Pause wieder anfangen möchtest – ich helfe Dir, Dein Vertrauen im Sport zurückzugewinnen. Im Stufenmodel gehts von einfachen Übungen wie Uhrzeiten abfliegen hin zu den Komplexeren wie Wasserstart und Wende."
+      },
+      "advanced": {
+        "title": "Fortgeschrittene",
+        "description": "Bereit, Deine Grenzen zu pushen? Von den ersten Toeside-Metern bis zu Loops – wir bekommen das schon hin. Oder hast Du mehr Interesse an einer offenen Session und Improvisation? Kein Problem! Bring gerne Deine Kamera oder Drohne mit."
+      }
+    },
+    "links": {
+      "more": "Mehr",
+      "contact": "Kontakt"
+    },
+    "contactSection": {
+      "text": "Du kannst Dir auch ein Bisschen von allem buchen. Je mehr Du buchst, desto höher der Rabatt. Was hält dich auf? Meld Dich bei mir.",
+      "button": "Kontakt"
+    }
   },
   "TravelServicesPage": {
     "back-to-kite-services-nav": "Zurück zur Service Übersicht",
