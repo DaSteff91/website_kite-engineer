@@ -1,3 +1,11 @@
+## [1.29.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.29.0...v1.29.1) (2025-10-06)
+
+
+### Bug Fixes
+
+* prepare for full metadata import change in all pages and subpages ([e4bf234](https://github.com/DaSteff91/website_kite-engineer/commit/e4bf2346682cc69a71ffb145a19205e1c18003e7))
+* prepare for i18n metadata ([57c525f](https://github.com/DaSteff91/website_kite-engineer/commit/57c525fdd838d3eda40ba202c460e7fbcfd9a3f9))
+
 # [1.29.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.28.0...v1.29.0) (2025-10-05)
 
 
