@@ -1,3 +1,11 @@
+## [1.29.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.29.1...v1.29.2) (2025-10-06)
+
+
+### Bug Fixes
+
+* metadata fully internationalized ([9b0160a](https://github.com/DaSteff91/website_kite-engineer/commit/9b0160aeacddc927dfb05f4cab1c7b1aaa55d4e8))
+* preparing continues ([0c5d374](https://github.com/DaSteff91/website_kite-engineer/commit/0c5d374e10fe1ea59c5f6f33e634c8f5f371b9ec))
+
 ## [1.29.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.29.0...v1.29.1) (2025-10-06)
 
 
