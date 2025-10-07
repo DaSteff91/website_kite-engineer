@@ -1,12 +1,21 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import {SEARCHABLE_PAGES} from './../../../lib/constants/searchable-sites';
+import * as pagesModule from '../../../lib/constants/searchable-sites';
+
+const _candidate = (pagesModule as any).SEARCHABLE_PAGES ?? (pagesModule as any).default ?? [];
+const SEARCHABLE_PAGES: string[] = Array.isArray(_candidate)
+  ? _candidate
+  : Array.isArray(_candidate?.SEARCHABLE_PAGES)
+    ? _candidate.SEARCHABLE_PAGES
+    : [];
+
+
 import { SearchDocument, MessageObject, PageMapping } from './types.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const PAGE_TO_JSON_KEY = {
+const PAGE_TO_JSON_KEY: PageMapping = {
   '/kite/freelancer/school-support': 'SchoolSupportPage',
   '/kite/freelancer/travel-services': 'TravelServicesPage',
   '/kite/freelancer/consulting': 'ConsultingPage',
@@ -41,22 +50,36 @@ function stripHtmlTags(text: string): string {
   return text.replace(/<[^>]*>/g, '');
 }
 
-function extractTextFromFlatStructure(obj: MessageObject): string[] {
-  const content: string[] = [];
+function extractPageTitle(pageContent: MessageObject, jsonKey: string): string {
+  if (typeof pageContent.heroTitle === 'string') return stripHtmlTags(pageContent.heroTitle);
+  if (typeof pageContent.title === 'string') return stripHtmlTags(pageContent.title);
+  if (typeof pageContent.sectionTitle === 'string') return stripHtmlTags(pageContent.sectionTitle);
   
-  for (const value of Object.values(obj)) {
+  return jsonKey.replace(/Page$/, '').replace(/([A-Z])/g, ' $1').trim();
+}
+
+function cleanContentObject(content: MessageObject): MessageObject {
+  const cleaned: MessageObject = {};
+  
+  for (const [key, value] of Object.entries(content)) {
     if (typeof value === 'string') {
-      content.push(stripHtmlTags(value));
+      cleaned[key] = stripHtmlTags(value);
     }
   }
   
-  return content;
+  return cleaned;
 }
 
 export function createSearchDocuments(): SearchDocument[] {
   const documents: SearchDocument[] = [];
   const locales = ['en-US', 'de-DE', 'pt-BR'];
   const messagesDir = path.join(__dirname, '../../../messages');
+  
+  // Create reverse mapping for efficient lookup
+  const JSON_KEY_TO_PAGE: { [key: string]: string } = {};
+  for (const [path, key] of Object.entries(PAGE_TO_JSON_KEY)) {
+    JSON_KEY_TO_PAGE[key] = path;
+  }
   
   for (const locale of locales) {
     const messageFile = path.join(messagesDir, `${locale}.json`);
@@ -68,59 +91,40 @@ export function createSearchDocuments(): SearchDocument[] {
     
     const messages: MessageObject = JSON.parse(fs.readFileSync(messageFile, 'utf8'));
     
-    // Only process pages from SEARCHABLE_PAGES constant
     for (const pageKey of SEARCHABLE_PAGES) {
-      const pagePaths = Object.entries(PAGE_TO_JSON_KEY)
-        .filter(([_, jsonKey]) => jsonKey === pageKey)
-        .map(([path]) => path);
+      const pagePath = JSON_KEY_TO_PAGE[pageKey];
       
-      // Skip if page key not found in mapping
-      if (pagePaths.length === 0) {
+      if (!pagePath) {
         console.warn(`No page path found for JSON key: ${pageKey}`);
         continue;
       }
       
       const pageContent = messages[pageKey];
       
-      // Skip if page content doesn't exist or isn't an object
       if (!pageContent || typeof pageContent !== 'object') {
         console.warn(`JSON key ${pageKey} not found in ${locale}.json or is not an object`);
         continue;
       }
       
-      // Extract text from flat structure
-      const allTextContent = extractTextFromFlatStructure(pageContent);
-      const fullText = allTextContent.join(' ').trim();
+      const cleanedContent = cleanContentObject(pageContent);
       
-      if (!fullText) {
+      // Check if we have any content after cleaning
+      const hasContent = Object.values(cleanedContent).some(value => value.trim().length > 0);
+      
+      if (!hasContent) {
         console.warn(`No text content found for ${pageKey} in ${locale}`);
         continue;
       }
       
-      // Create one document per page path
-      for (const pagePath of pagePaths) {
-        documents.push({
-          id: `${locale}-${pageKey}-${pagePath.replace(/\//g, '-')}`,
-          locale: locale,
-          pageKey: pageKey,
-          pagePath: pagePath,
-          pageTitle: extractPageTitle(pageContent, pageKey),
-          content: fullText,
-          sections: allTextContent,
-          lastIndexed: new Date().toISOString()
-        });
-      }
+      documents.push({
+        id: `${locale}-${pageKey}`,
+        title: pageKey,
+        locale: locale,
+        pagePath: pagePath,
+        content: cleanedContent
+      });
     }
   }
   
   return documents;
-}
-
-// extractPageTitle function remains the same
-function extractPageTitle(pageContent: MessageObject, jsonKey: string): string {
-  if (typeof pageContent.heroTitle === 'string') return stripHtmlTags(pageContent.heroTitle);
-  if (typeof pageContent.title === 'string') return stripHtmlTags(pageContent.title);
-  if (typeof pageContent.sectionTitle === 'string') return stripHtmlTags(pageContent.sectionTitle);
-  
-  return jsonKey.replace(/Page$/, '').replace(/([A-Z])/g, ' $1').trim();
 }

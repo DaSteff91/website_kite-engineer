@@ -441,6 +441,8 @@
     "footer-copied": "(Copied!)",
     "footer-copyright": "© {year} Kite-Engineer by Stefan Merthan. All rights reserved."
   },
+  "CreativityPage": { "title": "Creativity (placeholder)", "body": "Placeholder content." },
+  "EquipmentRoadmapPage": { "title": "Equipment Roadmap (placeholder)", "body": "Placeholder content." },
   "ProcessOptimizationPage": {
     "back-to-engineer-services-nav":"Back to All Engineering Services",
     "process-optimization-hero": "Process Optimization Services",
