@@ -37,3 +37,5 @@ yarn-error.log*
 
 # Helper scripts etc.
 /i18n-codemod
+/meilisearch
+/scripts/search-indexer/node_modules
