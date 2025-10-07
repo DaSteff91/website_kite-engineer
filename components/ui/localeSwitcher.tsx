@@ -90,7 +90,7 @@ export default function LocaleSwitcher() {
         aria-haspopup="menu"
         aria-expanded={isOpen}
         onClick={() => setIsOpen((s) => !s)}
-        className="locale-switcher-button inline-flex items-center justify-center p-0 w-5 h-5 min-w-0 min-h-0 self-center"
+        className="locale-switcher-button inline-flex items-center justify-center p-0 w-5 h-5 min-w-0 min-h-0 self-center hover:scale-105 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
       >
         <Globe className="locale-switcher-icon block w-5 h-5" size={20} />
       </button>

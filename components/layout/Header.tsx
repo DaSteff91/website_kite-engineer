@@ -22,6 +22,7 @@ import {
   NavSubmenu,
 } from "@/lib/constants/navigation-menu";
 import { routing } from "@/i18n/routing";
+import { Search } from "../search/Search";
 
 export function Header() {
   const t = useTranslations("NavigationMenu");
@@ -332,6 +333,7 @@ export function Header() {
                 );
               })}
               <LocaleSwitcher />
+              <Search />
             </div>
 
             <Button

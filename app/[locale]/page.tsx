@@ -9,7 +9,9 @@ import type { Metadata } from "next";
 
 export async function generateMetadata({
   params,
-}: { params: LandingPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: LandingPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
   return await getPageMetadata(locale, "Home", "/home");
