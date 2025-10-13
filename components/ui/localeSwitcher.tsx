@@ -83,7 +83,7 @@ export default function LocaleSwitcher() {
   ];
 
   return (
-    <div className="inline-block" ref={switcherRef}>
+    <div className="inline-block relative" ref={switcherRef}>
       <button
         type="button"
         aria-label="Select language"
@@ -98,14 +98,14 @@ export default function LocaleSwitcher() {
       {isOpen && (
         <ul
           role="menu"
-          className="locale-switcher-dropdown absolute right-0 mt-1 rounded-md border bg-background/95 backdrop-blur-md p-1"
+          className="locale-switcher-dropdown absolute right-0 mt-1 rounded-md border bg-background/95 backdrop-blur-md p-1 z-50"
         >
           {languages.map((language) => (
             <li key={language.value} role="none">
               <button
                 role="menuitem"
                 type="button"
-                className="w-full text-left px-3 py-2 rounded-sm hover:bg-white/5"
+                className="flex flex-nowrap w-full text-left text-white/90 px-3 py-2 rounded-sm hover:bg-white/5 gap-2"
                 onClick={() => switchLocale(language.value)}
               >
                 <span className="mr-2">{language.flag}</span>

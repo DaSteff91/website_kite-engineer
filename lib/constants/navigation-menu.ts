@@ -3,8 +3,8 @@ import { House } from "lucide-react";
 // Type definition for a navigation item
 export interface NavItem {
   href: string;
-  key: string; // translation key für next-intl
-  icon?: React.ElementType;
+  key: string; // translation key for next-intl
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   hasDropdown?: boolean;
   dropdownItems?: (NavItem | NavSubmenu)[];
 }
