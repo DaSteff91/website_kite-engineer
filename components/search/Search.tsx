@@ -19,7 +19,7 @@ export function Search() {
   const searchQuery = searchParams.get("q") || "";
   const [debouncedQuery] = useDebounce(searchQuery, 300);
 
-  // Extract current locale from pathname (e.g., /en-US/about -> en-US)
+  // Extract current locale from pathname
   const pathSegments = pathname.split("/");
   const currentLocale = ["de-DE", "pt-BR"].includes(pathSegments[1])
     ? pathSegments[1]

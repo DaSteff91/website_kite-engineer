@@ -2,6 +2,7 @@
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { Search, X } from "lucide-react";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 
 interface SearchDialogProps {
@@ -22,8 +23,15 @@ export function SearchDialog({
   return (
     <Dialog.Root open={isOpen} onOpenChange={onOpenChange}>
       <Dialog.Trigger asChild>
-        <button className="flex items-center transition-colors hover:scale-105 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]">
-          <Search className="w-5 h-5" />
+        <button className="inline-flex items-center justify-center p-0 w-7 h-7 min-w-0 min-h-0 self-center transition-colors hover:scale-105 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]">
+          {/* <Search className="text-xl w-6 h-6block" size={20} /> */}
+          <Image
+            src="/search.svg"
+            alt="Search Icon"
+            width={20}
+            height={20}
+            className="w-7 h-5.5 "
+          />
         </button>
       </Dialog.Trigger>
 
