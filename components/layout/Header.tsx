@@ -21,9 +21,11 @@ import {
   NavSubmenu,
 } from "@/lib/constants/navigation-menu";
 import { routing } from "@/i18n/routing";
-import { Search } from "../search/Search";
 import NavElement from "@/components/layout/NavElements";
 import { SearchResult } from "../search/types";
+import { useDebounce } from "use-debounce";
+import { HeaderSearchResults } from "../search/HeaderSearchResult";
+import { HeaderSearch } from "../search/HeaderSearch";
 
 export function Header() {
   const t = useTranslations("NavigationMenu");
@@ -47,48 +49,14 @@ export function Header() {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Implementation of the search bar in the header
-
-  const searchBarRef = useRef<HTMLDivElement>(null);
+  // This is for a possible close on click outside function for the desktop search bar
+  // const searchBarRef = useRef<HTMLDivElement>(null);
 
   // Extract current locale from pathname
   const pathSegments = pathname.split("/");
   const currentLocale = ["de-DE", "pt-BR"].includes(pathSegments[1])
     ? pathSegments[1]
     : "en-US";
-
-  function HeaderSearchBar({
-    searchQuery,
-    onSearchChange,
-    onClose,
-  }: {
-    searchQuery: string;
-    onSearchChange: (query: string) => void;
-    onClose: () => void;
-  }) {
-    return (
-      <div
-        ref={searchBarRef}
-        className="flex flex-1 items-center bg-gray-100 rounded-md mx-4"
-      >
-        <input
-          type="text"
-          // Replace the "Search later with an next-intl t()"
-          placeholder="Search"
-          value={searchQuery}
-          onChange={(e) => onSearchChange(e.target.value)}
-          className="flex-1 py-2 px-4 text-lg outline-none placeholder-gray-500 bg-transparent text-gray-800 rounded-l-md"
-          autoFocus
-        />
-        <button
-          onClick={onClose}
-          className="p-2 text-gray-500 hover:text-gray-700 transition-colors rounded-r-md hover:bg-gray-200"
-        >
-          <X className="w-5 h-5" />
-        </button>
-      </div>
-    );
-  }
 
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const openSearchBar = () => setIsSearchBarOpen(true);
@@ -99,6 +67,7 @@ export function Header() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [isSearchLoading, setIsSearchLoading] = useState(false);
+  const [debouncedQuery] = useDebounce(searchQuery, 300);
 
   useEffect(() => {
     const performSearch = async (query: string) => {
@@ -133,14 +102,11 @@ export function Header() {
         setIsSearchLoading(false);
       }
     };
-    const timeoutId = setTimeout(() => {
-      if (searchQuery.trim()) {
-        performSearch(searchQuery);
-      }
-    }, 300);
 
-    return () => clearTimeout(timeoutId);
-  }, [searchQuery, locale]);
+    if (debouncedQuery.trim()) {
+      performSearch(debouncedQuery);
+    }
+  }, [debouncedQuery, currentLocale]);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -152,61 +118,6 @@ export function Header() {
     document.addEventListener("keydown", handleEsc);
     return () => document.removeEventListener("keydown", handleEsc);
   }, [isSearchBarOpen, closeSearchBar]);
-
-  function HeaderSearchResults({
-    results,
-    isLoading,
-    query,
-    onSelect,
-  }: {
-    results: SearchResult[];
-    isLoading: boolean;
-    query: string;
-    onSelect: (result: SearchResult) => void;
-  }) {
-    if (!query) return null;
-
-    if (isLoading) {
-      return (
-        <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-b-md shadow-lg">
-          <div className="p-4 text-gray-500 flex items-center justify-center">
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-gray-500 mr-2"></div>
-            Searching...
-          </div>
-        </div>
-      );
-    }
-
-    if (results.length === 0 && query) {
-      return (
-        <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-b-md shadow-lg">
-          <div className="p-6 text-center text-gray-500">
-            <p className="font-medium">No results found for "{query}"</p>
-            <p className="text-sm mt-1">
-              Try different keywords or check spelling
-            </p>
-          </div>
-        </div>
-      );
-    }
-
-    return (
-      <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-b-md shadow-lg max-h-96 overflow-y-auto">
-        {results.map((result) => (
-          <div
-            key={result.id}
-            className="p-4 border-b hover:bg-gray-50 cursor-pointer"
-            onClick={() => onSelect(result)}
-          >
-            <div className="font-medium text-gray-800">{result.title}</div>
-            <div className="text-sm text-gray-600 line-clamp-2">
-              {Object.values(result.content).join(" ").substring(0, 150)}...
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  }
 
   const handleResultSelect = (result: SearchResult) => {
     router.push(`/${locale}${result.pagePath}`);
@@ -235,17 +146,18 @@ export function Header() {
       }
 
       // Handle click outside for searchbar
-      if (
-        isSearchBarOpen &&
-        searchBarRef.current &&
-        !searchBarRef.current.contains(event.target as Node)
-      ) {
-        closeSearchBar();
-      }
+      // if (
+      //   isSearchBarOpen &&
+      //   searchBarRef.current &&
+      //   !searchBarRef.current.contains(event.target as Node)
+      // ) {
+      //   closeSearchBar();
+      // }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isMobileMenuOpen, isSearchBarOpen, closeSearchBar]);
+  }, [isMobileMenuOpen]);
+  // }, [isMobileMenuOpen, isSearchBarOpen, closeSearchBar]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -346,18 +258,14 @@ export function Header() {
               />
             </Link>
 
-            {/* THIS IS WHERE THE PREVIOUS DESKTOP NAVIGATION HAS HAPPENED */}
-            {/* THIS IS WHERE THE PREVIOUS DESKTOP NAVIGATION HAS HAPPENED */}
-            {/* THIS IS WHERE THE PREVIOUS DESKTOP NAVIGATION HAS HAPPENED */}
-
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-4 lg:gap-6 h-full">
               {isSearchBarOpen ? (
                 <div className="flex-1 relative">
-                  <HeaderSearchBar
-                    searchQuery={searchQuery}
-                    onSearchChange={setSearchQuery}
+                  <HeaderSearch
+                    onResultSelect={handleResultSelect}
                     onClose={closeSearchBar}
+                    // searchBarRef={searchBarRef}
                   />
                   <HeaderSearchResults
                     results={searchResults}
