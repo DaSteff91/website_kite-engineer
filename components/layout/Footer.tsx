@@ -13,7 +13,7 @@ const SOCIAL_LINKS = [
   },
   {
     icon: Linkedin,
-    href: "www.linkedin.com/in/stefan-merthan-09a264158",
+    href: "https://www.linkedin.com/in/stefan-merthan-09a264158",
     labelKey: "footer-social-linkedin",
   },
   {
