@@ -72,8 +72,6 @@ export default function LocaleSwitcher() {
 
     // 4. Now navigate to the new locale with the clean path
     router.replace(cleanPathname, { locale: newLocale });
-    console.log("Raw pathname:", currentPathname);
-    console.log("Cleaned pathname:", cleanPathname);
   };
 
   const languages = [

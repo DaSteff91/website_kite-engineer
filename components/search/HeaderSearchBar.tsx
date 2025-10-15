@@ -6,6 +6,7 @@ interface HeaderSearchBarProps {
   searchQuery: string;
   onSearchChange: (query: string) => void;
   onClose: () => void;
+  autoFocus?: boolean;
   //   inputRef?: React.RefObject<HTMLInputElement>;
 }
 
@@ -13,6 +14,7 @@ export function HeaderSearchBar({
   searchQuery,
   onSearchChange,
   onClose,
+  autoFocus = false,
 }: //   inputRef,
 HeaderSearchBarProps) {
   return (
@@ -27,7 +29,7 @@ HeaderSearchBarProps) {
         value={searchQuery}
         onChange={(e) => onSearchChange(e.target.value)}
         className="flex-1 py-2 px-4 text-lg outline-none placeholder-gray-500 bg-transparent text-gray-800 rounded-l-md"
-        autoFocus
+        autoFocus={autoFocus}
       />
       <button
         onClick={onClose}

@@ -23,9 +23,10 @@ import {
 import { routing } from "@/i18n/routing";
 import NavElement from "@/components/layout/NavElements";
 import { SearchResult } from "../search/types";
-import { useDebounce } from "use-debounce";
 import { HeaderSearchResults } from "../search/HeaderSearchResult";
 import { HeaderSearch } from "../search/HeaderSearch";
+import { HeaderSearchBar } from "../search/HeaderSearchBar";
+import { useHeaderSearch } from "../search/useHeaderSearch";
 
 export function Header() {
   const t = useTranslations("NavigationMenu");
@@ -59,54 +60,22 @@ export function Header() {
     : "en-US";
 
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+  const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const openSearchBar = () => setIsSearchBarOpen(true);
   const closeSearchBar = () => {
     setIsSearchBarOpen(false);
     setSearchQuery("");
   };
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-  const [isSearchLoading, setIsSearchLoading] = useState(false);
-  const [debouncedQuery] = useDebounce(searchQuery, 300);
+  const openMobileSearch = () => {
+    setIsMobileSearchOpen(true);
+  };
 
-  useEffect(() => {
-    const performSearch = async (query: string) => {
-      if (!query.trim()) {
-        setSearchResults([]);
-        return;
-      }
-
-      setIsSearchLoading(true);
-      try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_MEILI_HOST}/indexes/pages/search`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${process.env.NEXT_PUBLIC_MEILI_SEARCH_KEY}`,
-            },
-            body: JSON.stringify({
-              q: query,
-              filter: [`locale = ${currentLocale}`],
-              limit: 20,
-            }),
-          }
-        );
-        const data = await response.json();
-        setSearchResults(data.hits || []);
-      } catch (error) {
-        console.error("Search failed:", error);
-        setSearchResults([]);
-      } finally {
-        setIsSearchLoading(false);
-      }
-    };
-
-    if (debouncedQuery.trim()) {
-      performSearch(debouncedQuery);
-    }
-  }, [debouncedQuery, currentLocale]);
+  const closeMobileSearch = () => {
+    setIsMobileSearchOpen(false);
+    setSearchQuery("");
+  };
+  const { searchQuery, setSearchQuery, searchResults, isSearchLoading } =
+    useHeaderSearch();
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -243,20 +212,35 @@ export function Header() {
       <div className="relative">
         <div className="rounded-t-md rounded-b-2xl border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/10 backdrop-blur-md">
           <div className="container px-4 md:px-6 h-16 flex items-center justify-between">
-            <Link
-              href="/"
-              className="h-[85%] w-auto min-w-[100px] sm:min-w-[120px] relative flex items-center aspect-auto
-              transition-transform hover:scale-105 active:scale-95 duration-200"
-            >
-              <Image
-                src="/images/logo_dark.svg"
-                alt="Site Logo"
-                width={120}
-                height={56}
-                priority
-                className="object-contain object-left w-auto h-full"
-              />
-            </Link>
+            {/* Logo shall disappear in search mode of mobile version */}
+            {!isMobileSearchOpen && (
+              <Link
+                href="/"
+                className="h-[85%] w-auto min-w-[100px] sm:min-w-[120px] relative flex items-center aspect-auto
+      transition-transform hover:scale-105 active:scale-95 duration-200"
+              >
+                <Image
+                  src="/images/logo_dark.svg"
+                  alt="Site Logo"
+                  width={120}
+                  height={56}
+                  priority
+                  className="object-contain object-left w-auto h-full"
+                />
+              </Link>
+            )}
+
+            {/* Search Bar (shown during mobile search) */}
+            {isMobileSearchOpen && (
+              <div className="flex-1 mr-3">
+                <HeaderSearchBar
+                  searchQuery={searchQuery}
+                  onSearchChange={setSearchQuery}
+                  onClose={closeMobileSearch}
+                  autoFocus
+                />
+              </div>
+            )}
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-4 lg:gap-6 h-full">
@@ -276,7 +260,7 @@ export function Header() {
                 </div>
               ) : (
                 <>
-                  {/* Normal Navigation Layout */}
+                  {/* Navigation Layout */}
                   {NAV_ITEMS.map((item) => {
                     const Icon = item.icon as React.ElementType | undefined;
                     return (
@@ -469,226 +453,254 @@ export function Header() {
               variant="ghost"
               size="icon"
               className="md:hidden hover:scale-105 transition-transform p-2"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={() => {
+                if (isMobileSearchOpen) {
+                  closeMobileSearch();
+                  setIsMobileMenuOpen(true);
+                } else {
+                  setIsMobileMenuOpen(!isMobileMenuOpen);
+                }
+              }}
             >
-              {isMobileMenuOpen ? (
+              {isMobileSearchOpen || isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
               ) : (
                 <Menu className="h-6 w-6" />
               )}
-              <span className="sr-only">Toggle menu</span>
+              <span className="sr-only">
+                {isMobileSearchOpen ? "Close search" : "Toggle menu"}
+              </span>
             </Button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        <div
-          ref={mobileMenuRef}
-          className={cn(
-            "absolute top-full left-0 right-0 mt-2 md:hidden",
-            "transition-all duration-300 ease-in-out",
-            isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          )}
-        >
+        {isMobileMenuOpen && !isMobileSearchOpen && (
           <div
-            className="rounded-lg border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/95 backdrop-blur-md p-4 overflow-y-auto"
-            style={{
-              maxHeight: "calc(100vh - 4rem)",
-              WebkitOverflowScrolling: "touch",
-              touchAction: "pan-y",
-            }}
+            ref={mobileMenuRef}
+            className={cn(
+              "absolute top-full left-0 right-0 mt-2 md:hidden",
+              "transition-all duration-300 ease-in-out",
+              "opacity-100 visible"
+            )}
           >
-            <nav className="flex flex-col gap-2">
-              {NAV_ITEMS.map((item) => (
-                <div key={item.key}>
-                  {item.hasDropdown ? (
-                    <div className="space-y-2">
-                      <div className="flex items-center">
+            <div
+              className="rounded-lg border border-white/20 shadow-[0_2px_8px_-1px_rgba(255,255,255,0.1)] bg-background/95 backdrop-blur-md p-4 flex flex-col"
+              style={{
+                maxHeight: "80vh",
+                minHeight: "200px",
+                WebkitOverflowScrolling: "touch",
+                touchAction: "pan-y",
+              }}
+            >
+              <>
+                {/* Original Mobile Menu Content */}
+                <nav className="flex flex-col gap-2">
+                  {NAV_ITEMS.map((item) => (
+                    <div key={item.key}>
+                      {item.hasDropdown ? (
+                        <div className="space-y-2">
+                          <div className="flex items-center">
+                            <Link
+                              href={item.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className={cn(
+                                "flex-1 px-4 py-3 text-lg font-medium rounded-md text-left",
+                                "transition-all duration-200",
+                                "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                pathname === item.href
+                                  ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                  : "text-white/90"
+                              )}
+                            >
+                              {getAllServicesLabel(item)}
+                            </Link>
+                            <button
+                              onClick={() => handleMobileItemClick(item.key)}
+                              className="p-2 text-white/80 hover:text-white transition-colors"
+                            >
+                              <ChevronRight
+                                className={cn(
+                                  "h-5 w-5 transition-transform duration-200",
+                                  expandedMobileItem === item.key && "rotate-90"
+                                )}
+                              />
+                            </button>
+                          </div>
+
+                          {expandedMobileItem === item.key && (
+                            <div className="pl-4 space-y-2 border-l border-white/20 ml-4">
+                              {/* Mobile: filter out the top "All X Services" link (href === item.href) */}
+                              {item.dropdownItems
+                                ?.filter(
+                                  (dropdownItem) =>
+                                    !("isSubmenu" in dropdownItem) &&
+                                    (dropdownItem as NavItem).href !== item.href
+                                )
+                                .map((dropdownItem) => {
+                                  const navItem = dropdownItem as NavItem;
+                                  return (
+                                    <Link
+                                      key={navItem.href}
+                                      href={navItem.href || "#"}
+                                      onClick={() => setIsMobileMenuOpen(false)}
+                                      className={cn(
+                                        "block px-3 py-2 text-base font-medium rounded-md text-left",
+                                        "transition-all duration-200",
+                                        "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                        pathname === navItem.href
+                                          ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                          : "text-white/80"
+                                      )}
+                                    >
+                                      {t(navItem.key)}
+                                    </Link>
+                                  );
+                                })}
+
+                              {/* Submenu Items */}
+                              {item.dropdownItems
+                                ?.filter(
+                                  (dropdownItem) =>
+                                    "isSubmenu" in dropdownItem &&
+                                    dropdownItem.isSubmenu
+                                )
+                                .map((submenu) => {
+                                  const subMenuItem = submenu as NavSubmenu;
+                                  return (
+                                    <div
+                                      key={subMenuItem.key}
+                                      className="space-y-1"
+                                    >
+                                      <button
+                                        onClick={() =>
+                                          handleMobileSubmenuClick(
+                                            subMenuItem.key
+                                          )
+                                        }
+                                        className="w-full flex items-center justify-between px-3 py-2 text-left hover:bg-white/5 rounded-sm transition-colors"
+                                      >
+                                        <span className="text-base font-medium text-white/80">
+                                          {t(subMenuItem.key)}
+                                        </span>
+                                        <ChevronRight
+                                          className={cn(
+                                            "h-4 w-4 transition-transform duration-200 text-white/60",
+                                            expandedMobileSubmenu ===
+                                              subMenuItem.key && "rotate-90"
+                                          )}
+                                        />
+                                      </button>
+
+                                      {expandedMobileSubmenu ===
+                                        subMenuItem.key && (
+                                        <div className="pl-3 space-y-1">
+                                          {subMenuItem.items.map((subItem) => (
+                                            <Link
+                                              key={subItem.href}
+                                              href={subItem.href}
+                                              onClick={() =>
+                                                setIsMobileMenuOpen(false)
+                                              }
+                                              className={cn(
+                                                "block px-3 py-2 text-sm font-medium rounded-md text-left",
+                                                "transition-all duration-200",
+                                                "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                                                pathname === subItem.href
+                                                  ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
+                                                  : "text-white/70"
+                                              )}
+                                            >
+                                              {t(subItem.key)}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                            </div>
+                          )}
+                        </div>
+                      ) : (
                         <Link
                           href={item.href}
                           onClick={() => setIsMobileMenuOpen(false)}
                           className={cn(
-                            "flex-1 px-4 py-3 text-lg font-medium rounded-md text-left",
-                            "transition-all duration-200",
+                            "px-4 py-3 text-lg font-medium rounded-md",
+                            "transition-all duration-200 hover:scale-105",
                             "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                            "text-left block",
                             pathname === item.href
                               ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
                               : "text-white/90"
                           )}
                         >
-                          {getAllServicesLabel(item)}
+                          {t(item.key)}
                         </Link>
-                        <button
-                          onClick={() => handleMobileItemClick(item.key)}
-                          className="p-2 text-white/80 hover:text-white transition-colors"
-                        >
-                          <ChevronRight
-                            className={cn(
-                              "h-5 w-5 transition-transform duration-200",
-                              expandedMobileItem === item.key && "rotate-90"
-                            )}
-                          />
-                        </button>
-                      </div>
-
-                      {expandedMobileItem === item.key && (
-                        <div className="pl-4 space-y-2 border-l border-white/20 ml-4">
-                          {/* Mobile: filter out the top "All X Services" link (href === item.href) */}
-                          {item.dropdownItems
-                            ?.filter(
-                              (dropdownItem) =>
-                                !("isSubmenu" in dropdownItem) &&
-                                (dropdownItem as NavItem).href !== item.href
-                            )
-                            .map((dropdownItem) => {
-                              const navItem = dropdownItem as NavItem;
-                              return (
-                                <Link
-                                  key={navItem.href}
-                                  href={navItem.href || "#"}
-                                  onClick={() => setIsMobileMenuOpen(false)}
-                                  className={cn(
-                                    "block px-3 py-2 text-base font-medium rounded-md text-left",
-                                    "transition-all duration-200",
-                                    "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                                    pathname === navItem.href
-                                      ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                      : "text-white/80"
-                                  )}
-                                >
-                                  {t(navItem.key)}
-                                </Link>
-                              );
-                            })}
-
-                          {/* Submenu Items */}
-                          {item.dropdownItems
-                            ?.filter(
-                              (dropdownItem) =>
-                                "isSubmenu" in dropdownItem &&
-                                dropdownItem.isSubmenu
-                            )
-                            .map((submenu) => {
-                              const subMenuItem = submenu as NavSubmenu;
-                              return (
-                                <div
-                                  key={subMenuItem.key}
-                                  className="space-y-1"
-                                >
-                                  <button
-                                    onClick={() =>
-                                      handleMobileSubmenuClick(subMenuItem.key)
-                                    }
-                                    className="w-full flex items-center justify-between px-3 py-2 text-left hover:bg-white/5 rounded-sm transition-colors"
-                                  >
-                                    <span className="text-base font-medium text-white/80">
-                                      {t(subMenuItem.key)}
-                                    </span>
-                                    <ChevronRight
-                                      className={cn(
-                                        "h-4 w-4 transition-transform duration-200 text-white/60",
-                                        expandedMobileSubmenu ===
-                                          subMenuItem.key && "rotate-90"
-                                      )}
-                                    />
-                                  </button>
-
-                                  {expandedMobileSubmenu ===
-                                    subMenuItem.key && (
-                                    <div className="pl-3 space-y-1">
-                                      {subMenuItem.items.map((subItem) => (
-                                        <Link
-                                          key={subItem.href}
-                                          href={subItem.href}
-                                          onClick={() =>
-                                            setIsMobileMenuOpen(false)
-                                          }
-                                          className={cn(
-                                            "block px-3 py-2 text-sm font-medium rounded-md text-left",
-                                            "transition-all duration-200",
-                                            "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                                            pathname === subItem.href
-                                              ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                                              : "text-white/70"
-                                          )}
-                                        >
-                                          {t(subItem.key)}
-                                        </Link>
-                                      ))}
-                                    </div>
-                                  )}
-                                </div>
-                              );
-                            })}
-                        </div>
                       )}
                     </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={cn(
-                        "px-4 py-3 text-lg font-medium rounded-md",
-                        "transition-all duration-200 hover:scale-105",
-                        "hover:text-white hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                        "text-left block",
-                        pathname === item.href
-                          ? "text-white bg-white/10 drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"
-                          : "text-white/90"
-                      )}
-                    >
-                      {t(item.key)}
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Additional Mobile Actions - Styled consistently with menu items */}
-            {/* <div className="mt-4 pt-4"> */}
-            <div className="flex flex-col">
-              {/* Mobile Language Switcher */}
-              <div className="flex flex-row gap-2">
-                {languages
-                  .filter((lang) => lang.value !== locale) // hide current
-                  .map((lang) => (
-                    <button
-                      key={lang.value}
-                      onClick={() => {
-                        switchLocale(lang.value);
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className={cn(
-                        "flex-1 flex items-center justify-start gap-2 px-4 py-3 text-lg font-medium rounded-md",
-                        "transition-all duration-200",
-                        "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                        "text-white/90"
-                      )}
-                    >
-                      <span>{lang.flag}</span>
-                      <span>{lang.label}</span>
-                    </button>
                   ))}
-              </div>
+                </nav>
 
-              {/* Search Function */}
-              <button
-                onClick={() => {
-                  // Add your search functionality here
-                  setIsMobileMenuOpen(false);
-                }}
-                className={cn(
-                  "w-full px-4 pt-3 text-lg font-medium rounded-md text-left",
-                  "transition-all duration-200",
-                  "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                  "text-white/90 mb-2"
-                )}
-              >
-                {t("search")}
-              </button>
+                {/* Additional Mobile Actions */}
+                <div className="flex flex-col">
+                  {/* Mobile Language Switcher */}
+                  <div className="flex flex-row gap-2">
+                    {languages
+                      .filter((lang) => lang.value !== locale)
+                      .map((lang) => (
+                        <button
+                          key={lang.value}
+                          onClick={() => {
+                            switchLocale(lang.value);
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className={cn(
+                            "flex-1 flex items-center justify-start gap-2 px-4 py-3 text-lg font-medium rounded-md",
+                            "transition-all duration-200",
+                            "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                            "text-white/90"
+                          )}
+                        >
+                          <span>{lang.flag}</span>
+                          <span>{lang.label}</span>
+                        </button>
+                      ))}
+                  </div>
+
+                  {/* Search Function */}
+                  <button
+                    onClick={() => {
+                      openMobileSearch();
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={cn(
+                      "w-full px-4 pt-3 text-lg font-medium rounded-md text-left",
+                      "transition-all duration-200",
+                      "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                      "text-white/90 mb-2"
+                    )}
+                  >
+                    {t("search")}
+                  </button>
+                </div>
+              </>
             </div>
           </div>
-        </div>
+        )}
+
+        {/* Mobile Search Results - Positioned below header */}
+        {isMobileSearchOpen && (
+          <div className="absolute top-full left-0 right-0 z-50 md:hidden">
+            <HeaderSearchResults
+              results={searchResults}
+              isLoading={isSearchLoading}
+              query={searchQuery}
+              onSelect={handleResultSelect}
+            />
+          </div>
+        )}
       </div>
     </header>
   );
