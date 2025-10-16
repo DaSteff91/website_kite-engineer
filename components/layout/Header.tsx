@@ -89,15 +89,6 @@ export function Header() {
   }, [isSearchBarOpen, closeSearchBar]);
 
   const handleResultSelect = (result: SearchResult) => {
-    console.log("🔄 Starting navigation to:", {
-      fullPath: `/${locale}${result.pagePath}`,
-      resultPagePath: result.pagePath,
-      currentLocale: locale,
-      isMobileSearchOpen,
-      isSearchBarOpen,
-      isMobileMenuOpen,
-    });
-
     // Check if pagePath already includes locale prefix
     let targetPath = result.pagePath;
     const hasLocalePrefix =
@@ -109,16 +100,10 @@ export function Header() {
     if (!hasLocalePrefix) {
       targetPath = `/${locale}${result.pagePath}`;
     }
-
-    console.log("🎯 Final navigation path:", targetPath);
     router.push(result.pagePath);
-    console.log("🗑️ Cleaning up search states...");
-
     closeSearchBar();
     closeMobileSearch();
-
     setIsMobileMenuOpen(false);
-    console.log("✅ Navigation and cleanup completed");
   };
 
   useEffect(() => {

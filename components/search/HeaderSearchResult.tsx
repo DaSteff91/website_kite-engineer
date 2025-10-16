@@ -47,12 +47,6 @@ export function HeaderSearchResults({
           variant="ghost"
           className="w-full h-auto p-4 border-b hover:bg-gray-50 cursor-pointer justify-start text-left normal-case"
           onClick={() => {
-            console.log("🔍 Search result clicked:", {
-              id: result.id,
-              title: result.title,
-              pagePath: result.pagePath,
-              locale: result.locale,
-            });
             onSelect(result);
           }}
         >

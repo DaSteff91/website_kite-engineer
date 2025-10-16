@@ -50,13 +50,15 @@ function stripHtmlTags(text: string): string {
   return text.replace(/<[^>]*>/g, '');
 }
 
-function extractPageTitle(pageContent: MessageObject, jsonKey: string): string {
-  if (typeof pageContent.heroTitle === 'string') return stripHtmlTags(pageContent.heroTitle);
-  if (typeof pageContent.title === 'string') return stripHtmlTags(pageContent.title);
-  if (typeof pageContent.sectionTitle === 'string') return stripHtmlTags(pageContent.sectionTitle);
+// 16.10.2025: Commented out since i assume its not necessary, anymore??
+
+// function extractPageTitle(pageContent: MessageObject, jsonKey: string): string {
+//   if (typeof pageContent.heroTitle === 'string') return stripHtmlTags(pageContent.heroTitle);
+//   if (typeof pageContent.title === 'string') return stripHtmlTags(pageContent.title);
+//   if (typeof pageContent.sectionTitle === 'string') return stripHtmlTags(pageContent.sectionTitle);
   
-  return jsonKey.replace(/Page$/, '').replace(/([A-Z])/g, ' $1').trim();
-}
+//   return jsonKey.replace(/Page$/, '').replace(/([A-Z])/g, ' $1').trim();
+// }
 
 function cleanContentObject(content: MessageObject): MessageObject {
   const cleaned: MessageObject = {};

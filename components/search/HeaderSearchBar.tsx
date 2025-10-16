@@ -4,6 +4,7 @@ import { X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Input } from "../ui/input";
 import { HeaderSearchBarProps } from "./types";
+import { Button } from "../ui/button";
 
 export function HeaderSearchBar({
   searchQuery,
@@ -19,25 +20,27 @@ HeaderSearchBarProps) {
       //   ref={inputRef}
       className="flex flex-1 items-center rounded-md mx-4"
     >
-      <input
+      <Input
         // ref={inputRef}
         type="text"
         placeholder={t("SearchBarPlaceholder")}
         value={searchQuery}
         onChange={(e) => onSearchChange(e.target.value)}
-        className="flex-1 py-2 px-4 text-lg outline-none placeholder-gray-200  bg-transparent text-gray-200 rounded-l-md"
+        className="flex-1 py-2 px-4 text-lg border border-white/20 placeholder-gray-200  bg-transparent text-gray-200 rounded-l-md"
         autoFocus={autoFocus}
         id="SearchInput"
         style={{
           caretColor: "white",
         }}
       />
-      <button
+      <Button
+        variant="ghost"
+        size="icon"
         onClick={onClose}
-        className="p-2 text-gray-500 hover:text-gray-700 transition-colors rounded-r-md hover:bg-gray-200"
+        className="p-2 text-gray-200 hover:text-gray-600 transition-colors rounded-r-md hover:bg-gray-200"
       >
         <X className="w-5 h-5" />
-      </button>
+      </Button>
     </div>
   );
 }
