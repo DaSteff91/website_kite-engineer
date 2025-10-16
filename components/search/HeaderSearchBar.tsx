@@ -27,6 +27,7 @@ HeaderSearchBarProps) {
         value={searchQuery}
         onChange={(e) => onSearchChange(e.target.value)}
         className="flex-1 py-2 px-4 text-lg border border-white/20 placeholder-gray-200  bg-transparent text-gray-200 rounded-l-md"
+        // AUTO FOCUS NEEDS A FIX: SEARCHBAR GETS OPENED BUT ITS NOT FOCUSED
         autoFocus={autoFocus}
         id="SearchInput"
         style={{

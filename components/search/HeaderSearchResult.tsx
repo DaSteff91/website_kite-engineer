@@ -29,8 +29,8 @@ export function HeaderSearchResults({
 
   if (results.length === 0 && query) {
     return (
-      <div className="absolute top-full left-0 right-0 bg-background/10 backdrop-blur-md  border border-white/20 rounded-b-md shadow-lg">
-        <div className="p-6 text-center text-gray-200">
+      <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md  border border-white/20 rounded-b-md shadow-lg">
+        <div className="p-6 text-center text-white/80">
           <p className="font-medium whitespace-normal break-words">
             {tSearch("NoSearchResults")}
             {query}
@@ -42,7 +42,7 @@ export function HeaderSearchResults({
   }
 
   return (
-    <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-b-md shadow-lg max-h-96 overflow-y-auto">
+    <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border border-white/20 rounded-b-md shadow-lg max-h-96 overflow-y-auto">
       {results.map((result) => {
         // Extract navigation key from result title
         const navKey =
@@ -54,14 +54,14 @@ export function HeaderSearchResults({
           <Button
             key={result.id}
             variant="ghost"
-            className="w-full h-auto p-4 border-b hover:bg-gray-50 cursor-pointer justify-start text-left normal-case"
+            className="w-full h-auto p-4 border-b hover:text-white/30 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)] hover:bg-white/5 cursor-pointer justify-start text-left normal-case "
             onClick={() => {
               onSelect(result);
             }}
           >
             <div className="flex flex-col items-start w-full">
-              <div className="font-medium text-gray-800">{displayTitle}</div>
-              <div className="text-sm text-gray-600 line-clamp-2">
+              <div className=" text-white/90 font-bold">{displayTitle}</div>
+              <div className="text-sm text-white/70 line-clamp-2">
                 {Object.values(result.content).join(" ").substring(0, 150)}...
               </div>
             </div>
