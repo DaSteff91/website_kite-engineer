@@ -20,7 +20,7 @@ HeaderSearchBarProps) {
       //   ref={inputRef}
       className="flex flex-1 items-center rounded-md mx-4"
     >
-      <Input
+      <input
         // ref={inputRef}
         type="text"
         placeholder={t("SearchBarPlaceholder")}
