@@ -1,3 +1,26 @@
+# [1.30.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.29.3...v1.30.0) (2025-10-16)
+
+
+### Bug Fixes
+
+* finalizing working searchbar for desktop version ([25bbfcd](https://github.com/DaSteff91/website_kite-engineer/commit/25bbfcdc49460beab4c76a3fb8e858f994182619))
+* implemented the mobile searchbar as well ([05ef8fb](https://github.com/DaSteff91/website_kite-engineer/commit/05ef8fb3402ca7974c6d9582d307593362fc933e))
+* implementing i18in in search and some design tests ([466e0af](https://github.com/DaSteff91/website_kite-engineer/commit/466e0afb10f184ce28f485ec4ca9490945f424d3))
+* meta data currently not available for imprint ([9113fd1](https://github.com/DaSteff91/website_kite-engineer/commit/9113fd19907eef6d664614b9ef160539942aa2a3))
+* minor UI changes and element changes ([6f634fe](https://github.com/DaSteff91/website_kite-engineer/commit/6f634fee32e16eac921b1d5e63febb6374281595))
+* preparing for search component implementation ([f2a9cf8](https://github.com/DaSteff91/website_kite-engineer/commit/f2a9cf8a05da3777df70336c4078e4cb39e37d96))
+* preparing the header implementation of search function and fix locale switcher ([c222cfb](https://github.com/DaSteff91/website_kite-engineer/commit/c222cfbc94c1c90570506a863915b61c168b230b))
+* refactoring and changing the displayed search title to fit i18n ([ab95a5f](https://github.com/DaSteff91/website_kite-engineer/commit/ab95a5fcdaebd7c634e95e00d7da38ce391c46c5))
+* styling ([5e3b93b](https://github.com/DaSteff91/website_kite-engineer/commit/5e3b93b39133b122334d6a84fc624fee1ecf1468))
+* updating the search icon implementation ([156c124](https://github.com/DaSteff91/website_kite-engineer/commit/156c124bd976579b4f7b1c4a2a82901af238479f))
+
+
+### Features
+
+* implemented the first draft of the search component in the header menu ([3e09107](https://github.com/DaSteff91/website_kite-engineer/commit/3e09107ccfbe30de82695dae88647692d23bb2e3))
+* new search bar implementation in header ([85c706b](https://github.com/DaSteff91/website_kite-engineer/commit/85c706b242d1600d9421e461f1d7534febb8bcb9))
+* preparing new functionality to search content ([44b26bc](https://github.com/DaSteff91/website_kite-engineer/commit/44b26bc6aca2436846e264d04d299cc66f73486d))
+
 ## [1.29.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.29.2...v1.29.3) (2025-10-06)
 
 
