@@ -10,12 +10,12 @@ import { getPageMetadata } from "@/lib/constants/metadata";
 import type { Metadata } from "next";
 
 // export async function generateMetadata({
-  params,
-}: { params: any }): Promise<Metadata> {
-  const resolvedParams = await params;
-  const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "Engineer", "/engineer");
-}
+//   params,
+// }: { params: any }): Promise<Metadata> {
+//   const resolvedParams = await params;
+//   const { locale } = resolvedParams;
+//   return await getPageMetadata(locale, "Engineer", "/engineer");
+// }
 interface ImprintProps {
   params: Promise<{ locale: string }>;
 }
