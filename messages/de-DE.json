@@ -761,5 +761,10 @@
         }
       }
     }
+  },
+  "SearchBar": {
+    "SearchBarPlaceholder":"Suchen",
+    "NoSearchResults": "Nichts gefunden für:",
+    "NoSearchResultsDetails":"Versuche ein anderes Wort oder überprüfe die Schreibweise"
   }
 }

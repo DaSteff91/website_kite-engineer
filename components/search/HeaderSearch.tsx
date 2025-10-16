@@ -3,13 +3,7 @@
 import { useHeaderSearch } from "./useHeaderSearch";
 import { HeaderSearchBar } from "./HeaderSearchBar";
 import { HeaderSearchResults } from "./HeaderSearchResult";
-import { SearchResult } from "./types";
-
-interface HeaderSearchProps {
-  onResultSelect: (result: SearchResult) => void;
-  onClose: () => void;
-  //   searchBarRef: React.RefObject<HTMLInputElement | null>;
-}
+import { HeaderSearchProps } from "./types";
 
 export function HeaderSearch({
   onResultSelect,

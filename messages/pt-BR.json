@@ -762,5 +762,10 @@
         }
       }
     }
+  },
+  "SearchBar": {
+    "SearchBarPlaceholder":"Buscar",
+    "NoSearchResults": "Nenhum resultado encontrado para:",
+    "NoSearchResultsDetails":"Tente palavras-chave diferentes ou verifique a ortografia."
   }
 }

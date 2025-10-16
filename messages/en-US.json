@@ -1284,5 +1284,10 @@
         }
       }
     }
+  },
+  "SearchBar": {
+    "SearchBarPlaceholder":"Search",
+    "NoSearchResults": "No results found for:",
+    "NoSearchResultsDetails":"Try different keywords or check spelling"
   }
 }

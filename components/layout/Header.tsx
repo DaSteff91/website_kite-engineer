@@ -89,8 +89,36 @@ export function Header() {
   }, [isSearchBarOpen, closeSearchBar]);
 
   const handleResultSelect = (result: SearchResult) => {
-    router.push(`/${locale}${result.pagePath}`);
-    closeSearchBar(); // Close search and clear state
+    console.log("🔄 Starting navigation to:", {
+      fullPath: `/${locale}${result.pagePath}`,
+      resultPagePath: result.pagePath,
+      currentLocale: locale,
+      isMobileSearchOpen,
+      isSearchBarOpen,
+      isMobileMenuOpen,
+    });
+
+    // Check if pagePath already includes locale prefix
+    let targetPath = result.pagePath;
+    const hasLocalePrefix =
+      result.pagePath.startsWith(`/${result.locale}`) ||
+      result.pagePath.startsWith("/de-DE") ||
+      result.pagePath.startsWith("/en-US") ||
+      result.pagePath.startsWith("/pt-BR");
+
+    if (!hasLocalePrefix) {
+      targetPath = `/${locale}${result.pagePath}`;
+    }
+
+    console.log("🎯 Final navigation path:", targetPath);
+    router.push(result.pagePath);
+    console.log("🗑️ Cleaning up search states...");
+
+    closeSearchBar();
+    closeMobileSearch();
+
+    setIsMobileMenuOpen(false);
+    console.log("✅ Navigation and cleanup completed");
   };
 
   useEffect(() => {
@@ -494,6 +522,48 @@ export function Header() {
               }}
             >
               <>
+                {/* Additional Mobile Actions */}
+                <div className="flex flex-col gap-2 mb-2">
+                  {/* Mobile Language Switcher */}
+                  <div className="flex flex-row gap-2">
+                    {languages
+                      .filter((lang) => lang.value !== locale)
+                      .map((lang) => (
+                        <button
+                          key={lang.value}
+                          onClick={() => {
+                            switchLocale(lang.value);
+                            setIsMobileMenuOpen(false);
+                          }}
+                          className={cn(
+                            "flex-1 flex items-center justify-start gap-2 px-4 py-3 text-lg font-medium rounded-md",
+                            "transition-all duration-200",
+                            "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                            "text-white/90"
+                          )}
+                        >
+                          <span>{lang.flag}</span>
+                          <span>{lang.label}</span>
+                        </button>
+                      ))}
+                  </div>
+
+                  {/* Search Function */}
+                  <button
+                    onClick={() => {
+                      openMobileSearch();
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={cn(
+                      "w-full px-4 pt-2 text-lg font-medium rounded-md text-left",
+                      "transition-all duration-200",
+                      "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
+                      "text-white/90 mb-2"
+                    )}
+                  >
+                    {t("search")}
+                  </button>
+                </div>
                 {/* Original Mobile Menu Content */}
                 <nav className="flex flex-col gap-2">
                   {NAV_ITEMS.map((item) => (
@@ -642,49 +712,6 @@ export function Header() {
                     </div>
                   ))}
                 </nav>
-
-                {/* Additional Mobile Actions */}
-                <div className="flex flex-col">
-                  {/* Mobile Language Switcher */}
-                  <div className="flex flex-row gap-2">
-                    {languages
-                      .filter((lang) => lang.value !== locale)
-                      .map((lang) => (
-                        <button
-                          key={lang.value}
-                          onClick={() => {
-                            switchLocale(lang.value);
-                            setIsMobileMenuOpen(false);
-                          }}
-                          className={cn(
-                            "flex-1 flex items-center justify-start gap-2 px-4 py-3 text-lg font-medium rounded-md",
-                            "transition-all duration-200",
-                            "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                            "text-white/90"
-                          )}
-                        >
-                          <span>{lang.flag}</span>
-                          <span>{lang.label}</span>
-                        </button>
-                      ))}
-                  </div>
-
-                  {/* Search Function */}
-                  <button
-                    onClick={() => {
-                      openMobileSearch();
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className={cn(
-                      "w-full px-4 pt-3 text-lg font-medium rounded-md text-left",
-                      "transition-all duration-200",
-                      "hover:text-white hover:bg-white/5 hover:drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]",
-                      "text-white/90 mb-2"
-                    )}
-                  >
-                    {t("search")}
-                  </button>
-                </div>
               </>
             </div>
           </div>

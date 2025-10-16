@@ -1,14 +1,9 @@
 "use client";
 
 import { X } from "lucide-react";
-
-interface HeaderSearchBarProps {
-  searchQuery: string;
-  onSearchChange: (query: string) => void;
-  onClose: () => void;
-  autoFocus?: boolean;
-  //   inputRef?: React.RefObject<HTMLInputElement>;
-}
+import { useTranslations } from "next-intl";
+import { Input } from "../ui/input";
+import { HeaderSearchBarProps } from "./types";
 
 export function HeaderSearchBar({
   searchQuery,
@@ -17,19 +12,25 @@ export function HeaderSearchBar({
   autoFocus = false,
 }: //   inputRef,
 HeaderSearchBarProps) {
+  const t = useTranslations("SearchBar");
+
   return (
     <div
       //   ref={inputRef}
-      className="flex flex-1 items-center bg-gray-100 rounded-md mx-4"
+      className="flex flex-1 items-center rounded-md mx-4"
     >
       <input
         // ref={inputRef}
         type="text"
-        placeholder="Search"
+        placeholder={t("SearchBarPlaceholder")}
         value={searchQuery}
         onChange={(e) => onSearchChange(e.target.value)}
-        className="flex-1 py-2 px-4 text-lg outline-none placeholder-gray-500 bg-transparent text-gray-800 rounded-l-md"
+        className="flex-1 py-2 px-4 text-lg outline-none placeholder-gray-200  bg-transparent text-gray-200 rounded-l-md"
         autoFocus={autoFocus}
+        id="SearchInput"
+        style={{
+          caretColor: "white",
+        }}
       />
       <button
         onClick={onClose}
