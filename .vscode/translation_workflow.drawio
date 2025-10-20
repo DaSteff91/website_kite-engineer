@@ -98,14 +98,22 @@
         <mxCell id="Lqi2coOa9GOtfbnM8wmG-7" value="Send each value to the translation API" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="200" y="482" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Lqi2coOa9GOtfbnM8wmG-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Lqi2coOa9GOtfbnM8wmG-9" target="Lqi2coOa9GOtfbnM8wmG-14">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="Lqi2coOa9GOtfbnM8wmG-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Lqi2coOa9GOtfbnM8wmG-9" target="Lqi2coOa9GOtfbnM8wmG-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="403" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="Lqi2coOa9GOtfbnM8wmG-9" value="Waiting key by key for translation to keep the structure" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="390" y="373" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Lqi2coOa9GOtfbnM8wmG-14" value="Done" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="580" y="363" width="120" height="80" as="geometry" />
+          <mxGeometry x="683" y="363" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Lqi2coOa9GOtfbnM8wmG-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Lqi2coOa9GOtfbnM8wmG-16" target="Lqi2coOa9GOtfbnM8wmG-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Lqi2coOa9GOtfbnM8wmG-16" value="git commit the changes" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="543" y="373" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
