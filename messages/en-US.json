@@ -6,13 +6,13 @@
     "introductionTitle": "Hi, my name is Steff...",
     "introductionText1": "Steff, short for Stefan. Born in 1991 in a small town in southern Germany, Bavaria. And yes, you can call me a proud Bavarian too.",
     "introductionText2": "What can you expect of me? An open-minded character who seeks to challenge himself. A person who follows his mission: To realize the vision of <strong>combining worlds</strong>.",
-    "introductionText3": "But what does that mean? Basically this: It´s about combining the world of being an engineer with the one of being a kitesurf instructor. E voilà, I created my own lifestyle of being a <strong>Kite-Engineer</strong>. A freelancer that offers services:",
+    "introductionText3": "But what does that mean? Basically this: It´s about combining the world of being a kitesurf instructor with the one of being an engineer. E voilà, I created my own lifestyle of being a <strong>Kite-Engineer</strong>. A professional that offers services:",
     "introductionListItem1": "• that are related to the sport of kiteboarding as well as",
-    "introductionListItem2": "• in particular fields of engineering like semiconductor manufacturing or IT.",
+    "introductionListItem2": "• in particular fields of engineering like process engineering or IT.",
     "introductionText4": "And no, I don´t design kites. Nor am I looking forward to integrate electronics into kites. At least not for now - who knows?",
     "introductionText5": "It´s my unique way of dealing with our beloved capitalism: I share what I like doing and you get what you have not yet had before. That makes everyone a winner!",
     "professionalTitle": "Professional Part",
-    "professionalItems": "<li>Launching my freelancer career as Kite-Engineer, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in german, english and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt and Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
+    "professionalItems": "<li>Launching my professional career as Kite-Engineer, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in german, english and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt and Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
     "personalTitle": "Personal Part",
     "personalItems": "<li>\"Be the change in the world you want to see\"</li><li>I am an explorer, an adventurer and a nerd</li><li>Self-study was always more satisfying then school</li><li>Yes, even I´ve once played football. Until I was 14</li><li>Sports and outdoor activities are a big part of my life</li><li>So is Linkin Park - being a fan since I´m 6 years old</li><li>Have you ever listened to Eckhart Tolle?</li><li>Smiling at people on the street helps sharing good vibes</li><li>Philosophy, especially stoicism, was added since I´m 30 - coincidence?</li><li>A book that changed my life? O Alquimista - Paulo Coelho</li><li>Follower of the \"Free and Open Source Idea\"</li><li>Growing as a community means contentment times x</li>"
   },
@@ -131,7 +131,7 @@
     "sectionTitle": "Progress doesn´t grow on trees",
     "sectionDescription": "My kiteboarding related services help you to achieve your goals",
     "freelancer": {
-      "title": "Freelancer",
+      "title": "Professional Services",
       "schoolSupport": {
         "title": "School Support",
         "description": "Whether you need a VDWS-certified instructor, shop assistance, or someone to help behind the bar, I've got you covered. Flexibility is my motto."
@@ -383,7 +383,7 @@
     "home": "Home",
     "kite": "Kite",
     "allKiteServices": "Overview",
-    "freelancer": "Freelancer Services",
+    "freelancer": "Professional Services",
     "schoolSupport": "School Support",
     "travelServices": "Travel Services",
     "consulting": "Sports Consultant",
@@ -1136,7 +1136,7 @@
     },
     "Home": {
       "title": "Home",
-      "description": "Welcome - The Kite-Engineer is a freelancer for kiteboarding and engineering related services. Customizable solutions and flexibility are the key. Any kind of customer and any kind of request is welcome - B2B or B2C."
+      "description": "Welcome - The Kite-Engineer is a professional service provider in the areas of kiteboarding and engineering. Customizable solutions and flexibility are the key. Any kind of customer and any kind of request is welcome - B2B or B2C."
     },
     "Kite": {
       "title": "Kite Services",
@@ -1254,7 +1254,7 @@
         },
         "TimelineManagement": {
           "title": "Timeline Management Services",
-          "description": "Managing your pipelines and commitments can become tricky over time, especially if it needs extra resources you don´t have. Why not hire a freelancer to do this for you."
+          "description": "Managing your pipelines and commitments can become tricky over time, especially if it needs extra resources you don´t have. Why not hire a temporary professional to do this for you."
         },
         "DeviationManagement": {
           "title": "Deviation Management Services",

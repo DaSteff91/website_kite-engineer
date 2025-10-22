@@ -6,15 +6,15 @@
     "introductionTitle": "Hey, mein Name ist Steff...",
     "introductionText1": "Steff, die Kurzform für Stefan. 1991 in einer kleinen Stadt im süddeutschen Bayern geboren. Und ja, man kann mich einen stolzen Bayern nennen.",
     "introductionText2": "Was kannst Du von mir erwarten? Einen aufgeschlossenen Charakter, der sich selbst herausfordern will. Eine Person, die ihre Mission verfolgt: die Vision, zwei Welten zu verbinden: <strong>Combining Worlds...</strong>",
-    "introductionText3": "Aber was bedeutet das? Im Grunde genommen Folgendes: Es geht darum, die Welt eines Kitesurflehrers mit der eines Ingenieurs zu verbinden. E voilà, ich habe meinen eigenen Lifestyle als <strong>Kite-Engineer</strong> geschaffen. Ein Freelancer, der Dienstleistungen anbietet:",
+    "introductionText3": "Aber was bedeutet das? Im Grunde genommen Folgendes: Es geht darum, die Welt eines Kitesurflehrers mit der eines Ingenieurs zu verbinden. E voilà, ich habe meinen eigenen Lifestyle als <strong>Kite-Engineer</strong> geschaffen. Ein Anbieter von Dienstleistungen:",
     "introductionListItem1": "• im Zusammenhang mit der Sportart Kiten, oder",
-    "introductionListItem2": "• in bestimmten Ingenieurbereichen wie der Halbleiterfertigung oder der IT.",
-    "introductionText4": "Und nein, ich design keine Kites. Auch hab ich nicht vor, Elektronik in Kites zu integriere. Zumindest vorerst nicht - wer weiß?",
-    "introductionText5": "Das ist meine eigene Art, mit unserem geliebten Kapitalismus umzugehen: Ich teile, was ich gerne tue, und du bekommst, was du vorher noch nicht hattest. So gewinnen alle!",
+    "introductionListItem2": "• in bestimmten Ingenieurbereichen wie der Prozessoptimierung oder der IT.",
+    "introductionText4": "Und nein, ich designe keine Kites. Auch habe ich nicht vor, Elektronik in Kites zu integrieren. Zumindest vorerst nicht - wer weiß?",
+    "introductionText5": "Das ist meine eigene Art, mit unserem geliebten Kapitalismus umzugehen: Ich teile, was ich gerne tue und Du bekommst, was Du vorher noch nicht hattest. So gewinnen alle!",
     "professionalTitle": "Professioneller Teil",
-    "professionalItems": "<li>Start meiner Freelancerkarriere als Kite-Engineer, 2025</li><li>Zertifikat als \"Python and SQL Programmer\" der International University (IU), 2025</li><li>Kitesurf-Unterricht wird in Deutsch, Englisch und Portugiesisch angeboten, 2024</li><li>VDWS Kitesurf Instructor Lizenz, 2023</li><li>Zertifizierung als 6 Sigma Green Belt und Lean Management, 2022</li><li>Privater Kitesurf-Unterricht, 2021</li><li>Erster Kontakt mit Kiten, 2018</li><li>Berufliche Tätigkeiten als Entwicklungsingenieur, Prozessingenieuer und Laborassistent, 2015 - 2024</li><li>B.Sc. in Mikrosystemtechnik, 2015</li><li>Zum erste Mal die Welten der Mikro- und Nanotechnologie erkundet, 2010</li>",
+    "professionalItems": "<li>Start meiner Selbstständigkeit als Kite-Engineer, 2025</li><li>Zertifikat als \"Python and SQL Programmer\" der International University (IU), 2025</li><li>Kitesurf-Unterricht wird in Deutsch, Englisch und Portugiesisch angeboten, 2024</li><li>VDWS Kitesurf Instructor Lizenz, 2023</li><li>Zertifizierung als 6 Sigma Green Belt und Lean Management, 2022</li><li>Erstmalig Privatunterricht als Kitesurflehrer gegeben, 2021</li><li>Der erster Kontakt mit Kiten, 2018</li><li>Berufliche Tätigkeiten als Entwicklungsingenieur, Prozessingenieuer und Laborassistent, 2015 - 2024</li><li> Abschluss B.Sc. in Mikrosystemtechnik (OTH Regensburg), 2015</li><li>Zum erste Mal die Welten der Mikro- und Nanotechnologie erkundet, 2010</li>",
     "personalTitle": "Persönlicher Teil",
-    "personalItems": "<li>\"Sei selbst die Veränderung, die du in der Welt suchst\"</li><li>Ich bin ein Entdecker, ein Abenteurer und ein Nerd</li><li>Selbstständiges Lernen hat mich immer mehr gereizt als Schule</li><li>Ja,auch ich hab mal Fussball gespielt. Bis ich 14 war</li><li>Sport und sich draußen Bewegen macht einen großen Teil meines Lebens aus</li><li>Genauso wie Linkin Park - bin Fan seit ich 6 Jahre alt bin</li><li>Hast du dir schon mal Eckhart Tolle angehört?</li><li>Leute auf der Straße anzulächeln hilft, gute Vibes zu verbreiten</li><li>Philosophie, im speziellen Stoizismus, kam hinzu, als ich 30 wurde - Zufall?</li><li>Ein Buch, das mein Leben verändert hat? Der Alchemist - Paulo Coelho</li><li>Anhänger der \"Free and Open Source Idea\"</li><li>Als Gemeinschaft zu wachsen bedeutet x-fache Zufriedenheit</li>"
+    "personalItems": "<li>\"Sei selbst die Veränderung, die du in der Welt suchst\"</li><li>Ich bin ein Entdecker, ein Abenteurer und ein Nerd</li><li>Selbstständiges Lernen hat mich immer mehr gereizt als Schule</li><li>Ja,auch ich hab mal Fussball gespielt. Bis ich 14 war</li><li>Sport und sich draußen Bewegen macht einen großen Teil meines Lebens aus</li><li>Genauso wie Linkin Park - bin Fan seit ich 6 Jahre alt bin</li><li>Hast Du dir schon mal Eckhart Tolle angehört?</li><li>Leute auf der Straße anzulächeln hilft, gute Vibes zu verbreiten</li><li>Philosophie, im speziellen Stoizismus, kam hinzu, als ich 30 wurde - Zufall?</li><li>Ein Buch, das mein Leben verändert hat? Der Alchemist - Paulo Coelho</li><li>Anhänger der \"Free and Open Source\" Idee</li><li>Als Gemeinschaft zu wachsen bedeutet x-fache Zufriedenheit</li>"
   },
    "ContactPage": {
     "heroTitle": "Combining Worlds...",
@@ -131,7 +131,7 @@
     "sectionTitle": "Fortschritt wächst nicht auf Bäumen",
     "sectionDescription": "Meine Services rum ums Kiten helfen Dir, Deine Ziele zu erreichen",
     "freelancer": {
-      "title": "Freelancer",
+      "title": "Freelancer Services",
       "schoolSupport": {
         "title": "Schulunterstützung",
         "description": "Ob VDWS-zertifizierter Instructor, Shop-Unterstützer oder Hilfe hinter der Bar – ich bin für Dich da. Flexibilität ist meine Stärke."
