@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - dev
-      - development
 
 jobs:
   detect-changes:
@@ -17,6 +16,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          persist-credentials: true
       
       - name: Setup Node server environment
         uses: actions/setup-node@v6
@@ -36,7 +36,7 @@ jobs:
           echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-          if echo "$CHANGED_FILES" | grep -qE '^messages/en-US.json$'; then
+          if echo "$CHANGED_FILES" | grep -qE 'messages/en-US.json'; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -64,6 +64,8 @@ jobs:
             # File didn´t exist in the previous commit
             echo '{}' > /tmp/en-US.prev.json
           fi
+          echo "This is the content of the /tmp/en-US.prev.json"
+          cat /tmp/en-US.prev.json || echo "/tmp/en-US.prev.json file not found"
 
           # Current content (must exist)
           if [ -f "$FILE_PATH" ]; then
@@ -72,6 +74,8 @@ jobs:
             # IF removed in the commit, treat as empty
             echo '{}' > /tmp/en-US.cur.json
           fi
+          echo "This is the content of the /tmp/en-US.cur.json"
+          cat /tmp/en-US.cur.json || echo "/tmp/en-US.cur.json file not found"
 
           # Node script: reads prev & cur, computes nested diff (added/changed only), writes result
           node <<'NODE'
@@ -169,12 +173,12 @@ jobs:
           console.log('Wrote /tmp/en-US.changed.json (diff object).');
           NODE
 
-                    # export path of diff as step output
-                    echo "diff_path=/tmp/en-US.changed.json" >> $GITHUB_OUTPUT
+          # export path of diff as step output
+          echo "diff_path=/tmp/en-US.changed.json" >> $GITHUB_OUTPUT
 
       - name: Prepare mapping for translation and reconstruction
         if: steps.check_for_changes.outputs.changed == 'true'
-        id: translation_praparation
+        id: translation_preparation
         run: |
           set -euo pipefail
           node <<'JS'
@@ -228,6 +232,8 @@ jobs:
           // Write outputs
           fs.writeFileSync('/tmp/en-US.keys-nested.json', JSON.stringify(nested, null, 2), 'utf8');
           fs.writeFileSync('/tmp/en-US.keys-dot.json', JSON.stringify(flat, null, 2), 'utf8');
+          const content = fs.readFileSync('/tmp/en-US.keys-nested.json','utf8')
+          console.log('This is \'/tmp/en-US.keys-nested.json\' content:\n' + content);
           JS
 
       - name: Translate nested keys (target = de)
@@ -236,8 +242,8 @@ jobs:
           TARGET_LANG: de
           TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
           KEYS_NESTED: /tmp/en-US.keys-nested.json
-          OUTPUT_TRANSLATED: /tmp/en-US.changed.translated.${{ env.TARGET_LANG }}.json
-          OUTPUT_ERRORS: /tmp/en-US.translation-errors.${{ env.TARGET_LANG }}.json
+          OUTPUT_TRANSLATED: /tmp/en-US.changed.translated.de.json
+          OUTPUT_ERRORS: /tmp/en-US.translation-errors.de.json
           API_URL: https://translate.kite-engineer.de/translate
         run: |
           set -euo pipefail
@@ -250,9 +256,10 @@ jobs:
 
             const nestedTemplatePath = process.env.KEYS_NESTED;
             const outTranslatedPath = process.env.OUTPUT_TRANSLATED;
+            console.log("This is the outTranslationPath:", outTranslatedPath);
             const outErrorsPath = process.env.OUTPUT_ERRORS;
             const apiUrl = process.env.API_URL;
-            const apiKey = process.env.TRANSLATE_API_KEY;
+            const apiKey = process.env.TRANSLATE_API_KEY || '';
             const target = process.env.TARGET_LANG;
 
             if (!fs.existsSync(nestedTemplatePath)) {
@@ -261,6 +268,9 @@ jobs:
             }
 
             const nested = JSON.parse(fs.readFileSync(nestedTemplatePath, 'utf8'));
+            const stat = fs.statSync(nestedTemplatePath);
+            console.log(`Loaded nested template: ${nestedTemplatePath} (size=${stat.size}, mtime=${stat.mtime.toISOString()})`);
+            console.log('Nested template (preview):', JSON.stringify(nested, null, 2).slice(0, 2000));
 
             // Helper: build request body for the API
             function buildRequestBody(q) {
@@ -279,31 +289,37 @@ jobs:
 
             // Traverse nested object recursively and translate string leaves in-place.
             async function traverseAndTranslate(obj, prefix = '') {
-              // Iterate keys to keep original order
               for (const key of Object.keys(obj)) {
                 const value = obj[key];
                 const path = prefix ? `${prefix}.${key}` : key;
 
                 if (value && typeof value === 'object' && !Array.isArray(value)) {
-                  // recurse
                   await traverseAndTranslate(value, path);
                   continue;
                 }
 
                 if (typeof value === 'string') {
-                  // Skip empty strings (choose to keep empty translated)
                   if (value.trim() === '') {
                     obj[key] = '';
                     continue;
                   }
 
                   const body = buildRequestBody(value);
+                  console.log("This is the body of the API request:\n" + JSON.stringify(body, null, 2));
+
+                  // create a nonce for this request
+                  const nonce = `${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
+                  console.log(`[${nonce}] request at ${new Date().toISOString()} path=${path}`);
 
                   let resp;
                   try {
                     resp = await fetch(apiUrl, {
                       method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
+                      headers: {
+                        'Content-Type': 'application/json',
+                        'X-Debug-Nonce': nonce,
+                        'Cache-Control': 'no-cache'
+                      },
                       body: JSON.stringify(body),
                     });
                   } catch (err) {
@@ -313,12 +329,21 @@ jobs:
                       requestBody: body,
                       error: { message: err.message }
                     });
+                    console.log(`[${nonce}] fetch failed: ${err.message}`);
                     continue;
                   }
 
                   let respText = '';
                   try {
+                    // log response status & headers
+                    console.log(`[${nonce}] response at ${new Date().toISOString()} status=${resp.status} statusText=${resp.statusText}`);
+                    for (const [k, v] of resp.headers.entries()) {
+                      console.log(`[${nonce}] resp-header ${k}: ${v}`);
+                    }
+
                     respText = await resp.text();
+                    console.log(`API Response raw: ${respText}`);
+
                     if (!resp.ok) {
                       failCount++;
                       errors.push({
@@ -334,6 +359,7 @@ jobs:
                     let parsed;
                     try {
                       parsed = JSON.parse(respText);
+                      console.log(`[${nonce}] API Response parsed: ${JSON.stringify(parsed)}`);
                     } catch (e) {
                       failCount++;
                       errors.push({
@@ -348,6 +374,7 @@ jobs:
                     }
 
                     const translatedText = parsed && parsed.translatedText;
+                    console.log(`[${nonce}] Extracted translatedText: ${JSON.stringify(translatedText)}`);
                     if (typeof translatedText !== 'string') {
                       failCount++;
                       errors.push({
@@ -371,19 +398,37 @@ jobs:
                       requestBody: body,
                       error: { message: e.message }
                     });
+                    console.log(`[${nonce}] unexpected error: ${e.message}`);
                     continue;
                   }
-                } // end if string
-                // non-strings (numbers, booleans, null, arrays) are left unchanged
+                }
+                // non-strings are left unchanged
               }
             }
 
             // run traversal & translation
             await traverseAndTranslate(nested, '');
 
-            // Write outputs
-            fs.writeFileSync(outTranslatedPath, JSON.stringify(nested, null, 2), 'utf8');
+            // Write outputs (atomic-ish: write tmp then rename)
+            const tmpOut = outTranslatedPath + '.tmp';
+            fs.writeFileSync(tmpOut, JSON.stringify(nested, null, 2), 'utf8');
+
+            // validate by parsing back
+            try {
+              const parsedCheck = JSON.parse(fs.readFileSync(tmpOut, 'utf8'));
+              // move into place
+              fs.renameSync(tmpOut, outTranslatedPath);
+            } catch (e) {
+              errors.push({ note: 'validation_failed', message: e.message });
+              // keep tmp file for debugging
+              console.error('Validation of output JSON failed:', e.message);
+            }
+
             fs.writeFileSync(outErrorsPath, JSON.stringify({ successCount, failCount, errors }, null, 2), 'utf8');
+
+            const outStat = fs.statSync(outTranslatedPath);
+            console.log(`Wrote translated file: ${outTranslatedPath} (size=${outStat.size}, mtime=${outStat.mtime.toISOString()})`);
+            console.log('Translated file (preview):', fs.readFileSync(outTranslatedPath,'utf8').slice(0,2000));
 
             console.log(`Translation run complete for target=${target}: success=${successCount}, fail=${failCount}`);
             if (failCount > 0) {
@@ -400,8 +445,8 @@ jobs:
           TARGET_LANG: pt-BR
           TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
           KEYS_NESTED: /tmp/en-US.keys-nested.json
-          OUTPUT_TRANSLATED: /tmp/en-US.changed.translated.${{ env.TARGET_LANG }}.json
-          OUTPUT_ERRORS: /tmp/en-US.translation-errors.${{ env.TARGET_LANG }}.json
+          OUTPUT_TRANSLATED: /tmp/en-US.changed.translated.pt-BR.json
+          OUTPUT_ERRORS: /tmp/en-US.translation-errors.pt-BR.json
           API_URL: https://translate.kite-engineer.de/translate
         run: |
           set -euo pipefail
@@ -414,9 +459,10 @@ jobs:
 
             const nestedTemplatePath = process.env.KEYS_NESTED;
             const outTranslatedPath = process.env.OUTPUT_TRANSLATED;
+            console.log("This is the outTranslationPath:", outTranslatedPath);
             const outErrorsPath = process.env.OUTPUT_ERRORS;
             const apiUrl = process.env.API_URL;
-            const apiKey = process.env.TRANSLATE_API_KEY || '';
+            const apiKey = process.env.TRANSLATE_API_KEY;
             const target = process.env.TARGET_LANG;
 
             if (!fs.existsSync(nestedTemplatePath)) {
@@ -425,6 +471,9 @@ jobs:
             }
 
             const nested = JSON.parse(fs.readFileSync(nestedTemplatePath, 'utf8'));
+            const stat = fs.statSync(nestedTemplatePath);
+            console.log(`Loaded nested template: ${nestedTemplatePath} (size=${stat.size}, mtime=${stat.mtime.toISOString()})`);
+            console.log('Nested template (preview):', JSON.stringify(nested, null, 2).slice(0, 2000));
 
             // Helper: build request body for the API
             function buildRequestBody(q) {
@@ -462,12 +511,21 @@ jobs:
                   }
 
                   const body = buildRequestBody(value);
+                  console.log("This is the body of the API request:\n" + JSON.stringify(body, null, 2));
+
+                  // create a nonce for this request
+                  const nonce = `${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
+                  console.log(`[${nonce}] request at ${new Date().toISOString()} path=${path}`);
 
                   let resp;
                   try {
                     resp = await fetch(apiUrl, {
                       method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
+                      headers: {
+                        'Content-Type': 'application/json',
+                        'X-Debug-Nonce': nonce,
+                        'Cache-Control': 'no-cache'
+                      },
                       body: JSON.stringify(body),
                     });
                   } catch (err) {
@@ -477,12 +535,21 @@ jobs:
                       requestBody: body,
                       error: { message: err.message }
                     });
+                    console.log(`[${nonce}] fetch failed: ${err.message}`);
                     continue;
                   }
 
                   let respText = '';
                   try {
+                    // log response status & headers
+                    console.log(`[${nonce}] response at ${new Date().toISOString()} status=${resp.status} statusText=${resp.statusText}`);
+                    for (const [k, v] of resp.headers.entries()) {
+                      console.log(`[${nonce}] resp-header ${k}: ${v}`);
+                    }
+
                     respText = await resp.text();
+                    console.log(`API Response raw: ${respText}`);
+
                     if (!resp.ok) {
                       failCount++;
                       errors.push({
@@ -498,6 +565,7 @@ jobs:
                     let parsed;
                     try {
                       parsed = JSON.parse(respText);
+                      console.log(`[${nonce}] API Response parsed: ${JSON.stringify(parsed)}`);
                     } catch (e) {
                       failCount++;
                       errors.push({
@@ -512,6 +580,7 @@ jobs:
                     }
 
                     const translatedText = parsed && parsed.translatedText;
+                    console.log(`[${nonce}] Extracted translatedText: ${JSON.stringify(translatedText)}`);
                     if (typeof translatedText !== 'string') {
                       failCount++;
                       errors.push({
@@ -535,6 +604,7 @@ jobs:
                       requestBody: body,
                       error: { message: e.message }
                     });
+                    console.log(`[${nonce}] unexpected error: ${e.message}`);
                     continue;
                   }
                 } // end if string
@@ -545,9 +615,25 @@ jobs:
             // run traversal & translation
             await traverseAndTranslate(nested, '');
 
-            // Write outputs
-            fs.writeFileSync(outTranslatedPath, JSON.stringify(nested, null, 2), 'utf8');
+            // Write outputs (atomic-ish: write tmp then rename)
+            const tmpOut = outTranslatedPath + '.tmp';
+            fs.writeFileSync(tmpOut, JSON.stringify(nested, null, 2), 'utf8');
+
+            // validate by parsing back
+            try {
+              const parsedCheck = JSON.parse(fs.readFileSync(tmpOut, 'utf8'));
+              // move into place
+              fs.renameSync(tmpOut, outTranslatedPath);
+            } catch (e) {
+              errors.push({ note: 'validation_failed', message: e.message });
+              // keep tmp file for debugging
+              console.error('Validation of output JSON failed:', e.message);
+            }
             fs.writeFileSync(outErrorsPath, JSON.stringify({ successCount, failCount, errors }, null, 2), 'utf8');
+
+            const outStat = fs.statSync(outTranslatedPath);
+            console.log(`Wrote translated file: ${outTranslatedPath} (size=${outStat.size}, mtime=${outStat.mtime.toISOString()})`);
+            console.log('Translated file (preview):', fs.readFileSync(outTranslatedPath,'utf8').slice(0,2000));
 
             console.log(`Translation run complete for target=${target}: success=${successCount}, fail=${failCount}`);
             if (failCount > 0) {
@@ -563,9 +649,22 @@ jobs:
         run: |
           set -euo pipefail
 
+          if [ -f /tmp/en-US.changed.translated.de.json ]; then
+            echo "Translated (incoming):"
+            head -n 50 /tmp/en-US.changed.translated.de.json
+          else
+            echo "No translated file at /tmp/en-US.changed.translated.de.json"
+          fi
+
+          if [ -f messages/de-DE.json ]; then
+            echo "Repo target BEFORE merge:"
+            head -n 50 messages/de-DE.json
+          else
+            echo "Repo target messages/de-DE.json does not exist yet."
+          fi
+
           node <<'JS'
           const fs = require('fs');
-          const path = require('path');
 
           const translatedPath = '/tmp/en-US.changed.translated.de.json';
           const targetPath = 'messages/de-DE.json';
@@ -575,11 +674,21 @@ jobs:
             process.exit(0);
           }
 
-          // Load files
           const translated = JSON.parse(fs.readFileSync(translatedPath, 'utf8'));
-          const target = fs.existsSync(targetPath) ? JSON.parse(fs.readFileSync(targetPath, 'utf8')) : {};
 
-          // Recursive merge helper
+          // Defensive load of target file: only parse if file exists and is non-empty
+          let target = {};
+          if (fs.existsSync(targetPath) && fs.statSync(targetPath).size > 0) {
+            try {
+              target = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+            } catch (e) {
+              console.warn(`Warning: failed to parse ${targetPath}, continuing with empty object: ${e.message}`);
+              target = {};
+            }
+          } else {
+            console.log(`${targetPath} missing or empty — starting from empty object`);
+          }
+
           function mergeNested(targetObj, sourceObj) {
             for (const key of Object.keys(sourceObj)) {
               const srcVal = sourceObj[key];
@@ -591,7 +700,6 @@ jobs:
                 }
                 mergeNested(targetObj[key], srcVal);
               } else {
-                // Leaf value → overwrite
                 targetObj[key] = srcVal;
               }
             }
@@ -599,18 +707,63 @@ jobs:
 
           mergeNested(target, translated);
 
+          // Ensure target directory exists
+          const dir = targetPath.replace(/\/[^\/]+$/, '');
+          if (dir && !fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
           fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
           console.log(`Merged DE translations into ${targetPath}`);
           JS
+
+          git add messages/de-DE.json
+
+          # show staged diff if any
+          if git diff --cached --quiet -- messages/de-DE.json; then
+            echo "No staged changes for messages/de-DE.json"
+          else
+            echo "Staged diff for messages/de-DE.json:"
+            git --no-pager diff --cached -- messages/de-DE.json || true
+          fi
+
+          # commit if there are staged changes
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            SOURCE_SHA="${{ github.event.after }}"
+            git config user.name "GitHub Actions Bot"
+            git config user.email "actions@github.com"
+            git commit -m "[skip ci] auto translation (from commit ${SOURCE_SHA})"
+            echo "Committed automated translation changes."
+            # show what was committed
+            echo "Files in last commit:"
+            git show --name-only --pretty="" HEAD || true
+            echo "Preview of committed messages/de-DE.json:"
+            git show HEAD:messages/de-DE.json | head -n 50 || true
+            echo "Pushing to origin dev..."
+            git push origin dev && echo "push ok" || echo "push failed"
+          fi
 
       - name: Merge PT-BR translations into existing pt-BR.json
         if: steps.check_for_changes.outputs.changed == 'true'
         run: |
           set -euo pipefail
 
+          if [ -f /tmp/en-US.changed.translated.pt-BR.json ]; then
+            echo "Translated (incoming):"
+            head -n 50 /tmp/en-US.changed.translated.pt-BR.json
+          else
+            echo "No translated file at /tmp/en-US.changed.translated.pt-BR.json"
+          fi
+
+          if [ -f messages/pt-BR.json ]; then
+            echo "Repo target BEFORE merge:"
+            head -n 50 messages/pt-BR.json
+          else
+            echo "Repo target messages/pt-BR.json does not exist yet."
+          fi
+
           node <<'JS'
           const fs = require('fs');
-          const path = require('path');
 
           const translatedPath = '/tmp/en-US.changed.translated.pt-BR.json';
           const targetPath = 'messages/pt-BR.json';
@@ -622,7 +775,19 @@ jobs:
 
           // Load files
           const translated = JSON.parse(fs.readFileSync(translatedPath, 'utf8'));
-          const target = fs.existsSync(targetPath) ? JSON.parse(fs.readFileSync(targetPath, 'utf8')) : {};
+
+          // Defensive load of target file: only parse if file exists and is non-empty
+          let target = {};
+          if (fs.existsSync(targetPath) && fs.statSync(targetPath).size > 0) {
+            try {
+              target = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
+            } catch (e) {
+              console.warn(`Warning: failed to parse ${targetPath}, continuing with empty object: ${e.message}`);
+              target = {};
+            }
+          } else {
+            console.log(`${targetPath} missing or empty — starting from empty object`);
+          }
 
           // Recursive merge helper
           function mergeNested(targetObj, sourceObj) {
@@ -644,9 +809,42 @@ jobs:
 
           mergeNested(target, translated);
 
+          // Ensure target directory exists
+          const dir = targetPath.replace(/\/[^\/]+$/, '');
+          if (dir && !fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
+
           fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
           console.log(`Merged PT-BR translations into ${targetPath}`);
           JS
+
+          git add messages/pt-BR.json
+
+          # show staged diff if any
+          if git diff --cached --quiet -- messages/pt-BR.json; then
+            echo "No staged changes for messages/pt-BR.json"
+          else
+            echo "Staged diff for messages/pt-BR.json:"
+            git --no-pager diff --cached -- messages/pt-BR.json || true
+          fi
+
+          # commit if there are staged changes
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            SOURCE_SHA="${{ github.event.after }}"
+            git config user.name "GitHub Actions Bot"
+            git config user.email "actions@github.com"
+            git commit -m "[skip ci] auto translation (from commit ${SOURCE_SHA})"
+            echo "Committed automated translation changes."
+            # show what was committed
+            echo "Files in last commit:"
+            git show --name-only --pretty="" HEAD || true
+            echo "Preview of committed messages/pt-BR.json:"
+            git show HEAD:messages/pt-BR.json | head -n 50 || true
+            echo "Pushing to origin dev..."
+            git push origin dev && echo "push ok" || echo "push failed"
+          fi
 
       - name: Commit and push merged translations to dev
         if: steps.check_for_changes.outputs.changed == 'true'
