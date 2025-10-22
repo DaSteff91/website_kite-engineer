@@ -3,7 +3,7 @@ import { Settings } from 'meilisearch';
 
 export function createMeilisearchClient(): MeiliSearch {
   const host = process.env.MEILI_HOST || 'http://localhost:7700';
-  const apiKey = process.env.MEILI_MASTER_KEY || 'your_secure_master_key_here';
+  const apiKey = process.env.MEILI_MASTER_KEY;
   
   if (!apiKey) {
     throw new Error('MEILI_MASTER_KEY environment variable is required');

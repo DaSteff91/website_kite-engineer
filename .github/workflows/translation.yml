@@ -1,0 +1,680 @@
+name: Run librestranslate when new content is added to en-US.json
+on:
+  push:
+    branches:
+      - dev
+      - development
+
+jobs:
+  detect-changes:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo (full history)
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node server environment
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Check for changes in en-US.json
+        id: check_for_changes
+        run: |
+          echo "Comparing commits: before=${{ github.event.before }} after=${{ github.sha }}"
+          CHANGED_FILES=$(git diff --name-only "${{ github.event.before }}".."${{ github.sha }}" --)
+          echo "Files with changes in this push:"
+          echo "$CHANGED_FILES"
+
+          # export outputs in the modern recommended way
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          if echo "$CHANGED_FILES" | grep -qE '^messages/en-US.json$'; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Exit early on not changed
+        if: steps.check_for_changes.outputs.changed != 'true'
+        run: |
+          echo "No changes in messages/en-US.json in the latest push. No action necessary"
+
+      - name: Create the diff between the latest and previous push in en-US.json
+        if: steps.check_for_changes.outputs.changed == 'true'
+        id: compute_diff
+        run: |
+          set -euo pipefail
+
+          PREV_COMMIT="${{ github.event.before }}"
+          CUR_COMMIT="${{ github.sha }}"
+          FILE_PATH="messages/en-US.json"
+
+          # Get previous content and check availability of the file
+          if git cat-file -e "${PREV_COMMIT}:${FILE_PATH}" 2>/dev/null; then
+            git show "${PREV_COMMIT}:${FILE_PATH}" > /tmp/en-US.prev.json
+          else
+            # File didn´t exist in the previous commit
+            echo '{}' > /tmp/en-US.prev.json
+          fi
+
+          # Current content (must exist)
+          if [ -f "$FILE_PATH" ]; then
+            cp "$FILE_PATH" /tmp/en-US.cur.json
+          else
+            # IF removed in the commit, treat as empty
+            echo '{}' > /tmp/en-US.cur.json
+          fi
+
+          # Node script: reads prev & cur, computes nested diff (added/changed only), writes result
+          node <<'NODE'
+          const fs = require('fs');
+
+          function readJson(path) {
+            try {
+              return JSON.parse(fs.readFileSync(path, 'utf8'));
+            } catch (e) {
+              console.error(`Failed to parse ${path}:`, e.message);
+              process.exit(2);
+            }
+          }
+
+          // deepEqual that handles primitives, arrays, objects (order matters for arrays and object keys compared by keys)
+          function deepEqual(a, b) {
+            if (a === b) return true;
+
+            // handle NaN
+            if (typeof a === 'number' && typeof b === 'number' && isNaN(a) && isNaN(b)) return true;
+
+            if (a == null || b == null) return a === b; // covers null/undefined
+
+            if (typeof a !== typeof b) return false;
+
+            if (typeof a !== 'object') return a === b;
+
+            // Arrays
+            if (Array.isArray(a) || Array.isArray(b)) {
+              if (!Array.isArray(a) || !Array.isArray(b)) return false;
+              if (a.length !== b.length) return false;
+              for (let i = 0; i < a.length; i++) {
+                if (!deepEqual(a[i], b[i])) return false;
+              }
+              return true;
+            }
+
+            // Plain objects
+            const aKeys = Object.keys(a);
+            const bKeys = Object.keys(b);
+            if (aKeys.length !== bKeys.length) return false;
+            // ensure same keys
+            for (const k of aKeys) {
+              if (!Object.prototype.hasOwnProperty.call(b, k)) return false;
+              if (!deepEqual(a[k], b[k])) return false;
+            }
+            return true;
+          }
+
+          // computeDiff: only include keys present in `cur` (so deletions are ignored)
+          // returns `undefined` if no change at this node, otherwise returns an object/primitive representing the new value
+          function computeDiff(prev, cur) {
+            // If either side is a primitive (or null), compare directly
+            if (typeof prev !== 'object' || prev === null || typeof cur !== 'object' || cur === null) {
+              if (deepEqual(prev, cur)) return undefined;
+              return cur;
+            }
+
+            const keys = Object.keys(cur); // only iterate current keys -> deletions ignored
+            const out = {};
+            let any = false;
+
+            for (const k of keys) {
+              if (!(k in prev)) {
+                // added key (or previously missing)
+                out[k] = cur[k];
+                any = true;
+                continue;
+              }
+
+              const subPrev = prev[k];
+              const subCur = cur[k];
+
+              if (typeof subPrev === 'object' && subPrev !== null && typeof subCur === 'object' && subCur !== null) {
+                const subDiff = computeDiff(subPrev, subCur);
+                if (subDiff !== undefined) {
+                  out[k] = subDiff;
+                  any = true;
+                }
+              } else if (!deepEqual(subPrev, subCur)) {
+                out[k] = subCur;
+                any = true;
+              }
+            }
+
+            return any ? out : undefined;
+          }
+
+          const prev = readJson('/tmp/en-US.prev.json');
+          const cur = readJson('/tmp/en-US.cur.json');
+
+          const diff = computeDiff(prev, cur) || {};
+
+          fs.writeFileSync('/tmp/en-US.changed.json', JSON.stringify(diff, null, 2), 'utf8');
+          console.log('Wrote /tmp/en-US.changed.json (diff object).');
+          NODE
+
+                    # export path of diff as step output
+                    echo "diff_path=/tmp/en-US.changed.json" >> $GITHUB_OUTPUT
+
+      - name: Prepare mapping for translation and reconstruction
+        if: steps.check_for_changes.outputs.changed == 'true'
+        id: translation_praparation
+        run: |
+          set -euo pipefail
+          node <<'JS'
+
+          const fs = require('fs');
+
+          // Read the path to changed.json from GitHub output or env variable
+          const diffPath = process.env.DIFF_PATH || '/tmp/en-US.changed.json';
+
+          if (!fs.existsSync(diffPath)) {
+            console.error(`Changed file not found at ${diffPath}`);
+            process.exit(1);
+          }
+
+          // Read and parse changed.json
+          let changedJson;
+          try {
+            changedJson = JSON.parse(fs.readFileSync(diffPath, 'utf8'));
+          } catch (e) {
+            console.error(`Failed to parse ${diffPath}:`, e.message);
+            process.exit(2);
+          }
+
+          /**
+          * Recursively traverses a nested object to extract leaf string values.
+          * Returns both nested structure and flat list with dot-notation paths.
+          * @param {Object} obj - JSON object to traverse
+          * @param {string} prefix - dot-notation prefix
+          * @param {Object} nestedResult - accumulates nested structure
+          * @param {Array} flatResult - accumulates flat array
+          */
+          function extractLeafStringsDual(obj, prefix = '', nestedResult = {}, flatResult = []) {
+            for (const key of Object.keys(obj)) {
+              const value = obj[key];
+              const fullPath = prefix ? `${prefix}.${key}` : key;
+
+              if (value && typeof value === 'object' && !Array.isArray(value)) {
+                nestedResult[key] = {};
+                extractLeafStringsDual(value, fullPath, nestedResult[key], flatResult);
+              } else if (typeof value === 'string') {
+                nestedResult[key] = value;
+                flatResult.push({ path: fullPath, value });
+              }
+            }
+            return { nested: nestedResult, flat: flatResult };
+          }
+
+          // Run extraction
+          const { nested, flat } = extractLeafStringsDual(changedJson);
+
+          // Write outputs
+          fs.writeFileSync('/tmp/en-US.keys-nested.json', JSON.stringify(nested, null, 2), 'utf8');
+          fs.writeFileSync('/tmp/en-US.keys-dot.json', JSON.stringify(flat, null, 2), 'utf8');
+          JS
+
+      - name: Translate nested keys (target = de)
+        if: steps.check_for_changes.outputs.changed == 'true'
+        env:
+          TARGET_LANG: de
+          TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
+          KEYS_NESTED: /tmp/en-US.keys-nested.json
+          OUTPUT_TRANSLATED: /tmp/en-US.changed.translated.${{ env.TARGET_LANG }}.json
+          OUTPUT_ERRORS: /tmp/en-US.translation-errors.${{ env.TARGET_LANG }}.json
+          API_URL: https://translate.kite-engineer.de/translate
+        run: |
+          set -euo pipefail
+
+          node -v || (echo "Node not found" && exit 2)
+
+          node <<'JS'
+          (async () => {
+            const fs = require('fs');
+
+            const nestedTemplatePath = process.env.KEYS_NESTED;
+            const outTranslatedPath = process.env.OUTPUT_TRANSLATED;
+            const outErrorsPath = process.env.OUTPUT_ERRORS;
+            const apiUrl = process.env.API_URL;
+            const apiKey = process.env.TRANSLATE_API_KEY;
+            const target = process.env.TARGET_LANG;
+
+            if (!fs.existsSync(nestedTemplatePath)) {
+              console.error(`Nested template missing: ${nestedTemplatePath}`);
+              process.exit(1);
+            }
+
+            const nested = JSON.parse(fs.readFileSync(nestedTemplatePath, 'utf8'));
+
+            // Helper: build request body for the API
+            function buildRequestBody(q) {
+              return {
+                q,
+                source: "auto",
+                target,
+                format: "text",
+                api_key: apiKey
+              };
+            }
+
+            const errors = [];
+            let successCount = 0;
+            let failCount = 0;
+
+            // Traverse nested object recursively and translate string leaves in-place.
+            async function traverseAndTranslate(obj, prefix = '') {
+              // Iterate keys to keep original order
+              for (const key of Object.keys(obj)) {
+                const value = obj[key];
+                const path = prefix ? `${prefix}.${key}` : key;
+
+                if (value && typeof value === 'object' && !Array.isArray(value)) {
+                  // recurse
+                  await traverseAndTranslate(value, path);
+                  continue;
+                }
+
+                if (typeof value === 'string') {
+                  // Skip empty strings (choose to keep empty translated)
+                  if (value.trim() === '') {
+                    obj[key] = '';
+                    continue;
+                  }
+
+                  const body = buildRequestBody(value);
+
+                  let resp;
+                  try {
+                    resp = await fetch(apiUrl, {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(body),
+                    });
+                  } catch (err) {
+                    failCount++;
+                    errors.push({
+                      path, value, target,
+                      requestBody: body,
+                      error: { message: err.message }
+                    });
+                    continue;
+                  }
+
+                  let respText = '';
+                  try {
+                    respText = await resp.text();
+                    if (!resp.ok) {
+                      failCount++;
+                      errors.push({
+                        path, value, target,
+                        requestBody: body,
+                        status: resp.status,
+                        statusText: resp.statusText,
+                        responseText: respText
+                      });
+                      continue;
+                    }
+
+                    let parsed;
+                    try {
+                      parsed = JSON.parse(respText);
+                    } catch (e) {
+                      failCount++;
+                      errors.push({
+                        path, value, target,
+                        requestBody: body,
+                        status: resp.status,
+                        statusText: resp.statusText,
+                        responseText: respText,
+                        parseError: e.message
+                      });
+                      continue;
+                    }
+
+                    const translatedText = parsed && parsed.translatedText;
+                    if (typeof translatedText !== 'string') {
+                      failCount++;
+                      errors.push({
+                        path, value, target,
+                        requestBody: body,
+                        status: resp.status,
+                        statusText: resp.statusText,
+                        responseJson: parsed,
+                        note: "translatedText missing or not a string"
+                      });
+                      continue;
+                    }
+
+                    // success: replace value in-place
+                    obj[key] = translatedText;
+                    successCount++;
+                  } catch (e) {
+                    failCount++;
+                    errors.push({
+                      path, value, target,
+                      requestBody: body,
+                      error: { message: e.message }
+                    });
+                    continue;
+                  }
+                } // end if string
+                // non-strings (numbers, booleans, null, arrays) are left unchanged
+              }
+            }
+
+            // run traversal & translation
+            await traverseAndTranslate(nested, '');
+
+            // Write outputs
+            fs.writeFileSync(outTranslatedPath, JSON.stringify(nested, null, 2), 'utf8');
+            fs.writeFileSync(outErrorsPath, JSON.stringify({ successCount, failCount, errors }, null, 2), 'utf8');
+
+            console.log(`Translation run complete for target=${target}: success=${successCount}, fail=${failCount}`);
+            if (failCount > 0) {
+              console.log(`See error summary: ${outErrorsPath}`);
+            } else {
+              console.log(`All keys translated successfully. Output: ${outTranslatedPath}`);
+            }
+          })();
+          JS
+
+      - name: Translate nested keys (target = pt-BR)
+        if: steps.check_for_changes.outputs.changed == 'true'
+        env:
+          TARGET_LANG: pt-BR
+          TRANSLATE_API_KEY: ${{ secrets.TRANSLATE_API_KEY }}
+          KEYS_NESTED: /tmp/en-US.keys-nested.json
+          OUTPUT_TRANSLATED: /tmp/en-US.changed.translated.${{ env.TARGET_LANG }}.json
+          OUTPUT_ERRORS: /tmp/en-US.translation-errors.${{ env.TARGET_LANG }}.json
+          API_URL: https://translate.kite-engineer.de/translate
+        run: |
+          set -euo pipefail
+
+          node -v || (echo "Node not found" && exit 2)
+
+          node <<'JS'
+          (async () => {
+            const fs = require('fs');
+
+            const nestedTemplatePath = process.env.KEYS_NESTED;
+            const outTranslatedPath = process.env.OUTPUT_TRANSLATED;
+            const outErrorsPath = process.env.OUTPUT_ERRORS;
+            const apiUrl = process.env.API_URL;
+            const apiKey = process.env.TRANSLATE_API_KEY || '';
+            const target = process.env.TARGET_LANG;
+
+            if (!fs.existsSync(nestedTemplatePath)) {
+              console.error(`Nested template missing: ${nestedTemplatePath}`);
+              process.exit(1);
+            }
+
+            const nested = JSON.parse(fs.readFileSync(nestedTemplatePath, 'utf8'));
+
+            // Helper: build request body for the API
+            function buildRequestBody(q) {
+              return {
+                q,
+                source: "auto",
+                target,
+                format: "text",
+                api_key: apiKey
+              };
+            }
+
+            const errors = [];
+            let successCount = 0;
+            let failCount = 0;
+
+            // Traverse nested object recursively and translate string leaves in-place.
+            async function traverseAndTranslate(obj, prefix = '') {
+              // Iterate keys to keep original order
+              for (const key of Object.keys(obj)) {
+                const value = obj[key];
+                const path = prefix ? `${prefix}.${key}` : key;
+
+                if (value && typeof value === 'object' && !Array.isArray(value)) {
+                  // recurse
+                  await traverseAndTranslate(value, path);
+                  continue;
+                }
+
+                if (typeof value === 'string') {
+                  // Skip empty strings (choose to keep empty translated)
+                  if (value.trim() === '') {
+                    obj[key] = '';
+                    continue;
+                  }
+
+                  const body = buildRequestBody(value);
+
+                  let resp;
+                  try {
+                    resp = await fetch(apiUrl, {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(body),
+                    });
+                  } catch (err) {
+                    failCount++;
+                    errors.push({
+                      path, value, target,
+                      requestBody: body,
+                      error: { message: err.message }
+                    });
+                    continue;
+                  }
+
+                  let respText = '';
+                  try {
+                    respText = await resp.text();
+                    if (!resp.ok) {
+                      failCount++;
+                      errors.push({
+                        path, value, target,
+                        requestBody: body,
+                        status: resp.status,
+                        statusText: resp.statusText,
+                        responseText: respText
+                      });
+                      continue;
+                    }
+
+                    let parsed;
+                    try {
+                      parsed = JSON.parse(respText);
+                    } catch (e) {
+                      failCount++;
+                      errors.push({
+                        path, value, target,
+                        requestBody: body,
+                        status: resp.status,
+                        statusText: resp.statusText,
+                        responseText: respText,
+                        parseError: e.message
+                      });
+                      continue;
+                    }
+
+                    const translatedText = parsed && parsed.translatedText;
+                    if (typeof translatedText !== 'string') {
+                      failCount++;
+                      errors.push({
+                        path, value, target,
+                        requestBody: body,
+                        status: resp.status,
+                        statusText: resp.statusText,
+                        responseJson: parsed,
+                        note: "translatedText missing or not a string"
+                      });
+                      continue;
+                    }
+
+                    // success: replace value in-place
+                    obj[key] = translatedText;
+                    successCount++;
+                  } catch (e) {
+                    failCount++;
+                    errors.push({
+                      path, value, target,
+                      requestBody: body,
+                      error: { message: e.message }
+                    });
+                    continue;
+                  }
+                } // end if string
+                // non-strings (numbers, booleans, null, arrays) are left unchanged
+              }
+            }
+
+            // run traversal & translation
+            await traverseAndTranslate(nested, '');
+
+            // Write outputs
+            fs.writeFileSync(outTranslatedPath, JSON.stringify(nested, null, 2), 'utf8');
+            fs.writeFileSync(outErrorsPath, JSON.stringify({ successCount, failCount, errors }, null, 2), 'utf8');
+
+            console.log(`Translation run complete for target=${target}: success=${successCount}, fail=${failCount}`);
+            if (failCount > 0) {
+              console.log(`See error summary: ${outErrorsPath}`);
+            } else {
+              console.log(`All keys translated successfully. Output: ${outTranslatedPath}`);
+            }
+          })();
+          JS
+
+      - name: Merge DE translations into existing de-DE.json
+        if: steps.check_for_changes.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+
+          node <<'JS'
+          const fs = require('fs');
+          const path = require('path');
+
+          const translatedPath = '/tmp/en-US.changed.translated.de.json';
+          const targetPath = 'messages/de-DE.json';
+
+          if (!fs.existsSync(translatedPath)) {
+            console.log(`No translated DE file found at ${translatedPath}, skipping.`);
+            process.exit(0);
+          }
+
+          // Load files
+          const translated = JSON.parse(fs.readFileSync(translatedPath, 'utf8'));
+          const target = fs.existsSync(targetPath) ? JSON.parse(fs.readFileSync(targetPath, 'utf8')) : {};
+
+          // Recursive merge helper
+          function mergeNested(targetObj, sourceObj) {
+            for (const key of Object.keys(sourceObj)) {
+              const srcVal = sourceObj[key];
+              const tgtVal = targetObj[key];
+
+              if (srcVal && typeof srcVal === 'object' && !Array.isArray(srcVal)) {
+                if (!tgtVal || typeof tgtVal !== 'object') {
+                  targetObj[key] = {};
+                }
+                mergeNested(targetObj[key], srcVal);
+              } else {
+                // Leaf value → overwrite
+                targetObj[key] = srcVal;
+              }
+            }
+          }
+
+          mergeNested(target, translated);
+
+          fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
+          console.log(`Merged DE translations into ${targetPath}`);
+          JS
+
+      - name: Merge PT-BR translations into existing pt-BR.json
+        if: steps.check_for_changes.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+
+          node <<'JS'
+          const fs = require('fs');
+          const path = require('path');
+
+          const translatedPath = '/tmp/en-US.changed.translated.pt-BR.json';
+          const targetPath = 'messages/pt-BR.json';
+
+          if (!fs.existsSync(translatedPath)) {
+            console.log(`No translated PT-BR file found at ${translatedPath}, skipping.`);
+            process.exit(0);
+          }
+
+          // Load files
+          const translated = JSON.parse(fs.readFileSync(translatedPath, 'utf8'));
+          const target = fs.existsSync(targetPath) ? JSON.parse(fs.readFileSync(targetPath, 'utf8')) : {};
+
+          // Recursive merge helper
+          function mergeNested(targetObj, sourceObj) {
+            for (const key of Object.keys(sourceObj)) {
+              const srcVal = sourceObj[key];
+              const tgtVal = targetObj[key];
+
+              if (srcVal && typeof srcVal === 'object' && !Array.isArray(srcVal)) {
+                if (!tgtVal || typeof tgtVal !== 'object') {
+                  targetObj[key] = {};
+                }
+                mergeNested(targetObj[key], srcVal);
+              } else {
+                // Leaf value → overwrite
+                targetObj[key] = srcVal;
+              }
+            }
+          }
+
+          mergeNested(target, translated);
+
+          fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
+          console.log(`Merged PT-BR translations into ${targetPath}`);
+          JS
+
+      - name: Commit and push merged translations to dev
+        if: steps.check_for_changes.outputs.changed == 'true'
+        env:
+          GIT_USER_NAME: "GitHub Actions Bot"
+          GIT_USER_EMAIL: "actions@github.com"
+          TARGET_BRANCH: dev
+        run: |
+          set -euo pipefail
+
+          echo "Configuring git user for automated commit..."
+          git config --global user.name "$GIT_USER_NAME"
+          git config --global user.email "$GIT_USER_EMAIL"
+
+          # Check for changes in translation files only
+          git add messages/de-DE.json messages/pt-BR.json
+
+          if git diff --cached --quiet; then
+            echo "No changes in translation files to commit."
+            exit 0
+          fi
+
+          # Get the SHA of the commit that triggered the workflow
+          SOURCE_SHA="${{ github.event.after }}"
+
+          # Commit with [skip ci] to prevent retriggering workflows
+          git commit -m "[skip ci] auto translation de and pt added (from commit $SOURCE_SHA)"
+
+          # Push back to the same branch
+          echo "Pushing automated translation commit to $TARGET_BRANCH..."
+          git push origin "$TARGET_BRANCH"

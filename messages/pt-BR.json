@@ -129,36 +129,36 @@
   },
   "KitePage": {
     "heroTitle": "Combining Worlds...",
-    "sectionTitle": "O progresso não cresce em árvores",
+    "sectionTitle": "O desenvolvimento não cresce em árvores",
     "sectionDescription": "Meus serviços relacionados ao kiteboarding ajudam você a alcançar seus objetivos",
     "freelancer": {
       "title": "Freelancer",
       "schoolSupport": {
-        "title": "Apoio à Escola",
-        "description": "Seja para precisar de um instrutor certificado pela VDWS, assistência na loja ou alguém para ajudar atrás do bar, estou à disposição. Flexibilidade é minha força."
+        "title": "Profissional Freelancer",
+        "description": "Seja para precisar de um instrutor certificado pela VDWS, assistência na loja ou alguém para ajudar atrás do bar, estou à disposição. Flexibilidade é meu lema."
       },
       "travelServices": {
         "title": "Serviços de Viagem",
-        "description": "Procurando alguém que organize sua viagem de kite? Ou até lhe acompanhe como coach pessoal? Sem problemas, você será bem atendido"
+        "description": "Procurando alguém que organize sua viagem de kite? Ou até lhe acompanhe como coach pessoal? Sem problemas, você será bem atendido."
       },
       "consulting": {
-        "title": "Consultoria",
-        "description": "Sobrecarregado com opções de equipamentos? Deixe-me guiá-lo na escolha certa para kiteboarding. Precisa de alguém para representar o esporte? Gosto de falar em público e transmitir uma mensagem"
+        "title": "Consultor de esporte",
+        "description": "Confuso com muitas opções de equipamentos? Deixe-me guiá-lo na escolha certa para kiteboarding. Precisa de alguém para representar o esporte? Gosto de falar em público e ser porta-voz."
       }
     },
     "courses": {
       "title": "Cursos",
       "theory": {
         "title": "Teoria",
-        "description": "Que tal puxar a barra? Vamos desvendar a “ciência” por trás do esporte — desde dinâmica do vento até tecnologia dos materiais. Escolha o tema e o ritmo; farei de forma clara e envolvente."
+        "description": "O porquê de não puxar a barra? Vamos desvendar a “ciência” por trás do esporte — desde dinâmica do vento até tecnologia dos materiais. Escolhe o tema e o ritmo; farei de forma clara e eficiente."
       },
       "starting": {
-        "title": "(Re)Iniciando",
-        "description": "Se você está começando uma nova jornada no kite ou voltando após uma pausa, ajudarei você a (re)ganhar confiança na água."
+        "title": "(Re)Inicio",
+        "description": "Se você está começando uma nova jornada no kite ou voltando após uma pausa, ajudarei você a (re)conquistar a confiança na água."
       },
       "advanced": {
         "title": "Avançado",
-        "description": "Pronto para ultrapassar limites? Do seu primeiro toeside até acertar loops, vamos encarar desafios juntos. Ou prefere sessões com supervisão? Sem problema! Você também pode trazer sua câmera ou drone!"
+        "description": "Pronto para ultrapassar limites? Desde dos seus primeiros metros de toeside até os loops perfeitos. Vamos encarar os desafios juntos. Ou você prefere sessões supervisionadas? Sem problema! Traga a sua câmera ou seu drone!"
       }
     },
     "links": {
@@ -166,7 +166,7 @@
       "contact": "Contato"
     },
     "contactSection": {
-      "text": "Você também pode combinar um pouco de tudo. Quanto mais reservar, maior o desconto. O que te segura? Vamos conversar.",
+      "text": "Que tal você combinar um pouco de tudo e criar um serviço feito para você? Valores especias para produtos personalizados. Vamos conversar.",
       "button": "Conectar comigo"
     }
   },
@@ -384,17 +384,17 @@
   "NavigationMenu": {
     "home": "Home",
     "kite": "Kite",
-    "allKiteServices": "Serviços de Kite",
+    "allKiteServices": " Visão Geral",
     "freelancer": "Serviços de Freelancer",
-    "schoolSupport": "Apoio Escolar",
+    "schoolSupport": "Profissional Freelancer",
     "travelServices": "Serviços de Viagem",
-    "consulting": "Consultoria",
+    "consulting": "Consultor de esporte",
     "courses": "Cursos",
     "theory": "Teoria",
     "starting": "(Re)Início",
     "advanced": "Avançado",
     "engineer": "Engineer",
-    "allEngineeringServices": "Serviços de Engineer",
+    "allEngineeringServices": "Visão Geral",
     "processEngineering": "Engenharia de Processos",
     "processControl": "Controle de Processos",
     "processOptimization": "Otimização de Processos",
@@ -432,9 +432,9 @@
     "footer-text-engineer": "Engineer",
     "footer-text-about": "Sobre",
     "footer-text-contact": "Contato",
-    "footer-legal": "Jurídico",
+    "footer-legal": "Termos e condições legais",
     "footer-text-privacy": "Política de Privacidade",
-    "footer-text-imprint": "Impressão",
+    "footer-text-imprint": "Aviso Legal",
     "footer-follow-me": "Siga-me",
     "footer-social-instagram": "Instagram",
     "footer-social-linkedin": "LinkedIn",

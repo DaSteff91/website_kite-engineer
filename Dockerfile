@@ -5,6 +5,7 @@ FROM node:20-alpine AS deps
 RUN apk add --no-cache \
     libc6-compat \
     openssl \
+    bash \
     # Alternative to openssl1.1-compat:
     libssl3 \
     libcrypto3 \
@@ -13,6 +14,9 @@ RUN apk add --no-cache \
     && update-ca-certificates \
     # For Rust binaries
     gcompat
+
+# Set bash as the default shell
+SHELL ["/bin/bash", "-c"]
 
 WORKDIR /app
 

@@ -134,7 +134,7 @@
       "title": "Freelancer",
       "schoolSupport": {
         "title": "School Support",
-        "description": "Whether you need a VDWS-certified instructor, shop assistance, or someone to help behind the bar, I've got you covered. Flexibility is my strength."
+        "description": "Whether you need a VDWS-certified instructor, shop assistance, or someone to help behind the bar, I've got you covered. Flexibility is my motto."
       },
       "travelServices": {
         "title": "Travel Services",
@@ -382,17 +382,17 @@
   "NavigationMenu": {
     "home": "Home",
     "kite": "Kite",
-    "allKiteServices": "Kite Services",
+    "allKiteServices": "Overview",
     "freelancer": "Freelancer Services",
     "schoolSupport": "School Support",
     "travelServices": "Travel Services",
-    "consulting": "Consulting",
+    "consulting": "Sports Consultant",
     "courses": "Courses",
     "theory": "Theory",
     "starting": "(Re-)Starting",
     "advanced": "Advanced",
     "engineer": "Engineer",
-    "allEngineeringServices": "Engineer Services",
+    "allEngineeringServices": "Overview",
     "processEngineering": "Process Engineering",
     "processControl": "Process Control",
     "processOptimization": "Process Optimization",
