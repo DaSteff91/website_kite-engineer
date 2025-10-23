@@ -832,5 +832,8 @@
   },
   "TestCommit3": {
     "Test": "Mais um teste para traduzir o fluxo de trabalho"
+  },
+  "TestCommit4": {
+    "Test": "Mais um teste para traduzir o fluxo de trabalho com instalação de dependência extra"
   }
 }
