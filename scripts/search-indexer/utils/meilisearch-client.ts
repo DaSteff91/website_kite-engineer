@@ -2,11 +2,11 @@ import { MeiliSearch} from 'meilisearch';
 import { Settings } from 'meilisearch';
 
 export function createMeilisearchClient(): MeiliSearch {
-  const host = process.env.MEILI_HOST || 'http://localhost:7700';
-  const apiKey = process.env.MEILI_MASTER_KEY;
+  const host = process.env.MEILISEARCH_HOST || 'https://meilisearch.kite-engineer.de/';
+  const apiKey = process.env.MEILISEARCH_API_KEY;
   
   if (!apiKey) {
-    throw new Error('MEILI_MASTER_KEY environment variable is required');
+    throw new Error('MEILISEARCH_API_KEY environment variable is required');
   }
   
   return new MeiliSearch({ host, apiKey });

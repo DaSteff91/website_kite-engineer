@@ -1,9 +1,10 @@
 name: Semantic Versioning
 on:
-  push:
-    branches:
-      - dev
-      - development
+  workflow_run:
+    workflows: ["Runs meilisearch indexing"]
+    types:
+      - completed
+    branches: [dev]
 
 jobs:
   versioning:

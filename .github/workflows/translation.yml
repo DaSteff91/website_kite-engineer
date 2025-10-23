@@ -1,4 +1,4 @@
-name: Run librestranslate when new content is added to en-US.json
+name: Runs librestranslate on content change
 on:
   push:
     branches:

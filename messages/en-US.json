@@ -1289,5 +1289,8 @@
     "SearchBarPlaceholder":"Search",
     "NoSearchResults": "No results found for: ",
     "NoSearchResultsDetails":"Try different keywords or check spelling"
+  },
+  "TestCommit": {
+    "Test": "This is a test for the translate workflow"
   }
 }
