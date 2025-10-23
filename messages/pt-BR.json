@@ -826,5 +826,8 @@
   },
   "TestCommit": {
     "Test": "Este é um teste para o fluxo de trabalho de tradução"
+  },
+  "TestCommit2": {
+    "Test": "Este é outro teste para o fluxo de trabalho de tradução"
   }
 }
