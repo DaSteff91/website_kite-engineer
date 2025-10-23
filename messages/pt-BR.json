@@ -6,17 +6,16 @@
     "introductionTitle": "Oi, meu nome é Steff...",
     "introductionText1": "Steff, abreviação de Stefan. Nasci em 1991 em uma pequena cidade no sul da Alemanha, no estado Baviera. E sim, você pode me chamar de orgulhoso Bávaro também.",
     "introductionText2": "O que esperar de mim? Um personagem de mente aberta que procura desafiar-se e que segue sua missão: realizar a visão de combinar mundos: <strong>combining worlds</strong>.",
-    "introductionText3": "Mas o que isso significa? Basicamente combinar o mundo de ser instrutor de kitesurf com o engenheiro. E voilà, criei meu próprio lifestyle de ser um <strong> kite-engineer</strong>. Um profissional que oferece serviços:",
+    "introductionText3": "Mas o que isso significa? Basicamente isso: É sobre combinar o mundo de ser instrutor de kitesurf com o de ser engenheiro. E voilà, criei meu próprio estilo de vida de ser um Kite-Engineer. Um profissional que oferece serviços:",
     "introductionListItem1": "• relacionados ao esporte do kitesurf",
-    "introductionListItem2": "• no campo de engenharia, como engenharia de processos ou TI.",
+    "introductionListItem2": "Em particular, áreas de engenharia como engenharia de processos ou TI.",
     "introductionText4": "E não, eu não desenho kites e nem sou ansioso para integrar eletrônicos em kites. Pelo menos não por enquanto - quem sabe?",
     "introductionText5": "É minha maneira única de lidar com nosso amado capitalismo: compartilho o que eu gosto de fazer e você recebe o que ainda não teve antes. Somos todos vencedores!",
     "professionalTitle": "Profissional",
-    "professionalItems": "<li>Inicio a minha carreira profissional como Kite-Engineer, 2025</li><li>Alcanço a certificação da International University (IU) como Programador Python e SQL, 2025</li><li>Ofereço aulas de kitesurf em alemão, inglês e português, 2024</li><li>Conquisto a licença de instrutor de kitesurf VDWS, 2023</li><li>Obtenho o certificado 6 Sigma Green Belt com foco em Lean Management, 2022</li><li>Começo a dar aulas particulares de kitesurf, 2021</li><li>Tenho o meu primeiro contato com o kitesurf, 2018</li><li>Experiência profissional em desenvolvimento e otimização de processos (como engenheiro de processos, engenheiro de processo e assistente de laboratório), 2015 - 2024</li><li>Bacharelado em Engenharia de Microsistemas, 2015</li><li>Inicio a explorar as áreas de micro- e nanosistemas, 2010</li>",
+    "professionalItems": "Lançando minha carreira profissional como Kite-Engineer, 2025, certificado da Universidade Internacional (UI) como Python e Programador SQL, 2025. Oferecendo aulas de kitesurf em alemão, inglês e português, 2024, licença de instrutor de kitesurf VDWS, 2023, certificado 6 Sigma Green Belt e Lean Management, 2022, aulas particulares de kitesurf, 2021, Primeiro contato com kiteboarding, 2018 Empregos profissionais como engenheiro de desenvolvimento de processos, engenheiro de processos e assistente de laboratório, 2015 - 2024 Começou a explorar as áreas de micro e nanossistemas em 2010",
     "personalTitle": "Pessoal",
     "personalItems": "<li>\"Seja a mudança que você quer ver no mundo\"</li><li>Sou um explorador, um aventureiro e um nerd</li><li>Autodidata sempre foi mais satisfatório do que escola</li><li>Sim, até eu já joguei futebol... até os 14 anos</li><li>Esportes e atividades ao ar livre são uma grande parte da minha vida</li><li>Assim como Linkin Park - sou fã desde os 6 anos de idade</li><li>Você já ouviu Eckhart Tolle?</li><li>Sorrir para as pessoas na rua ajuda a espalhar boas energias</li><li>Filosofia, especialmente estoicismo, foi adicionada depois dos 30 anos - coincidência?</li><li>Um livro que mudou a minha vida? O Alquimista - Paulo Coelho</li><li>Seguidor da ideia de \"Free and Open Source Software\"</li><li>Evoluir com a comunidade é um satisfação vezes X</li>"
   },
-
   "ContactPage": {
     "heroTitle": "Combining Worlds...",
     "sectionTitle": "Vamos nos conectar",
@@ -132,10 +131,10 @@
     "sectionTitle": "O desenvolvimento não cresce em árvores",
     "sectionDescription": "Meus serviços relacionados ao kiteboarding ajudam você a alcançar seus objetivos",
     "freelancer": {
-      "title": "Profissional",
+      "title": "Serviços Profissionais",
       "schoolSupport": {
         "title": "Profissional Freelancer",
-        "description": "Seja para precisar de um instrutor certificado pela VDWS, assistência na loja ou alguém para ajudar atrás do bar, estou à disposição. Flexibilidade é meu lema."
+        "description": "Se você precisa de um instrutor certificado por VDWS, assistência na loja, ou alguém para ajudar atrás do bar, eu te cubro. Flexibilidade é meu lema."
       },
       "travelServices": {
         "title": "Serviços de Viagem",
@@ -171,7 +170,7 @@
     }
   },
   "ProcessControlPage": {
-    "back-to-engineer-services-nav":"Voltar para todos os serviços de engenharia",
+    "back-to-engineer-services-nav": "Voltar para todos os serviços de engenharia",
     "process-control-hero": "Process Control Services",
     "process-control-section-title": "Terceirize seu trabalho",
     "process-control-section-subtitle": "Invista meu poder cerebral no seu projeto e aproveite minha expertise adquirida enquanto trabalhava como engenheiro de processo.",
@@ -201,7 +200,7 @@
     "process-control-contact": "Algo faltando? Encontramos uma solução. Ofereço serviços principalmente para processos de manufatura, especialmente de semicondutores. Porém, estou aberto a novos temas. Meus serviços podem ser contratados a curto ou longo prazo, por projeto ou por tempo, e você pode combinar serviços para obter o melhor resultado.",
     "contact-button": "Conectar comigo"
   },
-    "TravelServicesPage": {
+  "TravelServicesPage": {
     "back-to-kite-services-nav": "Voltar para todos os servicos",
     "travel-services-hero": "Travel Services",
     "travel-services-section-title": "O mundo pode ser seu playground – aproveite",
@@ -384,17 +383,17 @@
   "NavigationMenu": {
     "home": "Home",
     "kite": "Kite",
-    "allKiteServices": " Visão Geral",
+    "allKiteServices": "Visão geral",
     "freelancer": "Serviços Profissionais",
     "schoolSupport": "Profissional Freelancer",
     "travelServices": "Serviços de Viagem",
-    "consulting": "Consultor de esporte",
+    "consulting": "Consultor de esportes",
     "courses": "Cursos",
     "theory": "Teoria",
     "starting": "(Re)Início",
     "advanced": "Avançado",
     "engineer": "Engineer",
-    "allEngineeringServices": "Visão Geral",
+    "allEngineeringServices": "Visão geral",
     "processEngineering": "Engenharia de Processos",
     "processControl": "Controle de Processos",
     "processOptimization": "Otimização de Processos",
@@ -444,25 +443,82 @@
     "footer-copied": "(Copiado!)",
     "footer-copyright": "© {year} Kite-Engineer by Stefan Merthan. Todos os direitos reservados."
   },
-  "ProcessOptimizationPage": { "title": "Process Optimization (placeholder)", "body": "Placeholder content." },
-  "ChangeManagementPage": { "title": "Change Management (placeholder)", "body": "Placeholder content." },
-  "MonitoringPage": { "title": "Monitoring (placeholder)", "body": "Placeholder content." },
-  "CreativityPage": { "title": "Creativity (placeholder)", "body": "Placeholder content." },
-  "ProcessDesignPage": { "title": "Process Design (placeholder)", "body": "Placeholder content." },
-  "SimulationPrototypingPage": { "title": "Simulation & Prototyping (placeholder)", "body": "Placeholder content." },
-  "EquipmentRoadmapPage": { "title": "Equipment Roadmap (placeholder)", "body": "Placeholder content." },
-  "CustomSolutionsPage": { "title": "Custom Solutions (placeholder)", "body": "Placeholder content." },
-  "DatabaseManagementPage": { "title": "Database Management (placeholder)", "body": "Placeholder content." },
-  "WorkflowAutomationPage": { "title": "Workflow Automation (placeholder)", "body": "Placeholder content." },
-  "WebDevelopmentPage": { "title": "Web Development (placeholder)", "body": "Placeholder content." },
-  "ProjectSetupPage": { "title": "Project Setup (placeholder)", "body": "Placeholder content." },
-  "TimelineManagementPage": { "title": "Timeline Management (placeholder)", "body": "Placeholder content." },
-  "DeviationManagementPage": { "title": "Deviation Management (placeholder)", "body": "Placeholder content." },
-  "DocumentationPage": { "title": "Documentation (placeholder)", "body": "Placeholder content." },
-  "ProcessAssessmentPage": { "title": "Process Assessment (placeholder)", "body": "Placeholder content." },
-  "TechnicalResearchPage": { "title": "Technical Research (placeholder)", "body": "Placeholder content." },
-  "TrainingKnowledgeTransferPage": { "title": "Training & Knowledge Transfer (placeholder)", "body": "Placeholder content." },
-  "CompetitorAnalysisPage": { "title": "Competitor Analysis (placeholder)", "body": "Placeholder content." },
+  "ProcessOptimizationPage": {
+    "title": "Process Optimization (placeholder)",
+    "body": "Placeholder content."
+  },
+  "ChangeManagementPage": {
+    "title": "Change Management (placeholder)",
+    "body": "Placeholder content."
+  },
+  "MonitoringPage": {
+    "title": "Monitoring (placeholder)",
+    "body": "Placeholder content."
+  },
+  "CreativityPage": {
+    "title": "Creativity (placeholder)",
+    "body": "Placeholder content."
+  },
+  "ProcessDesignPage": {
+    "title": "Process Design (placeholder)",
+    "body": "Placeholder content."
+  },
+  "SimulationPrototypingPage": {
+    "title": "Simulation & Prototyping (placeholder)",
+    "body": "Placeholder content."
+  },
+  "EquipmentRoadmapPage": {
+    "title": "Equipment Roadmap (placeholder)",
+    "body": "Placeholder content."
+  },
+  "CustomSolutionsPage": {
+    "title": "Custom Solutions (placeholder)",
+    "body": "Placeholder content."
+  },
+  "DatabaseManagementPage": {
+    "title": "Database Management (placeholder)",
+    "body": "Placeholder content."
+  },
+  "WorkflowAutomationPage": {
+    "title": "Workflow Automation (placeholder)",
+    "body": "Placeholder content."
+  },
+  "WebDevelopmentPage": {
+    "title": "Web Development (placeholder)",
+    "body": "Placeholder content."
+  },
+  "ProjectSetupPage": {
+    "title": "Project Setup (placeholder)",
+    "body": "Placeholder content."
+  },
+  "TimelineManagementPage": {
+    "title": "Timeline Management (placeholder)",
+    "body": "Placeholder content."
+  },
+  "DeviationManagementPage": {
+    "title": "Deviation Management (placeholder)",
+    "body": "Placeholder content."
+  },
+  "DocumentationPage": {
+    "title": "Documentation (placeholder)",
+    "body": "Placeholder content."
+  },
+  "ProcessAssessmentPage": {
+    "title": "Process Assessment (placeholder)",
+    "body": "Placeholder content."
+  },
+  "TechnicalResearchPage": {
+    "title": "Technical Research (placeholder)",
+    "body": "Placeholder content."
+  },
+  "TrainingKnowledgeTransferPage": {
+    "title": "Training & Knowledge Transfer (placeholder)",
+    "body": "Placeholder content."
+  },
+  "CompetitorAnalysisPage": {
+    "title": "Competitor Analysis (placeholder)",
+    "body": "Placeholder content."
+  },
   "ContactTemplates": {
     "schoolSupport": {
       "subject": "Consulta sobre Suporte Escolar [Seu assunto*]",
@@ -598,7 +654,7 @@
     "mandatoryNote1": "* Campos obrigatórios.",
     "mandatoryNote2": "Por favor, dê-me algum tempo para responder. Tento manter abaixo de 2 dias.",
     "nodemailerAutoReplies": {
-      "subject":"Re: \"{subject}\"",
+      "subject": "Re: \"{subject}\"",
       "body": "<p>Olá {name},</p>\n\n<p>Obrigado por entrar em contato comigo — eu recebi sua mensagem e responderei o mais cedo possível.</p>\n\n<p>Atenciosamente,<br/>Steff</p>\n\n<p><a href=\"https://www.kite-engineer.de\" target=\"_blank\">www.kite-engineer.de</a><br/><a href=\"mailto:stefan@kite-engineer.de\">stefan@kite-engineer.de</a></p>\n\n<hr />\n\n<p><strong>Sua mensagem:</strong></p>\n<pre style=\"white-space:pre-wrap;\">{originalMessage}</pre>"
     }
   },
@@ -614,7 +670,7 @@
     },
     "Home": {
       "title": "Início",
-      "description": "Bem-vindo - O Kite-Engineer é um profissional de serviços relacionados a kitesurf e engenharia. Soluções personalizáveis e flexibilidade são a chave. Qualquer tipo de cliente e qualquer tipo de solicitação é bem-vinda - B2B ou B2C."
+      "description": "Bem-vindo, o Kite-Engineer é um provedor profissional de serviços nas áreas de kiteboard e engenharia. Soluções personalizáveis e flexibilidade são a chave. Qualquer tipo de cliente e qualquer tipo de pedido é bem-vindo - B2B ou B2C."
     },
     "Kite": {
       "title": "Serviços de Kitesurf",
@@ -732,7 +788,7 @@
         },
         "TimelineManagement": {
           "title": "Serviços de Gerenciamento de Cronograma",
-          "description": "Gerenciar seus pipelines e compromissos pode se tornar complicado com o tempo, especialmente se precisar de recursos extras que você não tem. Por que não contratar um freelancer para fazer isso por você."
+          "description": "Gerenciar seus oleodutos e compromissos pode tornar-se complicado com o tempo, especialmente se precisar de recursos extras que você não tem. Por que não contratar um profissional temporário para fazer isso por você."
         },
         "DeviationManagement": {
           "title": "Serviços de Gerenciamento de Desvios",
@@ -764,8 +820,11 @@
     }
   },
   "SearchBar": {
-    "SearchBarPlaceholder":"Buscar",
+    "SearchBarPlaceholder": "Buscar",
     "NoSearchResults": "Nenhum resultado encontrado para: ",
-    "NoSearchResultsDetails":"Tente palavras-chave diferentes ou verifique a ortografia."
+    "NoSearchResultsDetails": "Tente palavras-chave diferentes ou verifique a ortografia."
+  },
+  "TestCommit": {
+    "Test": "Este é um teste para o fluxo de trabalho de tradução"
   }
 }
