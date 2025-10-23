@@ -826,5 +826,8 @@
   },
   "TestCommit": {
     "Test": "Dies ist ein Test für den übersetzen Workflow"
+  },
+  "TestCommit2": {
+    "Test": "Dies ist ein weiterer Test für den übersetzen Workflow"
   }
 }
