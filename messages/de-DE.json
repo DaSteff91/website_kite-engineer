@@ -6,17 +6,17 @@
     "introductionTitle": "Hey, mein Name ist Steff...",
     "introductionText1": "Steff, die Kurzform für Stefan. 1991 in einer kleinen Stadt im süddeutschen Bayern geboren. Und ja, man kann mich einen stolzen Bayern nennen.",
     "introductionText2": "Was kannst Du von mir erwarten? Einen aufgeschlossenen Charakter, der sich selbst herausfordern will. Eine Person, die ihre Mission verfolgt: die Vision, zwei Welten zu verbinden: <strong>Combining Worlds...</strong>",
-    "introductionText3": "Aber was bedeutet das? Im Grunde genommen Folgendes: Es geht darum, die Welt eines Kitesurflehrers mit der eines Ingenieurs zu verbinden. E voilà, ich habe meinen eigenen Lifestyle als <strong>Kite-Engineer</strong> geschaffen. Ein Anbieter von Dienstleistungen:",
+    "introductionText3": "Aber was bedeutet das? Im Grunde: Es geht darum, die Welt des Seins ein Kitesurflehrer mit der eines Ingenieurs zu verbinden. E voilà, Ich habe meinen eigenen Lebensstil geschaffen, ein <strong>Kite-Engineer</strong> zu sein. Ein Profi, der Dienstleistungen anbietet:",
     "introductionListItem1": "• im Zusammenhang mit der Sportart Kiten, oder",
-    "introductionListItem2": "• in bestimmten Ingenieurbereichen wie der Prozessoptimierung oder der IT.",
+    "introductionListItem2": "• insbesondere Bereiche der Technik wie Verfahrenstechnik oder IT.",
     "introductionText4": "Und nein, ich designe keine Kites. Auch habe ich nicht vor, Elektronik in Kites zu integrieren. Zumindest vorerst nicht - wer weiß?",
     "introductionText5": "Das ist meine eigene Art, mit unserem geliebten Kapitalismus umzugehen: Ich teile, was ich gerne tue und Du bekommst, was Du vorher noch nicht hattest. So gewinnen alle!",
     "professionalTitle": "Professioneller Teil",
-    "professionalItems": "<li>Start meiner Selbstständigkeit als Kite-Engineer, 2025</li><li>Zertifikat als \"Python and SQL Programmer\" der International University (IU), 2025</li><li>Kitesurf-Unterricht wird in Deutsch, Englisch und Portugiesisch angeboten, 2024</li><li>VDWS Kitesurf Instructor Lizenz, 2023</li><li>Zertifizierung als 6 Sigma Green Belt und Lean Management, 2022</li><li>Erstmalig Privatunterricht als Kitesurflehrer gegeben, 2021</li><li>Der erster Kontakt mit Kiten, 2018</li><li>Berufliche Tätigkeiten als Entwicklungsingenieur, Prozessingenieuer und Laborassistent, 2015 - 2024</li><li> Abschluss B.Sc. in Mikrosystemtechnik (OTH Regensburg), 2015</li><li>Zum erste Mal die Welten der Mikro- und Nanotechnologie erkundet, 2010</li>",
+    "professionalItems": "<li>Launching my professional career as Kite-Engineer, 2025</li>li>International University (IU) Certificate as Python and SQL Programmer, 2025</li>li> Mit Kitesurf Unterricht in Deutsch, Englisch und Portugiesisch, 2024</li>li>VDWS Kitesurf Trainer Lizenz, 2023</li>>li>Certified 6 Sigma Green Belt and Lean Management, 2022</li><li>Privat Kiteboarding Unterricht, 2021</li>> Erster Kontakt mit Kiteboarding, 2018</li>li>Professional Employment as Process Development Engineer, Process Engineer und Labor Assistant, 2015 - 2024</li>li>li>B.Sc in Microsystems Engineering, 2015</li>li> Beginn der Erkundung der Bereiche Mikro- und Nanosysteme in, 2010</li>",
     "personalTitle": "Persönlicher Teil",
     "personalItems": "<li>\"Sei selbst die Veränderung, die du in der Welt suchst\"</li><li>Ich bin ein Entdecker, ein Abenteurer und ein Nerd</li><li>Selbstständiges Lernen hat mich immer mehr gereizt als Schule</li><li>Ja,auch ich hab mal Fussball gespielt. Bis ich 14 war</li><li>Sport und sich draußen Bewegen macht einen großen Teil meines Lebens aus</li><li>Genauso wie Linkin Park - bin Fan seit ich 6 Jahre alt bin</li><li>Hast Du dir schon mal Eckhart Tolle angehört?</li><li>Leute auf der Straße anzulächeln hilft, gute Vibes zu verbreiten</li><li>Philosophie, im speziellen Stoizismus, kam hinzu, als ich 30 wurde - Zufall?</li><li>Ein Buch, das mein Leben verändert hat? Der Alchemist - Paulo Coelho</li><li>Anhänger der \"Free and Open Source\" Idee</li><li>Als Gemeinschaft zu wachsen bedeutet x-fache Zufriedenheit</li>"
   },
-   "ContactPage": {
+  "ContactPage": {
     "heroTitle": "Combining Worlds...",
     "sectionTitle": "So kommen wir zusammen",
     "sectionDescription": "Ob es ums Kiten, Engineering oder um was dazwischen geht: Melde dich per Mail, Telefon oder über das Kontaktformular unten. Hast du einen Bug oder Tippfehler gefunden? Ich bin dir ewig dankbar, wenn Du ihn mir meldest."
@@ -131,10 +131,10 @@
     "sectionTitle": "Fortschritt wächst nicht auf Bäumen",
     "sectionDescription": "Meine Services rum ums Kiten helfen Dir, Deine Ziele zu erreichen",
     "freelancer": {
-      "title": "Freelancer Services",
+      "title": "Professionelle Dienstleistungen",
       "schoolSupport": {
         "title": "Schulunterstützung",
-        "description": "Ob VDWS-zertifizierter Instructor, Shop-Unterstützer oder Hilfe hinter der Bar – ich bin für Dich da. Flexibilität ist meine Stärke."
+        "description": "Ob Sie einen VDWS-zertifizierten Instruktor benötigen, Shop-Hilfe oder jemanden, der hinter der Bar hilft, ich habe Sie abgedeckt. Flexibilität ist mein Motto."
       },
       "travelServices": {
         "title": "Reiseservices",
@@ -352,17 +352,17 @@
   "NavigationMenu": {
     "home": "Home",
     "kite": "Kite",
-    "allKiteServices": "Übersicht",
-    "freelancer": "Freelancer Services",
+    "allKiteServices": "Überblick",
+    "freelancer": "Professionelle Dienstleistungen",
     "schoolSupport": "Support für Schulen",
     "travelServices": "Reise Services",
-    "consulting": "Sportberater",
+    "consulting": "Sport und Freizeit",
     "courses": "Kursangebot",
     "theory": "Theorie",
     "starting": "(Neu-)Starter",
     "advanced": "Fortgeschritten",
     "engineer": "Engineer",
-    "allEngineeringServices": "Übersicht",
+    "allEngineeringServices": "Überblick",
     "processEngineering": "Process Engineering",
     "processControl": "Prozesskontrolle",
     "processOptimization": "Prozessoptimierung",
@@ -412,27 +412,84 @@
     "footer-copied": "(Kopiert!)",
     "footer-copyright": "© {year} Kite-Engineer by Stefan Merthan. Alle Rechte vorbehalten."
   },
-  "ProcessOptimizationPage": { "title": "Process Optimization (Platzhalter)", "body": "Platzhalterinhalt." },
-  "ChangeManagementPage": { "title": "Change Management (Platzhalter)", "body": "Platzhalterinhalt." },
-  "MonitoringPage": { "title": "Monitoring (Platzhalter)", "body": "Platzhalterinhalt." },
-  "CreativityPage": { "title": "Creativity (Platzhalter)", "body": "Platzhalterinhalt." },
-  "ProcessDesignPage": { "title": "Process Design (Platzhalter)", "body": "Platzhalterinhalt." },
-  "SimulationPrototypingPage": { "title": "Simulation & Prototyping (Platzhalter)", "body": "Platzhalterinhalt." },
-  "EquipmentRoadmapPage": { "title": "Equipment Roadmap (Platzhalter)", "body": "Platzhalterinhalt." },
-  "CustomSolutionsPage": { "title": "Custom Solutions (Platzhalter)", "body": "Platzhalterinhalt." },
-  "DatabaseManagementPage": { "title": "Database Management (Platzhalter)", "body": "Platzhalterinhalt." },
-  "WorkflowAutomationPage": { "title": "Workflow Automation (Platzhalter)", "body": "Platzhalterinhalt." },
-  "WebDevelopmentPage": { "title": "Web Development (Platzhalter)", "body": "Platzhalterinhalt." },
-  "ProjectSetupPage": { "title": "Project Setup (Platzhalter)", "body": "Platzhalterinhalt." },
-  "TimelineManagementPage": { "title": "Timeline Management (Platzhalter)", "body": "Platzhalterinhalt." },
-  "DeviationManagementPage": { "title": "Deviation Management (Platzhalter)", "body": "Platzhalterinhalt." },
-  "DocumentationPage": { "title": "Documentation (Platzhalter)", "body": "Platzhalterinhalt." },
-  "ProcessAssessmentPage": { "title": "Process Assessment (Platzhalter)", "body": "Platzhalterinhalt." },
-  "TechnicalResearchPage": { "title": "Technical Research (Platzhalter)", "body": "Platzhalterinhalt." },
-  "TrainingKnowledgeTransferPage": { "title": "Training & Knowledge Transfer (Platzhalter)", "body": "Platzhalterinhalt." },
-  "CompetitorAnalysisPage": { "title": "Competitor Analysis (Platzhalter)", "body": "Platzhalterinhalt." },
+  "ProcessOptimizationPage": {
+    "title": "Process Optimization (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "ChangeManagementPage": {
+    "title": "Change Management (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "MonitoringPage": {
+    "title": "Monitoring (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "CreativityPage": {
+    "title": "Creativity (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "ProcessDesignPage": {
+    "title": "Process Design (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "SimulationPrototypingPage": {
+    "title": "Simulation & Prototyping (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "EquipmentRoadmapPage": {
+    "title": "Equipment Roadmap (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "CustomSolutionsPage": {
+    "title": "Custom Solutions (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "DatabaseManagementPage": {
+    "title": "Database Management (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "WorkflowAutomationPage": {
+    "title": "Workflow Automation (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "WebDevelopmentPage": {
+    "title": "Web Development (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "ProjectSetupPage": {
+    "title": "Project Setup (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "TimelineManagementPage": {
+    "title": "Timeline Management (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "DeviationManagementPage": {
+    "title": "Deviation Management (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "DocumentationPage": {
+    "title": "Documentation (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "ProcessAssessmentPage": {
+    "title": "Process Assessment (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "TechnicalResearchPage": {
+    "title": "Technical Research (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "TrainingKnowledgeTransferPage": {
+    "title": "Training & Knowledge Transfer (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
+  "CompetitorAnalysisPage": {
+    "title": "Competitor Analysis (Platzhalter)",
+    "body": "Platzhalterinhalt."
+  },
   "ProcessControlPage": {
-    "back-to-engineer-services-nav":"Back to All Engineering Services",
+    "back-to-engineer-services-nav": "Back to All Engineering Services",
     "process-control-hero": "Process Control Services",
     "process-control-section-title": "Outsourcing deiner Arbeit",
     "process-control-section-subtitle": "Nutze meine Expertise aus der Arbeit als Prozessingenieur für dein Projekt.",
@@ -597,11 +654,11 @@
     "mandatoryNote1": "* Pflichtfelder.",
     "mandatoryNote2": "Bitte geben Sie mir etwas Zeit für eine Antwort. Ich versuche, diese unter 2 Tagen zu halten.",
     "nodemailerAutoReplies": {
-      "subject":"AW: \"{subject}\"",
+      "subject": "AW: \"{subject}\"",
       "body": "<p>Hallo {name},</p>\n\n<p>Schön, dass Du mir schreibst – ich habe Deine Nachricht erhalten und werde schnellstmöglich antworten.</p>\n\n<p>Viele Grüße,<br/>Steff</p>\n\n<p><a href=\"https://www.kite-engineer.de\" target=\"_blank\">www.kite-engineer.de</a><br/><a href=\"mailto:stefan@kite-engineer.de\">stefan@kite-engineer.de</a></p>\n\n<hr />\n\n<p><strong>Originalnachricht:</strong></p>\n<pre style=\"white-space:pre-wrap;\">{originalMessage}</pre>"
     }
   },
-"NotFound": {
+  "NotFound": {
     "title": "404 - Seite nicht gefunden",
     "description": "Entschuldige, die gesuchte Seite konnte nicht gefunden werden.",
     "backHome": "Startseite"
@@ -613,7 +670,7 @@
     },
     "Home": {
       "title": "Startseite",
-      "description": "Willkommen - Der Kite-Engineer ist ein Freiberufler für Kitesurfing und technische Dienstleistungen. Anpassbare Lösungen und Flexibilität sind der Schlüssel. Jede Art von Kunde und jede Art von Anfrage ist willkommen - B2B oder B2C."
+      "description": "Willkommen - Der Kite-Engineer ist ein professioneller Dienstleister in den Bereichen Kiteboarding und Engineering. Anpassbare Lösungen und Flexibilität sind der Schlüssel. Jede Art von Kunden und jede Art von Anfrage ist willkommen - B2B oder B2C."
     },
     "Kite": {
       "title": "Kite Services",
@@ -731,7 +788,7 @@
         },
         "TimelineManagement": {
           "title": "Zeitplanmanagement Services",
-          "description": "Die Verwaltung Ihrer Pipelines und Verpflichtungen kann mit der Zeit schwierig werden, besonders wenn zusätzliche Ressourcen benötigt werden, die Sie nicht haben. Warum nicht einen Freiberufler damit beauftragen?"
+          "description": "Die Verwaltung Ihrer Pipelines und Verpflichtungen kann im Laufe der Zeit schwierig werden, vor allem, wenn es zusätzliche Ressourcen braucht, die Sie nicht haben. Warum nicht einen temporären Profi mieten, um dies für Sie zu tun."
         },
         "DeviationManagement": {
           "title": "Abweichungsmanagement Services",
@@ -763,8 +820,11 @@
     }
   },
   "SearchBar": {
-    "SearchBarPlaceholder":"Suchen",
+    "SearchBarPlaceholder": "Suchen",
     "NoSearchResults": "Nichts gefunden für: ",
-    "NoSearchResultsDetails":"Versuche ein anderes Wort oder überprüfe die Schreibweise"
+    "NoSearchResultsDetails": "Versuche ein anderes Wort oder überprüfe die Schreibweise"
+  },
+  "TestCommit": {
+    "Test": "Dies ist ein Test für den übersetzen Workflow"
   }
 }
