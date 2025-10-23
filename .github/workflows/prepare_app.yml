@@ -7,6 +7,7 @@ on:
 
 jobs:
   translate-content:
+    name: Translates new content
     permissions:
       contents: write
       issues: write
@@ -879,33 +880,35 @@ jobs:
           git push origin "$TARGET_BRANCH"
 
   run-search-index-script:
-      permissions:
-        contents: read
-        issues: read
-        pull-requests: read
-        packages: write
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout repo (full history)
-          uses: actions/checkout@v5
-          with:
-            fetch-depth: 0
-            persist-credentials: true
-        
-        - name: Setup Node server environment
-          uses: actions/setup-node@v6
-          with:
-            node-version: 24
+    name: Run the Meilisearch index
+    needs: translate-content
+    permissions:
+      contents: read
+      issues: read
+      pull-requests: read
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo (full history)
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      
+      - name: Setup Node server environment
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
 
-        - name: Run Meilisearch indexing
-          run: |
-            cd scripts/search-indexer
-            npx tsx index.ts
-          env:
-            MEILI_HOST: ${{ secrets.MEILISEARCH_HOST }}
-            MEILI_MASTER_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
+      - name: Run Meilisearch indexing
+        run: npx tsx scripts/search-indexer/index.ts 
+        env:
+          MEILI_HOST: ${{ secrets.MEILISEARCH_HOST }}
+          MEILI_MASTER_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
 
   versioning:
+    name: Running Semversioning
+    needs: run-search-index-script
     permissions:
       contents: write
       issues: write
