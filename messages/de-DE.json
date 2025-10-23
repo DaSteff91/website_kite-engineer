@@ -832,5 +832,8 @@
   },
   "TestCommit3": {
     "Test": "Dieser weitere Test für den übersetzen Workflow"
+  },
+  "TestCommit4": {
+    "Test": "Dieser weitere Test für den übersetzen Workflow mit extra abhängiger Installation"
   }
 }
