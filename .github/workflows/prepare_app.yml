@@ -1,8 +1,9 @@
-name: Runs librestranslate on content change
+name: Prepare for build and push
 on:
   push:
     branches:
-      - main
+      - dev
+      - development
 
 jobs:
   translate-content:
@@ -876,3 +877,64 @@ jobs:
           # Push back to the same branch
           echo "Pushing automated translation commit to $TARGET_BRANCH..."
           git push origin "$TARGET_BRANCH"
+
+  run-search-index-script:
+      permissions:
+        contents: read
+        issues: read
+        pull-requests: read
+        packages: write
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout repo (full history)
+          uses: actions/checkout@v5
+          with:
+            fetch-depth: 0
+            persist-credentials: true
+        
+        - name: Setup Node server environment
+          uses: actions/setup-node@v6
+          with:
+            node-version: 24
+
+        - name: Run Meilisearch indexing
+          run: |
+            cd scripts/search-indexer
+            npx tsx index.ts
+          env:
+            MEILI_HOST: ${{ secrets.MEILISEARCH_HOST }}
+            MEILI_MASTER_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
+
+  versioning:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SEMVERSIONING }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Semantic Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SEMVERSIONING }}
+
+      - name: Verify semantic-release tag
+        run: |
+          echo "Latest tag: $(git describe --tags --abbrev=0)"
+          echo "Tag SHA:    $(git rev-list -n 1 v1.14.8)"
+          echo "HEAD SHA:   $(git rev-parse HEAD)"
+          git log -1 --oneline
