@@ -1298,5 +1298,8 @@
   },
   "TestCommit3": {
     "Test": "This one more test for the translate workflow"
+  },
+  "TestCommit4": {
+    "Test": "This one more test for the translate workflow with extra dependency installation"
   }
 }

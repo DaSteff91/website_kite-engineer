@@ -52,7 +52,7 @@
     "eslint-config-next": "13.5.1",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.446.0",
-    "meilisearch": "^0.36.0",
+    "meilisearch": "^0.53.0",
     "next": "^15.5.3",
     "next-intl": "^4.3.5",
     "next-themes": "^0.3.0",

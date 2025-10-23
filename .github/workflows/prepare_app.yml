@@ -24,6 +24,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
+          cache: 'npm'
 
       - name: Check for changes in en-US.json
         id: check_for_changes
@@ -899,6 +900,10 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
 
       - name: Run Meilisearch indexing
         run: npx tsx scripts/search-indexer/index.ts 
@@ -924,9 +929,11 @@ jobs:
           token: ${{ secrets.SEMVERSIONING }}
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20.x"
+          node-version: 24
+          cache: 'npm'
+
       - name: Install Dependencies
         run: npm ci
 
