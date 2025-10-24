@@ -1,3 +1,10 @@
+## [1.30.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.1...v1.30.2) (2025-10-24)
+
+
+### Bug Fixes
+
+* rebuild and fix small issues ([62c5867](https://github.com/DaSteff91/website_kite-engineer/commit/62c58676918ba6901084ed145fb857fcc0f2f201))
+
 ## [1.30.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.0...v1.30.1) (2025-10-24)
 
 
