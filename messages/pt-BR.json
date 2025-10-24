@@ -850,5 +850,8 @@
   },
   "TestCommit9": {
     "Test": "Este outro teste para traduzir o fluxo de trabalho com a chave api correta no pedido de busca da barra"
+  },
+  "TestCommit10": {
+    "Test": "Este outro teste para traduzir o fluxo de trabalho com a chave api correta no pedido de busca da barra. Agora está disponível durante a corrida"
   }
 }
