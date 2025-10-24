@@ -1,3 +1,23 @@
+## [1.30.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.0...v1.30.1) (2025-10-24)
+
+
+### Bug Fixes
+
+* adding a api route for the search requests ([0ef26c1](https://github.com/DaSteff91/website_kite-engineer/commit/0ef26c168ccf6155513538018f91f5cd39698aba))
+* adding a runtime .env variable for meilisearch ([9b686f2](https://github.com/DaSteff91/website_kite-engineer/commit/9b686f2734fc77e35d5771179150ab4ff5c60ca0))
+* changing env variables ([fdd2be7](https://github.com/DaSteff91/website_kite-engineer/commit/fdd2be7819dc4c91f8fdfd134151af419507cbe1))
+* fixing api key handling ([23ea566](https://github.com/DaSteff91/website_kite-engineer/commit/23ea566cc248d18614e447c3bed8e6afc4da2f31))
+* fixing some translations and wording ([ca539a1](https://github.com/DaSteff91/website_kite-engineer/commit/ca539a1b550363733aca8492df6f2b9e9431e181))
+* implementing a workflow that enables auto translation from en to de and pt ([8ab5c1e](https://github.com/DaSteff91/website_kite-engineer/commit/8ab5c1ec6b15f9522ff3420d74d38e89b2dc152f))
+* preparing for new translation workflow ([8be954d](https://github.com/DaSteff91/website_kite-engineer/commit/8be954d969acd0ddb6f29b1bd29aa52d55ca7e44))
+* repeat building ([efa0ed8](https://github.com/DaSteff91/website_kite-engineer/commit/efa0ed848b9f2dd7993c7b5ae0a65763b4fedb68))
+* testing ([cc1545b](https://github.com/DaSteff91/website_kite-engineer/commit/cc1545b0a6930456a1dea4b18c6ff8acabca0da0))
+* testing a all in one version ([e685713](https://github.com/DaSteff91/website_kite-engineer/commit/e685713b7a8ec854d6dde6da01a88d2893f754ae))
+* testing another version ([8471419](https://github.com/DaSteff91/website_kite-engineer/commit/847141946ba3d9ed9af12134db82451d39b3d52c))
+* testing new api key ([9c96b1d](https://github.com/DaSteff91/website_kite-engineer/commit/9c96b1d9cfc31e94bae46e840b0515f4657456b2))
+* testing the new workflow in dev ([470fd01](https://github.com/DaSteff91/website_kite-engineer/commit/470fd01a7818faf02c46b385fef11d49bf9824f6))
+* testing with new meilisearch version package.json and extra install in workflow ([8ed8ec6](https://github.com/DaSteff91/website_kite-engineer/commit/8ed8ec694830ec025430daaf5bae3c8a0f30430b))
+
 # [1.30.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.29.3...v1.30.0) (2025-10-16)
 
 
