@@ -8,6 +8,8 @@ type MeiliSearchReq = {
   filter?: string[]; // like ["locale = en-US"]
 };
 
+console.log('[DEBUG] search route.ts loaded at', new Date().toISOString());
+
 // ---- Config ----
 const MAX_LIMIT = 50;
 const DEFAULT_LIMIT = 10;
@@ -99,7 +101,10 @@ function sanitizeFilters(rawFilters?: unknown): string[] {
 // ---- Route Handler ----
 export async function POST(req: Request) {
   try {
+    console.log('[DEBUG] POST /api/search called at', new Date().toISOString());
     const ip = clientIpFromReq(req);
+    console.log('[DEBUG] Request IP:', ip);
+    console.log('[DEBUG] Request headers:', Object.fromEntries(req.headers.entries()));
 
     // Rate limiting
     if (!enforceRateLimit(ip)) {
@@ -107,10 +112,13 @@ export async function POST(req: Request) {
     }
 
     const body = await req.json().catch(() => ({}));
+    console.log('[DEBUG] Request body:', body);
     const q = sanitizeSearchQuery(body.q, 100);
     const limit = Math.min(Math.max(1, body.limit ?? DEFAULT_LIMIT), MAX_LIMIT);
     const offset = Math.max(0, body.offset ?? 0);
     const filters = sanitizeFilters(body.filter);
+    console.log('[DEBUG] Computed query:', q);
+    console.log('[DEBUG] limit:', limit, 'offset:', offset, 'filters:', filters);
 
     // If no query, return empty result set (quick response)
     if (!q.trim()) {
@@ -121,11 +129,14 @@ export async function POST(req: Request) {
     const cacheKey = `${q}|l=${limit}|o=${offset}|f=${filters.join(';')}`;
     const cached = cacheGet(cacheKey);
     if (cached) {
+      console.log('[DEBUG] Returning cached result for key:', cacheKey);
       return NextResponse.json(cached, { status: 200 });
     }
 
     const meiliHost = process.env.MEILISEARCH_HOST;
     const meiliKey = process.env.MEILISEARCH_API_KEY;
+    console.log('[DEBUG] MEILISEARCH_HOST:', process.env.MEILISEARCH_HOST);
+    console.log('[DEBUG] MEILISEARCH_API_KEY exists:', !!process.env.MEILISEARCH_API_KEY);
 
     if (!meiliHost || !meiliKey) {
       console.error('Meili config missing in environment');
@@ -135,6 +146,9 @@ export async function POST(req: Request) {
     const target = `${meiliHost.replace(/\/$/, '')}/indexes/pages/search`;
 
     // Call Meili
+    console.log('[DEBUG] Sending request to Meili:', target, {
+  q, limit, offset, filters
+});
     const meiliRes = await fetch(target, {
       method: 'POST',
       headers: {
@@ -148,9 +162,12 @@ export async function POST(req: Request) {
         filter: filters,
       }),
     });
+    
 
     // Forward status and body (with small safety net)
     const data = await meiliRes.json().catch(() => ({ error: 'invalid_meili_response' }));
+    console.log('[DEBUG] Meili response status:', meiliRes.status, 'data:', data);
+
 
     // Optionally: shape results here before caching / returning
     // For now we assume Meili returns { hits, nbHits, ... } and we forward as-is
