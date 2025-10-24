@@ -11,7 +11,6 @@ type MeiliSearchReq = {
 // ---- Config ----
 const MAX_LIMIT = 50;
 const DEFAULT_LIMIT = 10;
-const QUERY_MAX_LENGTH = 300;
 
 // Rate limiter config (simple sliding window)
 const RATE_LIMIT_WINDOW_MS = 60_000; // 60 seconds
