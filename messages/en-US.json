@@ -382,7 +382,7 @@
   "NavigationMenu": {
     "home": "Home",
     "kite": "Kite",
-    "allKiteServices": "Overview",
+    "allKiteServices": "Kite Services",
     "freelancer": "Professional Services",
     "schoolSupport": "School Support",
     "travelServices": "Travel Services",
@@ -392,7 +392,7 @@
     "starting": "(Re-)Starting",
     "advanced": "Advanced",
     "engineer": "Engineer",
-    "allEngineeringServices": "Overview",
+    "allEngineeringServices": "Engineering Services",
     "processEngineering": "Process Engineering",
     "processControl": "Process Control",
     "processOptimization": "Process Optimization",
@@ -1289,35 +1289,5 @@
     "SearchBarPlaceholder":"Search",
     "NoSearchResults": "No results found for: ",
     "NoSearchResultsDetails":"Try different keywords or check spelling"
-  },
-  "TestCommit": {
-    "Test": "This is a test for the translate workflow"
-  },
-  "TestCommit2": {
-    "Test": "This is another test for the translate workflow"
-  },
-  "TestCommit3": {
-    "Test": "This one more test for the translate workflow"
-  },
-  "TestCommit4": {
-    "Test": "This one more test for the translate workflow with extra dependency installation"
-  },
-  "TestCommit5": {
-    "Test": "This one more test for the translate workflow with correct api key passing"
-  },
-  "TestCommit6": {
-    "Test": "This one more test for the translate workflow with correct api key"
-  },
-  "TestCommit7": {
-    "Test": "This one more test for the translate workflow with correct api key in the search request of the bar"
-  },
-  "TestCommit8": {
-    "Test": "This one more test for the translate workflow with correct api key in the search request of the bar"
-  },
-  "TestCommit9": {
-    "Test": "This another test for the translate workflow with correct api key in the search request of the bar"
-  },
-  "TestCommit10": {
-    "Test": "This another test for the translate workflow with correct api key in the search request of the bar. Now its available during runntime"
   }
 }

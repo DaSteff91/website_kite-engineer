@@ -352,7 +352,7 @@
   "NavigationMenu": {
     "home": "Home",
     "kite": "Kite",
-    "allKiteServices": "Überblick",
+    "allKiteServices": "Kite Services",
     "freelancer": "Professionelle Dienstleistungen",
     "schoolSupport": "Support für Schulen",
     "travelServices": "Reise Services",
@@ -362,7 +362,7 @@
     "starting": "(Neu-)Starter",
     "advanced": "Fortgeschritten",
     "engineer": "Engineer",
-    "allEngineeringServices": "Überblick",
+    "allEngineeringServices": "Engineer Services",
     "processEngineering": "Process Engineering",
     "processControl": "Prozesskontrolle",
     "processOptimization": "Prozessoptimierung",
@@ -826,32 +826,5 @@
   },
   "TestCommit": {
     "Test": "Dies ist ein Test für den übersetzen Workflow"
-  },
-  "TestCommit2": {
-    "Test": "Dies ist ein weiterer Test für den übersetzen Workflow"
-  },
-  "TestCommit3": {
-    "Test": "Dieser weitere Test für den übersetzen Workflow"
-  },
-  "TestCommit4": {
-    "Test": "Dieser weitere Test für den übersetzen Workflow mit extra abhängiger Installation"
-  },
-  "TestCommit5": {
-    "Test": "Dieser noch einen Test für den übersetzen Workflow mit korrekter Api-Taste Passage"
-  },
-  "TestCommit6": {
-    "Test": "Dieser noch einen Test für den übersetzen Workflow mit korrekter api-Taste"
-  },
-  "TestCommit7": {
-    "Test": "Dieser noch einen Test für den übersetzen Workflow mit korrekter Api-Taste in der Suchanfrage der Bar"
-  },
-  "TestCommit8": {
-    "Test": "Dieser noch einen Test für den übersetzen Workflow mit korrekter Api-Taste in der Suchanfrage der Bar"
-  },
-  "TestCommit9": {
-    "Test": "Dieser weitere Test für den übersetzen Workflow mit korrekter Api-Taste in der Suchanfrage der Bar"
-  },
-  "TestCommit10": {
-    "Test": "Dieser weitere Test für den übersetzen Workflow mit korrekter Api-Taste in der Suchanfrage der Bar. Jetzt seine verfügbare während der Laufzeit"
   }
 }
