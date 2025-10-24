@@ -383,7 +383,7 @@
   "NavigationMenu": {
     "home": "Home",
     "kite": "Kite",
-    "allKiteServices": "Kite Serviços",
+    "allKiteServices": "Serviço de Kite",
     "freelancer": "Serviços Profissionais",
     "schoolSupport": "Profissional Freelancer",
     "travelServices": "Serviços de Viagem",
@@ -393,7 +393,7 @@
     "starting": "(Re)Início",
     "advanced": "Avançado",
     "engineer": "Engineer",
-    "allEngineeringServices": "Engineer Serviços",
+    "allEngineeringServices": "Serviços de Engenharia",
     "processEngineering": "Engenharia de Processos",
     "processControl": "Controle de Processos",
     "processOptimization": "Otimização de Processos",
