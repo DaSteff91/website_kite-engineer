@@ -1,3 +1,11 @@
+## [1.30.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.2...v1.30.3) (2025-10-24)
+
+
+### Bug Fixes
+
+* fix new translation ([b1a23ac](https://github.com/DaSteff91/website_kite-engineer/commit/b1a23ac165c6e6c9f24e817c9d0d29a360997475))
+* minor change to force pipeline rebuilding ([3a6e907](https://github.com/DaSteff91/website_kite-engineer/commit/3a6e9072d6b1f23377e5dda75073783613e96d72))
+
 ## [1.30.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.1...v1.30.2) (2025-10-24)
 
 
