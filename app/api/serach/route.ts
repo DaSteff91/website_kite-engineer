@@ -5,7 +5,7 @@ type MeiliSearchReq = {
   q?: string;
   limit?: number;
   offset?: number;
-  filter?: string[]; // expected like ["locale = en-US"]
+  filter?: string[]; // like ["locale = en-US"]
 };
 
 // ---- Config ----
