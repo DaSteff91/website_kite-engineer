@@ -1,3 +1,10 @@
+## [1.30.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.3...v1.30.4) (2025-10-24)
+
+
+### Bug Fixes
+
+* minor translation missmatches and implementing debugging ([b7be977](https://github.com/DaSteff91/website_kite-engineer/commit/b7be9776bdbbd546c1c18999ccce00b2e01ad0cc))
+
 ## [1.30.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.2...v1.30.3) (2025-10-24)
 
 
