@@ -1,7 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
 import {routing} from './i18n/routing';
-import { NextResponse } from 'next/server';
-import { NextRequest } from 'next/server';
  
 export default createMiddleware({
   // A list of all locales that are supported

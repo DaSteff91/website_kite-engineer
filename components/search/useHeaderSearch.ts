@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useDebounce } from 'use-debounce';
 import { usePathname } from 'next/navigation';
 import { SearchResult } from './types';
+import { sanitizeSearchQuery } from '@/lib/utils/sanitizeSearch';
 
 export function useHeaderSearch() {
   const pathname = usePathname();
@@ -17,44 +18,46 @@ export function useHeaderSearch() {
   const [isSearchLoading, setIsSearchLoading] = useState(false);
   const [debouncedQuery] = useDebounce(searchQuery, 300);
 
-  useEffect(() => {
-    const performSearch = async (query: string) => {
-      if (!query.trim()) {
+useEffect(() => {
+  const performSearch = async (query: string) => {
+    if (!query.trim()) {
+      setSearchResults([]);
+      return;
+    }
+
+    setIsSearchLoading(true);
+    try {
+      const q = sanitizeSearchQuery(query);
+      if (!q) {
         setSearchResults([]);
         return;
       }
 
-      setIsSearchLoading(true);
-      try {
-        const response = await fetch(
-          `${process.env.MEILISEARCH_HOST}/indexes/pages/search`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${process.env.MEILISEARCH_API_KEY}`,
-            },
-            body: JSON.stringify({
-              q: query,
-              filter: [`locale = ${currentLocale}`],
-              limit: 20,
-            }),
-          }
-        );
-        const data = await response.json();
-        setSearchResults(data.hits || []);
-      } catch (error) {
-        console.error("Search failed:", error);
-        setSearchResults([]);
-      } finally {
-        setIsSearchLoading(false);
-      }
-    };
+      const response = await fetch('/api/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          q,
+          filter: [`locale = ${currentLocale}`],
+          limit: 20,
+        }),
+      });
 
-    if (debouncedQuery.trim()) {
-      performSearch(debouncedQuery);
+      const data = await response.json();
+      setSearchResults(data.hits || []);
+    } catch (error) {
+      console.error('Search failed:', error);
+      setSearchResults([]);
+    } finally {
+      setIsSearchLoading(false);
     }
-  }, [debouncedQuery, currentLocale]);
+  };
+
+  if (debouncedQuery.trim()) {
+    performSearch(debouncedQuery);
+  }
+}, [debouncedQuery, currentLocale]);
+
 
   return {
     searchQuery,
