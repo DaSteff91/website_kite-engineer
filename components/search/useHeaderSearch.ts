@@ -27,12 +27,12 @@ export function useHeaderSearch() {
       setIsSearchLoading(true);
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_MEILI_HOST}/indexes/pages/search`,
+          `${process.env.MEILISEARCH_HOST}/indexes/pages/search`,
           {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${process.env.NEXT_PUBLIC_MEILI_SEARCH_KEY}`,
+              Authorization: `Bearer ${process.env.MEILISEARCH_API_KEY}`,
             },
             body: JSON.stringify({
               q: query,

@@ -2,7 +2,6 @@
 
 import { X } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Input } from "../ui/input";
 import { HeaderSearchBarProps } from "./types";
 import { Button } from "../ui/button";
 
