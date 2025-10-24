@@ -893,8 +893,7 @@ jobs:
       - name: Checkout repo (full history)
         uses: actions/checkout@v5
         with:
-          fetch-depth: 0
-          persist-credentials: true
+          fetch-depth: 1
       
       - name: Setup Node server environment
         uses: actions/setup-node@v6
@@ -923,7 +922,7 @@ jobs:
 
     steps:
       - name: Checkout the repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           token: ${{ secrets.SEMVERSIONING }}

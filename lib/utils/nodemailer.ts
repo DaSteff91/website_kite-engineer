@@ -1,5 +1,3 @@
-// utils/nodemailer.ts
-
 import nodemailer from 'nodemailer';
 import type { SendMailOptions } from 'nodemailer';
 

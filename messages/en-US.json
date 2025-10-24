@@ -1316,5 +1316,8 @@
   },
   "TestCommit9": {
     "Test": "This another test for the translate workflow with correct api key in the search request of the bar"
+  },
+  "TestCommit10": {
+    "Test": "This another test for the translate workflow with correct api key in the search request of the bar. Now its available during runntime"
   }
 }
