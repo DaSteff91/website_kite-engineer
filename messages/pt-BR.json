@@ -841,5 +841,8 @@
   },
   "TestCommit6": {
     "Test": "Mais um teste para traduzir o fluxo de trabalho com a chave Api correta"
+  },
+  "TestCommit7": {
+    "Test": "Mais um teste para traduzir o fluxo de trabalho com a chave Api correta na solicitação de busca da barra"
   }
 }
