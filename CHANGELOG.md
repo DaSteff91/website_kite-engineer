@@ -1,3 +1,10 @@
+## [1.30.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.4...v1.30.5) (2025-10-25)
+
+
+### Bug Fixes
+
+* updating some ludice icons and fixing a typo ([9b6f333](https://github.com/DaSteff91/website_kite-engineer/commit/9b6f33384790103d39ca7e2aa76c78154794d12e))
+
 ## [1.30.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.3...v1.30.4) (2025-10-24)
 
 
