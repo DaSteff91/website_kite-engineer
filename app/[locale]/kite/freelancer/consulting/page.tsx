@@ -3,7 +3,12 @@ import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ShoppingCart, Presentation } from "lucide-react";
+import {
+  ArrowLeft,
+  ShoppingCart,
+  Presentation,
+  MessageCircleMore,
+} from "lucide-react";
 import { getPageMetadata } from "@/lib/constants/metadata";
 import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
@@ -11,10 +16,16 @@ import { Hero } from "@/components/sections/Hero";
 
 export async function generateMetadata({
   params,
-}: { params: ConsultingPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: ConsultingPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "KiteSubpages.Freelancer.Consulting", "/kite/freelancer/consulting");
+  return await getPageMetadata(
+    locale,
+    "KiteSubpages.Freelancer.Consulting",
+    "/kite/freelancer/consulting"
+  );
 }
 
 interface ConsultingPageProps {
@@ -32,7 +43,6 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
     locale,
     namespace: "ContactTemplates",
   });
-
 
   const richTextHandlers = {
     strong: (chunks: React.ReactNode) => <strong>{chunks}</strong>,
@@ -118,7 +128,7 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto mb-16">
             <div className="bg-gradient-to-br from-blue-900/20 via-card/20 to-cyan-900/20 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <ShoppingCart className="h-6 w-6 text-blue-400" />
+                <MessageCircleMore className="h-6 w-6 text-blue-400" />
                 <h3
                   id="general-consulting-title"
                   className="text-xl sm:text-xl md:text-2xl font-semibold text-blue-200"
@@ -127,19 +137,34 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-md list-none pl-0">
-                <li id="general-consulting-list-element1" className="pl-3 -indent-3">
+                <li
+                  id="general-consulting-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-consulting-list-element1")}
                 </li>
-                <li id="general-consulting-list-element2" className="pl-3 -indent-3">
+                <li
+                  id="general-consulting-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-consulting-list-element2")}
                 </li>
-                <li id="general-consulting-list-element3" className="pl-3 -indent-3">
+                <li
+                  id="general-consulting-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-consulting-list-element3")}
                 </li>
-                <li id="general-consulting-list-element4" className="pl-3 -indent-3">
+                <li
+                  id="general-consulting-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-consulting-list-element4")}
                 </li>
-                <li id="general-consulting-list-element5" className="pl-3 -indent-3">
+                <li
+                  id="general-consulting-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("general-consulting-list-element5")}
                 </li>
               </ul>
@@ -156,19 +181,34 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-md list-none pl-0">
-                <li id="sport-representation-list-element1" className="pl-3 -indent-3">
+                <li
+                  id="sport-representation-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("sport-representation-list-element1")}
                 </li>
-                <li id="sport-representation-list-element2" className="pl-3 -indent-3">
+                <li
+                  id="sport-representation-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("sport-representation-list-element2")}
                 </li>
-                <li id="sport-representation-list-element3" className="pl-3 -indent-3">
+                <li
+                  id="sport-representation-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("sport-representation-list-element3")}
                 </li>
-                <li id="sport-representation-list-element4" className="pl-3 -indent-3">
+                <li
+                  id="sport-representation-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("sport-representation-list-element4")}
                 </li>
-                <li id="sport-representation-list-element5" className="pl-3 -indent-3">
+                <li
+                  id="sport-representation-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("sport-representation-list-element5")}
                 </li>
               </ul>
@@ -184,7 +224,10 @@ export default async function ConsultingPage({ params }: ConsultingPageProps) {
               {t("consulting-contact")}
             </p>
             <Link
-              href={hrefForTemplateWithTranslator(contactT, "/kite/freelancer/consulting")}
+              href={hrefForTemplateWithTranslator(
+                contactT,
+                "/kite/freelancer/consulting"
+              )}
               target="_blank"
             >
               <Button

@@ -4,17 +4,23 @@ import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Users, Clock, Drama } from "lucide-react";
+import { ArrowLeft, Users, Clock, Drama, Ambulance } from "lucide-react";
 import { getPageMetadata } from "@/lib/constants/metadata";
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 
 export async function generateMetadata({
   params,
-}: { params: SchoolSupportPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: SchoolSupportPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "KiteSubpages.Freelancer.SchoolSupport", "/kite/freelancer/school-support");
+  return await getPageMetadata(
+    locale,
+    "KiteSubpages.Freelancer.SchoolSupport",
+    "/kite/freelancer/school-support"
+  );
 }
 interface SchoolSupportPageProps {
   params: Promise<{ locale: string }>;
@@ -163,7 +169,7 @@ export default async function SchoolSupportPage({
 
             <div className="bg-gradient-to-br from-cyan-900/25 via-card/25 to-teal-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <Users className="h-6 w-6 text-cyan-400" />
+                <Ambulance className="h-6 w-6 text-cyan-400" />
                 <h3
                   id="general-assistance-title"
                   className="text-xl sm:text-xl md:text-2xl font-semibold text-cyan-200"

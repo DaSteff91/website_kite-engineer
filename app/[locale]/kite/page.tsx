@@ -20,6 +20,7 @@ import {
   ArrowBigUpDash,
   MessageSquareText,
   ExternalLink,
+  ClipboardList,
 } from "lucide-react";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
 import { getPageMetadata } from "@/lib/constants/metadata";
@@ -246,7 +247,7 @@ export default async function KitePage({ params }: KitePageProps) {
                 className="text-2xl font-bold mb-4 pb-3 border-b border-white/20 flex items-center gap-3 text-cyan-200"
                 id="courses-section"
               >
-                <List className="h-7 w-7 text-cyan-400" />
+                <ClipboardList className="h-7 w-7 text-cyan-400" />
                 {t("courses.title")}
               </h3>
               <Accordion type="single" collapsible className="w-full">

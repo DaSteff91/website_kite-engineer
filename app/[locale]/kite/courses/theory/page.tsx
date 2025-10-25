@@ -15,6 +15,8 @@ import {
   TriangleAlert,
   PackagePlus,
   Unplug,
+  NotebookPen,
+  Leaf,
 } from "lucide-react";
 
 import { getPageMetadata } from "@/lib/constants/metadata";
@@ -24,10 +26,16 @@ import { Hero } from "@/components/sections/Hero";
 
 export async function generateMetadata({
   params,
-}: { params: TheoryPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: TheoryPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "KiteSubpages.Courses.Theory", "/kite/courses/theory");
+  return await getPageMetadata(
+    locale,
+    "KiteSubpages.Courses.Theory",
+    "/kite/courses/theory"
+  );
 }
 
 interface TheoryPageProps {
@@ -45,7 +53,6 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
     locale,
     namespace: "ContactTemplates",
   });
-
 
   return (
     <div className="relative min-h-screen">
@@ -123,22 +130,40 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-md list-none pl-0">
-                <li id="rider-essentials-list-element1" className="pl-3 -indent-3">
+                <li
+                  id="rider-essentials-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("rider-essentials-list-element1")}
                 </li>
-                <li id="rider-essentials-list-element2" className="pl-3 -indent-3">
+                <li
+                  id="rider-essentials-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("rider-essentials-list-element2")}
                 </li>
-                <li id="rider-essentials-list-element3" className="pl-3 -indent-3">
+                <li
+                  id="rider-essentials-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("rider-essentials-list-element3")}
                 </li>
-                <li id="rider-essentials-list-element4" className="pl-3 -indent-3">
+                <li
+                  id="rider-essentials-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("rider-essentials-list-element4")}
                 </li>
-                <li id="rider-essentials-list-element5" className="pl-3 -indent-3">
+                <li
+                  id="rider-essentials-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("rider-essentials-list-element5")}
                 </li>
-                <li id="rider-essentials-list-element6" className="pl-3 -indent-3">
+                <li
+                  id="rider-essentials-list-element6"
+                  className="pl-3 -indent-3"
+                >
                   {t("rider-essentials-list-element6")}
                 </li>
               </ul>
@@ -146,7 +171,7 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
 
             <div className="bg-gradient-to-br from-teal-900/25 via-card/25 to-emerald-900/25 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <PackagePlus className="h-6 w-6 text-teal-400" />
+                <NotebookPen className="h-6 w-6 text-teal-400" />
                 <h3
                   id="advanced-theory-title"
                   className="text-xl sm:text-xl md:text-2xl font-semibold text-teal-200"
@@ -155,19 +180,34 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-md list-none pl-0">
-                <li id="advanced-theory-list-element1" className="pl-3 -indent-3">
+                <li
+                  id="advanced-theory-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-theory-list-element1")}
                 </li>
-                <li id="advanced-theory-list-element2" className="pl-3 -indent-3">
+                <li
+                  id="advanced-theory-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-theory-list-element2")}
                 </li>
-                <li id="advanced-theory-list-element3" className="pl-3 -indent-3">
+                <li
+                  id="advanced-theory-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-theory-list-element3")}
                 </li>
-                <li id="advanced-theory-list-element4" className="pl-3 -indent-3">
+                <li
+                  id="advanced-theory-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-theory-list-element4")}
                 </li>
-                <li id="advanced-theory-list-element5" className="pl-3 -indent-3">
+                <li
+                  id="advanced-theory-list-element5"
+                  className="pl-3 -indent-3"
+                >
                   {t("advanced-theory-list-element5")}
                 </li>
               </ul>
@@ -175,7 +215,7 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
 
             <div className="bg-gradient-to-br from-emerald-900/30 via-card/30 to-blue-900/30 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <Unplug className="h-6 w-6 text-emerald-400" />
+                <Leaf className="h-6 w-6 text-emerald-400" />
                 <h3
                   id="environmental-stuff-title"
                   className="text-xl sm:text-xl md:text-2xl font-semibold text-emerald-200"
@@ -184,16 +224,28 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
                 </h3>
               </div>
               <ul className="text-white/80 space-y-2 text-md list-none pl-0">
-                <li id="environmental-stuff-list-element1" className="pl-3 -indent-3">
+                <li
+                  id="environmental-stuff-list-element1"
+                  className="pl-3 -indent-3"
+                >
                   {t("environmental-stuff-list-element1")}
                 </li>
-                <li id="environmental-stuff-list-element2" className="pl-3 -indent-3">
+                <li
+                  id="environmental-stuff-list-element2"
+                  className="pl-3 -indent-3"
+                >
                   {t("environmental-stuff-list-element2")}
                 </li>
-                <li id="environmental-stuff-list-element3" className="pl-3 -indent-3">
+                <li
+                  id="environmental-stuff-list-element3"
+                  className="pl-3 -indent-3"
+                >
                   {t("environmental-stuff-list-element3")}
                 </li>
-                <li id="environmental-stuff-list-element4" className="pl-3 -indent-3">
+                <li
+                  id="environmental-stuff-list-element4"
+                  className="pl-3 -indent-3"
+                >
                   {t("environmental-stuff-list-element4")}
                 </li>
               </ul>
@@ -209,7 +261,10 @@ export default async function TheoryPage({ params }: TheoryPageProps) {
               {t("theory-contact")}
             </p>
             <Link
-              href={hrefForTemplateWithTranslator(contactT, "/kite/courses/theory")}
+              href={hrefForTemplateWithTranslator(
+                contactT,
+                "/kite/courses/theory"
+              )}
               target="_blank"
             >
               <Button
