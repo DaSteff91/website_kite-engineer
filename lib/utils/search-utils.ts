@@ -20,7 +20,7 @@ export function getNavigationTitle(
     messages: Record<string, any>,
     locale: string,
 ) : string {
-    const navKey = PAGE_TO_NAV_KEY[pageKey as keyof typeof PAGE_TO_NAV_KEY]
+    const navKey = PAGE_TO_NAV_KEY[pageKey as keyof typeof PAGE_TO_NAV_KEY];
 
     if (!navKey) {
         console.warn(`No navigation key found for page: ${pageKey}`);

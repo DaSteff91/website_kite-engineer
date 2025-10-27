@@ -26,7 +26,9 @@ export const PAGE_TO_JSON_KEY = {
     '/engineer/technical-consulting/training-knowledge-transfer': 'TrainingKnowledgeTransferPage',
     '/engineer/technical-consulting/competitor-analysis': 'CompetitorAnalysisPage',
     '/about': 'AboutPage',
-    '/contact': 'ContactPage'
+    '/contact': 'ContactPage',
+    '/kite': 'KitePage',
+    '/engineer': 'EngineerPage'
 } as const;
 
 export const PAGE_TO_NAV_KEY = {
@@ -57,7 +59,9 @@ export const PAGE_TO_NAV_KEY = {
     'TrainingKnowledgeTransferPage': 'trainingKnowledgeTransfer',
     'CompetitorAnalysisPage': 'competitorAnalysis',
     'AboutPage': 'about',
-    'ContactPage': 'contact'
+    'ContactPage': 'contact',
+    'KitePage': 'kite',
+    'EngineerPage': 'engineer'
 } as const;
 
 export type PagePath = keyof typeof PAGE_TO_JSON_KEY;

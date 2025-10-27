@@ -22,10 +22,16 @@ import { Hero } from "@/components/sections/Hero";
 
 export async function generateMetadata({
   params,
-}: { params: StartingPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: StartingPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "KiteSubpages.Courses.Starting", "/kite/courses/starting");
+  return await getPageMetadata(
+    locale,
+    "KiteSubpages.Courses.Starting",
+    "/kite/courses/starting"
+  );
 }
 interface StartingPageProps {
   params: Promise<{ locale: string }>;
@@ -42,7 +48,6 @@ export default async function StartingPage({ params }: StartingPageProps) {
     locale,
     namespace: "ContactTemplates",
   });
-
 
   return (
     <div className="relative min-h-screen">
@@ -239,14 +244,17 @@ export default async function StartingPage({ params }: StartingPageProps) {
               {t("starting-contact")}
             </p>
             <Link
-              href={hrefForTemplateWithTranslator(contactT, "/kite/courses/starting")}
+              href={hrefForTemplateWithTranslator(
+                contactT,
+                "/kite/courses/starting"
+              )}
               target="_blank"
             >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                {t("contact-button")}{" "}
+                {t("contact-button")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>

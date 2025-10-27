@@ -26,5 +26,7 @@ export const SEARCHABLE_PAGES = [
     'TrainingKnowledgeTransferPage',
     'CompetitorAnalysisPage',
     'AboutPage',
-    'ContactPage'
+    'ContactPage',
+    'KitePage',
+    'EngineerPage'
 ];

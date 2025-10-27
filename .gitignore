@@ -39,3 +39,4 @@ yarn-error.log*
 /i18n-codemod
 /meilisearch
 /scripts/search-indexer/node_modules
+scripts/search-indexer/run-local-test.ts

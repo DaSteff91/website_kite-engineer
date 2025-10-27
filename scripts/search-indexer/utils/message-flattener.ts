@@ -1,11 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
-// Import from new locations
 import { PAGE_TO_JSON_KEY, PAGE_TO_NAV_KEY } from '@/lib/constants/search-mappings';
 import { cleanContentObject, getNavigationTitle } from '@/lib/utils/search-utils';
 import { SearchDocument } from '@/lib/schemas/search-schemas';
+import { extractSubsectionsFromObject } from '@/lib/utils/extractSubsections';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -13,6 +12,18 @@ export function createSearchDocuments(): SearchDocument[] {
   const documents: SearchDocument[] = [];
   const locales = ['en-US', 'de-DE', 'pt-BR'];
   const messagesDir = path.join(__dirname, '../../../messages');
+
+  const HERO_KEY_RX = /(heroTitle$|[-_]hero$)/i;
+  const SECTION_KEY_RX = /^(sectionTitle|sectionSubtitle|sectionDescription)$/i;
+  const CONTACT_SUMMARY_RX = /[-_]contact$/i;              // e.g. travel-services-contact
+  const CONTACT_BUTTON_RX = /contact[-_]?button/i;          // exclude buttons
+
+  function stripHtmlTags(text: string): string {
+    return String(text || '').replace(/<[^>]*>/g, '');
+  }
+  function clean(text: string): string {
+    return stripHtmlTags(text).replace(/\s+/g, ' ').trim();
+  }
   
   // Create reverse mapping
   const JSON_KEY_TO_PAGE: { [key: string]: string } = {};
@@ -30,9 +41,8 @@ export function createSearchDocuments(): SearchDocument[] {
     
     const messages = JSON.parse(fs.readFileSync(messageFile, 'utf8'));
     
-    for (const pageKey of Object.keys(PAGE_TO_NAV_KEY)) {
+    for (const pageKey of Object.keys(PAGE_TO_NAV_KEY) as Array<keyof typeof PAGE_TO_NAV_KEY>) {
       const pagePath = JSON_KEY_TO_PAGE[pageKey];
-      
       if (!pagePath) {
         console.warn(`No page path found for JSON key: ${pageKey}`);
         continue;
@@ -52,17 +62,66 @@ export function createSearchDocuments(): SearchDocument[] {
         console.warn(`No text content found for ${pageKey} in ${locale}`);
         continue;
       }
+
+      const pageObj = messages[pageKey];
+      const keys = Object.keys(pageObj as Record<string, unknown>);
+      const heroKey = keys.find((k: string) => HERO_KEY_RX.test(k) && typeof pageObj[k] === 'string');
+      const heroTitle = heroKey ? clean(pageObj[heroKey]) : (typeof pageObj.heroTitle === 'string' ? clean(pageObj.heroTitle) : '');
+
+      const subsections = extractSubsectionsFromObject(pageObj);
+
+      // Preview created bullets
+      const bullets = subsections.map(s => {
+        const joined = s.items.join('. ').replace(/\s+/g,' ').trim();
+        return `${s.parentTitle}: ${joined}${joined.endsWith('.') ? '' : '.'}`;
+      });
+
+      // Align parentTitles to bullets
+      const parentTitles = subsections.map(s => s.parentTitle);
+
+      // SECTIONS (title + subtitle + description)
+      const sections: string[] = [];
+      for (const k of keys) {
+        if (SECTION_KEY_RX.test(k) && typeof pageObj[k] === 'string') {
+          const val = clean(pageObj[k]);
+          if (val) sections.push(val);
+        }
+      }
+
+      // CONTACT SUMMARY (include keys like "...-contact", but NOT contact-button)
+      const contactSummaries: string[] = [];
+      for (const k of keys) {
+        if (CONTACT_SUMMARY_RX.test(k) && !CONTACT_BUTTON_RX.test(k) && typeof pageObj[k] === 'string') {
+          const val = clean(pageObj[k]);
+          if (val) contactSummaries.push(val);
+        }
+      }
+
+      // Build partial SearchDocument (for testing only)
+      const docPreview = {
+        id: `${locale}|${String(pageKey)}`,
+        title: getNavigationTitle(String(pageKey), messages, locale),
+        locale,
+        pagePath: (PAGE_TO_NAV_KEY as Record<string, string>)[String(pageKey)],
+        bullets,         // from extractSubsections
+        parentTitles,    // from extractSubsections
+        sections,        // now includes sectionTitle + sectionSubtitle (+ sectionDescription if present)
+        heroTitle,       // now picked up even for ...-hero keys
+        contact: contactSummaries.length ? contactSummaries : undefined // optional field
+      };
+
+      console.log('DOC PREVIEW', docPreview);
       
       // Find the page title for the search result
       const title = getNavigationTitle(pageKey, messages, locale);
       
-      documents.push({
-        id: `${locale}-${pageKey}`,
-        title: title,
-        locale: locale,
-        pagePath: pagePath,
-        content: cleanedContent
-      });
+      // documents.push({
+      //   id: `${locale}-${pageKey}`,
+      //   title: title,
+      //   locale: locale,
+      //   pagePath: pagePath,
+      //   content: cleanedContent
+      // });
     }
   }
   
