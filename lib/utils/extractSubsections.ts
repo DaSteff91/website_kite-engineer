@@ -4,6 +4,13 @@ export type Subsection = {
   path: string[];      // JSON path, useful for debugging/ordering
 };
 
+export type ExtractedContent = {
+  subsections: Subsection[];
+  contactTexts: string[];
+  summaryTexts: string[];
+  ctaTexts: string[];
+};
+
 // --- Regex patterns (robust & comprehensive) ---
 const LIST_KEY_REGEX =
   /(list[-_]?element\d*|listItem\d*|list[-_]?\d+|items\d*|professionalItems|personalItems)$/i;
@@ -14,6 +21,10 @@ const DESCRIPTION_KEY_REGEX =
   /(^description$|sectionDescription$|sectionSubtitle$|subtitle$)/i;
 
 const HERO_KEY_REGEX = /(heroTitle$|[-_]hero$)/i;
+
+const CONTACT_KEY_REGEX = /(^contact$|[-_]contact$)/i;
+const SUMMARY_KEY_REGEX = /(^summary$|summary$|[-_](summary|overview|teaser)$)/i;
+const CTA_KEY_REGEX = /(cta$|call[-_]?to[-_]?action$)/i;
 
 const UI_DENYLIST = [
   /contact[-_]?button/i,
@@ -68,8 +79,19 @@ export function getHeroTitleFromObject(obj: Record<string, any>): string | null 
 export function extractSubsectionsFromObject(
   obj: Record<string, any>,
   ancestors: string[] = []
-): Subsection[] {
+): ExtractedContent {
   const subsections: Subsection[] = [];
+  const contactTexts = new Set<string>();
+  const summaryTexts = new Set<string>();
+  const ctaTexts = new Set<string>();
+
+  function pushUnique(target: Set<string>, value: unknown, minimumLength = 0) {
+    if (typeof value !== 'string') return;
+    const cleaned = sanitizeText(value);
+    if (!cleaned) return;
+    if (minimumLength > 0 && cleaned.length < minimumLength) return;
+    target.add(cleaned);
+  }
 
   function inspectNode(node: Record<string, any>, path: string[]) {
     if (!node || typeof node !== 'object' || Array.isArray(node)) return;
@@ -82,6 +104,16 @@ export function extractSubsectionsFromObject(
     for (const key of keys) {
       if (isUiKey(key)) continue;
       const val = (node as any)[key];
+
+      if (typeof val === 'string') {
+        if (CONTACT_KEY_REGEX.test(key)) {
+          pushUnique(contactTexts, val, 20);
+        } else if (SUMMARY_KEY_REGEX.test(key)) {
+          pushUnique(summaryTexts, val, 16);
+        } else if (CTA_KEY_REGEX.test(key)) {
+          pushUnique(ctaTexts, val, 8);
+        }
+      }
 
       if (typeof val !== 'string') continue; // only string leaf values here
       if (!LIST_KEY_REGEX.test(key)) continue;
@@ -182,5 +214,10 @@ export function extractSubsectionsFromObject(
   }
 
   inspectNode(obj, ancestors);
-  return subsections;
+  return {
+    subsections,
+    contactTexts: Array.from(contactTexts),
+    summaryTexts: Array.from(summaryTexts),
+    ctaTexts: Array.from(ctaTexts),
+  };
 }

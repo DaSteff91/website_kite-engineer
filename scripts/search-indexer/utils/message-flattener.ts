@@ -15,9 +15,6 @@ export function createSearchDocuments(): SearchDocument[] {
 
   const HERO_KEY_RX = /(heroTitle$|[-_]hero$)/i;
   const SECTION_KEY_RX = /^(sectionTitle|sectionSubtitle|sectionDescription)$/i;
-  const CONTACT_SUMMARY_RX = /[-_]contact$/i;              // e.g. travel-services-contact
-  const CONTACT_BUTTON_RX = /contact[-_]?button/i;          // exclude buttons
-
   function stripHtmlTags(text: string): string {
     return String(text || '').replace(/<[^>]*>/g, '');
   }
@@ -68,7 +65,12 @@ export function createSearchDocuments(): SearchDocument[] {
       const heroKey = keys.find((k: string) => HERO_KEY_RX.test(k) && typeof pageObj[k] === 'string');
       const heroTitle = heroKey ? clean(pageObj[heroKey]) : (typeof pageObj.heroTitle === 'string' ? clean(pageObj.heroTitle) : '');
 
-      const subsections = extractSubsectionsFromObject(pageObj);
+      const {
+        subsections,
+        contactTexts,
+        summaryTexts,
+        ctaTexts,
+      } = extractSubsectionsFromObject(pageObj);
 
       // Preview created bullets
       const bullets = subsections.map(s => {
@@ -88,42 +90,66 @@ export function createSearchDocuments(): SearchDocument[] {
         }
       }
 
-      // CONTACT SUMMARY (include keys like "...-contact", but NOT contact-button)
-      const contactSummaries: string[] = [];
-      for (const k of keys) {
-        if (CONTACT_SUMMARY_RX.test(k) && !CONTACT_BUTTON_RX.test(k) && typeof pageObj[k] === 'string') {
-          const val = clean(pageObj[k]);
-          if (val) contactSummaries.push(val);
-        }
-      }
+      const normalizedSections = Array.from(
+        new Set(
+          sections
+            .concat(summaryTexts)
+            .concat(ctaTexts)
+            .concat(contactTexts)
+            .map((text) => text.replace(/\s+/g, ' ').trim())
+            .filter(Boolean)
+        )
+      );
+
+      const normalizedSummaries = Array.from(
+        new Set(
+          summaryTexts
+            .concat(ctaTexts)
+            .map((text) => text.replace(/\s+/g, ' ').trim())
+            .filter(Boolean)
+        )
+      );
+
+      const normalizedContacts = Array.from(
+        new Set(contactTexts.map((text) => text.replace(/\s+/g, ' ').trim()).filter(Boolean))
+      );
 
       // Build partial SearchDocument (for testing only)
-      const docPreview = {
+      const document: SearchDocument = {
         id: `${locale}|${String(pageKey)}`,
         title: getNavigationTitle(String(pageKey), messages, locale),
         locale,
         pagePath: (PAGE_TO_NAV_KEY as Record<string, string>)[String(pageKey)],
-        bullets,         // from extractSubsections
-        parentTitles,    // from extractSubsections
-        sections,        // now includes sectionTitle + sectionSubtitle (+ sectionDescription if present)
-        heroTitle,       // now picked up even for ...-hero keys
-        contact: contactSummaries.length ? contactSummaries : undefined // optional field
+        content: cleanedContent,
       };
 
-      console.log('DOC PREVIEW', docPreview);
-      
-      // Find the page title for the search result
-      const title = getNavigationTitle(pageKey, messages, locale);
-      
-      // documents.push({
-      //   id: `${locale}-${pageKey}`,
-      //   title: title,
-      //   locale: locale,
-      //   pagePath: pagePath,
-      //   content: cleanedContent
-      // });
+      if (heroTitle) {
+        document.heroTitle = heroTitle;
+      }
+
+      if (bullets.length) {
+        document.bullets = bullets;
+      }
+
+      if (parentTitles.length) {
+        document.parentTitles = parentTitles;
+      }
+
+      if (normalizedSections.length) {
+        document.sections = normalizedSections;
+      }
+
+      if (normalizedSummaries.length) {
+        document.summaries = normalizedSummaries;
+      }
+
+      if (normalizedContacts.length) {
+        document.contact = normalizedContacts;
+      }
+
+      documents.push(document);
     }
   }
-  
+
   return documents;
 }
