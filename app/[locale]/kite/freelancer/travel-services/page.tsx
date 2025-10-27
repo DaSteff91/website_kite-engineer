@@ -3,13 +3,7 @@ import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  ArrowLeft,
-  Plane,
-  Users,
-  DumbbellIcon,
-} from "lucide-react";
+import { ArrowLeft, Plane, Users, DumbbellIcon } from "lucide-react";
 import { getPageMetadata } from "@/lib/constants/metadata";
 import type { Metadata } from "next";
 import { hrefForTemplateWithTranslator } from "@/lib/utils/contact-i18n-helper";
@@ -17,10 +11,16 @@ import { Hero } from "@/components/sections/Hero";
 
 export async function generateMetadata({
   params,
-}: { params: TravelServicesPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: TravelServicesPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "KiteSubpages.Freelancer.TravelServices", "/kite/freelancer/travel-services");
+  return await getPageMetadata(
+    locale,
+    "KiteSubpages.Freelancer.TravelServices",
+    "/kite/freelancer/travel-services"
+  );
 }
 interface TravelServicesPageProps {
   params: Promise<{ locale: string }>;
@@ -39,7 +39,6 @@ export default async function TravelServicesPage({
     locale,
     namespace: "ContactTemplates",
   });
-
 
   return (
     <div className="relative min-h-screen">
@@ -218,7 +217,10 @@ export default async function TravelServicesPage({
               {t("travel-services-contact")}
             </p>
             <Link
-              href={hrefForTemplateWithTranslator(contactT, "/kite/freelancer/travel-services")}
+              href={hrefForTemplateWithTranslator(
+                contactT,
+                "/kite/freelancer/travel-services"
+              )}
               target="_blank"
             >
               <Button

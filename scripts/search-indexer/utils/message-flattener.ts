@@ -53,7 +53,7 @@ export function createSearchDocuments(): SearchDocument[] {
         continue;
       }
       
-      // This now uses the same logic as next-intl, just server-side
+      // Find the page title for the search result
       const title = getNavigationTitle(pageKey, messages, locale);
       
       documents.push({

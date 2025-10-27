@@ -49,7 +49,6 @@ export default async function KitePage({ params }: KitePageProps) {
     namespace: "KitePage",
   });
 
-  // We will use this to resolve the subject/message templates server-side.
   const contactT = await getTranslations({
     locale,
     namespace: "ContactTemplates",

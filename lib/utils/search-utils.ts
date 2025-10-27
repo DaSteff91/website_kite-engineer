@@ -1,5 +1,3 @@
-// using the already existing navigation titles as search result titles
-
 import { PAGE_TO_NAV_KEY } from "../constants/search-mappings";
 
 export function stripHtmlTags(text: string): string {
