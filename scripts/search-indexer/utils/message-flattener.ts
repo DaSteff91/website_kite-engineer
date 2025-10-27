@@ -4,7 +4,10 @@ import { fileURLToPath } from 'url';
 import { PAGE_TO_JSON_KEY, PAGE_TO_NAV_KEY } from '@/lib/constants/search-mappings';
 import { cleanContentObject, getNavigationTitle } from '@/lib/utils/search-utils';
 import { SearchDocument } from '@/lib/schemas/search-schemas';
-import { extractSubsectionsFromObject } from '@/lib/utils/extractSubsections';
+import {
+  extractSubsectionsFromObject,
+  getHeroTitleFromObject,
+} from '@/lib/utils/extractSubsections';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -13,7 +16,6 @@ export function createSearchDocuments(): SearchDocument[] {
   const locales = ['en-US', 'de-DE', 'pt-BR'];
   const messagesDir = path.join(__dirname, '../../../messages');
 
-  const HERO_KEY_RX = /(heroTitle$|[-_]hero$)/i;
   const SECTION_KEY_RX = /^(sectionTitle|sectionSubtitle|sectionDescription)$/i;
   function stripHtmlTags(text: string): string {
     return String(text || '').replace(/<[^>]*>/g, '');
@@ -62,8 +64,8 @@ export function createSearchDocuments(): SearchDocument[] {
 
       const pageObj = messages[pageKey];
       const keys = Object.keys(pageObj as Record<string, unknown>);
-      const heroKey = keys.find((k: string) => HERO_KEY_RX.test(k) && typeof pageObj[k] === 'string');
-      const heroTitle = heroKey ? clean(pageObj[heroKey]) : (typeof pageObj.heroTitle === 'string' ? clean(pageObj.heroTitle) : '');
+
+      const heroTitle = getHeroTitleFromObject(pageObj) ?? '';
 
       const {
         subsections,
