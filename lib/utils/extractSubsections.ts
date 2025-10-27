@@ -19,7 +19,7 @@ const TITLE_KEY_REGEX = /(^title$|[-_]?title$)/i;
 const DESCRIPTION_KEY_REGEX =
   /(^description$|sectionDescription$|sectionSubtitle$|subtitle$)/i;
 
-const HERO_KEY_REGEX = /(heroTitle$|[-_]hero$)/i;
+const HERO_FALLBACK_KEY_REGEX = /hero$/i;
 
 const CONTACT_KEY_REGEX = /(^contact$|[-_]contact$)/i;
 const SUMMARY_KEY_REGEX = /(^summary$|summary$|[-_](summary|overview|teaser)$)/i;
@@ -59,11 +59,33 @@ function sanitizeText(text: string): string {
  */
 export function getHeroTitleFromObject(obj: Record<string, any>): string | null {
   if (!obj || typeof obj !== 'object') return null;
-  for (const [k, v] of Object.entries(obj)) {
-    if (typeof v === 'string' && HERO_KEY_REGEX.test(k)) {
-      return sanitizeText(v);
+
+  const candidates: string[] = [];
+
+  if (typeof obj.heroTitle === 'string') {
+    candidates.push(obj.heroTitle);
+  }
+
+  for (const [key, value] of Object.entries(obj)) {
+    if (key === 'heroTitle' || typeof value !== 'string') continue;
+    if (HERO_FALLBACK_KEY_REGEX.test(key)) {
+      candidates.push(value);
     }
   }
+
+  const cleanedCandidates: string[] = [];
+  for (const candidate of candidates) {
+    const cleaned = sanitizeText(candidate);
+    if (!cleaned) continue;
+    if (!cleanedCandidates.includes(cleaned)) {
+      cleanedCandidates.push(cleaned);
+    }
+  }
+
+  if (cleanedCandidates.length > 0) {
+    return cleanedCandidates[0];
+  }
+
   return null;
 }
 

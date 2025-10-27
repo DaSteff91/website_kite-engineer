@@ -16,8 +16,7 @@ export function createSearchDocuments(): SearchDocument[] {
   const locales = ['en-US', 'de-DE', 'pt-BR'];
   const messagesDir = path.join(__dirname, '../../../messages');
 
-  const SECTION_KEY_RX =
-    /(section[-_]?title$|section[-_]?subtitle$|section[-_]?description$|sectionTitle$|sectionSubtitle$|sectionDescription$)/i;
+  const SECTION_KEY_RX = /^(sectionTitle|sectionSubtitle|sectionDescription)$/i;
   function stripHtmlTags(text: string): string {
     return String(text || '').replace(/<[^>]*>/g, '');
   }
@@ -65,7 +64,8 @@ export function createSearchDocuments(): SearchDocument[] {
 
       const pageObj = messages[pageKey];
       const keys = Object.keys(pageObj as Record<string, unknown>);
-      const heroTitle = getHeroTitleFromObject(pageObj);
+
+      const heroTitle = getHeroTitleFromObject(pageObj) ?? '';
 
       const subsections = extractSubsectionsFromObject(pageObj);
       const contactTexts = subsections.contactTexts ?? [];
