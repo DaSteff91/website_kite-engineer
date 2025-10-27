@@ -4,6 +4,12 @@ export interface SearchDocument {
   locale: string;       // "en-US", "de-DE", "pt-BR"
   pagePath: string;     // URL path like "/about"
   content: MessageObject; // The entire page content as structured object
+  heroTitle?: string;
+  sections?: string[];
+  summaries?: string[];
+  contact?: string[];
+  bullets?: string[];
+  parentTitles?: string[];
 }
 export interface MessageObject {
   [key: string]: string;
