@@ -4,7 +4,10 @@ import { fileURLToPath } from 'url';
 import { PAGE_TO_JSON_KEY, PAGE_TO_NAV_KEY } from '@/lib/constants/search-mappings';
 import { cleanContentObject, getNavigationTitle } from '@/lib/utils/search-utils';
 import { SearchDocument } from '@/lib/schemas/search-schemas';
-import { extractSubsectionsFromObject } from '@/lib/utils/extractSubsections';
+import {
+  extractSubsectionsFromObject,
+  getHeroTitleFromObject,
+} from '@/lib/utils/extractSubsections';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -13,8 +16,8 @@ export function createSearchDocuments(): SearchDocument[] {
   const locales = ['en-US', 'de-DE', 'pt-BR'];
   const messagesDir = path.join(__dirname, '../../../messages');
 
-  const HERO_KEY_RX = /(heroTitle$|[-_]hero$)/i;
-  const SECTION_KEY_RX = /^(sectionTitle|sectionSubtitle|sectionDescription)$/i;
+  const SECTION_KEY_RX =
+    /(section[-_]?title$|section[-_]?subtitle$|section[-_]?description$|sectionTitle$|sectionSubtitle$|sectionDescription$)/i;
   function stripHtmlTags(text: string): string {
     return String(text || '').replace(/<[^>]*>/g, '');
   }
@@ -62,15 +65,12 @@ export function createSearchDocuments(): SearchDocument[] {
 
       const pageObj = messages[pageKey];
       const keys = Object.keys(pageObj as Record<string, unknown>);
-      const heroKey = keys.find((k: string) => HERO_KEY_RX.test(k) && typeof pageObj[k] === 'string');
-      const heroTitle = heroKey ? clean(pageObj[heroKey]) : (typeof pageObj.heroTitle === 'string' ? clean(pageObj.heroTitle) : '');
+      const heroTitle = getHeroTitleFromObject(pageObj);
 
-      const {
-        subsections,
-        contactTexts,
-        summaryTexts,
-        ctaTexts,
-      } = extractSubsectionsFromObject(pageObj);
+      const subsections = extractSubsectionsFromObject(pageObj);
+      const contactTexts = subsections.contactTexts ?? [];
+      const summaryTexts = subsections.summaryTexts ?? [];
+      const ctaTexts = subsections.ctaTexts ?? [];
 
       // Preview created bullets
       const bullets = subsections.map(s => {
@@ -82,37 +82,32 @@ export function createSearchDocuments(): SearchDocument[] {
       const parentTitles = subsections.map(s => s.parentTitle);
 
       // SECTIONS (title + subtitle + description)
-      const sections: string[] = [];
-      for (const k of keys) {
-        if (SECTION_KEY_RX.test(k) && typeof pageObj[k] === 'string') {
-          const val = clean(pageObj[k]);
-          if (val) sections.push(val);
-        }
-      }
+      const rawSectionTexts = keys
+        .filter((k): k is string => SECTION_KEY_RX.test(k) && typeof pageObj[k] === 'string')
+        .map((k) => clean(pageObj[k] as string));
 
-      const normalizedSections = Array.from(
-        new Set(
-          sections
-            .concat(summaryTexts)
-            .concat(ctaTexts)
-            .concat(contactTexts)
-            .map((text) => text.replace(/\s+/g, ' ').trim())
-            .filter(Boolean)
-        )
-      );
+      const normalizeCollection = (values: Iterable<string>): string[] =>
+        Array.from(
+          new Set(
+            Array.from(values)
+              .map((value) => clean(value))
+              .filter(Boolean)
+          )
+        );
 
-      const normalizedSummaries = Array.from(
-        new Set(
-          summaryTexts
-            .concat(ctaTexts)
-            .map((text) => text.replace(/\s+/g, ' ').trim())
-            .filter(Boolean)
-        )
-      );
+      const normalizedSections = normalizeCollection([
+        ...rawSectionTexts,
+        ...summaryTexts,
+        ...ctaTexts,
+        ...contactTexts,
+      ]);
 
-      const normalizedContacts = Array.from(
-        new Set(contactTexts.map((text) => text.replace(/\s+/g, ' ').trim()).filter(Boolean))
-      );
+      const normalizedSummaries = normalizeCollection([
+        ...summaryTexts,
+        ...ctaTexts,
+      ]);
+
+      const normalizedContacts = normalizeCollection(contactTexts);
 
       // Build partial SearchDocument (for testing only)
       const document: SearchDocument = {
