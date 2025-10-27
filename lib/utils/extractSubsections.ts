@@ -4,8 +4,7 @@ export type Subsection = {
   path: string[];      // JSON path, useful for debugging/ordering
 };
 
-export type ExtractedContent = {
-  subsections: Subsection[];
+export type ExtractedContent = Subsection[] & {
   contactTexts: string[];
   summaryTexts: string[];
   ctaTexts: string[];
@@ -96,7 +95,8 @@ export function getHeroTitleFromObject(obj: Record<string, any>): string | null 
  * - If an object has children with `title` and `description`, use them as a subsection.
  * - Skips UI keys and sanitizes text.
  *
- * Returns: Subsection[] (parentTitle, items, path)
+ * Returns: Subsection[] (parentTitle, items, path) with extra arrays attached
+ * (`contactTexts`, `summaryTexts`, `ctaTexts`) containing sanitized marketing copy.
  */
 export function extractSubsectionsFromObject(
   obj: Record<string, any>,
@@ -236,10 +236,11 @@ export function extractSubsectionsFromObject(
   }
 
   inspectNode(obj, ancestors);
-  return {
-    subsections,
-    contactTexts: Array.from(contactTexts),
-    summaryTexts: Array.from(summaryTexts),
-    ctaTexts: Array.from(ctaTexts),
-  };
+
+  const result = subsections as ExtractedContent;
+  result.contactTexts = Array.from(contactTexts);
+  result.summaryTexts = Array.from(summaryTexts);
+  result.ctaTexts = Array.from(ctaTexts);
+
+  return result;
 }

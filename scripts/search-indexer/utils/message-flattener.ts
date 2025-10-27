@@ -67,12 +67,10 @@ export function createSearchDocuments(): SearchDocument[] {
 
       const heroTitle = getHeroTitleFromObject(pageObj) ?? '';
 
-      const {
-        subsections,
-        contactTexts,
-        summaryTexts,
-        ctaTexts,
-      } = extractSubsectionsFromObject(pageObj);
+      const subsections = extractSubsectionsFromObject(pageObj);
+      const contactTexts = subsections.contactTexts ?? [];
+      const summaryTexts = subsections.summaryTexts ?? [];
+      const ctaTexts = subsections.ctaTexts ?? [];
 
       // Preview created bullets
       const bullets = subsections.map(s => {
@@ -84,37 +82,32 @@ export function createSearchDocuments(): SearchDocument[] {
       const parentTitles = subsections.map(s => s.parentTitle);
 
       // SECTIONS (title + subtitle + description)
-      const sections: string[] = [];
-      for (const k of keys) {
-        if (SECTION_KEY_RX.test(k) && typeof pageObj[k] === 'string') {
-          const val = clean(pageObj[k]);
-          if (val) sections.push(val);
-        }
-      }
+      const rawSectionTexts = keys
+        .filter((k): k is string => SECTION_KEY_RX.test(k) && typeof pageObj[k] === 'string')
+        .map((k) => clean(pageObj[k] as string));
 
-      const normalizedSections = Array.from(
-        new Set(
-          sections
-            .concat(summaryTexts)
-            .concat(ctaTexts)
-            .concat(contactTexts)
-            .map((text) => text.replace(/\s+/g, ' ').trim())
-            .filter(Boolean)
-        )
-      );
+      const normalizeCollection = (values: Iterable<string>): string[] =>
+        Array.from(
+          new Set(
+            Array.from(values)
+              .map((value) => clean(value))
+              .filter(Boolean)
+          )
+        );
 
-      const normalizedSummaries = Array.from(
-        new Set(
-          summaryTexts
-            .concat(ctaTexts)
-            .map((text) => text.replace(/\s+/g, ' ').trim())
-            .filter(Boolean)
-        )
-      );
+      const normalizedSections = normalizeCollection([
+        ...rawSectionTexts,
+        ...summaryTexts,
+        ...ctaTexts,
+        ...contactTexts,
+      ]);
 
-      const normalizedContacts = Array.from(
-        new Set(contactTexts.map((text) => text.replace(/\s+/g, ' ').trim()).filter(Boolean))
-      );
+      const normalizedSummaries = normalizeCollection([
+        ...summaryTexts,
+        ...ctaTexts,
+      ]);
+
+      const normalizedContacts = normalizeCollection(contactTexts);
 
       // Build partial SearchDocument (for testing only)
       const document: SearchDocument = {
