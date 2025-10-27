@@ -5,6 +5,7 @@ export type Subsection = {
 };
 
 export type ExtractedContent = Subsection[] & {
+  subsections: Subsection[];
   contactTexts: string[];
   summaryTexts: string[];
   ctaTexts: string[];
@@ -238,6 +239,7 @@ export function extractSubsectionsFromObject(
   inspectNode(obj, ancestors);
 
   const result = subsections as ExtractedContent;
+  result.subsections = subsections;
   result.contactTexts = Array.from(contactTexts);
   result.summaryTexts = Array.from(summaryTexts);
   result.ctaTexts = Array.from(ctaTexts);
