@@ -826,5 +826,14 @@
   },
   "TestCommit": {
     "Test": "Dies ist ein Test für den übersetzen Workflow"
+  },
+  "SearchBar2": {
+    "SearchBarPlaceholder": "Suche",
+    "NoSearchResults": "Keine Ergebnisse für:",
+    "NoSearchResultsDetails": "Versuchen Sie verschiedene Test- oder Prüftests",
+    "CompetitorAnalysis": {
+      "title": "Wettbewerbsprüfung Dienstleistungen",
+      "description": "Ich erhalte und teste Daten von Unternehmen und bereite sie auch auf Ihre Weiterverarbeitung vor."
+    }
   }
 }
