@@ -1,3 +1,10 @@
+## [1.30.7](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.6...v1.30.7) (2025-10-28)
+
+
+### Bug Fixes
+
+* wrong name in a action ([b8d14b2](https://github.com/DaSteff91/website_kite-engineer/commit/b8d14b20fc86dd87fa970933256830aa6a9e848e))
+
 ## [1.30.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.5...v1.30.6) (2025-10-28)
 
 
