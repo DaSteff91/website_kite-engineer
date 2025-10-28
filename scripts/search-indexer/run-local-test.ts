@@ -4,7 +4,7 @@ import { PAGE_TO_NAV_KEY } from '@/lib/constants/search-mappings';
 import { cleanContentObject, resolvePageInfo } from '@/lib/utils/search-utils';
 import { extractSubsectionsFromObject } from '@/lib/utils/extractSubsections';
 
-const repoRoot = path.join(__dirname, '../..'); // adjust if your scripts folder is elsewhere
+const repoRoot = path.join(__dirname, '../..'); // adjust if needed
 const messagesDir = path.join(repoRoot, 'messages');
 const locale = 'en-US';
 const messageFile = path.join(messagesDir, `${locale}.json`);
@@ -33,9 +33,12 @@ for (const pageKey of Object.keys(PAGE_TO_NAV_KEY) as Array<keyof typeof PAGE_TO
     continue;
   }
 
-  // extract subsections using your new helper - FIX: access the subsections property
-  const extractedContent = extractSubsectionsFromObject(pageContent as Record<string, any>);
-  const subsections = extractedContent.subsections;
+  // NEW: hero + sections using the extractor helpers
+  const heroTitle = getHeroTitleFromObject(pageContent as Record<string, any>) ?? '';
+  const sections = getSectionsFromObject(pageContent as Record<string, any>);
+
+  // extract subsections → bullets/parentTitles
+  const subsections = extractSubsectionsFromObject(pageContent as Record<string, any>);
 
   const bullets = subsections.map(s => {
     const joined = (s.items || []).join('. ').replace(/\s+/g, ' ').trim();
@@ -43,9 +46,6 @@ for (const pageKey of Object.keys(PAGE_TO_NAV_KEY) as Array<keyof typeof PAGE_TO
   });
 
   const parentTitles = subsections.map(s => s.parentTitle || '');
-  const sections: string[] = [];
-  if (typeof pageContent.sectionTitle === 'string') sections.push(pageContent.sectionTitle.trim());
-  if (typeof pageContent.sectionDescription === 'string') sections.push(pageContent.sectionDescription.trim());
 
   const pageInfo = resolvePageInfo(String(pageKey), messages, locale);
   if (!pageInfo.pagePath) {
@@ -62,8 +62,8 @@ for (const pageKey of Object.keys(PAGE_TO_NAV_KEY) as Array<keyof typeof PAGE_TO
     pagePath: pageInfo.pagePath,
     bullets,
     parentTitles,
-    sections,
-    heroTitle: (pageContent as any).heroTitle || ''
+    sections,     // now includes sectionTitle/Subtitle/Description + *-contact
+    heroTitle     // now supports heroTitle and *-hero
   };
 
   console.log('-----');
