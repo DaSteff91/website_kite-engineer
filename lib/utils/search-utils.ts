@@ -23,7 +23,7 @@ const NAV_KEY_TO_PAGE_PATH: Map<string, string> = (() => {
 
   const visit = (items: NavigationItem[]): void => {
     for (const item of items) {
-      if ('isSubmenu' in item && item.isSubmenu) {
+      if ('items' in item) {
         visit(item.items);
         continue;
       }
@@ -31,12 +31,12 @@ const NAV_KEY_TO_PAGE_PATH: Map<string, string> = (() => {
       entries.set(item.key, item.href);
 
       if (item.dropdownItems?.length) {
-        visit(item.dropdownItems as NavigationItem[]);
+        visit(item.dropdownItems);
       }
     }
   };
 
-  visit(NAV_ITEMS as NavigationItem[]);
+  visit(NAV_ITEMS);
 
   return entries;
 })();

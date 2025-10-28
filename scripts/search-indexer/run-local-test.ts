@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { PAGE_TO_NAV_KEY } from '@/lib/constants/search-mappings';
 import { cleanContentObject, resolvePageInfo } from '@/lib/utils/search-utils';
-import { extractSubsectionsFromObject } from '@/lib/utils/extractSubsections';
+import { extractSubsectionsFromObject, getHeroTitleFromObject, getSectionsFromObject } from '@/lib/utils/extractSubsections';
 
 const repoRoot = path.join(__dirname, '../..'); // adjust if needed
 const messagesDir = path.join(repoRoot, 'messages');
