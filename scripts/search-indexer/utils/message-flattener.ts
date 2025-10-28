@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { PAGE_TO_JSON_KEY, PAGE_TO_NAV_KEY } from '@/lib/constants/search-mappings';
-import { cleanContentObject, getNavigationTitle } from '@/lib/utils/search-utils';
+import { PAGE_TO_NAV_KEY } from '@/lib/constants/search-mappings';
+import { cleanContentObject, resolvePageInfo } from '@/lib/utils/search-utils';
 import { SearchDocument } from '@/lib/schemas/search-schemas';
 import {
   extractSubsectionsFromObject,
@@ -24,12 +24,6 @@ export function createSearchDocuments(): SearchDocument[] {
     return stripHtmlTags(text).replace(/\s+/g, ' ').trim();
   }
   
-  // Create reverse mapping
-  const JSON_KEY_TO_PAGE: { [key: string]: string } = {};
-  for (const [path, key] of Object.entries(PAGE_TO_JSON_KEY)) {
-    JSON_KEY_TO_PAGE[key] = path;
-  }
-  
   for (const locale of locales) {
     const messageFile = path.join(messagesDir, `${locale}.json`);
     
@@ -41,12 +35,12 @@ export function createSearchDocuments(): SearchDocument[] {
     const messages = JSON.parse(fs.readFileSync(messageFile, 'utf8'));
     
     for (const pageKey of Object.keys(PAGE_TO_NAV_KEY) as Array<keyof typeof PAGE_TO_NAV_KEY>) {
-      const pagePath = JSON_KEY_TO_PAGE[pageKey];
-      if (!pagePath) {
-        console.warn(`No page path found for JSON key: ${pageKey}`);
+      const pageInfo = resolvePageInfo(String(pageKey), messages, locale);
+
+      if (!pageInfo.pagePath) {
         continue;
       }
-      
+
       const pageContent = messages[pageKey];
       
       if (!pageContent || typeof pageContent !== 'object') {
@@ -112,9 +106,11 @@ export function createSearchDocuments(): SearchDocument[] {
       // Build partial SearchDocument (for testing only)
       const document: SearchDocument = {
         id: `${locale}|${String(pageKey)}`,
-        title: getNavigationTitle(String(pageKey), messages, locale),
+        title: pageInfo.title,
         locale,
-        pagePath: (PAGE_TO_NAV_KEY as Record<string, string>)[String(pageKey)],
+        pageKey: pageInfo.pageKey,
+        pagePath: pageInfo.pagePath,
+        titleSource: pageInfo.titleSource,
         content: cleanedContent,
       };
 

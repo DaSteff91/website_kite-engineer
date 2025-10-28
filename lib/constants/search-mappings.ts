@@ -64,6 +64,11 @@ export const PAGE_TO_NAV_KEY = {
     'EngineerPage': 'engineer'
 } as const;
 
+export const PAGE_KEY_CANONICAL_PATHS: Partial<Record<keyof typeof PAGE_TO_NAV_KEY, string>> = {
+    TravelServicesPage: '/kite/travel-services',
+} as const;
+
 export type PagePath = keyof typeof PAGE_TO_JSON_KEY;
 export type JsonKey = keyof typeof PAGE_TO_NAV_KEY;
 export type NavKey = typeof PAGE_TO_NAV_KEY[JsonKey];
+

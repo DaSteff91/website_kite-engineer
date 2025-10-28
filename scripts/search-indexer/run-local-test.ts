@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import { PAGE_TO_NAV_KEY, PAGE_TO_JSON_KEY } from '@/lib/constants/search-mappings';
-import { cleanContentObject, getNavigationTitle } from '@/lib/utils/search-utils';
+import { PAGE_TO_NAV_KEY } from '@/lib/constants/search-mappings';
+import { cleanContentObject, resolvePageInfo } from '@/lib/utils/search-utils';
 import { extractSubsectionsFromObject } from '@/lib/utils/extractSubsections';
 
 const repoRoot = path.join(__dirname, '../..'); // adjust if your scripts folder is elsewhere
@@ -15,12 +15,6 @@ if (!fs.existsSync(messageFile)) {
 }
 
 const messages = JSON.parse(fs.readFileSync(messageFile, 'utf8'));
-
-// Build reverse mapping if needed
-const JSON_KEY_TO_PAGE: Record<string, string> = {};
-for (const [pageKey, jsonKey] of Object.entries(PAGE_TO_JSON_KEY as Record<string, string>)) {
-  JSON_KEY_TO_PAGE[jsonKey] = pageKey;
-}
 
 console.log(`Loaded ${locale} messages. Scanning pages...`);
 
@@ -53,11 +47,19 @@ for (const pageKey of Object.keys(PAGE_TO_NAV_KEY) as Array<keyof typeof PAGE_TO
   if (typeof pageContent.sectionTitle === 'string') sections.push(pageContent.sectionTitle.trim());
   if (typeof pageContent.sectionDescription === 'string') sections.push(pageContent.sectionDescription.trim());
 
+  const pageInfo = resolvePageInfo(String(pageKey), messages, locale);
+  if (!pageInfo.pagePath) {
+    console.warn(`Skipping ${pageKey} — page path mapping missing`);
+    continue;
+  }
+
   const docPreview = {
     id: `${locale}|${String(pageKey)}`,
-    title: getNavigationTitle(String(pageKey), messages, locale),
+    title: pageInfo.title,
+    pageKey: pageInfo.pageKey,
+    titleSource: pageInfo.titleSource,
     locale,
-    pagePath: (PAGE_TO_NAV_KEY as Record<string, string>)[String(pageKey)],
+    pagePath: pageInfo.pagePath,
     bullets,
     parentTitles,
     sections,
