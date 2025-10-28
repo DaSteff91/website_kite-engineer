@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import background_image_darker from "@/public/images/background_image_darker.jpeg";
-import engineer_hero_image from "@/public/images/engineer_hero_image.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import {
@@ -20,10 +19,16 @@ import { Hero } from "@/components/sections/Hero";
 
 export async function generateMetadata({
   params,
-}: { params: CreativityPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: CreativityPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "EngineerSubpages.ProcessDevelopment.Creativity", "/engineer/process-development/creativity");
+  return await getPageMetadata(
+    locale,
+    "EngineerSubpages.ProcessDevelopment.Creativity",
+    "/engineer/process-development/creativity"
+  );
 }
 interface CreativityPageProps {
   params: Promise<{ locale: string }>;
@@ -356,7 +361,10 @@ export default async function CreativityPage({ params }: CreativityPageProps) {
               {t("creativity-contact")}
             </p>
             <Link
-              href={hrefForTemplateWithTranslator(contactT, "/engineer/process-development/creativity")}
+              href={hrefForTemplateWithTranslator(
+                contactT,
+                "/engineer/process-development/creativity"
+              )}
               target="_blank"
             >
               <Button
