@@ -4,14 +4,7 @@ export type Subsection = {
   path: string[];      // JSON path, useful for debugging/ordering
 };
 
-export type ExtractedContent = Subsection[] & {
-  subsections: Subsection[];
-  contactTexts: string[];
-  summaryTexts: string[];
-  ctaTexts: string[];
-};
-
-// --- Regex patterns (robust & comprehensive) ---
+// --- Regex patterns (kept & extended where needed) ---
 const LIST_KEY_REGEX =
   /(list[-_]?element\d*|listItem\d*|list[-_]?\d+|items\d*|professionalItems|personalItems)$/i;
 
@@ -20,11 +13,12 @@ const TITLE_KEY_REGEX = /(^title$|[-_]?title$)/i;
 const DESCRIPTION_KEY_REGEX =
   /(^description$|sectionDescription$|sectionSubtitle$|subtitle$)/i;
 
-const HERO_FALLBACK_KEY_REGEX = /hero$/i;
+const HERO_KEY_REGEX = /(heroTitle$|[-_]hero$)/i;
 
-const CONTACT_KEY_REGEX = /(^contact$|[-_]contact$)/i;
-const SUMMARY_KEY_REGEX = /(^summary$|summary$|[-_](summary|overview|teaser)$)/i;
-const CTA_KEY_REGEX = /(cta$|call[-_]?to[-_]?action$)/i;
+const SECTION_TITLE_RX = /(^(.*[-_])?section[-_]?title$)/i;
+const SECTION_SUBTITLE_RX = /(^(.*[-_])?section[-_]?subtitle$|^sectionDescription$)/i;
+const CONTACT_SUMMARY_RX = /(^(.*[-_])?contact$)/i;
+const CONTACT_BUTTON_RX = /contact[-_]?button/i;
 
 const UI_DENYLIST = [
   /contact[-_]?button/i,
@@ -48,46 +42,58 @@ function normalizeWhitespace(text: string): string {
 }
 
 function sanitizeText(text: string): string {
-  // remove HTML, collapse whitespace, trim leading bullets/dashes
-  let t = stripHtmlTags(String(text || ''));
-  t = t.replace(/^[•\-\u2022]+\s*/g, '');
+  let t = stripHtmlTags(String(text ?? ''));
+  t = t.replace(/^[•\-\u2022]+\s*/g, ''); // trim leading bullets/dashes
   return normalizeWhitespace(t);
 }
 
 /**
  * Extract hero title from an object (NOT included as a subsection).
- * Use this independently when building your final document.
+ * Supports both "heroTitle" and "<slug>-hero" shapes.
  */
 export function getHeroTitleFromObject(obj: Record<string, any>): string | null {
   if (!obj || typeof obj !== 'object') return null;
-
-  const candidates: string[] = [];
-
-  if (typeof obj.heroTitle === 'string') {
-    candidates.push(obj.heroTitle);
-  }
-
-  for (const [key, value] of Object.entries(obj)) {
-    if (key === 'heroTitle' || typeof value !== 'string') continue;
-    if (HERO_FALLBACK_KEY_REGEX.test(key)) {
-      candidates.push(value);
+  for (const [k, v] of Object.entries(obj)) {
+    if (typeof v === 'string' && HERO_KEY_REGEX.test(k)) {
+      const s = sanitizeText(v);
+      if (s) return s;
     }
   }
-
-  const cleanedCandidates: string[] = [];
-  for (const candidate of candidates) {
-    const cleaned = sanitizeText(candidate);
-    if (!cleaned) continue;
-    if (!cleanedCandidates.includes(cleaned)) {
-      cleanedCandidates.push(cleaned);
-    }
-  }
-
-  if (cleanedCandidates.length > 0) {
-    return cleanedCandidates[0];
-  }
-
   return null;
+}
+
+/**
+ * Collect page-level sections: section title, subtitle/description,
+ * and "contact" summary (NOT the contact-button).
+ * Returns a string[] you can assign to your document's `sections`.
+ */
+export function getSectionsFromObject(obj: Record<string, any>): string[] {
+  const out: string[] = [];
+
+  function walk(node: any) {
+    if (!node || typeof node !== 'object') return;
+
+    for (const [k, v] of Object.entries(node)) {
+      if (typeof v === 'string') {
+        // section title / subtitle / description anywhere
+        if (/(^(.*[-_])?section[-_]?title$)/i.test(k)) out.push(sanitizeText(v));
+        if (/(^(.*[-_])?section[-_]?subtitle$|^sectionDescription$)/i.test(k)) out.push(sanitizeText(v));
+        if (/^sectionTitle$/i.test(k)) out.push(sanitizeText(v));
+        if (/^sectionSubtitle$/i.test(k)) out.push(sanitizeText(v));
+        if (/^sectionDescription$/i.test(k)) out.push(sanitizeText(v));
+
+        // contact summary (NOT contact-button), anywhere
+        if (/(^(.*[-_])?contact$)/i.test(k) && !/contact[-_]?button/i.test(k)) {
+          out.push(sanitizeText(v));
+        }
+      } else if (v && typeof v === 'object') {
+        walk(v);
+      }
+    }
+  }
+
+  walk(obj);
+  return Array.from(new Set(out.filter(Boolean)));
 }
 
 /**
@@ -96,58 +102,38 @@ export function getHeroTitleFromObject(obj: Record<string, any>): string | null 
  * - If an object has children with `title` and `description`, use them as a subsection.
  * - Skips UI keys and sanitizes text.
  *
- * Returns: Subsection[] (parentTitle, items, path) with extra arrays attached
- * (`contactTexts`, `summaryTexts`, `ctaTexts`) containing sanitized marketing copy.
+ * Returns: Subsection[] (parentTitle, items, path)
  */
 export function extractSubsectionsFromObject(
   obj: Record<string, any>,
   ancestors: string[] = []
-): ExtractedContent {
+): Subsection[] {
   const subsections: Subsection[] = [];
-  const contactTexts = new Set<string>();
-  const summaryTexts = new Set<string>();
-  const ctaTexts = new Set<string>();
-
-  function pushUnique(target: Set<string>, value: unknown, minimumLength = 0) {
-    if (typeof value !== 'string') return;
-    const cleaned = sanitizeText(value);
-    if (!cleaned) return;
-    if (minimumLength > 0 && cleaned.length < minimumLength) return;
-    target.add(cleaned);
-  }
 
   function inspectNode(node: Record<string, any>, path: string[]) {
     if (!node || typeof node !== 'object' || Array.isArray(node)) return;
 
+    // NOTE: Plain JSON → string keys are sufficient
     const keys = Object.keys(node);
 
-    // 1) Find explicit list keys grouped by prefix (e.g., "trip-organization-list-element1")
+    // 1) Collect explicit list keys grouped by prefix (e.g., "trip-organization-list-element1")
     const listGroups: Record<string, { order: number[]; items: string[] }> = {};
 
     for (const key of keys) {
       if (isUiKey(key)) continue;
+
       const val = (node as any)[key];
-
-      if (typeof val === 'string') {
-        if (CONTACT_KEY_REGEX.test(key)) {
-          pushUnique(contactTexts, val, 20);
-        } else if (SUMMARY_KEY_REGEX.test(key)) {
-          pushUnique(summaryTexts, val, 16);
-        } else if (CTA_KEY_REGEX.test(key)) {
-          pushUnique(ctaTexts, val, 8);
-        }
-      }
-
-      if (typeof val !== 'string') continue; // only string leaf values here
+      if (typeof val !== 'string') continue; // handle only string leaves here
       if (!LIST_KEY_REGEX.test(key)) continue;
 
       // Derive a stable prefix by stripping the trailing list-suffix pattern
-      const prefix = key
-        .replace(
-          /(-list[-_]?element\d*|listItem\d*|list[-_]?\d+|items\d*|professionalItems|personalItems)$/i,
-          ''
-        )
-        .replace(/[-_]+$/, '') || 'list';
+      const prefix =
+        key
+          .replace(
+            /(-list[-_]?element\d*|listItem\d*|list[-_]?\d+|items\d*|professionalItems|personalItems)$/i,
+            ''
+          )
+          .replace(/[-_]+$/, '') || 'list';
 
       // parse trailing number for ordering if present
       const numMatch = key.match(/(\d+)(?!.*\d)/);
@@ -175,9 +161,12 @@ export function extractSubsectionsFromObject(
       let parentTitle = '';
       for (const tk of candidateTitleKeys) {
         const v = (node as any)[tk];
-        if (typeof v === 'string' && sanitizeText(v).length > 0) {
-          parentTitle = sanitizeText(v);
-          break;
+        if (typeof v === 'string') {
+          const s = sanitizeText(v);
+          if (s) {
+            parentTitle = s;
+            break;
+          }
         }
       }
 
@@ -237,12 +226,5 @@ export function extractSubsectionsFromObject(
   }
 
   inspectNode(obj, ancestors);
-
-  const result = subsections as ExtractedContent;
-  result.subsections = subsections;
-  result.contactTexts = Array.from(contactTexts);
-  result.summaryTexts = Array.from(summaryTexts);
-  result.ctaTexts = Array.from(ctaTexts);
-
-  return result;
+  return subsections;
 }

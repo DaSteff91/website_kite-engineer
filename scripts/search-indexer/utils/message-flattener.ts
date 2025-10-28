@@ -7,6 +7,7 @@ import { SearchDocument } from '@/lib/schemas/search-schemas';
 import {
   extractSubsectionsFromObject,
   getHeroTitleFromObject,
+  getSectionsFromObject,
 } from '@/lib/utils/extractSubsections';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -66,11 +67,8 @@ export function createSearchDocuments(): SearchDocument[] {
       const keys = Object.keys(pageObj as Record<string, unknown>);
 
       const heroTitle = getHeroTitleFromObject(pageObj) ?? '';
-
+      const sections = getSectionsFromObject(pageObj);
       const subsections = extractSubsectionsFromObject(pageObj);
-      const contactTexts = subsections.contactTexts ?? [];
-      const summaryTexts = subsections.summaryTexts ?? [];
-      const ctaTexts = subsections.ctaTexts ?? [];
 
       // Preview created bullets
       const bullets = subsections.map(s => {
@@ -78,13 +76,7 @@ export function createSearchDocuments(): SearchDocument[] {
         return `${s.parentTitle}: ${joined}${joined.endsWith('.') ? '' : '.'}`;
       });
 
-      // Align parentTitles to bullets
       const parentTitles = subsections.map(s => s.parentTitle);
-
-      // SECTIONS (title + subtitle + description)
-      const rawSectionTexts = keys
-        .filter((k): k is string => SECTION_KEY_RX.test(k) && typeof pageObj[k] === 'string')
-        .map((k) => clean(pageObj[k] as string));
 
       const normalizeCollection = (values: Iterable<string>): string[] =>
         Array.from(
@@ -95,19 +87,10 @@ export function createSearchDocuments(): SearchDocument[] {
           )
         );
 
-      const normalizedSections = normalizeCollection([
-        ...rawSectionTexts,
-        ...summaryTexts,
-        ...ctaTexts,
-        ...contactTexts,
-      ]);
+      const normalizedSections = normalizeCollection([...sections]);
+      const normalizedSummaries: string[] = [];
+      const normalizedContacts: string[] = [];
 
-      const normalizedSummaries = normalizeCollection([
-        ...summaryTexts,
-        ...ctaTexts,
-      ]);
-
-      const normalizedContacts = normalizeCollection(contactTexts);
 
       // Build partial SearchDocument (for testing only)
       const document: SearchDocument = {
