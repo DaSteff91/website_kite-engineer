@@ -823,5 +823,14 @@
     "SearchBarPlaceholder": "Buscar",
     "NoSearchResults": "Nenhum resultado encontrado para: ",
     "NoSearchResultsDetails": "Tente palavras-chave diferentes ou verifique a ortografia."
+  },
+  "SearchBar2": {
+    "SearchBarPlaceholder": "Busca",
+    "NoSearchResults": "Nenhum resultado encontrado para:",
+    "NoSearchResultsDetails": "Tente outro teste ou teste de verificação",
+    "CompetitorAnalysis": {
+      "title": "Serviços de Teste Concorrente",
+      "description": "Recolho e testo dados de negócios e também os preparo para o seu processamento."
+    }
   }
 }
