@@ -1,3 +1,10 @@
+## [1.30.6](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.5...v1.30.6) (2025-10-28)
+
+
+### Bug Fixes
+
+* prepare for search result improvement ([6cfc5a2](https://github.com/DaSteff91/website_kite-engineer/commit/6cfc5a28ed1eb717a034bf63445657a7e47dded6))
+
 ## [1.30.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.4...v1.30.5) (2025-10-25)
 
 
