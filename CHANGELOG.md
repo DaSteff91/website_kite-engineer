@@ -1,3 +1,10 @@
+## [1.30.8](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.7...v1.30.8) (2025-10-28)
+
+
+### Bug Fixes
+
+* dummy change to test the workflow trigger ([f4978ca](https://github.com/DaSteff91/website_kite-engineer/commit/f4978ca7c31db05e83f0f8a2c4b238b42da72416))
+
 ## [1.30.7](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.6...v1.30.7) (2025-10-28)
 
 
