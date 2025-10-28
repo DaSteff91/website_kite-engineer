@@ -1289,5 +1289,14 @@
     "SearchBarPlaceholder":"Search",
     "NoSearchResults": "No results found for: ",
     "NoSearchResultsDetails":"Try different keywords or check spelling"
+  },
+  "SearchBar2": {
+    "SearchBarPlaceholder":"Search",
+    "NoSearchResults": "No results found for: ",
+    "NoSearchResultsDetails":"Try different test or check test",
+    "CompetitorAnalysis": {
+      "title": "Competitor test Services",
+      "description": "I gather and test data of businesses and as well prepare them for your further processing."
+    }
   }
 }
