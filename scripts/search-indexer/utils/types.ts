@@ -4,13 +4,13 @@ export interface SearchDocument {
   locale: string;       // "en-US", "de-DE", "pt-BR"
   pageKey: string;      // JSON namespace key like "AboutPage"
   pagePath: string;     // URL path like "/about"
-  content: MessageObject; // The entire page content as structured object
   heroTitle?: string;
-  sections?: string[];
-  summaries?: string[];
-  contact?: string[];
-  bullets?: string[];
-  parentTitles?: string[];
+  sections: string[];
+  bullets: string[];
+  parentTitles: string[];
+  content_searchable: string;
+  maxWeight: number;
+  pageCompleteness: number;
 }
 export interface MessageObject {
   [key: string]: string;

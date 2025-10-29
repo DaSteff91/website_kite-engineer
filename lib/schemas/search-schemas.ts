@@ -5,13 +5,13 @@ export interface SearchDocument {
   pageKey: string;
   pagePath: string;
   titleSource?: 'navigation' | 'metadata' | 'fallback';
-  content: Record<string, string>;
   heroTitle?: string;
-  sections?: string[];
-  summaries?: string[];
-  contact?: string[];
-  bullets?: string[];
-  parentTitles?: string[];
+  sections: string[];
+  bullets: string[];
+  parentTitles: string[];
+  content_searchable: string;
+  maxWeight: number;
+  pageCompleteness: number;
 }
 
 export type MessageObject = Record<string, string>;

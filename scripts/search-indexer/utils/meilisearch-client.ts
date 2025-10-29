@@ -1,4 +1,4 @@
-import { MeiliSearch} from 'meilisearch';
+import { MeiliSearch } from 'meilisearch';
 import { Settings } from 'meilisearch';
 
 export function createMeilisearchClient(): MeiliSearch {
@@ -16,11 +16,17 @@ export async function configureIndex(client: MeiliSearch) {
   const index = client.index('pages');
   
   const settings: Settings = {
-    // Search in all nested fields of the content object
-    searchableAttributes: ['content'],
-    filterableAttributes: ['locale', 'pagePath', 'title'],
+    searchableAttributes: [
+      'bullets',
+      'parentTitles',
+      'sections',
+      'heroTitle',
+      'content_searchable',
+    ],
+    filterableAttributes: ['locale', 'pagePath', 'pageKey'],
     sortableAttributes: ['title'],
-    rankingRules: ['words', 'typo', 'proximity', 'attribute', 'sort', 'exactness'],
+    rankingRules: ['typo', 'words', 'proximity', 'attribute', 'exactness', 'sort'],
+    customRanking: ['desc(maxWeight)', 'desc(pageCompleteness)'],
     stopWords: ['der', 'die', 'das', 'the', 'a', 'an', 'and'],
     synonyms: {
       'apc': ['advanced process control'],
