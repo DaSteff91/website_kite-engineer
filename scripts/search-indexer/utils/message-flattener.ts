@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { PAGE_TO_NAV_KEY } from '@/lib/constants/search-mappings';
 import { cleanContentObject, resolvePageInfo } from '@/lib/utils/search-utils';
+import { searchTokenize } from '@/lib/utils/searchTokenize';
 import { SearchDocument } from '@/lib/schemas/search-schemas';
 import {
   extractSubsectionsFromObject,
@@ -26,22 +27,13 @@ function clamp(value: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, value));
 }
 
-function tokenize(text: string): string[] {
-  const MIN_TOKEN_LEN = 2;
-  return text
-    .toLowerCase()
-    .split(/\s+/)
-    .map((token) => token.trim())
-    .filter((token) => token && /[a-z0-9]/i.test(token) && token.length >= MIN_TOKEN_LEN);
-}
-
 function countSentences(text: string): number {
   const matches = text.match(/[.!?]/g);
   return matches ? matches.length : 0;
 }
 
 function computeDensityScore(text: string, isList: boolean): number {
-  const tokens = tokenize(text);
+  const { tokens, uniqueTokens } = searchTokenize(text, { withUnique: true });
   const wordCount = tokens.length;
 
   if (wordCount === 0) {
@@ -49,7 +41,7 @@ function computeDensityScore(text: string, isList: boolean): number {
   }
 
   const sentenceCount = countSentences(text);
-  const uniqueTokenCount = new Set(tokens).size;
+  const uniqueTokenCount = uniqueTokens.length;
 
   const wordCountNorm = clamp(wordCount / 200, 0, 1);
   const sentenceCountNorm = clamp(sentenceCount / 10, 0, 1);
