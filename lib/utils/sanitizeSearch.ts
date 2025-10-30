@@ -1,4 +1,5 @@
-// lib/sanitizeSearch.ts
+import { searchTokenize } from './searchTokenize';
+
 export function sanitizeSearchQuery(raw: unknown, maxLen = 300): string {
   if (raw == null) return '';
 
@@ -12,11 +13,24 @@ export function sanitizeSearchQuery(raw: unknown, maxLen = 300): string {
   // 2) Remove control characters (except newline/space/tab), and null bytes
   s = s.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]+/g, ' ');
 
-  // 3) Collapse whitespace to single spaces and trim
+  // 3) Normalize unicode for consistent representation across queries
+  s = s.normalize('NFKC');
+
+  // 4) Collapse whitespace to single spaces and trim
   s = s.replace(/\s+/g, ' ').trim();
 
-  // 4) Limit length
+  if (!s) {
+    return '';
+  }
+
+  // 5) Limit length
   if (s.length > maxLen) s = s.slice(0, maxLen);
+
+  const { uniqueTokens } = searchTokenize(s, { withUnique: true });
+
+  if (!uniqueTokens.length) {
+    return '';
+  }
 
   return s;
 }
