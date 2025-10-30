@@ -39,3 +39,4 @@ yarn-error.log*
 /i18n-codemod
 /meilisearch
 
+output.txt

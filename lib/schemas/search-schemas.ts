@@ -9,7 +9,6 @@ export interface SearchDocument {
   sections: string[];
   bullets: string[];
   parentTitles: string[];
-  content_searchable: string;
   maxWeight: number;
   pageCompleteness: number;
 }

@@ -18,7 +18,7 @@ const BASE_WEIGHTS: Record<FieldKind, number> = {
   list: 1.0,
   parentTitle: 0.8,
   sectionDescription: 0.6,
-  heroTitle: 0.3,
+  heroTitle: 0.2,
   other: 0.4,
 };
 
@@ -27,11 +27,12 @@ function clamp(value: number, min: number, max: number): number {
 }
 
 function tokenize(text: string): string[] {
+  const MIN_TOKEN_LEN = 2;
   return text
     .toLowerCase()
     .split(/\s+/)
     .map((token) => token.trim())
-    .filter(Boolean);
+    .filter((token) => token && /[a-z0-9]/i.test(token) && token.length >= MIN_TOKEN_LEN);
 }
 
 function countSentences(text: string): number {
@@ -163,7 +164,6 @@ export function createSearchDocuments(): SearchDocument[] {
       const fallbackParts = normalizeCollection(Object.values(cleanedContent));
       const fallbackFiltered = fallbackParts.filter((part) => !usedStrings.has(part));
       const fallbackContent = fallbackFiltered.length ? fallbackFiltered : fallbackParts;
-      const contentSearchable = fallbackContent.join('\n');
 
       const fieldEntries: Array<{ text: string; kind: FieldKind }> = [];
 
@@ -172,9 +172,6 @@ export function createSearchDocuments(): SearchDocument[] {
       normalizedSections.forEach((text) => fieldEntries.push({ text, kind: 'sectionDescription' }));
       if (heroTitle) {
         fieldEntries.push({ text: heroTitle, kind: 'heroTitle' });
-      }
-      if (contentSearchable) {
-        fieldEntries.push({ text: contentSearchable, kind: 'other' });
       }
 
       const maxWeight = fieldEntries.reduce((acc, entry) => {
@@ -192,7 +189,6 @@ export function createSearchDocuments(): SearchDocument[] {
         sections: normalizedSections,
         bullets: normalizedBullets,
         parentTitles: normalizedParentTitles,
-        content_searchable: contentSearchable,
         maxWeight: Math.round(maxWeight * 100),
         pageCompleteness,
       };
