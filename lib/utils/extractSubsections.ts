@@ -68,32 +68,43 @@ export function getHeroTitleFromObject(obj: Record<string, any>): string | null 
  * Returns a string[] you can assign to your document's `sections`.
  */
 export function getSectionsFromObject(obj: Record<string, any>): string[] {
-  const out: string[] = [];
+  const sections = new Set<string>();
 
-  function walk(node: any) {
+  function walk(node: any, contactContext = false) {
     if (!node || typeof node !== 'object') return;
 
-    for (const [k, v] of Object.entries(node)) {
-      if (typeof v === 'string') {
-        // section title / subtitle / description anywhere
-        if (/(^(.*[-_])?section[-_]?title$)/i.test(k)) out.push(sanitizeText(v));
-        if (/(^(.*[-_])?section[-_]?subtitle$|^sectionDescription$)/i.test(k)) out.push(sanitizeText(v));
-        if (/^sectionTitle$/i.test(k)) out.push(sanitizeText(v));
-        if (/^sectionSubtitle$/i.test(k)) out.push(sanitizeText(v));
-        if (/^sectionDescription$/i.test(k)) out.push(sanitizeText(v));
+    for (const [key, value] of Object.entries(node)) {
+      if (typeof value === 'string') {
+        const sanitized = sanitizeText(value);
+        if (!sanitized) continue;
 
-        // contact summary (NOT contact-button), anywhere
-        if (/(^(.*[-_])?contact$)/i.test(k) && !/contact[-_]?button/i.test(k)) {
-          out.push(sanitizeText(v));
+        if (SECTION_TITLE_RX.test(key)) sections.add(sanitized);
+        if (SECTION_SUBTITLE_RX.test(key)) sections.add(sanitized);
+
+        const isContactKey = CONTACT_SUMMARY_RX.test(key) && !CONTACT_BUTTON_RX.test(key);
+        if (isContactKey) {
+          sections.add(sanitized);
+          continue;
         }
-      } else if (v && typeof v === 'object') {
-        walk(v);
+
+        if (
+          contactContext &&
+          /^(text|description)$/i.test(key) &&
+          !CONTACT_BUTTON_RX.test(key)
+        ) {
+          sections.add(sanitized);
+        }
+      } else if (value && typeof value === 'object') {
+        const nextContactContext =
+          contactContext ||
+          (CONTACT_SUMMARY_RX.test(key) && !CONTACT_BUTTON_RX.test(key));
+        walk(value, nextContactContext);
       }
     }
   }
 
   walk(obj);
-  return Array.from(new Set(out.filter(Boolean)));
+  return Array.from(sections);
 }
 
 /**
