@@ -25,7 +25,7 @@ export async function configureIndex(client: MeiliSearch) {
     ],
     filterableAttributes: ['locale', 'pagePath', 'pageKey'],
     sortableAttributes: ['title'],
-    rankingRules: ['typo', 'words', 'proximity', 'attribute', 'exactness', 'sort', 'desc(maxWeight)', 'desc(pageCompleteness)'],
+    rankingRules: ['typo', 'words', 'proximity', 'attribute', 'desc(maxWeight)', 'desc(pageCompleteness)', 'exactness'],
     stopWords: STOP_WORDS,
   };
   
