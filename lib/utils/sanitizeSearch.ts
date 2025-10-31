@@ -1,7 +1,12 @@
 import { searchTokenize } from './searchTokenize';
 
-export function sanitizeSearchQuery(raw: unknown, maxLen = 300): string {
-  if (raw == null) return '';
+export interface SanitizedSearchQuery {
+  cleaned: string;
+  tokens: string[];
+}
+
+export function sanitizeSearchQuery(raw: unknown, maxLen = 300): SanitizedSearchQuery {
+  if (raw == null) return { cleaned: '', tokens: [] };
 
   // Coerce to string
   let s = String(raw);
@@ -20,7 +25,7 @@ export function sanitizeSearchQuery(raw: unknown, maxLen = 300): string {
   s = s.replace(/\s+/g, ' ').trim();
 
   if (!s) {
-    return '';
+    return { cleaned: '', tokens: [] };
   }
 
   // 5) Limit length
@@ -29,8 +34,13 @@ export function sanitizeSearchQuery(raw: unknown, maxLen = 300): string {
   const { uniqueTokens } = searchTokenize(s, { withUnique: true });
 
   if (!uniqueTokens.length) {
-    return '';
+    return { cleaned: '', tokens: [] };
   }
 
-  return s;
+  const cleaned = uniqueTokens.join(' ');
+
+  return {
+    cleaned,
+    tokens: uniqueTokens,
+  };
 }

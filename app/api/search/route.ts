@@ -2,10 +2,13 @@ import { NextResponse } from 'next/server';
 import { sanitizeSearchQuery } from '@/lib/utils/sanitizeSearch';
 
 type MeiliSearchReq = {
-  q?: string;
-  limit?: number;
-  offset?: number;
-  filter?: string[]; // like ["locale = en-US"]
+  q: string;
+  limit: number;
+  offset: number;
+  filter: string[]; // like ["locale = en-US"]
+  matchingStrategy: 'all';
+  attributesToRetrieve?: string[];
+  attributesToHighlight?: string[];
 };
 
 console.log('[DEBUG] search route.ts loaded at', new Date().toISOString());
@@ -113,20 +116,24 @@ export async function POST(req: Request) {
 
     const body = await req.json().catch(() => ({}));
     console.log('[DEBUG] Request body:', body);
-    const q = sanitizeSearchQuery(body.q, 100);
+    const sanitized = sanitizeSearchQuery(body.q, 100);
     const limit = Math.min(Math.max(1, body.limit ?? DEFAULT_LIMIT), MAX_LIMIT);
     const offset = Math.max(0, body.offset ?? 0);
     const filters = sanitizeFilters(body.filter);
-    console.log('[DEBUG] Computed query:', q);
+    const sanitizedQuery = sanitized.cleaned || sanitized.tokens.join(' ');
+    console.log('[DEBUG] Computed query:', sanitizedQuery, 'tokens:', sanitized.tokens);
     console.log('[DEBUG] limit:', limit, 'offset:', offset, 'filters:', filters);
 
-    // If no query, return empty result set (quick response)
-    if (!q.trim()) {
-      return NextResponse.json({ hits: [], nbHits: 0, query: q }, { status: 200 });
+    // If no tokens, return empty result set (quick response)
+    if (!sanitized.tokens.length) {
+      return NextResponse.json(
+        { hits: [], nbHits: 0, query: sanitizedQuery },
+        { status: 200 },
+      );
     }
 
     // Build a cache key for identical requests
-    const cacheKey = `${q}|l=${limit}|o=${offset}|f=${filters.join(';')}`;
+    const cacheKey = `q=${sanitizedQuery}|match=all|l=${limit}|o=${offset}|f=${filters.join(';')}`;
     const cached = cacheGet(cacheKey);
     if (cached) {
       console.log('[DEBUG] Returning cached result for key:', cacheKey);
@@ -146,21 +153,24 @@ export async function POST(req: Request) {
     const target = `${meiliHost.replace(/\/$/, '')}/indexes/pages/search`;
 
     // Call Meili
-    console.log('[DEBUG] Sending request to Meili:', target, {
-  q, limit, offset, filters
-});
+    const meiliPayload: MeiliSearchReq = {
+      q: sanitizedQuery,
+      limit,
+      offset,
+      filter: filters,
+      matchingStrategy: 'all',
+      attributesToRetrieve: ['id', 'title', 'locale', 'pagePath', 'content'],
+      attributesToHighlight: ['content'],
+    };
+
+    console.log('[DEBUG] Sending request to Meili:', target, meiliPayload);
     const meiliRes = await fetch(target, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${meiliKey}`,
       },
-      body: JSON.stringify({
-        q,
-        limit,
-        offset,
-        filter: filters,
-      }),
+      body: JSON.stringify(meiliPayload),
     });
     
 

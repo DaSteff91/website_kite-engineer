@@ -18,52 +18,51 @@ export function useHeaderSearch() {
   const [isSearchLoading, setIsSearchLoading] = useState(false);
   const [debouncedQuery] = useDebounce(searchQuery, 50);
 
-useEffect(() => {
-  const performSearch = async (query: string) => {
-    if (!query.trim()) {
-      setSearchResults([]);
-      return;
-    }
-
-    setIsSearchLoading(true);
-    try {
-      const q = sanitizeSearchQuery(query);
-      if (!q) {
+  useEffect(() => {
+    const performSearch = async (query: string) => {
+      if (!query.trim()) {
         setSearchResults([]);
         return;
       }
 
-      const response = await fetch('/api/search', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          q,
-          filter: [`locale = ${currentLocale}`],
-          limit: 20,
-        }),
-      });
+      setIsSearchLoading(true);
+      try {
+        const { cleaned } = sanitizeSearchQuery(query);
+        if (!cleaned) {
+          setSearchResults([]);
+          return;
+        }
 
-      const data = await response.json();
-      setSearchResults(data.hits || []);
-    } catch (error) {
-      console.error('Search failed:', error);
-      setSearchResults([]);
-    } finally {
-      setIsSearchLoading(false);
+        const response = await fetch('/api/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            q: cleaned,
+            filter: [`locale = ${currentLocale}`],
+            limit: 20,
+          }),
+        });
+
+        const data = await response.json();
+        setSearchResults(data.hits || []);
+      } catch (error) {
+        console.error('Search failed:', error);
+        setSearchResults([]);
+      } finally {
+        setIsSearchLoading(false);
+      }
+    };
+
+    if (debouncedQuery.trim()) {
+      performSearch(debouncedQuery);
     }
-  };
-
-  if (debouncedQuery.trim()) {
-    performSearch(debouncedQuery);
-  }
-}, [debouncedQuery, currentLocale]);
-
+  }, [debouncedQuery, currentLocale]);
 
   return {
     searchQuery,
     setSearchQuery,
     searchResults,
     isSearchLoading,
-    currentLocale
+    currentLocale,
   };
 }
