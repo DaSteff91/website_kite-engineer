@@ -18,6 +18,7 @@ export async function configureIndex(client: MeiliSearch) {
   
   const settings: Settings = {
     searchableAttributes: [
+      'title',
       'bullets',
       'parentTitles',
       'sections',
@@ -27,6 +28,7 @@ export async function configureIndex(client: MeiliSearch) {
     sortableAttributes: ['title'],
     rankingRules: ['typo', 'words', 'proximity', 'attribute', 'desc(maxWeight)', 'desc(pageCompleteness)', 'exactness'],
     stopWords: STOP_WORDS,
+    distinctAttribute: 'pagePath'
   };
   
   await index.updateSettings(settings);
