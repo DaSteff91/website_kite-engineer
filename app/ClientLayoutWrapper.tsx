@@ -1,5 +1,4 @@
 "use client";
-import { Suspense } from "react";
 import { usePathname } from "@/i18n/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -17,9 +16,7 @@ export function ClientLayoutWrapper({
     <div className="min-h-screen flex flex-col">
       {!isHomePage && <Header />}
       <main className="flex-grow">
-        <Suspense fallback={null}>
-          <DeepLinkHighlighter />
-        </Suspense>
+        <DeepLinkHighlighter />
         {children}
       </main>
       {!isHomePage && <Footer />}
