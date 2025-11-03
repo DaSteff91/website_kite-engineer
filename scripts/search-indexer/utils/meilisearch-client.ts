@@ -5,7 +5,7 @@ import { STOP_WORDS } from '@/lib/constants/search-stopwords';
 export function createMeilisearchClient(): MeiliSearch {
   const host = process.env.MEILISEARCH_HOST || 'https://meilisearch.kite-engineer.de/';
   const apiKey = process.env.MEILISEARCH_API_KEY;
-  
+
   if (!apiKey) {
     throw new Error('MEILISEARCH_API_KEY environment variable is required');
   }
@@ -26,7 +26,16 @@ export async function configureIndex(client: MeiliSearch) {
     ],
     filterableAttributes: ['locale', 'pagePath', 'pageKey'],
     sortableAttributes: ['title'],
-    rankingRules: ['typo', 'words', 'proximity', 'attribute', 'desc(maxWeight)', 'desc(pageCompleteness)', 'exactness'],
+    rankingRules: [
+      'words',
+      'typo',
+      'proximity',
+      'attribute',
+      'sort',
+      'exactness',
+      'maxWeight:desc',
+      'pageCompleteness:desc',
+    ],
     stopWords: STOP_WORDS,
     distinctAttribute: 'pagePath'
   };
