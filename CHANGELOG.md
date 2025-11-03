@@ -1,3 +1,11 @@
+## [1.30.9](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.8...v1.30.9) (2025-11-03)
+
+
+### Bug Fixes
+
+* rollback some translation overwrites ([27f5920](https://github.com/DaSteff91/website_kite-engineer/commit/27f5920a79046805fc15d08e3bfcf57a283d047b))
+* testing fixed workflow with dummy translation data ([93553eb](https://github.com/DaSteff91/website_kite-engineer/commit/93553eb85071f91c0a22942b4ed74ea8cb54352d))
+
 ## [1.30.8](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.7...v1.30.8) (2025-10-28)
 
 
