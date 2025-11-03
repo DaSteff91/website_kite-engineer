@@ -82,9 +82,9 @@ function buildFieldEntries(document: SearchDocument): FieldEntry[] {
     entries.push({ label: 'heroTitle', text: document.heroTitle, kind: 'heroTitle' });
   }
 
-  if (document.content_searchable) {
-    entries.push({ label: 'content_searchable', text: document.content_searchable, kind: 'other' });
-  }
+  // if (document.content_searchable) {
+  //   entries.push({ label: 'content_searchable', text: document.content_searchable, kind: 'other' });
+  // }
 
   return entries;
 }
