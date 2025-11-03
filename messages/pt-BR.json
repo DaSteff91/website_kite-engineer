@@ -6,13 +6,13 @@
     "introductionTitle": "Oi, meu nome é Steff...",
     "introductionText1": "Steff, abreviação de Stefan. Nasci em 1991 em uma pequena cidade no sul da Alemanha, no estado Baviera. E sim, você pode me chamar de orgulhoso Bávaro também.",
     "introductionText2": "O que esperar de mim? Um personagem de mente aberta que procura desafiar-se e que segue sua missão: realizar a visão de combinar mundos: <strong>combining worlds</strong>.",
-    "introductionText3": "Mas o que isso significa? Basicamente isso: É sobre combinar o mundo de ser instrutor de kitesurf com o de ser engenheiro. E voilà, criei meu próprio estilo de vida de ser um Kite-Engineer. Um profissional que oferece serviços:",
+    "introductionText3": "Mas o que isso significa? Basicamente combinar o mundo de ser instrutor de kitesurf com o engenheiro. E voilà, criei meu próprio lifestyle de ser um <strong> kite-engineer</strong>. Um profissional que oferece serviços:",
     "introductionListItem1": "• relacionados ao esporte do kitesurf",
-    "introductionListItem2": "Em particular, áreas de engenharia como engenharia de processos ou TI.",
+    "introductionListItem2": "• no campo de engenharia, como engenharia de processos ou TI.",
     "introductionText4": "E não, eu não desenho kites e nem sou ansioso para integrar eletrônicos em kites. Pelo menos não por enquanto - quem sabe?",
     "introductionText5": "É minha maneira única de lidar com nosso amado capitalismo: compartilho o que eu gosto de fazer e você recebe o que ainda não teve antes. Somos todos vencedores!",
     "professionalTitle": "Profissional",
-    "professionalItems": "Lançando minha carreira profissional como Kite-Engineer, 2025, certificado da Universidade Internacional (UI) como Python e Programador SQL, 2025. Oferecendo aulas de kitesurf em alemão, inglês e português, 2024, licença de instrutor de kitesurf VDWS, 2023, certificado 6 Sigma Green Belt e Lean Management, 2022, aulas particulares de kitesurf, 2021, Primeiro contato com kiteboarding, 2018 Empregos profissionais como engenheiro de desenvolvimento de processos, engenheiro de processos e assistente de laboratório, 2015 - 2024 Começou a explorar as áreas de micro e nanossistemas em 2010",
+    "professionalItems": "<li>Inicio a minha carreira profissional como Kite-Engineer, 2025</li><li>Alcanço a certificação da International University (IU) como Programador Python e SQL, 2025</li><li>Ofereço aulas de kitesurf em alemão, inglês e português, 2024</li><li>Conquisto a licença de instrutor de kitesurf VDWS, 2023</li><li>Obtenho o certificado 6 Sigma Green Belt com foco em Lean Management, 2022</li><li>Começo a dar aulas particulares de kitesurf, 2021</li><li>Tenho o meu primeiro contato com o kitesurf, 2018</li><li>Experiência profissional em desenvolvimento e otimização de processos (como engenheiro de processos, engenheiro de processo e assistente de laboratório), 2015 - 2024</li><li>Bacharelado em Engenharia de Microsistemas, 2015</li><li>Inicio a explorar as áreas de micro- e nanosistemas, 2010</li>",
     "personalTitle": "Pessoal",
     "personalItems": "<li>\"Seja a mudança que você quer ver no mundo\"</li><li>Sou um explorador, um aventureiro e um nerd</li><li>Autodidata sempre foi mais satisfatório do que escola</li><li>Sim, até eu já joguei futebol... até os 14 anos</li><li>Esportes e atividades ao ar livre são uma grande parte da minha vida</li><li>Assim como Linkin Park - sou fã desde os 6 anos de idade</li><li>Você já ouviu Eckhart Tolle?</li><li>Sorrir para as pessoas na rua ajuda a espalhar boas energias</li><li>Filosofia, especialmente estoicismo, foi adicionada depois dos 30 anos - coincidência?</li><li>Um livro que mudou a minha vida? O Alquimista - Paulo Coelho</li><li>Seguidor da ideia de \"Free and Open Source Software\"</li><li>Evoluir com a comunidade é um satisfação vezes X</li>"
   },
@@ -131,10 +131,10 @@
     "sectionTitle": "O desenvolvimento não cresce em árvores",
     "sectionDescription": "Meus serviços relacionados ao kiteboarding ajudam você a alcançar seus objetivos",
     "freelancer": {
-      "title": "Serviços Profissionais",
+      "title": "Freelancer",
       "schoolSupport": {
         "title": "Profissional Freelancer",
-        "description": "Se você precisa de um instrutor certificado por VDWS, assistência na loja, ou alguém para ajudar atrás do bar, eu te cubro. Flexibilidade é meu lema."
+        "description": "Seja para precisar de um instrutor certificado pela VDWS, assistência na loja ou alguém para ajudar atrás do bar, estou à disposição. Flexibilidade é meu lema."
       },
       "travelServices": {
         "title": "Serviços de Viagem",
@@ -670,7 +670,7 @@
     },
     "Home": {
       "title": "Início",
-      "description": "Bem-vindo, o Kite-Engineer é um provedor profissional de serviços nas áreas de kiteboard e engenharia. Soluções personalizáveis e flexibilidade são a chave. Qualquer tipo de cliente e qualquer tipo de pedido é bem-vindo - B2B ou B2C."
+      "description": "Bem-vindo, o Kite-Engineer é um provedor profissional de serviços nas áreas de kitesurfing e engenharia. Soluções personalizáveis e flexibilidade são a chave. Qualquer tipo de cliente e qualquer tipo de pedido é bem-vindo - B2B ou B2C."
     },
     "Kite": {
       "title": "Serviços de Kitesurf",
@@ -682,7 +682,7 @@
     },
     "About": {
       "title": "Sobre",
-      "description": "O Kite-Engineer é uma marca que combina os mundos únicos de ser instrutor de kitesurf com o mundo de trabalhar como engenheiro. Ambos os trabalhos são oferecidos na base de freelancer com condições contratuais flexíveis."
+      "description": "O Kite-Engineer é uma marca que combina os mundos únicos de ser instrutor de kitesurf com o mundo de trabalhar como engenheiro ambiciosos. Ambos os trabalhos são oferecidos na base de freelancer com condições contratuais flexíveis."
     },
     "Contact": {
       "title": "Contato",
