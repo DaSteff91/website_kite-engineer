@@ -246,9 +246,15 @@ function sortCandidates(a: MatchCandidate, b: MatchCandidate): number {
 export function getPrimaryMatch(result: SearchResult): SearchResultMatch | undefined {
   const candidates: MatchCandidate[] = [];
 
-  collectMatchesFromSource((result as Record<string, unknown>)._matchesInfo as MatchesSource, candidates);
-  collectMatchesFromSource((result as Record<string, unknown>)._matchesPosition as MatchesSource, candidates);
-  collectMatchesFromSource((result as Record<string, unknown>).matchesInfo as MatchesSource, candidates);
+  const sources: MatchesSource[] = [
+    result._matchesInfo,
+    result._matchesPosition,
+    result.matchesInfo,
+  ];
+
+  for (const source of sources) {
+    collectMatchesFromSource(source, candidates);
+  }
 
   if (!candidates.length) {
     return undefined;
