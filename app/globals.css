@@ -249,3 +249,21 @@ html {
     font-size: 16px !important;
   }
 }
+
+/* Prefer system highlight colors; fallback to VSCode-like scheme */
+.ke-highlight {
+  color: HighlightText;
+  background-color: Highlight;
+  /* Fallbacks */
+  color: #1f2328;
+  background-color: rgba(255, 230, 120, 0.55);
+  outline: 2px solid rgba(255, 230, 120, 0.9);
+  border-radius: 0.25rem;
+  -webkit-text-fill-color: initial;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ke-smooth {
+    scroll-behavior: auto;
+  }
+}

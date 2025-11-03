@@ -27,6 +27,7 @@ import { HeaderSearchResults } from "../search/HeaderSearchResult";
 import { HeaderSearch } from "../search/HeaderSearch";
 import { HeaderSearchBar } from "../search/HeaderSearchBar";
 import { useHeaderSearch } from "../search/useHeaderSearch";
+import { buildDeepLinkParams, getPrimaryMatch } from "@/lib/utils/search-match";
 
 export function Header() {
   const t = useTranslations("NavigationMenu");
@@ -89,18 +90,20 @@ export function Header() {
   }, [isSearchBarOpen, closeSearchBar]);
 
   const handleResultSelect = (result: SearchResult) => {
-    // Check if pagePath already includes locale prefix
-    let targetPath = result.pagePath;
-    const hasLocalePrefix =
-      result.pagePath.startsWith(`/${result.locale}`) ||
-      result.pagePath.startsWith("/de-DE") ||
-      result.pagePath.startsWith("/en-US") ||
-      result.pagePath.startsWith("/pt-BR");
+    const pagePath = result.pagePath.startsWith("/")
+      ? result.pagePath
+      : `/${result.pagePath}`;
+    const hasLocalePrefix = pagePath.startsWith(`/${result.locale}`);
+    const localizedPath = hasLocalePrefix ? pagePath : `/${locale}${pagePath}`;
 
-    if (!hasLocalePrefix) {
-      targetPath = `/${locale}${result.pagePath}`;
-    }
-    router.push(result.pagePath);
+    const match = result.match ?? getPrimaryMatch({
+      ...result,
+      content: result.content ?? {},
+    });
+    const params = buildDeepLinkParams(match);
+    const targetHref = params ? `${localizedPath}?${params}` : localizedPath;
+
+    router.push(targetHref);
     closeSearchBar();
     closeMobileSearch();
     setIsMobileMenuOpen(false);
