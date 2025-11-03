@@ -9,6 +9,8 @@ type MeiliSearchReq = {
   matchingStrategy: 'all';
   attributesToRetrieve?: string[];
   attributesToHighlight?: string[];
+  matches?: boolean;
+  showMatchesPosition?: boolean;
 };
 
 console.log('[DEBUG] search route.ts loaded at', new Date().toISOString());
@@ -161,6 +163,8 @@ export async function POST(req: Request) {
       matchingStrategy: 'all',
       attributesToRetrieve: ['id', 'title', 'locale', 'pagePath', 'content'],
       attributesToHighlight: ['content'],
+      matches: true,
+      showMatchesPosition: true,
     };
 
     console.log('[DEBUG] Sending request to Meili:', target, meiliPayload);

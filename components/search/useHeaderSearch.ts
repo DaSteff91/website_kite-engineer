@@ -3,6 +3,7 @@ import { useDebounce } from 'use-debounce';
 import { usePathname } from 'next/navigation';
 import { SearchResult } from './types';
 import { sanitizeSearchQuery } from '@/lib/utils/sanitizeSearch';
+import { applyMatchToResult } from '@/lib/utils/search-match';
 
 export function useHeaderSearch() {
   const pathname = usePathname();
@@ -44,7 +45,16 @@ export function useHeaderSearch() {
         });
 
         const data = await response.json();
-        setSearchResults(data.hits || []);
+        const hits = Array.isArray(data.hits)
+          ? (data.hits as SearchResult[]).map((hit) =>
+              applyMatchToResult({
+                ...hit,
+                content: hit.content ?? {},
+              }),
+            )
+          : [];
+
+        setSearchResults(hits);
       } catch (error) {
         console.error('Search failed:', error);
         setSearchResults([]);
