@@ -1,5 +1,11 @@
 import { createSearchDocuments } from './utils/message-flattener.js';
 import { createMeilisearchClient, configureIndex } from './utils/meilisearch-client.js';
+import dotenv from 'dotenv';
+import path from 'node:path';
+
+dotenv.config({
+  path: path.resolve(process.cwd(), '.env.local'),
+});
 
 async function main(): Promise<void> {
   try {

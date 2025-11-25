@@ -907,7 +907,7 @@ jobs:
       - name: Run Meilisearch indexing
         run: npx tsx scripts/search-indexer/index.ts 
         env:
-          MEILI_HOST: ${{ secrets.MEILISEARCH_HOST }}
+          MEILISEARCH_HOST: ${{ secrets.MEILISEARCH_HOST }}
           MEILISEARCH_API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
 
   versioning:
