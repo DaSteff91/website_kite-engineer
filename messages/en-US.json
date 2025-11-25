@@ -12,7 +12,7 @@
     "introductionText4": "And no, I don´t design kites. Nor am I looking forward to integrate electronics into kites. At least not for now - who knows?",
     "introductionText5": "It´s my unique way of dealing with our beloved capitalism: I share what I like doing and you get what you have not yet had before. That makes everyone a winner!",
     "professionalTitle": "Professional Part",
-    "professionalItems": "<li>Launching my professional career as Kite-Engineer, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in german, english and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt and Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
+    "professionalItems": "<li>Licensed as IKO kite instructor, 2025</li><li>Launching my professional career as Kite-Engineer, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in German, English and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt and Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
     "personalTitle": "Personal Part",
     "personalItems": "<li>\"Be the change in the world you want to see\"</li><li>I am an explorer, an adventurer and a nerd</li><li>Self-study was always more satisfying then school</li><li>Yes, even I´ve once played football. Until I was 14</li><li>Sports and outdoor activities are a big part of my life</li><li>So is Linkin Park - being a fan since I´m 6 years old</li><li>Have you ever listened to Eckhart Tolle?</li><li>Smiling at people on the street helps sharing good vibes</li><li>Philosophy, especially stoicism, was added since I´m 30 - coincidence?</li><li>A book that changed my life? O Alquimista - Paulo Coelho</li><li>Follower of the \"Free and Open Source Idea\"</li><li>Growing as a community means contentment times x</li>"
   },
@@ -667,8 +667,8 @@
   "MonitoringPage": {
     "back-to-engineer-services-nav":"Back to All Engineering Services",
     "monitoring-hero": "Process Monitoring Services",
-    "monitoring-section-title": "Comprehensive Process Monitoring",
-    "monitoring-section-subtitle": "Define monitoring parameters and implement solutions for any production volume",
+    "monitoring-section-title": "Make invisible things visible - process monitoring put to work",
+    "monitoring-section-subtitle": "Only if you see what is really going on you can start systematical improvements. We define monitoring parameters and implement solutions for any production volume together",
     "parameter-selection-title": "Parameter Selection",
     "parameter-selection-list-element1": "• Critical parameter identification",
     "parameter-selection-list-element2": "• Monitoring strategy development",
