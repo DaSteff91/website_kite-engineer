@@ -1,4 +1,6 @@
 .env
+.env.local
+.env.dev
 Dockerfile
 .dockerignore
 .gitignore
@@ -15,4 +17,5 @@ CHANGELOG.md
 /meilisearch
 /i18n-codemod
 /*.py
-/scripts/search-indexer/node_modules
+/i18n/.i18n-meta
+/scripts

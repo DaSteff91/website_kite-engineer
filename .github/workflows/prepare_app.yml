@@ -72,8 +72,6 @@ jobs:
             # File didn´t exist in the previous commit
             echo '{}' > /tmp/en-US.prev.json
           fi
-          echo "This is the content of the /tmp/en-US.prev.json"
-          cat /tmp/en-US.prev.json || echo "/tmp/en-US.prev.json file not found"
 
           # Current content (must exist)
           if [ -f "$FILE_PATH" ]; then
@@ -82,8 +80,6 @@ jobs:
             # IF removed in the commit, treat as empty
             echo '{}' > /tmp/en-US.cur.json
           fi
-          echo "This is the content of the /tmp/en-US.cur.json"
-          cat /tmp/en-US.cur.json || echo "/tmp/en-US.cur.json file not found"
 
           # Node script: reads prev & cur, computes nested diff (added/changed only), writes result
           node <<'NODE'
@@ -241,7 +237,7 @@ jobs:
           fs.writeFileSync('/tmp/en-US.keys-nested.json', JSON.stringify(nested, null, 2), 'utf8');
           fs.writeFileSync('/tmp/en-US.keys-dot.json', JSON.stringify(flat, null, 2), 'utf8');
           const content = fs.readFileSync('/tmp/en-US.keys-nested.json','utf8')
-          console.log('This is \'/tmp/en-US.keys-nested.json\' content:\n' + content);
+          console.log('This is \'/tmp/en-US.keys-nested.json\' content aka the delta:\n' + content);
           JS
 
       - name: Translate nested keys (target = de)
@@ -264,7 +260,6 @@ jobs:
 
             const nestedTemplatePath = process.env.KEYS_NESTED;
             const outTranslatedPath = process.env.OUTPUT_TRANSLATED;
-            console.log("This is the outTranslationPath:", outTranslatedPath);
             const outErrorsPath = process.env.OUTPUT_ERRORS;
             const apiUrl = process.env.API_URL;
             const apiKey = process.env.TRANSLATE_API_KEY || '';
@@ -313,7 +308,6 @@ jobs:
                   }
 
                   const body = buildRequestBody(value);
-                  console.log("This is the body of the API request:\n" + JSON.stringify(body, null, 2));
 
                   // create a nonce for this request
                   const nonce = `${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
@@ -467,7 +461,6 @@ jobs:
 
             const nestedTemplatePath = process.env.KEYS_NESTED;
             const outTranslatedPath = process.env.OUTPUT_TRANSLATED;
-            console.log("This is the outTranslationPath:", outTranslatedPath);
             const outErrorsPath = process.env.OUTPUT_ERRORS;
             const apiUrl = process.env.API_URL;
             const apiKey = process.env.TRANSLATE_API_KEY;
@@ -519,7 +512,6 @@ jobs:
                   }
 
                   const body = buildRequestBody(value);
-                  console.log("This is the body of the API request:\n" + JSON.stringify(body, null, 2));
 
                   // create a nonce for this request
                   const nonce = `${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
