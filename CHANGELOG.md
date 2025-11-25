@@ -1,3 +1,12 @@
+## [1.30.10](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.9...v1.30.10) (2025-11-25)
+
+
+### Bug Fixes
+
+* add all engineering services to the menu + testing new translation workflow ([11e009c](https://github.com/DaSteff91/website_kite-engineer/commit/11e009c73c9d805616afecbc33abc8a08ce53a35))
+* prepare for meta data implementation for translation content ([06b7970](https://github.com/DaSteff91/website_kite-engineer/commit/06b797070d468b72ae46cfb0a2ef2e0417dfd209))
+* testing file creation ([10e429b](https://github.com/DaSteff91/website_kite-engineer/commit/10e429b645a63b88d85d3966fb067370ca8dd264))
+
 ## [1.30.9](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.8...v1.30.9) (2025-11-03)
 
 
