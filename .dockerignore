@@ -17,5 +17,6 @@ CHANGELOG.md
 /meilisearch
 /i18n-codemod
 /*.py
-/i18n/.i18n-meta
+/messages/.messages-meta
+/messages/.messages-manual-review
 /scripts

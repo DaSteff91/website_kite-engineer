@@ -665,29 +665,66 @@ jobs:
 
           node <<'JS'
           const fs = require('fs');
+          const path = require('path');
 
+          // Paths
           const translatedPath = '/tmp/en-US.changed.translated.de.json';
           const targetPath = 'messages/de-DE.json';
+          const metaPath = 'messages/.messages-meta/de-DE.meta.json';
+          const reviewPath = 'messages/.messages-manual-review/de-DE.review.json';
+
+          // --- helpers ----------------------------------------------------
+
+          function ensureDirForFile(filePath) {
+            const dir = path.dirname(filePath);
+            if (dir && !fs.existsSync(dir)) {
+              fs.mkdirSync(dir, { recursive: true });
+            }
+          }
+
+          function safeReadJson(filePath, fallback = {}) {
+            if (!fs.existsSync(filePath) || fs.statSync(filePath).size === 0) {
+              return fallback;
+            }
+            try {
+              return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            } catch (e) {
+              console.warn(`Warning: failed to parse ${filePath}, using fallback: ${e.message}`);
+              return fallback;
+            }
+          }
+
+          function safeWriteJson(filePath, obj) {
+            ensureDirForFile(filePath);
+            fs.writeFileSync(filePath, JSON.stringify(obj, null, 2), 'utf8');
+          }
+
+          // --- load translated diff ---------------------------------------
 
           if (!fs.existsSync(translatedPath)) {
             console.log(`No translated DE file found at ${translatedPath}, skipping.`);
             process.exit(0);
           }
 
-          const translated = JSON.parse(fs.readFileSync(translatedPath, 'utf8'));
+          const translated = safeReadJson(translatedPath, {});
 
-          // Defensive load of target file: only parse if file exists and is non-empty
-          let target = {};
-          if (fs.existsSync(targetPath) && fs.statSync(targetPath).size > 0) {
-            try {
-              target = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
-            } catch (e) {
-              console.warn(`Warning: failed to parse ${targetPath}, continuing with empty object: ${e.message}`);
-              target = {};
-            }
-          } else {
+          // --- load target locale file (de-DE.json) -----------------------
+
+          let target = safeReadJson(targetPath, {});
+          if (Object.keys(target).length === 0) {
             console.log(`${targetPath} missing or empty — starting from empty object`);
           }
+
+          // --- load / initialize meta + review (nested, for future use) ---
+
+          let meta = safeReadJson(metaPath, {});
+          let review = safeReadJson(reviewPath, {});
+
+          // NOTE: at this stage we are NOT yet using meta/review to change
+          // merge behavior. We only make sure the files exist and are valid JSON.
+          // In later steps we will add per-key status/lastAutoTarget etc.
+
+          // --- existing mergeNested behavior (unchanged for now) ----------
 
           function mergeNested(targetObj, sourceObj) {
             for (const key of Object.keys(sourceObj)) {
@@ -700,6 +737,7 @@ jobs:
                 }
                 mergeNested(targetObj[key], srcVal);
               } else {
+                // CURRENT BEHAVIOR: always overwrite leaf values
                 targetObj[key] = srcVal;
               }
             }
@@ -707,12 +745,17 @@ jobs:
 
           mergeNested(target, translated);
 
-          // Ensure target directory exists
-          const dir = targetPath.replace(/\/[^\/]+$/, '');
-          if (dir && !fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+          // --- write back target + (for now) just persist meta/review -----
+          // (meta & review are still unchanged here, but this will create the
+          // files and keep them as well-formed JSON, which we’ll extend later.)
 
+          ensureDirForFile(targetPath);
           fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
           console.log(`Merged DE translations into ${targetPath}`);
+
+          safeWriteJson(metaPath, meta);
+          safeWriteJson(reviewPath, review);
+          console.log(`Ensured meta at ${metaPath} and review at ${reviewPath} exist.`);
           JS
 
           git add messages/de-DE.json
