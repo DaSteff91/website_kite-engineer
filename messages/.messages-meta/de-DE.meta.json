@@ -29,6 +29,18 @@
       "lastSource": "• Something new about functionality shall be here",
       "lastAutoTarget": "• Etwas Neues über Funktionalität soll hier sein",
       "updatedAt": "2025-11-26T16:10:07.417Z"
+    },
+    "custom-scripts-tools-list-element1": {
+      "status": "auto",
+      "lastSource": "• Automation script development - save your time, let the machine do the work",
+      "lastAutoTarget": "• Automatisierungsskriptentwicklung - Zeit sparen, lassen Sie die Maschine die Arbeit",
+      "updatedAt": "2025-11-26T19:45:58.641Z"
+    },
+    "custom-scripts-tools-list-element2": {
+      "status": "auto",
+      "lastSource": "• Data processing tools - there is a lot available",
+      "lastAutoTarget": "• Datenverarbeitungswerkzeuge - es gibt viel zur Verfügung",
+      "updatedAt": "2025-11-26T19:45:58.641Z"
     }
   },
   "AboutPage": {},
