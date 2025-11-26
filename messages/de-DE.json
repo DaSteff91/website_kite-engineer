@@ -461,7 +461,8 @@
   "ProjectSetupPage": {
     "title": "Project Setup (Platzhalter)",
     "body": "Platzhalterinhalt.",
-    "project-setup-section-title": "Struktur ist der Schlüssel zu Nachhaltigkeit und zu komplexen Themen. So kann die Einrichtung eines Projekts bereits über Erfolg oder Misserfolg entscheiden"
+    "project-setup-section-title": "Struktur ist der Schlüssel zu Nachhaltigkeit und zu komplexen Themen. So kann die Einrichtung eines Projekts bereits über Erfolg oder Misserfolg entscheiden",
+    "project-setup-section-subtitle": "Meine entwickelten Kompetenzen bei der Einrichtung technischer Projekte helfen Ihnen langfristig. Der Aufruf ist, einfache Strukturen einfach zu halten und komplexe in kleinere und einfachere zu brechen."
   },
   "TimelineManagementPage": {
     "title": "Timeline Management (Platzhalter)",
