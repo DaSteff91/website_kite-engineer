@@ -444,7 +444,8 @@
   },
   "CustomSolutionsPage": {
     "title": "Custom Solutions (Platzhalter)",
-    "body": "Platzhalterinhalt."
+    "body": "Platzhalterinhalt.",
+    "tailored-applications-list-element1": "• Kundenspezifische Softwareentwicklung und -prüfung"
   },
   "DatabaseManagementPage": {
     "title": "Database Management (Platzhalter)",
