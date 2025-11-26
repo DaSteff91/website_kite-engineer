@@ -66,6 +66,245 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Compute removed keys across locales
+        run: |
+          set -euo pipefail
+
+          BEFORE_SHA="${{ github.event.before }}"
+          AFTER_SHA="${{ github.sha }}"
+
+          # Handle first push to branch (before == all zeros)
+          if [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            echo "First push to this branch – diffing against previous commit on AFTER."
+            BEFORE_SHA="${AFTER_SHA}~1"
+          fi
+
+          echo "Computing removed keys between $BEFORE_SHA and $AFTER_SHA"
+
+          node <<'JS'
+          const fs = require('fs');
+          const { execSync } = require('child_process');
+          const path = require('path');
+
+          function safeParse(jsonStr) {
+            if (!jsonStr || !jsonStr.trim()) return {};
+            try {
+              return JSON.parse(jsonStr);
+            } catch (e) {
+              console.warn("Warning: failed to parse JSON, treating as {}:", e.message);
+              return {};
+            }
+          }
+
+          function loadJsonAtCommit(sha, filePath) {
+            try {
+              const out = execSync(`git show ${sha}:${filePath}`, { encoding: 'utf8' });
+              return safeParse(out);
+            } catch (e) {
+              // file might not exist in that commit -> treat as empty
+              console.log(`No ${filePath} at ${sha}, treating as empty object.`);
+              return {};
+            }
+          }
+
+          function loadJsonWorkingTree(filePath) {
+            if (!fs.existsSync(filePath)) return {};
+            const content = fs.readFileSync(filePath, 'utf8');
+            return safeParse(content);
+          }
+
+          // Collect all dot-path keys from a nested object
+          function collectKeys(obj, prefix = '', out = new Set()) {
+            if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) {
+              // leaf -> record path
+              if (prefix) out.add(prefix);
+              return out;
+            }
+            for (const key of Object.keys(obj)) {
+              const nextPrefix = prefix ? `${prefix}.${key}` : key;
+              collectKeys(obj[key], nextPrefix, out);
+            }
+            return out;
+          }
+
+          // Build nested structure from a set of dot paths
+          function nestFromPaths(paths) {
+            const root = {};
+            for (const p of paths) {
+              const parts = p.split('.');
+              let cur = root;
+              for (let i = 0; i < parts.length; i++) {
+                const part = parts[i];
+                if (i === parts.length - 1) {
+                  // leaf
+                  cur[part] = true;
+                } else {
+                  if (!cur[part] || typeof cur[part] !== 'object' || Array.isArray(cur[part])) {
+                    cur[part] = {};
+                  }
+                  cur = cur[part];
+                }
+              }
+            }
+            return root;
+          }
+
+          // SHAs from env (passed via shell)
+          const BEFORE_SHA = process.env.BEFORE_SHA || '';
+          const AFTER_SHA = process.env.AFTER_SHA || '';
+
+          const files = [
+            'messages/en-US.json',
+            'messages/de-DE.json',
+            'messages/pt-BR.json',
+          ];
+
+          // 1) Load "before" and "after" snapshots for all three locales
+          const beforeSnapshots = {};
+          const afterSnapshots = {};
+
+          for (const f of files) {
+            beforeSnapshots[f] = loadJsonAtCommit(BEFORE_SHA, f);
+            afterSnapshots[f]  = loadJsonWorkingTree(f);
+          }
+
+          // 2) Collect removed keys per file (dot paths)
+          const removedPaths = new Set();
+
+          for (const f of files) {
+            const beforeKeys = collectKeys(beforeSnapshots[f]);
+            const afterKeys  = collectKeys(afterSnapshots[f]);
+
+            for (const k of beforeKeys) {
+              if (!afterKeys.has(k)) {
+                // key existed before in this file but is gone now -> mark as removed
+                removedPaths.add(k);
+              }
+            }
+          }
+
+          // 3) Create nested removed-keys structure
+          const removedNested = nestFromPaths(removedPaths);
+
+          const outPath = '/tmp/removed-keys.json';
+          fs.writeFileSync(outPath, JSON.stringify(removedNested, null, 2), 'utf8');
+
+          console.log("Removed keys (nested) written to", outPath);
+          console.log(JSON.stringify(removedNested, null, 2));
+          JS
+
+      - name: Apply removed keys to all locale files
+        run: |
+          set -euo pipefail
+
+          if [ ! -f /tmp/removed-keys.json ]; then
+            echo "No /tmp/removed-keys.json found, skipping removal."
+            exit 0
+          fi
+
+          echo "Applying removed keys from /tmp/removed-keys.json to locale files..."
+
+          node <<'JS'
+          const fs = require('fs');
+          const path = require('path');
+
+          const removedPath = '/tmp/removed-keys.json';
+
+          if (!fs.existsSync(removedPath)) {
+            console.log('No removed-keys.json present, nothing to do.');
+            process.exit(0);
+          }
+
+          function safeReadJson(filePath, fallback = {}) {
+            if (!fs.existsSync(filePath) || fs.statSync(filePath).size === 0) {
+              return fallback;
+            }
+            try {
+              return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            } catch (e) {
+              console.warn(`Warning: failed to parse ${filePath}, using fallback: ${e.message}`);
+              return fallback;
+            }
+          }
+
+          function safeWriteJson(filePath, obj) {
+            const dir = path.dirname(filePath);
+            if (dir && !fs.existsSync(dir)) {
+              fs.mkdirSync(dir, { recursive: true });
+            }
+            fs.writeFileSync(filePath, JSON.stringify(obj, null, 2), 'utf8');
+          }
+
+          function isPlainObject(value) {
+            return (
+              value !== null &&
+              typeof value === 'object' &&
+              !Array.isArray(value)
+            );
+          }
+
+          function deleteKeys(targetObj, removedObj) {
+            if (!isPlainObject(targetObj) || !isPlainObject(removedObj)) {
+              return;
+            }
+
+            for (const key of Object.keys(removedObj)) {
+              if (!Object.prototype.hasOwnProperty.call(targetObj, key)) {
+                continue; // nothing to delete here
+              }
+
+              const remVal = removedObj[key];
+              const tgtVal = targetObj[key];
+
+              // Leaf: removedObj[key] === true -> delete key
+              if (remVal === true) {
+                delete targetObj[key];
+                continue;
+              }
+
+              // Nested: both sides plain objects
+              if (isPlainObject(remVal) && isPlainObject(tgtVal)) {
+                deleteKeys(tgtVal, remVal);
+
+                // If nested object is now empty, clean it up
+                if (isPlainObject(tgtVal) && Object.keys(tgtVal).length === 0) {
+                  delete targetObj[key];
+                }
+              }
+            }
+          }
+
+          const removed = safeReadJson(removedPath, {});
+          if (!isPlainObject(removed) || Object.keys(removed).length === 0) {
+            console.log('removed-keys.json is empty, nothing to remove.');
+            process.exit(0);
+          }
+
+          const localeFiles = [
+            'messages/en-US.json',
+            'messages/de-DE.json',
+            'messages/pt-BR.json',
+          ];
+
+          for (const file of localeFiles) {
+            console.log(`Processing removals in ${file}...`);
+            const current = safeReadJson(file, {});
+            const before = JSON.stringify(current);
+
+            deleteKeys(current, removed);
+
+            const after = JSON.stringify(current);
+            if (before !== after) {
+              console.log(`  -> ${file} changed, writing updated JSON.`);
+              safeWriteJson(file, current);
+            } else {
+              console.log(`  -> ${file} unchanged.`);
+            }
+          }
+
+          console.log('Finished applying removed keys to all locale files.');
+          JS
+
       - name: Create the diff between the latest and previous push in en-US.json
         if: steps.check_for_changes.outputs.changed == 'true'
         id: compute_diff
@@ -1218,10 +1457,8 @@ jobs:
 
           fi
 
-      - name: Commit and push merged translations
-        if: |
-          steps.check_for_changes.outputs.changed == 'true' &&
-          (github.ref_name == 'dev' || github.ref_name == 'workflow-test')
+      - name: Commit and push merged translations and removals
+        if: startsWith(github.ref, 'refs/heads/')
         env:
           GIT_USER_NAME: "GitHub Actions Bot"
           GIT_USER_EMAIL: "actions@github.com"
@@ -1230,30 +1467,28 @@ jobs:
           set -euo pipefail
 
           echo "Configuring git user for automated commit..."
-          git config --global user.name "$GIT_USER_NAME"
-          git config --global user.email "$GIT_USER_EMAIL"
+          git config user.name "$GIT_USER_NAME"
+          git config user.email "$GIT_USER_EMAIL"
 
-          # Check for changes in translation and meta files only
+          # Stage all locale + meta + review changes (including removals)
           git add \
+            messages/en-US.json \
             messages/de-DE.json \
             messages/pt-BR.json \
             messages/.messages-meta \
             messages/.messages-manual-review
 
           if git diff --cached --quiet; then
-            echo "No changes in translation files to commit."
+            echo "No changes in translation/meta/review files to commit."
             exit 0
           fi
 
-          # Get the SHA of the commit that triggered the workflow
           SOURCE_SHA="${{ github.event.after }}"
 
-          # Commit with [skip ci] to prevent retriggering workflows
-          git commit -m "[skip ci] auto translation de and pt added (from commit $SOURCE_SHA)"
+          git commit -m "[skip ci] auto translation + removals sync (from commit $SOURCE_SHA)"
 
-          # Push back to the same branch
-          echo "Pushing automated translation commit to $TARGET_BRANCH..."
-          git push origin "$TARGET_BRANCH"
+          echo "Pushing automated translation commit back to $TARGET_BRANCH..."
+          git push origin "HEAD:${TARGET_BRANCH}"
 
       - name: Stop LibreTranslate container on server
         if: always() && steps.check_for_changes.outputs.changed == 'true'
