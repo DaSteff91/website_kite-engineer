@@ -758,12 +758,10 @@ jobs:
           let translated = {};
           if (fs.existsSync(translatedPath)) {
             translated = safeReadJson(translatedPath, {});
-            console.log("DE translation available for merge.");
+            console.log("de-DE translation available for merge.");
           } else {
-            console.log("No DE translation available — running only manual detection.");
+            console.log("No de-DE translation available — running only manual detection.");
           }
-
-          const translated = safeReadJson(translatedPath, {});
 
           // --- load English nested diff (same keys, en-US side) -----------
 
@@ -1027,8 +1025,6 @@ jobs:
           } else {
             console.log("No pt-BR translation available — running only manual detection.");
           }
-
-          const translated = safeReadJson(translatedPath, {});
 
           // --- load target locale file (pt-BR.json) -----------------------
 
