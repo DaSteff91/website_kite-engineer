@@ -475,7 +475,8 @@
   },
   "CustomSolutionsPage": {
     "title": "Custom Solutions (placeholder)",
-    "body": "Placeholder content."
+    "body": "Placeholder content.",
+    "tailored-applications-list-element1": "• Desenvolvimento de software personalizado e testes"
   },
   "DatabaseManagementPage": {
     "title": "Database Management (placeholder)",
