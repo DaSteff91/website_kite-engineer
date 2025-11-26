@@ -937,12 +937,14 @@ jobs:
             git push origin dev && echo "push ok" || echo "push failed"
           fi
 
-      - name: Commit and push merged translations to dev
-        if: steps.check_for_changes.outputs.changed == 'true'
+      - name: Commit and push merged translations
+        if: |
+          steps.check_for_changes.outputs.changed == 'true' &&
+          (github.ref_name == 'dev' || github.ref_name == 'workflow-test')
         env:
           GIT_USER_NAME: "GitHub Actions Bot"
           GIT_USER_EMAIL: "actions@github.com"
-          TARGET_BRANCH: dev
+          TARGET_BRANCH: ${{ github.ref_name }}
         run: |
           set -euo pipefail
 
@@ -950,12 +952,8 @@ jobs:
           git config --global user.name "$GIT_USER_NAME"
           git config --global user.email "$GIT_USER_EMAIL"
 
-          # Check for changes in translation and meta files only
-          git add \
-            messages/de-DE.json \
-            messages/pt-BR.json \
-            messages/.messages-meta \
-            messages/.messages-manual-review
+          # Check for changes in translation files only
+          git add messages/de-DE.json messages/pt-BR.json
 
           if git diff --cached --quiet; then
             echo "No changes in translation files to commit."
