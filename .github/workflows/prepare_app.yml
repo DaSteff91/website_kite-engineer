@@ -822,32 +822,63 @@ jobs:
 
           node <<'JS'
           const fs = require('fs');
+          const path = require('path');
 
+          // Paths
           const translatedPath = '/tmp/en-US.changed.translated.pt-BR.json';
           const targetPath = 'messages/pt-BR.json';
+          const metaPath = 'messages/.messages-meta/pt-BR.meta.json';
+          const reviewPath = 'messages/.messages-manual-review/pt-BR.review.json';
+
+          // --- helpers ----------------------------------------------------
+
+          function ensureDirForFile(filePath) {
+            const dir = path.dirname(filePath);
+            if (dir && !fs.existsSync(dir)) {
+              fs.mkdirSync(dir, { recursive: true });
+            }
+          }
+
+          function safeReadJson(filePath, fallback = {}) {
+            if (!fs.existsSync(filePath) || fs.statSync(filePath).size === 0) {
+              return fallback;
+            }
+            try {
+              return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            } catch (e) {
+              console.warn(`Warning: failed to parse ${filePath}, using fallback: ${e.message}`);
+              return fallback;
+            }
+          }
+
+          function safeWriteJson(filePath, obj) {
+            ensureDirForFile(filePath);
+            fs.writeFileSync(filePath, JSON.stringify(obj, null, 2), 'utf8');
+          }
+
+          // --- load translated diff ---------------------------------------
 
           if (!fs.existsSync(translatedPath)) {
-            console.log(`No translated PT-BR file found at ${translatedPath}, skipping.`);
+            console.log(`No translated PT file found at ${translatedPath}, skipping.`);
             process.exit(0);
           }
 
-          // Load files
-          const translated = JSON.parse(fs.readFileSync(translatedPath, 'utf8'));
+          const translated = safeReadJson(translatedPath, {});
 
-          // Defensive load of target file: only parse if file exists and is non-empty
-          let target = {};
-          if (fs.existsSync(targetPath) && fs.statSync(targetPath).size > 0) {
-            try {
-              target = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
-            } catch (e) {
-              console.warn(`Warning: failed to parse ${targetPath}, continuing with empty object: ${e.message}`);
-              target = {};
-            }
-          } else {
+          // --- load target locale file (pt-BR.json) -----------------------
+
+          let target = safeReadJson(targetPath, {});
+          if (Object.keys(target).length === 0) {
             console.log(`${targetPath} missing or empty — starting from empty object`);
           }
 
-          // Recursive merge helper
+          // --- load / initialize meta + review (scaffolding only) ---------
+
+          let meta = safeReadJson(metaPath, {});
+          let review = safeReadJson(reviewPath, {});
+
+          // --- existing mergeNested behavior (unchanged yet) --------------
+
           function mergeNested(targetObj, sourceObj) {
             for (const key of Object.keys(sourceObj)) {
               const srcVal = sourceObj[key];
@@ -859,7 +890,7 @@ jobs:
                 }
                 mergeNested(targetObj[key], srcVal);
               } else {
-                // Leaf value → overwrite
+                // CURRENT BEHAVIOR: always overwrite leaf values
                 targetObj[key] = srcVal;
               }
             }
@@ -867,13 +898,15 @@ jobs:
 
           mergeNested(target, translated);
 
-          // Ensure target directory exists
-          const dir = targetPath.replace(/\/[^\/]+$/, '');
-          if (dir && !fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+          // --- write back target + empty meta/review scaffolding -----------
 
-
+          ensureDirForFile(targetPath);
           fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
-          console.log(`Merged PT-BR translations into ${targetPath}`);
+          console.log(`Merged PT translations into ${targetPath}`);
+
+          safeWriteJson(metaPath, meta);
+          safeWriteJson(reviewPath, review);
+          console.log(`Ensured meta at ${metaPath} and review at ${reviewPath} exist.`);
           JS
 
           git add messages/pt-BR.json
@@ -917,8 +950,12 @@ jobs:
           git config --global user.name "$GIT_USER_NAME"
           git config --global user.email "$GIT_USER_EMAIL"
 
-          # Check for changes in translation files only
-          git add messages/de-DE.json messages/pt-BR.json
+          # Check for changes in translation and meta files only
+          git add \
+            messages/de-DE.json \
+            messages/pt-BR.json \
+            messages/.messages-meta \
+            messages/.messages-manual-review
 
           if git diff --cached --quiet; then
             echo "No changes in translation files to commit."

@@ -1,7 +1,9 @@
 name: Dev - Build, Push to GHCR and Deploy on Server
 
 on:
-  workflow_run:
+  push:
+    branches:
+      - main
 
 jobs:
   build-and-push:
