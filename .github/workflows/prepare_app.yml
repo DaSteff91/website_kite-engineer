@@ -688,6 +688,7 @@ jobs:
           const targetPath = 'messages/de-DE.json';
           const metaPath = 'messages/.messages-meta/de-DE.meta.json';
           const reviewPath = 'messages/.messages-manual-review/de-DE.review.json';
+          const enDiffPath = '/tmp/en-US.keys-nested.json'; // nested English diff (changed keys)
 
           // --- helpers ----------------------------------------------------
 
@@ -724,6 +725,10 @@ jobs:
 
           const translated = safeReadJson(translatedPath, {});
 
+          // --- load English nested diff (same keys, en-US side) -----------
+
+          const enDiff = safeReadJson(enDiffPath, {});
+
           // --- load target locale file (de-DE.json) -----------------------
 
           let target = safeReadJson(targetPath, {});
@@ -731,39 +736,89 @@ jobs:
             console.log(`${targetPath} missing or empty — starting from empty object`);
           }
 
-          // --- load / initialize meta + review (nested, for future use) ---
+          // --- load / initialize meta + review (nested) -------------------
 
           let meta = safeReadJson(metaPath, {});
           let review = safeReadJson(reviewPath, {});
 
-          // NOTE: at this stage we are NOT yet using meta/review to change
-          // merge behavior. We only make sure the files exist and are valid JSON.
-          // In later steps we will add per-key status/lastAutoTarget etc.
+          // --- merge with meta tracking (still overwriting as before) -----
 
-          // --- existing mergeNested behavior (unchanged for now) ----------
+          function isPlainObject(value) {
+            return (
+              value !== null &&
+              typeof value === 'object' &&
+              !Array.isArray(value)
+            );
+          }
 
-          function mergeNested(targetObj, sourceObj) {
+          // helper to ensure nested object structure for meta / target
+          function ensureNestedObject(obj, key) {
+            if (!isPlainObject(obj[key])) {
+              obj[key] = {};
+            }
+            return obj[key];
+          }
+
+          function mergeNested(targetObj, sourceObj, enObj, metaObj) {
+            const nowIso = new Date().toISOString();
+
             for (const key of Object.keys(sourceObj)) {
               const srcVal = sourceObj[key];
-              const tgtVal = targetObj[key];
+              const enVal =
+                isPlainObject(enObj) && Object.prototype.hasOwnProperty.call(enObj, key)
+                  ? enObj[key]
+                  : undefined;
 
-              if (srcVal && typeof srcVal === 'object' && !Array.isArray(srcVal)) {
-                if (!tgtVal || typeof tgtVal !== 'object') {
-                  targetObj[key] = {};
-                }
-                mergeNested(targetObj[key], srcVal);
+              const targetHasKey = Object.prototype.hasOwnProperty.call(targetObj, key);
+              const currentTargetVal = targetHasKey ? targetObj[key] : undefined;
+
+              if (isPlainObject(srcVal)) {
+                // nested object branch
+                const tgtChild = ensureNestedObject(targetObj, key);
+                const metaChild = ensureNestedObject(metaObj, key);
+
+                const enChild =
+                  isPlainObject(enVal) ? enVal : {};
+
+                mergeNested(tgtChild, srcVal, enChild, metaChild);
               } else {
-                // CURRENT BEHAVIOR: always overwrite leaf values
+                // leaf branch: CURRENT BEHAVIOR → always overwrite
                 targetObj[key] = srcVal;
+
+                // ensure meta leaf object exists
+                if (!isPlainObject(metaObj[key])) {
+                  metaObj[key] = {
+                    status: targetHasKey ? "manual" : "auto",
+                    lastSource: null,
+                    lastAutoTarget: null,
+                    updatedAt: null,
+                  };
+                }
+
+                const entry = metaObj[key];
+
+                // Only update lastSource if we have an English value for this key
+                if (typeof enVal === 'string') {
+                  entry.lastSource = enVal;
+                }
+
+                // Record the latest auto output for this key
+                entry.lastAutoTarget = srcVal;
+
+                // Update timestamp
+                entry.updatedAt = nowIso;
+
+                // IMPORTANT: we do NOT change status here if it already exists.
+                // For now, "manual" vs "auto" is only decided by whether the key
+                // existed before (targetHasKey) or by previous runs.
               }
             }
           }
 
-          mergeNested(target, translated);
+          // Kick off merge with target + translated + enDiff + meta
+          mergeNested(target, translated, enDiff, meta);
 
-          // --- write back target + (for now) just persist meta/review -----
-          // (meta & review are still unchanged here, but this will create the
-          // files and keep them as well-formed JSON, which we’ll extend later.)
+          // --- write back target + meta/review ----------------------------
 
           ensureDirForFile(targetPath);
           fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
@@ -771,7 +826,7 @@ jobs:
 
           safeWriteJson(metaPath, meta);
           safeWriteJson(reviewPath, review);
-          console.log(`Ensured meta at ${metaPath} and review at ${reviewPath} exist.`);
+          console.log(`Updated meta at ${metaPath} and kept review at ${reviewPath}.`);
           JS
 
           git add messages/de-DE.json
@@ -823,32 +878,63 @@ jobs:
 
           node <<'JS'
           const fs = require('fs');
+          const path = require('path');
 
+          // Paths
           const translatedPath = '/tmp/en-US.changed.translated.pt-BR.json';
           const targetPath = 'messages/pt-BR.json';
+          const metaPath = 'messages/.messages-meta/pt-BR.meta.json';
+          const reviewPath = 'messages/.messages-manual-review/pt-BR.review.json';
+
+          // --- helpers ----------------------------------------------------
+
+          function ensureDirForFile(filePath) {
+            const dir = path.dirname(filePath);
+            if (dir && !fs.existsSync(dir)) {
+              fs.mkdirSync(dir, { recursive: true });
+            }
+          }
+
+          function safeReadJson(filePath, fallback = {}) {
+            if (!fs.existsSync(filePath) || fs.statSync(filePath).size === 0) {
+              return fallback;
+            }
+            try {
+              return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            } catch (e) {
+              console.warn(`Warning: failed to parse ${filePath}, using fallback: ${e.message}`);
+              return fallback;
+            }
+          }
+
+          function safeWriteJson(filePath, obj) {
+            ensureDirForFile(filePath);
+            fs.writeFileSync(filePath, JSON.stringify(obj, null, 2), 'utf8');
+          }
+
+          // --- load translated diff ---------------------------------------
 
           if (!fs.existsSync(translatedPath)) {
-            console.log(`No translated PT-BR file found at ${translatedPath}, skipping.`);
+            console.log(`No translated PT file found at ${translatedPath}, skipping.`);
             process.exit(0);
           }
 
-          // Load files
-          const translated = JSON.parse(fs.readFileSync(translatedPath, 'utf8'));
+          const translated = safeReadJson(translatedPath, {});
 
-          // Defensive load of target file: only parse if file exists and is non-empty
-          let target = {};
-          if (fs.existsSync(targetPath) && fs.statSync(targetPath).size > 0) {
-            try {
-              target = JSON.parse(fs.readFileSync(targetPath, 'utf8'));
-            } catch (e) {
-              console.warn(`Warning: failed to parse ${targetPath}, continuing with empty object: ${e.message}`);
-              target = {};
-            }
-          } else {
+          // --- load target locale file (pt-BR.json) -----------------------
+
+          let target = safeReadJson(targetPath, {});
+          if (Object.keys(target).length === 0) {
             console.log(`${targetPath} missing or empty — starting from empty object`);
           }
 
-          // Recursive merge helper
+          // --- load / initialize meta + review (scaffolding only) ---------
+
+          let meta = safeReadJson(metaPath, {});
+          let review = safeReadJson(reviewPath, {});
+
+          // --- existing mergeNested behavior (unchanged yet) --------------
+
           function mergeNested(targetObj, sourceObj) {
             for (const key of Object.keys(sourceObj)) {
               const srcVal = sourceObj[key];
@@ -860,7 +946,7 @@ jobs:
                 }
                 mergeNested(targetObj[key], srcVal);
               } else {
-                // Leaf value → overwrite
+                // CURRENT BEHAVIOR: always overwrite leaf values
                 targetObj[key] = srcVal;
               }
             }
@@ -868,13 +954,15 @@ jobs:
 
           mergeNested(target, translated);
 
-          // Ensure target directory exists
-          const dir = targetPath.replace(/\/[^\/]+$/, '');
-          if (dir && !fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+          // --- write back target + empty meta/review scaffolding -----------
 
-
+          ensureDirForFile(targetPath);
           fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
-          console.log(`Merged PT-BR translations into ${targetPath}`);
+          console.log(`Merged PT translations into ${targetPath}`);
+
+          safeWriteJson(metaPath, meta);
+          safeWriteJson(reviewPath, review);
+          console.log(`Ensured meta at ${metaPath} and review at ${reviewPath} exist.`);
           JS
 
           git add messages/pt-BR.json
@@ -905,12 +993,14 @@ jobs:
             git push origin dev && echo "push ok" || echo "push failed"
           fi
 
-      - name: Commit and push merged translations to dev
-        if: steps.check_for_changes.outputs.changed == 'true'
+      - name: Commit and push merged translations
+        if: |
+          steps.check_for_changes.outputs.changed == 'true' &&
+          (github.ref_name == 'dev' || github.ref_name == 'workflow-test')
         env:
           GIT_USER_NAME: "GitHub Actions Bot"
           GIT_USER_EMAIL: "actions@github.com"
-          TARGET_BRANCH: dev
+          TARGET_BRANCH: ${{ github.ref_name }}
         run: |
           set -euo pipefail
 
