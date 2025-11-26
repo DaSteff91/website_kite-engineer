@@ -476,7 +476,9 @@
   "CustomSolutionsPage": {
     "title": "Custom Solutions (placeholder)",
     "body": "Placeholder content.",
-    "tailored-applications-list-element1": "• Desenvolvimento de software personalizado e testes"
+    "tailored-applications-list-element1": "• Desenvolvimento de software personalizado e testes",
+    "custom-scripts-tools-list-element1": "Desenvolvimento de scripts de automação. Poupe seu tempo, deixe a máquina fazer o trabalho",
+    "custom-scripts-tools-list-element2": "• Ferramentas de processamento de dados - há muita coisa disponível"
   },
   "DatabaseManagementPage": {
     "title": "Database Management (placeholder)",

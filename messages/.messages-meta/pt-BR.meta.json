@@ -1,1 +1,194 @@
-{}
+{
+  "AboutPage": {},
+  "ContactPage": {},
+  "EngineerPage": {
+    "processEngineering": {
+      "processControl": {},
+      "processOptimization": {},
+      "changeManagement": {},
+      "monitoring": {}
+    },
+    "processDevelopment": {
+      "creativity": {},
+      "processDesign": {},
+      "simulationPrototyping": {},
+      "processEquipmentRoadmap": {}
+    },
+    "softwareDevelopment": {
+      "customizedSolutions": {},
+      "databaseManagement": {},
+      "workflowAutomation": {},
+      "webDevelopment": {}
+    },
+    "projectManagement": {
+      "projectSetup": {},
+      "timelineManagement": {},
+      "deviationManagement": {},
+      "documentationSharing": {}
+    },
+    "technicalConsulting": {
+      "processAssessment": {},
+      "technicalResearch": {},
+      "trainingKnowledgeTransfer": {},
+      "competitorAnalysis": {}
+    },
+    "contactSection": {}
+  },
+  "KitePage": {
+    "freelancer": {
+      "schoolSupport": {},
+      "travelServices": {},
+      "consulting": {}
+    },
+    "courses": {
+      "theory": {},
+      "starting": {},
+      "advanced": {}
+    },
+    "links": {},
+    "contactSection": {}
+  },
+  "ProcessControlPage": {},
+  "TravelServicesPage": {},
+  "TheoryPage": {},
+  "StartingPage": {},
+  "AdvancedPage": {},
+  "SchoolSupportPage": {},
+  "ConsultingPage": {},
+  "LandingPage": {},
+  "NavigationMenu": {},
+  "Footer": {},
+  "ProcessOptimizationPage": {},
+  "ChangeManagementPage": {},
+  "MonitoringPage": {},
+  "CreativityPage": {},
+  "ProcessDesignPage": {},
+  "SimulationPrototypingPage": {},
+  "EquipmentRoadmapPage": {},
+  "CustomSolutionsPage": {
+    "custom-scripts-tools-list-element1": {
+      "status": "auto",
+      "lastSource": "• Automation script development - save your time, let the machine do the work",
+      "lastAutoTarget": "Desenvolvimento de scripts de automação. Poupe seu tempo, deixe a máquina fazer o trabalho",
+      "updatedAt": "2025-11-26T19:45:59.277Z"
+    },
+    "custom-scripts-tools-list-element2": {
+      "status": "auto",
+      "lastSource": "• Data processing tools - there is a lot available",
+      "lastAutoTarget": "• Ferramentas de processamento de dados - há muita coisa disponível",
+      "updatedAt": "2025-11-26T19:45:59.277Z"
+    }
+  },
+  "DatabaseManagementPage": {},
+  "WorkflowAutomationPage": {},
+  "WebDevelopmentPage": {},
+  "ProjectSetupPage": {},
+  "TimelineManagementPage": {},
+  "DeviationManagementPage": {},
+  "DocumentationPage": {},
+  "ProcessAssessmentPage": {},
+  "TechnicalResearchPage": {},
+  "TrainingKnowledgeTransferPage": {},
+  "CompetitorAnalysisPage": {},
+  "ContactTemplates": {
+    "schoolSupport": {},
+    "travelServices": {},
+    "consulting": {},
+    "coursesTheory": {},
+    "coursesStarting": {},
+    "coursesAdvanced": {},
+    "processEngineering": {
+      "processControl": {},
+      "processOptimization": {},
+      "changeManagement": {},
+      "monitoring": {}
+    },
+    "processDevelopment": {
+      "creativity": {},
+      "processDesign": {},
+      "simulationPrototyping": {},
+      "equipmentRoadmap": {}
+    },
+    "softwareDevelopment": {
+      "customSolutions": {},
+      "databaseManagement": {},
+      "workflowAutomation": {},
+      "webDevelopment": {}
+    },
+    "projectManagement": {
+      "projectSetup": {},
+      "timelineManagement": {},
+      "deviationManagement": {},
+      "documentation": {}
+    },
+    "technicalConsulting": {
+      "processAssessment": {},
+      "technicalResearch": {},
+      "trainingKnowledgeTransfer": {},
+      "competitorAnalysis": {}
+    }
+  },
+  "ContactForm": {
+    "placeholder": {},
+    "nodemailerAutoReplies": {}
+  },
+  "NotFound": {},
+  "MetaData": {
+    "NotFound": {},
+    "Home": {},
+    "Kite": {},
+    "Engineer": {},
+    "About": {},
+    "Contact": {},
+    "Privacy": {},
+    "Imprint": {},
+    "KiteSubpages": {
+      "Freelancer": {
+        "SchoolSupport": {},
+        "TravelServices": {},
+        "Consulting": {}
+      },
+      "Courses": {
+        "Theory": {},
+        "Starting": {},
+        "Advanced": {}
+      }
+    },
+    "EngineerSubpages": {
+      "ProcessEngineering": {
+        "ProcessControl": {},
+        "ProcessOptimization": {},
+        "ChangeManagement": {},
+        "Monitoring": {}
+      },
+      "ProcessDevelopment": {
+        "Creativity": {},
+        "ProcessDesign": {},
+        "SimulationPrototyping": {},
+        "EquipmentRoadmap": {}
+      },
+      "SoftwareDevelopment": {
+        "CustomSolutions": {},
+        "DatabaseManagement": {},
+        "WorkflowAutomation": {},
+        "WebDevelopment": {}
+      },
+      "ProjectManagement": {
+        "ProjectSetup": {},
+        "TimelineManagement": {},
+        "DeviationManagement": {},
+        "Documentation": {}
+      },
+      "TechnicalConsulting": {
+        "ProcessAssessment": {},
+        "TechnicalResearch": {},
+        "TrainingKnowledgeTransfer": {},
+        "CompetitorAnalysis": {}
+      }
+    }
+  },
+  "SearchBar": {},
+  "SearchBar2": {
+    "CompetitorAnalysis": {}
+  }
+}
