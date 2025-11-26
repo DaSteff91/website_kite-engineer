@@ -741,8 +741,6 @@ jobs:
           let meta = safeReadJson(metaPath, {});
           let review = safeReadJson(reviewPath, {});
 
-          // --- merge with meta tracking (still overwriting as before) -----
-
           function isPlainObject(value) {
             return (
               value !== null &&
@@ -782,10 +780,9 @@ jobs:
 
                 mergeNested(tgtChild, srcVal, enChild, metaChild);
               } else {
-                // leaf branch: CURRENT BEHAVIOR → always overwrite
-                targetObj[key] = srcVal;
+                // --- LEAF BRANCH: protect manual translations ----------------
 
-                // ensure meta leaf object exists
+                // Ensure meta leaf object exists (or reuse existing)
                 if (!isPlainObject(metaObj[key])) {
                   metaObj[key] = {
                     status: targetHasKey ? "manual" : "auto",
@@ -796,21 +793,37 @@ jobs:
                 }
 
                 const entry = metaObj[key];
+                const previousLastAuto = entry.lastAutoTarget;
 
-                // Only update lastSource if we have an English value for this key
+                // Detect manual override:
+                // If this key was auto-managed and the current stored translation
+                // differs from the last auto output -> someone edited it by hand.
+                if (
+                  entry.status === "auto" &&
+                  previousLastAuto != null &&
+                  targetHasKey &&
+                  currentTargetVal !== previousLastAuto
+                ) {
+                  entry.status = "manual";
+                }
+
+                // If now marked as manual → DO NOT overwrite this key
+                if (entry.status === "manual") {
+                  // We deliberately leave lastSource/lastAutoTarget/updatedAt unchanged here.
+                  // Later we will use this to drive manual review.
+                  continue;
+                }
+
+                // Auto-managed: overwrite and record metadata
+                targetObj[key] = srcVal;
+
+                // Only update lastSource if we actually have English text for this key
                 if (typeof enVal === 'string') {
                   entry.lastSource = enVal;
                 }
 
-                // Record the latest auto output for this key
                 entry.lastAutoTarget = srcVal;
-
-                // Update timestamp
                 entry.updatedAt = nowIso;
-
-                // IMPORTANT: we do NOT change status here if it already exists.
-                // For now, "manual" vs "auto" is only decided by whether the key
-                // existed before (targetHasKey) or by previous runs.
               }
             }
           }
@@ -829,7 +842,10 @@ jobs:
           console.log(`Updated meta at ${metaPath} and kept review at ${reviewPath}.`);
           JS
 
-          git add messages/de-DE.json
+          git add \
+            messages/de-DE.json \
+            messages/.messages-meta \
+            messages/.messages-manual-review
 
           # show staged diff if any
           if git diff --cached --quiet -- messages/de-DE.json; then
