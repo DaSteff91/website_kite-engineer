@@ -449,7 +449,8 @@
   },
   "ChangeManagementPage": {
     "title": "Change Management (placeholder)",
-    "body": "Placeholder content."
+    "body": "Placeholder content.",
+    "release-gate-management-list-element4": "• Alguns fios de mudança para o bem de mudar algo"
   },
   "MonitoringPage": {
     "title": "Monitoring (placeholder)",

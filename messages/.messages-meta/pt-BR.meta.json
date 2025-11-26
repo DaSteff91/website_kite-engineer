@@ -59,7 +59,14 @@
   "NavigationMenu": {},
   "Footer": {},
   "ProcessOptimizationPage": {},
-  "ChangeManagementPage": {},
+  "ChangeManagementPage": {
+    "release-gate-management-list-element4": {
+      "status": "auto",
+      "lastSource": "• Some wired change for the sake of changing something",
+      "lastAutoTarget": "• Alguns fios de mudança para o bem de mudar algo",
+      "updatedAt": "2025-11-26T23:04:25.773Z"
+    }
+  },
   "MonitoringPage": {},
   "CreativityPage": {},
   "ProcessDesignPage": {},
