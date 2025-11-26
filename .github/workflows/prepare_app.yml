@@ -869,8 +869,11 @@ jobs:
             git show --name-only --pretty="" HEAD || true
             echo "Preview of committed messages/de-DE.json:"
             git show HEAD:messages/de-DE.json | head -n 50 || true
-            echo "Pushing to origin dev..."
-            git push origin dev && echo "push ok" || echo "push failed"
+            
+            TARGET_BRANCH="${{ github.ref_name }}"
+            echo "Pushing to origin ${TARGET_BRANCH}..."
+            git push origin "HEAD:${TARGET_BRANCH}" && echo "push ok" || echo "push failed"
+
           fi
 
       - name: Merge PT-BR translations into existing pt-BR.json
