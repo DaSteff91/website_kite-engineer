@@ -1008,8 +1008,12 @@ jobs:
           git config --global user.name "$GIT_USER_NAME"
           git config --global user.email "$GIT_USER_EMAIL"
 
-          # Check for changes in translation files only
-          git add messages/de-DE.json messages/pt-BR.json
+          # Check for changes in translation and meta files only
+          git add \
+            messages/de-DE.json \
+            messages/pt-BR.json \
+            messages/.messages-meta \
+            messages/.messages-manual-review
 
           if git diff --cached --quiet; then
             echo "No changes in translation files to commit."
