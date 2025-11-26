@@ -66,11 +66,6 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Exit early on not changed
-        if: steps.check_for_changes.outputs.changed != 'true'
-        run: |
-          echo "No changes in messages/en-US.json in the latest push. No action necessary"
-
       - name: Create the diff between the latest and previous push in en-US.json
         if: steps.check_for_changes.outputs.changed == 'true'
         id: compute_diff
@@ -704,7 +699,6 @@ jobs:
           JS
 
       - name: Merge DE translations into existing de-DE.json
-        if: steps.check_for_changes.outputs.changed == 'true'
         run: |
           set -euo pipefail
 
@@ -761,9 +755,12 @@ jobs:
 
           // --- load translated diff ---------------------------------------
 
-          if (!fs.existsSync(translatedPath)) {
-            console.log(`No translated DE file found at ${translatedPath}, skipping.`);
-            process.exit(0);
+          let translated = {};
+          if (fs.existsSync(translatedPath)) {
+            translated = safeReadJson(translatedPath, {});
+            console.log("DE translation available for merge.");
+          } else {
+            console.log("No DE translation available — running only manual detection.");
           }
 
           const translated = safeReadJson(translatedPath, {});
@@ -798,6 +795,51 @@ jobs:
               obj[key] = {};
             }
             return obj[key];
+          }
+
+          function detectManualDiffs(targetObj, metaObj, reviewObj, enFullObj = {}) {
+            const nowIso = new Date().toISOString();
+
+            function traverse(targetNode, metaNode, reviewNode, enNode) {
+              for (const key of Object.keys(targetNode)) {
+                const targetVal = targetNode[key];
+
+                // Nested structure?
+                if (isPlainObject(targetVal)) {
+                  if (!isPlainObject(metaNode[key])) metaNode[key] = {};
+                  if (!isPlainObject(reviewNode[key])) reviewNode[key] = {};
+                  if (!isPlainObject(enNode?.[key])) enNode[key] = {};
+
+                  traverse(targetVal, metaNode[key], reviewNode[key], enNode[key]);
+                  continue;
+                }
+
+                let metaEntry = metaNode[key];
+                if (!metaEntry || typeof metaEntry !== "object") continue;
+
+                const lastAuto = metaEntry.lastAutoTarget;
+                const status = metaEntry.status;
+                const englishBefore = metaEntry.lastSource;
+                const englishNow = enNode?.[key] || englishBefore;
+
+                if (status === "auto" &&
+                    lastAuto != null &&
+                    targetVal !== lastAuto) {
+
+                  metaEntry.status = "manual";
+
+                  reviewNode[key] = {
+                    englishBefore,
+                    englishNow,
+                    previousAutoTarget: lastAuto,
+                    currentManualValue: targetVal,
+                    detectedAt: nowIso
+                  };
+                }
+              }
+            }
+
+            traverse(targetObj, metaObj, reviewObj, enFullObj);
           }
 
           function mergeNested(targetObj, sourceObj, enObj, metaObj) {
@@ -871,8 +913,11 @@ jobs:
             }
           }
 
-          // Kick off merge with target + translated + enDiff + meta
-          mergeNested(target, translated, enDiff, meta);
+          // Detect manual edits even when EN did not change
+          detectManualDiffs(target, meta, review, enDiff);
+
+          // Then apply auto-translations (if available)
+          mergeNested(target, translated, enDiff, meta, review);
 
           // --- write back target + meta/review ----------------------------
 
@@ -920,7 +965,6 @@ jobs:
           fi
 
       - name: Merge PT-BR translations into existing pt-BR.json
-        if: steps.check_for_changes.outputs.changed == 'true'
         run: |
           set -euo pipefail
 
@@ -976,9 +1020,12 @@ jobs:
 
           // --- load translated diff ---------------------------------------
 
-          if (!fs.existsSync(translatedPath)) {
-            console.log(`No translated PT file found at ${translatedPath}, skipping.`);
-            process.exit(0);
+          let translated = {};
+          if (fs.existsSync(translatedPath)) {
+            translated = safeReadJson(translatedPath, {});
+            console.log("pt-BR translation available for merge.");
+          } else {
+            console.log("No pt-BR translation available — running only manual detection.");
           }
 
           const translated = safeReadJson(translatedPath, {});

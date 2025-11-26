@@ -445,9 +445,9 @@
   "CustomSolutionsPage": {
     "title": "Custom Solutions (Platzhalter)",
     "body": "Platzhalterinhalt.",
-    "tailored-applications-list-element1": "• Irgend ne blöde deutsche Übersetzung",
-    "tailored-applications-list-element2": "• Vorhandene Features werden kombiniert und verfeinert und nicht künstlich neue erstellt",
-    "tailored-applications-list-element3": "• Business-spezifische Lösungen auf Basis Ihres Software Stacks",
+    "tailored-applications-list-element1": "• Irgend ne neue blöde deutsche Übersetzung",
+    "tailored-applications-list-element2": "• Toll: Vorhandene Features werden kombiniert und verfeinert und nicht künstlich neue erstellt",
+    "tailored-applications-list-element3": "• Etwas Business-spezifische Lösungen auf Basis Ihres Software Stacks",
     "tailored-applications-list-element4": "• Aktualisierung von veralteten Versionen und Abhängigkeiten, um neue Standards anzupassen, ohne Funktionalität zu brechen"
   },
   "DatabaseManagementPage": {
