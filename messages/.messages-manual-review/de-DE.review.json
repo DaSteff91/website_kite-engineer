@@ -1,1 +1,197 @@
-{}
+{
+  "AboutPage": {},
+  "ContactPage": {},
+  "EngineerPage": {
+    "processEngineering": {
+      "processControl": {},
+      "processOptimization": {},
+      "changeManagement": {},
+      "monitoring": {}
+    },
+    "processDevelopment": {
+      "creativity": {},
+      "processDesign": {},
+      "simulationPrototyping": {},
+      "processEquipmentRoadmap": {}
+    },
+    "softwareDevelopment": {
+      "customizedSolutions": {},
+      "databaseManagement": {},
+      "workflowAutomation": {},
+      "webDevelopment": {}
+    },
+    "projectManagement": {
+      "projectSetup": {},
+      "timelineManagement": {},
+      "deviationManagement": {},
+      "documentationSharing": {}
+    },
+    "technicalConsulting": {
+      "processAssessment": {},
+      "technicalResearch": {},
+      "trainingKnowledgeTransfer": {},
+      "competitorAnalysis": {}
+    },
+    "contactSection": {}
+  },
+  "KitePage": {
+    "freelancer": {
+      "schoolSupport": {},
+      "travelServices": {},
+      "consulting": {}
+    },
+    "courses": {
+      "theory": {},
+      "starting": {},
+      "advanced": {}
+    },
+    "links": {},
+    "contactSection": {}
+  },
+  "TravelServicesPage": {},
+  "TheoryPage": {},
+  "StartingPage": {},
+  "AdvancedPage": {},
+  "SchoolSupportPage": {},
+  "ConsultingPage": {},
+  "LandingPage": {},
+  "NavigationMenu": {},
+  "Footer": {},
+  "ProcessOptimizationPage": {},
+  "ChangeManagementPage": {},
+  "MonitoringPage": {},
+  "CreativityPage": {},
+  "ProcessDesignPage": {},
+  "SimulationPrototypingPage": {},
+  "EquipmentRoadmapPage": {},
+  "CustomSolutionsPage": {
+    "tailored-applications-list-element2": {
+      "englishBefore": "• Existing features get combined and refined, not artificially new ones created",
+      "englishNow": "• Existing features get combined and refined, not artificially new ones created",
+      "previousAutoTarget": "• Vorhandene Features werden kombiniert und verfeinert, nicht künstlich neue erstellt",
+      "currentManualValue": "• Features werden kombiniert und verfeinert und nicht künstlich neue erstellt",
+      "detectedAt": "2025-11-26T16:10:07.416Z"
+    },
+    "tailored-applications-list-element3": {
+      "englishBefore": "• Business-specific solutions based on your stack",
+      "englishNow": "• Business-specific solutions based on your stack",
+      "previousAutoTarget": "• Business-spezifische Lösungen auf Basis Ihres Stacks",
+      "currentManualValue": "• Lösungen auf Basis Ihres Software Stacks",
+      "detectedAt": "2025-11-26T16:10:07.416Z"
+    }
+  },
+  "DatabaseManagementPage": {},
+  "WorkflowAutomationPage": {},
+  "WebDevelopmentPage": {},
+  "ProjectSetupPage": {},
+  "TimelineManagementPage": {},
+  "DeviationManagementPage": {},
+  "DocumentationPage": {},
+  "ProcessAssessmentPage": {},
+  "TechnicalResearchPage": {},
+  "TrainingKnowledgeTransferPage": {},
+  "CompetitorAnalysisPage": {},
+  "ProcessControlPage": {},
+  "ContactTemplates": {
+    "schoolSupport": {},
+    "travelServices": {},
+    "consulting": {},
+    "coursesTheory": {},
+    "coursesStarting": {},
+    "coursesAdvanced": {},
+    "processEngineering": {
+      "processControl": {},
+      "processOptimization": {},
+      "changeManagement": {},
+      "monitoring": {}
+    },
+    "processDevelopment": {
+      "creativity": {},
+      "processDesign": {},
+      "simulationPrototyping": {},
+      "equipmentRoadmap": {}
+    },
+    "softwareDevelopment": {
+      "customSolutions": {},
+      "databaseManagement": {},
+      "workflowAutomation": {},
+      "webDevelopment": {}
+    },
+    "projectManagement": {
+      "projectSetup": {},
+      "timelineManagement": {},
+      "deviationManagement": {},
+      "documentation": {}
+    },
+    "technicalConsulting": {
+      "processAssessment": {},
+      "technicalResearch": {},
+      "trainingKnowledgeTransfer": {},
+      "competitorAnalysis": {}
+    }
+  },
+  "ContactForm": {
+    "placeholder": {},
+    "nodemailerAutoReplies": {}
+  },
+  "NotFound": {},
+  "MetaData": {
+    "NotFound": {},
+    "Home": {},
+    "Kite": {},
+    "Engineer": {},
+    "About": {},
+    "Contact": {},
+    "Privacy": {},
+    "Imprint": {},
+    "KiteSubpages": {
+      "Freelancer": {
+        "SchoolSupport": {},
+        "TravelServices": {},
+        "Consulting": {}
+      },
+      "Courses": {
+        "Theory": {},
+        "Starting": {},
+        "Advanced": {}
+      }
+    },
+    "EngineerSubpages": {
+      "ProcessEngineering": {
+        "ProcessControl": {},
+        "ProcessOptimization": {},
+        "ChangeManagement": {},
+        "Monitoring": {}
+      },
+      "ProcessDevelopment": {
+        "Creativity": {},
+        "ProcessDesign": {},
+        "SimulationPrototyping": {},
+        "EquipmentRoadmap": {}
+      },
+      "SoftwareDevelopment": {
+        "CustomSolutions": {},
+        "DatabaseManagement": {},
+        "WorkflowAutomation": {},
+        "WebDevelopment": {}
+      },
+      "ProjectManagement": {
+        "ProjectSetup": {},
+        "TimelineManagement": {},
+        "DeviationManagement": {},
+        "Documentation": {}
+      },
+      "TechnicalConsulting": {
+        "ProcessAssessment": {},
+        "TechnicalResearch": {},
+        "TrainingKnowledgeTransfer": {},
+        "CompetitorAnalysis": {}
+      }
+    }
+  },
+  "SearchBar": {},
+  "TestCommit": {},
+  "SearchBar2": {
+    "CompetitorAnalysis": {}
+  }
+}
