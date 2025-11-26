@@ -418,7 +418,8 @@
   },
   "ChangeManagementPage": {
     "title": "Change Management (Platzhalter)",
-    "body": "Platzhalterinhalt."
+    "body": "Platzhalterinhalt.",
+    "release-gate-management-list-element4": "• Einige verkabelte Änderung, um etwas zu ändern"
   },
   "MonitoringPage": {
     "title": "Monitoring (Platzhalter)",

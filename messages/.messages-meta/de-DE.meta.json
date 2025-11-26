@@ -102,7 +102,14 @@
   "NavigationMenu": {},
   "Footer": {},
   "ProcessOptimizationPage": {},
-  "ChangeManagementPage": {},
+  "ChangeManagementPage": {
+    "release-gate-management-list-element4": {
+      "status": "auto",
+      "lastSource": "• Some wired change for the sake of changing something",
+      "lastAutoTarget": "• Einige verkabelte Änderung, um etwas zu ändern",
+      "updatedAt": "2025-11-26T23:04:25.151Z"
+    }
+  },
   "MonitoringPage": {},
   "CreativityPage": {},
   "ProcessDesignPage": {},
