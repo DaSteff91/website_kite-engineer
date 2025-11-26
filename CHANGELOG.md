@@ -1,3 +1,12 @@
+## [1.30.11](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.10...v1.30.11) (2025-11-26)
+
+
+### Bug Fixes
+
+* preparing to work on the test-workflow branch ([89563be](https://github.com/DaSteff91/website_kite-engineer/commit/89563bef25bca46c58cc9836994ff5b3ba7fbd28))
+* test next translation ([728bcbb](https://github.com/DaSteff91/website_kite-engineer/commit/728bcbb4e480c2502ba1fad07bca58f7bc83ee02))
+* testing workflow change ([5a86e2c](https://github.com/DaSteff91/website_kite-engineer/commit/5a86e2ce318fb349cfc4ab3b9d533fbc804c7ba1))
+
 ## [1.30.10](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.9...v1.30.10) (2025-11-25)
 
 
