@@ -256,6 +256,49 @@ jobs:
           console.log('This is \'/tmp/en-US.keys-nested.json\' content aka the delta:\n' + content);
           JS
 
+      - name: Start LibreTranslate container on server
+        if: steps.check_for_changes.outputs.changed == 'true'
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
+          script: |
+            set -euo pipefail
+
+            cd /home/steff_deployment/website_kite-engineer/libretranslate_docker
+
+            echo "Starting LibreTranslate service via docker compose..."
+            docker compose up -d
+
+            echo "Waiting for LibreTranslate container health status..."
+            MAX_RETRIES=24   # ~2 minutes total (24 * 5s)
+            SLEEP_SECONDS=5
+
+            i=1
+            while [ "$i" -le "$MAX_RETRIES" ]; do
+              STATUS=$(docker inspect -f '{{.State.Health.Status}}' libretranslate 2>/dev/null || echo "starting")
+              echo "Attempt $i/$MAX_RETRIES: current status=$STATUS"
+
+              if [ "$STATUS" = "healthy" ]; then
+                echo "LibreTranslate is healthy and ready."
+                exit 0
+              fi
+
+              if [ "$STATUS" = "unhealthy" ]; then
+                echo "LibreTranslate container is unhealthy. Aborting."
+                docker logs libretranslate || true
+                exit 1
+              fi
+
+              i=$((i+1))
+              sleep "$SLEEP_SECONDS"
+            done
+
+            echo "Timed out waiting for LibreTranslate to become healthy."
+            docker logs libretranslate || true
+            exit 1
+
       - name: Translate nested keys (target = de)
         if: steps.check_for_changes.outputs.changed == 'true'
         env:
@@ -1048,6 +1091,20 @@ jobs:
           # Push back to the same branch
           echo "Pushing automated translation commit to $TARGET_BRANCH..."
           git push origin "$TARGET_BRANCH"
+
+      - name: Stop LibreTranslate container on server
+        if: always() && steps.check_for_changes.outputs.changed == 'true'
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
+          script: |
+            cd /home/steff_deployment/website_kite-engineer/libretranslate_docker
+
+            echo "Stopping LibreTranslate service via docker compose..."
+            docker compose down || echo "docker compose down failed (container may already be stopped)."
+
 
   run-search-index-script:
     name: Run the Meilisearch index
