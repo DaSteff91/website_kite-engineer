@@ -93,6 +93,12 @@
       "lastSource": null,
       "lastAutoTarget": null,
       "updatedAt": null
+    },
+    "process-automation-list-element2": {
+      "status": "auto",
+      "lastSource": "• Another test translation that will be deleted later - hopefully",
+      "lastAutoTarget": "• Outra tradução de teste que será deletada mais tarde",
+      "updatedAt": "2025-11-28T22:52:28.528Z"
     }
   },
   "WebDevelopmentPage": {},

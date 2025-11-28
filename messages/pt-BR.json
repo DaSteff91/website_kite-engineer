@@ -513,7 +513,8 @@
     "monitoring-alerting-list-element3": "• Performance metrics tracking",
     "monitoring-alerting-list-element4": "• Failure detection and notification",
     "monitoring-alerting-list-element5": "• Audit trail and compliance",
-    "workflow-automation-contact": "Ready to automate your workflows? Let's eliminate repetitive tasks and optimize your processes."
+    "workflow-automation-contact": "Ready to automate your workflows? Let's eliminate repetitive tasks and optimize your processes.",
+    "process-automation-list-element2": "• Outra tradução de teste que será deletada mais tarde"
   },
   "WebDevelopmentPage": {
     "title": "Web Development (placeholder)",
