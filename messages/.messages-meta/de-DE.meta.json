@@ -116,7 +116,14 @@
   "SimulationPrototypingPage": {},
   "EquipmentRoadmapPage": {},
   "DatabaseManagementPage": {},
-  "WorkflowAutomationPage": {},
+  "WorkflowAutomationPage": {
+    "workflow-automation-section-title": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
   "WebDevelopmentPage": {},
   "ProjectSetupPage": {},
   "TimelineManagementPage": {},
