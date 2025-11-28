@@ -541,11 +541,10 @@
   "WorkflowAutomationPage": {
     "back-to-engineer-services-nav":"Back to All Engineering Services",
     "workflow-automation-hero": "Workflow Automation Services",
-    "workflow-automation-section-title": "Save Time, Let Software Work",
+    "workflow-automation-section-title": "Save your precious time and let software do the work for you",
     "workflow-automation-section-subtitle": "Eliminate repetitive tasks and optimize workflows with intelligent automation",
     "process-automation-title": "Process Automation",
     "process-automation-list-element1": "• Repetitive task elimination",
-    "process-automation-list-element2": "• Business process automation",
     "process-automation-list-element3": "• Document processing workflows",
     "process-automation-list-element4": "• Data entry automation",
     "process-automation-list-element5": "• Report generation automation",
