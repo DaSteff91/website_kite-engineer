@@ -118,7 +118,7 @@
   "DatabaseManagementPage": {},
   "WorkflowAutomationPage": {
     "workflow-automation-section-title": {
-      "status": "manual",
+      "status": "auto",
       "lastSource": null,
       "lastAutoTarget": null,
       "updatedAt": null
