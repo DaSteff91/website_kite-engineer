@@ -46,7 +46,7 @@ jobs:
 
   build-and-push:
     name: Building app into container and push to ghcr.io
-    needs: version
+    needs: versioning
     runs-on: ubuntu-latest
     permissions:
       contents: read
