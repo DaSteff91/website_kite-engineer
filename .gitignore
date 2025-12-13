@@ -39,3 +39,4 @@ yarn-error.log*
 /i18n-codemod
 /meilisearch
 /scripts/search-indexer/node_modules
+messages/de_reworked_batch1_core_process.json

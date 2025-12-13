@@ -18,10 +18,16 @@ import { Hero } from "@/components/sections/Hero";
 
 export async function generateMetadata({
   params,
-}: { params: TrainingKnowledgeTransferPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: TrainingKnowledgeTransferPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "EngineerSubpages.TechnicalConsulting.TrainingKnowledgeTransfer", "/engineer/technical-consulting/training-knowledge-transfer");
+  return await getPageMetadata(
+    locale,
+    "EngineerSubpages.TechnicalConsulting.TrainingKnowledgeTransfer",
+    "/engineer/technical-consulting/training-knowledge-transfer"
+  );
 }
 interface TrainingKnowledgeTransferPageProps {
   params: Promise<{ locale: string }>;
@@ -292,14 +298,18 @@ export default async function TrainingKnowledgeTransferPage({
               {t("training-knowledge-transfer-contact")}
             </p>
             <Link
-              href={hrefForTemplateWithTranslator(contactT, "/engineer/technical-consulting/training-knowledge-transfer")}
+              href={hrefForTemplateWithTranslator(
+                contactT,
+                "/engineer/technical-consulting/training-knowledge-transfer"
+              )}
               target="_blank"
             >
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                id="contact-button"
               >
-                Connect with me
+                {t("contact-button")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
