@@ -138,7 +138,7 @@ jobs:
           images: ghcr.io/dasteff91/website_kite-engineer
           tags: |
             type=raw,value=${{ steps.get_release_tag.outputs.tag }}
-            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/dev' }}
+            type=raw,value=dev-latest
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
@@ -177,9 +177,9 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
           script: |
-            TARGET=$([ "${{ github.ref }}" = "refs/heads/main" ] && echo "prod" || echo "dev")
-            CONTAINER_NAME=www${TARGET:+-dev}.kite-engineer.de
-            PORT_HOST=$([ "$TARGET" = "prod" ] && echo 3000 || echo 3001)
+            TARGET="dev"
+            CONTAINER_NAME="www-dev.kite-engineer.de"
+            PORT_HOST=3001
             IMAGE_TAG=${{ steps.get_tag.outputs.tag || github.sha }}
             IMAGE_NAME=ghcr.io/dasteff91/website_kite-engineer:${{ steps.get_tag.outputs.tag }}
 
