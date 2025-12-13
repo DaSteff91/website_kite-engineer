@@ -45,7 +45,9 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
   params,
-}: { params: EngineerPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: EngineerPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
   return await getPageMetadata(locale, "Engineer", "/engineer");
@@ -164,13 +166,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                     Python, AI training for failure detection, dashboards & KPI
                     setup help along the way. */}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/process-engineering/process-control"
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -204,13 +206,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("processEngineering.processOptimization.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/process-engineering/process-optimization"
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -244,13 +246,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("processEngineering.changeManagement.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/process-engineering/change-management"
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -281,13 +283,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("processEngineering.monitoring.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/process-engineering/monitoring"
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -331,13 +333,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("processDevelopment.creativity.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/process-development/creativity"
                         className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -371,13 +373,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("processDevelopment.processDesign.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/process-development/process-design"
                         className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -411,13 +413,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("processDevelopment.simulationPrototyping.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/process-development/simulation-prototyping"
                         className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -453,13 +455,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                       "processDevelopment.processEquipmentRoadmap.description"
                     )}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/process-development/equipment-roadmap"
                         className="text-cyan-400 hover:text-cyan-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -506,13 +508,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("softwareDevelopment.customizedSolutions.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/software-development/custom-solutions"
                         className="text-teal-400 hover:text-teal-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -540,13 +542,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("softwareDevelopment.databaseManagement.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/software-development/database-management"
                         className="text-teal-400 hover:text-teal-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -580,13 +582,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("softwareDevelopment.workflowAutomation.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/software-development/workflow-automation"
                         className="text-teal-400 hover:text-teal-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -620,13 +622,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("softwareDevelopment.webDevelopment.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/software-development/web-development"
                         className="text-teal-400 hover:text-teal-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -673,13 +675,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("projectManagement.projectSetup.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/project-management/project-setup"
                         className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -713,13 +715,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("projectManagement.timelineManagement.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/project-management/timeline-management"
                         className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -753,13 +755,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("projectManagement.deviationManagement.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/project-management/deviation-management"
                         className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -793,13 +795,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("projectManagement.documentationSharing.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/project-management/documentation"
                         className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -846,13 +848,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("technicalConsulting.processAssessment.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/technical-consulting/process-assessment"
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -886,13 +888,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("technicalConsulting.technicalResearch.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/technical-consulting/technical-research"
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -925,13 +927,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                       "technicalConsulting.trainingKnowledgeTransfer.description"
                     )}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/technical-consulting/training-knowledge-transfer"
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,
@@ -965,13 +967,13 @@ export default async function EngineerPage({ params }: EngineerPageProps) {
                   >
                     {t("technicalConsulting.competitorAnalysis.description")}
                     <div className="mt-4 flex flex-col gap-2">
-                      {/* <Link
+                      <Link
                         href="/engineer/technical-consulting/competitor-analysis"
                         className="text-blue-400 hover:text-blue-300 flex items-center gap-2"
                       >
                         <ExternalLink className="h-3 w-3" />
-                        More
-                      </Link> */}
+                        {t("moreLink")}
+                      </Link>
                       <Link
                         href={hrefForTemplateWithTranslator(
                           contactT,

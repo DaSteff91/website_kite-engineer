@@ -17,10 +17,16 @@ import { Hero } from "@/components/sections/Hero";
 
 export async function generateMetadata({
   params,
-}: { params: ProcessControlPageProps["params"]; }): Promise<Metadata> {
+}: {
+  params: ProcessControlPageProps["params"];
+}): Promise<Metadata> {
   const resolvedParams = await params;
   const { locale } = resolvedParams;
-  return await getPageMetadata(locale, "EngineerSubpages.ProcessEngineering.ProcessControl", "/engineer/process-engineering/process-control");
+  return await getPageMetadata(
+    locale,
+    "EngineerSubpages.ProcessEngineering.ProcessControl",
+    "/engineer/process-engineering/process-control"
+  );
 }
 
 interface ProcessControlPageProps {
@@ -57,7 +63,6 @@ export default async function ProcessControlPage({
     locale,
     namespace: "ContactTemplates",
   });
-
 
   return (
     <div className="relative min-h-screen">
@@ -312,7 +317,10 @@ export default async function ProcessControlPage({
               {t("process-control-contact")}
             </p>
             <Link
-              href={hrefForTemplateWithTranslator(contactT, "/engineer/process-engineering/process-control")}
+              href={hrefForTemplateWithTranslator(
+                contactT,
+                "/engineer/process-engineering/process-control"
+              )}
               target="_blank"
             >
               <Button
