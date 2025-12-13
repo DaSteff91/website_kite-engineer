@@ -1,3 +1,19 @@
+# [1.31.0-dev.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.11...v1.31.0-dev.1) (2025-12-13)
+
+
+### Bug Fixes
+
+* implementing first draft machine translations for all engineering sub pages ([9f92250](https://github.com/DaSteff91/website_kite-engineer/commit/9f92250d9512470f2ef8e8d49a0e9d0c9355d58b))
+* reactivating more in engineering overview. fix the process control page. rollback metadata test ([52c59b3](https://github.com/DaSteff91/website_kite-engineer/commit/52c59b30ec1f0ee1414f4d5b73e6c5cdd602509a))
+* rollback metadata and testing translation (forgot in previous commit) ([4649c14](https://github.com/DaSteff91/website_kite-engineer/commit/4649c14749e28e6e34a87e2d6464ccc03d48191a))
+* testing one translation ([12ed051](https://github.com/DaSteff91/website_kite-engineer/commit/12ed051b809b4c1a37ae2ab2487e09b723cb789d))
+* updating workflow from test branch - not final version but good to continue ([a6254be](https://github.com/DaSteff91/website_kite-engineer/commit/a6254beb07594c779a415d6889326d4a05b940d4))
+
+
+### Features
+
+* configure semantic-release for pre-release versions on dev branch ([317d5da](https://github.com/DaSteff91/website_kite-engineer/commit/317d5da915e04804796e5ef68c93ad93074c41e2))
+
 ## [1.30.11](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.10...v1.30.11) (2025-11-26)
 
 
