@@ -4,6 +4,7 @@ on:
     branches:
       - dev
       - development
+      - workflow-test
 
 jobs:
   translate-content:
@@ -24,12 +25,12 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
-      
+
       - name: Setup Node server environment
         uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: 'npm'
+          cache: "npm"
 
       - name: Check for changes in en-US.json
         id: check_for_changes
@@ -65,10 +66,244 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Exit early on not changed
-        if: steps.check_for_changes.outputs.changed != 'true'
+      - name: Compute removed keys across locales
         run: |
-          echo "No changes in messages/en-US.json in the latest push. No action necessary"
+          set -euo pipefail
+
+          BEFORE_SHA="${{ github.event.before }}"
+          AFTER_SHA="${{ github.sha }}"
+
+          # Handle first push to branch (before == all zeros)
+          if [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            echo "First push to this branch – diffing against previous commit on AFTER."
+            BEFORE_SHA="${AFTER_SHA}~1"
+          fi
+
+          echo "Computing removed keys between $BEFORE_SHA and $AFTER_SHA"
+
+          node <<'JS'
+          const fs = require('fs');
+          const { execSync } = require('child_process');
+          const path = require('path');
+
+          function safeParse(jsonStr) {
+            if (!jsonStr || !jsonStr.trim()) return {};
+            try {
+              return JSON.parse(jsonStr);
+            } catch (e) {
+              console.warn("Warning: failed to parse JSON, treating as {}:", e.message);
+              return {};
+            }
+          }
+
+          function loadJsonAtCommit(sha, filePath) {
+            try {
+              const out = execSync(`git show ${sha}:${filePath}`, { encoding: 'utf8' });
+              return safeParse(out);
+            } catch (e) {
+              // file might not exist in that commit -> treat as empty
+              console.log(`No ${filePath} at ${sha}, treating as empty object.`);
+              return {};
+            }
+          }
+
+          function loadJsonWorkingTree(filePath) {
+            if (!fs.existsSync(filePath)) return {};
+            const content = fs.readFileSync(filePath, 'utf8');
+            return safeParse(content);
+          }
+
+          // Collect all dot-path keys from a nested object
+          function collectKeys(obj, prefix = '', out = new Set()) {
+            if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) {
+              // leaf -> record path
+              if (prefix) out.add(prefix);
+              return out;
+            }
+            for (const key of Object.keys(obj)) {
+              const nextPrefix = prefix ? `${prefix}.${key}` : key;
+              collectKeys(obj[key], nextPrefix, out);
+            }
+            return out;
+          }
+
+          // Build nested structure from a set of dot paths
+          function nestFromPaths(paths) {
+            const root = {};
+            for (const p of paths) {
+              const parts = p.split('.');
+              let cur = root;
+              for (let i = 0; i < parts.length; i++) {
+                const part = parts[i];
+                if (i === parts.length - 1) {
+                  // leaf
+                  cur[part] = true;
+                } else {
+                  if (!cur[part] || typeof cur[part] !== 'object' || Array.isArray(cur[part])) {
+                    cur[part] = {};
+                  }
+                  cur = cur[part];
+                }
+              }
+            }
+            return root;
+          }
+
+          // SHAs from env (passed via shell)
+          const BEFORE_SHA = process.env.BEFORE_SHA || '';
+          const AFTER_SHA = process.env.AFTER_SHA || '';
+
+          const files = [
+            'messages/en-US.json',
+            'messages/de-DE.json',
+            'messages/pt-BR.json',
+          ];
+
+          // 1) Load "before" and "after" snapshots for all three locales
+          const beforeSnapshots = {};
+          const afterSnapshots = {};
+
+          for (const f of files) {
+            beforeSnapshots[f] = loadJsonAtCommit(BEFORE_SHA, f);
+            afterSnapshots[f]  = loadJsonWorkingTree(f);
+          }
+
+          // 2) Collect removed keys per file (dot paths)
+          const removedPaths = new Set();
+
+          for (const f of files) {
+            const beforeKeys = collectKeys(beforeSnapshots[f]);
+            const afterKeys  = collectKeys(afterSnapshots[f]);
+
+            for (const k of beforeKeys) {
+              if (!afterKeys.has(k)) {
+                // key existed before in this file but is gone now -> mark as removed
+                removedPaths.add(k);
+              }
+            }
+          }
+
+          // 3) Create nested removed-keys structure
+          const removedNested = nestFromPaths(removedPaths);
+
+          const outPath = '/tmp/removed-keys.json';
+          fs.writeFileSync(outPath, JSON.stringify(removedNested, null, 2), 'utf8');
+
+          console.log("Removed keys (nested) written to", outPath);
+          console.log(JSON.stringify(removedNested, null, 2));
+          JS
+
+      - name: Apply removed keys to all locale files
+        run: |
+          set -euo pipefail
+
+          if [ ! -f /tmp/removed-keys.json ]; then
+            echo "No /tmp/removed-keys.json found, skipping removal."
+            exit 0
+          fi
+
+          echo "Applying removed keys from /tmp/removed-keys.json to locale files..."
+
+          node <<'JS'
+          const fs = require('fs');
+          const path = require('path');
+
+          const removedPath = '/tmp/removed-keys.json';
+
+          if (!fs.existsSync(removedPath)) {
+            console.log('No removed-keys.json present, nothing to do.');
+            process.exit(0);
+          }
+
+          function safeReadJson(filePath, fallback = {}) {
+            if (!fs.existsSync(filePath) || fs.statSync(filePath).size === 0) {
+              return fallback;
+            }
+            try {
+              return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            } catch (e) {
+              console.warn(`Warning: failed to parse ${filePath}, using fallback: ${e.message}`);
+              return fallback;
+            }
+          }
+
+          function safeWriteJson(filePath, obj) {
+            const dir = path.dirname(filePath);
+            if (dir && !fs.existsSync(dir)) {
+              fs.mkdirSync(dir, { recursive: true });
+            }
+            fs.writeFileSync(filePath, JSON.stringify(obj, null, 2), 'utf8');
+          }
+
+          function isPlainObject(value) {
+            return (
+              value !== null &&
+              typeof value === 'object' &&
+              !Array.isArray(value)
+            );
+          }
+
+          function deleteKeys(targetObj, removedObj) {
+            if (!isPlainObject(targetObj) || !isPlainObject(removedObj)) {
+              return;
+            }
+
+            for (const key of Object.keys(removedObj)) {
+              if (!Object.prototype.hasOwnProperty.call(targetObj, key)) {
+                continue; // nothing to delete here
+              }
+
+              const remVal = removedObj[key];
+              const tgtVal = targetObj[key];
+
+              // Leaf: removedObj[key] === true -> delete key
+              if (remVal === true) {
+                delete targetObj[key];
+                continue;
+              }
+
+              // Nested: both sides plain objects
+              if (isPlainObject(remVal) && isPlainObject(tgtVal)) {
+                deleteKeys(tgtVal, remVal);
+
+                // If nested object is now empty, clean it up
+                if (isPlainObject(tgtVal) && Object.keys(tgtVal).length === 0) {
+                  delete targetObj[key];
+                }
+              }
+            }
+          }
+
+          const removed = safeReadJson(removedPath, {});
+          if (!isPlainObject(removed) || Object.keys(removed).length === 0) {
+            console.log('removed-keys.json is empty, nothing to remove.');
+            process.exit(0);
+          }
+
+          const localeFiles = [
+            'messages/en-US.json',
+            'messages/de-DE.json',
+            'messages/pt-BR.json',
+          ];
+
+          for (const file of localeFiles) {
+            console.log(`Processing removals in ${file}...`);
+            const current = safeReadJson(file, {});
+            const before = JSON.stringify(current);
+
+            deleteKeys(current, removed);
+
+            const after = JSON.stringify(current);
+            if (before !== after) {
+              console.log(`  -> ${file} changed, writing updated JSON.`);
+              safeWriteJson(file, current);
+            } else {
+              console.log(`  -> ${file} unchanged.`);
+            }
+          }
+
+          console.log('Finished applying removed keys to all locale files.');
+          JS
 
       - name: Create the diff between the latest and previous push in en-US.json
         if: steps.check_for_changes.outputs.changed == 'true'
@@ -255,6 +490,49 @@ jobs:
           console.log('This is \'/tmp/en-US.keys-nested.json\' content aka the delta:\n' + content);
           JS
 
+      - name: Start LibreTranslate container on server
+        if: steps.check_for_changes.outputs.changed == 'true'
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
+          script: |
+            set -euo pipefail
+
+            cd /home/steff_deployment/website_kite-engineer/libretranslate_docker
+
+            echo "Starting LibreTranslate service via docker compose..."
+            docker compose up -d
+
+            echo "Waiting for LibreTranslate container health status..."
+            MAX_RETRIES=24   # ~2 minutes total (24 * 5s)
+            SLEEP_SECONDS=5
+
+            i=1
+            while [ "$i" -le "$MAX_RETRIES" ]; do
+              STATUS=$(docker inspect -f '{{.State.Health.Status}}' libretranslate 2>/dev/null || echo "starting")
+              echo "Attempt $i/$MAX_RETRIES: current status=$STATUS"
+
+              if [ "$STATUS" = "healthy" ]; then
+                echo "LibreTranslate is healthy and ready."
+                exit 0
+              fi
+
+              if [ "$STATUS" = "unhealthy" ]; then
+                echo "LibreTranslate container is unhealthy. Aborting."
+                docker logs libretranslate || true
+                exit 1
+              fi
+
+              i=$((i+1))
+              sleep "$SLEEP_SECONDS"
+            done
+
+            echo "Timed out waiting for LibreTranslate to become healthy."
+            docker logs libretranslate || true
+            exit 1
+
       - name: Translate nested keys (target = de)
         if: steps.check_for_changes.outputs.changed == 'true'
         env:
@@ -277,7 +555,7 @@ jobs:
             const outTranslatedPath = process.env.OUTPUT_TRANSLATED;
             const outErrorsPath = process.env.OUTPUT_ERRORS;
             const apiUrl = process.env.API_URL;
-            const apiKey = process.env.TRANSLATE_API_KEY || '';
+            const apiKey = process.env.TRANSLATE_API_KEY;
             const target = process.env.TARGET_LANG;
 
             if (!fs.existsSync(nestedTemplatePath)) {
@@ -405,7 +683,6 @@ jobs:
                       continue;
                     }
 
-                    // success: replace value in-place
                     obj[key] = translatedText;
                     successCount++;
                   } catch (e) {
@@ -419,25 +696,20 @@ jobs:
                     continue;
                   }
                 }
-                // non-strings are left unchanged
               }
             }
 
-            // run traversal & translation
             await traverseAndTranslate(nested, '');
 
-            // Write outputs (atomic-ish: write tmp then rename)
             const tmpOut = outTranslatedPath + '.tmp';
             fs.writeFileSync(tmpOut, JSON.stringify(nested, null, 2), 'utf8');
 
-            // validate by parsing back
             try {
               const parsedCheck = JSON.parse(fs.readFileSync(tmpOut, 'utf8'));
-              // move into place
               fs.renameSync(tmpOut, outTranslatedPath);
             } catch (e) {
               errors.push({ note: 'validation_failed', message: e.message });
-              // keep tmp file for debugging
+
               console.error('Validation of output JSON failed:', e.message);
             }
 
@@ -660,7 +932,6 @@ jobs:
           JS
 
       - name: Merge DE translations into existing de-DE.json
-        if: steps.check_for_changes.outputs.changed == 'true'
         run: |
           set -euo pipefail
 
@@ -687,6 +958,7 @@ jobs:
           const targetPath = 'messages/de-DE.json';
           const metaPath = 'messages/.messages-meta/de-DE.meta.json';
           const reviewPath = 'messages/.messages-manual-review/de-DE.review.json';
+          const enDiffPath = '/tmp/en-US.keys-nested.json'; // nested English diff (changed keys)
 
           // --- helpers ----------------------------------------------------
 
@@ -716,12 +988,17 @@ jobs:
 
           // --- load translated diff ---------------------------------------
 
-          if (!fs.existsSync(translatedPath)) {
-            console.log(`No translated DE file found at ${translatedPath}, skipping.`);
-            process.exit(0);
+          let translated = {};
+          if (fs.existsSync(translatedPath)) {
+            translated = safeReadJson(translatedPath, {});
+            console.log("de-DE translation available for merge.");
+          } else {
+            console.log("No de-DE translation available — running only manual detection.");
           }
 
-          const translated = safeReadJson(translatedPath, {});
+          // --- load English nested diff (same keys, en-US side) -----------
+
+          const enDiff = safeReadJson(enDiffPath, {});
 
           // --- load target locale file (de-DE.json) -----------------------
 
@@ -730,39 +1007,153 @@ jobs:
             console.log(`${targetPath} missing or empty — starting from empty object`);
           }
 
-          // --- load / initialize meta + review (nested, for future use) ---
+          // --- load / initialize meta + review (nested) -------------------
 
           let meta = safeReadJson(metaPath, {});
           let review = safeReadJson(reviewPath, {});
 
-          // NOTE: at this stage we are NOT yet using meta/review to change
-          // merge behavior. We only make sure the files exist and are valid JSON.
-          // In later steps we will add per-key status/lastAutoTarget etc.
+          function isPlainObject(value) {
+            return (
+              value !== null &&
+              typeof value === 'object' &&
+              !Array.isArray(value)
+            );
+          }
 
-          // --- existing mergeNested behavior (unchanged for now) ----------
+          // helper to ensure nested object structure for meta / target
+          function ensureNestedObject(obj, key) {
+            if (!isPlainObject(obj[key])) {
+              obj[key] = {};
+            }
+            return obj[key];
+          }
 
-          function mergeNested(targetObj, sourceObj) {
+          function detectManualDiffs(targetObj, metaObj, reviewObj, enFullObj = {}) {
+            const nowIso = new Date().toISOString();
+
+            function traverse(targetNode, metaNode, reviewNode, enNode) {
+              for (const key of Object.keys(targetNode)) {
+                const targetVal = targetNode[key];
+
+                // Nested structure?
+                if (isPlainObject(targetVal)) {
+                  if (!isPlainObject(metaNode[key])) metaNode[key] = {};
+                  if (!isPlainObject(reviewNode[key])) reviewNode[key] = {};
+                  if (!isPlainObject(enNode?.[key])) enNode[key] = {};
+
+                  traverse(targetVal, metaNode[key], reviewNode[key], enNode[key]);
+                  continue;
+                }
+
+                let metaEntry = metaNode[key];
+                if (!metaEntry || typeof metaEntry !== "object") continue;
+
+                const lastAuto = metaEntry.lastAutoTarget;
+                const status = metaEntry.status;
+                const englishBefore = metaEntry.lastSource;
+                const englishNow = enNode?.[key] || englishBefore;
+
+                if (status === "auto" &&
+                    lastAuto != null &&
+                    targetVal !== lastAuto) {
+
+                  metaEntry.status = "manual";
+
+                  reviewNode[key] = {
+                    englishBefore,
+                    englishNow,
+                    previousAutoTarget: lastAuto,
+                    currentManualValue: targetVal,
+                    detectedAt: nowIso
+                  };
+                }
+              }
+            }
+
+            traverse(targetObj, metaObj, reviewObj, enFullObj);
+          }
+
+          function mergeNested(targetObj, sourceObj, enObj, metaObj, reviewObj) {
+            const nowIso = new Date().toISOString();
+
             for (const key of Object.keys(sourceObj)) {
               const srcVal = sourceObj[key];
-              const tgtVal = targetObj[key];
+              const enVal =
+                isPlainObject(enObj) && Object.prototype.hasOwnProperty.call(enObj, key)
+                  ? enObj[key]
+                  : undefined;
 
-              if (srcVal && typeof srcVal === 'object' && !Array.isArray(srcVal)) {
-                if (!tgtVal || typeof tgtVal !== 'object') {
-                  targetObj[key] = {};
-                }
-                mergeNested(targetObj[key], srcVal);
+              const targetHasKey = Object.prototype.hasOwnProperty.call(targetObj, key);
+              const currentTargetVal = targetHasKey ? targetObj[key] : undefined;
+
+              if (isPlainObject(srcVal)) {
+                // nested object branch
+                const tgtChild = ensureNestedObject(targetObj, key);
+                const metaChild = ensureNestedObject(metaObj, key);
+                const reviewChild = ensureNestedObject(reviewObj, key);
+
+                const enChild =
+                  isPlainObject(enVal) ? enVal : {};
+
+                mergeNested(tgtChild, srcVal, enChild, metaChild, reviewChild);
               } else {
-                // CURRENT BEHAVIOR: always overwrite leaf values
+                // --- LEAF BRANCH: protect manual translations ----------------
+
+                // Ensure meta leaf object exists (or reuse existing)
+                if (!isPlainObject(metaObj[key])) {
+                  metaObj[key] = {
+                    status: targetHasKey ? "manual" : "auto",
+                    lastSource: null,
+                    lastAutoTarget: null,
+                    updatedAt: null,
+                  };
+                }
+
+                const entry = metaObj[key];
+                const previousLastAuto = entry.lastAutoTarget;
+
+                // Detect manual override:
+                // If this key was auto-managed and the current stored translation
+                // differs from the last auto output -> someone edited it by hand.
+                if (
+                  entry.status === "auto" &&
+                  previousLastAuto != null &&
+                  targetHasKey &&
+                  currentTargetVal !== previousLastAuto
+                ) {
+                  entry.status = "manual";
+                }
+
+                // If now marked as manual → DO NOT overwrite this key
+                if (entry.status === "manual") {
+                  // We deliberately leave lastSource/lastAutoTarget/updatedAt unchanged here.
+                  // Later we will use this to drive manual review.
+                  continue;
+                }
+
+                // Auto-managed: overwrite and record metadata
                 targetObj[key] = srcVal;
+
+                // Only update lastSource if we actually have English text for this key
+                if (typeof enVal === 'string') {
+                  entry.lastSource = enVal;
+                }
+
+                entry.lastAutoTarget = srcVal;
+                entry.updatedAt = nowIso;
               }
             }
           }
 
-          mergeNested(target, translated);
+          // Detect manual edits even when EN did not change
+          detectManualDiffs(target, meta, review, enDiff);
 
-          // --- write back target + (for now) just persist meta/review -----
-          // (meta & review are still unchanged here, but this will create the
-          // files and keep them as well-formed JSON, which we’ll extend later.)
+          // Then apply auto-translations (if available)
+          if (Object.keys(translated).length > 0) {
+            mergeNested(target, translated, enDiff, meta, review);
+          }
+
+          // --- write back target + meta/review ----------------------------
 
           ensureDirForFile(targetPath);
           fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
@@ -770,10 +1161,13 @@ jobs:
 
           safeWriteJson(metaPath, meta);
           safeWriteJson(reviewPath, review);
-          console.log(`Ensured meta at ${metaPath} and review at ${reviewPath} exist.`);
+          console.log(`Updated meta at ${metaPath} and kept review at ${reviewPath}.`);
           JS
 
-          git add messages/de-DE.json
+          git add \
+            messages/de-DE.json \
+            messages/.messages-meta \
+            messages/.messages-manual-review
 
           # show staged diff if any
           if git diff --cached --quiet -- messages/de-DE.json; then
@@ -797,12 +1191,14 @@ jobs:
             git show --name-only --pretty="" HEAD || true
             echo "Preview of committed messages/de-DE.json:"
             git show HEAD:messages/de-DE.json | head -n 50 || true
-            echo "Pushing to origin dev..."
-            git push origin dev && echo "push ok" || echo "push failed"
+            
+            TARGET_BRANCH="${{ github.ref_name }}"
+            echo "Pushing to origin ${TARGET_BRANCH}..."
+            git push origin "HEAD:${TARGET_BRANCH}" && echo "push ok" || echo "push failed"
+
           fi
 
       - name: Merge PT-BR translations into existing pt-BR.json
-        if: steps.check_for_changes.outputs.changed == 'true'
         run: |
           set -euo pipefail
 
@@ -829,6 +1225,7 @@ jobs:
           const targetPath = 'messages/pt-BR.json';
           const metaPath = 'messages/.messages-meta/pt-BR.meta.json';
           const reviewPath = 'messages/.messages-manual-review/pt-BR.review.json';
+          const enDiffPath = '/tmp/en-US.keys-nested.json'; // nested English diff (changed keys)
 
           // --- helpers ----------------------------------------------------
 
@@ -858,12 +1255,17 @@ jobs:
 
           // --- load translated diff ---------------------------------------
 
-          if (!fs.existsSync(translatedPath)) {
-            console.log(`No translated PT file found at ${translatedPath}, skipping.`);
-            process.exit(0);
+          let translated = {};
+          if (fs.existsSync(translatedPath)) {
+            translated = safeReadJson(translatedPath, {});
+            console.log("pt-BR translation available for merge.");
+          } else {
+            console.log("No pt-BR translation available — running only manual detection.");
           }
 
-          const translated = safeReadJson(translatedPath, {});
+          // --- load English nested diff (same keys, en-US side) -----------
+
+          const enDiff = safeReadJson(enDiffPath, {});
 
           // --- load target locale file (pt-BR.json) -----------------------
 
@@ -872,44 +1274,159 @@ jobs:
             console.log(`${targetPath} missing or empty — starting from empty object`);
           }
 
-          // --- load / initialize meta + review (scaffolding only) ---------
+          // --- load / initialize meta + review ----------------------------
 
           let meta = safeReadJson(metaPath, {});
           let review = safeReadJson(reviewPath, {});
 
-          // --- existing mergeNested behavior (unchanged yet) --------------
+          function isPlainObject(value) {
+            return (
+              value !== null &&
+              typeof value === 'object' &&
+              !Array.isArray(value)
+            );
+          }
 
-          function mergeNested(targetObj, sourceObj) {
+          function ensureNestedObject(obj, key) {
+            if (!isPlainObject(obj[key])) {
+              obj[key] = {};
+            }
+            return obj[key];
+          }
+
+          function detectManualDiffs(targetObj, metaObj, reviewObj, enFullObj = {}) {
+            const nowIso = new Date().toISOString();
+
+            function traverse(targetNode, metaNode, reviewNode, enNode) {
+              for (const key of Object.keys(targetNode)) {
+                const targetVal = targetNode[key];
+
+                if (isPlainObject(targetVal)) {
+                  if (!isPlainObject(metaNode[key])) metaNode[key] = {};
+                  if (!isPlainObject(reviewNode[key])) reviewNode[key] = {};
+                  if (!isPlainObject(enNode?.[key])) enNode[key] = {};
+                  traverse(targetVal, metaNode[key], reviewNode[key], enNode[key]);
+                  continue;
+                }
+
+                let metaEntry = metaNode[key];
+                if (!metaEntry || typeof metaEntry !== "object") continue;
+
+                const lastAuto = metaEntry.lastAutoTarget;
+                const status = metaEntry.status;
+                const englishBefore = metaEntry.lastSource;
+                const englishNow = enNode?.[key] || englishBefore;
+
+                if (status === "auto" &&
+                    lastAuto != null &&
+                    targetVal !== lastAuto) {
+
+                  metaEntry.status = "manual";
+
+                  reviewNode[key] = {
+                    englishBefore,
+                    englishNow,
+                    previousAutoTarget: lastAuto,
+                    currentManualValue: targetVal,
+                    detectedAt: nowIso
+                  };
+                }
+              }
+            }
+
+            traverse(targetObj, metaObj, reviewObj, enFullObj);
+          }
+
+          // --- merge with meta tracking + manual protection ----------------
+
+          function mergeNested(targetObj, sourceObj, enObj, metaObj, reviewObj) {
+            const nowIso = new Date().toISOString();
+
             for (const key of Object.keys(sourceObj)) {
               const srcVal = sourceObj[key];
-              const tgtVal = targetObj[key];
+              const enVal =
+                isPlainObject(enObj) && Object.prototype.hasOwnProperty.call(enObj, key)
+                  ? enObj[key]
+                  : undefined;
 
-              if (srcVal && typeof srcVal === 'object' && !Array.isArray(srcVal)) {
-                if (!tgtVal || typeof tgtVal !== 'object') {
-                  targetObj[key] = {};
-                }
-                mergeNested(targetObj[key], srcVal);
+              const targetHasKey = Object.prototype.hasOwnProperty.call(targetObj, key);
+              const currentTargetVal = targetHasKey ? targetObj[key] : undefined;
+
+              if (isPlainObject(srcVal)) {
+                const tgtChild = ensureNestedObject(targetObj, key);
+                const metaChild = ensureNestedObject(metaObj, key);
+                const reviewChild = ensureNestedObject(reviewObj, key);
+                const enChild =
+                  isPlainObject(enVal) ? enVal : {};
+
+                mergeNested(tgtChild, srcVal, enChild, metaChild, reviewChild);
               } else {
-                // CURRENT BEHAVIOR: always overwrite leaf values
+                // Ensure meta leaf object exists (or reuse existing)
+                if (!isPlainObject(metaObj[key])) {
+                  metaObj[key] = {
+                    status: targetHasKey ? "manual" : "auto",
+                    lastSource: null,
+                    lastAutoTarget: null,
+                    updatedAt: null,
+                  };
+                }
+
+                const entry = metaObj[key];
+                const previousLastAuto = entry.lastAutoTarget;
+
+                // Detect manual override in this run (Case A: EN changed + DE was edited)
+                if (
+                  entry.status === "auto" &&
+                  previousLastAuto != null &&
+                  targetHasKey &&
+                  currentTargetVal !== previousLastAuto
+                ) {
+                  entry.status = "manual";
+                  // (Optional: we could also create a review entry here later,
+                  // mirroring what detectManualDiffs does.)
+                }
+
+                // If now marked as manual → DO NOT overwrite this key
+                if (entry.status === "manual") {
+                  continue;
+                }
+
+                // Auto-managed: overwrite and record metadata
                 targetObj[key] = srcVal;
+
+                if (typeof enVal === 'string') {
+                  entry.lastSource = enVal;
+                }
+
+                entry.lastAutoTarget = srcVal;
+                entry.updatedAt = nowIso;
               }
             }
           }
 
-          mergeNested(target, translated);
+          // 1) Detect manual edits even if EN didn't change
+          detectManualDiffs(target, meta, review, enDiff);
 
-          // --- write back target + empty meta/review scaffolding -----------
+          // 2) Apply auto translations (if any exist)
+          if (Object.keys(translated).length > 0) {
+            mergeNested(target, translated, enDiff, meta, review);
+          }
+
+          // --- write back target + meta/review ----------------------------
 
           ensureDirForFile(targetPath);
           fs.writeFileSync(targetPath, JSON.stringify(target, null, 2), 'utf8');
-          console.log(`Merged PT translations into ${targetPath}`);
+          console.log(`Merged PT-BR translations into ${targetPath}`);
 
           safeWriteJson(metaPath, meta);
           safeWriteJson(reviewPath, review);
-          console.log(`Ensured meta at ${metaPath} and review at ${reviewPath} exist.`);
+          console.log(`Updated meta at ${metaPath} and kept review at ${reviewPath}.`);
           JS
 
-          git add messages/pt-BR.json
+          git add \
+            messages/pt-BR.json \
+            messages/.messages-meta \
+            messages/.messages-manual-review
 
           # show staged diff if any
           if git diff --cached --quiet -- messages/pt-BR.json; then
@@ -933,14 +1450,15 @@ jobs:
             git show --name-only --pretty="" HEAD || true
             echo "Preview of committed messages/pt-BR.json:"
             git show HEAD:messages/pt-BR.json | head -n 50 || true
-            echo "Pushing to origin dev..."
-            git push origin dev && echo "push ok" || echo "push failed"
+
+            TARGET_BRANCH="${{ github.ref_name }}"
+            echo "Pushing to origin ${TARGET_BRANCH}..."
+            git push origin "HEAD:${TARGET_BRANCH}" && echo "push ok" || echo "push failed"
+
           fi
 
-      - name: Commit and push merged translations
-        if: |
-          steps.check_for_changes.outputs.changed == 'true' &&
-          (github.ref_name == 'dev' || github.ref_name == 'workflow-test')
+      - name: Commit and push merged translations and removals
+        if: startsWith(github.ref, 'refs/heads/')
         env:
           GIT_USER_NAME: "GitHub Actions Bot"
           GIT_USER_EMAIL: "actions@github.com"
@@ -949,26 +1467,42 @@ jobs:
           set -euo pipefail
 
           echo "Configuring git user for automated commit..."
-          git config --global user.name "$GIT_USER_NAME"
-          git config --global user.email "$GIT_USER_EMAIL"
+          git config user.name "$GIT_USER_NAME"
+          git config user.email "$GIT_USER_EMAIL"
 
-          # Check for changes in translation files only
-          git add messages/de-DE.json messages/pt-BR.json
+          # Stage all locale + meta + review changes (including removals)
+          git add \
+            messages/en-US.json \
+            messages/de-DE.json \
+            messages/pt-BR.json \
+            messages/.messages-meta \
+            messages/.messages-manual-review
 
           if git diff --cached --quiet; then
-            echo "No changes in translation files to commit."
+            echo "No changes in translation/meta/review files to commit."
             exit 0
           fi
 
-          # Get the SHA of the commit that triggered the workflow
           SOURCE_SHA="${{ github.event.after }}"
 
-          # Commit with [skip ci] to prevent retriggering workflows
-          git commit -m "[skip ci] auto translation de and pt added (from commit $SOURCE_SHA)"
+          git commit -m "[skip ci] auto translation + removals sync (from commit $SOURCE_SHA)"
 
-          # Push back to the same branch
-          echo "Pushing automated translation commit to $TARGET_BRANCH..."
-          git push origin "$TARGET_BRANCH"
+          echo "Pushing automated translation commit back to $TARGET_BRANCH..."
+          git push origin "HEAD:${TARGET_BRANCH}"
+
+      - name: Stop LibreTranslate container on server
+        if: always() && steps.check_for_changes.outputs.changed == 'true'
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_PRIVATE_SSH_KEY }}
+          script: |
+            cd /home/steff_deployment/website_kite-engineer/libretranslate_docker
+
+            echo "Stopping LibreTranslate service via docker compose..."
+            docker compose down || echo "docker compose down failed (container may already be stopped)."
+
 
   run-search-index-script:
     name: Run the Meilisearch index
@@ -984,18 +1518,18 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 1
-      
+
       - name: Setup Node server environment
         uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install Dependencies
         run: npm ci
 
       - name: Run Meilisearch indexing
-        run: npx tsx scripts/search-indexer/index.ts 
+        run: npx tsx scripts/search-indexer/index.ts
         env:
           MEILI_HOST: ${{ secrets.MEILISEARCH_HOST }}
           MEILISEARCH_API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
@@ -1021,7 +1555,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install Dependencies
         run: npm ci
