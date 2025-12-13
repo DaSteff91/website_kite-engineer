@@ -1,3 +1,11 @@
+# [1.31.0-dev.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.0-dev.1...v1.31.0-dev.2) (2025-12-13)
+
+
+### Bug Fixes
+
+* correct job dependency typo (version -> versioning) ([5be9400](https://github.com/DaSteff91/website_kite-engineer/commit/5be9400a84ebcdfe7c9f22ae188ead0890b5ed9b))
+* correct workflow dependency to wait for prepare_app.yml ([66aa860](https://github.com/DaSteff91/website_kite-engineer/commit/66aa8609d65ae89113d0e50a8686e2534192f9bd))
+
 # [1.31.0-dev.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.11...v1.31.0-dev.1) (2025-12-13)
 
 
