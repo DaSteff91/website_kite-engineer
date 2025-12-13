@@ -1,1 +1,182 @@
-{}
+{
+  "AboutPage": {},
+  "ContactPage": {},
+  "EngineerPage": {
+    "processEngineering": {
+      "processControl": {},
+      "processOptimization": {},
+      "changeManagement": {},
+      "monitoring": {}
+    },
+    "processDevelopment": {
+      "creativity": {},
+      "processDesign": {},
+      "simulationPrototyping": {},
+      "processEquipmentRoadmap": {}
+    },
+    "softwareDevelopment": {
+      "customizedSolutions": {},
+      "databaseManagement": {},
+      "workflowAutomation": {},
+      "webDevelopment": {}
+    },
+    "projectManagement": {
+      "projectSetup": {},
+      "timelineManagement": {},
+      "deviationManagement": {},
+      "documentationSharing": {}
+    },
+    "technicalConsulting": {
+      "processAssessment": {},
+      "technicalResearch": {},
+      "trainingKnowledgeTransfer": {},
+      "competitorAnalysis": {}
+    },
+    "contactSection": {}
+  },
+  "KitePage": {
+    "freelancer": {
+      "schoolSupport": {},
+      "travelServices": {},
+      "consulting": {}
+    },
+    "courses": {
+      "theory": {},
+      "starting": {},
+      "advanced": {}
+    },
+    "links": {},
+    "contactSection": {}
+  },
+  "TravelServicesPage": {},
+  "TheoryPage": {},
+  "StartingPage": {},
+  "AdvancedPage": {},
+  "SchoolSupportPage": {},
+  "ConsultingPage": {},
+  "LandingPage": {},
+  "NavigationMenu": {},
+  "Footer": {},
+  "ProcessOptimizationPage": {},
+  "ChangeManagementPage": {},
+  "MonitoringPage": {},
+  "CreativityPage": {},
+  "ProcessDesignPage": {},
+  "SimulationPrototypingPage": {},
+  "EquipmentRoadmapPage": {},
+  "CustomSolutionsPage": {},
+  "DatabaseManagementPage": {},
+  "WorkflowAutomationPage": {},
+  "WebDevelopmentPage": {},
+  "ProjectSetupPage": {},
+  "TimelineManagementPage": {},
+  "DeviationManagementPage": {},
+  "DocumentationPage": {},
+  "ProcessAssessmentPage": {},
+  "TechnicalResearchPage": {},
+  "TrainingKnowledgeTransferPage": {},
+  "CompetitorAnalysisPage": {},
+  "ProcessControlPage": {},
+  "ContactTemplates": {
+    "schoolSupport": {},
+    "travelServices": {},
+    "consulting": {},
+    "coursesTheory": {},
+    "coursesStarting": {},
+    "coursesAdvanced": {},
+    "processEngineering": {
+      "processControl": {},
+      "processOptimization": {},
+      "changeManagement": {},
+      "monitoring": {}
+    },
+    "processDevelopment": {
+      "creativity": {},
+      "processDesign": {},
+      "simulationPrototyping": {},
+      "equipmentRoadmap": {}
+    },
+    "softwareDevelopment": {
+      "customSolutions": {},
+      "databaseManagement": {},
+      "workflowAutomation": {},
+      "webDevelopment": {}
+    },
+    "projectManagement": {
+      "projectSetup": {},
+      "timelineManagement": {},
+      "deviationManagement": {},
+      "documentation": {}
+    },
+    "technicalConsulting": {
+      "processAssessment": {},
+      "technicalResearch": {},
+      "trainingKnowledgeTransfer": {},
+      "competitorAnalysis": {}
+    }
+  },
+  "ContactForm": {
+    "placeholder": {},
+    "nodemailerAutoReplies": {}
+  },
+  "NotFound": {},
+  "MetaData": {
+    "NotFound": {},
+    "Home": {},
+    "Kite": {},
+    "Engineer": {},
+    "About": {},
+    "Contact": {},
+    "Privacy": {},
+    "Imprint": {},
+    "KiteSubpages": {
+      "Freelancer": {
+        "SchoolSupport": {},
+        "TravelServices": {},
+        "Consulting": {}
+      },
+      "Courses": {
+        "Theory": {},
+        "Starting": {},
+        "Advanced": {}
+      }
+    },
+    "EngineerSubpages": {
+      "ProcessEngineering": {
+        "ProcessControl": {},
+        "ProcessOptimization": {},
+        "ChangeManagement": {},
+        "Monitoring": {}
+      },
+      "ProcessDevelopment": {
+        "Creativity": {},
+        "ProcessDesign": {},
+        "SimulationPrototyping": {},
+        "EquipmentRoadmap": {}
+      },
+      "SoftwareDevelopment": {
+        "CustomSolutions": {},
+        "DatabaseManagement": {},
+        "WorkflowAutomation": {},
+        "WebDevelopment": {}
+      },
+      "ProjectManagement": {
+        "ProjectSetup": {},
+        "TimelineManagement": {},
+        "DeviationManagement": {},
+        "Documentation": {}
+      },
+      "TechnicalConsulting": {
+        "ProcessAssessment": {},
+        "TechnicalResearch": {},
+        "TrainingKnowledgeTransfer": {},
+        "CompetitorAnalysis": {}
+      }
+    }
+  },
+  "SearchBar": {},
+  "TestCommit": {},
+  "SearchBar2": {
+    "CompetitorAnalysis": {}
+  }
+}
