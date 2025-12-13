@@ -63,14 +63,7 @@
   "MonitoringPage": {},
   "CreativityPage": {},
   "ProcessDesignPage": {},
-  "SimulationPrototypingPage": {
-    "3d-prototyping-list-element4": {
-      "status": "auto",
-      "lastSource": "• Manual model reworking",
-      "lastAutoTarget": "Modelo manual retrabalhando",
-      "updatedAt": "2025-12-13T14:10:37.625Z"
-    }
-  },
+  "SimulationPrototypingPage": {},
   "EquipmentRoadmapPage": {},
   "CustomSolutionsPage": {},
   "DatabaseManagementPage": {},
