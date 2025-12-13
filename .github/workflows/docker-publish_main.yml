@@ -14,13 +14,15 @@ jobs:
       pull-requests: write
       id-token: write
     runs-on: ubuntu-latest
+    outputs:
+      new_version: ${{ steps.get_version.outputs.version }}
 
     steps:
       - name: Checkout the repository code
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.SEMVERSIONING }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -42,6 +44,13 @@ jobs:
           echo "Tag SHA:    $(git rev-list -n 1 v1.14.8)"
           echo "HEAD SHA:   $(git rev-parse HEAD)"
           git log -1 --oneline
+
+      - name: Get created version
+        id: get_version
+        run: |
+          VERSION=$(git describe --tags --abbrev=0)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Created version: $VERSION"
 
   build-and-push:
     name: Building app into container and push to ghcr.io
