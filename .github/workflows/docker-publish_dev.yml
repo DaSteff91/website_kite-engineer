@@ -9,7 +9,6 @@ on:
 jobs:
   versioning:
     name: Running Semversioning
-    needs: run-search-index-script
     permissions:
       contents: write
       issues: write
@@ -46,6 +45,8 @@ jobs:
           git log -1 --oneline
 
   build-and-push:
+    name: Building app into container and push to ghcr.io
+    needs: version
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -61,43 +62,6 @@ jobs:
 
       - name: Clean previous build
         run: rm -rf .next
-
-      - name: Get the run_id of the most recent run workflow
-        id: get_run_id
-        run: |
-          # Use the GitHub API to get the latest run_id of the first workflow
-          run_id=$(curl -s -H "Authorization: token ${{ secrets.GH_PACKAGE_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/prepare_app.yml/runs" | \
-            jq -r '.workflow_runs[0].id')
-          echo "run_id=$run_id" >> $GITHUB_OUTPUT
-          echo "Current run_id: $run_id"
-
-      - name: Clone external action repository
-        run: |
-          git clone https://github.com/kamilchodola/wait-for-workflow-action.git /tmp/wait-for-workflow-action
-          ls -la /tmp/wait-for-workflow-action
-
-      - name: Make the script executable
-        run: |
-          if [ -f /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh ]; then
-            chmod +x /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh
-          else
-            echo "Error: /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh does not exist."
-            exit 1
-          fi
-
-      - name: Wait for Workflow Action
-        run: /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
-          WORKFLOW_ID: "prepare_app.yml"
-          RUN_ID: ${{ steps.get_run_id.outputs.run_id }}
-          MAX_WAIT_MINUTES: "3"
-          INTERVAL: "5"
-          TIMEOUT: "10"
-          ORG_NAME: "dasteff91"
-          REPO_NAME: "website_kite-engineer"
-          REF: "${{ github.ref }}"
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3
