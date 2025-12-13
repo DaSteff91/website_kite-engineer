@@ -90,7 +90,7 @@ jobs:
         run: /tmp/wait-for-workflow-action/scripts/wait-for-workflow.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
-          WORKFLOW_ID: "build-and-push.yml"
+          WORKFLOW_ID: "prepare_app.yml"
           RUN_ID: ${{ steps.get_run_id.outputs.run_id }}
           MAX_WAIT_MINUTES: "3"
           INTERVAL: "5"
