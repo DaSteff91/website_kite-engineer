@@ -85,6 +85,7 @@
     "@semantic-release/commit-analyzer": "^10.0.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.0.4",
+    "@semantic-release/npm": "^12.0.2",
     "@semantic-release/release-notes-generator": "^11.0.0",
     "@types/babel__generator": "^7.27.0",
     "@types/babel__traverse": "^7.28.0",
@@ -98,23 +99,24 @@
   },
   "release": {
     "branches": [
-      "development",
-      "dev",
-      "main"
+      "main",
+      {
+        "name": "dev",
+        "prerelease": true
+      },
+      {
+        "name": "development",
+        "prerelease": true
+      }
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       [
-        "@semantic-release/github",
+        "@semantic-release/npm",
         {
-          "assets": [
-            {
-              "path": "dist.zip",
-              "label": "Distribution"
-            }
-          ]
+          "npmPublish": false
         }
       ],
       [
@@ -125,6 +127,17 @@
             "CHANGELOG.md"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "dist.zip",
+              "label": "Distribution"
+            }
+          ]
         }
       ]
     ]
