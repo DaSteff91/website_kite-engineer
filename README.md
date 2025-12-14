@@ -1,1 +1,3 @@
-# First attempt of creating a website - provided by bolt.new
+# 
+
+# Website for my freelancer career

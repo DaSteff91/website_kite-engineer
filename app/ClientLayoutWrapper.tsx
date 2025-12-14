@@ -1,5 +1,5 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
@@ -14,8 +14,7 @@ export function ClientLayoutWrapper({
   return (
     <div className="min-h-screen flex flex-col">
       {!isHomePage && <Header />}
-      <main className="flex-grow">{children}</main>
-      {!isHomePage && <Footer />}
+      <main className="flex-grow">{children}</main> {!isHomePage && <Footer />}
     </div>
   );
 }

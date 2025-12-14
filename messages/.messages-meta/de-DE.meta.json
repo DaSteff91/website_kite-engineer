@@ -1,0 +1,459 @@
+{
+  "AboutPage": {},
+  "ContactPage": {},
+  "EngineerPage": {
+    "processEngineering": {
+      "processControl": {},
+      "processOptimization": {
+        "description": {
+          "status": "manual",
+          "lastSource": null,
+          "lastAutoTarget": null,
+          "updatedAt": null
+        }
+      },
+      "changeManagement": {},
+      "monitoring": {}
+    },
+    "processDevelopment": {
+      "creativity": {},
+      "processDesign": {},
+      "simulationPrototyping": {},
+      "processEquipmentRoadmap": {}
+    },
+    "softwareDevelopment": {
+      "customizedSolutions": {},
+      "databaseManagement": {},
+      "workflowAutomation": {},
+      "webDevelopment": {}
+    },
+    "projectManagement": {
+      "projectSetup": {},
+      "timelineManagement": {},
+      "deviationManagement": {},
+      "documentationSharing": {}
+    },
+    "technicalConsulting": {
+      "processAssessment": {},
+      "technicalResearch": {},
+      "trainingKnowledgeTransfer": {},
+      "competitorAnalysis": {}
+    },
+    "contactSection": {},
+    "moreLink": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "contact-button": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "KitePage": {
+    "freelancer": {
+      "schoolSupport": {},
+      "travelServices": {},
+      "consulting": {}
+    },
+    "courses": {
+      "theory": {},
+      "starting": {},
+      "advanced": {}
+    },
+    "links": {},
+    "contactSection": {}
+  },
+  "TravelServicesPage": {},
+  "TheoryPage": {},
+  "StartingPage": {},
+  "AdvancedPage": {},
+  "SchoolSupportPage": {},
+  "ConsultingPage": {},
+  "LandingPage": {},
+  "NavigationMenu": {},
+  "Footer": {},
+  "ProcessOptimizationPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "ChangeManagementPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "MonitoringPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "CreativityPage": {},
+  "ProcessDesignPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "SimulationPrototypingPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "EquipmentRoadmapPage": {},
+  "CustomSolutionsPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "DatabaseManagementPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "WorkflowAutomationPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "WebDevelopmentPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "ProjectSetupPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "TimelineManagementPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "DeviationManagementPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "DocumentationPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "ProcessAssessmentPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "TechnicalResearchPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "TrainingKnowledgeTransferPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "CompetitorAnalysisPage": {
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "ProcessControlPage": {
+    "process-control-section-subtitle": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "advanced-process-control-list-element1": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "advanced-process-control-list-element2": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "advanced-process-control-list-element3": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "advanced-process-control-list-element4": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "advanced-process-control-list-element5": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "advanced-process-control-list-element6": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "advanced-process-control-list-element7": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "advanced-process-control-list-element8": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "statistical-process-control-list-element1": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "statistical-process-control-list-element2": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "statistical-process-control-list-element3": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "statistical-process-control-list-element4": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "statistical-process-control-list-element5": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "statistical-process-control-list-element6": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "statistical-process-control-list-element7": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "statistical-process-control-list-element8": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "custom-solutions-list-element1": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "custom-solutions-list-element2": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "custom-solutions-list-element3": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "custom-solutions-list-element4": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "process-control-contact": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    },
+    "back-to-engineer-services-nav": {
+      "status": "manual",
+      "lastSource": null,
+      "lastAutoTarget": null,
+      "updatedAt": null
+    }
+  },
+  "ContactTemplates": {
+    "schoolSupport": {},
+    "travelServices": {},
+    "consulting": {},
+    "coursesTheory": {},
+    "coursesStarting": {},
+    "coursesAdvanced": {},
+    "processEngineering": {
+      "processControl": {},
+      "processOptimization": {},
+      "changeManagement": {},
+      "monitoring": {}
+    },
+    "processDevelopment": {
+      "creativity": {},
+      "processDesign": {},
+      "simulationPrototyping": {},
+      "equipmentRoadmap": {}
+    },
+    "softwareDevelopment": {
+      "customSolutions": {},
+      "databaseManagement": {},
+      "workflowAutomation": {},
+      "webDevelopment": {}
+    },
+    "projectManagement": {
+      "projectSetup": {},
+      "timelineManagement": {},
+      "deviationManagement": {},
+      "documentation": {}
+    },
+    "technicalConsulting": {
+      "processAssessment": {},
+      "technicalResearch": {},
+      "trainingKnowledgeTransfer": {},
+      "competitorAnalysis": {}
+    }
+  },
+  "ContactForm": {
+    "placeholder": {},
+    "nodemailerAutoReplies": {}
+  },
+  "NotFound": {},
+  "MetaData": {
+    "NotFound": {},
+    "Home": {},
+    "Kite": {},
+    "Engineer": {},
+    "About": {},
+    "Contact": {},
+    "Privacy": {},
+    "Imprint": {},
+    "KiteSubpages": {
+      "Freelancer": {
+        "SchoolSupport": {},
+        "TravelServices": {},
+        "Consulting": {}
+      },
+      "Courses": {
+        "Theory": {},
+        "Starting": {},
+        "Advanced": {}
+      }
+    },
+    "EngineerSubpages": {
+      "ProcessEngineering": {
+        "ProcessControl": {},
+        "ProcessOptimization": {},
+        "ChangeManagement": {},
+        "Monitoring": {}
+      },
+      "ProcessDevelopment": {
+        "Creativity": {},
+        "ProcessDesign": {},
+        "SimulationPrototyping": {},
+        "EquipmentRoadmap": {}
+      },
+      "SoftwareDevelopment": {
+        "CustomSolutions": {},
+        "DatabaseManagement": {},
+        "WorkflowAutomation": {},
+        "WebDevelopment": {}
+      },
+      "ProjectManagement": {
+        "ProjectSetup": {},
+        "TimelineManagement": {},
+        "DeviationManagement": {},
+        "Documentation": {}
+      },
+      "TechnicalConsulting": {
+        "ProcessAssessment": {},
+        "TechnicalResearch": {},
+        "TrainingKnowledgeTransfer": {},
+        "CompetitorAnalysis": {}
+      }
+    }
+  },
+  "SearchBar": {},
+  "TestCommit": {},
+  "SearchBar2": {
+    "CompetitorAnalysis": {}
+  }
+}

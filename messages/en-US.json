@@ -1,0 +1,1308 @@
+{
+  "AboutPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "The story and motivation behind",
+    "sectionQuote": "\"It´s about doing, not waiting for things to happen by themselves\"",
+    "introductionTitle": "Hi, my name is Steff...",
+    "introductionText1": "Steff, short for Stefan. Born in 1991 in a small town in southern Germany, Bavaria. And yes, you can call me a proud Bavarian too.",
+    "introductionText2": "What can you expect of me? An open-minded character who seeks to challenge himself. A person who follows his mission: To realize the vision of <strong>combining worlds</strong>.",
+    "introductionText3": "But what does that mean? Basically this: It´s about combining the world of being a kitesurf instructor with the one of being an engineer. E voilà, I created my own lifestyle of being a <strong>Kite-Engineer</strong>. A professional that offers services:",
+    "introductionListItem1": "• that are related to the sport of kiteboarding as well as",
+    "introductionListItem2": "• in particular fields of engineering like process engineering or IT.",
+    "introductionText4": "And no, I don´t design kites. Nor am I looking forward to integrate electronics into kites. At least not for now - who knows?",
+    "introductionText5": "It´s my unique way of dealing with our beloved capitalism: I share what I like doing and you get what you have not yet had before. That makes everyone a winner!",
+    "professionalTitle": "Professional Part",
+    "professionalItems": "<li>Licensed as IKO kite instructor, 2025</li><li>Launching my professional career as Kite-Engineer, 2025</li><li>International University (IU) certificate as Python and SQL Programmer, 2025</li><li>Offering kitesurf lessons in German, English and Portuguese, 2024</li><li>VDWS kitesurf instructor license, 2023</li><li>Certified 6 Sigma Green Belt and Lean Management, 2022</li><li>Private kiteboarding lessons, 2021</li><li>First contact with kiteboarding, 2018</li><li>Professional employments as process development engineer, process engineer and laboratory assistant, 2015 - 2024</li><li>B.Sc. in Microsystems Engineering, 2015</li><li>Started exploring the areas of micro- and nanosystems in, 2010</li>",
+    "personalTitle": "Personal Part",
+    "personalItems": "<li>\"Be the change in the world you want to see\"</li><li>I am an explorer, an adventurer and a nerd</li><li>Self-study was always more satisfying then school</li><li>Yes, even I´ve once played football. Until I was 14</li><li>Sports and outdoor activities are a big part of my life</li><li>So is Linkin Park - being a fan since I´m 6 years old</li><li>Have you ever listened to Eckhart Tolle?</li><li>Smiling at people on the street helps sharing good vibes</li><li>Philosophy, especially stoicism, was added since I´m 30 - coincidence?</li><li>A book that changed my life? O Alquimista - Paulo Coelho</li><li>Follower of the \"Free and Open Source Idea\"</li><li>Growing as a community means contentment times x</li>"
+  },
+  "ContactPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Let´s Connect",
+    "sectionDescription": "Whether it's about kiteboarding, engineering, or anything in between. Reach out via mail, phone or contact form below. Found a bug or typo? I´ll be forever thankful if you report it."
+  },
+  "EngineerPage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Expand your possibilities",
+    "sectionDescription": "Benefit from my engineering services in the fields of IT and semiconductors",
+    "contact-button": "Contact",
+    "moreLink": "More",
+    "processEngineering": {
+      "title": "Process Engineering",
+      "processControl": {
+        "title": "Process Control",
+        "description": "APC (Advanced Process control), SPC (Statistical Process Control) and WER (Western Electrical Rules) implementation as core competence. As well: Data analytics using Python, AI training for failure detection, dashboards & KPI setup help along the way."
+      },
+      "processOptimization": {
+        "title": "Process Optimization",
+        "description": "Offering '6-Sigma- and Lean' techniques to achieve the best possible process outcome you want."
+      },
+      "changeManagement": {
+        "title": "Change Management",
+        "description": "Preparing milestones and passing release gates. It's about documentation and traceability - I do that for you"
+      },
+      "monitoring": {
+        "title": "Monitoring",
+        "description": "Don't know what parameters of your processes to monitor and how? Let's define a monitoring setup. And where necessary we find appropriate methods to get a solution for any type of produced volume"
+      }
+    },
+    "processDevelopment": {
+      "title": "Process Development",
+      "creativity": {
+        "title": "Creativity",
+        "description": "There is more then brainstorming - but you already know that. Right? Reach out and let´s activate neurons you´ve not yet known about"
+      },
+      "processDesign": {
+        "title": "Process Design",
+        "description": "You know what your process must achieve but have boundaries locking you into an neverending development cycle? We zoom out a bit and together we can break through hurdles and determine what should look like where. Visualizations and structuring help a lot"
+      },
+      "simulationPrototyping": {
+        "title": "Simulation and Prototyping",
+        "description": "Ever considered to use an analogy model and a simulation to solve a problem? What about getting a physical model printed out in 3D? I prepare your project for any kind of further visualization and connect you with experts"
+      },
+      "processEquipmentRoadmap": {
+        "title": "Process and Equipment Roadmap",
+        "description": "Your competitors don´t wait for you to catch up. So better be prepared of what may be necessary in the future. I help you to outline what strategies of next generation technology can bring and how to make it beneficial for you."
+      }
+    },
+    "softwareDevelopment": {
+      "title": "Software Development",
+      "customizedSolutions": {
+        "title": "Customized Solutions",
+        "description": "Do you want to combine a feature of software A with one of software B and generate an output that fits specific needs? No worries, its just a matter of coffee and time to figure it out. From customized scripts to containerization to front- and and backend integration of custom projects."
+      },
+      "databaseManagement": {
+        "title": "Relational Database Management",
+        "description": "Wanna go from storing data in files like excel to a more sustainable and better manageable format? Or improve your already existing DB (database)? From setting up a completely new RDBMS (relational database management system) to adjust your DB - I figure it out what we can do."
+      },
+      "workflowAutomation": {
+        "title": "Workflow Automatization",
+        "description": "Save time and let software do your repeating tasks. We work out the concept and then implement it step by step, based on your needs. I´m sure a lot of your already used software already supports automatization"
+      },
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Server and domain related setup? Or wanna have an own Nextcloud? Outsource your web administration to me. And if you need a website too, bring your design and I also manage that for you"
+      }
+    },
+    "projectManagement": {
+      "title": "Project Management",
+      "projectSetup": {
+        "title": "Project Setup",
+        "description": "Get more time for other things and let me do the \"what shall be delivered until when by whom and how...\". Setting things up properly not only gives a good feeling, it also is the foundation to achieve goals sustainable"
+      },
+      "timelineManagement": {
+        "title": "Timeline Management",
+        "description": "It´s all about timing. Sometimes things don´t work out as planed and you need to rebalance your project timelines. Someone with an outside-view like me can help at that stage."
+      },
+      "deviationManagement": {
+        "title": "Deviation Management",
+        "description": "Especially when external parties are involved it´s not always easy to communicate unexpected detours in your project. Hand it over and get your back covered while you have time to rework a get back into your committed shape."
+      },
+      "documentationSharing": {
+        "title": "Documentation and Sharing",
+        "description": "Version control and data sharing is not executed on a top level if everyone works on their own devices and only shares on demand. These times are long gone - let´s create synergies in your team that always were there but were never used"
+      }
+    },
+    "technicalConsulting": {
+      "title": "Technical Consulting",
+      "processAssessment": {
+        "title": "Process Assessment",
+        "description": "Get an outside view onto what is running at your business. Detailed feedback on what shall not be changed and what offers potential for improvement and what may be necessary to be done for this."
+      },
+      "technicalResearch": {
+        "title": "Topic Related Research",
+        "description": "You know there are a lot of things going on around you and you can´t always figure out what to filter how to get to know what matters for you and your business. I like reading technical stuff - let me do this. Why shall we not work together?"
+      },
+      "trainingKnowledgeTransfer": {
+        "title": "Training & Knowledge Transfer",
+        "description": "I embrace everyone to never stop learning. Thus I am more then willing to share everything I know with you and your business."
+      },
+      "competitorAnalysis": {
+        "title": "Competitor Analysis",
+        "description": "Sure, everyone wants to know what others are up to - why not getting it done professionally and save your time for your business? I scout and report for you."
+      }
+    },
+    "contactSection": {
+      "description": "Ready to elevate your project? You always get whatever is necessary from my services. The provided overview is meant to be an orientation and only a glimpse of what is possible. Reach out for a free consultation and let's see how we can achieve your goals together.",
+      "buttonText": "Get Your Free Quote"
+    }
+  },
+  "KitePage": {
+    "heroTitle": "Combining Worlds...",
+    "sectionTitle": "Progress doesn´t grow on trees",
+    "sectionDescription": "My kiteboarding related services help you to achieve your goals",
+    "freelancer": {
+      "title": "Professional Services",
+      "schoolSupport": {
+        "title": "School Support",
+        "description": "Whether you need a VDWS-certified instructor, shop assistance, or someone to help behind the bar, I've got you covered. Flexibility is my motto."
+      },
+      "travelServices": {
+        "title": "Travel Services",
+        "description": "Looking for someone how organizes your kite trip? Or even accompanies you as a personal coach? No problem, you get well served"
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "Overwhelmed by gear choices? Let me guide you through selecting the right kiteboarding equipment. Need someone to represent the sport? I like talking in front of people and deliver a message to others"
+      }
+    },
+    "courses": {
+      "title": "Courses",
+      "theory": {
+        "title": "Theory",
+        "description": "Why not pulling the bar? Let's break down the \"science\" behind the sport—from wind dynamics to material technology. Choose your topic and pace; I'll make it clear and descriptive."
+      },
+      "starting": {
+        "title": "(Re-)Starting",
+        "description": "Whether you're beginning a new kite journey or returning after a break, I'll help you (re-)gain confidence in the sport."
+      },
+      "advanced": {
+        "title": "Advanced",
+        "description": "Ready to push limits? From your first toeside ride to nailing loops, let's tackle challenges together. Or you prefer a supervised sessions? No problem! You can as well bring your camera or drone!"
+      }
+    },
+    "links": {
+      "more": "More",
+      "contact": "Contact"
+    },
+    "contactSection": {
+      "text": "You can get a little bit of everything as well. The more you book, the more discount you get. What´s holding you back? Let´s get in touch.",
+      "button": "Connect with me"
+    }
+  },
+  "ProcessControlPage": {
+    "back-to-engineer-services-nav": "Back",
+    "process-control-hero": "Process Control Services",
+    "process-control-section-title": "Outsource your work",
+    "process-control-section-subtitle": "Invest my brainpower into your project and benefit from my expertise I gathered while working as a process engineer.",
+    "advanced-process-control-title": "Advanced Process Control",
+    "advanced-process-control-list-element1": "• Software procurement and setup- You already have lots of process data of your manufacturing processes available but you lack a centralized software that is providing what your team needs and at the same time integrates into what is already setup? I help you finding your advanced process control (APC) software as well I can take over all the communication with possible partner. Furthermore I offer to write requirement specifications, do first sample testing and support its rollout.",
+    "advanced-process-control-list-element2": "• User training - Are you looking forward to standardize the way advanced process control (APC) is used in your company? I provide a platform based training for you or your team to make it become a solid common ground of expertise for further steps. It has a step-based approach and starts with general advanced process control (APC) ideas and rises to advanced approaches and specific topics that can also involve the software that you are using.",
+    "advanced-process-control-list-element3": "• Mathematics - Not every measured signal from a sensor is automatically ready to be used in an advanced process control (APC) environment. Math can be applied to create new or more reliable sources for your advanced process control (APC) landscape. As well it can be used for limit calculations and violation rules like n of m. I do raw data analysis, signal optimization, limit-based calculations, outlier handling and apply whatever math is necessary wherever needed to get more out of the control mechanism advanced process control (APC) shall be.",
+    "advanced-process-control-list-element4": "• Strategic alignment - Typically advanced process control (APC) is not used as only measure of control in a modern production. It shall be part of an ecosystem. But how does the advanced process control (APC) -piece fit into that ecosystem and what expectations does it have to fulfill? Is it doing what it shall do? The view of an outsider on strategic topics can be a blessing. That´s where I step in.",
+    "advanced-process-control-list-element5": "• Learning from the past - Data can tell stories, if asked correctly. Analyzing it and find correlations to certain events is not always straight forward and sometimes needs more time. Time that is precious within your team. Hand this topic over to me and get answer to the your questions.",
+    "advanced-process-control-list-element6": "• artificial intelligence (AI) assistance - The buzzword of today: artificial intelligence (AI). It´s a powerful tool for analyzing your data. I can help you finding the correct model for doing the job, run tests and help implementing a solution that fits your needs including all the communication and procurement procedure upfront.",
+    "advanced-process-control-list-element7": "• New setup - Are you about to make the first steps into the world of advanced process control (APC)? Or are you planing to increase the coverage of your already existing advanced process control (APC) setup? Together we can evaluate a bunch of strategies and then decide the way to go to fit your house and processes. I also help you searching for adequate measurement systems, sensors and where to place them in order to monitor as good as possible whats of interest.",
+    "advanced-process-control-list-element8": "• External software utilization - For reasons it may sometimes makes sense that you analyze gathered data with external tools. One of these tools could be one of the vast Python libraries like Pandas, Matplotlib, Numpy or SciPy. With them I can help you while you don´t have to bother with freeing up resources in order to learn something new for just one project. And if its not related to Python we´ll also figure out what to do.",
+    "statistical-process-control-title": "Statistical Process Control",
+    "statistical-process-control-list-element1": "• Software procurement and setup - You already have lots of measurement data of your manufacturing processes available but you lack a centralized software that is providing what your team needs and at the same time integrates into what is already setup? I help you finding your statistical process control (SPC) software as well I can take over all the communication with possible partner. Furthermore I offer to write requirement specifications, do first sample testing and support its rollout.",
+    "statistical-process-control-list-element2": "• User training - Are you looking forward to standardize the way statistical process control (SPC) is used in your company? I provide a platform based training for you or your team to make it become a solid common ground of expertise for further steps. It has a step-based approach and starts with general statistical process control (SPC) concepts and rises to advanced approaches and specific topics that can also involve the software that you are using.",
+    "statistical-process-control-list-element3": "• WER implementation - I´d consider the western electric rules (WER) a backbone of statistical process control (SPC). Rolling out statistical process control (SPC) on millions of data channels can not be overseen and managed by hand, that´s for sure. If you plan to do so and need expertise about setting limits: I can help you here.",
+    "statistical-process-control-list-element4": "• Strategic alignment - Typically advanced process control (APC) is not used as only measure of control in a modern production. It shall be part of an ecosystem. But how does the advanced process control (APC) -piece fit into that ecosystem and what expectations does it have to fulfill? Is it doing what it shall do? The view of an outsider on strategic topics can be a blessing. That´s where I step in.",
+    "statistical-process-control-list-element5": "• Learning from the past - Data can tell stories, if asked correctly. Analyzing it and find correlations to certain events is not always straight forward and sometimes needs more time. Time that is precious within your team. Hand this topic over to me and get answer to the your questions.",
+    "statistical-process-control-list-element6": "• AI assistance - The buzzword of today: AI. It´s a powerful tool for analyzing your data. I can help you finding the correct model for doing the job, run tests and help implementing a solution that fits your needs including all the communication and procurement procedure upfront.",
+    "statistical-process-control-list-element7": "• New setup - Are you about to make the first steps into the world of advanced process control (APC)? Or are you planing to increase the coverage of your already existing advanced process control (APC) setup? Together we can evaluate a bunch of strategies and then decide the way to go to fit your house and processes. I also help you searching for adequate measurement systems, sensors and where to place them in order to monitor as good as possible whats of interest.",
+    "statistical-process-control-list-element8": "• External software utilization - For reasons it may sometimes make sense that you analyze gathered data with external tools. One of these tools could be one of the vast Python libraries like Pandas, Matplotlib, Numpy or SciPy. With them I can help you while you don´t have to bother with freeing up resources in order to learn something new for just one project. And if its not related to Python I´m ready to delve into other environments as well, just let me know.",
+    "custom-solutions-title": "Custom Solutions",
+    "custom-solutions-list-element1": "• Python-based data analysis - Libraries like Pandas, Matplotlib, Numpy or SciPy are well established in the realm of data science. This service is especially meant to support where not much samples are collected to have APC or SPC with day to day samples. Or the analysis requirements differ from the established procedure.",
+    "custom-solutions-list-element2": "• Data classification - Are you dealing with a new data type or quality and do not yet know how to make it fit your established catalog of classifications? Or did you just update your failure catalog and need someone to perform a re-classification of existing data? Even though I won´t do this by myself I help you search qualified 3rd parties to do the job.",
+    "custom-solutions-list-element3": "• Data creation and prototyping - You need a demo or sample of data prepared in a one-time manner? It shall be connected within an highly integrated process landscape where lots of things depend on one another in feedback loops? Something needs to be responsive in almost real-time? This is where engineering can shine and you can save your resources and let me do that for you. I",
+    "custom-solutions-list-element4": "• Maintenance and review - The process control tools you use are historically grown and need a review or a restructuring? You use manual manpower to maintain these tools? Whatever it is, outsource it and let an experienced helping hand do that for you.",
+    "process-control-contact": "Miss something? We´ll find a solution. Primary I offer my services for manufacturing processes, and in particular semiconductor manufacturing. But I am absolutely open for new topics. My services can be booked in both ways: short and long term. And I work either project or time based. As well you can combine any of my services to get the best result.",
+    "contact-button": "Connect with me"
+  },
+  "TravelServicesPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
+    "travel-services-hero": "Travel Services",
+    "travel-services-section-title": "The world can be your playground - use it",
+    "travel-services-section-subtitle": "Even though I am not a travel agent I can look up everything for\n you and put it together so you can easily decide what suites your\n booking. Here you can rely on me:",
+    "trip-organization-title": "Trip Organization",
+    "trip-organization-list-element1": "• Trip planning and coordination",
+    "trip-organization-list-element2": "• Transfer arrangements",
+    "trip-organization-list-element3": "• Budget and timetable planing",
+    "trip-organization-list-element4": "• Health and insurance considerations",
+    "personal-coaching-title": "Personal Coaching",
+    "personal-coaching-list-element1": "• Kite instructor services",
+    "personal-coaching-list-element2": "• Functional fitness and HIIT coaching",
+    "personal-coaching-list-element3": "• Master of your schedule",
+    "personal-coaching-list-element4": "• Workout scheduling and progress documentation",
+    "travel-buddy-title": "Travel Buddy",
+    "travel-buddy-list-element1": "• Have fun: I am also a human",
+    "travel-buddy-list-element2": "• Trip documentation (photos, videos,...)",
+    "travel-buddy-list-element3": "• Organization of various activities and excursions",
+    "travel-buddy-list-element4": "• Sharing expenses of daily needs",
+    "travel-services-contact": "Let's create an unforgettable experience together. I provide you\n what is necessary for it. Only the booking is yours. Is anything\n missing? We find a solution. It all starts here:",
+    "contact-button": "Connect with me"
+  },
+  "TheoryPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
+    "theory-hero": "Kiteboarding Theory Courses",
+    "theory-section-title": "Doing it is nice! But understanding things is the key for\n sustainable progress",
+    "theory-section-subtitle": "The following is a overview of categories for theory lessons I\n give that are either already part of a course or can be booked\n additionally.",
+    "rider-essentials-title": "Rider Essentials",
+    "rider-essentials-list-element1": "• Behavior on and around the water: Concepts like karma and\n the right of way",
+    "rider-essentials-list-element2": "• Concepts to understand wind: Where it comes from and how you\n can use it",
+    "rider-essentials-list-element3": "• Self management and routines: Learn to educate yourself",
+    "rider-essentials-list-element4": "• General (sailing and Navigation) terminology and expressions",
+    "rider-essentials-list-element5": "• Steps to become more independent",
+    "rider-essentials-list-element6": "• Common mistakes and how to avoid them",
+    "advanced-theory-title": "Advanced Theory",
+    "advanced-theory-list-element1": "• What makes you ride: Concepts of forces and angels",
+    "advanced-theory-list-element2": "• More physics: What are aerodynamics and what wind really is\n and where it comes from",
+    "advanced-theory-list-element3": "• Overview and details to used materials such boards,\n wetsuits or kites",
+    "advanced-theory-list-element4": "• How do tricks and maneuvers work: A brake down",
+    "advanced-theory-list-element5": "• Next steps in kiteboarding: Additional exercises, lifestyle\n and nutrition",
+    "environmental-stuff-title": "Environmental Stuff",
+    "environmental-stuff-list-element1": "• Environmental influences like what is weather and how you\n can learn to use it to your advantage",
+    "environmental-stuff-list-element2": "• We are not alone: Learn about the ecosystems where you\n perform your sport. Do you know that birds can die because of\n you?",
+    "environmental-stuff-list-element3": "• Kiteboarding on society level: How can you join an\n organisation to serve a higher purpose related to kiteboarding",
+    "environmental-stuff-list-element4": "• Laws, regulations and good habits that must be considered\n when leaving the comfort zone",
+    "theory-contact": "\"A course is good if both, the student and the teacher, learn from\n each other\". Combine my services as you please and benefit from an\n individual discount. Something is not listed? I´m always open to\n research something and bring it to you."
+  },
+  "StartingPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
+    "starting-hero": "(Re-)Starter Courses",
+    "starting-section-title": "Everything is starting somewhen. Or starting again?",
+    "starting-section-subtitle": "It´s about committing oneself to make the necessary steps:\n Deciding to (re-)start something and not just dreaming about is\n the first. For the ones to come I have the following flexible\n course service available:",
+    "who-title": "Who?",
+    "who-list-element1": "• Individuals or groups",
+    "who-list-element2": "• Schools or private",
+    "who-list-element3": "• Courses in German, English and Portuguese",
+    "who-list-element4": "• Practical lessons: max. 4 people",
+    "who-list-element5": "• Theory lessons: max. 30 people",
+    "who-list-element6": "• No age limits but more then 30kg of weight",
+    "who-list-element7": "• Must be able to swim securely for more then a few minutes",
+    "who-list-element8": "• Starter = You never used a kite before in your life",
+    "who-list-element9": "• Restarter = You used a kite before in your life",
+    "content-title": "Content",
+    "content-list-element1": "• Introduction and safety basics",
+    "content-list-element2": "• Equipment familiarization and setup",
+    "content-list-element3": "• Basic kite control without board",
+    "content-list-element4": "• Body dragging techniques",
+    "content-list-element5": "• Advanced kite steering techniques",
+    "content-list-element6": "• Water start fundamentals and first few meters",
+    "content-list-element7": "• Theory lessons when necessary",
+    "content-list-element8": "• Orientation on the water and dangers",
+    "content-list-element9": "• Student can safely practice water starts on their own after\n the course",
+    "structure-title": "Structure",
+    "structure-list-element1": "• Up to 5 days intensive programs",
+    "structure-list-element2": "• Flexible scheduling options, based on environmental and\n personal conditions",
+    "structure-list-element3": "• Buddy system: 2 people per Kite",
+    "structure-list-element4": "• Individual: 1 person, 1 Kite",
+    "structure-list-element5": "• Supervision-only format possible",
+    "structure-list-element6": "• If available: Headset and video support",
+    "structure-list-element7": "• Progress tracking and VDWS certification",
+    "structure-list-element8": "• No-wind alternatives: Simulations, wakeboarding,\n landboarding, SUP, exercising,....",
+    "starting-contact": "There are many things to consider when giving courses but almost nothing\n that can´t be arranged. Drop me a message and we´ll organize all\n the details.",
+    "contact-button": "Connect with me"
+  },
+  "AdvancedPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
+    "advanced-hero": "Advanced Kiteboarding Courses",
+    "advanced-section-title": "After the first step comes the next. And then the next...",
+    "advanced-section-subtitle": "Why does that look so easy what they are doing on the water? There\n is plenty to learn and my services are meant to support along the\n way:",
+    "who-title": "Who?",
+    "who-list-element1": "• Individuals or groups",
+    "who-list-element2": "• Schools or private",
+    "who-list-element3": "• Courses in German, English and Portuguese",
+    "who-list-element4": "• Practical lessons: max. 4 people",
+    "who-list-element5": "• Theory lessons: max. 30 people",
+    "who-list-element6": "• No age limits but more then 30kg of weight",
+    "who-list-element7": "• Must be able to swim securely for more then a few minutes",
+    "who-list-element8": "• Advanced = You are confidently and reproducible riding after\n the waterstart",
+    "who-list-element9": "• Sorry, I can´t make someone a \"King Of The Air\" athlete. But\n I teach some cool tricks, sure",
+    "possible-content-title": "Possible Content",
+    "possible-content-list-element1": "• Develop routines to support your training",
+    "possible-content-list-element2": "• Material modifications like changing board stances or\n testing different line setups",
+    "possible-content-list-element3": "• Learning new tricks in a save and guided environment",
+    "possible-content-list-element4": "• Individualize your own style and get filmed",
+    "possible-content-list-element5": "• Feedback and optimizations on current riding",
+    "possible-content-list-element6": "• How to be a kite-buddy for less experienced",
+    "possible-content-list-element7": "• Advanced theory that goes beyond the wind window",
+    "possible-content-list-element8": "• Practising accident scenarios and self rescue",
+    "structure-title": "Structure",
+    "structure-list-element1": "• Up to 5 days intensive programs",
+    "structure-list-element2": "• Flexible scheduling options, based on environmental and\n personal conditions",
+    "structure-list-element3": "• Buddy system: 2 people per Kite",
+    "structure-list-element4": "• Individual: 1 person, 1 Kite",
+    "structure-list-element5": "• Supervision-only format possible",
+    "structure-list-element6": "• If available: Headset and video support",
+    "structure-list-element7": "• Progress tracking and VDWS certification",
+    "structure-list-element8": "• No-wind alternatives: Simulations, wakeboarding,\n landboarding, SUP, exercising,....",
+    "advanced-contact": "There are many things to consider when giving courses but almost nothing\n that can´t be arranged. Drop me a message and we´ll organize all\n the details.",
+    "contact-button": "Connect with me"
+  },
+  "SchoolSupportPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
+    "school-support-hero": "School Support Services",
+    "school-support-section-title": "Have An Extra Employee At Hand",
+    "school-support-section-subtitle": "I´m ready to support your school and business. Consider me as the one guy you\n literally can put anywhere: Flexibility is my strength. Just tell\n me up front what you need:",
+    "instructor-services-title": "Instructor Services",
+    "instructor-services-list-element1": "• VDWS certified instructor since 2023",
+    "instructor-services-list-element2": "• Customer administration and service",
+    "instructor-services-list-element3": "• Beginner to advanced lessons",
+    "instructor-services-list-element4": "• Basic Landboarding lessons",
+    "instructor-services-list-element5": "• Basic Wakeboarding lessons",
+    "instructor-services-list-element6": "• Multi-language support (German, English, Portuguese)",
+    "instructor-services-list-element7": "• Group and individual sessions",
+    "instructor-services-list-element8": "• Supervision and filming",
+    "general-assistance-title": "General Assistance",
+    "general-assistance-list-element1": "• Office and administration",
+    "general-assistance-list-element2": "• Customer service and sales support",
+    "general-assistance-list-element3": "• Recommendations on purchasing and selling equipment",
+    "general-assistance-list-element4": "• Gear maintenance and repairs",
+    "general-assistance-list-element5": "• Inventory management and logistics",
+    "general-assistance-list-element6": "• Product demonstrations",
+    "general-assistance-list-element7": "• Helping hand in day to day tasks like crafting",
+    "general-assistance-list-element8": "• Small IT infrastructure topics",
+    "flexible-scheduling-title": "Flexible Scheduling",
+    "flexible-scheduling-list-element1": "• Short-term and long-term contracts",
+    "flexible-scheduling-list-element2": "• The more you book, the better the price",
+    "flexible-scheduling-list-element3": "• Ready for international support",
+    "flexible-scheduling-list-element4": "• Weekend and holiday coverage",
+    "flexible-scheduling-list-element5": "• Providing support to multi-location schools and open to commuting between sites",
+    "flexible-scheduling-list-element6": "• Driver’s license covering both car and motorcycle",
+    "flexible-scheduling-list-element7": "• Open and honest communication",
+    "school-support-contact": "Let's see how I can support your team. Combine my services as you wish, there are almost no restrictions. Is anything missing? We find a solution. It all starts here:",
+    "contact-button": "Connect with me"
+  },
+  "ConsultingPage": {
+    "back-to-kite-services-nav": "Back to All Kite Services",
+    "consulting-hero": "Kite Consulting Services",
+    "consulting-section-title": "There is a lot to ask",
+    "consulting-section-subtitle": "Guidance and knowledge exchange is the key: Someone knows\n something and someone wants to learn it. Here I combine my role as\n a kitesurfer and -instructor with being part of society.",
+    "general-consulting-title": "General Consulting",
+    "general-consulting-list-element1": "• Individual equipment recommendations",
+    "general-consulting-list-element2": "• Transportation, maintenance and logistics",
+    "general-consulting-list-element3": "• Equipment review and demo testings",
+    "general-consulting-list-element4": "• Quote review",
+    "general-consulting-list-element5": "• Karma: Influence on society and the environment",
+    "sport-representation-title": "Sport Representation",
+    "sport-representation-list-element1": "• Public speaking and presentations about sport related topics",
+    "sport-representation-list-element2": "• Educational workshops for almost all ages",
+    "sport-representation-list-element3": "• Media interviews and content",
+    "sport-representation-list-element4": "• Community outreach programs",
+    "sport-representation-list-element5": "• Sport promotion initiatives",
+    "consulting-contact": "This section revolves around anything that is somehow connected to\n the sport as well to the environment in which it´s carried out.\n Find out how we can work together:",
+    "contact-button": "Connect with me"
+  },
+  "LandingPage": {
+    "kite-subtitle-landing-page": "Curious? Let´s work together",
+    "engineer-subtitle-landing-page": "Ambitious? It´s about solutions"
+  },
+  "NavigationMenu": {
+    "home": "Home",
+    "kite": "Kite",
+    "allKiteServices": "Kite Services",
+    "freelancer": "Professional Services",
+    "schoolSupport": "School Support",
+    "travelServices": "Travel Services",
+    "consulting": "Sports Consultant",
+    "courses": "Courses",
+    "theory": "Theory",
+    "starting": "(Re-)Starting",
+    "advanced": "Advanced",
+    "engineer": "Engineer",
+    "allEngineeringServices": "Engineering Services",
+    "processEngineering": "Process Engineering",
+    "processControl": "Process Control",
+    "processOptimization": "Process Optimization",
+    "changeManagement": "Change Management",
+    "monitoring": "Monitoring",
+    "processDevelopment": "Process Development",
+    "creativity": "Creativity",
+    "processDesign": "Process Design",
+    "simulationPrototyping": "Simulation & Prototyping",
+    "equipmentRoadmap": "Equipment Roadmap",
+    "softwareDevelopment": "Software Development",
+    "customSolutions": "Custom Solutions",
+    "databaseManagement": "Database Management",
+    "workflowAutomation": "Workflow Automation",
+    "webDevelopment": "Web Development",
+    "projectManagement": "Project Management",
+    "projectSetup": "Project Setup",
+    "timelineManagement": "Timeline Management",
+    "deviationManagement": "Deviation Management",
+    "documentation": "Documentation",
+    "technicalConsulting": "Technical Consulting",
+    "processAssessment": "Process Assessment",
+    "technicalResearch": "Technical Research",
+    "trainingKnowledgeTransfer": "Training & Knowledge Transfer",
+    "competitorAnalysis": "Competitor Analysis",
+    "about": "About",
+    "contact": "Contact",
+    "search": "Search"
+  },
+  "Footer": {
+    "footer-contact": "Contact",
+    "footer-contact-email": "stefan@kite-engineer.de",
+    "footer-quick-links": "Quick Links",
+    "footer-text-kite": "Kite",
+    "footer-text-engineer": "Engineer",
+    "footer-text-about": "About",
+    "footer-text-contact": "Contact",
+    "footer-legal": "Legal",
+    "footer-text-privacy": "Privacy Policy",
+    "footer-text-imprint": "Imprint",
+    "footer-follow-me": "Follow Me",
+    "footer-social-instagram": "Instagram",
+    "footer-social-linkedin": "LinkedIn",
+    "footer-social-github": "GitHub",
+    "phone-number-reveal-text": "Click to reveal phone number",
+    "footer-copy": "(Copy)",
+    "footer-copied": "(Copied!)",
+    "footer-copyright": "© {year} Kite-Engineer by Stefan Merthan. All rights reserved."
+  },
+  "ProcessOptimizationPage": {
+    "back-to-engineer-services-nav": "Back",
+    "process-optimization-hero": "Process Optimization Services",
+    "process-optimization-section-title": "Six Sigma & Lean Manufacturing Excellence",
+    "process-optimization-section-subtitle": "Achieve optimal process outcomes through proven methodologies and data-driven approaches",
+    "six-sigma-methodologies-title": "Six Sigma Methodologies",
+    "six-sigma-methodologies-list-element1": "• DMAIC project execution",
+    "six-sigma-methodologies-list-element2": "• Statistical analysis and hypothesis testing",
+    "six-sigma-methodologies-list-element3": "• Root cause analysis",
+    "six-sigma-methodologies-list-element4": "• Process capability studies",
+    "six-sigma-methodologies-list-element5": "• Defect reduction strategies",
+    "lean-manufacturing-title": "Lean Manufacturing",
+    "lean-manufacturing-list-element1": "• Waste elimination (8 wastes)",
+    "lean-manufacturing-list-element2": "• Value stream mapping",
+    "lean-manufacturing-list-element3": "• 5S workplace organization",
+    "lean-manufacturing-list-element4": "• Kaizen continuous improvement",
+    "lean-manufacturing-list-element5": "• Just-in-time implementation",
+    "design-of-experiments-title": "Design of Experiments",
+    "design-of-experiments-list-element1": "• Factorial design planning",
+    "design-of-experiments-list-element2": "• Response surface methodology",
+    "design-of-experiments-list-element3": "• Optimization studies",
+    "design-of-experiments-list-element4": "• Robust parameter design",
+    "design-of-experiments-list-element5": "• Statistical modeling",
+    "yield-enhancement-title": "Yield Enhancement",
+    "yield-enhancement-list-element1": "• Yield analysis and improvement",
+    "yield-enhancement-list-element2": "• Pareto analysis for prioritization",
+    "yield-enhancement-list-element3": "• Process efficiency metrics",
+    "yield-enhancement-list-element4": "• Cost reduction strategies",
+    "yield-enhancement-list-element5": "• Performance benchmarking",
+    "process-optimization-contact": "Ready to optimize your processes? Let's implement Six Sigma and Lean methodologies to achieve excellence.",
+    "contact-button": "Connect with me"
+  },
+  "SimulationPrototypingPage": {
+    "back-to-engineer-services-nav": "Back",
+    "simulation-prototyping-hero": "Simulation & Prototyping Services",
+    "simulation-prototyping-section-title": "From Analogy Models to 3D Reality",
+    "simulation-prototyping-section-subtitle": "Advanced simulation and physical prototyping for comprehensive solution validation",
+    "advanced-simulation-title": "Advanced Simulation",
+    "advanced-simulation-list-element1": "• Process simulation software",
+    "advanced-simulation-list-element2": "• Computational fluid dynamics (CFD)",
+    "advanced-simulation-list-element3": "• Finite element analysis (FEA)",
+    "advanced-simulation-list-element4": "• Monte Carlo simulations",
+    "advanced-simulation-list-element5": "• Digital twin development",
+    "3d-prototyping-title": "3D Prototyping",
+    "3d-prototyping-list-element1": "• 3D printing and additive manufacturing",
+    "3d-prototyping-list-element2": "• Rapid prototyping techniques",
+    "3d-prototyping-list-element3": "• Scale model development",
+    "3d-prototyping-list-element4": "• Manual model reworking",
+    "3d-prototyping-list-element5": "• Material property validation",
+    "analogy-models-title": "Analogy Models",
+    "analogy-models-list-element1": "• Conceptual model development",
+    "analogy-models-list-element2": "• Analogical problem solving",
+    "analogy-models-list-element3": "• Simplified system representation",
+    "analogy-models-list-element4": "• Proof-of-concept validation",
+    "analogy-models-list-element5": "• Design principle verification",
+    "expert-network-title": "Expert Network",
+    "expert-network-list-element1": "• Fabrication expert connections",
+    "expert-network-list-element2": "• Specialized manufacturing partners",
+    "expert-network-list-element3": "• Testing facility access",
+    "expert-network-list-element4": "• Technical consultation network",
+    "expert-network-list-element5": "• Quality assurance partnerships",
+    "simulation-prototyping-contact": "Ready to bring your concepts to life? Let's create simulations and prototypes that validate your solutions."
+  },
+  "ChangeManagementPage": {
+    "back-to-engineer-services-nav": "Back",
+    "change-management-hero": "Change Management Services",
+    "change-management-section-title": "Professional Change Management",
+    "change-management-section-subtitle": "Milestone preparation, release gates, and comprehensive documentation for seamless transitions",
+    "process-change-documentation-title": "Process Change Documentation",
+    "process-change-documentation-list-element1": "• Change request documentation",
+    "process-change-documentation-list-element2": "• Impact assessment reports",
+    "process-change-documentation-list-element3": "• Risk analysis and mitigation",
+    "process-change-documentation-list-element4": "• Approval workflow management",
+    "process-change-documentation-list-element5": "• Change implementation tracking",
+    "release-gate-management-title": "Release Gate Management",
+    "release-gate-management-list-element1": "• Gate criteria definition",
+    "release-gate-management-list-element2": "• Milestone preparation",
+    "release-gate-management-list-element3": "• Review and approval processes",
+    "release-gate-management-list-element4": "• Quality gate implementation",
+    "release-gate-management-list-element5": "• Release readiness assessment",
+    "traceability-systems-title": "Traceability Systems",
+    "traceability-systems-list-element1": "• Version control protocols",
+    "traceability-systems-list-element2": "• Change history tracking",
+    "traceability-systems-list-element3": "• Audit trail maintenance",
+    "traceability-systems-list-element4": "• Document version management",
+    "traceability-systems-list-element5": "• Compliance documentation",
+    "compliance-audit-support-title": "Compliance & Audit Support",
+    "compliance-audit-support-list-element1": "• Regulatory compliance management",
+    "compliance-audit-support-list-element2": "• Audit preparation and support",
+    "compliance-audit-support-list-element3": "• Standard operating procedures",
+    "compliance-audit-support-list-element4": "• Quality system documentation",
+    "compliance-audit-support-list-element5": "• Corrective action tracking",
+    "change-management-contact": "Ready to implement professional change management? Let's ensure your transitions are smooth and compliant.",
+    "contact-button": "Connect with me"
+  },
+  "WorkflowAutomationPage": {
+    "back-to-engineer-services-nav": "Back",
+    "workflow-automation-hero": "Workflow Automation Services",
+    "workflow-automation-section-title": "Save Time, Let Software Work",
+    "workflow-automation-section-subtitle": "Eliminate repetitive tasks and optimize workflows with intelligent automation",
+    "process-automation-title": "Process Automation",
+    "process-automation-list-element1": "• Repetitive task elimination",
+    "process-automation-list-element2": "• Business process automation",
+    "process-automation-list-element3": "• Document processing workflows",
+    "process-automation-list-element4": "• Data entry automation",
+    "process-automation-list-element5": "• Report generation automation",
+    "workflow-orchestration-title": "Workflow Orchestration",
+    "workflow-orchestration-list-element1": "• Multi-step workflow design",
+    "workflow-orchestration-list-element2": "• Conditional logic implementation",
+    "workflow-orchestration-list-element3": "• Error handling and recovery",
+    "workflow-orchestration-list-element4": "• Workflow monitoring and logging",
+    "workflow-orchestration-list-element5": "• Performance optimization",
+    "integration-solutions-title": "Integration Solutions",
+    "integration-solutions-list-element1": "• Existing software integration",
+    "integration-solutions-list-element2": "• API connectivity and automation",
+    "integration-solutions-list-element3": "• Data synchronization",
+    "integration-solutions-list-element4": "• Third-party service integration",
+    "integration-solutions-list-element5": "• Legacy system connectivity",
+    "monitoring-alerting-title": "Monitoring & Alerting",
+    "monitoring-alerting-list-element1": "• Real-time workflow monitoring",
+    "monitoring-alerting-list-element2": "• Automated alert systems",
+    "monitoring-alerting-list-element3": "• Performance metrics tracking",
+    "monitoring-alerting-list-element4": "• Failure detection and notification",
+    "monitoring-alerting-list-element5": "• Audit trail and compliance",
+    "workflow-automation-contact": "Ready to automate your workflows? Let's eliminate repetitive tasks and optimize your processes."
+  },
+  "TrainingKnowledgeTransferPage": {
+    "back-to-engineer-services-nav": "Back",
+    "training-knowledge-transfer-hero": "Training & Knowledge Transfer",
+    "training-knowledge-transfer-section-title": "Never Stop Learning",
+    "training-knowledge-transfer-section-subtitle": "Share knowledge and develop skills through customized training programs",
+    "technical-training-programs-title": "Technical Training Programs",
+    "technical-training-programs-list-element1": "• Customized training curriculum",
+    "technical-training-programs-list-element2": "• Hands-on technical workshops",
+    "technical-training-programs-list-element3": "• Process-specific training",
+    "technical-training-programs-list-element4": "• Software and tool training",
+    "technical-training-programs-list-element5": "• Technical skill development",
+    "knowledge-sharing-workshops-title": "Knowledge Sharing Workshops",
+    "knowledge-sharing-workshops-list-element1": "• Interactive knowledge sessions",
+    "knowledge-sharing-workshops-list-element2": "• Cross-functional knowledge sharing",
+    "knowledge-sharing-workshops-list-element3": "• Best practice dissemination",
+    "knowledge-sharing-workshops-list-element4": "• Lessons learned workshops",
+    "knowledge-sharing-workshops-list-element5": "• Collaborative problem-solving",
+    "documentation-development-title": "Documentation Development",
+    "documentation-development-list-element1": "• Technical documentation creation",
+    "documentation-development-list-element2": "• Process documentation",
+    "documentation-development-list-element3": "• Standard operating procedures",
+    "documentation-development-list-element4": "• Training materials development",
+    "documentation-development-list-element5": "• Knowledge base creation",
+    "skill-development-planning-title": "Skill Development Planning",
+    "skill-development-planning-list-element1": "• Skill gap analysis",
+    "skill-development-planning-list-element2": "• Development roadmap creation",
+    "skill-development-planning-list-element3": "• Learning path definition",
+    "skill-development-planning-list-element4": "• Progress tracking methods",
+    "skill-development-planning-list-element5": "• Continuous improvement planning",
+    "training-knowledge-transfer-contact": "Ready to develop your team's knowledge? Let's create training programs and knowledge sharing systems."
+  },
+  "DocumentationPage": {
+    "back-to-engineer-services-nav": "Back",
+    "documentation-hero": "Documentation & Sharing Services",
+    "documentation-section-title": "Create Team Synergies",
+    "documentation-section-subtitle": "Modern version control and data sharing to unlock your team's collaborative potential",
+    "version-control-title": "Version Control",
+    "version-control-list-element1": "• Git-based version control setup",
+    "version-control-list-element2": "• Branching strategy development",
+    "version-control-list-element3": "• Document versioning systems",
+    "version-control-list-element4": "• Change history tracking",
+    "version-control-list-element5": "• Conflict resolution procedures",
+    "collaborative-workspace-title": "Collaborative Workspace",
+    "collaborative-workspace-list-element1": "• Shared workspace configuration",
+    "collaborative-workspace-list-element2": "• Cloud-based collaboration tools",
+    "collaborative-workspace-list-element3": "• Real-time editing capabilities",
+    "collaborative-workspace-list-element4": "• Access control and permissions",
+    "collaborative-workspace-list-element5": "• Cross-platform compatibility",
+    "knowledge-management-title": "Knowledge Management",
+    "knowledge-management-list-element1": "• Knowledge base development",
+    "knowledge-management-list-element2": "• Documentation standards",
+    "knowledge-management-list-element3": "• Information architecture design",
+    "knowledge-management-list-element4": "• Search and retrieval optimization",
+    "knowledge-management-list-element5": "• Knowledge retention strategies",
+    "team-synergy-title": "Team Synergy",
+    "team-synergy-list-element1": "• Collaboration workflow design",
+    "team-synergy-list-element2": "• Communication protocol development",
+    "team-synergy-list-element3": "• Team integration strategies",
+    "team-synergy-list-element4": "• Cross-functional coordination",
+    "team-synergy-list-element5": "• Collaborative culture building",
+    "documentation-contact": "Ready to enhance team collaboration? Let's implement modern documentation and sharing systems.",
+    "contact-button": "Connect with me"
+  },
+  "CompetitorAnalysisPage": {
+    "back-to-engineer-services-nav": "Back",
+    "competitor-analysis-hero": "Competitor Analysis Services",
+    "competitor-analysis-section-title": "Know What Others Are Doing",
+    "competitor-analysis-section-subtitle": "Professional competitive intelligence gathering and analysis to inform your strategy",
+    "competitor-technology-analysis-title": "Competitor Technology Analysis",
+    "competitor-technology-analysis-list-element1": "• Technology stack assessment",
+    "competitor-technology-analysis-list-element2": "• Product feature comparison",
+    "competitor-technology-analysis-list-element3": "• Technical capability evaluation",
+    "competitor-technology-analysis-list-element4": "• Innovation trajectory analysis",
+    "competitor-technology-analysis-list-element5": "• Technology gap identification",
+    "market-positioning-title": "Market Positioning",
+    "market-positioning-list-element1": "• Competitive landscape mapping",
+    "market-positioning-list-element2": "• Market share analysis",
+    "market-positioning-list-element3": "• Positioning strategy assessment",
+    "market-positioning-list-element4": "• Value proposition comparison",
+    "market-positioning-list-element5": "• Differentiation opportunity identification",
+    "strategic-intelligence-title": "Strategic Intelligence",
+    "strategic-intelligence-list-element1": "• Strategic direction analysis",
+    "strategic-intelligence-list-element2": "• Investment pattern identification",
+    "strategic-intelligence-list-element3": "• Partnership and alliance assessment",
+    "strategic-intelligence-list-element4": "• Expansion strategy evaluation",
+    "strategic-intelligence-list-element5": "• Future trajectory prediction",
+    "competitive-advantage-title": "Competitive Advantage",
+    "competitive-advantage-list-element1": "• Strength and weakness analysis",
+    "competitive-advantage-list-element2": "• Competitive advantage identification",
+    "competitive-advantage-list-element3": "• Opportunity assessment",
+    "competitive-advantage-list-element4": "• Threat evaluation",
+    "competitive-advantage-list-element5": "• Strategic recommendation development",
+    "competitor-analysis-contact": "Ready to understand your competition? Let's analyze your competitors and identify strategic opportunities."
+  },
+  "MonitoringPage": {
+    "back-to-engineer-services-nav": "Back",
+    "monitoring-hero": "Process Monitoring Services",
+    "monitoring-section-title": "Make invisible things visible - process monitoring put to work",
+    "monitoring-section-subtitle": "Only if you see what is really going on you can start systematical improvements. We define monitoring parameters and implement solutions for any production volume together",
+    "parameter-selection-title": "Parameter Selection",
+    "parameter-selection-list-element1": "• Critical parameter identification",
+    "parameter-selection-list-element2": "• Monitoring strategy development",
+    "parameter-selection-list-element3": "• Sensor placement optimization",
+    "parameter-selection-list-element4": "• Data collection frequency",
+    "parameter-selection-list-element5": "• Measurement system analysis",
+    "alarm-notification-systems-title": "Alarm & Notification Systems",
+    "alarm-notification-systems-list-element1": "• Real-time alarm configuration",
+    "alarm-notification-systems-list-element2": "• Multi-level notification systems",
+    "alarm-notification-systems-list-element3": "• Escalation procedures",
+    "alarm-notification-systems-list-element4": "• Mobile alert integration",
+    "alarm-notification-systems-list-element5": "• Alarm rationalization",
+    "trend-analysis-title": "Trend Analysis",
+    "trend-analysis-list-element1": "• Historical data analysis",
+    "trend-analysis-list-element2": "• Trend identification and reporting",
+    "trend-analysis-list-element3": "• Predictive trend modeling",
+    "trend-analysis-list-element4": "• Performance drift detection",
+    "trend-analysis-list-element5": "• Long-term stability assessment",
+    "performance-benchmarking-title": "Performance Benchmarking",
+    "performance-benchmarking-list-element1": "• Baseline establishment",
+    "performance-benchmarking-list-element2": "• Performance metrics definition",
+    "performance-benchmarking-list-element3": "• Comparative analysis",
+    "performance-benchmarking-list-element4": "• Industry benchmarking",
+    "performance-benchmarking-list-element5": "• Continuous improvement tracking",
+    "monitoring-contact": "Ready to implement comprehensive monitoring? Let's define the right parameters and methods for your production needs.",
+    "contact-button": "Connect with me"
+  },
+  "WebDevelopmentPage": {
+    "back-to-engineer-services-nav": "Back",
+    "web-development-hero": "Web Development Services",
+    "web-development-section-title": "Complete Web Solutions & Administration",
+    "web-development-section-subtitle": "From server setup to website development - outsource your web administration needs",
+    "server-domain-setup-title": "Server & Domain Setup",
+    "server-domain-setup-list-element1": "• Server configuration and management",
+    "server-domain-setup-list-element2": "• Domain registration and DNS setup",
+    "server-domain-setup-list-element3": "• SSL certificate installation",
+    "server-domain-setup-list-element4": "• Performance optimization",
+    "server-domain-setup-list-element5": "• Security hardening",
+    "website-development-title": "Website Development",
+    "website-development-list-element1": "• Full-stack web applications",
+    "website-development-list-element2": "• Responsive design implementation",
+    "website-development-list-element3": "• Modern frontend frameworks",
+    "website-development-list-element4": "• Backend API development",
+    "website-development-list-element5": "• Database integration",
+    "self-hosted-solutions-title": "Self-Hosted Solutions",
+    "self-hosted-solutions-list-element1": "• Nextcloud setup and configuration",
+    "self-hosted-solutions-list-element2": "• Private cloud storage solutions",
+    "self-hosted-solutions-list-element3": "• Email server configuration",
+    "self-hosted-solutions-list-element4": "• Custom application hosting",
+    "self-hosted-solutions-list-element5": "• Data sovereignty and privacy",
+    "maintenance-security-title": "Maintenance & Security",
+    "maintenance-security-list-element1": "• Regular security updates",
+    "maintenance-security-list-element2": "• Performance monitoring",
+    "maintenance-security-list-element3": "• Backup and recovery systems",
+    "maintenance-security-list-element4": "• Uptime monitoring",
+    "maintenance-security-list-element5": "• Technical support and maintenance",
+    "web-development-contact": "Ready to outsource your web administration? Let's handle your server setup and website development needs."
+  },
+  "ProjectSetupPage": {
+    "back-to-engineer-services-nav": "Back",
+    "project-setup-hero": "Project Setup Services",
+    "project-setup-section-title": "Structure is key to sustainability and facing complex topics. Thus setting up a project already can decide about success or failure",
+    "project-setup-section-subtitle": "My developed competencies in setting up technical projects will help you benefit on the long run. The call is to keep simple structures simple and break complex ones into smaller and simpler ones.",
+    "project-scope-definition-title": "Project Scope Definition",
+    "project-scope-definition-list-element1": "• Comprehensive scope documentation",
+    "project-scope-definition-list-element2": "• Requirements gathering and analysis",
+    "project-scope-definition-list-element3": "• Project boundaries definition",
+    "project-scope-definition-list-element4": "• Deliverables specification",
+    "project-scope-definition-list-element5": "• Acceptance criteria establishment",
+    "work-breakdown-structure-title": "Work Breakdown Structure",
+    "work-breakdown-structure-list-element1": "• Hierarchical task decomposition",
+    "work-breakdown-structure-list-element2": "• Detailed activity definition",
+    "work-breakdown-structure-list-element3": "• Effort estimation",
+    "work-breakdown-structure-list-element4": "• Dependency identification",
+    "work-breakdown-structure-list-element5": "• Critical path analysis",
+    "resource-planning-title": "Resource Planning",
+    "resource-planning-list-element1": "• Resource allocation strategies",
+    "resource-planning-list-element2": "• Skill matrix development",
+    "resource-planning-list-element3": "• Capacity planning",
+    "resource-planning-list-element4": "• Budget allocation",
+    "resource-planning-list-element5": "• Resource leveling techniques",
+    "risk-assessment-title": "Risk Assessment",
+    "risk-assessment-list-element1": "• Risk identification workshops",
+    "risk-assessment-list-element2": "• Probability and impact analysis",
+    "risk-assessment-list-element3": "• Mitigation strategy development",
+    "risk-assessment-list-element4": "• Contingency planning",
+    "risk-assessment-list-element5": "• Risk monitoring framework",
+    "project-setup-contact": "Ready to set up your project for success? Let's establish a solid foundation for sustainable goal achievement.",
+    "contact-button": "Connect with me"
+  },
+  "CustomSolutionsPage": {
+    "back-to-engineer-services-nav": "Back",
+    "custom-solutions-hero": "Custom Software Solutions",
+    "custom-solutions-section-title": "Combine Features, Create Solutions",
+    "custom-solutions-section-subtitle": "From custom scripts to full-stack applications - tailored software that fits your exact needs",
+    "tailored-applications-title": "Tailored Applications",
+    "tailored-applications-list-element1": "• Custom software development",
+    "tailored-applications-list-element2": "• Feature integration and combination",
+    "tailored-applications-list-element3": "• Business-specific solutions",
+    "tailored-applications-list-element4": "• Legacy system modernization",
+    "tailored-applications-list-element5": "• Bespoke functionality implementation",
+    "custom-scripts-tools-title": "Custom Scripts & Tools",
+    "custom-scripts-tools-list-element1": "• Automation script development",
+    "custom-scripts-tools-list-element2": "• Data processing tools",
+    "custom-scripts-tools-list-element3": "• Custom utilities and helpers",
+    "custom-scripts-tools-list-element4": "• Integration scripts",
+    "custom-scripts-tools-list-element5": "• Performance optimization tools",
+    "system-integration-title": "System Integration",
+    "system-integration-list-element1": "• API development and integration",
+    "system-integration-list-element2": "• Third-party service connections",
+    "system-integration-list-element3": "• Data synchronization solutions",
+    "system-integration-list-element4": "• Middleware development",
+    "system-integration-list-element5": "• Cross-platform compatibility",
+    "containerization-title": "Containerization",
+    "containerization-list-element1": "• Docker containerization",
+    "containerization-list-element2": "• Microservices architecture",
+    "containerization-list-element3": "• Container orchestration",
+    "containerization-list-element4": "• Deployment automation",
+    "containerization-list-element5": "• Scalable infrastructure setup",
+    "custom-solutions-contact": "Ready to build your custom solution? Let's combine the features you need into the perfect software."
+  },
+  "DeviationManagementPage": {
+    "back-to-engineer-services-nav": "Back",
+    "deviation-management-hero": "Deviation Management Services",
+    "deviation-management-section-title": "Navigate Unexpected Detours",
+    "deviation-management-section-subtitle": "Professional communication and management of project deviations with external parties",
+    "change-request-management-title": "Change Request Management",
+    "change-request-management-list-element1": "• Deviation documentation",
+    "change-request-management-list-element2": "• Impact assessment",
+    "change-request-management-list-element3": "• Change request preparation",
+    "change-request-management-list-element4": "• Approval workflow management",
+    "change-request-management-list-element5": "• Implementation tracking",
+    "stakeholder-communication-title": "Stakeholder Communication",
+    "stakeholder-communication-list-element1": "• Expectation management",
+    "stakeholder-communication-list-element2": "• Communication strategy development",
+    "stakeholder-communication-list-element3": "• External party negotiations",
+    "stakeholder-communication-list-element4": "• Presentation preparation",
+    "stakeholder-communication-list-element5": "• Stakeholder alignment",
+    "recovery-planning-title": "Recovery Planning",
+    "recovery-planning-list-element1": "• Recovery strategy development",
+    "recovery-planning-list-element2": "• Action plan creation",
+    "recovery-planning-list-element3": "• Resource reallocation",
+    "recovery-planning-list-element4": "• Timeline adjustment",
+    "recovery-planning-list-element5": "• Progress monitoring",
+    "lessons-learned-title": "Lessons Learned",
+    "lessons-learned-list-element1": "• Root cause analysis",
+    "lessons-learned-list-element2": "• Deviation documentation",
+    "lessons-learned-list-element3": "• Process improvement recommendations",
+    "lessons-learned-list-element4": "• Knowledge capture and sharing",
+    "lessons-learned-list-element5": "• Preventive measure development",
+    "deviation-management-contact": "Ready to manage project deviations? Let's handle unexpected changes and get your project back on track.",
+    "contact-button": "Connect with me"
+  },
+  "ProcessAssessmentPage": {
+    "back-to-engineer-services-nav": "Back",
+    "process-assessment-hero": "Process Assessment Services",
+    "process-assessment-section-title": "Get an Outside Perspective",
+    "process-assessment-section-subtitle": "Detailed feedback on what to preserve and what to improve in your business processes",
+    "process-evaluation-title": "Process Evaluation",
+    "process-evaluation-list-element1": "• Comprehensive process review",
+    "process-evaluation-list-element2": "• Workflow analysis",
+    "process-evaluation-list-element3": "• Efficiency assessment",
+    "process-evaluation-list-element4": "• Compliance evaluation",
+    "process-evaluation-list-element5": "• Documentation review",
+    "bottleneck-identification-title": "Bottleneck Identification",
+    "bottleneck-identification-list-element1": "• Constraint analysis",
+    "bottleneck-identification-list-element2": "• Throughput assessment",
+    "bottleneck-identification-list-element3": "• Cycle time evaluation",
+    "bottleneck-identification-list-element4": "• Resource utilization review",
+    "bottleneck-identification-list-element5": "• Capacity limitation identification",
+    "improvement-opportunities-title": "Improvement Opportunities",
+    "improvement-opportunities-list-element1": "• Optimization recommendations",
+    "improvement-opportunities-list-element2": "• Automation potential assessment",
+    "improvement-opportunities-list-element3": "• Waste elimination strategies",
+    "improvement-opportunities-list-element4": "• Quality enhancement opportunities",
+    "improvement-opportunities-list-element5": "• Cost reduction possibilities",
+    "best-practice-benchmarking-title": "Best Practice Benchmarking",
+    "best-practice-benchmarking-list-element1": "• Industry standard comparison",
+    "best-practice-benchmarking-list-element2": "• Best practice identification",
+    "best-practice-benchmarking-list-element3": "• Performance gap analysis",
+    "best-practice-benchmarking-list-element4": "• Competitive positioning",
+    "best-practice-benchmarking-list-element5": "• Adoption recommendations",
+    "process-assessment-contact": "Ready for an outside perspective? Let's assess your processes and identify improvement opportunities."
+  },
+  "TechnicalResearchPage": {
+    "back-to-engineer-services-nav": "Back",
+    "technical-research-hero": "Technical Research Services",
+    "technical-research-section-title": "Filter What Matters for Your Business",
+    "technical-research-section-subtitle": "Professional technical research and analysis to identify relevant information and trends",
+    "technology-landscape-analysis-title": "Technology Landscape Analysis",
+    "technology-landscape-analysis-list-element1": "• Technology trend identification",
+    "technology-landscape-analysis-list-element2": "• Emerging technology assessment",
+    "technology-landscape-analysis-list-element3": "• Competitive technology mapping",
+    "technology-landscape-analysis-list-element4": "• Technology maturity evaluation",
+    "technology-landscape-analysis-list-element5": "• Adoption potential analysis",
+    "literature-review-title": "Literature Review",
+    "literature-review-list-element1": "• Academic literature analysis",
+    "literature-review-list-element2": "• Technical publication review",
+    "literature-review-list-element3": "• Research synthesis",
+    "literature-review-list-element4": "• State-of-the-art assessment",
+    "literature-review-list-element5": "• Knowledge gap identification",
+    "patent-ip-research-title": "Patent & IP Research",
+    "patent-ip-research-list-element1": "• Patent landscape analysis",
+    "patent-ip-research-list-element2": "• Freedom-to-operate assessment",
+    "patent-ip-research-list-element3": "• IP strategy recommendations",
+    "patent-ip-research-list-element4": "• Competitive IP positioning",
+    "patent-ip-research-list-element5": "• Technology protection strategies",
+    "technical-feasibility-title": "Technical Feasibility",
+    "technical-feasibility-list-element1": "• Technical feasibility studies",
+    "technical-feasibility-list-element2": "• Risk assessment",
+    "technical-feasibility-list-element3": "• Resource requirement analysis",
+    "technical-feasibility-list-element4": "• Implementation pathway evaluation",
+    "technical-feasibility-list-element5": "• Alternative technology comparison",
+    "technical-research-contact": "Ready to gain technical insights? Let's research and analyze the information that matters for your business."
+  },
+  "DatabaseManagementPage": {
+    "back-to-engineer-services-nav": "Back",
+    "database-management-hero": "Database Management Services",
+    "database-management-section-title": "From Excel to Professional RDBMS",
+    "database-management-section-subtitle": "Sustainable data management solutions with advanced reporting and analytics",
+    "rdbms-design-implementation-title": "RDBMS Design & Implementation",
+    "rdbms-design-implementation-list-element1": "• Database architecture design",
+    "rdbms-design-implementation-list-element2": "• Schema optimization",
+    "rdbms-design-implementation-list-element3": "• Relational model implementation",
+    "rdbms-design-implementation-list-element4": "• Performance tuning",
+    "rdbms-design-implementation-list-element5": "• Scalability planning",
+    "data-migration-title": "Data Migration",
+    "data-migration-list-element1": "• Excel to database migration",
+    "data-migration-list-element2": "• File-based data conversion",
+    "data-migration-list-element3": "• Data cleaning and validation",
+    "data-migration-list-element4": "• Legacy system migration",
+    "data-migration-list-element5": "• Data integrity verification",
+    "backup-recovery-title": "Backup & Recovery",
+    "backup-recovery-list-element1": "• Automated backup solutions",
+    "backup-recovery-list-element2": "• Disaster recovery planning",
+    "backup-recovery-list-element3": "• Point-in-time recovery",
+    "backup-recovery-list-element4": "• Data redundancy strategies",
+    "backup-recovery-list-element5": "• Recovery testing procedures",
+    "analytics-reporting-title": "Analytics & Reporting",
+    "analytics-reporting-list-element1": "• Advanced reporting capabilities",
+    "analytics-reporting-list-element2": "• Data analytics and insights",
+    "analytics-reporting-list-element3": "• Dashboard development",
+    "analytics-reporting-list-element4": "• Business intelligence tools",
+    "analytics-reporting-list-element5": "• Custom query optimization",
+    "database-management-contact": "Ready to upgrade your data management? Let's migrate from files to a robust database system."
+  },
+  "TimelineManagementPage": {
+    "back-to-engineer-services-nav": "Back",
+    "timeline-management-hero": "Timeline Management Services",
+    "timeline-management-section-title": "It's All About Timing",
+    "timeline-management-section-subtitle": "Rebalance project timelines with expert outside perspective and optimization strategies",
+    "critical-path-analysis-title": "Critical Path Analysis",
+    "critical-path-analysis-list-element1": "• Critical path identification",
+    "critical-path-analysis-list-element2": "• Dependency optimization",
+    "critical-path-analysis-list-element3": "• Float time analysis",
+    "critical-path-analysis-list-element4": "• Schedule compression techniques",
+    "critical-path-analysis-list-element5": "• Critical chain methodology",
+    "schedule-optimization-title": "Schedule Optimization",
+    "schedule-optimization-list-element1": "• Resource leveling and smoothing",
+    "schedule-optimization-list-element2": "• Timeline rebalancing",
+    "schedule-optimization-list-element3": "• Fast-tracking opportunities",
+    "schedule-optimization-list-element4": "• Crashing analysis",
+    "schedule-optimization-list-element5": "• Schedule risk assessment",
+    "dependency-management-title": "Dependency Management",
+    "dependency-management-list-element1": "• Dependency identification",
+    "dependency-management-list-element2": "• Constraint analysis",
+    "dependency-management-list-element3": "• Parallel task optimization",
+    "dependency-management-list-element4": "• Handoff process improvement",
+    "dependency-management-list-element5": "• Bottleneck resolution",
+    "timeline-recovery-title": "Timeline Recovery",
+    "timeline-recovery-list-element1": "• Delay impact assessment",
+    "timeline-recovery-list-element2": "• Recovery plan development",
+    "timeline-recovery-list-element3": "• Acceleration strategies",
+    "timeline-recovery-list-element4": "• Scope adjustment recommendations",
+    "timeline-recovery-list-element5": "• Stakeholder communication planning",
+    "timeline-management-contact": "Ready to optimize your project timeline? Let's rebalance your schedule and get back on track.",
+    "contact-button": "Connect with me"
+  },
+  "ProcessDesignPage": {
+    "back-to-engineer-services-nav": "Back",
+    "process-design-hero": "Process Design Services",
+    "process-design-section-title": "Everything is a process.",
+    "process-design-section-subtitle": "Layouting and designing what needs to be done with visualization and structured approaches.",
+    "details-of-the-roadmap-services-title": "details of the Roadmap Services",
+    "details-of-the-roadmap-services-list-element1": "Naming conventions: What is best to name your process flows?",
+    "details-of-the-roadmap-services-list-element2": "Visualization",
+    "details-of-the-roadmap-services-list-element3": "Scaleablity",
+    "details-of-the-roadmap-services-list-element4": "Documentation: Since everything is now decided, lets put it into effect by applying a timeline to it and rolling it out in your documentation system",
+    "details-of-the-roadmap-services-list-element5": "Review: And in case you already have a roadmap strategy: no problem - I also offer you to analyze it for you and give you an objective 3rd party opinion.",
+    "process-flow-optimization-title": "Process Flow Optimization",
+    "process-flow-optimization-list-element1": "• Process flow mapping and analysis",
+    "process-flow-optimization-list-element2": "• Bottleneck identification and removal",
+    "process-flow-optimization-list-element3": "• Workflow optimization strategies",
+    "process-flow-optimization-list-element4": "• Cycle time reduction techniques",
+    "process-flow-optimization-list-element5": "• Throughput maximization",
+    "equipment-layout-design-title": "Equipment Layout Design",
+    "equipment-layout-design-list-element1": "• Equipment specification and selection",
+    "equipment-layout-design-list-element2": "• Optimal layout configuration",
+    "equipment-layout-design-list-element3": "• Material flow optimization",
+    "equipment-layout-design-list-element4": "• Space utilization efficiency",
+    "equipment-layout-design-list-element5": "• Ergonomic considerations",
+    "process-visualization-title": "Process Visualization",
+    "process-visualization-list-element1": "• 3D process modeling",
+    "process-visualization-list-element2": "• Interactive visualization tools",
+    "process-visualization-list-element3": "• Virtual reality walkthroughs",
+    "process-visualization-list-element4": "• Animation and simulation",
+    "process-visualization-list-element5": "• Stakeholder communication aids",
+    "scalability-planning-title": "Scalability Planning",
+    "scalability-planning-list-element1": "• Future capacity planning",
+    "scalability-planning-list-element2": "• Modular design principles",
+    "scalability-planning-list-element3": "• Expansion pathway definition",
+    "scalability-planning-list-element4": "• Flexibility and adaptability",
+    "scalability-planning-list-element5": "• Technology evolution readiness",
+    "process-design-contact": "Ready to design breakthrough processes? Let's break through boundaries and create what needs to be done."
+  },
+  "CreativityPage": {
+    "title": "Creativity (placeholder)",
+    "body": "Placeholder content."
+  },
+  "EquipmentRoadmapPage": {
+    "title": "Equipment Roadmap (placeholder)",
+    "body": "Placeholder content."
+  },
+  "ContactTemplates": {
+    "schoolSupport": {
+      "subject": "School Support Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nWith the following I could need your help. [Your message*]\n\nCheers"
+    },
+    "travelServices": {
+      "subject": "Travel Services Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nPlease share details about what you need help with. [Your message*]\n\nCheers"
+    },
+    "consulting": {
+      "subject": "Consulting Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nWith that topic I could need help. [Your message*]\n\nCheers"
+    },
+    "coursesTheory": {
+      "subject": "Theory Course Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nTell me about your theory course needs. [Your message*]\n\nCheers"
+    },
+    "coursesStarting": {
+      "subject": "Beginner Course Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nWhat kind of support are you looking for? [Your message*]\n\nCheers"
+    },
+    "coursesAdvanced": {
+      "subject": "Advanced Course Inquiry [Your subject*]",
+      "message": "Hey Steff,\n\nWhat kind of support are you looking for? [Your message*]\n\nCheers"
+    },
+    "processEngineering": {
+      "processControl": {
+        "subject": "Process Control Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nDescribe your process control needs. [Your message*]\n\nKind regards"
+      },
+      "processOptimization": {
+        "subject": "Process Optimization Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nDescribe your process optimization needs. [Your message*]\n\nKind regards"
+      },
+      "changeManagement": {
+        "subject": "Change Management Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nTell me about your change management challenge. [Your message*]\n\nKind regards"
+      },
+      "monitoring": {
+        "subject": "Process Monitoring Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nDescribe your needs for process monitoring. [Your message*]\n\nKind regards"
+      }
+    },
+    "processDevelopment": {
+      "creativity": {
+        "subject": "Creativity Support Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat creative challenge can I help with? [Your message*]\n\nKind regards"
+      },
+      "processDesign": {
+        "subject": "Process Design Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat process flow needs an outside perspective? [Your message*]\n\nKind regards"
+      },
+      "simulationPrototyping": {
+        "subject": "Simulation Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat simulation/prototyping support do you require? [Your message*]\n\nKind regards"
+      },
+      "equipmentRoadmap": {
+        "subject": "Equipment Roadmap Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat equipment planning assistance do you need? [Your message*]\n\nKind regards"
+      }
+    },
+    "softwareDevelopment": {
+      "customSolutions": {
+        "subject": "Custom Software Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat custom solution are you looking for? [Your message*]\n\nKind regards"
+      },
+      "databaseManagement": {
+        "subject": "Database Management Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat database support do you require? [Your message*]\n\nKind regards"
+      },
+      "workflowAutomation": {
+        "subject": "Workflow Automation Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat workflow would you like to automate? [Your message*]\n\nKind regards"
+      },
+      "webDevelopment": {
+        "subject": "Web Development Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat web development help do you need? [Your message*]\n\nKind regards"
+      }
+    },
+    "projectManagement": {
+      "projectSetup": {
+        "subject": "Project Setup Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat project setup assistance do you require? [Your message*]\n\nKind regards"
+      },
+      "timelineManagement": {
+        "subject": "Timeline Management Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat timeline management help do you need? [Your message*]\n\nKind regards"
+      },
+      "deviationManagement": {
+        "subject": "Deviation Management Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat deviation management support do you require? [Your message*]\n\nKind regards"
+      },
+      "documentation": {
+        "subject": "Project Documentation Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat documentation assistance do you need? [Your message*]\n\nKind regards"
+      }
+    },
+    "technicalConsulting": {
+      "processAssessment": {
+        "subject": "Process Assessment Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat process assessment help do you require? [Your message*]\n\nKind regards"
+      },
+      "technicalResearch": {
+        "subject": "Technical Research Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat technical research do you need? [Your message*]\n\nKind regards"
+      },
+      "trainingKnowledgeTransfer": {
+        "subject": "Training Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat training/knowledge transfer do you need? [Your message*]\n\nKind regards"
+      },
+      "competitorAnalysis": {
+        "subject": "Competitor Analysis Inquiry [Your subject*]",
+        "message": "Hello Kite-Engineer,\n\nWhat competitor analysis support do you require? [Your message*]\n\nKind regards"
+      }
+    }
+  },
+  "ContactForm": {
+    "placeholder": {
+      "name": "Your name*",
+      "email": "Your email*",
+      "subject": "Subject*",
+      "message": "Your message*"
+    },
+    "acceptDataProcessing1": "Accept",
+    "acceptDataProcessing2": "data processing",
+    "acceptDataProcessing3": "for contacting me*",
+    "checkboxError": "Please accept data processing to continue.",
+    "responseError": "An error occurred.",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "sendingError": "An error occurred while sending your message.",
+    "successMessage": "Thank you for contacting us!",
+    "mandatoryNote1": "* Mandatory fields.",
+    "mandatoryNote2": "Please give me some time to respond. I try keeping it lower than 2 days.",
+    "nodemailerAutoReplies": {
+      "subject": "RE: \"{subject}\"",
+      "body": "<p>Hello {name},</p>\n\n<p>Thanks for reaching out — I’ve received your message and will reply as soon as possible.</p>\n\n<p>Kind regards,<br/>Steff</p>\n\n<p><a href=\"https://www.kite-engineer.de\" target=\"_blank\">www.kite-engineer.de</a><br/><a href=\"mailto:stefan@kite-engineer.de\">stefan@kite-engineer.de</a></p>\n\n<hr />\n\n<p><strong>Your message:</strong></p>\n<pre style=\"white-space:pre-wrap;\">{originalMessage}</pre>"
+    }
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "description": "Sorry, we couldn't find the page you're looking for.",
+    "backHome": "Home"
+  },
+  "MetaData": {
+    "NotFound": {
+      "title": "404 Error",
+      "description": "Page not found"
+    },
+    "Home": {
+      "title": "Home",
+      "description": "Welcome - The Kite-Engineer is a professional service provider in the areas of kiteboarding and engineering. Customizable solutions and flexibility are the key. Any kind of customer and any kind of request is welcome - B2B or B2C."
+    },
+    "Kite": {
+      "title": "Kite Services",
+      "description": "Explore my services related to kiteboarding. From kite school support to trip preparation. Consider me the helping hand you can rely on. I got you covered."
+    },
+    "Engineer": {
+      "title": "Engineering Services",
+      "description": "Explore my engineering related services. Mainly I provide project-related services in the field of semiconductor manufacturing. But I´m looking for new challenges as well. Coffee + Engineer = Solution."
+    },
+    "About": {
+      "title": "About",
+      "description": "The Kite-Engineer is a brand that combines the unique worlds of being a kitesurf instructor with the world of working as an engineer. Both jobs are offered on freelancer basis with flexible contract conditions."
+    },
+    "Contact": {
+      "title": "Contact",
+      "description": "For more details or in order to request a quote: Get in touch with me. It's simple."
+    },
+    "Privacy": {
+      "title": "Privacy Policy",
+      "description": "About the privacy police and data processing on this website."
+    },
+    "Imprint": {
+      "title": "Imprint",
+      "description": "Legal information about the Kite Engineer brand."
+    },
+    "KiteSubpages": {
+      "Freelancer": {
+        "SchoolSupport": {
+          "title": "School Support Services",
+          "description": "Find information about my services as a helping hand for your kite school or kite related business. Whether it a teacher you need or someone to organize schedules. I´m at your service"
+        },
+        "TravelServices": {
+          "title": "Travel Services",
+          "description": "Traveling is nice, for sure. The planing before, the organization during and the maintenance of a day-to-day routine can be challenging though. Find out how I can help you."
+        },
+        "Consulting": {
+          "title": "Consulting Services",
+          "description": "You are curious about certain areas of kiteboarding or look for someone to represent the sport and transport a message in front of audience? Here you may find your answer."
+        }
+      },
+      "Courses": {
+        "Theory": {
+          "title": "Theory Kite Courses",
+          "description": "Kitesurfing is not only the thing that happens on the water - for sure you´ve already realized that. Here you can find and overview of what brings you further in the sport."
+        },
+        "Starting": {
+          "title": "Starting Kite Courses",
+          "description": "Everything needs a beginning. Find out what I can do for someone that wants to start or restart the own kitesurf journey"
+        },
+        "Advanced": {
+          "title": "Advanced Kite Courses",
+          "description": "Continuing the kite journey is what makes the sport so interesting. Find out how my instructor services can help you progress after learning to ride safely"
+        }
+      }
+    },
+    "EngineerSubpages": {
+      "ProcessEngineering": {
+        "ProcessControl": {
+          "title": "Process Control Services",
+          "description": "This services is about helping you from getting data for something to actually knowing how to use that data as a reliable control mechanism in your day to day business."
+        },
+        "ProcessOptimization": {
+          "title": "Process Optimization Services",
+          "description": "Getting more with less is what we all dream of. This is literally the idea behind this service. Something needs to be achieved but you don´t have sufficient resources at hand? Outsource your work."
+        },
+        "ChangeManagement": {
+          "title": "Change Management Services",
+          "description": "Outsource your change-management process for manufacturing processes and save your own resources"
+        },
+        "Monitoring": {
+          "title": "Process Monitoring Services",
+          "description": "Monitor concept development and assisting the implementation for any kind of manufacturing process"
+        }
+      },
+      "ProcessDevelopment": {
+        "Creativity": {
+          "title": "Creativity Support",
+          "description": "Bringing in an external creative head into a project can be the game-changer. This is what I offer with this service. Creativity techniques beyond brain storming included."
+        },
+        "ProcessDesign": {
+          "title": "Process Design Services",
+          "description": "From concept to requirements analysis to actual hands on support to hand over to production. This is what I offer with this service."
+        },
+        "SimulationPrototyping": {
+          "title": "Simulation & Prototyping Services",
+          "description": "Even though I can´t do full simulations and prototyping myself I offer to connect you with companies and people who can. As well I offer to accompany the whole phase to whatever objective we define"
+        },
+        "EquipmentRoadmap": {
+          "title": "Equipment Roadmap Services",
+          "description": "Knowing what may become necessary at what time in the future is essential to stay competitive. But it´s time consuming to do research for this and derive a roadmap from the result. Simply outsource this to me."
+        }
+      },
+      "SoftwareDevelopment": {
+        "CustomSolutions": {
+          "title": "Custom Software Solutions",
+          "description": "Customize an environment to your needs with scripts, docker, a new OS, hardware or whatever is necessary. Here is where my structured work shines and delivers."
+        },
+        "DatabaseManagement": {
+          "title": "Database Management Services",
+          "description": "From the concept to the ERM design to the actual implementation and maintenance. Focus are SQL-based databases, but I always look for new challenges."
+        },
+        "WorkflowAutomation": {
+          "title": "Workflow Automation Services",
+          "description": "Whether it´s VBA implementation in Excel or more complex stuff from synchronizing real time data over various devices automatically. Everything can be automated somehow if it´s on your computer."
+        },
+        "WebDevelopment": {
+          "title": "Web Development Services",
+          "description": "This services includes things like: Setting up a linux server, running a webserver on it, maintaining your domains and making your website. And much more. You find it here."
+        }
+      },
+      "ProjectManagement": {
+        "ProjectSetup": {
+          "title": "Project Setup Services",
+          "description": "From having a helping hand while making a requirement analysis or preparing your project FMEA - I got you covered. Concept wise and later during the project execution"
+        },
+        "TimelineManagement": {
+          "title": "Timeline Management Services",
+          "description": "Managing your pipelines and commitments can become tricky over time, especially if it needs extra resources you don´t have. Why not hire a temporary professional to do this for you."
+        },
+        "DeviationManagement": {
+          "title": "Deviation Management Services",
+          "description": "Nothing ever goes according to plan. Have a flexible partner at your side that jumps in when you need one in exactly that case. From documentation to lessons-learned. Count on me."
+        },
+        "Documentation": {
+          "title": "Project Documentation Services",
+          "description": "Prepare summaries, reports, presentations or implement a complete new document management system. Nothing to be scared of with the right partner"
+        }
+      },
+      "TechnicalConsulting": {
+        "ProcessAssessment": {
+          "title": "Process Assessment Services",
+          "description": "Getting and outside-view onto what is happing in your manufacturing or business with detailed feedback afterwards. I also perform hands on services like work measurements."
+        },
+        "TechnicalResearch": {
+          "title": "Technical Research Services",
+          "description": "Review of technical articles and papers in a field you wanna know more about. Working out summaries and presentations ready for distributing in your environment."
+        },
+        "TrainingKnowledgeTransfer": {
+          "title": "Training & Knowledge Transfer Services",
+          "description": "I offer basic and advanced trainings in the areas of my competences. As well I delve into new areas for you and publish the result to a broader audience."
+        },
+        "CompetitorAnalysis": {
+          "title": "Competitor Analysis Services",
+          "description": "I gather and analyze data of businesses and as well prepare them for your further processing."
+        }
+      }
+    }
+  },
+  "SearchBar": {
+    "SearchBarPlaceholder": "Search",
+    "NoSearchResults": "No results found for: ",
+    "NoSearchResultsDetails": "Try different keywords or check spelling"
+  },
+  "SearchBar2": {
+    "SearchBarPlaceholder": "Search",
+    "NoSearchResults": "No results found for: ",
+    "NoSearchResultsDetails": "Try different test or check test",
+    "CompetitorAnalysis": {
+      "title": "Competitor test Services",
+      "description": "I gather and test data of businesses and as well prepare them for your further processing."
+    }
+  }
+}

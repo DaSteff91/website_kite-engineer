@@ -1,62 +1,137 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useAutoGrowTextarea } from "@/hooks/useAutoGrowTextarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Link } from "@/i18n/navigation";
+import { useTranslations, useLocale } from "next-intl";
 
 export function ContactForm() {
+  const t = useTranslations("ContactForm");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [isChecked, setIsChecked] = useState(false);
+  const [checkboxError, setCheckboxError] = useState(false);
+
+  const textareaRef = useAutoGrowTextarea(formData.message);
+
+  const [placeholderValues, setPlaceholderValues] = useState({
+    subject: "",
+    message: "",
+  });
+
+  const locale = useLocale();
+
+  useEffect(() => {
+    // Prevent zoom on focus
+    const meta = document.createElement("meta");
+    meta.name = "viewport";
+    meta.content = "width=device-width, initial-scale=1, maximum-scale=1";
+    document.head.appendChild(meta);
+
+    // Get URL parameters for placeholders
+    const urlParams = new URLSearchParams(window.location.search);
+    const subject = urlParams.get("subject");
+    const message = urlParams.get("message");
+
+    if (subject || message) {
+      // Store decoded values for placeholders
+      setPlaceholderValues({
+        subject: subject ? decodeURIComponent(subject) : "",
+        message: message ? decodeURIComponent(message) : "",
+      });
+    }
+    return () => {
+      const existingMeta = document.querySelector(
+        'meta[name="viewport"][content="width=device-width, initial-scale=1, maximum-scale=1"]'
+      );
+      if (existingMeta && document.head.contains(existingMeta)) {
+        document.head.removeChild(existingMeta);
+      }
+    };
+  }, []);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!isChecked) {
+      setCheckboxError(true);
+      return;
+    }
+
     setIsSubmitting(true);
     setSuccessMessage("");
 
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
-    };
-
     try {
+      const payload = {
+        ...formData,
+        locale,
+      };
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
-        setSuccessMessage("Thank you for contacting us!");
-        form.reset();
+        setSuccessMessage(t("successMessage"));
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setIsChecked(false);
       } else {
         const result = await response.json();
-        alert(result.message || "An error occurred.");
+        alert(result.message || t("responseError"));
       }
     } catch (error) {
       console.error(error);
-      alert("An error occurred while sending your message.");
+      alert(t("sendingError"));
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full max-w-2xl mx-auto space-y-4 sm:space-y-6"
+    >
       <div className="space-y-2">
         <Input
           name="name"
-          placeholder="Your name*"
+          placeholder={t("placeholder.name")}
+          value={formData.name}
+          onChange={handleInputChange}
           required
-          className="bg-background/50"
+          className="bg-background/50 h-12 text-base"
         />
       </div>
 
@@ -64,46 +139,91 @@ export function ContactForm() {
         <Input
           type="email"
           name="email"
-          placeholder="Your email*"
+          placeholder={t("placeholder.email")}
+          value={formData.email}
+          onChange={handleInputChange}
           required
-          className="bg-background/50"
+          className="bg-background/50 h-12 text-base"
         />
       </div>
 
       <div className="space-y-2">
         <Input
           name="subject"
-          placeholder="Subject*"
+          placeholder={placeholderValues.subject || t("placeholder.subject")}
+          value={formData.subject}
+          onChange={handleInputChange}
           required
-          className="bg-background/50"
+          className="bg-background/50 h-12 text-base"
         />
       </div>
 
       <div className="space-y-2">
         <Textarea
+          ref={textareaRef}
           name="message"
-          placeholder="Your message*"
+          placeholder={placeholderValues.message || t("placeholder.message")}
+          value={formData.message}
+          onChange={handleInputChange}
           required
-          className="bg-background/50 min-h-[150px]"
+          className="bg-background/50 min-h-[120px] sm:min-h-[150px] text-base resize-none sm:resize-y w-full overflow-y-auto max-h-[50vh] sm:max-h-[70vh] transition-[height]"
+          style={{ fontSize: "16px" }}
         />
       </div>
 
-      <Button type="submit" className="w-full group" disabled={isSubmitting}>
+      <div className="flex items-center gap-3">
+        <Checkbox
+          id="terms"
+          checked={isChecked}
+          onCheckedChange={(checked) => {
+            setIsChecked(checked === true);
+            if (checked) setCheckboxError(false);
+          }}
+        />
+        <Label
+          htmlFor="terms"
+          className="text-muted-foreground text-sm text-left"
+        >
+          {t("acceptDataProcessing1")}{" "}
+          <Link
+            href="/privacy"
+            className="inline-flex items-center gap-2 hover:text-blue-300 underline transition-colors"
+            target="_blank"
+          >
+            {t("acceptDataProcessing2")}
+          </Link>{" "}
+          {t("acceptDataProcessing3")}
+        </Label>
+        {checkboxError && (
+          <p className="text-red-500 text-sm mt-1">{t("checkboxError")}</p>
+        )}
+      </div>
+
+      <Button
+        type="submit"
+        className="w-full group h-12 text-base font-medium"
+        disabled={isSubmitting}
+      >
         <span className="flex items-center justify-center">
           {isSubmitting ? (
-            "Sending..."
+            t("sending")
           ) : (
             <>
-              Send Message
+              {t("send")}
               <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </>
           )}
         </span>
       </Button>
       {successMessage && (
-        <p className="text-green-600 text-center mt-4">{successMessage}</p>
+        <p className="text-green-600 text-left mt-4 text-base">
+          {successMessage}
+        </p>
       )}
-      <p className="text-muted-foreground text-sm">* Mandatory fields</p>
+      <p className="text-muted-foreground text-sm text-left">
+        {t("mandatoryNote1")}
+        <br></br> {t("mandatoryNote2")}
+      </p>
     </form>
   );
 }

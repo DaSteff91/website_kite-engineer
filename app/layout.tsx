@@ -2,12 +2,16 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
-import { ClientLayoutWrapper } from "./ClientLayoutWrapper";
+import { SITE } from "@/lib/constants/site-config";
+import { routing } from "@/i18n/routing";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.kite-engineer.de";
 
 export const viewport = {
   width: "device-width",
@@ -16,36 +20,50 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Kite-Engineer",
-  description: "The best of two worlds",
+  title: {
+    template: `%s | ${SITE.name}`,
+    default: SITE.name,
+  },
+  description: SITE.description,
   authors: [{ name: "Stefan Merthan" }],
   icons: [
     {
+      rel: "icon",
       media: "(prefers-color-scheme: light)",
-      url: "favicon_light.ico",
+      url: "/images/favicon_light.ico",
       type: "image/x-icon",
     },
     {
+      rel: "icon",
       media: "(prefers-color-scheme: dark)",
-      url: "favicon_dark.ico",
+      url: "/images/favicon_dark.ico",
       type: "image/x-icon",
     },
   ],
-  keywords: "kiteboarding, engineering, kitesurf, engineer",
+  keywords:
+    "kiteboarding, engineering, kitesurf, engineer, consultant, representative, kitesurfing, sport, consulting, freelancer, outsourcing",
+  metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Kite-Engineer",
-    description: "The best of two worlds",
-    url: "https://www.kite-engineer.de",
-    siteName: "Kite-Engineer Combining Worlds",
+    title: SITE.name,
+    description: SITE.description,
+    url: SITE.url,
+    siteName: SITE.name,
     images: [
       {
-        url: "https://www.kite-engineer.de/images/favicon_dark.ico",
-        width: 800,
-        height: 600,
+        url: SITE.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Kite-Engineer Logo",
+      },
+      {
+        url: "/images/og_picture_square.png",
+        width: 1200,
+        height: 1200,
         alt: "Kite-Engineer Logo",
       },
     ],
-    locale: "en_EN",
+    // The locale here can be a default or dynamic, but metadata locale might be updated in the [locale] layout
+    locale: routing.defaultLocale,
     type: "website",
   },
   alternates: {
@@ -53,40 +71,31 @@ export const metadata: Metadata = {
     languages: {
       "en-US": "/en-US",
       "de-DE": "/de-DE",
+      "pt-BR": "/pt-BR",
     },
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Kite-Engineer",
-    description:
-      "Combinging worlds by offering kiteboarding related services as well as engineering services",
-    images: ["https://www.kite-engineer.de/images/favicon_dark.ico"],
+    card: SITE.twitterCard,
+    title: SITE.name,
+    description: SITE.description,
+    images: [SITE.ogImage],
   },
 };
 
 export default function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: { slug: string };
 }) {
-  const isHomePage = params?.slug === undefined;
-
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html suppressHydrationWarning lang={routing.defaultLocale}>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+          forcedTheme="dark"
+          enableSystem={false}
         >
-          <ClientLayoutWrapper>
-            <div className="min-h-screen flex flex-col">
-              <main className="flex-grow">{children}</main>
-            </div>
-          </ClientLayoutWrapper>
+          {children}
         </ThemeProvider>
       </body>
     </html>
