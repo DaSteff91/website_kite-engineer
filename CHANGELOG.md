@@ -1,3 +1,10 @@
+## [1.31.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.0...v1.31.1) (2025-12-16)
+
+
+### Bug Fixes
+
+* change naming ([d9873ae](https://github.com/DaSteff91/website_kite-engineer/commit/d9873ae008c4af92ab31a6a4d0b7b1ef27d8e788))
+
 # [1.31.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.30.11...v1.31.0) (2025-12-14)
 
 
