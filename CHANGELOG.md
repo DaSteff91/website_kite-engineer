@@ -1,3 +1,10 @@
+## [1.31.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.1...v1.31.2) (2026-01-03)
+
+
+### Bug Fixes
+
+* use tls instead of startls ([1782336](https://github.com/DaSteff91/website_kite-engineer/commit/17823367d519c584bfa68ee1776ce1268994c22c))
+
 ## [1.31.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.0...v1.31.1) (2025-12-16)
 
 
