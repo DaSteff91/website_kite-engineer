@@ -4,15 +4,15 @@ import type { SendMailOptions } from 'nodemailer';
 // Create a transporter object using SMTP with STARTTLS
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: false, // STARTTLS
+  port: Number(process.env.SMTP_PORT) || 465,
+  secure: process.env.SMTP_SECURE === 'true',
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
-  requireTLS: true, // Enforce STARTTLS
+  ...(process.env.SMTP_SECURE !== 'true' && { requireTLS: true }),
   tls: {
-    rejectUnauthorized: true, // Ensure the server certificate is valid
+    rejectUnauthorized: true,
   },
 });
 
