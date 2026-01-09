@@ -1,3 +1,10 @@
+## [1.31.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.2...v1.31.3) (2026-01-09)
+
+
+### Bug Fixes
+
+* migration test to new server ([f7c0805](https://github.com/DaSteff91/website_kite-engineer/commit/f7c0805a8cc6490752ef388b7298e5ff4734088c))
+
 ## [1.31.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.1...v1.31.2) (2026-01-03)
 
 
