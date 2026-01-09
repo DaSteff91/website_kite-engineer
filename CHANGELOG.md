@@ -1,3 +1,10 @@
+# [1.32.0-dev.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.3...v1.32.0-dev.1) (2026-01-09)
+
+
+### Features
+
+* first commit new dev branch and new server ([587b284](https://github.com/DaSteff91/website_kite-engineer/commit/587b28419a23c944d03d6e5fef4d6308b1d45bb1))
+
 ## [1.31.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.2...v1.31.3) (2026-01-09)
 
 
