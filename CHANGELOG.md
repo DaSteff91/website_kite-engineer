@@ -1,3 +1,10 @@
+## [1.31.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.4...v1.31.5) (2026-03-21)
+
+
+### Bug Fixes
+
+* finalizing security updates ([dcf1506](https://github.com/DaSteff91/website_kite-engineer/commit/dcf15069a70d6d6bf20e52393b93542378e0ed5a))
+
 ## [1.31.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.3...v1.31.4) (2026-03-21)
 
 
