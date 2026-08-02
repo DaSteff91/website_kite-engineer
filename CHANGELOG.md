@@ -1,3 +1,10 @@
+# [1.32.0-dev.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.32.0-dev.2...v1.32.0-dev.3) (2026-08-02)
+
+
+### Bug Fixes
+
+* sync package-lock for npm 10 ci in Docker builds ([3b0e18f](https://github.com/DaSteff91/website_kite-engineer/commit/3b0e18ffaac9a8697ac867bfc096d1f7c0b7f124))
+
 # [1.32.0-dev.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.32.0-dev.1...v1.32.0-dev.2) (2026-08-02)
 
 
