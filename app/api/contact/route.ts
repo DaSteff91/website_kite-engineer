@@ -45,12 +45,29 @@ function sanitizeHeaderValue(value: string, maxLen = 200): string {
 }
 
 export async function POST(req: NextRequest) {
+  // --- DEBUG START ---
+  const headers: Record<string, string> = {};
+  req.headers.forEach((v, k) => (headers[k] = v));
+  
+  console.log("--- INCOMING REQUEST DIAGNOSTIC ---");
+  console.log("NODE_ENV:", process.env.NODE_ENV);
+  console.log("Headers:", JSON.stringify(headers, null, 2));
+  console.log("Method:", req.method);
+  console.log("URL:", req.url);
+  // --- DEBUG END ---
   const origin = req.headers.get('origin') ?? undefined;
+  // --- CORS DEBUGGING ---
+  console.log("Detected Origin Header:", origin);
+  console.log("Allowed Origins List:", allowedOrigins);
+  const isAllowed = origin && allowedOrigins.includes(origin);
+  console.log("Is Origin in Whitelist?:", isAllowed);
+  // --- CORS DEBUGGING END---
   const userAgent = req.headers.get('user-agent') ?? '';
   const forwarded = req.headers.get('x-forwarded-for');
   const ip = forwarded
     ? forwarded.split(',')[0].trim()
     : (req.headers.get('x-real-ip') ?? 'unknown');
+  console.log("Extracted IP for Rate Limiter:", ip);
 
   const corsHeaders = getCorsHeaders(origin);
 
@@ -83,8 +100,11 @@ export async function POST(req: NextRequest) {
   try {
     // Parse request body (may contain optional locale)
     const raw = await req.json();
+    console.log("Raw Body received:", JSON.stringify(raw));
+    console.log("Attempting Zod Validation...");
     // Validate the main contact fields (contactSchema now allows optional locale)
     const validated = contactSchema.parse(raw as unknown);
+    console.log("Zod Validation SUCCESS");
 
     // Determine locale: prefer client-sent locale if valid; fallback to DEFAULT_LOCALE
     const requestedLocale = typeof (raw as any).locale === "string" ? (raw as any).locale : undefined;

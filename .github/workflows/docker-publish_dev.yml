@@ -188,7 +188,7 @@ jobs:
           script: |
             TARGET="dev"
             CONTAINER_NAME="www-dev.kite-engineer.de"
-            PORT_HOST=3001
+            PORT_HOST=127.0.0.1:3001
             IMAGE_TAG=${{ steps.get_tag.outputs.tag || github.sha }}
             IMAGE_NAME=ghcr.io/dasteff91/website_kite-engineer:${{ steps.get_tag.outputs.tag }}
 
@@ -211,3 +211,4 @@ jobs:
               -p $PORT_HOST:3000 \
               --env-file /home/steff_deployment/website_kite-engineer/.env \
               $IMAGE_NAME
+# Retrigger after renewing Actions tokens
