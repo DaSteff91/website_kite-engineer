@@ -1,3 +1,10 @@
+# [1.32.0-dev.2](https://github.com/DaSteff91/website_kite-engineer/compare/v1.32.0-dev.1...v1.32.0-dev.2) (2026-08-02)
+
+
+### Bug Fixes
+
+* patch Next.js stack and bind publish ports to localhost ([020c7a9](https://github.com/DaSteff91/website_kite-engineer/commit/020c7a9e126659f44949b881f0570c8a15f3a62e))
+
 # [1.32.0-dev.1](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.3...v1.32.0-dev.1) (2026-01-09)
 
 
