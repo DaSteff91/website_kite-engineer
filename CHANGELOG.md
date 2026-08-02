@@ -1,3 +1,10 @@
+# [1.32.0-dev.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.32.0-dev.3...v1.32.0-dev.4) (2026-08-02)
+
+
+### Bug Fixes
+
+* upgrade rate-limiter-flexible to 8.3.0 for Next builds ([817fb30](https://github.com/DaSteff91/website_kite-engineer/commit/817fb3061f4a9e814e0e43ed31d595fec0c16da2))
+
 # [1.32.0-dev.3](https://github.com/DaSteff91/website_kite-engineer/compare/v1.32.0-dev.2...v1.32.0-dev.3) (2026-08-02)
 
 
