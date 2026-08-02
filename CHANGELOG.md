@@ -1,3 +1,18 @@
+# [1.32.0](https://github.com/DaSteff91/website_kite-engineer/compare/v1.31.5...v1.32.0) (2026-08-02)
+
+
+### Bug Fixes
+
+* patch Next.js stack and bind publish ports to localhost ([020c7a9](https://github.com/DaSteff91/website_kite-engineer/commit/020c7a9e126659f44949b881f0570c8a15f3a62e))
+* regenerate package-lock with full optional platform deps ([b1ea859](https://github.com/DaSteff91/website_kite-engineer/commit/b1ea859a47c0915db4c5fe3fdf4f4b2a6b3efc60))
+* sync package-lock for npm 10 ci in Docker builds ([3b0e18f](https://github.com/DaSteff91/website_kite-engineer/commit/3b0e18ffaac9a8697ac867bfc096d1f7c0b7f124))
+* upgrade rate-limiter-flexible to 8.3.0 for Next builds ([817fb30](https://github.com/DaSteff91/website_kite-engineer/commit/817fb3061f4a9e814e0e43ed31d595fec0c16da2))
+
+
+### Features
+
+* first commit new dev branch and new server ([587b284](https://github.com/DaSteff91/website_kite-engineer/commit/587b28419a23c944d03d6e5fef4d6308b1d45bb1))
+
 # [1.32.0-dev.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.32.0-dev.3...v1.32.0-dev.4) (2026-08-02)
 
 
