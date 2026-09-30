@@ -1,3 +1,10 @@
+# [1.32.0-dev.5](https://github.com/DaSteff91/website_kite-engineer/compare/v1.32.0-dev.4...v1.32.0-dev.5) (2026-09-30)
+
+
+### Features
+
+* add in-tile kite choice for coaching project ([e53bb45](https://github.com/DaSteff91/website_kite-engineer/commit/e53bb45a00c9d60bb24cd6128512fcda6d6d2b22))
+
 # [1.32.0-dev.4](https://github.com/DaSteff91/website_kite-engineer/compare/v1.32.0-dev.3...v1.32.0-dev.4) (2026-08-02)
 
 
