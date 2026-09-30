@@ -379,7 +379,13 @@
   },
   "LandingPage": {
     "kite-subtitle-landing-page": "Curioso? Bora trabalhar juntos!",
-    "engineer-subtitle-landing-page": "Ambicioso? É sobre soluções!"
+    "engineer-subtitle-landing-page": "Ambicioso? É sobre soluções!",
+    "kiteChoiceTitle": "Kite",
+    "kiteChoicePrompt": "Quer ver o novo projeto de Kite?",
+    "kiteChoiceAlternate": "Ou continuar como de costume?",
+    "kiteChoiceOriginal": "Continuar",
+    "kiteChoiceCurrent": "Sim",
+    "kiteChoiceClose": "Voltar"
   },
   "NavigationMenu": {
     "home": "Home",
