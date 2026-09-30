@@ -1,5 +1,7 @@
 export const BASE_URL = "https://www.kite-engineer.de";
 
+export const COACHING_URL = "https://coaching.kite-engineer.dev";
+
 export const LOCALES = ['en-US', 'de-DE', 'pt-BR'] as const;
 export type Locale = typeof LOCALES[number];
 
